@@ -1,5 +1,5 @@
 
-# Aira's Papers DB
+# AIRAS Papers DB
 
 A centralized and auto-updating database of research papers from top-tier AI/ML conferences. This repository collects paper information from various sources and provides it in a clean, unified, and ready-to-use JSON format.
 
