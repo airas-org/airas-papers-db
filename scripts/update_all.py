@@ -19,7 +19,7 @@ async def _fetch_papers_from_url(client: httpx.AsyncClient, url: str) -> list[di
         response.raise_for_status()
         return response.json().get("results", [])
 
-    except requests.exceptions.RequestException as e:
+    except httpx.RequestError as e:
         logger.error(f"  -> Failed to fetch {url}: {e}")
     except json.JSONDecodeError as e:
         logger.error(f"  -> Failed to parse JSON from {url}: {e}")
@@ -51,7 +51,6 @@ async def main():
                 tasks.append((task, config["name"], year))
         results = await asyncio.gather(*(task for task, _, _ in tasks))
 
-    all_normalized_papers = []
     for (task, conf_name, year), raw_papers in zip(tasks, results):
         if not raw_papers:
             logger.warning(f"  -> No data found for {conf_name} {year}. Skipping.")
@@ -63,15 +62,6 @@ async def main():
 
         output_path = BASE_DATA_DIR / conf_name / f"{year}.json"
         _save_json(normalized_papers, output_path)
-        all_normalized_papers.extend(normalized_papers)
-    
-    if all_normalized_papers:
-        logger.info("Creating combined JSON files...")
-        _save_json(all_normalized_papers, BASE_DATA_DIR / "all" / "all_papers.json")
-
-        latest_year = max(p["year"] for p in all_normalized_papers)
-        latest_papers = [p for p in all_normalized_papers if p["year"] == latest_year]
-        _save_json(latest_papers, BASE_DATA_DIR / "all" / "latest.json")
     
     logger.info("\nData update process completed successfully!")
 
