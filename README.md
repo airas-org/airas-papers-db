@@ -3,15 +3,13 @@
 
 A centralized and auto-updating database of research papers from top-tier AI/ML conferences. This repository collects paper information from various sources and provides it in a clean, unified, and ready-to-use JSON format.
 
-[![Update Status](https://github.com/airas-org/airas-papers-db/actions/workflows/update-data.yml/badge.svg)](https://github.com/airas-org/airas-papers-db/actions/workflows/update-data.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Key Features
 
 - **Unified Schema**: Paper data from different conferences (ICLR, ICML, NeurIPS, CVPR, etc.) is normalized into a single, consistent schema.
 - **Ready-to-use**: All data is pre-processed. Just clone or download the JSON files to get started with your analysis or application.
-- **Multiple Formats**: Provides data broken down by conference and year, as well as convenient combined files (`all_papers.json` and `latest.json`).
-- **Auto-updated**: The dataset is automatically updated periodically using GitHub Actions to fetch the latest papers.
+- **Organized by Conference and Year**: Provides data broken down by conference and year.
 
 ## Data Schema
 
@@ -48,23 +46,13 @@ Each paper object in the JSON files follows this standard schema:
 
 ## Usage
 
-There are several ways to use this dataset.
-
 ### 1. Direct Download
 
-For quick access, you can download the combined data files directly.
-
-```bash
-# Download all papers
-wget https://raw.githubusercontent.com/airas-org/airas-papers-db/main/data/all/all_papers.json
-
-# Download papers from the latest year only
-wget https://raw.githubusercontent.com/airas-org/airas-papers-db/main/data/all/latest.json
-```
+You can download individual conference and year JSON files directly from the repository.
 
 ### 2. Git Clone
 
-To get all individual and combined files, clone the entire repository:
+To get all files, clone the repository:
 
 ```bash
 git clone https://github.com/airas-org/airas-papers-db.git
@@ -73,34 +61,38 @@ cd airas-papers-db
 
 ### 3. Programmatic Access (Recommended for Applications)
 
-You can fetch the data directly within your Python application without needing to clone the repository.
+You can fetch the data directly within your Python application:
 
 ```python
 import httpx
 
-def fetch_all_papers():
-    """Fetches the combined paper data from the repository."""
-    url = "https://raw.githubusercontent.com/airas-org/airas-papers-db/main/data/all/all_papers.json"
+def fetch_papers(conference, year):
+    """
+    Fetches paper data for a specific conference and year.
+    
+    Args:
+        conference (str): The conference name (e.g., 'icml', 'neurips')
+        year (int): The year of the conference
+    
+    Returns:
+        list: A list of paper objects
+    """
+    url = f"https://raw.githubusercontent.com/airas-org/airas-papers-db/main/data/{conference}/{year}.json"
     try:
         response = httpx.get(url, timeout=30)
         response.raise_for_status()
         return response.json()
-    except httpx.HTTPStatusError as e:
-        print(f"HTTP error occurred: {e}")
-    except httpx.RequestError as e:
-        print(f"An error occurred while requesting {e.request.url!r}.")
+    except (httpx.HTTPStatusError, httpx.RequestError) as e:
+        print(f"Error occurred: {e}")
+
     return None
 
 # Example usage
-all_papers = fetch_all_papers()
-if all_papers:
-    print(f"Successfully fetched {len(all_papers)} papers.")
-    # Now you can filter or process the data
-    diffusion_papers = [
-        p for p in all_papers 
-        if "diffusion" in p.get("title", "").lower()
-    ]
-    print(f"Found {len(diffusion_papers)} papers on diffusion models.")
+papers = fetch_papers("icml", 2023)
+if papers:
+    print(f"Found {len(papers)} papers from ICML 2023")
+    for paper in papers[:3]:  # Show first 3 papers
+        print(f"- {paper['title']} by {', '.join(paper['authors'])}")
 ```
 
 ## Repository Structure
@@ -113,9 +105,6 @@ if all_papers:
 │   │   └── 2024.json
 │   ├── neurips/
 │   │   └── ...
-│   └── all/
-│       ├── all_papers.json  # All papers combined
-│       └── latest.json      # Papers from the most recent year
 ├── scripts/
 │   ├── update_all.py        # The main script to fetch and process data
 │   ├── configs/
@@ -127,28 +116,28 @@ if all_papers:
 
 ## How to Update the Data Locally
 
-If you want to run the update process yourself or contribute to the project, follow these steps:
+If you want to update the data locally:
 
-1.  **Clone the repository:**
-    ```bash
-    git clone https://github.com/airas-org/airas-papers-db.git
-    cd airas-papers-db
-    ```
+1.  **Set up a virtual environment (recommended):**
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+```
 
-2.  **Install dependencies:**
-    ```bash
-    pip install -r requirements.txt
-    ```
+2. **Install dependencies:**
+```bash
+pip install -r requirements.txt
+```
 
-3.  **Run the update script:**
-    ```bash
-    python scripts/update_all.py
-    ```
-    This will fetch the latest data based on `scripts/configs/conferences.json` and update the JSON files in the `data/` directory.
+3. **Run the update script:**
+```bash
+python scripts/update_all.py
+```
+This will fetch the latest data from all configured conferences and update the JSON files.
 
 ## Contributing
 
-Contributions are welcome! If you want to add a new conference or fix a bug, please follow these steps:
+We welcome contributions! Here are some ways you can help:
 
 1.  **Fork** the repository.
 2.  **Add/Update Configuration**: To add a new conference, edit `scripts/configs/conferences.json`. You might need to add a new parser in `scripts/parsers/` if the data source has a unique structure.
