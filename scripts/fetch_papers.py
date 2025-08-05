@@ -5,10 +5,28 @@ from pathlib import Path
 from typing import Any
 from logging import getLogger, basicConfig, INFO, WARNING
 
-from parsers.normalizer import normalize_paper
 
 basicConfig(level=INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = getLogger(__name__)
+
+
+def _normalize_paper(raw_paper: dict, conference: str, year: int) -> dict[str, Any]:
+    authors_list = [
+        author.get('fullname', '') for author in raw_paper.get('authors', [])
+    ]
+
+    normalized_data = {
+        'id': raw_paper.get('uid', ''),
+        'title': raw_paper.get('name', raw_paper.get('title', '')),
+        'authors': authors_list,
+        'abstract': raw_paper.get('abstract', ''),
+        'topic': raw_paper.get('topic', ''),
+        'conference': conference,
+        'year': year,
+        'paper_url': raw_paper.get('paper_pdf_url', raw_paper.get('paper_url', ''))
+    }
+
+    return normalized_data
 
 
 async def _fetch_papers_from_url(client: httpx.AsyncClient, url: str) -> list[dict[str, Any]]:
@@ -57,13 +75,14 @@ async def main():
             continue
 
         normalized_papers = [
-            normalize_paper(p, conference=conf_name, year=year) for p in raw_papers
+            _normalize_paper(p, conference=conf_name, year=year) for p in raw_papers
         ]
 
         output_path = BASE_DATA_DIR / conf_name / f"{year}.json"
         _save_json(normalized_papers, output_path)
     
     logger.info("\nData update process completed successfully!")
+
 
 if __name__ == "__main__":
     asyncio.run(main())
