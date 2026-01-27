@@ -106,11 +106,9 @@ if papers:
 │   ├── neurips/
 │   │   └── ...
 ├── scripts/
-│   ├── update_all.py        # The main script to fetch and process data
+│   ├── fetch_papers.py        # The main script to fetch and process data
 │   ├── configs/
 │   │   └── conferences.json # Configuration for target conferences
-│   └── parsers/
-│       └── normalizer.py    # Logic to normalize raw data to the standard schema
 └── README.md
 ```
 
@@ -131,7 +129,7 @@ pip install -r requirements.txt
 
 3. **Run the update script:**
 ```bash
-python scripts/update_all.py
+python scripts/fetch_papers.py
 ```
 This will fetch the latest data from all configured conferences and update the JSON files.
 
@@ -140,7 +138,7 @@ This will fetch the latest data from all configured conferences and update the J
 We welcome contributions! Here are some ways you can help:
 
 1.  **Fork** the repository.
-2.  **Add/Update Configuration**: To add a new conference, edit `scripts/configs/conferences.json`. You might need to add a new parser in `scripts/parsers/` if the data source has a unique structure.
+2.  **Add/Update Configuration**: To add a new conference, edit `scripts/configs/conferences.json`.
 3.  **Create a Pull Request**: Submit a PR with a clear description of your changes.
 
 ## License

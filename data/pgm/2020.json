@@ -1,0 +1,846 @@
+[
+  {
+    "id": "ducamp20a",
+    "title": "aGrUM/pyAgrum : a toolbox to build models and algorithms for Probabilistic Graphical Models in Python",
+    "authors": [
+      "Gaspard Ducamp",
+      "Christophe Gonzales",
+      "Pierre-Henri Wuillemin"
+    ],
+    "abstract": "This paper presents the aGrUM framework, a LGPL C++ library providing state-of-the-art implementations of graphical models for decision making, including Bayesian Networks, Markov Networks (Markov random fields), Influence Diagrams, Credal Networks, Probabilistic Relational Models. The framework also contains a wrapper, pyAgrum for exploiting aGrUM in Python. This framework is the result of an ongoing effort to build an efficient and well maintained open source cross-platform software, running on Linux, MacOS X and Windows, for dealing with graphical models and for providing essential components to build new algorithms for graphical models.",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2020,
+    "paper_url": "http://proceedings.mlr.press/v138/ducamp20a/ducamp20a.pdf"
+  },
+  {
+    "id": "nielsen20a",
+    "title": "Preface",
+    "authors": [
+      "Thomas D. Nielsen",
+      "Manfred Jaeger"
+    ],
+    "abstract": "",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2020,
+    "paper_url": "http://proceedings.mlr.press/v138/nielsen20a/nielsen20a.pdf"
+  },
+  {
+    "id": "azzimonti20a",
+    "title": "Structure Learning from Related Data Sets with a Hierarchical Bayesian Score",
+    "authors": [
+      "Laura Azzimonti",
+      "Giorgio Corani",
+      "Marco Scutari"
+    ],
+    "abstract": "Score functions for learning the structure of Bayesian networks in the literature assume that data are a homogeneous set of observations; whereas it is often the case that they comprise different related, but not homogeneous, data sets collected in different ways. In this paper we propose a new Bayesian Dirichlet score, which we call Bayesian Hierarchical Dirichlet (BHD). The proposed score is based on a hierarchical model that pools information across data sets to learn a single encompassing network structure, while taking into account the differences in their probabilistic structures. We derive a closed-form expression for BHD using a variational approximation of the marginal likelihood and we study its performance using simulated data. We find that, when data comprise multiple related data sets, BHD outperforms the Bayesian Dirichlet equivalent uniform (BDeu) score in terms of reconstruction accuracy as measured by the Structural Hamming distance, and that it is as accurate as BDeu when data are homogeneous. Moreover, the estimated networks are sparser and therefore more interpretable than those obtained with BDeu, thanks to a lower number of false positive arcs.",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2020,
+    "paper_url": "http://proceedings.mlr.press/v138/azzimonti20a/azzimonti20a.pdf"
+  },
+  {
+    "id": "biza20a",
+    "title": "Tuning Causal Discovery Algorithms",
+    "authors": [
+      "Konstantina Biza",
+      "Ioannis Tsamardinos",
+      "Sofia Triantafillou"
+    ],
+    "abstract": "There are numerous algorithms proposed in the literature for learning causal graphical probabilistic models. Each one of them is typically equipped with one or more tuning hyper-parameters. The choice of optimal algorithm and hyper-parameter values is not universal; it depends on the size of the network, the density of the true causal structure, the sample size, as well as the metric of quality of learning a causal structure. Thus, the challenge to a practitioner is how to “tune” these choices, given that the true graph is unknown and the learning task is unsupervised. In the paper, we evaluate two previously proposed methods for tuning, one based on stability of the learned structure under perturbations (bootstrapping) of the input data and the other based on balancing the in-sample fitting of the model with the model complexity. We propose and comparatively evaluate a new method that treats a causal model as a set of predictive models: one for each node given its Markov Blanket. It then tunes the choices using out-of-sample protocols for supervised methods such as cross-validation. The proposed method performs on par or better than the previous methods for most metrics.",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2020,
+    "paper_url": "http://proceedings.mlr.press/v138/biza20a/biza20a.pdf"
+  },
+  {
+    "id": "bodewes20a",
+    "title": "Identifiability and Consistency of Bayesian Network Structure Learning from Incomplete Data",
+    "authors": [
+      "Tjebbe Bodewes",
+      "Marco Scutari"
+    ],
+    "abstract": "Bayesian network (BN) structure learning from complete data has been extensively studied in the literature. However, fewer theoretical results are available for incomplete data, and most are based on the use of the Expectation-Maximisation (EM) algorithm. Balov (2013) proposed an alternative approach called Node-Average Likelihood (NAL) that is competitive with EM but computationally more efficient; and proved its consistency and model identifiability for discrete BNs. In this paper, we give general sufficient conditions for the consistency of NAL; and we prove consistency and identifiability for conditional Gaussian BNs, which include discrete and Gaussian BNs as special cases. Hence NAL has a wider applicability than originally stated in Balov (2013).",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2020,
+    "paper_url": "http://proceedings.mlr.press/v138/bodewes20a/bodewes20a.pdf"
+  },
+  {
+    "id": "bregoli20a",
+    "title": "Constraing-Based Learning for Continous-Time Bayesian Networks",
+    "authors": [
+      "Alessandro Bregoli",
+      "Marco Scutari",
+      "Fabio Stella"
+    ],
+    "abstract": "Dynamic Bayesian networks have been well explored in the literature as discrete-time models; however, their continuous-time extensions have seen comparatively little attention. In this paper, we propose the first constraint-based algorithm for learning the structure of continuous-time Bayesian networks. We discuss the different statistical tests and the underlying hypotheses used by our proposal to establish conditional independence. Finally, we validate its performance using synthetic data, and discuss its strengths and limitations. We find that score-based is more accurate in learning networks with binary variables, while our constraint-based approach is more accurate with variables assuming more than two values. However, more experiments are needed for confirmation.",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2020,
+    "paper_url": "http://proceedings.mlr.press/v138/bregoli20a/bregoli20a.pdf"
+  },
+  {
+    "id": "butz20a",
+    "title": "Sum-Product Network Decompilation",
+    "authors": [
+      "Cory Butz",
+      "Jhonatan S. Oliveira",
+      "Robert Peharz"
+    ],
+    "abstract": "There exists a dichotomy between classical probabilistic graphical models, such as Bayesian networks (BNs), and modern tractable models, such as sum-product networks (SPNs). The former generally have intractable inference, but provide a high level of interpretability, while the latter admit a wide range of tractable inference routi        nes, but are typically harder to interpret. Due to this dichotomy, tools to convert between BNs and SPNs are desirable. While one direction – compiling BNs into SPNs – is well discussed in Darwiche’s seminal work on arithmetic circuit compilation, the converse direction – decompiling SPNs into BNs – has received surprisingly little attention. In this paper, we fill this gap by proposing SPN2BN, an algorithm that decompiles an SPN into a BN. SPN2BN has several salient features when compared to the only other two works decompiling SPNs. Most significantly, the BNs returned by SPN2BN are minimal independence-maps that are more parsimonious with respect to the introduction of latent variables. Secondly, the output BN produced by SPN2BN can be precisely characterized with respect to a compiled BN. More specifically, a certain set of directed edges will be added to the input BN, giving what we will call the moral-closure. Lastly, it is established that our compilation-decompilation process is idempotent. This has practical significance as it limits the size of the decompiled SPN.",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2020,
+    "paper_url": "http://proceedings.mlr.press/v138/butz20a/butz20a.pdf"
+  },
+  {
+    "id": "chen20a",
+    "title": "Solving Multiple Inference by Minimizing Expected Loss",
+    "authors": [
+      "Cong Chen",
+      "Jiaqi Yang",
+      "Chao Chen",
+      "Changhe Yuan"
+    ],
+    "abstract": "Multiple Inference is the problem of finding multiple top solutions for an inference problem in a graphical model. It has been shown that it is beneficial for the top solutions to be diverse. However, existing methods, such as diverse M-Best and M-Modes, often rely on a hyper parameter in enforcing diversity. The optimal values of such parameters usually depend on the probability landscape of the graphical model and thus have to be tuned case by case via cross validation. This is not a desirable property. In this paper, we introduce a parameter-free method that directly minimizes the expected loss of each solution in finding multiple top solutions that have high oracle accuracy, and are automatically diverse. Empirical evaluations show that our method often have better performance than other competing methods.",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2020,
+    "paper_url": "http://proceedings.mlr.press/v138/chen20a/chen20a.pdf"
+  },
+  {
+    "id": "chen20b",
+    "title": "Efficient Heuristic Search for M-Modes Inference",
+    "authors": [
+      "Cong Chen",
+      "Changhe Yuan",
+      "Chao Chen"
+    ],
+    "abstract": "M-Modes is the problem of finding the top M locally optimal solutions of a graphical model, called modes. These modes provide geometric characterization of the energy landscape of a graphical model and lead to high quality solutions in structured prediction. It has been shown that any mode must be a local MAP within every subgraph of certain size. The state-of-the-art method is a search algorithm that explores subgraphs in a fixed ordering, uses each subgraph as a layer and searches for a consistent concatenation of local MAPs. We observe that for the M-Modes problem, different search orderings can lead to search spaces with dramatically different sizes, resulting in huge differences in performance. We formalize a metric measuring the quality of different orderings. We then formulate finding an optimized ordering as a shortest path problem, and introduce pruning criteria to speed up the search. Our empirical results show that using optimized orderings improves the efficiency of M-Modes search by up to orders of magnitude.",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2020,
+    "paper_url": "http://proceedings.mlr.press/v138/chen20b/chen20b.pdf"
+  },
+  {
+    "id": "chen20c",
+    "title": "Supervised Learning with Background Knowledge",
+    "authors": [
+      "Yizuo Chen",
+      "Arthur Choi",
+      "Adnan Darwiche"
+    ],
+    "abstract": "We consider the task of supervised learning while focusing on the impact that background knowledge may have on the accuracy and robustness of learned classifiers. We consider three types of background knowledge: causal domain knowledge, functional dependencies and logical constraints. Our findings are set in the context of an empirical study that compares two classes of classifiers: Arithmetic Circuit (AC) classifiers compiled from Bayesian network models with varying degrees of background knowledge, and Convolutional Neural Network (CNN) classifiers. We report on the accuracy and robustness of such classifiers on two tasks concerned with recognizing synthesized shapes in noisy images. We show that classifiers that encode background knowledge need much less data to attain certain accuracies and are more robust against noise level in the data and also against mismatches between noise patterns in the training and testing data.",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2020,
+    "paper_url": "http://proceedings.mlr.press/v138/chen20c/chen20c.pdf"
+  },
+  {
+    "id": "chobtham20a",
+    "title": " Bayesian network structure learning with causal effects in the presence of latent variables ",
+    "authors": [
+      "Kiattikun Chobtham",
+      "Anthony C. Constantinou"
+    ],
+    "abstract": " Latent variables may lead to spurious relationships that can be misinterpreted as causal relationships. In Bayesian Networks (BNs), this challenge is known as learning under causal insufficiency. Structure learning algorithms that assume causal insufficiency tend to reconstruct the ancestral graph of a BN, where bi-directed edges represent confounding and directed edges represent direct or ancestral relationships. This paper describes a hybrid structure learning algorithm, called CCHM, which combines the constraint-based part of cFCI with hill-climbing score-based learning. The score-based process incorporates Pearl’s do-calculus to measure causal effects, which are used to orientate edges that would otherwise remain undirected, under the assumption the BN is a linear Structure Equation Model where data follow a multivariate Gaussian distribution. Experiments based on both randomised and well-known networks show that CCHM improves the state-of-the-art in terms of reconstructing the true ancestral graph.",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2020,
+    "paper_url": "http://proceedings.mlr.press/v138/chobtham20a/chobtham20a.pdf"
+  },
+  {
+    "id": "chubarian20a",
+    "title": " Approximating bounded tree-width Bayesian network classifiers with OBDD",
+    "authors": [
+      "Karine Chubarian",
+      "György Turán"
+    ],
+    "abstract": "It is shown that Bayesian network classifiers of tree-width $k$ have an OBDD approximation computable in polynomial time in the parameters, for every fixed $k$. This is shown by approximating a polynomial threshold function representing the classifier. The approximation error can be measured with respect to any distribution which can be approximated by a mixture of bounded width distributions. This includes the input distribution of the classifier.",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2020,
+    "paper_url": "http://proceedings.mlr.press/v138/chubarian20a/chubarian20a.pdf"
+  },
+  {
+    "id": "pierre20a",
+    "title": "Gaussian Sum-Product Networks Learning in the Presence of Interval Censored Data",
+    "authors": [
+      "Clavier Pierre",
+      "Bouaziz Olivier",
+      "Nuel Gregory"
+    ],
+    "abstract": "Sum-Product Networks (SPNs) can be seen as deep mixture models that have demonstrated efficient and tractable inference properties. In this context, graph and parameters learning have been deeply studied but the standard approaches do not apply to interval censored data. In this paper, we derive an approach for learning SPN parameters based on maximum likelihood using Expectation-Maximization (EM) in the context of interval censored data. Assuming the graph structure known, our algorithm makes possible to learn Gaussian leaves parameters of SPNs with right, left or interval censored data. We show that our EM algorithm for incomplete data outperforms other strategies such as the midpoint for censored intervals or dropping incomplete values.",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2020,
+    "paper_url": "http://proceedings.mlr.press/v138/pierre20a/pierre20a.pdf"
+  },
+  {
+    "id": "dang20a",
+    "title": "Strudel: Learning Structured-Decomposable Probabilistic Circuits",
+    "authors": [
+      "Meihua Dang",
+      "Antonio Vergari",
+      "Guy Broeck"
+    ],
+    "abstract": " Probabilistic circuits (PCs) represent a probability distribution as a computational graph. Enforcing structural properties on these graphs guarantees that several inference scenarios become tractable. Among these properties, structured decomposability is a particularly appealing one: it enables the efficient and exact computations of the probability of complex logical formulas, and can be used to reason about the expected output of certain predictive models under missing data. This paper proposes Strudel, a simple, fast and accurate learning algorithm for structured-decomposable PCs. Compared to prior work for learning structured-decomposable PCs, Strudel delivers more accurate single PC models in fewer iterations, and dramatically scales learning when building ensembles of PCs. It achieves this scalability by exploiting another structural property of PCs, called determinism, and by sharing the same computational graph across mixture components. We show these advantages on standard density estimation benchmarks and challenging inference scenarios.",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2020,
+    "paper_url": "http://proceedings.mlr.press/v138/dang20a/dang20a.pdf"
+  },
+  {
+    "id": "campos20a",
+    "title": "Almost No News on the Complexity of MAP in Bayesian Networks",
+    "authors": [
+      "Cassio P. de Campos"
+    ],
+    "abstract": "This article discusses the current state of the art in terms of computational complexity for the problem of finding the most probable configuration of a subset of variables in a multivariate domain modelled by probabilistic graphical models such as Markov networks (random fields) or Bayesian networks. It contains complexity proofs and an algorithm for the problem and shows empirical results for Boolean trees which may suggest tractability of the task in some special cases.",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2020,
+    "paper_url": "http://proceedings.mlr.press/v138/campos20a/campos20a.pdf"
+  },
+  {
+    "id": "fan20a",
+    "title": " Contrastive Divergence Learning with Chained Belief Propagation",
+    "authors": [
+      "Ding Fan",
+      "Xue Yexiang"
+    ],
+    "abstract": "Contrastive Divergence (CD) is an important maximum-likelihood learning approach for probabilistic graphical models. CD maximizes the difference in likelihood between the observed data and those sampled from the current model distribution using Markov Chain Monte Carlo (MCMC). Nevertheless, the overall performance of CD is hampered by the slow mixing rate of MCMC in the presence of combinatorial constraints. A competing approach BP-CD replaces MCMC with Belief Propagation (BP). However, their samples are generated from a mean-field approximation, which may be far away from the true distribution. Here we propose contrastive divergence learning with chained belief propagation (BPChain-CD). To generate one sample in CD, we fix one variable at a time based on the marginal distribution computed by BP conditioned on previous variables. We analyze BPChain-CD both theoretically and experimentally. We show that BPChain-CD learns better models compared with  BP-CD and CD on a range of maximum-likelihood learning experiments.",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2020,
+    "paper_url": "http://proceedings.mlr.press/v138/fan20a/fan20a.pdf"
+  },
+  {
+    "id": "ducamp20b",
+    "title": "An Efficient Low-Rank Tensors Representation for Algorithms in Complex Probabilistic Graphical Models",
+    "authors": [
+      "Gaspard Ducamp",
+      "Philippe Bonnard",
+      "Anthony pages = 173-184 Nouy",
+      "Pierre-Henri Wuillemin"
+    ],
+    "abstract": "Probabilistic Graphical Models form a class of compact representations of high-dimensional probability distributions by decomposing these distributions in a set of multivariate factors (potentials). Every exact algorithm (for probabilistic inference, MAP, etc.) operates on a specific representation of these potentials. However complex probabilistic models often lead to very large potentials which dramatically impact both the space and time complexities of these algorithms and which can make inference in complex models intractable. In this paper we propose a new approach based on low-rank tensor representation to approximate and operate with these potentials. The low-rank tensor representation is used for the approximation of potentials with controlled precision and an important reduction in the number of parameters. Every operator used in such algorithms (multiplication, addition, projection, etc.) can be defined within this representation, leading to an approximation framework where every algorithm for PGMs can be easily implemented. As an instance of this framework, we present a classical message passing algorithm in Bayesian networks using the tensor train format. By reducing significantly the computational complexity and the memory usage, the proposed approach makes probabilistic inference much more scalable. These results are illustrated by experiments on dynamic Bayesian networks and classical Bayesian networks performed using a Python implementation with TensorFlow, T3F and pyAgrum.",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2020,
+    "paper_url": "http://proceedings.mlr.press/v138/ducamp20b/ducamp20b.pdf"
+  },
+  {
+    "id": "dufraisse20a",
+    "title": "Interactive Anomaly Detection in Mixed Tabular Data using Bayesian Networks",
+    "authors": [
+      "Evan Dufraisse",
+      "Philippe Leray",
+      "Raphaël Nedellec",
+      "Tarek Benkhelif"
+    ],
+    "abstract": "The last decades improvements in processing abilities have quickly led to an increasing use of data analyses implying massive data-sets. To retrieve insightful information from any data driven approach, a pivotal aspect to ensure is good data quality. Manual correction of massive data-sets requires tremendous efforts, is prone to errors, and results being really costly. If knowledge in a specific field can often allow the development of efficient models for anomaly detection and data correction, this knowledge can sometimes be unavailable and a more generic approach should be found. This paper presents a novel approach to anomaly detection and correction in mixed tabular data using Bayesian Networks. We present an algorithm for detecting anomalies and offering correction hints based on Jensen scores computed within the Markov Blankets of considered variables. We also discuss the incremental corrections of detection model using user’s feedback, as well as additional aspects related to discretization in mixed data and its effects on detection efficiency. Finally we also discuss how functional dependencies can be managed to detect errors while improving faithfulness and computation speed. ",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2020,
+    "paper_url": "http://proceedings.mlr.press/v138/dufraisse20a/dufraisse20a.pdf"
+  },
+  {
+    "id": "finke20a",
+    "title": "Investigating Matureness of Probabilistic Graphical Models for Dry-Bulk Shipping",
+    "authors": [
+      "Nils Finke",
+      "Marcel Gehrke",
+      "Tanya Braun",
+      "Tristan Potten",
+      "Ralf Möller"
+    ],
+    "abstract": "Dry-bulk shipping is crucial for a functioning global trade economy. Thus, additional research is highly relevant to further improve bulk shipping operations. Dry-bulk shipping involves many entities interacting with each other in an uncertain environment that changes over time. To assist dry-bulk vessel operators in how to position their vessels, efficient query answering and decision support is necessary. Therefore, we investigate existing modelling formalism and inference algorithms regarding which aspects of dry-bulk shipping are already realisable. Although not all challenges are already well-understood, we show that a lifted dynamic approach tackles most of the challenges involved in handling dry-bulk shipping.",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2020,
+    "paper_url": "http://proceedings.mlr.press/v138/finke20a/finke20a.pdf"
+  },
+  {
+    "id": "gillot20a",
+    "title": "Scalable Bayesian Network Structure Learning via Maximum Acyclic Subgraph",
+    "authors": [
+      "Pierre Gillot",
+      "Pekka Parviainen"
+    ],
+    "abstract": "Learning the structure of a Bayesian network is an NP-hard problem and exact learning algorithms that are guaranteed to find an optimal structure are not feasible with large number of variables. Thus, large-scale learning is usually done using heuristics that do not provide any quality guarantees. We present a heuristic method that scales up to networks with hundreds of variables and provides quality guarantees in terms of an upper bound for the score of the optimal network. The proposed method consists of two parts. First, we simplify the problem by approximating local scores using so-called edge scores. With the edge scores learning an optimal Bayesian network structure is equivalent to finding the maximum acyclic subgraph. Second, we solve the maximum acyclic subgraph problem fast using integer linear programming. Additionally, we choose the approximation in a specific way so that an upper bound for the score of an optimal network can be obtained.",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2020,
+    "paper_url": "http://proceedings.mlr.press/v138/gillot20a/gillot20a.pdf"
+  },
+  {
+    "id": "handhayani20a",
+    "title": "Kernel-based Approach for Learning Causal Graphs from Mixed Data",
+    "authors": [
+      "Teny Handhayani",
+      "James Cussens"
+    ],
+    "abstract": "A causal graph can be generated from a dataset using a particular causal algorithm, for instance, the PC algorithm or Fast Causal Inference (FCI). This paper provides two contributions in learning causal graphs: an easy way to handle mixed data so that it can be used to learn causal graphs using the PC algorithm/FCI and a method to evaluate the learned graph structure when the true graph is unknown. This research proposes using kernel functions and Kernel Alignment to handle mixed data. The two main steps of this approach are computing a kernel matrix for each variable and calculating a pseudo-correlation matrix using Kernel Alignment. The Kernel Alignment matrix is used as a substitute for the correlation matrix that is the main component used in computing a partial correlation for the conditional independence test for Gaussian data in the PC Algorithm and FCI. The advantage of this idea is that is possible to handle more data types when there is a suitable kernel function to compute a kernel matrix for an observed variable. The proposed method is successfully applied to learn a causal graph from mixed data containing categorical, binary, ordinal, and continuous variables. We also introduce the Modal Value of Edges Existence (MVEE) method, a new method to evaluate the structure of learned graphs represented by Partial Ancestral Graph (PAG) when the true graph is unknown. MVEE produces an agreement graph as a proxy to the true graph to evaluate the structure of the learned graph. MVEE is successfully used to choose the best-learned graph when the true graph is unknown. ",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2020,
+    "paper_url": "http://proceedings.mlr.press/v138/handhayani20a/handhayani20a.pdf"
+  },
+  {
+    "id": "hartwig20a",
+    "title": "Lifted Query Answering in Gaussian Bayesian Networks",
+    "authors": [
+      "Mattis Hartwig",
+      "Ralf Möller"
+    ],
+    "abstract": "Gaussian Bayesian networks are widely used for modeling behaviors of continuous random variables. Lifting exploits symmetries when dealing with large numbers of isomorphic random variables to support more compact representations and more efficient query answering. This paper presents a lifted construction and representation of a joint distribution derived from a Gaussian Bayesian network and a lifted query answering algorithm on the lifted joint distribution. To lift the query answering, needed algebraic operations that work fully in the lifted space are developed. A theoretical complexity analysis and experimental results show that both the lifted joint construction and the lifted query answering significantly outperform their grounded counterparts. ",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2020,
+    "paper_url": "http://proceedings.mlr.press/v138/hartwig20a/hartwig20a.pdf"
+  },
+  {
+    "id": "jirousek20a",
+    "title": "On a possibility of gradual model-learning",
+    "authors": [
+      "Radim Jiroušek"
+    ],
+    "abstract": "In this paper, the term of gradual learning describes the process, in which an $n$-dimensional model is constructed in $n$ steps; each step increases the dimensionality of the constructed model by one. The approach is explained using the apparatus of compositional models since its algebraic properties seem to serve the purpose best. The paper shows also the equivalence of compositional models and Bayesian networks, and thus the paper gives a hint that the approach applies to the graphical model as well. ",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2020,
+    "paper_url": "http://proceedings.mlr.press/v138/jirousek20a/jirousek20a.pdf"
+  },
+  {
+    "id": "kinney20a",
+    "title": "Causal Feature Learning for Utility-Maximizing Agents",
+    "authors": [
+      "David Kinney",
+      "David Watson"
+    ],
+    "abstract": "Discovering high-level causal relations from low-level data is an important and challenging problem that comes up frequently in the natural and social sciences. In a series of papers, Chalupka et al. (2015, 2016a, 2016b, 2017) develop a procedure for \\textit{causal feature learning} (CFL) in an effort to automate this task. We argue that CFL does not recommend coarsening in cases where pragmatic considerations rule in favor of it, and recommends coarsening in cases where pragmatic considerations rule against it. We propose a new technique, \\textit{pragmatic causal feature learning} (PCFL), which extends the original CFL algorithm in useful and intuitive ways. We show that PCFL has the same attractive measure-theoretic properties as the original CFL algorithm. We compare the performance of both methods through theoretical analysis and experiments.",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2020,
+    "paper_url": "http://proceedings.mlr.press/v138/kinney20a/kinney20a.pdf"
+  },
+  {
+    "id": "kuzelka20a",
+    "title": "Lifted Weight Learning of Markov Logic Networks  (Revisited One More Time)",
+    "authors": [
+      "Ondrej Kuzelka",
+      "Vyacheslav Kungurtsev",
+      "Yuyi Wang"
+    ],
+    "abstract": "We revisit the problem of lifted weight learning of Markov logic networks (MLNs). We show that there is an algorithm for maximum-likelihood learning which runs in time polynomial in the size of the domain, whenever the partition function of the given MLN can be computed in polynomial time. This improves on our recent results where we showed the same result with the additional dependency of the runtime on a parameter of the training data, called interiority, which measures how “extreme” the given training data are. In this work, we get rid of this dependency. The main new technical ingredient that we exploit are theoretical results obtained recently by Straszak and Vishnoi (Maximum Entropy Distributions: Bit Complexity and Stability, COLT 2019).",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2020,
+    "paper_url": "http://proceedings.mlr.press/v138/kuzelka20a/kuzelka20a.pdf"
+  },
+  {
+    "id": "madsen20a",
+    "title": "Prediction of High Risk of Deviations in Home Care Deliveries",
+    "authors": [
+      "Anders L. Madsen",
+      "Kristian G. Olesen",
+      "Heidi Lynge Løvschall",
+      "Nicolaj Søndberg-Jeppesen",
+      "Frank Jensen",
+      "Morten Lindblad",
+      "Mads Lause Mogensen",
+      "Trine Søby Christensen"
+    ],
+    "abstract": " This paper presents a real-world application of Bayesian networks to support existing home care quality supervision.  In Denmark home care is delivered by municipalities, where the individual citizen is free to select the service provider, private or public. The aim of our work is to support the home care control process by identifying significant deviations automatically, pointing to reasons for a significant deviation and identifying future home care deliveries where there is a high probability of deviation between granted and delivered care to the individual citizen. Home care is granted as packages of time measured in minutes and we define a too high delivery rate as larger than $150%$. In the municipality under study in this work (municipality of Hj{ø}rring), the supervision of home care delivery is a manual and time consuming process prone to human error.  This paper presents the results of efforts to automate parts of the supervision using Bayesian network modelling and data analysis. The results of the pilot study shows significant potential in applying Bayesian network modelling and data analysis to this challenge for the benefit of the municipality, the employees and the citizens. ",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2020,
+    "paper_url": "http://proceedings.mlr.press/v138/madsen20a/madsen20a.pdf"
+  },
+  {
+    "id": "maua20a",
+    "title": "Two Reformulation Approaches to Maximum-A-Posteriori Inference in Sum-Product Networks",
+    "authors": [
+      "Denis Deratani Mauá",
+      "Heitor Ribeiro Reis",
+      "Gustavo Perez Katague",
+      "Alessandro Antonucci"
+    ],
+    "abstract": "Sum-product networks are expressive efficient probabilistic graphical models that allow for tractable marginal inference. Many tasks however require the computation of maximum-a-posteriori configurations, an NP-Hard problem for such models. To date there have been very few proposals for computing maximum-a-posteriori configurations in sum-product networks. This is in sharp difference with other probabilistic frameworks such as Bayesian networks and random Markov fields, where the problem is also NP-hard. In this work we propose two approaches to reformulate maximum-a-posteriori inference as other combinatorial optimization problems with widely available solvers. The first approach casts the problem as a similar inference problem in Bayesian networks, overcoming some limitations of previous similar translations. In addition to making available the toolset of maximum-a-posteriori inference on Bayesian networks to sum-product networks, our reformulation also provides further  insight into the connections of these two classes of models. The second approach casts the problem as a mixed-integer linear program, for which there exists very efficient solvers. This allows such inferences to be enriched with integer-linear constraints, increasing the expressivity of the models. We compare our reformulation approaches in a large collection of problems, and against state-of-the-art approaches. The results show that reformulation approaches are competitive.",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2020,
+    "paper_url": "http://proceedings.mlr.press/v138/maua20a/maua20a.pdf"
+  },
+  {
+    "id": "mielke20a",
+    "title": "Discovering cause-effect relationships in spatial systems with a known direction based on observational data",
+    "authors": [
+      "Konrad P Mielke",
+      "Tom Claassen",
+      "J Huijbregts",
+      "Aafke M Schipper",
+      "Tom M Heskes"
+    ],
+    "abstract": "Many real-world studies and experiments are characterized by an underlying spatial structure that induces dependencies between observations. Most existing causal discovery methods, however, rely on the IID assumption, meaning that they are ill-equipped to handle, let alone exploit this additional information. In this work, we take a typical example from the field of ecology with an underlying directional flow structure in which samples are collected from rivers and show how to adapt the well-known Fast Causal Inference (FCI) algorithm (Spirtes et al., 2000) to learn cause-effect relationships in such a system efficiently. We first evaluated our adaptation in a simulation study against the original FCI algorithm and found significantly increased performance regardless of the sample size. In a subsequent application to real-world river data from the US state of Ohio, we identified important likely causes of biodiversity measured in the form of the Index of Biotic Integrity (IBI) metric.",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2020,
+    "paper_url": "http://proceedings.mlr.press/v138/mielke20a/mielke20a.pdf"
+  },
+  {
+    "id": "orfanides20a",
+    "title": "Learning decomposable models by coarsening",
+    "authors": [
+      "George Orfanides",
+      "Aritz Pérez"
+    ],
+    "abstract": "During the last decade, some exact algorithms have been proposed for learning decomposable models by maximizing additively decomposable score functions, such as Log-likelihood, BDeu, and BIC. However, up to the date, the proposed exact approaches are practical for learning models up to $20$ variables. In this work, we present an approximated procedure that can learn decomposable models over hundreds of variables with a remarkable trade-off between the quality of the obtained solution and the amount of the computational resources required. The proposed learning procedure iteratively constructs a sequence of coarser decomposable (chordal) graphs. At each step, given a decomposable graph, the algorithm adds the subset of edges due to the actual minimal separators that maximizes the score function while maintaining the chordality. The proposed procedure has shown competitive results for learning decomposable models over hundred of variables using a reasonable amount of computational resources. Finally, we empirically show that it can be used to reduce the search space of exact procedures, which would allow them to address the learning of high-dimensional decomposable models.",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2020,
+    "paper_url": "http://proceedings.mlr.press/v138/orfanides20a/orfanides20a.pdf"
+  },
+  {
+    "id": "ortiz20a",
+    "title": "Correlated Equilibria for Approximate Variational Inference in MRFs",
+    "authors": [
+      "Luis E. Ortiz",
+      "Boshen Wang",
+      "Ze Gong"
+    ],
+    "abstract": "Almost all of the work in graphical models for game theory has mirrored previous work in probabilistic graphical models. Our work considers the opposite direction: Taking advantage of advances in equilibrium computation for probabilistic inference. In particular, we present formulations of inference problems in Markov random fields (MRFs) as computation of equilibria in a certain class of game-theoretic graphical models. While some previous work explores this direction, we still lack a more precise connection between variational probabilistic inference in MRFs and correlated equilibria. This paper sharpens the connection, which helps us exploit relatively more recent theoretical and empirical results from the literature on algorithmic and computational game theory on the tractable, polynomial-time computation of exact or approximate correlated equilibria in graphical games with arbitrary, loopy graph structure. Our work discusses how to design new algorithms with equally tractable guarantees for the computation of approximate variational inference in MRFs. In addition, inspired by a previously stated game-theoretic view of tree-reweighted message-passing techniques for belief inference as a zero-sum game, we propose a different, general-sum potential game to design approximate fictitious-play techniques. Empirical evaluations on synthetic experiments and on an application to soft de-noising on real-world image datasets illustrate the performance of our proposed approach and shed some light on the conditions under which the resulting belief inference algorithms may be most effective relative to standard state-of-the-art methods.",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2020,
+    "paper_url": "http://proceedings.mlr.press/v138/ortiz20a/ortiz20a.pdf"
+  },
+  {
+    "id": "pevny20a",
+    "title": "Sum-Product-Transform Networks: Exploiting Symmetries using Invertible Transformations",
+    "authors": [
+      "Tomáš Pevný",
+      "Václav Smídl",
+      "Martin Trapp",
+      "Ondřej Poláček",
+      "Tomáš Oberhuber"
+    ],
+    "abstract": "In this work, we propose Sum-Product-Transform Networks (SPTN), an extension of sum-product networks that uses invertible transformations as additional internal nodes. The type and placement of transformations determine properties of the resulting SPTN with many interesting special cases. Importantly, SPTN with Gaussian leaves and affine transformations pose the same inference task tractable that can be computed efficiently in SPNs. We propose to store and optimize affine transformations in their SVD decompositions using an efficient parametrization of unitary matrices by a set of Givens rotations. Last but not least, we demonstrate that G-SPTNs pushes the state-of-the-art on the density estimation task on used datasets. ",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2020,
+    "paper_url": "http://proceedings.mlr.press/v138/pevny20a/pevny20a.pdf"
+  },
+  {
+    "id": "ramanan20a",
+    "title": " Discriminative Non-Parametric Learning of Arithmetic Circuits",
+    "authors": [
+      "Nandini Ramanan",
+      "Mayukh Das",
+      "Kristian Kersting",
+      "Sriraam Natarajan"
+    ],
+    "abstract": " Arithmetic Circuits (AC) and Sum-Product Networks (SPN) have recently gained significant interest by virtue of being tractable deep probabilistic models. We propose the first gradient-boosted method for structure learning of discriminative ACs (DACs), called DACBOOST. In discrete domains ACs are essentially equivalent to mixtures of trees, thus DACBOOST decomposes a large AC into smaller tree-structured ACs and learns them in sequential, additive manner. The resulting non-parametric manner of learning DACs results in a model with very few tuning parameters making our learned model significantly more efficient. We demonstrate on standard data sets and real data sets, efficiency of DACBOOST compared to state-of-the-art DAC learners without sacrificing effectiveness.",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2020,
+    "paper_url": "http://proceedings.mlr.press/v138/ramanan20a/ramanan20a.pdf"
+  },
+  {
+    "id": "rantanen20a",
+    "title": "Learning Optimal Cyclic Causal Graphs from Interventional Data",
+    "authors": [
+      "Kari Rantanen",
+      "Antti Hyttinen",
+      "Matti Järvisalo"
+    ],
+    "abstract": "We consider causal discovery in a very general setting involving non-linearities, cycles and several experimental datasets in which only a subset of variables are recorded. Recent approaches combining constraint-based causal discovery, weighted independence constraints and exact optimization have shown improved accuracy. However, they have mainly focused on the d-separation criterion, which is theoretically correct only under strong assumptions such as linearity or acyclicity. The more recently introduced sigma-separation criterion for statistical independence enables constraint-based causal discovery for non-linear relations over cyclic structures. In this work we make several contributions in this setting. (i) We generalize bcause, a recent exact branch-and-bound causal discovery approach, to this setting, integrating support for the sigma-separation criterion and several interventional datasets. (ii) We empirically analyze different schemes for weighting independence constraints in terms of accuracy and runtimes of bcause. (iii) We provide improvements to a previous declarative answer set programming (ASP) based approach for causal discovery employing the sigma-separation criterion, and empirically evaluate bcause and the refined ASP-approach.",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2020,
+    "paper_url": "http://proceedings.mlr.press/v138/rantanen20a/rantanen20a.pdf"
+  },
+  {
+    "id": "rodriguez-lopez20a",
+    "title": "Knowledge Transfer for Learning Markov Equivalence Classes",
+    "authors": [
+      "Verónica Rodríguez-López",
+      "Luis Enrique Sucar"
+    ],
+    "abstract": "There are domains, such as in biology, medicine, and neuroscience, where the causal relations vary across members of a population, and where it may be difficult to collect data for some specific members. For these domains, it is convenient to develop algorithms that, from small sample sizes,  can discover the specific causal relations of a subject.  Learning these subject-specific models with the existing causal discovery algorithms could be difficult.  Most of them were designed to find the common causal relations of a population in the large sample limit. Although transfer learning techniques have shown to be useful for improving predictive associative models learned with limited data sets, their application in the field of causal discovery has not been sufficiently explored.  In this paper, we propose a knowledge transfer algorithm for discovering Markov equivalence classes for subject-specific causal models. We explore transferring weighted instances of auxiliary data sets, according to their relevance, for improving models learned with limited sample sizes. Experimental results on data sets generated from simulated and benchmark causal Bayesian networks show that our method outperforms in adjacency and arrowhead recovery the base and a similar knowledge transfer discovery methods.",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2020,
+    "paper_url": "http://proceedings.mlr.press/v138/rodriguez-lopez20a/rodriguez-lopez20a.pdf"
+  },
+  {
+    "id": "roth20a",
+    "title": "Differentiable TAN Structure Learning for Bayesian Network Classifiers",
+    "authors": [
+      "Wolfgang Roth",
+      "Franz Pernkopf"
+    ],
+    "abstract": "Learning the structure of Bayesian networks is a difficult combinatorial optimization problem. In this paper, we consider learning of tree-augmented naive Bayes (TAN) structures for Bayesian network classifiers with discrete input features. Instead of performing a combinatorial optimization over the space of possible graph structures, the proposed method learns a distribution over graph structures. After training, we select the most probable structure of this distribution. This allows for a joint training of the Bayesian network parameters along with its TAN structure using gradient-based optimization. The proposed method is agnostic to the specific loss and only requires that it is differentiable. We perform extensive experiments using a hybrid generative-discriminative loss based on the discriminative probabilistic margin. Our method consistently outperforms random TAN structures and Chow-Liu TAN structures.",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2020,
+    "paper_url": "http://proceedings.mlr.press/v138/roth20a/roth20a.pdf"
+  },
+  {
+    "id": "shao20a",
+    "title": "Conditional Sum-Product Networks: Imposing Structure on Deep Probabilistic Architectures",
+    "authors": [
+      "Xiaoting Shao",
+      "Alejandro Molina",
+      "Antonio Vergari",
+      "Karl Stelzner",
+      "Robert Peharz",
+      "Thomas Liebig",
+      "Kristian Kersting"
+    ],
+    "abstract": "Probabilistic graphical models are a central tool in AI, however, they are generally not as expressive as deep neural models, and inference is notoriously hard and slow. In contrast, deep probabilistic models such as sum-product networks (SPNs) capture joint distributions in a tractable fashion, but still lack the expressive power of intractable models based on deep neural networks. Therefore, we introduce conditional SPNs (CSPNs), conditional density estimators for multivariate and potentially hybrid domains that allow harnessing the expressive power of neural networks while still maintaining tractability guarantees. One way to implement CSPNs is to use an existing SPN structure and condition its parameters on the input, e.g., via a deep neural network. Our experimental evidence demonstrates that CSPNs are competitive with other probabilistic models and yield superior performance on multilabel image classification compared to mean field and mixture density networks. Furthermore, they can successfully be employed as building blocks for structured probabilistic models, such as autoregressive image models.",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2020,
+    "paper_url": "http://proceedings.mlr.press/v138/shao20a/shao20a.pdf"
+  },
+  {
+    "id": "sharma20a",
+    "title": "A Score-and-Search Approach to Learning Bayesian Networks with Noisy-OR Relations",
+    "authors": [
+      "Charupriya Sharma",
+      "Zhenyu A. Liao",
+      "James Cussens",
+      "Peter Beek"
+    ],
+    "abstract": "A Bayesian network is a probabilistic graphical model that consists of a directed acyclic graph (DAG), where each node is a random variable and attached to each node is a conditional probability distribution (CPD). A Bayesian network can be learned from data using the well-known score-and-search approach, and within this approach a key consideration is how to simultaneously learn the global structure in the form of the underlying DAG and the local structure in the CPDs. Several useful forms of local structure have been identified in the literature but thus far the score-and-search approach has only been extended to handle local structure in form of context-specific independence. In this paper, we show how to extend the score-and-search approach to the important and widely useful case of noisy-OR relations. We provide an effective gradient descent algorithm to score a candidate noisy-OR using the widely used BIC score and we provide pruning rules that allow the search to successfully scale to medium sized networks. Our empirical results provide evidence for the success of our approach to learning Bayesian networks that incorporate noisy-OR relations.",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2020,
+    "paper_url": "http://proceedings.mlr.press/v138/sharma20a/sharma20a.pdf"
+  },
+  {
+    "id": "shen20a",
+    "title": "A New Perspective on Learning Context-Specific Independence",
+    "authors": [
+      "Yujia Shen",
+      "Arthur Choi",
+      "Adnan Darwiche"
+    ],
+    "abstract": "Local structure such as context-specific independence (CSI) has received much attention in the probabilistic graphical model (PGM) literature, as it facilitates the modeling of large complex systems, as well as for reasoning with them. In this paper, we provide a new perspective on how to learn CSIs from data. We propose to first learn a functional and parameterized representation of a conditional probability distribution (CPD), such as a neural network. Next, we quantize this continuous function, into an arithmetic circuit representation that facilitates efficient inference. In the first step, we can leverage the many powerful tools that have been developed in the machine learning literature. In the second step, we exploit more recently-developed analytic tools from explainable AI, for the purposes of learning CSIs. Finally, we contrast our approach, empirically and conceptually, with more traditional variable-splitting approaches, that search for CSIs more explicitly.",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2020,
+    "paper_url": "http://proceedings.mlr.press/v138/shen20a/shen20a.pdf"
+  },
+  {
+    "id": "shenvi20a",
+    "title": "Constructing a Chain Event Graph from a Staged Tree",
+    "authors": [
+      "Aditi Shenvi",
+      "Jim Q Smith"
+    ],
+    "abstract": "Chain Event Graphs (CEGs) are a recent family of probabilistic graphical models - a generalisation of Bayesian Networks - providing an explicit representation of structural zeros, structural missing values and context-specific conditional independences within their graph topology. A CEG is constructed from an event tree through a sequence of transformations beginning with the colouring of the vertices of the event tree to identify one-step transition symmetries. This coloured event tree, also known as a staged tree, is the output of the learning algorithms used for this family. Surprisingly, no general algorithm has yet been devised that automatically transforms any staged tree into a CEG representation. In this paper we provide a simple iterative backward algorithm for this transformation. Additionally, we show that no information is lost from transforming a staged tree into a CEG. Finally, we demonstrate that with an optimal stopping criterion, our algorithm is more efficient than the generalisation of a special case presented in Silander and Leong (2013). We also provide Python code using this algorithm to obtain a CEG from any staged tree along with the functionality to add edges with sampling zeros. ",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2020,
+    "paper_url": "http://proceedings.mlr.press/v138/shenvi20a/shenvi20a.pdf"
+  },
+  {
+    "id": "studeny20a",
+    "title": "Dual Formulation of the Chordal Graph Conjecture",
+    "authors": [
+      "Milan Studeny",
+      "James Cussens",
+      "Vaclav Kratochvil"
+    ],
+    "abstract": "The idea of an integer linear programming approach to structural learning of decomposable graphical models led to the study of the so-called chordal graph polytope. An open mathematical question is what is the minimal set of linear inequalities defining this polytope. Some time ago we came up with a specific conjecture that the polytope is defined by so-called clutter inequalities. In this theoretical paper we give a dual formulation of the conjecture. Specifically, we introduce a certain dual polyhedron defined by trivial equality constraints, simple monotonicity inequalities and certain inequalities assigned to incomplete chordal graphs. The main result is that the list of (all) vertices of this bounded polyhedron gives rise to the list of (all) facet-defining inequalities of the chordal graph polytope. The original conjecture is then equivalent to a statement that all vertices of the dual polyhedron are zero-one vectors. This dual formulation of the conjecture offers a more intuitive view on the problem and allows us to disprove the conjecture.",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2020,
+    "paper_url": "http://proceedings.mlr.press/v138/studeny20a/studeny20a.pdf"
+  },
+  {
+    "id": "sugahara20a",
+    "title": "Bayesian Network Model Averaging Classifiers by Subbagging",
+    "authors": [
+      "Shouta Sugahara",
+      "Itsuki Aomi",
+      "Maomi Ueno"
+    ],
+    "abstract": "For classification problems, Bayesian networks are often used to infer a class variable when given feature variables. Earlier reports have described that the classification accuracy of Bayesian network structures achieved by maximizing the marginal likelihood (ML) is lower than that achieved by maximizing the conditional log likelihood (CLL) of a class variable given the feature variables. However, the performance of Bayesian network structures achieved by maximizing ML is not necessarily worse than that achieved by maximizing CLL for large data because ML has asymptotic consistency. As the sample size becomes small, however, the error of learning structures by maximizing the ML becomes rapidly large; it then degrades the classification accuracy. As a method to resolve this shortcoming, model averaging, which marginalizes the class variable posterior over all structures, has been proposed. However, the posterior standard error of the structures in the model averaging becomes large as the sample size becomes small; it subsequently degrades the classification accuracy. The main idea of this study is to improve the classification accuracy using the subbagging to reduce the posterior standard error of the structures in the model averaging. Moreover, to guarantee asymptotic consistency, we use the $K$-best method with the ML score. The experimentally obtained results demonstrate that our proposed method provides more accurate classification for small data than earlier methods do.",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2020,
+    "paper_url": "http://proceedings.mlr.press/v138/sugahara20a/sugahara20a.pdf"
+  },
+  {
+    "id": "talvitie20a",
+    "title": "Learning Bayesian Networks with Cops and Robbers",
+    "authors": [
+      "Topi Talvitie",
+      "Pekka Parviainen"
+    ],
+    "abstract": "Constraint-based methods for learning structures of Bayesian networks are based on testing conditional independencies between variables and constructing a structure that expresses the same conditional independencies as indicated by the tests. We present a constraint-based algorithm that learns the structure of a Bayesian network by simulating a cops-and-a-robber game. The algorithm is designed for learning structures of low treewidth distributions and in such case it conducts conditional independence tests only with small conditioning sets. ",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2020,
+    "paper_url": "http://proceedings.mlr.press/v138/talvitie20a/talvitie20a.pdf"
+  },
+  {
+    "id": "tehrani20a",
+    "title": "Bean Machine: A Declarative Probabilistic Programming Language For Efficient Programmable Inference",
+    "authors": [
+      "Nazanin Tehrani",
+      "Nimar S. Arora",
+      "Yucen Lily Li",
+      "Kinjal Divesh Shah",
+      "David Noursi",
+      "Michael Tingley",
+      "Narjes Torabi",
+      "Sepehr = 485-496",
+      "Eric Lippert",
+      "Erik Meijer"
+    ],
+    "abstract": "A number of imperative Probabilistic Programming Languages (PPLs) have been recently proposed, but the imperative style choice makes it very hard to deduce the dependence structure between the latent variables, which can also change from iteration to iteration. We propose a new declarative style PPL, Bean Machine, and demonstrate that in this new language, the dynamic dependence structure is readily available. Although we are not the first to propose a declarative PPL or to observe the advantages of knowing the dependence structure, we take the idea further by showing other inference techniques that become feasible or easier in this style. We show that it is very easy for users to program inference by composition (combining different inference techniques for different parts of the model), customization (providing a custom hand-written inference method for specific variables), and blocking (specifying blocks of random variables that should be sampled together) in a declarative language. A number of empirical results are provided where we backup these claims modulo the runtime inefficiencies of unvectorized Python. As a fringe benefit, we note that it is very easy to translate statistical models written in mathematical notation into our language.",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2020,
+    "paper_url": "http://proceedings.mlr.press/v138/tehrani20a/tehrani20a.pdf"
+  },
+  {
+    "id": "tozzo20a",
+    "title": "Missing Values in Multiple Joint Inference of Gaussian Graphical Models",
+    "authors": [
+      "Veronica Tozzo",
+      "Davide Garbarino",
+      "Annalisa Barla"
+    ],
+    "abstract": "Real-world phenomena are often not fully measured or completely observable, raising the so-called missing data problem.   As  a  consequence,  the  need  of  developing  ad-hoc  techniques  that  cope with  such  issue  arises  in  many  inference  contexts.   In  this  paper,  we  focus  on  the  inference  of Gaussian Graphical Models (GGMs) from multiple input datasets having complex relationships(e.g. multi-class or temporal).  We propose a method that generalises state-of-the-art approaches to the inference of both multi-class and temporal GGMs while naturally dealing with two types of  missing  data:  partial  and  latent.   Synthetic  experiments  show  that  our  performance  is  better than state-of-the-art.   In particular,  we compared results with single network inference methods that suitably deal with missing data, and multiple joint network inference methods coupled with standard pre-processing techniques (e.g. imputing).   When dealing with fully observed datasets our method analytically reduces to state-of-the-art approaches providing a good alternative as our implementation reaches convergence in shorter or comparable time. Finally, we show that properly addressing the missing data problem in a multi-class real-world example,  allows us to discover interesting varying patterns.",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2020,
+    "paper_url": "http://proceedings.mlr.press/v138/tozzo20a/tozzo20a.pdf"
+  },
+  {
+    "id": "van-der-gaag20a",
+    "title": "Building Causal Interaction Models by Recursive Unfolding",
+    "authors": [
+      "L. C. van der Gaag",
+      "S. Renooij",
+      "A. Facchini"
+    ],
+    "abstract": "Causal interaction models, such as the well-known noisy-or and leaky noisy-or models, have become quite popular as a means to parameterize conditional probability tables for Bayesian networks. In this paper we focus on the engineering of subnetworks to represent such models and present a novel technique called recursive unfolding for this purpose. This technique allows inserting, removing and merging cause variables in an interaction model at will, without affecting the underlying represented information. We detail the technique, with the recursion invariants involved, and illustrate its practical use for Bayesian-network engineering by means of a small example.",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2020,
+    "paper_url": "http://proceedings.mlr.press/v138/van-der-gaag20a/van-der-gaag20a.pdf"
+  },
+  {
+    "id": "van-der-gaag20b",
+    "title": "Poset Representations for Sets of Elementary Triplets",
+    "authors": [
+      "L. C. van der Gaag",
+      "J. H. Bolt"
+    ],
+    "abstract": "Semi-graphoid independence relations, composed of independence triplets, are typically exponentially large in the number of variables involved. For compact representation of such a relation, just a subset of its triplets, called a basis, are listed explicitly, while its other triplets remain implicit through a set of derivation rules.  Two types of basis were defined for this purpose, which are the dominant-triplet basis and the elementary-triplet basis, of which the latter is commonly assumed to be significantly larger in size in general. In this paper we introduce the elementary po-triplet as a compact representation of multiple elementary triplets, by using separating posets.  By exploiting this new representation, the size of an elementary-triplet basis can be reduced considerably.  For computing the elementary closure of a starting set of po-triplets, we present an elegant algorithm that operates on the least and largest elements of the separating posets involved.",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2020,
+    "paper_url": "http://proceedings.mlr.press/v138/van-der-gaag20b/van-der-gaag20b.pdf"
+  },
+  {
+    "id": "wolfshaar20a",
+    "title": "Deep Generalized Convolutional Sum-Product Networks",
+    "authors": [
+      "Jos Wolfshaar",
+      "Andrzej Pronobis"
+    ],
+    "abstract": "Sum-Product Networks (SPNs) are hierarchical, graphical models that combine benefits of deep learning and probabilistic modeling. SPNs offer unique advantages to applications demanding exact probabilistic inference over high-dimensional, noisy inputs. Yet, compared to convolutional neural nets, they struggle with capturing complex spatial relationships in image data. To alleviate this issue, we introduce Deep Generalized Convolutional Sum-Product Networks (DGC-SPNs), which encode spatial features in a way similar to CNNs, while preserving the validity of the probabilistic SPN model. As opposed to existing SPN-based image representations, DGC-SPNs allow for overlapping convolution patches through a novel parameterization of dilations and strides, resulting in significantly improved feature coverage and feature resolution. DGC-SPNs substantially outperform other SPN architectures across several visual datasets and for both generative and discriminative tasks, including image inpainting and classification. These contributions are reinforced by the first simple, scalable, and GPU-optimized implementation of SPNs, integrated with the widely used Keras/TensorFlow framework. The resulting model is fully probabilistic and versatile, yet efficient and straightforward to apply in practical applications in place of traditional deep nets.",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2020,
+    "paper_url": "http://proceedings.mlr.press/v138/wolfshaar20a/wolfshaar20a.pdf"
+  },
+  {
+    "id": "ventola20a",
+    "title": "Residual Sum-Product Networks",
+    "authors": [
+      "Fabrizio Ventola",
+      "Karl Stelzner",
+      "Alejandro Molina",
+      "Kristian Kersting"
+    ],
+    "abstract": "Tractable yet expressive density estimators are a key building block of probabilistic machine learning. While sum-product networks (SPNs) offer attractive inference capabilities, obtaining structures large enough to fit complex, high-dimensional data has proven challenging. In this paper, we present a residual learning approach to ease the learning of SPNs, which are deeper and wider than those used previously. The main trick is to ensemble SPNs by explicitly reformulating sum nodes as residual functions. This adds references to substructures across the SPNs at different depths, which in turn helps to improve training. Our experiments demonstrate that the resulting residual SPNs (ResSPNs) are easy to optimize, gain performance from considerably increased depth and width, and are competitive to  state of-the-art SPN structure learning approaches. To combat overfitting, we introduce an iterative pruning technique that compacts models and yields better generalization.",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2020,
+    "paper_url": "http://proceedings.mlr.press/v138/ventola20a/ventola20a.pdf"
+  },
+  {
+    "id": "wan20a",
+    "title": "Hierarchical Dependency Constrained Averaged One-Dependence Estimators Classifiers for Hierarchical Feature Spaces",
+    "authors": [
+      "Cen Wan",
+      "Alex Freitas"
+    ],
+    "abstract": "The Averaged One-Dependence Estimators classifier is a type of probabilistic graphical model that constructs an ensemble of one-dependency networks, using each feature in turn as a parent node for all other features, in order to estimate the distribution of the data. In this work, we propose two new types of Hierarchical dependency constrained Averaged One-Dependence Estimators (Hie-AODE) algorithms, which consider the pre-defined parent-child relationship between features during the construction of individual one-dependence estimators, when coping with hierarchically structured features. Experiments with 28 real-world bioinformatics datasets showed that the proposed Hie-AODE methods obtained better predictive performance than the conventional AODE classifier, and enhanced the robustness against imbalanced class distributions.",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2020,
+    "paper_url": "http://proceedings.mlr.press/v138/wan20a/wan20a.pdf"
+  },
+  {
+    "id": "yu20a",
+    "title": "Hawkesian Graphical Event Models",
+    "authors": [
+      "Xiufan Yu",
+      "Karthikeyan Shanmugam",
+      "Debarun Bhattacharjya",
+      "Tian Gao",
+      "Dharmashankar Subramanian",
+      "Lingzhou Xue"
+    ],
+    "abstract": "Graphical event models (GEMs) provide a framework for graphical representation of multivariate point processes. We propose a class of GEMs named Hawkesian graphical event models (HGEMs) for representing temporal dependencies among different types of events from either a single event stream or multiple independent streams. In our proposed model, the intensity function for an event label is a linear combination of time-shifted kernels where time shifts correspond to prior occurrences of causal event labels in the history, as in a Hawkes process. The number of parameters in our model scales linearly in the number of edges in the graphical model, enabling efficient estimation and inference. This is in contrast to many existing GEMs where the number of parameters scales exponentially in the edges. We use two types of kernels: exponential and Gaussian kernels, and propose a two-step algorithm that combines the strengths of both kernels and learns the structure for the underlying graphical model. Experiments on both synthetic and real-world data demonstrate the efficacy of the proposed HGEM, and exhibit expressive power of the two-step learning algorithm in characterizing self-exciting event patterns and reflecting intrinsic Granger-causal relationships.",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2020,
+    "paper_url": "http://proceedings.mlr.press/v138/yu20a/yu20a.pdf"
+  },
+  {
+    "id": "zaffalon20a",
+    "title": "Structural Causal Models Are (Solvable by) Credal Networks",
+    "authors": [
+      "Marco Zaffalon",
+      "Alessandro Antonucci",
+      "Rafael Cabañas"
+    ],
+    "abstract": "A structural causal model is made of endogenous (manifest) and exogenous (latent) variables. We show that endogenous observations induce linear constraints on the probabilities of the exogenous variables. This allows to exactly map a causal model into a credal network. Causal inferences, such as interventions and counterfactuals, can consequently be obtained by standard algorithms for the updating of credal nets. These natively return sharp values in the identifiable case, while intervals corresponding to the exact bounds are produced for unidentifiable queries. A characterization of the causal models that allow the map above to be compactly derived is given, along with a discussion about the scalability for general models. This contribution should be regarded as a systematic approach to represent structural causal models by credal networks and hence to systematically compute causal inferences. A number of demonstrative examples is presented to clarify our methodology. Extensive experiments show that approximate algorithms for credal networks can immediately be used to do causal inference in real-size problems.",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2020,
+    "paper_url": "http://proceedings.mlr.press/v138/zaffalon20a/zaffalon20a.pdf"
+  },
+  {
+    "id": "bernaola20a",
+    "title": "BayesSuites: An Open Web Framework for Visualization of Massive Bayesian Networks",
+    "authors": [
+      "Nikolas Bernaola",
+      "Mario Michiels",
+      "Concha Bielza",
+      "Pedro Larrañaga"
+    ],
+    "abstract": "BayesSuites is the first web framework for learning, visualizing, and interpreting Bayesian networks that can scale to tens of thousands of nodes while providing fast and friendly user experience. BayesSuites solves the problems of scalability, extensibility and interpretability that massive networks bring by separating backend calculations from the frontend interface and using specialized learning algorithms for massive networks. We demonstrate the tool by learning and visualizing a genome-wide gene regulatory network from human brain data with 20,708 nodes.",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2020,
+    "paper_url": "http://proceedings.mlr.press/v138/bernaola20a/bernaola20a.pdf"
+  },
+  {
+    "id": "cabanas20a",
+    "title": "CREDICI: A Java Library for Causal Inference by Credal Networks",
+    "authors": [
+      "Rafael Cabañas",
+      "Alessandro Antonucci",
+      "David Huber",
+      "Marco Zaffalon"
+    ],
+    "abstract": "We present CREDICI, a Java open-source tool for causal inference based on credal networks. Credal networks are an extension of Bayesian networks where local probability mass functions are only constrained to belong to given, so-called credal, sets. CREDICI is based on the recent work of Zaffalon et al. (2020), where an equivalence between Pearl’s structural causal models and credal networks has been derived. This allows to reduce a counterfactual query in a causal model to a standard query in a credal network, even in the case of unidentifiable causal effects. The necessary transformations and data structures are implemented in CREDICI, while inferences are eventually computed by CREMA (Huber et al., 2020), a twin library for general credal network inference. Here we discuss the main implementation challenges and possible outlooks.",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2020,
+    "paper_url": "http://proceedings.mlr.press/v138/cabanas20a/cabanas20a.pdf"
+  },
+  {
+    "id": "cabanas20b",
+    "title": "Probabilistic Graphical Models with Neural Networks in InferPy",
+    "authors": [
+      "Rafael Cabañas",
+      "Javier Cózar",
+      "Antonio Salmerón",
+      "Andrés R. Masegosa"
+    ],
+    "abstract": "InferPy is an open-source Python package for variational inference in probabilistic models containing neural networks. Other similar libraries are often difficult for non-expert users. InferPy provides a much more compact and simple way to code such models, at the expense of slightly reducing expressibility and flexibility. The main objective of this package is to permit its use without having a strong theoretical background or thorough knowledge of the deep learning frameworks.",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2020,
+    "paper_url": "http://proceedings.mlr.press/v138/cabanas20b/cabanas20b.pdf"
+  },
+  {
+    "id": "cussens20a",
+    "title": "GOBNILP: Learning Bayesian network structure with integer programming",
+    "authors": [
+      "James Cussens"
+    ],
+    "abstract": "The GOBNILP system for learning Bayesian networks is presented. Both the Python and C implementations are discussed. The usefulness of learning multiple BNs is highlighted. Current work on ‘pricing in’ new integer programming variables is presented. ",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2020,
+    "paper_url": "http://proceedings.mlr.press/v138/cussens20a/cussens20a.pdf"
+  },
+  {
+    "id": "huber20a",
+    "title": "CREMA: A Java Library for Credal Network Inference",
+    "authors": [
+      "David Huber",
+      "Rafael Cabañas",
+      "Alessandro Antonucci",
+      "Marco Zaffalon"
+    ],
+    "abstract": "We present CREMA (Credal Models Algorithms), a Java library for inference in credal networks. These models are analogous to Bayesian networks, but their local parameters are only constrained to vary in, so-called credal, sets. Inference in credal networks is intended as the computation of the bounds of a query with respect to those local variations. For credal networks the task is harder than in Bayesian networks, being NP^PP-hard in general models. Yet, scalable approximate algorithms have been shown to provide good accuracies on large or dense models, while exact techniques can be designed to process small or sparse models. CREMA embeds these algorithms and also offers an API to build and query credal networks together with a specification format. This makes CREMA, whose features are discussed and described by a simple example, the most advanced tool for credal network modelling and inference developed so far.",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2020,
+    "paper_url": "http://proceedings.mlr.press/v138/huber20a/huber20a.pdf"
+  },
+  {
+    "id": "madsen20b",
+    "title": "A Software System for Predicting Patient Flow at the Emergency Department of Aalborg University Hospital",
+    "authors": [
+      "Anders L. Madsen",
+      "Kristian G. Olesen",
+      "Jørn Munkhof Møller",
+      "Nicolaj Søndberg-Jeppesen",
+      "Frank Jensen",
+      "Thomas Mulvad Larsen",
+      "Per Henriksen",
+      "Morten Lindblad",
+      "Trine Søby Christensen"
+    ],
+    "abstract": " This paper presents a software system for predicting patient flow at the emergency department of Aalborg University Hospital. The system uses Bayesian networks as the underlying technology for the predictions.  A Bayesian network model has been developed for predicting the hourly rate of patients arriving at the emergency department at Aalborg University Hospital. One advantage of using Bayesian networks is that domain knowledge and historical data can easily be combined into an intuitive graphical model.  The aim of this paper is to describe the software system delivering the predictions of the Bayesian network model as a decision-support system for employee shift scheduling at the emergency department. ",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2020,
+    "paper_url": "http://proceedings.mlr.press/v138/madsen20b/madsen20b.pdf"
+  },
+  {
+    "id": "markham20a",
+    "title": "MeDIL: A Python Package for Causal Modelling",
+    "authors": [
+      "Alex Markham",
+      "Aditya Chivukula",
+      "Moritz Grosse-Wentrup"
+    ],
+    "abstract": "  We present the \\texttt{MeDIL} Python package for causal modelling. Its current features focus on (i) non-linear unconditional pairwise independence testing, (ii) constraint-based causal structure learning, and (iii) learning the corresponding functional causal models (FCMs), all for the class of measurement dependence inducing latent (MeDIL) causal models. MeDIL causal models and therefore the \\texttt{MeDIL} software package are especially suited for analyzing data from fields such as psychometric, epidemiology, etc. that rely on questionnaire or survey data.",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2020,
+    "paper_url": "http://proceedings.mlr.press/v138/markham20a/markham20a.pdf"
+  },
+  {
+    "id": "serrano-perez20a",
+    "title": "PGM_PyLib: A Toolkit for Probabilistic Graphical Models in Python",
+    "authors": [
+      "Jonathan Serrano-Pérez",
+      "L. Enrique Sucar"
+    ],
+    "abstract": "PGM{_}PyLib is a toolkit that contains a wide range of Probabilistic Graphical Models algorithms implemented in Python, and serves as a companion of the book Probabilistic Graphical Models: Principles and Applications. Currently, the algorithms implemented include: Bayesian classifiers, hidden Markov models, Markov random fields, and Bayesian networks; as well as some general functions. The toolkit is open source, can be downloaded from: https://github.com/jona2510/PGM{_}PyLib .",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2020,
+    "paper_url": "http://proceedings.mlr.press/v138/serrano-perez20a/serrano-perez20a.pdf"
+  }
+]

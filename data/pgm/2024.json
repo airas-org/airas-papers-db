@@ -1,0 +1,472 @@
+[
+  {
+    "id": "kwisthout24a",
+    "title": "Preface",
+    "authors": [
+      "Johan Kwisthout",
+      "Silja Renooij"
+    ],
+    "abstract": "",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2024,
+    "paper_url": "https://raw.githubusercontent.com/mlresearch/v246/main/assets/kwisthout24a/kwisthout24a.pdf"
+  },
+  {
+    "id": "pena24a",
+    "title": "Alternative Measures of Direct and Indirect Effects",
+    "authors": [
+      "Jose M. Peña"
+    ],
+    "abstract": "There are a number of measures of direct and indirect effects in the literature on causality. These are suitable in some cases and unsuitable in others. We describe a case where the existing measures are unsuitable and propose new suitable ones. We also show that the new measures can partially handle unmeasured treatment-outcome confounding, and bound long-term effects by combining experimental and observational data. We also introduce the concepts of indirect benefit and harm (i.e., through a mediator), and use our new measure to quantify them.",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2024,
+    "paper_url": "https://raw.githubusercontent.com/mlresearch/v246/main/assets/pena24a/pena24a.pdf"
+  },
+  {
+    "id": "balgi24a",
+    "title": "$ρ$-GNF: A Copula-based Sensitivity Analysis to Unobserved Confounding Using Normalizing Flows",
+    "authors": [
+      "Sourabh Balgi",
+      "Jose M. Peña",
+      "Adel Daoud"
+    ],
+    "abstract": "We propose a novel sensitivity analysis to unobserved confounding in observational studies using copulas and normalizing flows. Using the idea of interventional equivalence of structural causal models, we develop $\\rho$-GNF ($\\rho$-graphical normalizing flow), where $\\rho{\\in}[-1,+1]$ is a bounded sensitivity parameter. This parameter represents the back-door non-causal association due to unobserved confounding, and which is encoded with a Gaussian copula. In other words, the $\\rho$-GNF enables scholars to estimate the average causal effect (ACE) as a function of $\\rho$, while accounting for various assumed strengths of the unobserved confounding. The output of the $\\rho$-GNF is what we denote as the $\\rho_{curve}$ that provides the bounds for the ACE given an interval of assumed $\\rho$ values. In particular, the $\\rho_{curve}$ enables scholars to identify the confounding strength required to nullify the ACE, similar to other sensitivity analysis methods (e.g., the E-value). Leveraging on experiments from simulated and real-world data, we show the benefits of $\\rho$-GNF. One benefit is that the $\\rho$-GNF uses a Gaussian copula to encode the distribution of the unobserved causes, which is commonly used in many applied settings. This distributional assumption produces narrower ACE bounds compared to other popular sensitivity analysis methods.",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2024,
+    "paper_url": "https://raw.githubusercontent.com/mlresearch/v246/main/assets/balgi24a/balgi24a.pdf"
+  },
+  {
+    "id": "luttermann24a",
+    "title": "Efficient Detection of Commutative Factors in Factor Graphs",
+    "authors": [
+      "Malte Luttermann",
+      "Johann Machemer",
+      "Marcel Gehrke"
+    ],
+    "abstract": "Lifted probabilistic inference exploits symmetries in probabilistic graphical models to allow for tractable probabilistic inference with respect to domain sizes. To exploit symmetries in, e.g., factor graphs, it is crucial to identify commutative factors, i.e., factors having symmetries within themselves due to their arguments being exchangeable. The current state-of-the-art to check whether a factor is commutative with respect to a subset of its arguments iterates over all possible subsets of the factor’s arguments, i.e., O($2^n$) iterations for a factor with n arguments in the worst case. In this paper, we efficiently solve the problem of detecting commutative factors in a factor graph. In particular, we introduce the detection of commutative factors (DECOR) algorithm, which allows us to drastically reduce the computational effort for checking whether a factor is commutative in practice. We prove that DECOR efficiently identifies restrictions to drastically reduce the number of required iterations and validate the efficiency of DECOR in our empirical evaluation.",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2024,
+    "paper_url": "https://raw.githubusercontent.com/mlresearch/v246/main/assets/luttermann24a/luttermann24a.pdf"
+  },
+  {
+    "id": "cobb24a",
+    "title": "LIMID Quality Control Models for Increasing Failure Rate Processes",
+    "authors": [
+      "Barry R. Cobb"
+    ],
+    "abstract": "A Limited Memory Influence Diagram (LIMID) model for quality control that incorporates variable data on sample means from the output of a production process is introduced. The process operates over a finite production horizon and is out-of-control when the process mean for the output shifts. The probability such a shift occurs in the next time period is dependent on the elapsed time since the most recent process repair. A set of control limits that are adapted to the length the process has run without repair is selected to minimize quality control costs, and the sampling interval and sample size can be adjusted to further reduce costs if these modifications are operationally feasible. This is the first application of LIMIDs in a quality control model with an increasing rate of failure over time, and that implements variable data.",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2024,
+    "paper_url": "https://raw.githubusercontent.com/mlresearch/v246/main/assets/cobb24a/cobb24a.pdf"
+  },
+  {
+    "id": "feigenbaum24a",
+    "title": "On the Unlikelihood of D-Separation",
+    "authors": [
+      "Itai Feigenbaum",
+      "Devansh Arpit",
+      "Shelby Heinecke",
+      "Juan Carlos Niebles",
+      "Weiran Yao",
+      "Huan Wang",
+      "Caiming Xiong",
+      "Silvio Savarese"
+    ],
+    "abstract": "Causal discovery aims to recover a causal graph from data generated by it; constraint-based methods do so by searching for d-separating conditioning sets of nodes. In this paper, we provide analytic evidence that on large graphs, d-separation is a rare phenomenon, even when guaranteed to exist. Our analysis implies poor average-case performance of existing constraint-based methods, except on a vanishingly small class of extremely sparse graphs. We consider a set $V=\\{v_1,\\ldots,v_n\\}$ of nodes, and generate a random DAG $G=(V,E)$ where $v_i \\rightarrow v_j \\in E$ with i.i.d probability $p_1$ if $i<j$ and probability $0$ if $i > j$. For any d-separable pair of nodes $v_i$ and $v_j$, we provide upper bounds on the probability that a subset of $V\\backslash\\{v_i,v_j\\}$ d-separates the pair, under different subset selection scenarios; our upper bounds decay exponentially fast to $0$ as $|V| \\rightarrow \\infty$ for any fixed expected density. We then analyze the average-case performance of constraint-based methods, including the PC Algorithm, a variant of the SGS Algorithm called UniformSGS, and also any constraint-based method limited to small conditioning sets (a limitation which holds in most of existing literature). We show that these algorithms usually suffer from low precision or exponential running time on all but extremely sparse graphs.",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2024,
+    "paper_url": "https://raw.githubusercontent.com/mlresearch/v246/main/assets/feigenbaum24a/feigenbaum24a.pdf"
+  },
+  {
+    "id": "butz24a",
+    "title": "Fast Arc-Reversal",
+    "authors": [
+      "Cory J. Butz",
+      "Anders L. Madsen",
+      "Jhonatan S. Oliveira"
+    ],
+    "abstract": "Fast arc-reversal (FAR) is proposed as a new exact inference algorithm in discrete Bayesian networks (BNs), merging favourable features of Arc-reversal (AR) and Variable elimination (VE). AR constantly maintains a sub-BN structure when rendering a variable barren via arc reversals, requiring more computational effort than VE, which sacrifices a sub-BN structure by directly eliminating a variable. We formally establish that FAR can recover a unique and sound sub-BN structure after consecutive variable eliminations. Experimental results on real-world benchmark networks empirically show a substantial improvement in the average run-time and variance of FAR compared to AR. We also suggest a novel method, called d-contraction, for graphically understanding FAR since FAR is not always the same as a sequence of arc reversals.",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2024,
+    "paper_url": "https://raw.githubusercontent.com/mlresearch/v246/main/assets/butz24a/butz24a.pdf"
+  },
+  {
+    "id": "chan24a",
+    "title": "AutoCD: Automated Machine Learning for Causal Discovery Algorithms",
+    "authors": [
+      "Gerlise Chan",
+      "Tom Claassen",
+      "Holger H. Hoos",
+      "Tom Heskes",
+      "Mitra Baratchi"
+    ],
+    "abstract": "This paper studies automated machine learning (AutoML) for causal discovery, the process of uncovering cause-and-effect relationships within data. Causal discovery is an unsupervised learning problem, as the target (the underlying ground truth causal model) is typically unknown. Therefore, the loss functions commonly used as an optimisation objective in AutoML systems developed for supervised learning problems are not applicable. We propose AutoCD, the first AutoML system utilising Bayesian optimisation based on a search space of causal discovery algorithms. In designing AutoCD, we study and compare the applicability of two different loss functions and post-hoc corrections. Additionally, based on the analysis of the performance of AutoCD, we propose an improved version called AutoCD_PC by warm-starting the search from the PC algorithm. Results from our experiments on datasets simulated from 45 graphical models demonstrate that AutoCD_PC performs better than the baselines by ranking the highest (avg. rank 3.69) compared to the best causal tuning baseline (avg. rank 5.21) and the best fine-tuned individual algorithm (avg. rank 4.36).",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2024,
+    "paper_url": "https://raw.githubusercontent.com/mlresearch/v246/main/assets/chan24a/chan24a.pdf"
+  },
+  {
+    "id": "yildirim24a",
+    "title": "Modelling Shared Decision Making Interactions using Influence Diagrams",
+    "authors": [
+      "Zeliha Yildirim",
+      "Barbaros Yet"
+    ],
+    "abstract": "Shared Decision Making (SDM) has become a predominant element of patient-centered healthcare delivery in recent years. In SDM, multiple agents, including a patient and a clinician interact to make a joint decision that is aligned with the patient’s preferences. Despite its popularity, previous SDM studies lack structured decision modeling approaches applied to this problem. This paper presents Influence Diagram (ID) models for SDM agents, and proposes graphical operations for IDs to model the interaction between the agents. Using a case study, we demonstrate that widely used conceptual models for SDM such as the Three Talk Model are aligned with the proposed ID models and operations. The case study also shows that SDM is a cooperative decision making setting that is also present in non-clinical domains. The proposed influence diagrams and interaction operations enable SDM to be studied based on structured and quantitative decision models.",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2024,
+    "paper_url": "https://raw.githubusercontent.com/mlresearch/v246/main/assets/yildirim24a/yildirim24a.pdf"
+  },
+  {
+    "id": "kitson24a",
+    "title": "Eliminating Variable Order Instability in Greedy Score-Based Structure Learning",
+    "authors": [
+      "Neville K Kitson",
+      "Anthony C Constantinou"
+    ],
+    "abstract": "Many Bayesian Network structure learning algorithms are unstable in that the learnt graph is sensitive to arbitrary artefacts of the dataset, such as the ordering of columns (i.e., variable order). PC-Stable, developed by \\cite{colombo2014order}, attempts to address this issue for the widely-used PC algorithm, prompting researchers to use the ‘stable’ version instead. However, this problem seems to have been overlooked for score-based algorithms. In this study, we show that some widely-used score-based algorithms suffer from the same issue and that PC-Stable, although less sensitive than most of the score-based algorithms tested, is not completely stable. We also present a solution to score-based greedy hill-climbing that completely eliminates this instability, and provide two implementations: the HC-Stable and Tabu-Stable algorithms, the latter of which learns more accurate graphs than all the well-known algorithms we compared it to.",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2024,
+    "paper_url": "https://raw.githubusercontent.com/mlresearch/v246/main/assets/kitson24a/kitson24a.pdf"
+  },
+  {
+    "id": "balgi24b",
+    "title": "Counterfactually-Equivalent Structural Causal Modelling Using Causal Graphical Normalizing Flows",
+    "authors": [
+      "Sourabh Balgi",
+      "Jose M. Peña",
+      "Adel Daoud"
+    ],
+    "abstract": "Recent research has highlighted the properties that deep-learning inspired causal models such as Deep-Structural Causal Model (Deep-SCM), Causal Autoregressive Flow (CAREFL) and Causal-Graphical Normalizing Flow (c-GNF) should exhibit to guarantee observational and interventional distribution equivalence with the true underlying causal data generating process (DGP), making them suitable for estimating average causal effect (ACE) or conditional ACE (CACE). However, for accurate individual-level causal effect (ICE) estimation and personalized treatment/public-policy formulation, it is crucial to ensure counterfactual equivalence between these models and the DGP. Firstly, we demonstrate that c-GNFs provide counterfactual equivalence under certain monotonicity assumption of the DGP, enabling precise ICE estimation and personalized treatment/public-policy analysis. Secondly, using this counterfactual equivalence of c-GNFs, we perform a counterfactual analysis and personalized public-policy analysis of the impact of International Monetary Fund (IMF) programs on child poverty using large-scale real-world observational data. Our results indicate a reduction in child poverty due to the IMF program at different personalization granularities. Our study also performs sensitivity analyses to assess potential threats to the unconfoundedness assumption and estimates ACE bounds and the E-value. This illustrates the potential of c-GNFs for causal and counterfactual inference in fields such as social, natural, and medical sciences.",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2024,
+    "paper_url": "https://raw.githubusercontent.com/mlresearch/v246/main/assets/balgi24b/balgi24b.pdf"
+  },
+  {
+    "id": "leonelli24a",
+    "title": "Context-Specific Refinements of Bayesian Network Classifiers",
+    "authors": [
+      "Manuele Leonelli",
+      "Gherardo Varando"
+    ],
+    "abstract": "Supervised classification is one of the most ubiquitous tasks in machine learning. Generative classifiers based on Bayesian networks are often used because of their interpretability and competitive accuracy. The widely used naive and TAN classifiers are specific instances of Bayesian network classifiers with a constrained underlying graph. This paper introduces novel classes of generative classifiers extending TAN and other famous types of Bayesian network classifiers. Our approach is based on staged tree models, which extend Bayesian networks by allowing for complex, context-specific patterns of dependence. We formally study the relationship between our novel classes of classifiers and Bayesian networks. We introduce and implement data-driven learning routines for our models and investigate their accuracy in an extensive computational study. The study demonstrates that models embedding asymmetric information can enhance classification accuracy.",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2024,
+    "paper_url": "https://raw.githubusercontent.com/mlresearch/v246/main/assets/leonelli24a/leonelli24a.pdf"
+  },
+  {
+    "id": "echave-sustaeta-rodriguez24a",
+    "title": "Latent Gaussian Graphical Models with Golazo Penalty",
+    "authors": [
+      "Ignacio Echave-Sustaeta Rodríguez",
+      "Frank Röttger"
+    ],
+    "abstract": "The existence of latent variables in practical problems is common, for example when some variables are difficult or expensive to measure, or simply unknown.  When latent variables are unaccounted for, structure learning for Gaussian graphical models can be blurred by additional correlation between the observed variables that is incurred by the latent variables. A standard approach for this problem is a latent version of the graphical lasso that splits the inverse covariance matrix into a sparse and a low-rank part that are penalized separately. In this paper we propose a generalization of this via the flexible Golazo penalty. This allows us to introduce latent versions of for example the adaptive lasso, positive dependence constraints or predetermined sparsity patterns, and combinations of those.  We develop an algorithm for the latent Gaussian graphical model with the Golazo penalty and demonstrate it on simulated and real data.",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2024,
+    "paper_url": "https://raw.githubusercontent.com/mlresearch/v246/main/assets/echave-sustaeta-rodriguez24a/echave-sustaeta-rodriguez24a.pdf"
+  },
+  {
+    "id": "strieder24a",
+    "title": "Identifying Total Causal Effects in Linear Models under Partial Homoscedasticity",
+    "authors": [
+      "David Strieder",
+      "Mathias Drton"
+    ],
+    "abstract": "A fundamental challenge of scientific research is inferring causal relations based on observed data. One commonly used approach involves utilizing structural causal models that postulate noisy functional relations among interacting variables. A directed graph naturally represents these models and reflects the underlying causal structure. However, classical identifiability results suggest that, without conducting additional experiments, this causal graph can only be identified up to a Markov equivalence class of indistinguishable models. Recent research has shown that focusing on linear relations with equal error variances can enable the identification of the causal structure from mere observational data. Nonetheless, practitioners are often primarily interested in the effects of specific interventions, rendering the complete identification of the causal structure unnecessary. In this work, we investigate the extent to which less restrictive assumptions of partial homoscedasticity are sufficient for identifying the causal effects of interest. Furthermore, we construct mathematically rigorous confidence regions for total causal effects under structure uncertainty and explore the performance gain of relying on stricter error assumptions in a simulation study.",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2024,
+    "paper_url": "https://raw.githubusercontent.com/mlresearch/v246/main/assets/strieder24a/strieder24a.pdf"
+  },
+  {
+    "id": "carter24a",
+    "title": "Learning Staged Trees from Incomplete Data",
+    "authors": [
+      "Jack Storror Carter",
+      "Manuele Leonelli",
+      "Eva Riccomagno",
+      "Gherardo Varando"
+    ],
+    "abstract": "Staged trees are probabilistic graphical models capable of representing any class of non-symmetric independence via a coloring of their vertices. Several structural learning routines have been defined and implemented to learn staged trees from data, under the frequentist or Bayesian paradigm. They assume a data set has been observed fully and, in practice, observations with missing entries are either dropped or imputed before learning the model. Here, we introduce the first algorithms for staged trees that handle missingness within the learning of the model. To this end, we characterize the likelihood of staged tree models in the presence of missing data and discuss pseudo-likelihoods that approximate it.  A structural expectation-maximization algorithm estimating the model directly from the full likelihood is also implemented and evaluated. A computational experiment showcases the performance of the novel learning algorithms, demonstrating that it is feasible to account for different missingness patterns when learning staged trees.",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2024,
+    "paper_url": "https://raw.githubusercontent.com/mlresearch/v246/main/assets/carter24a/carter24a.pdf"
+  },
+  {
+    "id": "liang24a",
+    "title": "Kernel-Based Differentiable Learning of Non-Parametric Directed Acyclic Graphical Models",
+    "authors": [
+      "Yurou Liang",
+      "Oleksandr Zadorozhnyi",
+      "Mathias Drton"
+    ],
+    "abstract": "Causal discovery amounts to learning a directed acyclic graph (DAG) that encodes a causal model. This model selection problem can be challenging due to its large combinatorial search space, particularly when dealing with non-parametric causal models. Recent research has sought to bypass the combinatorial search by reformulating causal discovery as a continuous optimization problem, employing constraints that ensure the acyclicity of the graph. In non-parametric settings, existing approaches typically rely on finite-dimensional approximations of the relationships between nodes, resulting in a score-based continuous optimization problem with a smooth acyclicity constraint. In this work, we develop an alternative approximation method by utilizing reproducing kernel Hilbert spaces (RKHS) and applying general sparsity-inducing regularization terms based on partial derivatives. Within this framework, we introduce an extended RKHS representer theorem. To enforce acyclicity, we advocate the log-determinant formulation of the acyclicity constraint and show its stability. Finally, we assess the performance of our proposed RKHS-DAGMA procedure through simulations and illustrative data analyses.",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2024,
+    "paper_url": "https://raw.githubusercontent.com/mlresearch/v246/main/assets/liang24a/liang24a.pdf"
+  },
+  {
+    "id": "ghandi24a",
+    "title": "Soft Learning Probabilistic Circuits",
+    "authors": [
+      "Soroush Ghandi",
+      "Benjamin Quost",
+      "Cassio de Campos"
+    ],
+    "abstract": "Probabilistic Circuits (PCs) are prominent tractable probabilistic models, allowing for a wide range of exact inferences. This paper focuses on the main algorithm for training PCs, LearnSPN, a gold standard due to its efficiency, performance, and ease of use, in particular for tabular data. We show that LearnSPN is a greedy likelihood maximizer under mild assumptions. While inferences in PCs may use the entire circuit structure for processing queries, LearnSPN applies a hard method for learning them, propagating at each sum node a data point through one and only one of the children/edges as in a hard clustering process. We propose a new learning procedure named SoftLearn, that induces a PC using a soft clustering process. We investigate the effect of this learning-inference compatibility in PCs. Our experiments show that SoftLearn outperforms LearnSPN in many situations, yielding better likelihoods and arguably better samples. We also analyze comparable tractable models to highlight the differences between soft/hard learning and model querying.",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2024,
+    "paper_url": "https://raw.githubusercontent.com/mlresearch/v246/main/assets/ghandi24a/ghandi24a.pdf"
+  },
+  {
+    "id": "lukashchuk24a",
+    "title": "Q-conjugate Message Passing for Efficient Bayesian Inference",
+    "authors": [
+      "Mykola Lukashchuk",
+      "İsmail Şenöz",
+      "Bert de Vries"
+    ],
+    "abstract": "Bayesian inference in nonconjugate models such as Bayesian Poisson regression often relies on computationally expensive Monte Carlo methods. This paper introduces {Q}-conjugacy, a generalization of classical conjugacy that enables efficient closed-form variational inference in certain nonconjugate models. {Q}-conjugacy is a condition in which a closed-form update scheme expresses the solution minimizing the Kullback-Leibler divergence between a variational distribution and the product of two potentially unnormalized distributions. Leveraging {Q}-conjugacy within a local message passing framework allows deriving analytic inference update equations for nonconjugate models. The effectiveness of this approach is demonstrated on Bayesian Poisson regression and a model involving a hidden gamma-distributed latent variable with Gaussian-corrupted logarithmic observations. Results show that {Q}-conjugate triplets, such as (Gamma, LogNormal, Gamma), provide better speed-accuracy trade-offs than Markov Chain Monte Carlo.",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2024,
+    "paper_url": "https://raw.githubusercontent.com/mlresearch/v246/main/assets/lukashchuk24a/lukashchuk24a.pdf"
+  },
+  {
+    "id": "lelova24a",
+    "title": "Learning Causal Markov Boundaries with Mixed Observational and Experimental Data",
+    "authors": [
+      "Konstantina Lelova",
+      "Gregory F. Cooper",
+      "Sofia Triantafillou"
+    ],
+    "abstract": "A frequent goal in healthcare is to estimate personalized causal effects in order to select the best treatment for a patient from observational or experimental (RCT) data (or both), where \"best\" is defined in terms of maximizing the expectation of the desired outcome. The first task in estimating personalized effects is selecting the optimal set of personalization covariates (causal feature selection). This set of covariates is the Markov Boundary of the outcome in the experimental distribution, also known as the Interventional Markov Boundary (IMB), and can be identified from RCT data using methods for finding Markov Boundaries. However, most RCT data are very limited in sample size and do not work well with these methods. In this work, we develop methods that combine limited experimental and large observational data to identify the IMB, and improve the estimation of conditional (personalized) causal effects. These methods extend recent results (Triantafillou et al., 2021), which were limited to discrete data, to mixed data with binary and ordinal outcomes. The methods are based on Bayesian regression models. In simulated data, we show that our methods identify the correct IMB and improve causal effect estimation.",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2024,
+    "paper_url": "https://raw.githubusercontent.com/mlresearch/v246/main/assets/lelova24a/lelova24a.pdf"
+  },
+  {
+    "id": "williams24a",
+    "title": "Geometric No-U-Turn Samplers: Concepts and Evaluation",
+    "authors": [
+      "Bernardo Williams",
+      "Hanlin Yu",
+      "Marcelo Hartmann",
+      "Arto Klami"
+    ],
+    "abstract": "We enhance geometric Markov Chain Monte Carlo methods, in particular making them easier to use by providing better tools for choosing the metric and various tuning parameters. We extend the No-U-Turn criterion for automatic choice of integration length for Lagrangian Monte Carlo and propose a modification to the computationally efficient Monge metric, as well as summarizing several previously proposed metric choices. Through extensive experimentation, including synthetic examples and posteriordb benchmarks, we demonstrate that Riemannian metrics can outperform Euclidean counterparts, particularly in scenarios with high curvature, while highlighting how the optimal choice of metric is problem-specific.",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2024,
+    "paper_url": "https://raw.githubusercontent.com/mlresearch/v246/main/assets/williams24a/williams24a.pdf"
+  },
+  {
+    "id": "bjoru24a",
+    "title": "A Divide and Conquer Approach for Solving Structural Causal Models",
+    "authors": [
+      "Anna Rodum Bjøru",
+      "Rafael Cabañas",
+      "Helge Langseth",
+      "Antonio Salmerón"
+    ],
+    "abstract": "Structural causal models permit causal and counterfactual reasoning, and can be regarded as an extension of Bayesian networks. The model consists of endogenous and exogenous variables, with exogenous variables often being of unknown semantic interpretation. Consequently, they are typically non-observable, with the result that counterfactual queries may be unidentifiable. In this setting, standard inference algorithms for Bayesian networks are insufficient. Recent methods attempt to bound unidentifiable queries through imprecise estimation of exogenous probabilities. However, these approaches become unfeasible with growing cardinality of the exogenous variables. This paper proposes a divide and conquer method that transforms a general causal model into a set of models with low-cardinality exogenous variables, for which any query can be calculated exactly. Bounds for a query in the original model are then efficiently approximated by aggregating the results for the set of smaller models. Experimental results demonstrate that these bounds can be computed with lower error levels and less resource consumption compared to existing methods.",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2024,
+    "paper_url": "https://raw.githubusercontent.com/mlresearch/v246/main/assets/bjoru24a/bjoru24a.pdf"
+  },
+  {
+    "id": "vonk24a",
+    "title": "Balancing Computational Cost and Accuracy in Inference of Continuous Bayesian Networks",
+    "authors": [
+      "Maarten C. Vonk",
+      "Sebastiaan Brand",
+      "Ninoslav Malekovic",
+      "Thomas Bäck",
+      "Alfons Laarman",
+      "Anna V. Kononova"
+    ],
+    "abstract": "Bayesian networks allow a parsimonious encoding of joint probability distributions via directed acyclic graphs. While discrete Bayesian network inference is well-established, conducting inference on continuous Bayesian networks often requires discretization. In this paper, continuous Bayesian networks are subjected to various supervised and unsupervised discretization methods. Subsequently, the discretized Bayesian networks are encoded into decision diagrams, facilitating efficient inference. The trade-off between the quality of discretization/inference and the computational cost of inference with decision diagrams is explored by contrasting both metrics on a Pareto front. Through empirical evaluation across a range of causal and non-causal Bayesian networks, we investigate the impact of different discretization methods on this trade-off. We corroborate the significantly improved scalability of using decision diagrams for inference as opposed to traditional inference methods and extend this finding to discretized continuous networks. Coupled with insights on the accuracy-compute cost trade-off, we advocate for discretization as a viable method for Bayesian network inference on continuous networks.",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2024,
+    "paper_url": "https://raw.githubusercontent.com/mlresearch/v246/main/assets/vonk24a/vonk24a.pdf"
+  },
+  {
+    "id": "schauer24a",
+    "title": "Causal Structure Learning With Momentum: Sampling Distributions Over Markov Equivalence Classes",
+    "authors": [
+      "Moritz Schauer",
+      "Marcel Wienöbst"
+    ],
+    "abstract": "In the context of inferring a Bayesian network structure (directed acyclic graph, DAG for short), we devise a non-reversible continuous time Markov chain, the “Causal Zig-Zag sampler”, that targets a probability distribution over classes of observationally equivalent (Markov equivalent) DAGs. The classes are represented as completed partially directed acyclic graphs (CPDAGs). The non-reversible Markov chain relies on the operators used in Chickering’s Greedy Equivalence Search (GES) and is endowed with a momentum variable, which improves mixing significantly as we show empirically. The possible target distributions include posterior distributions based on a prior over DAGs and a Markov equivalent likelihood.  We offer an efficient implementation wherein we develop new algorithms for listing, counting, uniformly sampling, and applying possible moves of the GES operators, all of which significantly improve upon the state-of-the-art run-time.",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2024,
+    "paper_url": "https://raw.githubusercontent.com/mlresearch/v246/main/assets/schauer24a/schauer24a.pdf"
+  },
+  {
+    "id": "perez24a",
+    "title": "Enhancing Bayesian Networks with Psychometric Models",
+    "authors": [
+      "I. Pérez",
+      "J. Vomlel"
+    ],
+    "abstract": "Bayesian networks (BNs) are a popular framework in education and other fields. In this paper, we consider two-layer BNs, where the first layer consists of hidden binary variables that are assumed to be independent of each other, and the second layer consists of observed binary variables. The variables in the second layer depend on the variables in the first layer. The dependence is characterized by conditional probability tables, which represent Noisy-AND models. We refer to this class of models as BN2A models. We found that these models are also popular in the psychometric community, where they can be found under the name of Cognitive Diagnostic Models (CDMs), which are used to classify test takers into some latent classes according to the similarity of their responses to test questions. This paper shows the relation between some BN2A models and their corresponding CDMs. In particular, we compare the performance of these models on large-scale tests conducted in the Czech Republic in 2022. The BN2A model with general conditional probability tables produced the best absolute fit. However, when we added monotonic constraints to the General model, we obtained better predictive results.",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2024,
+    "paper_url": "https://raw.githubusercontent.com/mlresearch/v246/main/assets/perez24a/perez24a.pdf"
+  },
+  {
+    "id": "zaragoza-pellicer24a",
+    "title": "Multi-objective Counterfactuals in Bayesian Classifiers with Estimation of Distribution Algorithms",
+    "authors": [
+      "Daniel Zaragoza-Pellicer",
+      "Concha Bielza",
+      "Pedro Larrañaga"
+    ],
+    "abstract": "Counterfactual explanations are a very popular and effective method to convey interpretability in supervised classification models. These explanations answer the question of which change is needed in the input data to obtain a desired output. Computing good counterfactuals involves achieving some key objectives, such as validity, minimality, similarity or plausibility. Our proposal consists of using estimation of distribution algorithms for approximating counterfactual explanations within Bayesian classifiers. They are experimentally compared with a genetic algorithm, both with a single-objective and with a multi-objective formulation. Different types of Bayesian classifiers will be evaluated to find the differences in their explanations and we will use their results together to provide more accurate explanations. The experiments show how estimation of distribution algorithms are faster and achieve better results with a single-objective whereas they are competitive in the multi-objective version.",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2024,
+    "paper_url": "https://raw.githubusercontent.com/mlresearch/v246/main/assets/zaragoza-pellicer24a/zaragoza-pellicer24a.pdf"
+  },
+  {
+    "id": "petrova24a",
+    "title": "An Adaptive Implicit Hitting Set Algorithm for MAP and MPE Inference",
+    "authors": [
+      "Aleksandra Petrova",
+      "Javier Larrosa",
+      "Emma Rollon"
+    ],
+    "abstract": "In this paper, we address the use of the implicit hitting set approach (HS) for MAP (Markov Random Fields) and MPE (Bayesian Networks). Since the HS approach is quite general and finding the best version is very problem-dependent, here we present an adaptive algorithm that learns a reasonably good version for the instance being solved. The algorithm, which follows a Multi-armed Bandit structure, explores the different alternatives as it iterates and adapts their weights based on their performance. The weight is used to decide on the probability of selecting a given alternative in the next iteration.",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2024,
+    "paper_url": "https://raw.githubusercontent.com/mlresearch/v246/main/assets/petrova24a/petrova24a.pdf"
+  },
+  {
+    "id": "weidl24a",
+    "title": "Exploring Argument Mining and Bayesian Networks for Assessing Topics for City Project Proposals",
+    "authors": [
+      "Galia Weidl",
+      "Stefan Berres",
+      "Anders L. Madsen",
+      "Johannes Daxenberger",
+      "Annegret Aulbach"
+    ],
+    "abstract": "The digital transformation of cities inspired the city administration of Aschaffenburg, Germany, to apply artificial intelligence to reduce the significant amount of manual administrative effort needed to evaluate citizens’ ideas for potential future projects. This paper introduces a methodology that combines argument mining with Bayesian networks to evaluate the relative eligibility of city project proposals. The methodology involves two main steps: (1) clustering arguments extracted from public information available on the Internet, and (2) assessing and comparing selected urban issues, planning topics, and citizens’ ideas that have been widely discussed to measure public interest in potential candidate projects. The results of the clustering are fed into a Bayesian network, along with scores for several evaluation criteria, to generate a relative eligibility score. The framework was applied to three candidate projects, resulting in the selection of one of them, while the other two were rejected with a given explanation. The latter motivates the decision and provides transparency to all parties involved in the decision process. The methodology is applicable to other cities after adjustments of criteria.",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2024,
+    "paper_url": "https://raw.githubusercontent.com/mlresearch/v246/main/assets/weidl24a/weidl24a.pdf"
+  },
+  {
+    "id": "busch24a",
+    "title": "$Ψ$net: Efficient Causal Modeling at Scale",
+    "authors": [
+      "Florian Peter Busch",
+      "Moritz Willig",
+      "Jonas Seng",
+      "Kristian Kersting",
+      "Devendra Singh Dhami"
+    ],
+    "abstract": "Being a ubiquitous aspect of human cognition, causality has made its way into modern-day machine-learning research. Despite its importance in real-world applications, contemporary research still struggles with high-dimensional causal problems. Leveraging the efficiency of probabilistic circuits, which offer tractable computation of marginal probabilities, we introduce $\\Psi$net, a probabilistic model designed for large-scale causal inference. $\\Psi$net is a type of sum-product network where layering and the einsum operation allow for efficient parallelization. By incorporating interventional data into the learning process, the model can learn the effects of interventions and make predictions based on the specific interventional setting. Overall, $\\Psi$net is a causal probabilistic circuit that efficiently answers causal queries in large-scale problems. We present evaluations conducted on both synthetic data and a substantial real-world dataset, demonstrating $\\Psi$net’s ability to capture causal relationships in high-dimensional settings.",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2024,
+    "paper_url": "https://raw.githubusercontent.com/mlresearch/v246/main/assets/busch24a/busch24a.pdf"
+  },
+  {
+    "id": "vomlel24a",
+    "title": "Uncovering Relationships using Bayesian Networks:  A Case Study on Conspiracy Theories",
+    "authors": [
+      "Jiřı́ Vomlel",
+      "Aleš Kuběna",
+      "Martin Šmı́d",
+      "Josefina Weinerova"
+    ],
+    "abstract": "Bayesian networks (BNs) represent a probabilistic model that can visualize relationships between variables. We apply various BN structure learning algorithms to a large dataset from a Czech university entrance exam. This dataset includes a test of active, open-minded thinking designed by Jonathan Baron, as well as a test of students’ attitudes toward various conspiracies. Using BNs, we were able to identify the structure of the conspiracies and their relationships with active open-minded thinking. We also compared results of different BN structure learning algorithms with results of selected standard data analysis methods.",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2024,
+    "paper_url": "https://raw.githubusercontent.com/mlresearch/v246/main/assets/vomlel24a/vomlel24a.pdf"
+  },
+  {
+    "id": "kundu24a",
+    "title": "Time–Approximation Trade-Offs for Learning Bayesian Networks",
+    "authors": [
+      "Madhumita Kundu",
+      "Pekka Parviainen",
+      "Saket Saurabh"
+    ],
+    "abstract": "Bayesian network structure learning is an NP-hard problem. Furthermore, the problem remains hard even for various subclasses of graphs. Motivated by the hardness of exact learning, we study approximation algorithms for learning Bayesian networks. First, we propose a moderately exponential time algorithm with running time $\\mathcal{O}(2^{\\frac{\\ell}{r}n})$ that has an approximation ratio $\\frac{\\ell}{r}$ where $n$ is the number of vertices and $\\ell$ and $r$ are user-defined parameters with $\\ell\\leq r$. That is, we give time–approximation trade-offs for learning Bayesian networks. Second, we present a polynomial time algorithm with an approximation ratio $\\frac{1}{d}$ to find an optimal graph whose connected components have size at most $d$. ",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2024,
+    "paper_url": "https://raw.githubusercontent.com/mlresearch/v246/main/assets/kundu24a/kundu24a.pdf"
+  },
+  {
+    "id": "bejos24a",
+    "title": "Estimating Bounds on Causal Effects Considering Unmeasured Common Causes",
+    "authors": [
+      "Sebastian Bejos",
+      "Luis Enrique Sucar",
+      "Eduardo F. Morales"
+    ],
+    "abstract": "Maximal ancestral graphs (MAGs) can represent causal relationships in systems that include unmeasured common direct causes. Constraint-based causal discovery methods are able to find solely the Markov Equivalence Class (MEC) of the causal structure given a set of observational data. To bound the total effect estimation between a pair of variables, when the MEC of the causal structure is known, the causal effect on each member in the MEC are computed, while keeping the minimum and maximum values as the lower and upper bounds for the total causal effect. However, when the modeling is done using MAGs, i.e., the MEC is encoded as a Partial Ancestral Graph (PAG), it is not always possible to find an adjustment set over some pairs of variables for the computation of the causal effect by covariance adjustment. In such cases, the LV-IDA algorithm returns missing values on the causal effects computation for some, and occasionally all, of the MAGs in the PAG. We present an extension of the LV-IDA algorithm, which we call the LV-IDA+ algorithm, that can compute approximated bounds of causal effects between every pair of the variables on a PAG. To achieve this, we propose a way to approximate the causal effect estimations when it is not possible to find adjustment sets for some pairs of variables on the MAGs in a PAG. We evaluate the performance of LV-IDA+ using simulated data generated by a canonical DAGs and compare with the LV-IDA algorithm. The results suggest the approximations of causal effects computed by LV-IDA+, are better than the missing values (simple NAs) returned by the LV-IDA algorithm, at least for the case of observational data generated by a canonical DAGs with latent variables.",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2024,
+    "paper_url": "https://raw.githubusercontent.com/mlresearch/v246/main/assets/bejos24a/bejos24a.pdf"
+  },
+  {
+    "id": "wenig24a",
+    "title": "Serving MPE Queries on Tensor Networks by Computing Derivatives",
+    "authors": [
+      "Maurice Wenig",
+      "Hanno Barschel",
+      "Joachim Giesen",
+      "Andreas Goral",
+      "Mark Blacher"
+    ],
+    "abstract": "Recently, tensor networks have been proposed as a data structure for weighted model counting. Computing a weighted model count is thus reduced to contracting a factorized tensor expression. Inference queries on graphical models, especially PoE (probability of evidence) queries, can be expressed directly as weighted model counting problems. Maximization problems can also be addressed on the same data structure, only the standard sum-product semiring has to be replaced by either the tropical (max-sum) or the Viterbi (max-product) semiring in the computations, that is, the tensor contractions. However, tensor contractions only provide maximal values, but MPE (most probable explanation) queries on graphical models do not ask for the maximal value, but for a state, or even the states, at which the maximal value is attained. In the special case of tropical tensor networks for ground states of spin glasses, it has been observed that the ground state can be obtained by computing a derivative of the tensor network over the tropical semiring. Here, we generalize this observation, provide a generic algorithm for computing the derivatives, and prove its correctness.",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2024,
+    "paper_url": "https://raw.githubusercontent.com/mlresearch/v246/main/assets/wenig24a/wenig24a.pdf"
+  },
+  {
+    "id": "muvunza24a",
+    "title": "Cauchy Graphical Models",
+    "authors": [
+      "Taurai Muvunza",
+      "Yang Li",
+      "Kuruoglu Ercan"
+    ],
+    "abstract": "A common approach to learning Bayesian networks involves specifying an appropriately chosen family of parameterized probability density such as Gaussian. However, the distribution of most real-life data is leptokurtic and may not necessarily be best described by a Gaussian process. In this work we introduce Cauchy Graphical Models (CGM), a class of multivariate Cauchy densities that can be represented as directed acyclic graphs with arbitrary network topologies, the edges of which encode linear dependencies between random variables. We develop CGLearn, the resultant algorithm for learning the structure and Cauchy parameters based on Minimum Dispersion Criterion (MDC). Experiments using simulated datasets on benchmark network topologies demonstrate the efficacy of our approach when compared to Gaussian Graphical Models (GGM).",
+    "topic": "",
+    "conference": "pgm",
+    "year": 2024,
+    "paper_url": "https://raw.githubusercontent.com/mlresearch/v246/main/assets/muvunza24a/muvunza24a.pdf"
+  }
+]
