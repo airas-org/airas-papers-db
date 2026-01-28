@@ -245,9 +245,14 @@ async def main():
         logger.info(f"\nFetching data from {len(tasks)} conference-year combinations...")
         results = await asyncio.gather(*(task for task, _, _, _ in tasks))
 
+    total_papers = 0
+    successful_fetches = 0
+    skipped_fetches = 0  
+
     for (task, conf_name, year, source_type), raw_papers in zip(tasks, results):
         if not raw_papers:
             logger.warning(f"  -> No data found for {conf_name} {year}. Skipping.")
+            skipped_fetches += 1    
             continue
 
         if source_type == "virtual":
@@ -269,7 +274,16 @@ async def main():
         output_path = BASE_DATA_DIR / conf_name / f"{year}.json"
         _save_json(normalized_papers, output_path)
 
-    logger.info("\nData update process completed successfully!")
+        total_papers += len(normalized_papers)
+        successful_fetches += 1
+
+    logger.info(f"\n{'='*60}")
+    logger.info(f"Data update process completed!")                                                                                 
+    logger.info(f"Total conference-year combinations: {len(tasks)}")                                                               
+    logger.info(f"  - Successful: {successful_fetches}")                                                                           
+    logger.info(f"  - Skipped: {skipped_fetches}")      
+    logger.info(f"Total papers collected: {total_papers:,}")
+    logger.info(f"{'='*60}")
 
 
 if __name__ == "__main__":
