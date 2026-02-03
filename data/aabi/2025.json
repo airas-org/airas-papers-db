@@ -1,0 +1,102 @@
+[
+  {
+    "id": "chang25a",
+    "title": "Deep Q-Exponential Processes",
+    "authors": [
+      "Zhi Chang",
+      "Chukwudi Paul Obite",
+      "Shuang Zhou",
+      "Shiwei Lan"
+    ],
+    "abstract": "Motivated by deep neural networks, the deep Gaussian process (DGP) generalizes the standard GP by stacking multiple layers of GPs. Despite the enhanced expressiveness, GP, as an $L_2$ regularization prior, tends to be over-smooth and sub-optimal for inhomogeneous objects, such as images with edges. Recently, Q-exponential process (Q-EP) has been proposed as an $L_q$ relaxation to GP and demonstrated with more desirable regularization properties through a parameter $q > 0$ with $q = 2$ corresponding to GP. Sharing the similar tractability of posterior and predictive distributions with GP, Q-EP can also be stacked to improve its modeling flexibility. In this paper, we generalize Q-EP to deep Q-EP to model inhomogeneous data with improved expressiveness. We introduce shallow Q-EP as a latent variable model and then build a hierarchy of the shallow Q-EP layers. Sparse approximation by inducing points and scalable variational strategy are applied to facilitate the inference. We demonstrate the numerical advantages of the proposed deep Q-EP model by comparing with multiple state-of-the-art deep probabilistic models.",
+    "topic": "",
+    "conference": "aabi",
+    "year": 2025,
+    "paper_url": "https://raw.githubusercontent.com/mlresearch/v289/main/assets/chang25a/chang25a.pdf"
+  },
+  {
+    "id": "heap25a",
+    "title": "Massively Parallel Expectation Maximization For Approximate Posteriors",
+    "authors": [
+      "Thomas Heap",
+      "Sam Bowyer",
+      "Laurence Aitchison"
+    ],
+    "abstract": "Bayesian inference for hierarchical models can be very challenging. MCMC methods have difficulty scaling to large models with many observations and latent variables. While variational inference (VI) and reweighted wake-sleep (RWS) can be more scalable, they are gradient-based methods and so often require many iterations to converge. Our key insight was that modern massively parallel importance weighting methods (Bowyer et al., 2024) give fast and accurate posterior moment estimates, and we can use these moment estimates to rapidly learn an approximate posterior. Specifically, we propose using expectation maximization to fit the approximate posterior, which we call QEM. The expectation step involves computing the posterior moments using high-quality massively parallel estimates from Bowyer et al. (2024). The maximization step involves fitting the approximate posterior using these moments, which can be done straightforwardly for simple approximate posteriors such as Gaussian, Gamma, Beta, Dirichlet, Binomial, Multinomial, Categorical, etc. (or combinations thereof). We show that QEM is faster than state-of-the-art, massively parallel variants of RWS and VI, and is invariant to reparameterizations of the model that dramatically slow down gradient based methods.",
+    "topic": "",
+    "conference": "aabi",
+    "year": 2025,
+    "paper_url": "https://raw.githubusercontent.com/mlresearch/v289/main/assets/heap25a/heap25a.pdf"
+  },
+  {
+    "id": "huang25a",
+    "title": "From predictions to confidence intervals: an empirical study of conformal prediction methods for in-context learning",
+    "authors": [
+      "Zhe Huang",
+      "Simone Rossi",
+      "Rui Yuan",
+      "Thomas Hannagan"
+    ],
+    "abstract": "Transformers have become a standard architecture in machine learning, demonstrating strong in-context learning (ICL) abilities that allow them to learn from the prompt at inference time. However, uncertainty quantification for ICL remains an open challenge, particularly in noisy regression tasks. This paper investigates whether ICL can be leveraged for distribution-free uncertainty estimation, proposing a method based on conformal prediction to construct prediction intervals with guaranteed coverage. While traditional conformal methods are computationally expensive due to repeated model fitting, we exploit ICL to efficiently generate confidence intervals in a single forward pass. Our empirical analysis compares this approach against ridge regression-based conformal methods, showing that conformal prediction with in-context learning (CP <em>with</em> ICL) achieves robust and scalable uncertainty estimates. Additionally, we evaluate its performance under distribution shifts and establish scaling laws to guide model training. These findings bridge ICL and conformal prediction, providing a theoretically grounded and new framework for uncertainty quantification in transformer-based models.",
+    "topic": "",
+    "conference": "aabi",
+    "year": 2025,
+    "paper_url": "https://raw.githubusercontent.com/mlresearch/v289/main/assets/huang25a/huang25a.pdf"
+  },
+  {
+    "id": "li25a",
+    "title": "Normalizing Flow Regression for Bayesian Inference with Offline Likelihood Evaluations",
+    "authors": [
+      "Chengkun Li",
+      "Bobby Huggins",
+      "Petrus Mikkola",
+      "Luigi Acerbi"
+    ],
+    "abstract": "Bayesian inference with computationally expensive likelihood evaluations remains a significant challenge in many scientific domains. We propose normalizing flow regression (NFR), a novel offline inference method for approximating posterior distributions. Unlike traditional surrogate approaches that require additional sampling or inference steps, NFR directly yields a tractable posterior approximation through regression on existing log-density evaluations. We introduce training techniques specifically for flow regression, such as tailored priors and likelihood functions, to achieve robust posterior and model evidence estimation. We demonstrate NFR’s effectiveness on synthetic benchmarks and real-world applications from neuroscience and biology, showing superior or comparable performance to existing methods. NFR represents a promising approach for Bayesian inference when standard methods are computationally prohibitive or existing model evaluations can be recycled.",
+    "topic": "",
+    "conference": "aabi",
+    "year": 2025,
+    "paper_url": "https://raw.githubusercontent.com/mlresearch/v289/main/assets/li25a/li25a.pdf"
+  },
+  {
+    "id": "pitas25a",
+    "title": "$U$-ensembles: Improved diversity in the small data regime using unlabeled data",
+    "authors": [
+      "Konstantinos Pitas",
+      "Hani Anouar Bourrous",
+      "Julyan Arbel"
+    ],
+    "abstract": "We present a method to improve the calibration of deep ensembles in the small data regime in the presence of unlabeled data. Our approach, which we name $U$-ensembles, is extremely easy to implement: given an unlabeled set, for each unlabeled data point, we simply fit a different randomly selected label with each ensemble member. We provide a theoretical analysis based on a PAC-Bayes bound which guarantees that for such a labeling we obtain low negative log-likelihood and high ensemble diversity on testing samples. Empirically, through detailed experiments, we find that for low to moderately-sized training sets, $U$-ensembles are more diverse and provide better calibration than standard ensembles.",
+    "topic": "",
+    "conference": "aabi",
+    "year": 2025,
+    "paper_url": "https://raw.githubusercontent.com/mlresearch/v289/main/assets/pitas25a/pitas25a.pdf"
+  },
+  {
+    "id": "cochrane25a",
+    "title": "Divide, Conquer, Combine Bayesian Decision Tree Sampling",
+    "authors": [
+      "Jodie A. Cochrane",
+      "Adrian Wills",
+      "Sarah J. Johnson"
+    ],
+    "abstract": "Decision trees are commonly used predictive models due to their flexibility and interpretability. This paper is directed at quantifying the uncertainty of decision tree predictions by employing a Bayesian inference approach. This is challenging because these approaches need to explore both the tree structure space and the space of decision parameters associated with each tree structure. Importantly, the structure and the decision parameters are tightly coupled; small changes in the tree structure can demand vastly different decision parameters to provide accurate predictions. A challenge for existing sample-based approaches is proposing joint changes in both the tree structure and the decision parameters that result in efficient sampling. This paper takes a different approach, where each distinct tree structure is associated with a unique set of decision parameters. The proposed approach, entitled DCC-Tree, is inspired by the work in Zhou et al. (2020) for probabilistic programs and Cochrane et al. (2023) for Hamiltonian Monte Carlo (HMC) based sampling for decision trees. Results show that DCC-Tree performs comparably to other HMC-based methods and better than existing Bayesian tree methods while improving on consistency and reducing the per-proposal complexity.",
+    "topic": "",
+    "conference": "aabi",
+    "year": 2025,
+    "paper_url": "https://raw.githubusercontent.com/mlresearch/v289/main/assets/cochrane25a/cochrane25a.pdf"
+  },
+  {
+    "id": "rochussen25a",
+    "title": "Sparse Gaussian Neural Processes",
+    "authors": [
+      "Tommy Rochussen",
+      "Vincent Fortuin"
+    ],
+    "abstract": "Despite significant recent advances in probabilistic meta-learning, it is common for practitioners to avoid using deep learning models due to a comparative lack of interpretability. Instead, many practitioners simply use non-meta-models such as Gaussian processes with interpretable priors, and conduct the tedious procedure of training their model from scratch for each task they encounter. While this is justifiable for tasks with a limited number of data points, the cubic computational cost of exact Gaussian process inference renders this prohibitive when each task has many observations. To remedy this, we introduce a family of models that meta-learn sparse Gaussian process inference. Not only does this enable rapid prediction on new tasks with sparse Gaussian processes, but since our models have clear interpretations as members of the neural process family, it also allows manual elicitation of priors in a neural process for the first time. In meta-learning regimes for which the number of observed tasks is small or for which expert domain knowledge is available, this offers a crucial advantage.",
+    "topic": "",
+    "conference": "aabi",
+    "year": 2025,
+    "paper_url": "https://raw.githubusercontent.com/mlresearch/v289/main/assets/rochussen25a/rochussen25a.pdf"
+  }
+]
