@@ -44,6 +44,32 @@ Each paper object in the JSON files follows this standard schema:
 }
 ```
 
+## Data Sources
+
+Papers are collected from several source types, configured in `scripts/configs/conferences.jsonc`:
+
+| `source_type` | Origin | Conferences |
+|---------------|--------|-------------|
+| `virtual_conference` | `*.cc/static/virtual/data/*.json` | ICML, ICLR, NeurIPS, CVPR, ECCV |
+| `pmlr` | Proceedings of Machine Learning Research (`proceedings.mlr.press`) | AISTATS, UAI, COLT, AABI, PGM, **MLCB** |
+| `acl_anthology` | ACL Anthology XML | ACL, EMNLP, NAACL |
+| `openreview` | OpenReview API (`api2.openreview.net`) | **MLSB, GEM, LMRL** |
+
+### AI × Life Science venues
+
+To cover the AI-for-life-science space (protein structure, molecular generation,
+biomolecular design, genomics — the domains behind platforms such as NVIDIA BioNeMo),
+the following venues are included:
+
+- **MLCB** — Machine Learning in Computational Biology (archival, via PMLR).
+- **MLSB** — Machine Learning in Structural Biology (NeurIPS workshop, via OpenReview).
+- **GEM** — Generative and Experimental perspectives for biomolecular design (ICLR workshop, via OpenReview).
+- **LMRL** — Learning Meaningful Representations of Life (ICLR workshop, via OpenReview).
+
+> Note: OpenReview workshop venues expose title, authors, abstract, and a PDF link
+> (the `openreview` fetcher filters to accepted papers by `content.venueid`). MLSB is a
+> non-archival workshop, so per-year coverage depends on authors keeping submissions public.
+
 ## Usage
 
 ### 1. Direct Download

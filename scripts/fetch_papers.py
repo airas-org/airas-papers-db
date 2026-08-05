@@ -88,6 +88,49 @@ def _normalize_paper_from_acl_anthology(raw_paper: dict, conference: str, year: 
     return normalized_data
 
 
+def _unwrap_openreview_value(field: Any) -> Any:
+    """OpenReview API v2 wraps content values as {"value": ...}; v1 stores them directly."""
+    if isinstance(field, dict) and 'value' in field:
+        return field['value']
+    return field
+
+
+def _normalize_paper_from_openreview(raw_paper: dict, conference: str, year: int) -> dict[str, Any]:
+    content = raw_paper.get('content', {})
+
+    title = _unwrap_openreview_value(content.get('title', '')) or ''
+    abstract = _unwrap_openreview_value(content.get('abstract', '')) or ''
+
+    authors = _unwrap_openreview_value(content.get('authors', [])) or []
+    if isinstance(authors, str):
+        authors = [authors]
+    authors_list = [a for a in authors if a]
+
+    pdf = _unwrap_openreview_value(content.get('pdf', '')) or ''
+    note_id = raw_paper.get('id', '')
+    if pdf.startswith('http'):
+        paper_url = pdf
+    elif pdf.startswith('/'):
+        paper_url = f"https://openreview.net{pdf}"
+    elif note_id:
+        paper_url = f"https://openreview.net/forum?id={note_id}"
+    else:
+        paper_url = ''
+
+    normalized_data = {
+        'id': note_id,
+        'title': title.strip() if isinstance(title, str) else title,
+        'authors': authors_list,
+        'abstract': abstract.strip() if isinstance(abstract, str) else abstract,
+        'topic': '',  # OpenReview workshops don't expose a consistent topic field
+        'conference': conference,
+        'year': year,
+        'paper_url': paper_url
+    }
+
+    return normalized_data
+
+
 async def _fetch_papers_from_virtual_conference(
     client: httpx.AsyncClient, url: str
 ) -> list[dict[str, Any]]:
@@ -194,6 +237,59 @@ async def _fetch_papers_from_acl_anthology(
     return []
 
 
+async def _fetch_papers_from_openreview(
+    client: httpx.AsyncClient, venue_id: str, api_version: int = 2
+) -> list[dict[str, Any]]:
+    base_url = (
+        "https://api2.openreview.net/notes"
+        if api_version == 2
+        else "https://api.openreview.net/notes"
+    )
+    logger.info(f"Fetching from {base_url}?content.venueid={venue_id}...")
+
+    papers: list[dict[str, Any]] = []
+    offset = 0
+    limit = 1000
+
+    try:
+        while True:
+            params = {
+                "content.venueid": venue_id,
+                "limit": limit,
+                "offset": offset,
+            }
+            response = await client.get(
+                base_url, params=params, timeout=60, follow_redirects=True
+            )
+            response.raise_for_status()
+
+            data = response.json()
+            notes = data.get("notes", [])
+            if not notes:
+                break
+
+            papers.extend(notes)
+
+            if len(notes) < limit:
+                break
+            offset += limit
+
+        if not papers:
+            logger.warning(f"  -> No papers found for venue {venue_id}")
+            return []
+
+        logger.info(f"  -> Found {len(papers)} papers")
+        return papers
+
+    except httpx.RequestError as e:
+        logger.error(f"  -> Failed to fetch {venue_id}: {e}")
+    except json.JSONDecodeError as e:
+        logger.error(f"  -> Failed to parse JSON for {venue_id}: {e}")
+    except Exception as e:
+        logger.error(f"  -> Unexpected error fetching {venue_id}: {e}")
+    return []
+
+
 def _save_json(data: list[dict[str, Any]], path: Path):
     path.parent.mkdir(parents=True, exist_ok=True)
     with open(path, "w", encoding="utf-8") as f:
@@ -242,6 +338,16 @@ async def main():
                     )
                     tasks.append((task, conf_name, year, "acl_anthology"))
 
+            elif source_type == "openreview":
+                api_version = config.get("api_version", 2)
+                venues = config.get("venues", {})
+                for year_str, venue_id in venues.items():
+                    year = int(year_str)
+                    task = asyncio.create_task(
+                        _fetch_papers_from_openreview(client, venue_id, api_version)
+                    )
+                    tasks.append((task, conf_name, year, "openreview"))
+
         logger.info(f"\nFetching data from {len(tasks)} conference-year combinations...")
         results = await asyncio.gather(*(task for task, _, _, _ in tasks))
 
@@ -268,6 +374,11 @@ async def main():
         elif source_type == "acl_anthology":
             normalized_papers = [
                 _normalize_paper_from_acl_anthology(p, conference=conf_name, year=year)
+                for p in raw_papers
+            ]
+        elif source_type == "openreview":
+            normalized_papers = [
+                _normalize_paper_from_openreview(p, conference=conf_name, year=year)
                 for p in raw_papers
             ]
 
