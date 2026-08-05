@@ -53,16 +53,14 @@ Papers are collected from several source types, configured in `scripts/configs/c
 | `virtual_conference` | `*.cc/static/virtual/data/*.json` | ICML, ICLR, NeurIPS, CVPR, ECCV |
 | `pmlr` | Proceedings of Machine Learning Research (`proceedings.mlr.press`) | AISTATS, UAI, COLT, AABI, PGM, MLCB |
 | `acl_anthology` | ACL Anthology XML | ACL, EMNLP, NAACL |
-| `openreview` | OpenReview search API (`/notes/search`) | ML4LMS, GEM, LMRL, GenBio, AIDrugX, AccMLBio, SIMBIOCHEM, AI4Science, FM4Science, Agents4Science |
+| `openreview` | OpenReview search API (`/notes/search`) | ML4LMS, GEM, LMRL, GenBio |
 
 NeurIPS' virtual-site JSON also carries the **Datasets & Benchmarks** and **Position
 Paper** tracks (504 and 43 papers in 2025), so those need no separate configuration.
 
-### Biomolecular ML and research-agent venues
+### Biomolecular ML venues
 
-The workshop venues cover the two literatures behind agent-driven structural biology
-work — protein-ligand structure prediction, and autonomous research agents on
-scientific benchmarks:
+These cover the protein-ligand structure and biomolecular design literature:
 
 | Venue | Scope | Editions |
 |-------|-------|----------|
@@ -70,13 +68,7 @@ scientific benchmarks:
 | **GEM** | Generative and Experimental perspectives for biomolecular design (ICLR) | 2024–2026 |
 | **LMRL** | Learning Meaningful Representations of Life (NeurIPS/ICLR) | 2022, 2025, 2026 |
 | **GenBio** | Generative AI and Biology (NeurIPS/ICML) | 2023, 2025, 2026 |
-| **AIDrugX** | AI for New Drug Modalities (NeurIPS) | 2024 |
-| **AccMLBio** | Accessible and Efficient ML for Biology (ICML) | 2024 |
-| **SIMBIOCHEM** | Structure Inference in Biochemistry (EurIPS) | 2025 |
 | **MLCB** | ML in Computational Biology (archival, PMLR) | 2021–2025 |
-| **AI4Science** | AI for Science (NeurIPS / ICML — kept as separate series, since both hosted a 2022 edition) | 2021–2026 |
-| **FM4Science** | Foundation Models for Science (NeurIPS/ICLR) | 2024, 2026 |
-| **Agents4Science** | Conference where AI agents are the primary authors | 2025 |
 
 ### Sources deliberately not configured
 
