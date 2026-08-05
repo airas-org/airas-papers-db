@@ -55,6 +55,10 @@ jobs:
       - name: Compile fetch script
         run: python3 -m py_compile scripts/fetch_papers.py
 
+      # TEMPORARY diagnostic - removed once OpenReview venue IDs are confirmed.
+      - name: Probe OpenReview
+        run: python3 scripts/_probe_openreview.py
+
   update:
     name: Fetch & commit papers
     # Only refresh data on scheduled or manual runs, not on pull requests.
