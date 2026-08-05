@@ -1,0 +1,76 @@
+[
+  {
+    "id": "zhou22a",
+    "title": "Towards a Better Understanding of Reverse-Complement Equivariance for Deep Learning Models in Genomics",
+    "authors": [
+      "Hannah Zhou",
+      "Avanti Shrikumar",
+      "Anshul Kundaje"
+    ],
+    "abstract": "Predictive models mapping double-stranded DNA to signals of regulatory activity should, in principle, produce analogous (or “equivariant”) predictions whether the forward strand or its reverse complement (RC) is supplied as input. Unfortunately, standard neural networks can produce highly divergent predictions across strands, even when the training set is augmented with RC sequences. Two strategies have emerged to enforce equivariance: conjoined/“siamese” architectures, and RC parameter sharing or RCPS. However, the connections between the two remain unclear, comparisons to strong baselines are lacking, and neither has been adapted to base-resolution signal profile prediction. In this work, we extend conjoined & RCPS models to base-resolution signal prediction, and introduce a strong baseline: a standard model (trained with RC data augmentation) that is made conjoined only after training, which we call “post-hoc” conjoined. Through benchmarks on diverse tasks, we find post-hoc conjoined consistently performs best or second-best, surpassed only occasionally by RCPS, and never underperforms conjoined-during-training. We propose an overfitting-based hypothesis for the latter finding, and study it empirically. Despite its theoretical appeal, RCPS shows mediocre performance on several tasks, even though (as we prove) it can represent any solution learned by conjoined models. Our results suggest users interested in RC equivariance should default to post-hoc conjoined as a reliable baseline before exploring RCPS. Finally, we present a unified description of conjoined & RCPS architectures, revealing a broader class of models that gradually interpolate between RCPS and conjoined while maintaining equivariance. The code to replicate the experiments is available at https://github.com/hannahgz/BenchmarkRCStrategies. A 22-minute video explaining the paper is available at https://youtu.be/UY1Rmj036Wg",
+    "topic": "",
+    "conference": "mlcb",
+    "year": 2021,
+    "paper_url": "https://proceedings.mlr.press/v165/zhou22a/zhou22a.pdf"
+  },
+  {
+    "id": "xue22a",
+    "title": "Multimodal Pre-Training Model for Sequence-based Prediction of Protein-Protein Interaction",
+    "authors": [
+      "Yang Xue",
+      "Zijing Liu",
+      "Xiaomin Fang",
+      "Fan Wang"
+    ],
+    "abstract": "Protein-protein interactions (PPIs) are essentials for many biological processes where two or more proteins physically bind together to achieve their functions. Modeling PPIs is useful for many biomedical applications, such as vaccine design, antibody therapeutics, and peptide drug discovery. Pre-training a protein model to learn effective representation is critical for PPIs. Most pre-training models for PPIs are sequence-based, which naively adopt the language models used in natural language processing to amino acid sequences. More advanced works utilize the structure-aware pre-training technique, taking advantage of the contact maps of known protein structures. However, neither sequences nor contact maps can fully characterize structures and functions of the proteins, which are closely related to the PPI problem. Inspired by this insight, we propose a multimodal protein pre-training model with three modalities: sequence, structure, and function (S2F). Notably, instead of using contact maps to learn the amino acid-level rigid structures, we encode the structure feature with the topology complex of point clouds of heavy atoms. It allows our model to learn structural information about not only the backbones but also the side chains. Moreover, our model incorporates the knowledge from the functional description of proteins extracted from literature or manual annotations. Our experiments show that the S2F learns protein embeddings that achieve good performances on a variety of PPIs tasks, including cross-species PPI, antibody-antigen affinity prediction, antibody neutralization prediction for SARS-CoV-2, and mutation-driven binding affinity change prediction.",
+    "topic": "",
+    "conference": "mlcb",
+    "year": 2021,
+    "paper_url": "https://proceedings.mlr.press/v165/xue22a/xue22a.pdf"
+  },
+  {
+    "id": "smith22a",
+    "title": "Compound Screening with Deep Learning for Neglected Diseases: Leishmaniasis",
+    "authors": [
+      "Jonathan A. J. Smith",
+      "Hao Xu",
+      "Xinran Li",
+      "Laurence Yang",
+      "Jahir Gutierrez"
+    ],
+    "abstract": "Deep learning provides a tool for improving screening of candidates for drug re- purposing to treat neglected diseases. We show how a new pipeline can be devel- oped to address the needs of repurposing for Leishmaniasis. In combination with traditional molecular docking techniques, this allows top candidates to be selected and analyzed, including for molecular descriptor similarity.",
+    "topic": "",
+    "conference": "mlcb",
+    "year": 2021,
+    "paper_url": "https://proceedings.mlr.press/v165/smith22a/smith22a.pdf"
+  },
+  {
+    "id": "prakash22a",
+    "title": "Towards More Realistic Simulated Datasets for Benchmarking Deep Learning Models in Regulatory Genomics",
+    "authors": [
+      "Eva I. Prakash",
+      "Avanti Shrikumar",
+      "Anshul Kundaje"
+    ],
+    "abstract": "Deep neural networks and support vector machines have been shown to accurately predict genome-wide signals of regulatory activity from raw DNA sequences. These models are appealing in part because they can learn predictive DNA sequence features without prior assumptions. Several methods such as in-silico mutagenesis, GradCAM, DeepLIFT, Integrated Gradients and GkmExplain have been developed to reveal these learned features. However, the behavior of these methods on regulatory genomic data remains an area of active research. Although prior work has benchmarked these methods on simulated datasets with known ground-truth motifs, these simulations employed highly simplified regulatory logic that is not representative of the genome. In this work, we propose a novel pipeline for designing simulated data that comes closer to modeling the complexity of regulatory genomic DNA. We apply the pipeline to build simulated datasets based on publicly-available chromatin accessibility experiments and use these datasets to benchmark different interpretation methods based on their ability to identify ground-truth motifs. We find that a GradCAM-based method, which was reported to perform well on a more simplified dataset, does not do well on this dataset (particularly when using an architecture with shorter convolutional kernels in the first layer), and we theoretically show that this is expected based on the nature of regulatory genomic data. We also show that Integrated Gradients sometimes performs worse than gradient-times-input, likely owing to its linear interpolation path. We additionally explore the impact of user-defined settings on the interpretation methods, such as the choice of “reference”/“baseline”, and identify recommended settings for genomics. Our analysis suggests several promising directions for future research on these model interpretation methods. Code and links to data are available at https://github.com/kundajelab/interpret-benchmark.",
+    "topic": "",
+    "conference": "mlcb",
+    "year": 2021,
+    "paper_url": "https://proceedings.mlr.press/v165/prakash22a/prakash22a.pdf"
+  },
+  {
+    "id": "xu22a",
+    "title": "Enzyme Activity Prediction of Sequence Variants on Novel Substrates using Improved Substrate Encodings and Convolutional Pooling",
+    "authors": [
+      "Zhiqing Xu",
+      "Jinghao Wu",
+      "Yun S. Song",
+      "Radhakrishnan Mahadevan"
+    ],
+    "abstract": "Protein engineering is currently being revolutionized by deep learning applications, especially through natural language processing (NLP) techniques. It has been shown that state-of-the-art self-supervised language models trained on entire protein databases capture hidden contextual and structural information in amino acid sequences and are capable of improving sequence-to-function predictions. Yet, recent studies have reported that current compound-protein modeling approaches perform poorly on learning interactions between enzymes and substrates of interest within one protein family. We attribute this to low-grade substrate encoding methods and overcompressed sequence representations received by downstream predictive models. In this study, we propose a new substrate-encoding based on Extended Connectivity Fingerprints (ECFPs) and a convolutional-pooling of the sequence embeddings. Through testing on an activity profiling dataset of haloalkanoate dehalogenase superfamily that measures activities of 218 phosphatases against 168 substrates, we show substantial improvements in predictive performances of compound-protein interaction modeling. In addition, we also test the workflow on three other datasets from the halogenase, kinase and aminotransferase families and show that our pipeline achieves good performance on these datasets as well. We further demonstrate the utility of this downstream model architecture by showing that it achieves good performance with six different protein embeddings, including ESM-1b, TAPE, ProtBert, ProtAlbert, ProtT5, and ProtXLNet. This study provides a new workflow for activity prediction on novel substrates that can be used to engineer new enzymes for sustainability applications.",
+    "topic": "",
+    "conference": "mlcb",
+    "year": 2021,
+    "paper_url": "https://proceedings.mlr.press/v165/xu22a/xu22a.pdf"
+  }
+]

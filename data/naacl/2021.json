@@ -1113,7 +1113,7 @@
       "Sarthak Jain",
       "Karl Pichotta",
       "Yoav Goldberg",
-      "Byron Wallace"
+      "Byron C. Wallace"
     ],
     "abstract": "Large Transformers pretrained over clinical notes from Electronic Health Records (EHR) have afforded substantial gains in performance on predictive clinical tasks. The cost of training such models (and the necessity of data access to do so) coupled with their utility motivates parameter sharing, i.e., the release of pretrained models such as ClinicalBERT. While most efforts have used deidentified EHR, many researchers have access to large sets of sensitive, non-deidentified EHR with which they might train a BERT model (or similar). Would it be safe to release the weights of such a model if they did? In this work, we design a battery of approaches intended to recover Personal Health Information (PHI) from a trained BERT. Specifically, we attempt to recover patient names and conditions with which they are associated. We find that simple probing methods are not able to meaningfully extract sensitive information from BERT trained over the MIMIC-III corpus of EHR. However, more sophisticated “attacks” may succeed in doing so: To facilitate such research, we make our experimental setup and baseline probing models available at https://github.com/elehman16/exposing_patient_data_release.",
     "topic": "",
@@ -2363,7 +2363,7 @@
       "Julian Salazar",
       "Katrin Kirchhoff"
     ],
-    "abstract": "Non-autoregressive encoder-decoder models greatly improve decoding speed over autoregressive models, at the expense of generation quality. To mitigate this, iterative decoding models repeatedly infill or refine the proposal of a non-autoregressive model. However, editing at the level of output sequences limits model flexibility. We instead propose *iterative realignment*, which by refining latent alignments allows more flexible edits in fewer steps. Our model, Align-Refine, is an end-to-end Transformer which iteratively realigns connectionist temporal classification (CTC) alignments. On the WSJ dataset, Align-Refine matches an autoregressive baseline with a 14x decoding speedup; on LibriSpeech, we reach an LM-free test-other WER of 9.0% (19% relative improvement on comparable work) in three iterations. We release our code at https://github.com/amazon-research/align-refine.",
+    "abstract": "Non-autoregressive encoder-decoder models greatly improve decoding speed over autoregressive models, at the expense of generation quality. To mitigate this, iterative decoding models repeatedly infill or refine the proposal of a non-autoregressive model. However, editing at the level of output sequences limits model flexibility. We instead propose iterative realignment, which by refining latent alignments allows more flexible edits in fewer steps. Our model, Align-Refine, is an end-to-end Transformer which iteratively realigns connectionist temporal classification (CTC) alignments. On the WSJ dataset, Align-Refine matches an autoregressive baseline with a 14x decoding speedup; on LibriSpeech, we reach an LM-free test-other WER of 9.0% (19% relative improvement on comparable work) in three iterations. We release our code at https://github.com/amazon-research/align-refine.",
     "topic": "",
     "conference": "naacl",
     "year": 2021,
@@ -3863,7 +3863,7 @@
       "Piyush Sharma",
       "Radu Soricut"
     ],
-    "abstract": "Automatic image captioning has improved significantly over the last few years, but the problem is far from being solved, with state of the art models still often producing low quality captions when used in the wild. In this paper, we focus on the task of Quality Estimation (QE) for image captions, which attempts to model the caption quality from a human perspective and *without* access to ground-truth references, so that it can be applied at prediction time to detect low-quality captions produced on *previously unseen images*. For this task, we develop a human evaluation process that collects coarse-grained caption annotations from crowdsourced users, which is then used to collect a large scale dataset spanning more than 600k caption quality ratings. We then carefully validate the quality of the collected ratings and establish baseline models for this new QE task. Finally, we further collect fine-grained caption quality annotations from trained raters, and use them to demonstrate that QE models trained over the coarse ratings can effectively detect and filter out low-quality image captions, thereby improving the user experience from captioning systems.",
+    "abstract": "Automatic image captioning has improved significantly over the last few years, but the problem is far from being solved, with state of the art models still often producing low quality captions when used in the wild. In this paper, we focus on the task of Quality Estimation (QE) for image captions, which attempts to model the caption quality from a human perspective and without access to ground-truth references, so that it can be applied at prediction time to detect low-quality captions produced on previously unseen images. For this task, we develop a human evaluation process that collects coarse-grained caption annotations from crowdsourced users, which is then used to collect a large scale dataset spanning more than 600k caption quality ratings. We then carefully validate the quality of the collected ratings and establish baseline models for this new QE task. Finally, we further collect fine-grained caption quality annotations from trained raters, and use them to demonstrate that QE models trained over the coarse ratings can effectively detect and filter out low-quality image captions, thereby improving the user experience from captioning systems.",
     "topic": "",
     "conference": "naacl",
     "year": 2021,
@@ -5296,7 +5296,7 @@
       "Cornelia Caragea",
       "Natalie Parde"
     ],
-    "abstract": "Self-disclosure in online health conversations may offer a host of benefits, including earlier detection and treatment of medical issues that may have otherwise gone unaddressed. However, research analyzing medical self-disclosure in online communities is limited. We address this shortcoming by introducing a new dataset of health-related posts collected from online social platforms, categorized into three groups (No Self-Disclosure, Possible Self-Disclosure, and Clear Self-Disclosure) with high inter-annotator agreement (_k_=0.88). We make this data available to the research community. We also release a predictive model trained on this dataset that achieves an accuracy of 81.02%, establishing a strong performance benchmark for this task.",
+    "abstract": "Self-disclosure in online health conversations may offer a host of benefits, including earlier detection and treatment of medical issues that may have otherwise gone unaddressed. However, research analyzing medical self-disclosure in online communities is limited. We address this shortcoming by introducing a new dataset of health-related posts collected from online social platforms, categorized into three groups (No Self-Disclosure, Possible Self-Disclosure, and Clear Self-Disclosure) with high inter-annotator agreement (k=0.88). We make this data available to the research community. We also release a predictive model trained on this dataset that achieves an accuracy of 81.02%, establishing a strong performance benchmark for this task.",
     "topic": "",
     "conference": "naacl",
     "year": 2021,
@@ -8259,7 +8259,7 @@
       "Lei Li",
       "Deyi Xiong"
     ],
-    "abstract": "Automatic translation of dialogue texts is a much needed demand in many real life scenarios. However, the currently existing neural machine translation delivers unsatisfying results. In this paper, we conduct a deep analysis of a dialogue corpus and summarize three major issues on dialogue translation, including pronoun dropping (), punctuation dropping (), and typos (). In response to these challenges, we propose a joint learning method to identify omission and typo, and utilize context to translate dialogue utterances. To properly evaluate the performance, we propose a manually annotated dataset with 1,931 Chinese-English parallel utterances from 300 dialogues as a benchmark testbed for dialogue translation. Our experiments show that the proposed method improves translation quality by 3.2 BLEU over the baselines. It also elevates the recovery rate of omitted pronouns from 26.09% to 47.16%. We will publish the code and dataset publicly at https://xxx.xx.",
+    "abstract": "Automatic translation of dialogue texts is a much needed demand in many real life scenarios. However, the current neural machine translation systems usually deliver unsatisfying translation results of dialogue texts. In this paper, we conduct a deep analysis of a dialogue corpus and summarize three major issues on dialogue translation, including pronoun dropping (ProDrop), punctuation dropping (PunDrop), and typos (DialTypo). In response to these challenges, we propose a joint learning method to identify omission and typo in the process of translating, and utilize context to translate dialogue utterances. To properly evaluate the performance, we propose a manually annotated dataset with 1,931 Chinese-English parallel utterances from 300 dialogues as a benchmark testbed for dialogue translation. Our experiments show that the proposed method improves translation quality by 3.2 BLEU over the baselines. It also elevates the recovery rate of omitted pronouns from 26.09% to 47.16%. The code and dataset are publicly available at https://github.com/rgwt123/DialogueMT.",
     "topic": "",
     "conference": "naacl",
     "year": 2021,
@@ -8367,7 +8367,7 @@
     "authors": [
       "Amir Ganiev",
       "Colton Chapin",
-      "Anderson De Andrade",
+      "Anderson de Andrade",
       "Chen Liu"
     ],
     "abstract": "This work demonstrates the development process of a machine learning architecture for inference that can scale to a large volume of requests. We used a BERT model that was fine-tuned for emotion analysis, returning a probability distribution of emotions given a paragraph. The model was deployed as a gRPC service on Kubernetes. Apache Spark was used to perform inference in batches by calling the service. We encountered some performance and concurrency challenges and created solutions to achieve faster running time. Starting with 200 successful inference requests per minute, we were able to achieve as high as 18 thousand successful requests per minute with the same batch job resource allocation. As a result, we successfully stored emotion probabilities for 95 million paragraphs within 96 hours.",

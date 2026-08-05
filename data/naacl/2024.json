@@ -585,7 +585,7 @@
       "Rong Li",
       "Junwei Liang"
     ],
-    "abstract": "With the success of Large Language Models (LLMs), many Generative Vision-Language Models (GVLMs) have been constructed via multimodal instruction tuning. However, the performance of GVLMs in multimodal compositional reasoning remains under-explored. In this paper, we examine both the evaluation metrics ( VisualGPTScore, etc.) and current benchmarks for evaluating the compositionality of GVLMs. We identify the syntactical bias in current benchmarks, which is exploited by the linguistic capability of GVLMs. The bias renders VisualGPTScore an insufficient metric for assessing GVLMs. To combat this, we first introduce a **SyntaxBias Score**, leveraging LLMs to quantify such bias for mitigation. A challenging new task is subsequently added to evaluate the robustness of GVLMs against inherent inclination toward syntactical correctness. Using the bias-mitigated datasets and the new task, we propose a novel benchmark, namely **S**ynt**A**ctically **DE**-biased benchmark (SADE). Our study provides an unbiased benchmark for the compositionality of GVLMs, facilitating future research in this direction. Code and dataset are available at https://github.com/TeleeMa/SADE.",
+    "abstract": "With the success of Large Language Models (LLMs), many Generative Vision-Language Models (GVLMs) have been constructed via multimodal instruction tuning. However, the performance of GVLMs in multimodal compositional reasoning remains under-explored. In this paper, we examine both the evaluation metrics ( VisualGPTScore, etc.) and current benchmarks for evaluating the compositionality of GVLMs. We identify the syntactical bias in current benchmarks, which is exploited by the linguistic capability of GVLMs. The bias renders VisualGPTScore an insufficient metric for assessing GVLMs. To combat this, we first introduce a SyntaxBias Score, leveraging LLMs to quantify such bias for mitigation. A challenging new task is subsequently added to evaluate the robustness of GVLMs against inherent inclination toward syntactical correctness. Using the bias-mitigated datasets and the new task, we propose a novel benchmark, namely SyntActically DE-biased benchmark (SADE). Our study provides an unbiased benchmark for the compositionality of GVLMs, facilitating future research in this direction. Code and dataset are available at https://github.com/TeleeMa/SADE.",
     "topic": "",
     "conference": "naacl",
     "year": 2024,
@@ -730,7 +730,7 @@
       "Xianggen Liu",
       "Jiancheng Lv"
     ],
-    "abstract": "We propose Label Creative Generation (LCG), a new paradigm in multi-label data augmentation. Beyond repeating data points with fixed labels, LCG creates new data by exploring innovative label combinations. Within LCG, we introduce Tail-Driven Conditional Augmentation (TDCA), combining tail-driven label sampling and label-conditioned text generation for balanced, consistent data augmentation. Our approach has demonstrated a **100.21%** increase in PSP@1 across three datasets, successfully mitigating the long-tail effect in MLTC and markedly enhancing model performance.",
+    "abstract": "We propose Label Creative Generation (LCG), a new paradigm in multi-label data augmentation. Beyond repeating data points with fixed labels, LCG creates new data by exploring innovative label combinations. Within LCG, we introduce Tail-Driven Conditional Augmentation (TDCA), combining tail-driven label sampling and label-conditioned text generation for balanced, consistent data augmentation. Our approach has demonstrated a 100.21% increase in PSP@1 across three datasets, successfully mitigating the long-tail effect in MLTC and markedly enhancing model performance.",
     "topic": "",
     "conference": "naacl",
     "year": 2024,
@@ -975,7 +975,7 @@
       "Qian Lou",
       "Lei Jiang"
     ],
-    "abstract": "Prompt tuning is one of the most effective solutions to adapting a fixed pre-trained language model (PLM) for various downstream tasks, especially with only a few input samples. However, the security issues, e.g., Trojan attacks, of prompt tuning on a few data samples are not well-studied. Transferring established data poisoning attacks directly to few-shot prompt tuning presents multiple challenges. One significant issue is the _poisoned imbalance issue_, where non-target class samples are added to the target class, resulting in a greater number of target-class samples compared to non-target class. While this issue is not critical in regular tuning, it significantly hampers the few-shot prompt tuning, making it difficult to simultaneously achieve a high attack success rate (ASR) and maintain clean data accuracy (CDA). Additionally, few-shot prompting is prone to overfitting in terms of both ASR and CDA. In this paper, we introduce _TrojFSP_, a method designed to address the challenges. To solve the poisoned imbalance issue, we develop a _Target-Class Shrink (TC-Shrink)_ technique, which aims to equalize the number of poisoning samples. To combat overfitting, we employ a _Selective Token Poisoning_ technique to boost attack performance. Furthermore, we introduce a _Trojan-Trigger Attention_ objective function to amplify the attention of the poisoned trojan prompt on triggers. Experiments show that our TrojFSP achieves an ASR of over 99% while maintaining negligible decreases in CDA across various PLMs and datasets. The source code of TrojFSP is available at _https://github.com/UCF-ML-Research/TrojFSP_.",
+    "abstract": "Prompt tuning is one of the most effective solutions to adapting a fixed pre-trained language model (PLM) for various downstream tasks, especially with only a few input samples. However, the security issues, e.g., Trojan attacks, of prompt tuning on a few data samples are not well-studied. Transferring established data poisoning attacks directly to few-shot prompt tuning presents multiple challenges. One significant issue is the poisoned imbalance issue, where non-target class samples are added to the target class, resulting in a greater number of target-class samples compared to non-target class. While this issue is not critical in regular tuning, it significantly hampers the few-shot prompt tuning, making it difficult to simultaneously achieve a high attack success rate (ASR) and maintain clean data accuracy (CDA). Additionally, few-shot prompting is prone to overfitting in terms of both ASR and CDA. In this paper, we introduce TrojFSP, a method designed to address the challenges. To solve the poisoned imbalance issue, we develop a Target-Class Shrink (TC-Shrink) technique, which aims to equalize the number of poisoning samples. To combat overfitting, we employ a Selective Token Poisoning technique to boost attack performance. Furthermore, we introduce a Trojan-Trigger Attention objective function to amplify the attention of the poisoned trojan prompt on triggers. Experiments show that our TrojFSP achieves an ASR of over 99% while maintaining negligible decreases in CDA across various PLMs and datasets. The source code of TrojFSP is available at https://github.com/UCF-ML-Research/TrojFSP.",
     "topic": "",
     "conference": "naacl",
     "year": 2024,
@@ -1121,7 +1121,7 @@
       "Bhiksha Raj",
       "Huaxiu Yao"
     ],
-    "abstract": "Recent advancements in large language models (LLMs) have shown promise in multi-step reasoning tasks, yet their reliance on extensive manual labeling to provide procedural feedback remains a significant impediment. To address this challenge, in this paper, we propose a novel self-supervised framework **AutoPRM** that efficiently enhances the fine-tuning of LLMs for intricate reasoning challenges. Specifically, **AutoPRM** first decomposes complex problems into more manageable subquestions with a controllable granularity switch, then sequentially apply reinforcement learning to iteratively improve the subquestion solver. Additionally, we propose context-guided decoding to avoid reward tampering and guide the subquestion solver towards the solution of the holistic problem. Extensive experiments show that **AutoPRM** significantly improves performance on mathematical and commonsense reasoning tasks over SOTA. More encouragingly, **AutoPRM** can be easily integrated with other orthogonal reasoning pipelines.",
+    "abstract": "Recent advancements in large language models (LLMs) have shown promise in multi-step reasoning tasks, yet their reliance on extensive manual labeling to provide procedural feedback remains a significant impediment. To address this challenge, in this paper, we propose a novel self-supervised framework AutoPRM that efficiently enhances the fine-tuning of LLMs for intricate reasoning challenges. Specifically, AutoPRM first decomposes complex problems into more manageable subquestions with a controllable granularity switch, then sequentially apply reinforcement learning to iteratively improve the subquestion solver. Additionally, we propose context-guided decoding to avoid reward tampering and guide the subquestion solver towards the solution of the holistic problem. Extensive experiments show that AutoPRM significantly improves performance on mathematical and commonsense reasoning tasks over SOTA. More encouragingly, AutoPRM can be easily integrated with other orthogonal reasoning pipelines.",
     "topic": "",
     "conference": "naacl",
     "year": 2024,
@@ -1245,7 +1245,7 @@
       "Tongshuang Wu",
       "Chen Zhao",
       "Shi Feng",
-      "Hal Daumé Iii",
+      "Hal Daumé III",
       "Jordan Boyd-Graber"
     ],
     "abstract": "Large Language Models (LLMs) are increasingly used for accessing information on the web. Their truthfulness and factuality are thus of great interest. To help users make the right decisions about the information they get, LLMs should not only provide information but also help users fact-check it. We conduct human experiments with 80 crowdworkers to compare language models with search engines (information retrieval systems) at facilitating fact-checking. We prompt LLMs to validate a given claim and provide corresponding explanations. Users reading LLM explanations are significantly more efficient than those using search engines while achieving similar accuracy. However, they over-rely on the LLMs when the explanation is wrong. To reduce over-reliance on LLMs, we ask LLMs to provide contrastive information—explain both why the claim is true and false, and then we present both sides of the explanation to users. This contrastive explanation mitigates users’ over-reliance on LLMs, but cannot significantly outperform search engines. Further, showing both search engine results and LLM explanations offers no complementary benefits compared to search engines alone. Taken together, our study highlights that natural language explanations by LLMs may not be a reliable replacement for reading the retrieved passages, especially in high-stakes settings where over-relying on wrong AI explanations could lead to critical consequences.",
@@ -1399,7 +1399,7 @@
       "Yixin Wang",
       "Paramveer Dhillon"
     ],
-    "abstract": "In this paper, we examine the collaborative dynamics between humansand language models (LMs), where the interactions typically involveLMs proposing text segments and humans editing or responding to theseproposals. Productive engagement with LMs in such scenarios necessitates that humans discern effective text-based interaction strategies, such as editing and response styles, from historical human-LM interactions. This objective is inherently causal, driven by the counterfactual ‘what-if’ question: how would the outcome of collaboration change if humans employed a different text editing/refinement strategy? A key challenge in answering this causal inference question is formulating an appropriate causal estimand: the conventional average treatment effect (ATE) estimand is inapplicable to text-based treatments due to their high dimensionality. To address this concern, we introduce a new causal estimand– *Incremental Stylistic Effect (ISE)*, which characterizes the average impact of infinitesimally shifting a text towards a specific style, such as increasing formality. We establish the conditions for the non-parametric identification of ISE. Building on this, we develop *CausalCollab*, an algorithm designed to estimate the ISE of various interaction strategies in dynamic human-LM collaborations. Our empirical investigations across three distinct human-LM collaboration scenarios reveal that *CausalCollab* effectively reduces confounding and significantly improves counterfactual estimation over a set of competitive baselines.",
+    "abstract": "In this paper, we examine the collaborative dynamics between humansand language models (LMs), where the interactions typically involveLMs proposing text segments and humans editing or responding to theseproposals. Productive engagement with LMs in such scenarios necessitates that humans discern effective text-based interaction strategies, such as editing and response styles, from historical human-LM interactions. This objective is inherently causal, driven by the counterfactual ‘what-if’ question: how would the outcome of collaboration change if humans employed a different text editing/refinement strategy? A key challenge in answering this causal inference question is formulating an appropriate causal estimand: the conventional average treatment effect (ATE) estimand is inapplicable to text-based treatments due to their high dimensionality. To address this concern, we introduce a new causal estimand– Incremental Stylistic Effect (ISE), which characterizes the average impact of infinitesimally shifting a text towards a specific style, such as increasing formality. We establish the conditions for the non-parametric identification of ISE. Building on this, we develop CausalCollab, an algorithm designed to estimate the ISE of various interaction strategies in dynamic human-LM collaborations. Our empirical investigations across three distinct human-LM collaboration scenarios reveal that CausalCollab effectively reduces confounding and significantly improves counterfactual estimation over a set of competitive baselines.",
     "topic": "",
     "conference": "naacl",
     "year": 2024,
@@ -1814,7 +1814,7 @@
     "title": "VisLingInstruct: Elevating Zero-Shot Learning in Multi-Modal Language Models with Autonomous Instruction Optimization",
     "authors": [
       "Dongsheng Zhu",
-      "Daniel Tang",
+      "Xunzhu Tang",
       "Weidong Han",
       "Jinghui Lu",
       "Yukun Zhao",
@@ -1981,7 +1981,7 @@
       "Yuan Li",
       "Karin Verspoor"
     ],
-    "abstract": "The NLP community typically relies on performance of a model on a held-out test set to assess generalization. Performance drops observed in datasets outside of official test sets are generally attributed to “out-of-distribution” effects. Here, we explore the foundations of generalizability and study the factors that affect it, articulating lessons from clinical studies. In clinical research, generalizability is an act of reasoning that depends on (a) *internal validity* of experiments to ensure controlled measurement of cause and effect, and (b) *external validity* or transportability of the results to the wider population. We demonstrate how learning spurious correlations, such as the distance between entities in relation extraction tasks, can affect a model’s internal validity and in turn adversely impact generalization. We, therefore, present the need to ensure internal validity when building machine learning models in NLP. Our recommendations also apply to generative large language models, as they are known to be sensitive to even minor semantic preserving alterations. We also propose adapting the idea of *matching* in randomized controlled trials and observational studies to NLP evaluation to measure causation.",
+    "abstract": "The NLP community typically relies on performance of a model on a held-out test set to assess generalization. Performance drops observed in datasets outside of official test sets are generally attributed to “out-of-distribution” effects. Here, we explore the foundations of generalizability and study the factors that affect it, articulating lessons from clinical studies. In clinical research, generalizability is an act of reasoning that depends on (a) internal validity of experiments to ensure controlled measurement of cause and effect, and (b) external validity or transportability of the results to the wider population. We demonstrate how learning spurious correlations, such as the distance between entities in relation extraction tasks, can affect a model’s internal validity and in turn adversely impact generalization. We, therefore, present the need to ensure internal validity when building machine learning models in NLP. Our recommendations also apply to generative large language models, as they are known to be sensitive to even minor semantic preserving alterations. We also propose adapting the idea of matching in randomized controlled trials and observational studies to NLP evaluation to measure causation.",
     "topic": "",
     "conference": "naacl",
     "year": 2024,
@@ -2506,7 +2506,7 @@
       "Kaikai An",
       "Baobao Chang"
     ],
-    "abstract": "Large-scale multilingual Pretrained Language Models (mPLMs) yield impressive performance on cross-language tasks, yet significant performance disparities exist across different languages within the same mPLM. Previous studies endeavored to narrow these disparities by supervise fine-tuning the mPLMs with multilingual data.However, obtaining labeled multilingual data is time-consuming, and fine-tuning mPLM with limited labeled multilingual data merely encapsulates the knowledge specific to the labeled data.Therefore, we introduce **ALSACE** to leverage the learned knowledge from the well-performing languages to guide under-performing ones within the same mPLM, eliminating the need for additional labeled multilingual data. Experiments show that ALSACE effectively mitigates language-level performance disparity across various mPLMs while showing the competitive performance on different multilingual NLU tasks, ranging from full resource to limited resource settings. The code for our approach is available at https://github.com/pkunlp-icler/ALSACE.",
+    "abstract": "Large-scale multilingual Pretrained Language Models (mPLMs) yield impressive performance on cross-language tasks, yet significant performance disparities exist across different languages within the same mPLM. Previous studies endeavored to narrow these disparities by supervise fine-tuning the mPLMs with multilingual data.However, obtaining labeled multilingual data is time-consuming, and fine-tuning mPLM with limited labeled multilingual data merely encapsulates the knowledge specific to the labeled data.Therefore, we introduce ALSACE to leverage the learned knowledge from the well-performing languages to guide under-performing ones within the same mPLM, eliminating the need for additional labeled multilingual data. Experiments show that ALSACE effectively mitigates language-level performance disparity across various mPLMs while showing the competitive performance on different multilingual NLU tasks, ranging from full resource to limited resource settings. The code for our approach is available at https://github.com/pkunlp-icler/ALSACE.",
     "topic": "",
     "conference": "naacl",
     "year": 2024,
@@ -2865,7 +2865,7 @@
       "Yilin Shen",
       "Hongxia Jin"
     ],
-    "abstract": "Traditional language models operate autoregressively, i.e., they predict one token at a time. Rapid explosion in model sizes has resulted in high inference times. In this work, we propose DynaMo, a suite of multi-token prediction language models that reduce net inference times. Our models *dynamically* predict multiple tokens based on their confidence in the predicted joint probability distribution. We propose a lightweighttechnique to train these models, leveraging the weights of traditional autoregressive counterparts. Moreover, we propose novel ways to enhance the estimated joint probability to improve text generation quality, namely co-occurrence weighted masking and adaptive thresholding. We also propose systematic qualitative and quantitative methods to rigorously test the quality of generated text for non-autoregressive generation. One of the models in our suite, DynaMo-7.3B-T3, achieves same-quality generated text as the baseline (Pythia-6.9B) while achieving 2.57\\times speed-up with only 5.87% and 2.67% parameter and training time overheads, respectively.",
+    "abstract": "Traditional language models operate autoregressively, i.e., they predict one token at a time. Rapid explosion in model sizes has resulted in high inference times. In this work, we propose DynaMo, a suite of multi-token prediction language models that reduce net inference times. Our models dynamically predict multiple tokens based on their confidence in the predicted joint probability distribution. We propose a lightweighttechnique to train these models, leveraging the weights of traditional autoregressive counterparts. Moreover, we propose novel ways to enhance the estimated joint probability to improve text generation quality, namely co-occurrence weighted masking and adaptive thresholding. We also propose systematic qualitative and quantitative methods to rigorously test the quality of generated text for non-autoregressive generation. One of the models in our suite, DynaMo-7.3B-T3, achieves same-quality generated text as the baseline (Pythia-6.9B) while achieving 2.57\\times speed-up with only 5.87% and 2.67% parameter and training time overheads, respectively.",
     "topic": "",
     "conference": "naacl",
     "year": 2024,
@@ -2997,7 +2997,7 @@
       "Kyunghyun Cho",
       "He He"
     ],
-    "abstract": "The choice of hyperparameters greatly impacts performance in natural language processing. Often, it is hard to tell if a method is better than another or just better tuned. *Tuning curves* fix this ambiguity by accounting for tuning effort. Specifically, they plot validation performance as a function of the number of hyperparameter choices tried so far. While several estimators exist for these curves, it is common to use point estimates, which we show fail silently and give contradictory results when given too little data.Beyond point estimates, *confidence bands* are necessary to rigorously establish the relationship between different approaches. We present the first method to construct valid confidence bands for tuning curves. The bands are exact, simultaneous, and distribution-free, thus they provide a robust basis for comparing methods.Empirical analysis shows that while bootstrap confidence bands, which serve as a baseline, fail to approximate their target confidence, ours achieve it exactly. We validate our design with ablations, analyze the effect of sample size, and provide guidance on comparing models with our method. To promote confident comparisons in future work, we release opda: an easy-to-use library that you can install with pip. https://github.com/nicholaslourie/opda",
+    "abstract": "The choice of hyperparameters greatly impacts performance in natural language processing. Often, it is hard to tell if a method is better than another or just better tuned. Tuning curves fix this ambiguity by accounting for tuning effort. Specifically, they plot validation performance as a function of the number of hyperparameter choices tried so far. While several estimators exist for these curves, it is common to use point estimates, which we show fail silently and give contradictory results when given too little data.Beyond point estimates, confidence bands are necessary to rigorously establish the relationship between different approaches. We present the first method to construct valid confidence bands for tuning curves. The bands are exact, simultaneous, and distribution-free, thus they provide a robust basis for comparing methods.Empirical analysis shows that while bootstrap confidence bands, which serve as a baseline, fail to approximate their target confidence, ours achieve it exactly. We validate our design with ablations, analyze the effect of sample size, and provide guidance on comparing models with our method. To promote confident comparisons in future work, we release opda: an easy-to-use library that you can install with pip. https://github.com/nicholaslourie/opda",
     "topic": "",
     "conference": "naacl",
     "year": 2024,
@@ -3008,7 +3008,7 @@
     "title": "GRASP: A Disagreement Analysis Framework to Assess Group Associations in Perspectives",
     "authors": [
       "Vinodkumar Prabhakaran",
-      "Christopher Homan",
+      "Christopher M. Homan",
       "Lora Aroyo",
       "Aida Mostafazadeh Davani",
       "Alicia Parrish",
@@ -3170,7 +3170,7 @@
       "Linh Ngo",
       "Thien Nguyen"
     ],
-    "abstract": "Continual event detection is a cornerstone in uncovering valuable patterns in many dynamic practical applications, where novel events emerge daily. Existing state-of-the-art approaches with replay buffers still suffer from catastrophic forgetting, partially due to overly simplistic objective aggregation. This oversight disregards complex trade-offs and leads to sub-optimal gradient updates, resulting in performance deterioration across objectives. While there are successful, widely cited multi-objective optimization frameworks for multi-task learning, they lack mechanisms to address data imbalance and evaluate whether a Pareto-optimal solution can effectively mitigate catastrophic forgetting, rendering them unsuitable for direct application to continual learning. To address these challenges, we propose **SharpSeq**, a novel continual learning paradigm leveraging sharpness-aware minimization combined with a generative model to balance training data distribution. Through extensive experiments on multiple real-world datasets, we demonstrate the superior performance of SharpSeq in continual event detection, proving the importance of our approach in mitigating catastrophic forgetting in continual event detection.",
+    "abstract": "Continual event detection is a cornerstone in uncovering valuable patterns in many dynamic practical applications, where novel events emerge daily. Existing state-of-the-art approaches with replay buffers still suffer from catastrophic forgetting, partially due to overly simplistic objective aggregation. This oversight disregards complex trade-offs and leads to sub-optimal gradient updates, resulting in performance deterioration across objectives. While there are successful, widely cited multi-objective optimization frameworks for multi-task learning, they lack mechanisms to address data imbalance and evaluate whether a Pareto-optimal solution can effectively mitigate catastrophic forgetting, rendering them unsuitable for direct application to continual learning. To address these challenges, we propose SharpSeq, a novel continual learning paradigm leveraging sharpness-aware minimization combined with a generative model to balance training data distribution. Through extensive experiments on multiple real-world datasets, we demonstrate the superior performance of SharpSeq in continual event detection, proving the importance of our approach in mitigating catastrophic forgetting in continual event detection.",
     "topic": "",
     "conference": "naacl",
     "year": 2024,
@@ -3325,7 +3325,7 @@
       "Insup Lee",
       "Osbert Bastani"
     ],
-    "abstract": "When applied to open-domain question answering, large language models (LLMs) frequently generate incorrect responses based on made-up facts, which are called hallucinations. Retrieval augmented generation (RAG) is a promising strategy to avoid hallucinations, but it does not provide guarantees on its correctness. To address this challenge, we propose the Trustworthy Retrieval Augmented Question Answering, or *TRAQ*, which provides the first end-to-end statistical correctness guarantee for RAG. TRAQ uses conformal prediction, a statistical technique for constructing prediction sets that are guaranteed to contain the semantically correct response with high probability. Additionally, TRAQ leverages Bayesian optimization to minimize the size of the constructed sets. In an extensive experimental evaluation, we demonstrate that TRAQ provides the desired correctness guarantee while reducing prediction set size by 16.2% on average compared to an ablation. The implementation is available: [https://github.com/shuoli90/TRAQ](https://github.com/shuoli90/TRAQ).",
+    "abstract": "When applied to open-domain question answering, large language models (LLMs) frequently generate incorrect responses based on made-up facts, which are called hallucinations. Retrieval augmented generation (RAG) is a promising strategy to avoid hallucinations, but it does not provide guarantees on its correctness. To address this challenge, we propose the Trustworthy Retrieval Augmented Question Answering, or TRAQ, which provides the first end-to-end statistical correctness guarantee for RAG. TRAQ uses conformal prediction, a statistical technique for constructing prediction sets that are guaranteed to contain the semantically correct response with high probability. Additionally, TRAQ leverages Bayesian optimization to minimize the size of the constructed sets. In an extensive experimental evaluation, we demonstrate that TRAQ provides the desired correctness guarantee while reducing prediction set size by 16.2% on average compared to an ablation. The implementation is available: https://github.com/shuoli90/TRAQ.",
     "topic": "",
     "conference": "naacl",
     "year": 2024,
@@ -3656,7 +3656,7 @@
     "id": "231",
     "title": "Beyond Borders: Investigating Cross-Jurisdiction Transfer in Legal Case Summarization",
     "authors": [
-      "Santosh T.y.s.s",
+      "Santosh T.Y.S.S",
       "Vatsal Venkatkrishna",
       "Saptarshi Ghosh",
       "Matthias Grabmair"
@@ -3800,7 +3800,7 @@
       "Francesco Periti",
       "Nina Tahmasebi"
     ],
-    "abstract": "Contextualized embeddings are the preferred tool for modeling Lexical Semantic Change (LSC). Current evaluations typically focus on a specific task known as Graded Change Detection (GCD). However, performance comparison across work are often misleading due to their reliance on diverse settings. In this paper, we evaluate state-of-the-art models and approaches for GCD under equal conditions. We further break the LSC problem into Word-in-Context (WiC) and Word Sense Induction (WSI) tasks, and compare models across these different levels. Our evaluation is performed across different languages on eight available benchmarks for LSC, and shows that (i) APD outperforms other approaches for GCD; (ii) XL-LEXEME outperforms other contextualized models for WiC, WSI, and GCD, while being comparable to GPT-4; (iii) there is a clear need for improving the modeling of word meanings, as well as focus on *how*, *when*, and *why* these meanings change, rather than solely focusing on the extent of semantic change.",
+    "abstract": "Contextualized embeddings are the preferred tool for modeling Lexical Semantic Change (LSC). Current evaluations typically focus on a specific task known as Graded Change Detection (GCD). However, performance comparison across work are often misleading due to their reliance on diverse settings. In this paper, we evaluate state-of-the-art models and approaches for GCD under equal conditions. We further break the LSC problem into Word-in-Context (WiC) and Word Sense Induction (WSI) tasks, and compare models across these different levels. Our evaluation is performed across different languages on eight available benchmarks for LSC, and shows that (i) APD outperforms other approaches for GCD; (ii) XL-LEXEME outperforms other contextualized models for WiC, WSI, and GCD, while being comparable to GPT-4; (iii) there is a clear need for improving the modeling of word meanings, as well as focus on how, when, and why these meanings change, rather than solely focusing on the extent of semantic change.",
     "topic": "",
     "conference": "naacl",
     "year": 2024,
@@ -4009,7 +4009,7 @@
       "Nick Beauchamp",
       "Lu Wang"
     ],
-    "abstract": "News media often strive to minimize explicit moral language in news articles, yet most articles are dense with moral values as expressed through the reported events themselves. However, values that are reflected in the intricate dynamics among *participating entities* and *moral events* are far more challenging for most NLP systems to detect, including LLMs. To study this phenomenon, we annotate a new dataset, **MORAL EVENTS**, consisting of 5,494 structured event annotations on 474 news articles by diverse US media across the political spectrum. We further propose **MOKA**, a moral event extraction framework with **MO**ral **K**nowledge **A**ugmentation, which leverages knowledge derived from moral words and moral scenarios to produce structural representations of morality-bearing events. Experiments show that **MOKA** outperforms competitive baselines across three moral event understanding tasks. Further analysis shows even ostensibly nonpartisan media engage in the selective reporting of moral events.",
+    "abstract": "News media often strive to minimize explicit moral language in news articles, yet most articles are dense with moral values as expressed through the reported events themselves. However, values that are reflected in the intricate dynamics among participating entities and moral events are far more challenging for most NLP systems to detect, including LLMs. To study this phenomenon, we annotate a new dataset, MORAL EVENTS, consisting of 5,494 structured event annotations on 474 news articles by diverse US media across the political spectrum. We further propose MOKA, a moral event extraction framework with MOral Knowledge Augmentation, which leverages knowledge derived from moral words and moral scenarios to produce structural representations of morality-bearing events. Experiments show that MOKA outperforms competitive baselines across three moral event understanding tasks. Further analysis shows even ostensibly nonpartisan media engage in the selective reporting of moral events.",
     "topic": "",
     "conference": "naacl",
     "year": 2024,
@@ -4606,7 +4606,7 @@
       "Jianfeng Gao",
       "Zhou Yu"
     ],
-    "abstract": "The self-improving ability of large language models (LLMs), enabled by prompting them to analyze and revise their own outputs, has garnered significant interest in recent research. However, this ability has been shown to be absent and difficult to learn for smaller models, thus widening the performance gap between state-of-the-art LLMs and more cost-effective and faster ones. To reduce this gap, we introduce TriPosT, a training algorithm that endows smaller models with such self-improvement ability, and show that our approach can improve LLaMA-7B’s performance on math and reasoning tasks by up to 7.13%. In contrast to prior work, we achieve this by using the smaller model to interact with LLMs to collect feedback and improvements on *its own generations*. We then replay this experience to train the small model. Our experiments on four math and reasoning datasets show that the interactive experience of learning from and correcting its *own* mistakes is crucial for small models to improve their performance.",
+    "abstract": "The self-improving ability of large language models (LLMs), enabled by prompting them to analyze and revise their own outputs, has garnered significant interest in recent research. However, this ability has been shown to be absent and difficult to learn for smaller models, thus widening the performance gap between state-of-the-art LLMs and more cost-effective and faster ones. To reduce this gap, we introduce TriPosT, a training algorithm that endows smaller models with such self-improvement ability, and show that our approach can improve LLaMA-7B’s performance on math and reasoning tasks by up to 7.13%. In contrast to prior work, we achieve this by using the smaller model to interact with LLMs to collect feedback and improvements on its own generations. We then replay this experience to train the small model. Our experiments on four math and reasoning datasets show that the interactive experience of learning from and correcting its own mistakes is crucial for small models to improve their performance.",
     "topic": "",
     "conference": "naacl",
     "year": 2024,
@@ -4904,7 +4904,7 @@
       "Tianxiang Sun",
       "Xipeng Qiu"
     ],
-    "abstract": "Verifiable generation aims to let the large language model (LLM) generate text with supporting documents, which enables the user to flexibly verify the answer and makes the LLM’s output more reliable. Retrieval plays a crucial role in verifiable generation. Specifically, the retrieved documents not only supplement knowledge to help the LLM generate correct answers, but also serve as supporting evidence for the user to verify the LLM’s output. However, the widely used retrievers become the bottleneck of the entire pipeline and limit the overall performance. Their capabilities are usually inferior to LLMs since they often have much fewer parameters than the large language model and have not been demonstrated to scale well to the size of LLMs. If the retriever does not correctly find the supporting documents, the LLM can not generate the correct and verifiable answer, which overshadows the LLM’s remarkable abilities. To address these limitations, we propose **LLatrieval** (**L**arge **La**nguage Model Verified Re**trieval**),where the LLM updates the retrieval result until it verifies that the retrieved documents can sufficiently support answering the question. Thus, the LLM can iteratively provide feedback to retrieval and facilitate the retrieval result to fully support verifiable generation. Experiments on ALCE show that LLatrieval significantly outperforms extensive baselines and achieves state-of-the-art results.",
+    "abstract": "Verifiable generation aims to let the large language model (LLM) generate text with supporting documents, which enables the user to flexibly verify the answer and makes the LLM’s output more reliable. Retrieval plays a crucial role in verifiable generation. Specifically, the retrieved documents not only supplement knowledge to help the LLM generate correct answers, but also serve as supporting evidence for the user to verify the LLM’s output. However, the widely used retrievers become the bottleneck of the entire pipeline and limit the overall performance. Their capabilities are usually inferior to LLMs since they often have much fewer parameters than the large language model and have not been demonstrated to scale well to the size of LLMs. If the retriever does not correctly find the supporting documents, the LLM can not generate the correct and verifiable answer, which overshadows the LLM’s remarkable abilities. To address these limitations, we propose LLatrieval (Large Language Model Verified Retrieval),where the LLM updates the retrieval result until it verifies that the retrieved documents can sufficiently support answering the question. Thus, the LLM can iteratively provide feedback to retrieval and facilitate the retrieval result to fully support verifiable generation. Experiments on ALCE show that LLatrieval significantly outperforms extensive baselines and achieves state-of-the-art results.",
     "topic": "",
     "conference": "naacl",
     "year": 2024,
@@ -4990,7 +4990,7 @@
       "Vivek Srikumar",
       "Ana Marasovic"
     ],
-    "abstract": "*Do larger and more performant models resolve NLP’s longstanding robustness issues?* We investigate this question using over 20 models of different sizes spanning different architectural choices and pretraining objectives. We conduct evaluations using (a) out-of-domain and challenge test sets, (b) behavioral testing with CheckLists, (c) contrast sets, and (d) adversarial inputs. Our analysis reveals that not all out-of-domain tests provide insight into robustness. Evaluating with CheckLists and contrast sets shows significant gaps in model performance; merely scaling models does not make them adequately robust. Finally, we point out that current approaches for adversarial evaluations of models are themselves problematic: they can be easily thwarted, and in their current forms, do not represent a sufficiently deep probe of model robustness. We conclude that not only is the question of robustness in NLP as yet unresolved, but even some of the approaches to measure robustness need to be reassessed.",
+    "abstract": "Do larger and more performant models resolve NLP’s longstanding robustness issues? We investigate this question using over 20 models of different sizes spanning different architectural choices and pretraining objectives. We conduct evaluations using (a) out-of-domain and challenge test sets, (b) behavioral testing with CheckLists, (c) contrast sets, and (d) adversarial inputs. Our analysis reveals that not all out-of-domain tests provide insight into robustness. Evaluating with CheckLists and contrast sets shows significant gaps in model performance; merely scaling models does not make them adequately robust. Finally, we point out that current approaches for adversarial evaluations of models are themselves problematic: they can be easily thwarted, and in their current forms, do not represent a sufficiently deep probe of model robustness. We conclude that not only is the question of robustness in NLP as yet unresolved, but even some of the approaches to measure robustness need to be reassessed.",
     "topic": "",
     "conference": "naacl",
     "year": 2024,
@@ -5165,7 +5165,7 @@
       "Kai-Wei Chang",
       "Nanyun Peng"
     ],
-    "abstract": "Label projection, which involves obtaining translated labels and texts jointly, is essential for leveraging machine translation to facilitate cross-lingual transfer in structured prediction tasks. Prior research exploring label projection often compromise translation accuracy by favoring simplified label translation or relying solely on word-level alignments. In this paper, we introduce a novel label projection approach, CLaP, which translates text to the target language and performs *contextual translation* on the labels using the translated text as the context, ensuring better accuracy for the translated labels. We leverage instruction-tuned language models with multilingual capabilities as our contextual translator, imposing the constraint of the presence of translated labels in the translated text via instructions. We benchmark CLaP with other label projection techniques on zero-shot cross-lingual transfer across 39 languages on two representative structured prediction tasks - event argument extraction (EAE) and named entity recognition (NER), showing over 2.4 F1 improvement for EAE and 1.4 F1 improvement for NER. We further explore the applicability of CLaP on ten extremely low-resource languages to showcase its potential for cross-lingual structured prediction.",
+    "abstract": "Label projection, which involves obtaining translated labels and texts jointly, is essential for leveraging machine translation to facilitate cross-lingual transfer in structured prediction tasks. Prior research exploring label projection often compromise translation accuracy by favoring simplified label translation or relying solely on word-level alignments. In this paper, we introduce a novel label projection approach, CLaP, which translates text to the target language and performs contextual translation on the labels using the translated text as the context, ensuring better accuracy for the translated labels. We leverage instruction-tuned language models with multilingual capabilities as our contextual translator, imposing the constraint of the presence of translated labels in the translated text via instructions. We benchmark CLaP with other label projection techniques on zero-shot cross-lingual transfer across 39 languages on two representative structured prediction tasks - event argument extraction (EAE) and named entity recognition (NER), showing over 2.4 F1 improvement for EAE and 1.4 F1 improvement for NER. We further explore the applicability of CLaP on ten extremely low-resource languages to showcase its potential for cross-lingual structured prediction.",
     "topic": "",
     "conference": "naacl",
     "year": 2024,
@@ -5272,7 +5272,7 @@
       "Jason Weston",
       "Asli Celikyilmaz"
     ],
-    "abstract": "Large Language Models (LLMs) have demonstrated remarkable generative abilities, but can they judge the quality of their own generations and self-improve?A popular concept, referred to as *self-refinement*, postulates that LLMs can detect and correct the errors in their generations when asked to do so. However, recent empirical evidence points in the opposite direction, suggesting that LLMs often struggle to accurately identify errors when reasoning is involved. To address this, we propose a reasoning with a refinement strategy called *ART: Ask, Refine, and Trust*, which *asks* necessary questions to decide when an LLM should *refine* its output, and uses it to affirm or deny *trust* in its refinement by ranking the refinement and the initial prediction. On two multistep reasoning tasks of mathematical word problems (GSM8K) and question answering (StrategyQA), *ART* achieves a performance gain of +5 points over self-refinement baselines, while using a much smaller model as the decision maker. We believe that *ART* with smaller models, making refinement decisions can be a cost-effective alternative to fine-tuning LLMs.",
+    "abstract": "Large Language Models (LLMs) have demonstrated remarkable generative abilities, but can they judge the quality of their own generations and self-improve?A popular concept, referred to as self-refinement, postulates that LLMs can detect and correct the errors in their generations when asked to do so. However, recent empirical evidence points in the opposite direction, suggesting that LLMs often struggle to accurately identify errors when reasoning is involved. To address this, we propose a reasoning with a refinement strategy called ART: Ask, Refine, and Trust, which asks necessary questions to decide when an LLM should refine its output, and uses it to affirm or deny trust in its refinement by ranking the refinement and the initial prediction. On two multistep reasoning tasks of mathematical word problems (GSM8K) and question answering (StrategyQA), ART achieves a performance gain of +5 points over self-refinement baselines, while using a much smaller model as the decision maker. We believe that ART with smaller models, making refinement decisions can be a cost-effective alternative to fine-tuning LLMs.",
     "topic": "",
     "conference": "naacl",
     "year": 2024,
@@ -5324,7 +5324,7 @@
     "id": "331",
     "title": "NLP Systems That Can’t Tell Use from Mention Censor Counterspeech, but Teaching the Distinction Helps",
     "authors": [
-      "Kristina Gligoric",
+      "Kristina Gligorić",
       "Myra Cheng",
       "Lucia Zheng",
       "Esin Durmus",
@@ -5401,14 +5401,14 @@
       "Lolwethu Ndolela",
       "Thabiso Mangwana",
       "Shafie Abdi Mohamed",
-      "Hassan Ayinde",
+      "Ayinde Hassan",
       "Oluwabusayo Olufunke Awoyomi",
       "Lama Alkhaled",
-      "Sana Al-azzawi",
+      "Sana Al-Azzawi",
       "Naome A. Etori",
       "Millicent Ochieng",
       "Clemencia Siro",
-      "Njoroge Kiragu",
+      "Samuel Njoroge",
       "Eric Muchiri",
       "Wangari Kimotho",
       "Lyse Naomi Wamba Momo",
@@ -5424,7 +5424,7 @@
       "Abeeb Afolabi",
       "Nnaemeka Obiefuna",
       "Onyekachi Raphael Ogbu",
-      "Sam Ochieng’",
+      "Sam Brian",
       "Verrah Akinyi Otiende",
       "Chinedu Emmanuel Mbonu",
       "Sakayo Toadoum Sari",
@@ -5574,12 +5574,11 @@
     "title": "CMB: A Comprehensive Medical Benchmark in Chinese",
     "authors": [
       "Xidong Wang",
-      "Guiming Chen",
-      "Song Dingjie",
-      "Zhang Zhiyi",
+      "Guiming Hardy Chen",
+      "Dingjie Song",
+      "Zhiyi Zhang",
       "Zhihong Chen",
       "Qingying Xiao",
-      "Junying Chen",
       "Feng Jiang",
       "Jianquan Li",
       "Xiang Wan",
@@ -5673,7 +5672,7 @@
     "title": "Grounding Gaps in Language Model Generations",
     "authors": [
       "Omar Shaikh",
-      "Kristina Gligoric",
+      "Kristina Gligorić",
       "Ashna Khetan",
       "Matthias Gerstgrasser",
       "Diyi Yang",
@@ -5723,7 +5722,7 @@
       "Xiang Zhang",
       "Suhang Wang"
     ],
-    "abstract": "Text-to-Image (T2I) models have shown great performance in generating images based on textual prompts. However, these models are vulnerable to unsafe input to generate unsafe content like sexual, harassment and illegal-activity images. Existing studies based on image checker, model fine-tuning and embedding blocking are impractical in real-world applications. Hence, we propose the first universal **p**rompt **o**ptimizer for **s**afe T2**I** (**POSI**) generation in black-box scenario. We first construct a dataset consisting of toxic-clean prompt pairs by GPT-3.5 Turbo. To guide the optimizer to have the ability of converting toxic prompt to clean prompt while preserving semantic information, we design a novel reward function measuring toxicity and text alignment of generated images and train the optimizer through Proximal Policy Optimization. Experiments show that our approach can effectively reduce the likelihood of various T2I models in generating inappropriate images, with no significant impact on text alignment. It is also flexible to be combined with methods to achieve better performance. Our code is available at [https://github.com/wzongyu/POSI](https://github.com/wzongyu/POSI).",
+    "abstract": "Text-to-Image (T2I) models have shown great performance in generating images based on textual prompts. However, these models are vulnerable to unsafe input to generate unsafe content like sexual, harassment and illegal-activity images. Existing studies based on image checker, model fine-tuning and embedding blocking are impractical in real-world applications. Hence, we propose the first universal prompt optimizer for safe T2I (POSI) generation in black-box scenario. We first construct a dataset consisting of toxic-clean prompt pairs by GPT-3.5 Turbo. To guide the optimizer to have the ability of converting toxic prompt to clean prompt while preserving semantic information, we design a novel reward function measuring toxicity and text alignment of generated images and train the optimizer through Proximal Policy Optimization. Experiments show that our approach can effectively reduce the likelihood of various T2I models in generating inappropriate images, with no significant impact on text alignment. It is also flexible to be combined with methods to achieve better performance. Our code is available at https://github.com/wzongyu/POSI.",
     "topic": "",
     "conference": "naacl",
     "year": 2024,
@@ -5918,7 +5917,7 @@
       "Seonho An",
       "Min-Soo Kim"
     ],
-    "abstract": "In this paper, we conduct a study to utilize LLMs as a solution for decision making that requires complex data analysis. We define **Decision QA** as the task of answering the best decision, d_{best}, for a decision-making question Q, business rules R and a database D. Since there is no benchmark that can examine Decision QA, we propose Decision QA benchmark, **DQA**. It has two scenarios, Locating and Building, constructed from two video games (Europa Universalis IV and Victoria 3) that have almost the same goal as Decision QA. To address Decision QA effectively, we also propose a new RAG technique called the *iterative plan-then-retrieval augmented generation* (**PlanRAG**). Our PlanRAG-based LM generates the plan for decision making as the first step, and the retriever generates the queries for data analysis as the second step. The proposed method outperforms the state-of-the-art iterative RAG method by 15.8% in the Locating scenario and by 7.4% in the Building scenario, respectively. We release our code and benchmark at https://github.com/myeon9h/PlanRAG.",
+    "abstract": "In this paper, we conduct a study to utilize LLMs as a solution for decision making that requires complex data analysis. We define Decision QA as the task of answering the best decision, d_{best}, for a decision-making question Q, business rules R and a database D. Since there is no benchmark that can examine Decision QA, we propose Decision QA benchmark, DQA. It has two scenarios, Locating and Building, constructed from two video games (Europa Universalis IV and Victoria 3) that have almost the same goal as Decision QA. To address Decision QA effectively, we also propose a new RAG technique called the iterative plan-then-retrieval augmented generation (PlanRAG). Our PlanRAG-based LM generates the plan for decision making as the first step, and the retriever generates the queries for data analysis as the second step. The proposed method outperforms the state-of-the-art iterative RAG method by 15.8% in the Locating scenario and by 7.4% in the Building scenario, respectively. We release our code and benchmark at https://github.com/myeon9h/PlanRAG.",
     "topic": "",
     "conference": "naacl",
     "year": 2024,
@@ -5933,7 +5932,7 @@
       "Zhengbao Jiang",
       "Pengfei Liu"
     ],
-    "abstract": "Generative Artificial Intelligence (AI) has enabled the development of sophisticated models that are capable of producing high-caliber text, images, and other outputs through the utilization of large pre-trained models.Nevertheless, assessing the quality of the generation is an even more arduous task than the generation itself, and this issue has not been given adequate consideration recently.This paper proposes a novel evaluation framework, GPTScore, which utilizes the emergent abilities (e.g., in-context learning, zero-shot instruction) of generative pre-trained models to score generated texts. There are 19 pre-trained models explored in this paper, ranging in size from 80M (e.g., Flan-T5-small) to 175B (e.g., GPT3).Experimental results on four text generation tasks, 22 evaluation aspects, and corresponding 37 datasets demonstrate that this approach can effectively allow us to achieve what one desires to evaluate for texts simply by natural language instructions.This nature helps us overcome several long-standing challenges in text evaluation–how to achieve customized, multi-faceted evaluation without model training. We make our code publicly available.",
+    "abstract": "Generative Artificial Intelligence (AI) has enabled the development of sophisticated models that are capable of producing high-caliber text, images, and other outputs through the utilization of large pre-trained models. Nevertheless, assessing the quality of the generation is an even more arduous task than the generation itself, and this issue has not been given adequate consideration recently. This paper proposes a novel evaluation framework, GPTScore, which utilizes the emergent abilities (e.g., in-context learning, zero-shot instruction) of generative pre-trained models to score generated texts. There are 19 pre-trained models explored in this paper, ranging in size from 80M (e.g., Flan-T5-small) to 175B (e.g., GPT3). Experimental results on four text generation tasks, 22 evaluation aspects, and corresponding 37 datasets demonstrate that this approach can effectively allow us to achieve what one desires to evaluate for texts simply by natural language instructions. This nature helps us overcome several long-standing challenges in text evaluation–how to achieve customized, multi-faceted evaluation without model training. We make our code publicly available.",
     "topic": "",
     "conference": "naacl",
     "year": 2024,
@@ -5969,7 +5968,7 @@
       "Tom Kocmi",
       "Furu Wei"
     ],
-    "abstract": "Most research about natural language generation (NLG) relies on evaluation benchmarks with limited references for a sample, which may result in poor correlations with human judgements. The underlying reason is that one semantic meaning can actually be expressed in different forms, and the evaluation with a single or few references may not accurately reflect the quality of the model’s hypotheses. To address this issue, this paper presents a simple and effective method, named **Div-Ref**, to enhance existing evaluation benchmarks by enriching the number of references. We leverage large language models (LLMs) to diversify the expression of a single reference into multiple high-quality ones to cover the semantic space of the reference sentence as much as possible. We conduct comprehensive experiments to empirically demonstrate that diversifying the expression of reference can significantly enhance the correlation between automatic evaluation and human evaluation. This idea is compatible with recent LLM-based evaluation which can similarly derive advantages from incorporating multiple references. *We strongly encourage future generation benchmarks to include more references, even if they are generated by LLMs, which is once for all.* We release all the code and data at https://github.com/RUCAIBox/Div-Ref to facilitate research.",
+    "abstract": "Most research about natural language generation (NLG) relies on evaluation benchmarks with limited references for a sample, which may result in poor correlations with human judgements. The underlying reason is that one semantic meaning can actually be expressed in different forms, and the evaluation with a single or few references may not accurately reflect the quality of the model’s hypotheses. To address this issue, this paper presents a simple and effective method, named Div-Ref, to enhance existing evaluation benchmarks by enriching the number of references. We leverage large language models (LLMs) to diversify the expression of a single reference into multiple high-quality ones to cover the semantic space of the reference sentence as much as possible. We conduct comprehensive experiments to empirically demonstrate that diversifying the expression of reference can significantly enhance the correlation between automatic evaluation and human evaluation. This idea is compatible with recent LLM-based evaluation which can similarly derive advantages from incorporating multiple references. We strongly encourage future generation benchmarks to include more references, even if they are generated by LLMs, which is once for all. We release all the code and data at https://github.com/RUCAIBox/Div-Ref to facilitate research.",
     "topic": "",
     "conference": "naacl",
     "year": 2024,
@@ -6004,7 +6003,7 @@
       "Irwin King",
       "Ho-fung Leung"
     ],
-    "abstract": "The Knowledge Graph Entity Typing (KGET) task aims to predict missing type annotations for entities in knowledge graphs. Recent works only utilize the \n          structural knowledge in the local neighborhood of entities, disregarding \n          semantic knowledge in the textual representations of entities, relations, and types that are also crucial for type inference. Additionally, we observe that the interaction between semantic and structural knowledge can be utilized to address the false-negative problem. In this paper, we propose a novel Semantic and Structure-aware KG Entity Typing (SSET) framework, which is composed of three modules. First, the Semantic Knowledge Encoding module encodes factual knowledge in the KG with a Masked Entity Typing task. Then, the Structural Knowledge Aggregation module aggregates knowledge from the multi-hop neighborhood of entities to infer missing types. Finally, the Unsupervised Type Re-ranking module utilizes the inference results from the two models above to generate type predictions that are robust to false-negative samples. Extensive experiments show that SSET significantly outperforms existing state-of-the-art methods.",
+    "abstract": "The Knowledge Graph Entity Typing (KGET) task aims to predict missing type annotations for entities in knowledge graphs. Recent works only utilize the structural knowledge in the local neighborhood of entities, disregarding semantic knowledge in the textual representations of entities, relations, and types that are also crucial for type inference. Additionally, we observe that the interaction between semantic and structural knowledge can be utilized to address the false-negative problem. In this paper, we propose a novel Semantic and Structure-aware KG Entity Typing (SSET) framework, which is composed of three modules. First, the Semantic Knowledge Encoding module encodes factual knowledge in the KG with a Masked Entity Typing task. Then, the Structural Knowledge Aggregation module aggregates knowledge from the multi-hop neighborhood of entities to infer missing types. Finally, the Unsupervised Type Re-ranking module utilizes the inference results from the two models above to generate type predictions that are robust to false-negative samples. Extensive experiments show that SSET significantly outperforms existing state-of-the-art methods.",
     "topic": "",
     "conference": "naacl",
     "year": 2024,
@@ -6084,7 +6083,7 @@
     "title": "Intent-conditioned and Non-toxic Counterspeech Generation using Multi-Task Instruction Tuning with RLAIF",
     "authors": [
       "Amey Hengle",
-      "Aswini Padhi",
+      "Aswini Kumar",
       "Sahajpreet Singh",
       "Anil Bandhakavi",
       "Md Shad Akhtar",
@@ -6157,7 +6156,7 @@
       "Yuval Reif",
       "Roy Schwartz"
     ],
-    "abstract": "Large language models (LLMs) have shown remarkable adaptability to diverse tasks, by leveraging context prompts containing instructions, or minimal input-output examples. However, recent work revealed they also exhibit *label bias*—an undesirable preference toward predicting certain answers over others. Still, detecting and measuring this bias reliably and at scale has remained relatively unexplored. In this study, we evaluate different approaches to quantifying label bias in a model’s predictions, conducting a comprehensive investigation across 279 classification tasks and ten LLMs. Our investigation reveals substantial label bias in models both before and after debiasing attempts, as well as highlights the importance of outcomes-based evaluation metrics, which were not previously used in this regard. We further propose a novel label bias calibration method tailored for few-shot prompting, which outperforms recent calibration approaches for both improving performance and mitigating label bias. Our results emphasize that label bias in the predictions of LLMs remains a barrier to their reliability.",
+    "abstract": "Large language models (LLMs) have shown remarkable adaptability to diverse tasks, by leveraging context prompts containing instructions, or minimal input-output examples. However, recent work revealed they also exhibit label bias—an undesirable preference toward predicting certain answers over others. Still, detecting and measuring this bias reliably and at scale has remained relatively unexplored. In this study, we evaluate different approaches to quantifying label bias in a model’s predictions, conducting a comprehensive investigation across 279 classification tasks and ten LLMs. Our investigation reveals substantial label bias in models both before and after debiasing attempts, as well as highlights the importance of outcomes-based evaluation metrics, which were not previously used in this regard. We further propose a novel label bias calibration method tailored for few-shot prompting, which outperforms recent calibration approaches for both improving performance and mitigating label bias. Our results emphasize that label bias in the predictions of LLMs remains a barrier to their reliability.",
     "topic": "",
     "conference": "naacl",
     "year": 2024,
@@ -6307,7 +6306,7 @@
       "Victor Gutierrez Basulto",
       "Jeff Pan"
     ],
-    "abstract": "Several recent papers have investigated the potential of language models as knowledge bases as well as the existence of severe biases when extracting factual knowledge. In this work, we focus on the factual probing performance over unseen prompts from tuning, and using a probabilistic view we show the inherent misalignment between pre-training and downstream tuning objectives in language models for probing knowledge. We hypothesize that simultaneously debiasing these objectives can be the key to generalisation over unseen prompts. We propose an adapter-based framework, **UniArk**, for generalised and consistent factual knowledge extraction through simple methods without introducing extra parameters. Extensive experiments show that UniArk can significantly improve the model’s out-of-domain generalisation as well as consistency under various prompts. Additionally, we construct **ParaTrex**, a large-scale and diverse dataset for measuring the inconsistency and out-of-domain generation of models. Further, ParaTrex offers a reference method for constructing paraphrased datasets using large language models.",
+    "abstract": "Several recent papers have investigated the potential of language models as knowledge bases as well as the existence of severe biases when extracting factual knowledge. In this work, we focus on the factual probing performance over unseen prompts from tuning, and using a probabilistic view we show the inherent misalignment between pre-training and downstream tuning objectives in language models for probing knowledge. We hypothesize that simultaneously debiasing these objectives can be the key to generalisation over unseen prompts. We propose an adapter-based framework, UniArk, for generalised and consistent factual knowledge extraction through simple methods without introducing extra parameters. Extensive experiments show that UniArk can significantly improve the model’s out-of-domain generalisation as well as consistency under various prompts. Additionally, we construct ParaTrex, a large-scale and diverse dataset for measuring the inconsistency and out-of-domain generation of models. Further, ParaTrex offers a reference method for constructing paraphrased datasets using large language models.",
     "topic": "",
     "conference": "naacl",
     "year": 2024,
@@ -6358,7 +6357,7 @@
       "Yftah Ziser",
       "Anna Korhonen",
       "Edoardo Ponti",
-      "Shay Cohen"
+      "Shay B. Cohen"
     ],
     "abstract": "Are Large Language Models (LLMs) temporally grounded? Since LLMs cannot perceive and interact with the environment, it is impossible to answer this question directly. Instead, we provide LLMs with textual narratives and probe them with respect to their common-sense knowledge of the structure and duration of events, their ability to order events along a timeline, and self-consistency within their temporal model (e.g., temporal relations such as after and before are mutually exclusive for any pair of events). We evaluate state-of-the-art LLMs (such as LLaMA 2 and GPT-4) on three tasks reflecting these abilities. Generally, we find that LLMs lag significantly behind both human performance as well as small-scale, specialised LMs. In-context learning, instruction tuning, and chain-of-thought prompting reduce this gap only to a limited degree. Crucially, LLMs struggle the most with self-consistency, displaying incoherent behaviour in at least 27.23% of their predictions. Contrary to expectations, we also find that scaling the model size does not guarantee positive gains in performance. To explain these results, we study the sources from which LLMs may gather temporal information: we find that sentence ordering in unlabelled texts, available during pre-training, is only weakly correlated with event ordering. Moreover, public instruction tuning mixtures contain few temporal tasks. Hence, we conclude that current LLMs lack a consistent temporal model of textual narratives.",
     "topic": "",
@@ -6379,7 +6378,7 @@
       "Chengqing Zong",
       "Yu Zhou"
     ],
-    "abstract": "Text image machine translation (TIMT) is a task that translates source texts embedded in the image to target translations. The existing TIMT task mainly focuses on text-line-level images. In this paper, we extend the current TIMT task and propose a novel task, **D**ocument **I**mage **M**achine **T**ranslation to **Markdown** (**DIMT2Markdown**), which aims to translate a source document image with long context and complex layout structure to markdown-formatted target translation.We also introduce a novel framework, **D**ocument **I**mage **M**achine **T**ranslation with **D**ynamic multi-pre-trained models **A**ssembling (**DIMTDA**).A dynamic model assembler is used to integrate multiple pre-trained models to enhance the model’s understanding of layout and translation capabilities.Moreover, we build a novel large-scale **Do**cument image machine **T**ranslation dataset of **A**rXiv articles in markdown format (**DoTA**), containing 126K image-translation pairs.Extensive experiments demonstrate the feasibility of end-to-end translation of rich-text document images and the effectiveness of DIMTDA.",
+    "abstract": "Text image machine translation (TIMT) is a task that translates source texts embedded in the image to target translations. The existing TIMT task mainly focuses on text-line-level images. In this paper, we extend the current TIMT task and propose a novel task, Document Image Machine Translation to Markdown (DIMT2Markdown), which aims to translate a source document image with long context and complex layout structure to markdown-formatted target translation.We also introduce a novel framework, Document Image Machine Translation with Dynamic multi-pre-trained models Assembling (DIMTDA).A dynamic model assembler is used to integrate multiple pre-trained models to enhance the model’s understanding of layout and translation capabilities.Moreover, we build a novel large-scale Document image machine Translation dataset of ArXiv articles in markdown format (DoTA), containing 126K image-translation pairs.Extensive experiments demonstrate the feasibility of end-to-end translation of rich-text document images and the effectiveness of DIMTDA.",
     "topic": "",
     "conference": "naacl",
     "year": 2024,
@@ -6526,7 +6525,7 @@
     "title": "The Impact of Depth on Compositional Generalization in Transformer Language Models",
     "authors": [
       "Jackson Petty",
-      "Sjoerd Steenkiste",
+      "Sjoerd van Steenkiste",
       "Ishita Dasgupta",
       "Fei Sha",
       "Dan Garrette",
@@ -6661,7 +6660,7 @@
       "Saptarshi Ghosh",
       "Pawan Goyal"
     ],
-    "abstract": "We study the problem of automatically annotating relevant numerals (GAAP metrics) occurring in the financial documents with their corresponding XBRL tags. Different from prior works, we investigate the feasibility of solving this extreme classification problem using a generative paradigm through instruction tuning of Large Language Models (LLMs). To this end, we leverage metric metadata informationto frame our target outputs while proposing a parameter efficient solution for the task using LoRA. We perform experiments on two recently released financial numeric labeling datasets. Our proposed model, **FLAN-FinXC**, achieves new state-of-the-art performances on both the datasets, outperforming several strong baselines. We explain the better scores of our proposed model by demonstrating its capability for zero-shot as well as the least frequently occurring tags. Also, even when we fail to predict the XBRL tags correctly, our generated output has substantial overlap with the ground-truth in majority of the cases.",
+    "abstract": "We study the problem of automatically annotating relevant numerals (GAAP metrics) occurring in the financial documents with their corresponding XBRL tags. Different from prior works, we investigate the feasibility of solving this extreme classification problem using a generative paradigm through instruction tuning of Large Language Models (LLMs). To this end, we leverage metric metadata informationto frame our target outputs while proposing a parameter efficient solution for the task using LoRA. We perform experiments on two recently released financial numeric labeling datasets. Our proposed model, FLAN-FinXC, achieves new state-of-the-art performances on both the datasets, outperforming several strong baselines. We explain the better scores of our proposed model by demonstrating its capability for zero-shot as well as the least frequently occurring tags. Also, even when we fail to predict the XBRL tags correctly, our generated output has substantial overlap with the ground-truth in majority of the cases.",
     "topic": "",
     "conference": "naacl",
     "year": 2024,
@@ -6754,7 +6753,7 @@
     "authors": [
       "Dongwei Jiang",
       "Marcio Fonseca",
-      "Shay Cohen"
+      "Shay B. Cohen"
     ],
     "abstract": "Large language models (LLMs) often struggle with complex logical reasoning due to logical inconsistencies and the inherent difficulty ofsuch reasoning. We use Lean, a theorem proving framework, to address these challenges. By formalizing logical reasoning problems intotheorems within Lean, we can solve them by proving or disproving the corresponding theorems. This method reduces the risk of logical inconsistencies with the help of Lean’s symbolic solver. It also enhances our ability to treat complex reasoning tasks using Lean’s extensive library of theorem proofs. Our method achieves state-of-the-art performance on the FOLIO dataset and achieves performance near this level on ProofWriter. Notably, these results were accomplished by fine-tuning on fewer than 100 in-domain samples for each dataset",
     "topic": "",
@@ -6864,7 +6863,7 @@
       "Wenzhao Qiu",
       "Lu Wang"
     ],
-    "abstract": "We investigate pre-training techniques for abstractive multi-document summarization (MDS), which is much less studied than summarizing single documents. Though recent work has demonstrated the effectiveness of highlighting information salience for pre-training strategy design, they struggle to generate abstractive and reflective summaries, which are critical properties for MDS. To this end, we present **PELMS**, a pre-trained model that uses pre-training objectives based on semantic coherence heuristics and faithfulness constraints together with unlabeled multi-document inputs, to promote the generation of concise, fluent, and faithful summaries. To support the training of PELMS, we compile **MultiPT**, a multi-document pre-training corpus containing over 93 million documents to form more than 3million unlabeled topic-centric document clusters, covering diverse genres such as product reviews, news, and general knowledge. We perform extensive evaluation of PELMS in low-shot settings on a wide range of MDS datasets. Our approach consistently outperforms competitive comparisons with respect to overall informativeness, abstractiveness, coherence, and faithfulness, and with minimal fine-tuning can match performance of language models at a much larger scale (e.g., GPT-4).",
+    "abstract": "We investigate pre-training techniques for abstractive multi-document summarization (MDS), which is much less studied than summarizing single documents. Though recent work has demonstrated the effectiveness of highlighting information salience for pre-training strategy design, they struggle to generate abstractive and reflective summaries, which are critical properties for MDS. To this end, we present PELMS, a pre-trained model that uses pre-training objectives based on semantic coherence heuristics and faithfulness constraints together with unlabeled multi-document inputs, to promote the generation of concise, fluent, and faithful summaries. To support the training of PELMS, we compile MultiPT, a multi-document pre-training corpus containing over 93 million documents to form more than 3million unlabeled topic-centric document clusters, covering diverse genres such as product reviews, news, and general knowledge. We perform extensive evaluation of PELMS in low-shot settings on a wide range of MDS datasets. Our approach consistently outperforms competitive comparisons with respect to overall informativeness, abstractiveness, coherence, and faithfulness, and with minimal fine-tuning can match performance of language models at a much larger scale (e.g., GPT-4).",
     "topic": "",
     "conference": "naacl",
     "year": 2024,
@@ -6912,7 +6911,7 @@
       "Jimmy Lin",
       "Daniel Cer"
     ],
-    "abstract": "There has been limited success for dense retrieval models in multilingual retrieval, due to uneven and scarce training data available across multiple languages. Synthetic training data generation is promising (e.g., InPars or Promptagator), but has been investigated only for English. Therefore, to study model capabilities across both cross-lingual and monolingual retrieval tasks, we develop **SWIM-IR**, a synthetic retrieval training dataset containing 33 (high to very-low resource) languages for fine-tuning multilingual dense retrievers without requiring any human supervision. To construct SWIM-IR, we propose SAP (summarize-then-ask prompting), where the large language model (LLM) generates a textual summary prior to the query generation step. SAP assists the LLM in generating informative queries in the target language. Using SWIM-IR, we explore synthetic fine-tuning of multilingual dense retrieval models and evaluate them robustly on three retrieval benchmarks: XOR-Retrieve (cross-lingual), MIRACL (monolingual) and XTREME-UP (cross-lingual). Our models, called SWIM-X, are competitive with human-supervised dense retrieval models, e.g., mContriever-X, finding that SWIM-IR can cheaply substitute for expensive human-labeled retrieval training data. SWIM-IR dataset and SWIM-X models are available at: https://github.com/google-research-datasets/SWIM-IR.",
+    "abstract": "There has been limited success for dense retrieval models in multilingual retrieval, due to uneven and scarce training data available across multiple languages. Synthetic training data generation is promising (e.g., InPars or Promptagator), but has been investigated only for English. Therefore, to study model capabilities across both cross-lingual and monolingual retrieval tasks, we develop SWIM-IR, a synthetic retrieval training dataset containing 33 (high to very-low resource) languages for fine-tuning multilingual dense retrievers without requiring any human supervision. To construct SWIM-IR, we propose SAP (summarize-then-ask prompting), where the large language model (LLM) generates a textual summary prior to the query generation step. SAP assists the LLM in generating informative queries in the target language. Using SWIM-IR, we explore synthetic fine-tuning of multilingual dense retrieval models and evaluate them robustly on three retrieval benchmarks: XOR-Retrieve (cross-lingual), MIRACL (monolingual) and XTREME-UP (cross-lingual). Our models, called SWIM-X, are competitive with human-supervised dense retrieval models, e.g., mContriever-X, finding that SWIM-IR can cheaply substitute for expensive human-labeled retrieval training data. SWIM-IR dataset and SWIM-X models are available at: https://github.com/google-research-datasets/SWIM-IR.",
     "topic": "",
     "conference": "naacl",
     "year": 2024,
@@ -7271,7 +7270,7 @@
       "Hwanhee Lee",
       "Kyomin Jung"
     ],
-    "abstract": "Conversational search aims to retrieve passages containing essential information to answer queries in a multi-turn conversation. In conversational search, reformulating context-dependent conversational queries into stand-alone forms is imperative to effectively utilize off-the-shelf retrievers. Previous methodologies for conversational query reformulation frequently depend on human-annotated rewrites.However, these manually crafted queries often result in sub-optimal retrieval performance and require high collection costs.To address these challenges, we propose **Iter**ative **C**onversational **Q**uery **R**eformulation (**IterCQR**), a methodology that conducts query reformulation without relying on human rewrites. IterCQR iteratively trains the conversational query reformulation (CQR) model by directly leveraging information retrieval (IR) signals as a reward.Our IterCQR training guides the CQR model such that generated queries contain necessary information from the previous dialogue context.Our proposed method shows state-of-the-art performance on two widely-used datasets, demonstrating its effectiveness on both sparse and dense retrievers. Moreover, IterCQR exhibits superior performance in challenging settings such as generalization on unseen datasets and low-resource scenarios.",
+    "abstract": "Conversational search aims to retrieve passages containing essential information to answer queries in a multi-turn conversation. In conversational search, reformulating context-dependent conversational queries into stand-alone forms is imperative to effectively utilize off-the-shelf retrievers. Previous methodologies for conversational query reformulation frequently depend on human-annotated rewrites.However, these manually crafted queries often result in sub-optimal retrieval performance and require high collection costs.To address these challenges, we propose Iterative Conversational Query Reformulation (IterCQR), a methodology that conducts query reformulation without relying on human rewrites. IterCQR iteratively trains the conversational query reformulation (CQR) model by directly leveraging information retrieval (IR) signals as a reward.Our IterCQR training guides the CQR model such that generated queries contain necessary information from the previous dialogue context.Our proposed method shows state-of-the-art performance on two widely-used datasets, demonstrating its effectiveness on both sparse and dense retrievers. Moreover, IterCQR exhibits superior performance in challenging settings such as generalization on unseen datasets and low-resource scenarios.",
     "topic": "",
     "conference": "naacl",
     "year": 2024,
@@ -7552,7 +7551,7 @@
       "Michael Tessler",
       "Ishita Dasgupta",
       "Fei Sha",
-      "Sjoerd Steenkiste",
+      "Sjoerd van Steenkiste",
       "Tal Linzen"
     ],
     "abstract": "A central component of rational behavior is logical inference: the process of determining which conclusions follow from a set of premises. Psychologists have documented several ways in which humans’ inferences deviate from the rules of logic. Do language models, which are trained on text generated by humans, replicate such human biases, or are they able to overcome them? Focusing on the case of syllogisms—inferences from two simple premises—we show that, within the PaLM 2 family of transformer language models, larger models are more logical than smaller ones, and also more logical than humans. At the same time, even the largest models make systematic errors, some of which mirror human reasoning biases: they show sensitivity to the (irrelevant) ordering of the variables in the syllogism, and draw confident but incorrect inferences from particular syllogisms (syllogistic fallacies). Overall, we find that language models often mimic the human biases included in their training data, but are able to overcome them in some cases.",
@@ -7568,7 +7567,7 @@
       "Pietro Lesci",
       "Andreas Vlachos"
     ],
-    "abstract": "Active learning for imbalanced classification tasks is challenging as the minority classes naturally occur rarely. Gathering a large pool of unlabelled data is thus essential to capture minority instances. Standard pool-based active learning is computationally expensive on large pools and often reaches low accuracy by overfitting the initial decision boundary, thus failing to explore the input space and find minority instances. To address these issues we propose AnchorAL. At each iteration, AnchorAL chooses class-specific instances from the labelled set, or *anchors*, and retrieves the most similar unlabelled instances from the pool. This resulting *subpool* is then used for active learning. Using a small, fixed-sized subpool AnchorAL allows scaling any active learning strategy to large pools. By dynamically selecting different anchors at each iteration it promotes class balance and prevents overfitting the initial decision boundary, thus promoting the discovery of new clusters of minority instances. Experiments across different classification tasks, active learning strategies, and model architectures AnchorAL is *(i)* faster, often reducing runtime from hours to minutes, *(ii)* trains more performant models, *(iii)* and returns more balanced datasets than competing methods.",
+    "abstract": "Active learning for imbalanced classification tasks is challenging as the minority classes naturally occur rarely. Gathering a large pool of unlabelled data is thus essential to capture minority instances. Standard pool-based active learning is computationally expensive on large pools and often reaches low accuracy by overfitting the initial decision boundary, thus failing to explore the input space and find minority instances. To address these issues we propose AnchorAL. At each iteration, AnchorAL chooses class-specific instances from the labelled set, or anchors, and retrieves the most similar unlabelled instances from the pool. This resulting subpool is then used for active learning. Using a small, fixed-sized subpool AnchorAL allows scaling any active learning strategy to large pools. By dynamically selecting different anchors at each iteration it promotes class balance and prevents overfitting the initial decision boundary, thus promoting the discovery of new clusters of minority instances. Experiments across different classification tasks, active learning strategies, and model architectures AnchorAL is (i) faster, often reducing runtime from hours to minutes, (ii) trains more performant models, (iii) and returns more balanced datasets than competing methods.",
     "topic": "",
     "conference": "naacl",
     "year": 2024,
@@ -7593,7 +7592,7 @@
     "authors": [
       "Wenting Zhao",
       "Justin T. Chiu",
-      "Jena Hwang",
+      "Jena D. Hwang",
       "Faeze Brahman",
       "Jack Hessel",
       "Sanjiban Choudhury",
@@ -7645,7 +7644,7 @@
       "Mark Hansen",
       "Jonathan May"
     ],
-    "abstract": "While legal AI has made strides in recent years, it still struggles with basic legal concepts: _when_ does a law apply? _Who_ does it applies to? _What_ does it do? We take a _discourse_ approach to addressing these problems and introduce a novel taxonomy for span-and-relation parsing of legal texts. We create a dataset, _LegalDiscourse_ of 602 state-level law paragraphs consisting of 3,715 discourse spans and 1,671 relations. Our trained annotators have an agreement-rate \\kappa>.8, yet few-shot GPT3.5 performs poorly at span identification and relation classification. Although fine-tuning improves performance, GPT3.5 still lags far below human level. We demonstrate the usefulness of our schema by creating a web application with journalists. We collect over 100,000 laws for 52 U.S. states and territories using 20 scrapers we built, and apply our trained models to 6,000 laws using U.S. Census population numbers. We describe two journalistic outputs stemming from this application: (1) an investigation into the increase in liquor licenses following population growth and (2) a decrease in applicable laws under different under-count projections.",
+    "abstract": "While legal AI has made strides in recent years, it still struggles with basic legal concepts: when does a law apply? Who does it applies to? What does it do? We take a discourse approach to addressing these problems and introduce a novel taxonomy for span-and-relation parsing of legal texts. We create a dataset, LegalDiscourse of 602 state-level law paragraphs consisting of 3,715 discourse spans and 1,671 relations. Our trained annotators have an agreement-rate \\kappa>.8, yet few-shot GPT3.5 performs poorly at span identification and relation classification. Although fine-tuning improves performance, GPT3.5 still lags far below human level. We demonstrate the usefulness of our schema by creating a web application with journalists. We collect over 100,000 laws for 52 U.S. states and territories using 20 scrapers we built, and apply our trained models to 6,000 laws using U.S. Census population numbers. We describe two journalistic outputs stemming from this application: (1) an investigation into the increase in liquor licenses following population growth and (2) a decrease in applicable laws under different under-count projections.",
     "topic": "",
     "conference": "naacl",
     "year": 2024,
@@ -8040,7 +8039,7 @@
       "Chao Zhao",
       "Snigdha Chaturvedi"
     ],
-    "abstract": "Human writers often *bookend* their writing with ending sentences that relate back to the beginning sentences in order to compose a satisfying narrative that “closes the loop.” Motivated by this observation, we propose RENarGen, a controllable story-generation paradigm that generates narratives by ensuring the first and last sentences are related and then infilling the middle sentences. Our contributions include an initial exploration of how various methods of bookending from Narratology affect language modeling for stories. Automatic and human evaluations indicate RENarGen produces better stories with more narrative closure than current autoregressive models.",
+    "abstract": "Human writers often bookend their writing with ending sentences that relate back to the beginning sentences in order to compose a satisfying narrative that “closes the loop.” Motivated by this observation, we propose RENarGen, a controllable story-generation paradigm that generates narratives by ensuring the first and last sentences are related and then infilling the middle sentences. Our contributions include an initial exploration of how various methods of bookending from Narratology affect language modeling for stories. Automatic and human evaluations indicate RENarGen produces better stories with more narrative closure than current autoregressive models.",
     "topic": "",
     "conference": "naacl",
     "year": 2024,
@@ -8489,7 +8488,7 @@
       "Jannik Strötgen",
       "Hinrich Schuetze"
     ],
-    "abstract": "Continual learning aims at incrementally acquiring new knowledge while not forgetting existing knowledge. To overcome catastrophic forgetting, methods are either rehearsal-based, i.e., store data examples from previous tasks for data replay, or isolate parameters dedicated to each task. However, rehearsal-based methods raise privacy and memory issues, and parameter-isolation continual learning does not consider interaction between tasks, thus hindering knowledge transfer. In this work, we propose MoCL, a rehearsal-free **Mo**dular and **C**ompositional Continual **L**earning framework which continually adds new modules to language models and composes them with existing modules. Experiments on various benchmarks show that MoCL outperforms state of the art and effectively facilitates knowledge transfer.",
+    "abstract": "Continual learning aims at incrementally acquiring new knowledge while not forgetting existing knowledge. To overcome catastrophic forgetting, methods are either rehearsal-based, i.e., store data examples from previous tasks for data replay, or isolate parameters dedicated to each task. However, rehearsal-based methods raise privacy and memory issues, and parameter-isolation continual learning does not consider interaction between tasks, thus hindering knowledge transfer. In this work, we propose MoCL, a rehearsal-free Modular and Compositional Continual Learning framework which continually adds new modules to language models and composes them with existing modules. Experiments on various benchmarks show that MoCL outperforms state of the art and effectively facilitates knowledge transfer.",
     "topic": "",
     "conference": "naacl",
     "year": 2024,
@@ -8553,7 +8552,7 @@
       "Utkarsh Tyagi",
       "Dinesh Manocha"
     ],
-    "abstract": "Open-vocabulary vision-language models (VLMs) like CLIP, trained using contrastive loss, have emerged as a promising new paradigm for text-to-image retrieval. However, do VLMs understand compound nouns (CNs) (e.g., *lab coat*) as well as they understand nouns (e.g., *lab*)? We curate Compun, a novel benchmark with 400 unique and commonly used CNs, to evaluate the effectiveness of VLMs in interpreting CNs. The Compun benchmark challenges a VLM for text-to-image retrieval where, given a text prompt with a CN, the task is to select the correct image that shows the CN among a pair of distractor images that show the constituent nouns that make up the CN. Next, we perform an in-depth analysis to highlight CLIPs’ limited understanding of certain types of CNs. Finally, we present an alternative framework that moves beyond hand-written templates for text prompts widely used by CLIP-like models. We employ a Large Language Model to generate multiple diverse captions that include the CN as an object in the scene described by the caption. Our proposed method improves CN understanding of CLIP by 8.25% on Compun. Code and benchmark are available.",
+    "abstract": "Open-vocabulary vision-language models (VLMs) like CLIP, trained using contrastive loss, have emerged as a promising new paradigm for text-to-image retrieval. However, do VLMs understand compound nouns (CNs) (e.g., lab coat) as well as they understand nouns (e.g., lab)? We curate Compun, a novel benchmark with 400 unique and commonly used CNs, to evaluate the effectiveness of VLMs in interpreting CNs. The Compun benchmark challenges a VLM for text-to-image retrieval where, given a text prompt with a CN, the task is to select the correct image that shows the CN among a pair of distractor images that show the constituent nouns that make up the CN. Next, we perform an in-depth analysis to highlight CLIPs’ limited understanding of certain types of CNs. Finally, we present an alternative framework that moves beyond hand-written templates for text prompts widely used by CLIP-like models. We employ a Large Language Model to generate multiple diverse captions that include the CN as an object in the scene described by the caption. Our proposed method improves CN understanding of CLIP by 8.25% on Compun. Code and benchmark are available.",
     "topic": "",
     "conference": "naacl",
     "year": 2024,
@@ -8736,7 +8735,7 @@
       "Felix Leeb",
       "Bernhard Schölkopf"
     ],
-    "abstract": "Babel Briefings is a novel dataset featuring 4.7 million news headlines from August 2020 to November 2021, across 30 languages and 54 locations worldwide with English translations of all articles included. Designed for natural language processing and media studies, it serves as a high-quality dataset for training or evaluating language models as well as offering a simple, accessible collection of articles, for example, to analyze global news coverage and cultural narratives. As a simple demonstration of the analyses facilitated by this dataset, we use a basic procedure using a TF-IDF weighted similarity metric to group articles into clusters about the same event. We then visualize the event signatures of the event showing articles of which languages appear over time, revealing intuitive features based on the proximity of the event and unexpectedness of the event. The dataset is available on [Kaggle](https://www.kaggle.com/datasets/felixludos/babel-briefings) and [HuggingFace](https://huggingface.co/datasets/felixludos/babel-briefings) with accompanying [GitHub](https://github.com/felixludos/babel-briefings) code.",
+    "abstract": "Babel Briefings is a novel dataset featuring 4.7 million news headlines from August 2020 to November 2021, across 30 languages and 54 locations worldwide with English translations of all articles included. Designed for natural language processing and media studies, it serves as a high-quality dataset for training or evaluating language models as well as offering a simple, accessible collection of articles, for example, to analyze global news coverage and cultural narratives. As a simple demonstration of the analyses facilitated by this dataset, we use a basic procedure using a TF-IDF weighted similarity metric to group articles into clusters about the same event. We then visualize the event signatures of the event showing articles of which languages appear over time, revealing intuitive features based on the proximity of the event and unexpectedness of the event. The dataset is available on Kaggle and HuggingFace with accompanying GitHub code.",
     "topic": "",
     "conference": "naacl",
     "year": 2024,
@@ -8749,7 +8748,7 @@
       "Evgeniia Tokarchuk",
       "Vlad Niculae"
     ],
-    "abstract": "Continuous-output neural machine translation (CoNMT) replaces the discrete next-word prediction problem with an embedding prediction.The semantic structure of the target embedding space (*i.e.*, closeness of related words) is intuitively believed to be crucial. We challenge this assumption and show that completely random output embeddings can outperform laboriously pre-trained ones, especially on larger datasets. Further investigation shows this surprising effect is strongest for rare words, due to the geometry of their embeddings. We shed further light on this finding by designing a mixed strategy that combines random and pre-trained embeddings, and that performs best overall.",
+    "abstract": "Continuous-output neural machine translation (CoNMT) replaces the discrete next-word prediction problem with an embedding prediction.The semantic structure of the target embedding space (i.e., closeness of related words) is intuitively believed to be crucial. We challenge this assumption and show that completely random output embeddings can outperform laboriously pre-trained ones, especially on larger datasets. Further investigation shows this surprising effect is strongest for rare words, due to the geometry of their embeddings. We shed further light on this finding by designing a mixed strategy that combines random and pre-trained embeddings, and that performs best overall.",
     "topic": "",
     "conference": "naacl",
     "year": 2024,
@@ -9150,10 +9149,10 @@
     "id": "6",
     "title": "Edu-ConvoKit: An Open-Source Library for Education Conversation Data",
     "authors": [
-      "Rose Wang",
+      "Rose E. Wang",
       "Dorottya Demszky"
     ],
-    "abstract": "We introduce Edu-ConvoKit, an open-source library designed to handle pre-processing, annotation and analysis of conversation data in education. Resources for analyzing education conversation data are scarce, making the research challenging to perform and therefore hard to access. We address these challenges with Edu-ConvoKit. Edu-ConvoKit is open-source [1], pip-installable [2], with comprehensive documentation [3]. Our demo video is available at: https://youtu.be/zdcI839vAko?si=h9qlnl76ucSuXb8-. We include additional resources, such as Colab applications of Edu-ConvoKit to three diverse education datasets [4] and a repository of Edu-ConvoKit-related papers [5].[1] https://github.com/stanfordnlp/edu-convokit[2] https://pypi.org/project/edu-convokit/[3] https://edu-convokit.readthedocs.io/en/latest/[4] https://github.com/stanfordnlp/edu-convokit?tab=readme-ov-file#datasets-with-edu-convokit[5] https://github.com/stanfordnlp/edu-convokit/blob/main/papers.md",
+    "abstract": "We introduce Edu-ConvoKit, an open-source library designed to handle pre-processing, annotation and analysis of conversation data in education. Resources for analyzing education conversation data are scarce, making the research challenging to perform and therefore hard to access. We address these challenges with Edu-ConvoKit. Edu-ConvoKit is open-source, pip-installable, with comprehensive documentation. Our demo video is available at: https://youtu.be/zdcI839vAko?si=h9qlnl76ucSuXb8-. We include additional resources, such as Colab applications of Edu-ConvoKit to three diverse education datasets and a repository of Edu-ConvoKit-related papers.",
     "topic": "",
     "conference": "naacl",
     "year": 2024,
@@ -9311,11 +9310,11 @@
       "Aryaman Arora",
       "Jing Huang",
       "Zheng Wang",
-      "Noah Goodman",
-      "Christopher Manning",
+      "Noah D. Goodman",
+      "Christopher D. Manning",
       "Christopher Potts"
     ],
-    "abstract": "Interventions on model-internal states are fundamental operations in many areas of AI, including model editing, steering, robustness, and interpretability. To facilitate such research, we introduce pyvene, an open-source Python library that supports customizable interventions on a range of different PyTorch modules. pyvene supports complex intervention schemes with an intuitive configuration format, and its interventions can be static or include trainable parameters. We show how pyvene provides a unified and extensible framework for performing interventions on neural models and sharing the intervened upon models with others. We illustrate the power of the library via interpretability analyses using causal abstraction and knowledge localization. We publish our library through Python Package Index (PyPI) and provide code, documentation, and tutorials at ‘https://github.com/stanfordnlp/pyvene‘.",
+    "abstract": "Interventions on model-internal states are fundamental operations in many areas of AI, including model editing, steering, robustness, and interpretability. To facilitate such research, we introduce pyvene, an open-source Python library that supports customizable interventions on a range of different PyTorch modules. pyvene supports complex intervention schemes with an intuitive configuration format, and its interventions can be static or include trainable parameters. We show how pyvene provides a unified and extensible framework for performing interventions on neural models and sharing the intervened upon models with others. We illustrate the power of the library via interpretability analyses using causal abstraction and knowledge localization. We publish our library through Python Package Index (PyPI) and provide code, documentation, and tutorials at https://github.com/stanfordnlp/pyvene.",
     "topic": "",
     "conference": "naacl",
     "year": 2024,
@@ -10255,8 +10254,8 @@
     "id": "19",
     "title": "Reducing hallucination in structured outputs via Retrieval-Augmented Generation",
     "authors": [
-      "Orlando Ayala",
-      "Patrice Bechard"
+      "Patrice Béchard",
+      "Orlando Marquez Ayala"
     ],
     "abstract": "A current limitation of Generative AI (GenAI) is its propensity to hallucinate. While Large Language Models (LLM) have taken the world by storm, without eliminating or at least reducing hallucination, real-world GenAI systems will likely continue to face challenges in user adoption. In the process of deploying an enterprise application that produces workflows from natural language requirements, we devised a system leveraging Retrieval-Augmented Generation (RAG) to improve the quality of the structured output that represents such workflows. Thanks to our implementation of RAG, our proposed system significantly reduces hallucination and allows the generalization of our LLM to out-of-domain settings. In addition, we show that using a small, well-trained retriever can reduce the size of the accompanying LLM at no loss in performance, thereby making deployments of LLM-based systems less resource-intensive.",
     "topic": "",
@@ -10297,7 +10296,7 @@
     "id": "22",
     "title": "Leveraging Customer Feedback for Multi-modal Insight Extraction",
     "authors": [
-      "Sandeep Mukku",
+      "Sandeep Sricharan Mukku",
       "Abinesh Kanagarajan",
       "Pushpendu Ghosh",
       "Chetan Aggarwal"
@@ -10415,8 +10414,8 @@
     "id": "29",
     "title": "Graph Integrated Language Transformers for Next Action Prediction in Complex Phone Calls",
     "authors": [
-      "Amin Marani",
-      "Ulie Schnaithmann",
+      "Amin Hosseiny Marani",
+      "Ulrike Schnaithmann",
       "Youngseo Son",
       "Akil Iyer",
       "Manas Paldhe",
