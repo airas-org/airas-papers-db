@@ -44,6 +44,60 @@ Each paper object in the JSON files follows this standard schema:
 }
 ```
 
+## Data Sources
+
+Papers are collected from several source types, configured in `scripts/configs/conferences.jsonc`:
+
+| `source_type` | Origin | Conferences |
+|---------------|--------|-------------|
+| `virtual_conference` | `*.cc/static/virtual/data/*.json` | ICML, ICLR, NeurIPS, CVPR, ECCV |
+| `pmlr` | Proceedings of Machine Learning Research (`proceedings.mlr.press`) | AISTATS, UAI, COLT, AABI, PGM, MLCB |
+| `acl_anthology` | ACL Anthology XML | ACL, EMNLP, NAACL |
+| `openreview` | OpenReview search API (`/notes/search`) | ML4LMS, GEM, LMRL, GenBio |
+
+NeurIPS' virtual-site JSON also carries the **Datasets & Benchmarks** and **Position
+Paper** tracks (504 and 43 papers in 2025), so those need no separate configuration.
+
+### Biomolecular ML venues
+
+These cover the protein-ligand structure and biomolecular design literature:
+
+| Venue | Scope | Editions |
+|-------|-------|----------|
+| **ML4LMS** | ML for Life and Material Sciences (ICML) — publishes the PLINDER dataset paper | 2024 |
+| **GEM** | Generative and Experimental perspectives for biomolecular design (ICLR) | 2024–2026 |
+| **LMRL** | Learning Meaningful Representations of Life (NeurIPS/ICLR) | 2022, 2025, 2026 |
+| **GenBio** | Generative AI and Biology (NeurIPS/ICML) | 2023, 2025, 2026 |
+| **MLCB** | ML in Computational Biology (archival, PMLR) | 2021–2025 |
+
+### Sources deliberately not configured
+
+- **MLSB** (ML in Structural Biology) — the workshop is explicitly non-archival and
+  has no OpenReview presence at all (`NeurIPS.cc/*/Workshop/MLSB` returns 404 for
+  every year). Its papers only exist as PDFs on `mlsb.io`.
+- **ICLR 2026** — the virtual-site JSON has 5,691 papers but no `abstract` field yet.
+- **ICML 2026 / CVPR 2026** — the virtual-site JSON is still a 200-paper stub.
+- **ISMB / RECOMB / PSB** — no free proceedings API. DBLP has the TOCs but drops the
+  connection after a few dozen requests and carries no abstracts.
+
+### OpenReview access note
+
+OpenReview's `/notes` endpoint answers anonymous requests with a 403
+`ChallengeRequiredError` (it wants a JS browser challenge), which is why the fetcher
+enumerates venues through `/notes/search` instead — that endpoint is not challenged.
+Search returns rejected and withdrawn submissions too, so the fetcher keeps only notes
+whose `content.venueid` equals the configured venue id. Requests are serialized with a
+delay because OpenReview rate-limits aggressively.
+
+Older editions live on API v1, which is set per year:
+
+```json
+"venues": {
+    "2022": {"id": "NeurIPS.cc/2022/Workshop/LMRL", "api_version": 1},
+    "2025": "ICLR.cc/2025/Workshop/LMRL"
+}
+```
+
 ## Usage
 
 ### 1. Direct Download

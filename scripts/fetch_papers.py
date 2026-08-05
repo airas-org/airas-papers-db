@@ -11,6 +11,16 @@ from logging import getLogger, basicConfig, INFO
 basicConfig(level=INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = getLogger(__name__)
 
+# OpenReview rejects requests with a non-browser User-Agent, and rate-limits
+# hard enough that its venues have to be fetched one at a time.
+BROWSER_USER_AGENT = (
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+    "(KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+)
+_openreview_lock = asyncio.Lock()
+OPENREVIEW_REQUEST_DELAY = 3.0
+OPENREVIEW_MAX_RETRIES = 4
+
 
 def _normalize_paper_from_virtual(raw_paper: dict, conference: str, year: int) -> dict[str, Any]:
     authors_list = [
@@ -25,7 +35,9 @@ def _normalize_paper_from_virtual(raw_paper: dict, conference: str, year: int) -
         'topic': raw_paper.get('topic', ''),
         'conference': conference,
         'year': year,
-        'paper_url': raw_paper.get('paper_pdf_url', raw_paper.get('paper_url', ''))
+        # Recent virtual sites ship both keys but leave one empty, so fall back on
+        # the value rather than on the key being absent.
+        'paper_url': raw_paper.get('paper_pdf_url') or raw_paper.get('paper_url') or ''
     }
 
     return normalized_data
@@ -54,7 +66,7 @@ def _normalize_paper_from_pmlr(raw_paper: dict, conference: str, year: int) -> d
         'topic': '',  # PMLR doesn't have topic field
         'conference': conference,
         'year': year,
-        'paper_url': raw_paper.get('PDF', raw_paper.get('URL', ''))
+        'paper_url': raw_paper.get('PDF') or raw_paper.get('URL') or ''
     }
 
     return normalized_data
@@ -80,6 +92,56 @@ def _normalize_paper_from_acl_anthology(raw_paper: dict, conference: str, year: 
         'authors': authors_list,
         'abstract': raw_paper.get('abstract', ''),
         'topic': '',  # ACL Anthology doesn't have topic field
+        'conference': conference,
+        'year': year,
+        'paper_url': paper_url
+    }
+
+    return normalized_data
+
+
+def _unwrap_openreview_value(field: Any) -> Any:
+    """OpenReview API v2 wraps content values as {"value": ...}; v1 stores them directly."""
+    if isinstance(field, dict) and 'value' in field:
+        return field['value']
+    return field
+
+
+def _normalize_paper_from_openreview(raw_paper: dict, conference: str, year: int) -> dict[str, Any]:
+    content = raw_paper.get('content', {})
+
+    title = _unwrap_openreview_value(content.get('title', '')) or ''
+    abstract = _unwrap_openreview_value(content.get('abstract', '')) or ''
+
+    authors = _unwrap_openreview_value(content.get('authors', [])) or []
+    if isinstance(authors, str):
+        authors = [authors]
+    authors_list = [a for a in authors if a]
+
+    pdf = _unwrap_openreview_value(content.get('pdf', '')) or ''
+    note_id = raw_paper.get('id', '')
+    if pdf.startswith('http'):
+        paper_url = pdf
+    elif pdf.startswith('/'):
+        paper_url = f"https://openreview.net{pdf}"
+    elif note_id:
+        paper_url = f"https://openreview.net/forum?id={note_id}"
+    else:
+        paper_url = ''
+
+    # Workshops have no topic taxonomy, but authors supply keywords - close
+    # enough to be worth keeping for filtering.
+    keywords = _unwrap_openreview_value(content.get('keywords', [])) or []
+    if isinstance(keywords, str):
+        keywords = [keywords]
+    topic = '; '.join(str(k).strip() for k in keywords if k)
+
+    normalized_data = {
+        'id': note_id,
+        'title': title.strip() if isinstance(title, str) else title,
+        'authors': authors_list,
+        'abstract': abstract.strip() if isinstance(abstract, str) else abstract,
+        'topic': topic,
         'conference': conference,
         'year': year,
         'paper_url': paper_url
@@ -194,6 +256,112 @@ async def _fetch_papers_from_acl_anthology(
     return []
 
 
+async def _fetch_papers_from_openreview(
+    client: httpx.AsyncClient, venue_id: str, api_version: int = 2
+) -> list[dict[str, Any]]:
+    """Fetch the accepted papers of one OpenReview venue.
+
+    The obvious endpoint (`/notes?content.venueid=...`) answers anonymous
+    requests with a 403 `ChallengeRequiredError` - it wants a JS browser
+    challenge - but `/notes/search` is not behind that challenge. So the venue
+    is enumerated through search (`query=*` matches every submission,
+    `group=<venue_id>` scopes it) and the accepted papers are separated out
+    here, since search also returns rejected and withdrawn submissions.
+    """
+    host = (
+        "https://api2.openreview.net"
+        if api_version == 2
+        else "https://api.openreview.net"
+    )
+    search_url = f"{host}/notes/search"
+    logger.info(f"Fetching from {search_url}?group={venue_id} (api v{api_version})...")
+
+    notes: list[dict[str, Any]] = []
+    offset = 0
+    limit = 1000
+
+    async with _openreview_lock:
+        try:
+            while True:
+                params = {
+                    "query": "*",
+                    "group": venue_id,
+                    "source": "forum",
+                    "limit": limit,
+                    "offset": offset,
+                }
+                data = await _openreview_get(client, search_url, params, venue_id)
+                if data is None:
+                    return []
+
+                page = data.get("notes", [])
+                if not page:
+                    break
+
+                notes.extend(page)
+
+                if len(page) < limit:
+                    break
+                offset += limit
+        except Exception as e:
+            logger.error(f"  -> Unexpected error fetching {venue_id}: {e}")
+            return []
+
+    accepted = [
+        note
+        for note in notes
+        if _unwrap_openreview_value(note.get("content", {}).get("venueid")) == venue_id
+    ]
+
+    if not accepted:
+        logger.warning(
+            f"  -> No accepted papers found for venue {venue_id} "
+            f"({len(notes)} submissions seen)"
+        )
+        return []
+
+    logger.info(f"  -> Found {len(accepted)} accepted papers of {len(notes)} submissions")
+    return accepted
+
+
+async def _openreview_get(
+    client: httpx.AsyncClient, url: str, params: dict[str, Any], venue_id: str
+) -> dict[str, Any] | None:
+    """One rate-limit-aware OpenReview request. Returns None once it gives up."""
+    for attempt in range(1, OPENREVIEW_MAX_RETRIES + 1):
+        try:
+            response = await client.get(
+                url,
+                params=params,
+                headers={"User-Agent": BROWSER_USER_AGENT},
+                timeout=60,
+                follow_redirects=True,
+            )
+            if response.status_code in (429, 403, 503):
+                wait = OPENREVIEW_REQUEST_DELAY * 2 ** attempt
+                logger.warning(
+                    f"  -> {venue_id}: HTTP {response.status_code}, "
+                    f"retry {attempt}/{OPENREVIEW_MAX_RETRIES} in {wait:.0f}s"
+                )
+                await asyncio.sleep(wait)
+                continue
+
+            response.raise_for_status()
+            data = response.json()
+            await asyncio.sleep(OPENREVIEW_REQUEST_DELAY)
+            return data
+
+        except httpx.RequestError as e:
+            logger.error(f"  -> Failed to fetch {venue_id}: {e}")
+            return None
+        except json.JSONDecodeError as e:
+            logger.error(f"  -> Failed to parse JSON for {venue_id}: {e}")
+            return None
+
+    logger.error(f"  -> Gave up on {venue_id} after {OPENREVIEW_MAX_RETRIES} retries")
+    return None
+
+
 def _save_json(data: list[dict[str, Any]], path: Path):
     path.parent.mkdir(parents=True, exist_ok=True)
     with open(path, "w", encoding="utf-8") as f:
@@ -242,6 +410,24 @@ async def main():
                     )
                     tasks.append((task, conf_name, year, "acl_anthology"))
 
+            elif source_type == "openreview":
+                default_api_version = config.get("api_version", 2)
+                venues = config.get("venues", {})
+                for year_str, venue in venues.items():
+                    year = int(year_str)
+                    # A year maps either to a bare venue id, or to an object when
+                    # that edition still lives on the older API (v1).
+                    if isinstance(venue, dict):
+                        venue_id = venue["id"]
+                        api_version = venue.get("api_version", default_api_version)
+                    else:
+                        venue_id = venue
+                        api_version = default_api_version
+                    task = asyncio.create_task(
+                        _fetch_papers_from_openreview(client, venue_id, api_version)
+                    )
+                    tasks.append((task, conf_name, year, "openreview"))
+
         logger.info(f"\nFetching data from {len(tasks)} conference-year combinations...")
         results = await asyncio.gather(*(task for task, _, _, _ in tasks))
 
@@ -268,6 +454,11 @@ async def main():
         elif source_type == "acl_anthology":
             normalized_papers = [
                 _normalize_paper_from_acl_anthology(p, conference=conf_name, year=year)
+                for p in raw_papers
+            ]
+        elif source_type == "openreview":
+            normalized_papers = [
+                _normalize_paper_from_openreview(p, conference=conf_name, year=year)
                 for p in raw_papers
             ]
 
