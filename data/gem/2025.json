@@ -1,0 +1,1625 @@
+[
+  {
+    "id": "fbL6nHy2xb",
+    "title": "Large Drug Discovery Model",
+    "authors": [
+      "Ilia Igashov",
+      "Arne Schneuing",
+      "Adrian W. Dobbelstein",
+      "Irina Morozova",
+      "Rebecca Manuela Neeser",
+      "Evgenia Elizarova",
+      "Philippe Schwaller",
+      "Michael M. Bronstein",
+      "Bruno Correia"
+    ],
+    "abstract": "We introduce the Large Drug Discovery Model (LDDM), a generative framework for target-specific 3D molecule design, leveraging fragment-based masked modeling and large-scale training on the new synthetic dataset of protein-ligand complexes SynthDock. In addition to de novo drug design, LDDM  is also able to solve more constrained drug discovery tasks, which allows users to interact with the model during the design process. We furthermore leverage this feature to introduce a new controlled sampling strategy for multi-objective optimization. We benchmarked LDDM across various tasks, including de novo generation, fragment-based drug design, and molecular docking. Finally, we experimentally validated LDDM-designed molecules that bind to the oncogenic target KRAS.",
+    "topic": "drug discovery; generative modeling; molecules; design; docking; synthetic accessibility; fragment-based drug design; KRAS",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/52718ad111076fa3886086e0c2fce8e1a3210ca7.pdf"
+  },
+  {
+    "id": "DtpbhlaNdb",
+    "title": "Exploring zero-shot structure-based protein fitness prediction",
+    "authors": [
+      "Arnav Sharma",
+      "Anthony Gitter"
+    ],
+    "abstract": "The ability to make zero-shot predictions about the fitness consequences of\nprotein sequence changes with pre-trained machine learning models enables\nmany practical applications. Such models can be applied for downstream\ntasks like genetic variant interpretation and protein engineering without\nadditional labeled data. The advent of capable protein structure prediction\ntools has led to the availability of orders of magnitude more precomputed\npredicted structures, giving rise to powerful structure-based fitness predic-\ntion models. Through our experiments, we assess several modeling choices\nfor structure-based models and their effects on downstream fitness predic-\ntion. We find that training on predicted structures can negatively affect\ndownstream predictions when using experimental structures, zero-shot fit-\nness prediction models can struggle to learn fitness landscape of proteins\nwith disordered regions (lacking a fixed 3D structure), and that predicted\nstructures for disordered regions can be misleading in this setting and affect\npredictive performance. Lastly, we evaluate an additional structure-based\nmodel on the ProteinGym substitution benchmark and show that simple\nmulti-modal ensembles are strong baselines.",
+    "topic": "Protein Function prediction; Benchmarking; Disordered Proteins; Structure based function prediction",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/8407148df69832b8eb12c3d9022bbebae8fd1b31.pdf"
+  },
+  {
+    "id": "jSnMdVy86c",
+    "title": "CAMP: COMBINATORIAL ENGINEERING OF PROTEINS",
+    "authors": [
+      "Manvitha Ponnapati",
+      "Sapna Sinha",
+      "Brian Lynch",
+      "Edward Boyden",
+      "JOSEPH JACOBSON"
+    ],
+    "abstract": "Protein recombination has long been a key method in protein engineering to diver-\nsify and optimize sequences. We enhance and evolve this approach by using a pro-\ntein language model, where we found that when attention in the language model is\nrepresented as a spline, abrupt transitions in the spline identify optimal crossover\nsites for recombination. As we show, these sites also correlate with transitions\nbetween various secondary structure elements in the corresponding protein struc-\nture. We use these sites to guide recombination of sequence blocks from diverse\nsources using MCMC sampling. Language models also enable generation of novel\nrecombinant blocks beyond traditional MSAs, increasing diversity, while a direct\npreference optimization algorithm is used to fine-tune these blocks for reduced\nimmunogenicity. This method integrates modern deep learning architectures with\ntraditional protein engineering techniques to improve success rate of the libraries\ndesigned for wetlab verification.",
+    "topic": "AI; Machine Learning; Biology; Protein Engineering; LLMs",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/81737aabafce9e1fd848fef52784696be0ccb9e9.pdf"
+  },
+  {
+    "id": "VpIYMuRZkx",
+    "title": "Structure-Aware Language Models Trained on Ultra-Mega-Scale Metagenomic Data Improve Protein Folding Stability Prediction",
+    "authors": [
+      "Yehlin Cho",
+      "Kotaro Tsuboyama",
+      "Gabriel J. Rocklin",
+      "Sergey Ovchinnikov"
+    ],
+    "abstract": "Predicting absolute protein stability remains challenging due to the limited availability of experimental datasets and the intricate interplay between sequence and structure contributions to protein stability. In this study, we experimentally measured the folding stability of 2 million high-quality, diverse metagenomic MGnify sequences using high-throughput cDNA display methods. This dataset includes 814,000 wild-type (WT) proteins and sequences with point mutations and insertions/deletions. We fine-tuned the structure-based large language models, Saprot and ESM-3, using LoRA (Low-Rank Adapter) on stability measurements, achieving a Spearman correlation of 0.87 on the MGnify test dataset. Our results demonstrate that these models can predict absolute folding stability from both insertions/deletions and mutational effects, even in non-cDNA datasets covering a wide stability range, including large proteins.",
+    "topic": "Absolute Folding Stability Prediction; Structure-Aware Language Model; MGnify",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/1ba7f1e64be56d6c335f8e89f7582bfc0122fd42.pdf"
+  },
+  {
+    "id": "IqPlnXw1BJ",
+    "title": "Substrate-Aware Zero-Shot Predictors for Non-Native Enzyme Activities",
+    "authors": [
+      "Francesca-Zhoufan Li",
+      "Lukas Alexander Radtke",
+      "Kadina E Johnston",
+      "Cheng-Hao Liu",
+      "Yisong Yue",
+      "Frances H. Arnold"
+    ],
+    "abstract": "Enzymes can be engineered to catalyze reactions with non-native substrates or even perform entirely new reactions unknown in nature. However, developing such novel activities through wet-lab engineering is time- and resource-intensive. By estimating enzyme activity without new experimental data, zero-shot (ZS) predictors can accelerate enzyme engineering. While ZS predictors have been demonstrated in various contexts, they have yet to be evaluated on non-native substrates and $\\textit{new-to-nature}$ chemistry. Critically, many existing predictors do not explicitly encode substrate or transition-state properties, which we propose are essential for predicting $\\textit{new-to-nature}$ chemistry. Here, we systematically studied two types of mechanistically distinct enzymes using 16 ZS predictors—including six general and ten substrate-aware scores derived from generative modeling, molecular docking, and active-site heuristics. We curated new experimental and literature mutation datasets spanning 11 non-native substrates and three $\\textit{new-to-nature}$ reactions with 11 additional substrates. The six general ZS predictors could generalize to non-native substrates, but failed for $\\textit{new-to-nature}$ chemistries. In contrast, certain substrate-aware approaches could predict $\\textit{new-to-nature}$ chemistries, with AlphaFold 3's chain-predicted aligned error being the most predictive of both activity and stereoselectivity. A weighted ensemble of AlphaFold 3 and EVmutation scores generalized to all chemistries that we tested. Our findings highlight the potential of ZS predictors to accelerate enzyme engineering, advancing the expansion of the chemical universe beyond nature’s repertoire.",
+    "topic": "zero-shot predictor; enzyme engineering; substrate-aware; non-native substrate; new-to-nature; evaluation; dataset",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/e4e96ac20256b0e9a20bcc196214cf35ab94cdd4.pdf"
+  },
+  {
+    "id": "szQ5aZnIdE",
+    "title": "Test-Time View Selection for Multi-Modal Decision Making",
+    "authors": [
+      "Eeshaan Jain",
+      "Johann Wenckstern",
+      "Benedikt von Querfurth",
+      "Charlotte Bunne"
+    ],
+    "abstract": "The clinical routine possess a growing repertoire of diagnostic tests. Clinical foundation models have recently emerged as powerful tools to extracting and integrate diagnostic information from diverse clinical tests, thereby enabling the creation of patient digital twins. However, it remains unclear which diagnostic tests to select and how to design them to ensure foundation models can extract sufficient information for accurate diagnosis. Here, we introduce MAVIS (Multi-modal Active VIew Selection), a reinforcement learning framework that unifies modality selection and feature selection into a single decision process. By leveraging foundation models, MAVIS dynamically determines which diagnostic tests to perform and in what sequence, adapting to individual patient characteristics. Experiments on real-world datasets  across multiple clinical tasks demonstrate that MAVIS outperforms conventional approaches in both diagnostic accuracy and uncertainty reduction, while reducing testing costs by over 80\\%, suggesting a promising direction for optimizing clinical workflows through intelligent test design and selection.",
+    "topic": "active acquisition; active learning; reinforcement learning; clinical diagnostics; foundation models",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/96aee76b0912c886e906a9ebaba0dce94ca29708.pdf"
+  },
+  {
+    "id": "jPnKRyFc2n",
+    "title": "Hierarchical Multiplex Pairwise Golden Gate Assembly: Converting short oligo-pools into longer DNA libraries",
+    "authors": [
+      "Shaozhong Zou",
+      "zhien wu",
+      "Chunfu Xu"
+    ],
+    "abstract": "Large-scale screening and high-throughput experimental data generation are essential for advancing AI-driven biomolecular design. However, these processes are economically unfeasible due to the high costs associated with synthesizing gene-sized DNA sequences at scale. To address this challenge, we developed a novel method for the high-throughput assembly of gene-sized DNA sequences, starting from cost-effective chip-synthesized oligo-pools. In contrast to Polymerase Cycling Assembly (PCA) methods, we employed Golden Gate Assembly (GGA) to facilitate the ligation of short DNA fragments. This approach enabled us to successfully assemble high-quality DNA libraries containing up to 96 gene-sized sequences (600 bp) in a single-pot reaction, with convenient retrieval of individual sequences. If numerous reactions are conducted in parallel---for example, in a 96-well plate---we can readily assemble up to 9,216 (96 x 96)) genes. When combined with advances in automation technologies, this enables the efficient and cost-effective synthesis of gene-sized DNA sequences at scale, thereby accelerating the generation of experimental data for the biomolecular design community.",
+    "topic": "High-throughput DNA synthesis; Oligo-pools; Golden Gate Assembly",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/7218cec1ce00ce70af10099a2ad37f8ddd048165.pdf"
+  },
+  {
+    "id": "1gp130uxfw",
+    "title": "Inverse problems with experiment-guided AlphaFold",
+    "authors": [
+      "Sai Advaith Maddipatla",
+      "Nadav Bojan",
+      "Meital Bojan",
+      "Sanketh Vedula",
+      "Ailie Marx",
+      "Paul Schanda",
+      "Alexander Bronstein"
+    ],
+    "abstract": "Proteins exist as a dynamic ensemble of multiple conformations, and these motions are often crucial for their functions. However, current structure prediction methods predominantly yield a single conformation, overlooking the conformational heterogeneity revealed by diverse experimental modalities. Here, we present a framework for building experiment-grounded protein structure generative models that infer conformational ensembles consistent with measured experimental data. The key idea is to treat state-of-the-art protein structure predictors (e.g., AlphaFold3) as sequence-conditioned structural priors, and cast ensemble modeling as posterior inference of protein structures given experimental measurements. Through extensive real-data experiments, we demonstrate the generality of our method to incorporate a variety of experimental measurements. In particular, our framework uncovers previously unmodeled conformational heterogeneity from crystallographic densities, and generates high-accuracy NMR ensembles orders of magnitude faster than the status quo. Notably, we demonstrate that our ensembles outperform AlphaFold3 and sometimes better fit experimental data than publicly deposited structures to the Protein Data Bank (PDB). We believe that this approach will unlock building predictive models that fully embrace experimentally observed conformational diversity.",
+    "topic": "Inverse problems; Crystallographic Density; NMR; AlphaFold3",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/42961ce4a23bca28649ea0c5a516749920cb4cc8.pdf"
+  },
+  {
+    "id": "sB0IRUc5YJ",
+    "title": "Antibody design using preference optimization and structural inference",
+    "authors": [
+      "Archit Vasan",
+      "Gautham Dharuman",
+      "Ozan Gokdemir",
+      "Heng Ma",
+      "Arvind Ramanathan"
+    ],
+    "abstract": "Antibodies offer several advantages in therapeutic design, including high specificity to targets, reduced off-target effects, immune system engagement, and the ability to bind traditionally undruggable proteins. To harness these benefits, we propose an antibody design method that integrates large language models (LLMs), preference optimization, diffusion modeling, and molecular dynamics simulations. Our approach begins by fine-tuning an LLM on complementarity-determining region (CDR) sequences, generating new CDR sequences, and folding antibodies with antigen scaffolds. We then apply diffusion models to refine CDR backbones, followed by inverse folding to generate new amino acid sequences. These redesigned antibodies undergo molecular dynamics simulations to evaluate binding affinity, and preference data is used to iteratively improve the LLM through direct preference optimization.\nThis method has been applied to lysozyme, where it produced antibodies with greater predicted binding affinity than native counterparts. Future directions include extending this approach to antigens that adopt multiple conformations and experimentally validating the designed antibodies. Ultimately, this framework leverages artificial intelligence and high-performance computing to accelerate the discovery of clinically relevant antibody candidates.",
+    "topic": "Antibody design; diffusion modeling; molecular simulation; direct preference optimization",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/7d1b75e4cca2a3ebf26e93da88f72ed979785ffb.pdf"
+  },
+  {
+    "id": "YVEllhGSTV",
+    "title": "A latent back-projection network for novel projection synthesis for improved Cryo-ET",
+    "authors": [
+      "Robert Kiewisz",
+      "Gabriel Meyer-Lee",
+      "Tristan Bepler"
+    ],
+    "abstract": "Cryo-electron tomography (Cryo-ET) is hindered by the missing wedge, a gap in Fourier-space information caused by limited tilt-series angular coverage, leading to anisotropic resolution loss and artifacts. Current methods, such as IsoNet, attempt to \"inpaint\" missing frequencies in reconstructed tomograms but are constrained by their reliance on pre-degraded data, often producing non-physical features. We present our proof-of-concept model, a generative latent back-projection autoencoder that bypasses traditional tomogram reconstruction and directly synthesizes novel projections from tilt-series data in the frequency domain. Our latent back-projection network encoder-decoder architecture maps raw projections to a 3D Fourier volume, leveraging the Fourier slice theorem to generate high-fidelity projections beyond the experimental tilt range. Evaluated on \\textit{E. coli} mini-cells, our model achieves a lower MSE and higher correlation with ground-truth data. Crucially, our model robustly recovers withheld tilts (0° or ±15°) without retraining, outperforming IsoNet in MSE and correlation metrics. By mitigating the missing wedge through generating tilts at new angles, our proof-of-concept can potentially advances high-resolution in situ structural biology for radiation-sensitive specimens.",
+    "topic": "Cryo-EM; projection synthesis; image restoration",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/cc3c3006d937f2a70fa31176395b0ae0c4ac64d3.pdf"
+  },
+  {
+    "id": "GW3h79mxrF",
+    "title": "Higher-Order Molecular Learning: The Cellular Transformer",
+    "authors": [
+      "Melih Barsbey",
+      "Rubén Ballester",
+      "Andac Demir",
+      "Carles Casacuberta",
+      "Pablo Hernández-García",
+      "David Pujol-Perich",
+      "Sarper Yurtseven",
+      "Sergio Escalera",
+      "Claudio Battiloro",
+      "Mustafa Hajij",
+      "Tolga Birdal"
+    ],
+    "abstract": "We present the **Cellular Transformer (CT)**, a novel topological deep learning (TDL) framework that extends graph transformers to regular cell complexes (CCs), enabling improved modeling of higher-order molecular structures. Representing complex biomolecules effectively is a notorious challenge due to the delicate interplay between geometry (the physical conformation of molecules) and topology (their connectivity and higher-order relationships). Traditional graph-based models often struggle with these complexities, either ignoring higher-order topological features or addressing them in ad-hoc ways. In this work, we introduce a principled _cellular transformer_ mechanism that natively incorporates topological cues (e.g., higher-order bonds, loops, and fused rings). To complement this, we propose the notion of _augmented molecular cell complex_, a novel and richer representation of molecules able to leverage ring-level motifs and features. Our evaluations on the MoleculeNet benchmark and graph datasets lifted into CCs reveal consistent performance gains over GNN- and transformer-based architectures. Notably, our approach achieves these without relying on graph rewiring, virtual nodes, or in-domain structural encodings, indicating the power of topologically informed attention to capture subtle, global interactions vital to drug discovery and molecular property prediction.",
+    "topic": "Topological Deep Learning; Attention; Higher Order; Molecule; Representation",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/a9bd7544264bc8ce15ebde1c0932dee8cfb2dc54.pdf"
+  },
+  {
+    "id": "D4Nj9PWtMz",
+    "title": "EVOLUTIONARY POLICY GRADIENT BASED OPTIMIZATION FOR SMALL MOLECULE DRUG DISCOVERY",
+    "authors": [
+      "Tehemton Khairabadi",
+      "Vishal Pagidipally"
+    ],
+    "abstract": "Generative AI offers transformative potential for small-molecule drug discovery, enabling faster and more targeted identification of novel therapeutics. Lead discovery and optimization remain pivotal yet challenging, particularly in designing compounds with precise pharmacological profiles and target interactions. Existing gradient-based and gradient-free methods struggle to meet these demands. We introduce EPOSMol, an evolutionary policy gradient framework for lead optimization that refines molecular structures in latent space. Our approach iteratively samples structures, using oracle tools to evaluate fitness based on desired properties, binding affinity, and target interactions. A flexible reward framework enables adaptive policy updates and seamless integration of ranking tools, while dynamic scheduling of population size and exploration parameters optimally balances global search and local refinement. EPOSMol achieves up to 10× improvement over state-of-the-art techniques in generating target-specific hits and exploring high-potential chemical spaces. This work advances AI-driven drug discovery by combining evolutionary algorithms with generative modeling to enhance lead optimization.",
+    "topic": "Targeted Lead Optimization; Evolutionary Algorithm; Policy Gradient; Latent Space Optimization; Chemical Space Exploration",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/8fe41f904d110b791704bedf268d3fc17b6f8630.pdf"
+  },
+  {
+    "id": "Yr7zZv9jFV",
+    "title": "A Data-Driven Approach to Antigen-Antibody Complex Structure Modeling  Using Labeled VHH Antibodies",
+    "authors": [
+      "Takashi Nagata",
+      "Hiroyuki Yamazaki",
+      "Ryota Maeda",
+      "Hirofumi Tsuruta",
+      "Ryotaro Tamura",
+      "Akihiro Imura"
+    ],
+    "abstract": "Tumor necrosis factor alpha (TNF$\\alpha$) has been extensively studied using X-ray crystallography, cryo-electron microscopy, and AI-based modeling.\nAntibodies have also been used as structural probes to investigate TNF$\\alpha$.\nTo enrich antigen-antibody structural data, we immunized alpacas with human TNF$\\alpha$ and developed a VHH (single domain antibody) library.\nVHH antibodies consist of a single chain, which facilitates large-scale data collection.\nHowever, accurately modeling antigen-antibody complexes in three-dimensional (3D) remains a challenge.\nWe selected TNF$\\alpha$-binding VHH clones and predicted their 3D structures using ColabFold.\nBy adding our VHH library, we generated multiple sequence alignments (MSAs) with much higher sequence coverage than those using only public databases.\nThe predicted local distance difference test (pLDDT) of structural models for multiple outputs tended to be better, suggesting the usefulness of our antibody library.\nIn this study, we released a labeled antibody dataset for TNF$\\alpha$ and attempted structural modeling, which we hope will facilitate advances in antibody engineering and therapeutics.",
+    "topic": "antibody; VHH; protein structure prediction",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/b1d8c8ddaa78d9b54ab9ca2ae5b13b9ed256613b.pdf"
+  },
+  {
+    "id": "mNELBosnSU",
+    "title": "SYNEVO: towards synthetic evolution of biomolecules via aligning protein language models to biological hardware",
+    "authors": [
+      "Maria Artigues-Lleixa",
+      "Eduard Sune-Morote",
+      "Filippo Stocco",
+      "Noelia Ferruz",
+      "Marc Güell"
+    ],
+    "abstract": "Applications of biomolecular systems span gene writing, drug discovery, and environmental remediation. Despite their potential, biodesign remains slow and labor-intensive, often relying on trial and error. Recent advances in high-throughput sequencing, automated synthesis, and generative AI offer new opportunities but remain fragmented. We propose SYNEVO: an AI-driven, closed-loop system integrating automated protein design, and real-time experimental feedback to iteratively optimize biomolecular function. SYNEVO does not use template-based DNA replication, enabling a constraint-free generation of new genotypes, which departs from conventional evolution. We aim to validate our platform studying Zinc Finger proteins, a versatile class of DNA-binding proteins with significant therapeutic potential. Preliminary results showed that, by iteratively generating large libraries with autoregressive protein language models and experimentally testing their phenotypes, we optimized sequence selection. The measured features were fed back into the model via Reinforcement Learning to maximize protein enrichment scores, achieving a progressive improvement of generated phenotypes. This method, compared with Directed Evolution, shows higher efficiency in sampling high fitness protein candidates, and broader exploration of the sequence space. Potentially, by continuously refining its designs with minimal human intervention, this approach will accelerate protein engineering and provide a scalable solution for engineering new biomolecules with broad use across biotechnology and synthetic biology.",
+    "topic": "Wet-dry lab integration; Zinc Fingers; cis-coupling; protein language models; Reinforcement Learning; DPO",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/6b9e24abfa339b747072564576399e37881b8c4b.pdf"
+  },
+  {
+    "id": "JQwi2jigxc",
+    "title": "Engineering modular bacteriophage genomes for targeted bacterial elimination",
+    "authors": [
+      "Sriharshita Musunuri"
+    ],
+    "abstract": "Please see attached pdf.",
+    "topic": "bacteriophage; protein design; antimicrobial resistance",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/a768c4fd1faa3d08d21687c7d1296fbbfe83a0c2.pdf"
+  },
+  {
+    "id": "EoT86nwvTH",
+    "title": "IgCraft: A versatile sequence generation framework for antibody discovery and engineering",
+    "authors": [
+      "Matthew Greenig",
+      "Haowen Zhao",
+      "Vladimir Radenkovic",
+      "Aubin Ramon",
+      "Pietro Sormanni"
+    ],
+    "abstract": "Designing antibody sequences to better resemble those observed in natural human repertoires is a key challenge in biologics development. We introduce IgCraft: a multi-purpose model for paired human antibody sequence generation, built on Bayesian Flow Networks. IgCraft presents one of the first unified generative mod- eling frameworks capable of addressing multiple antibody sequence design tasks with a single model, including unconditional sampling, sequence inpainting, in- verse folding, and CDR motif scaffolding. Our approach achieves competitive results across the full spectrum of these tasks while constraining generation to the space of human antibody sequences, exhibiting particular strengths in CDR motif scaffolding (grafting) where we achieve state-of-the-art performance in terms of humanness and preservation of structural properties. By integrating previously separate tasks into a single scalable generative model, IgCraft provides a versatile platform for sampling human antibody sequences under a variety of contexts relevant to antibody discovery and engineering. Model code and weights are publicly available at https://github.com/mgreenig/IgCraft.",
+    "topic": "Antibody; Bayesian Flow Networks; Generative Model",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/f57644d54946092b629d23de84f77d34231cd768.pdf"
+  },
+  {
+    "id": "RuEheUsPLy",
+    "title": "Addressing Model Overcomplexity in Drug-Drug Interaction Prediction With Molecular Fingerprints",
+    "authors": [
+      "Manel Gil-Sorribes",
+      "Alexis Molina"
+    ],
+    "abstract": "Accurately predicting drug-drug interactions (DDIs) is crucial for pharmaceutical research and clinical safety. Recent deep learning models often suffer from high computational costs and limited generalization across datasets. In this study, we investigate a simpler yet effective approach using molecular representations such as Morgan fingerprints (MFPS), graph-based embeddings from graph convolutional networks (GCNs), and transformer-derived embeddings from MoLFormer integrated into a straightforward neural network. We benchmark our implementation on DrugBank DDI splits and a drug-drug affinity (DDA) dataset from the Food and Drug Administration. MFPS along with MoLFormer and GCN representations achieve competitive performance across tasks, even in the more challenging leak-proof split, highlighting the sufficiency of simple molecular representations. Moreover, we are able to identify key molecular motifs and structural patterns relevant to drug interactions via gradient-based analyses using the representations under study. Despite these results, dataset limitations such as insufficient chemical diversity, limited dataset size, and inconsistent labeling impact robust evaluation and challenge the need for more complex approaches. Our work provides a meaningful baseline and emphasizes the need for better dataset curation and progressive complexity scaling.",
+    "topic": "drug-drug interaction; molecular representation; benchmark; molecular fingerprint; explainability",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/7f908ff7f4893c911bb7c03021c183d4246779f6.pdf"
+  },
+  {
+    "id": "NUDiN90CAl",
+    "title": "FLOWR -- Flow Matching for Structure- and Interaction-Aware De Novo Ligand Generation",
+    "authors": [
+      "Julian Cremer",
+      "Ross Irwin",
+      "Alessandro Tibo",
+      "Jon Paul Janet",
+      "Simon Olsson",
+      "Djork-Arné Clevert"
+    ],
+    "abstract": "We present our progress on overcoming key challenges in applying generative models to 3D ligand design, including generating high-quality binders and reducing inference times. We introduce FLOWR, a flow matching framework for 3D ligand generation conditioned on a protein pocket and a set of desired interaction between the protein and the ligand. To thoroughly evaluate our model we also introduce SPIRE, a refined dataset of high-quality protein-ligand complexes derived from crystallographic data. Evaluations on this dataset show that FLOWR outperforms an existing state-of-the-art diffusion model, while achieving up to a 50-fold speed-up in inference time. We also propose an interaction-aware training and inference strategy that enables the generation of novel ligands tailored to predefined interaction profiles. Our findings suggest that FLOWR is an important step forward for efficient, AI-driven de novo ligand generation.",
+    "topic": "Flow Matching; Structure-Based Drug Discovery; Equivariance; Generative Chemistry; Pocket-ligand-Interactions; Fragment-based design",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/96ae84d4e9fb5826acb94bf55441568582be947c.pdf"
+  },
+  {
+    "id": "ZU6tVATIOT",
+    "title": "Conformation-specific Design: a New Benchmark and Algorithm with Application to Engineer a Constitutively Active MAP Kinase",
+    "authors": [
+      "Jacob Stern",
+      "Siba Alharbi",
+      "Anandsukeerthi Sandholu",
+      "Stefan T. Arold",
+      "Dennis Della Corte"
+    ],
+    "abstract": "A general method for designing proteins with high conformational specificity is desirable for a variety of applications, including enzyme design and drug target redesign. To assess the ability of algorithms to design for conformational specificity, we introduce MotifDiv, a benchmark dataset of 200 conformational specificity design challenges. We also introduce CSDesign, an algorithm for designing proteins with high preference for a target conformation over an alternate conformation. On the MotifDiv benchmark, CSDesign designs protein sequences that are predicted to prefer the target conformation. We apply this method in vitro to redesign human MAP kinase ERK2, an enzyme with active and inactive conformations. Out of two designs for the active conformation, one increased activity sufficiently to retain activity in the absence of activating phosphorylations, a property not present in the wild type protein.",
+    "topic": "deep learning; protein design; inverse folding; conformational specificity; kinase",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/8e07826c55ce68d6432efb3ef5c20095becd536b.pdf"
+  },
+  {
+    "id": "oOBMiXGlPP",
+    "title": "A Guided Design Framework for the Optimization of Therapeutic-like Antibodies",
+    "authors": [
+      "Amy Wang",
+      "Zhe Sang",
+      "Samuel Don Stanton",
+      "Jennifer L. Hofmann",
+      "Saeed Izadi",
+      "Eliott Park",
+      "Jan Ludwiczak",
+      "Matthieu Kirchmeyer",
+      "Darcy Davidson",
+      "Andrew Maier",
+      "Tom Pritsky",
+      "Nathan C. Frey",
+      "Andrew Martin Watkins",
+      "Franziska Seeger"
+    ],
+    "abstract": "Antibodies must meet stringent developability criteria for successful commercialization—a challenge for machine learning approaches given the limited available data. Selecting candidates with biophysical properties similar to clinical-stage antibodies offers an alternative to data-intensive approaches. However, such methods typically suffer from limited throughput due to structure-based calculations and can eliminate promising candidates through overly strict filtering. By benchmarking classical filtering methods against experimental datasets, with viscosity as a proof-of-concept, we identify an informative set of biophysical definitions (relevant to charge and hydrophobicity). Using these as optimization objectives for guided design, we introduce TherAbDesign, a sequence-based framework that evaluates and optimizes antibodies for developability without requiring structure prediction or physics-based computation. TherAbDesign proposes rational modifications to mimic the properties of successful therapeutic antibodies, which we demonstrate can improve known developability liabilities like high viscosity without explicitly modeling their mechanism of action.",
+    "topic": "clinical; antibodies; antibody; drug; lipinski; biophysics; guided design; optimization; molecular descriptors; developability; proxy assays; benchmark; electrostatics; hydrophobicity",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/caa8022afd2fafb83fe24b4ad6295ef08c0ac4ec.pdf"
+  },
+  {
+    "id": "zOMc4omTbn",
+    "title": "RNAGym: Benchmarks for RNA Fitness and Structure Prediction",
+    "authors": [
+      "Rohit Arora",
+      "Murphy Angelo",
+      "Christian Andrew Choe",
+      "Aaron W Kollasch",
+      "Fiona Qu",
+      "Courtney A. Shearer",
+      "Ruben Weitzman",
+      "Artem Gazizov",
+      "Sarah Gurev",
+      "Erik Xie",
+      "Debora Susan Marks",
+      "Pascal Notin"
+    ],
+    "abstract": "Predicting the structure and the effects of mutations in RNA are pivotal for numerous biological and medical applications. However, the evaluation of machine learning-based RNA models has been hampered by disparate and limited experimental datasets, along with inconsistent model performances across different RNA types. To address these limitations, we introduce RNAGym, a comprehensive and large-scale benchmark specifically tailored for RNA fitness and structure prediction. This benchmark suite includes over 30 standardized deep mutational scanning assays, covering hundreds of thousands of mutations, and curated RNA structure datasets. We have developed a robust evaluation framework that integrates multiple metrics suitable for both predictive tasks while accounting for the inherent limitations of experimental methods. RNAGym is designed to facilitate a systematic comparison of RNA models, offering an essential resource to enhance the development and understanding of these models within the computational biology community.",
+    "topic": "RNA; benchmarks; fitness; structure",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/cea40099fae4d7c40fdd357dd675be988273c585.pdf"
+  },
+  {
+    "id": "0FI1lXW1iF",
+    "title": "AlphaSAXS: Reconstructing Protein Structure with Physiologically Relevant Conformations from Small Angle X-ray Scattering Data",
+    "authors": [
+      "Feng Yu",
+      "Stephanie Prince",
+      "Andrew Tritt",
+      "Kanupriya Pande",
+      "Greg L. Hura",
+      "Oliver Ruebel",
+      "Susan E. Tsutakawa"
+    ],
+    "abstract": "AlphaFold has revolutionized structural biology with accurate protein predictions, yet challenges remain due to the dynamic nature of proteins. Over 40% of human proteins have flexible regions crucial in diseases like Alzheimer's and COVID-19. To overcome AlphaFold's limitations, we integrated small-angle X-ray scattering (SAXS) data, leveraging its ability to provide structural insights on flexible macromolecules. Using computationally generated SAXS data to inform network inputs during fine-tuning and inference, we enhanced AlphaFold to improve conformation predictions for flexible protein regions. This approach can advance our understanding of experimentally guided structural prediction and provides a potential solution for improving computational prediction of physiologically relevant conformations.",
+    "topic": "Protein design; high throughput data; small-angle X-ray scattering; experimental data; conformational diversity",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/8da007fec93023beae32a8368f252bbf00fa8495.pdf"
+  },
+  {
+    "id": "DvC6VL7TJK",
+    "title": "Sequence-based protein models for the prediction of mutations across priority viruses",
+    "authors": [
+      "Sarah Gurev",
+      "Noor Youssef",
+      "Navami Jain",
+      "Debora Susan Marks"
+    ],
+    "abstract": "Viruses pose a significant threat to human health. Advances in machine learning for predicting mutation effects have enhanced viral surveillance and enabled the proactive design of vaccines and therapeutics, but the accuracy of these methods across priority viruses remain unclear. We perform the first large-scale modeling across 40 WHO priority pandemic-threat pathogens, many of which are under-surveilled, discovering that most have sufficient sequence or structural information for effective modeling, highlighting the potential for using these approaches in pandemic preparedness. To understand the limits of current modeling capabilities for viruses, we curate 47 standardized viral deep mutational scanning assays to systematically evaluate the performance of three alignment-based models, three Protein Language Models (PLMs), and two structure-aware PLMs with different training databases. We find marked differences in performance of these models on viruses relative to non-viral proteins. For viral proteins, we find alignment-based models perform on par with PLMs though with predictable differences in which model is better for a particular function or virus depending on data available. We define confidence metrics for both alignment-based models and PLMs that indicate when additional sequence or structural data may be needed for accurate predictions and to guide model selection in the absence of available data for evaluation. We use these metrics to inform the development a confidence-weighted hybrid model that builds on the strength of each approach, adapts to the quality of data available, and outperforms either of the best alignment or PLM models alone.",
+    "topic": "protein language models; viral evolution; vaccines",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/3993b7f4ae98fc12173f7bbc94af599ff4168b67.pdf"
+  },
+  {
+    "id": "sfTXIiu7Op",
+    "title": "From Minimal Data To Maximal Insight: A Machine Learning Guided Platform For Peptide Discovery",
+    "authors": [
+      "Pouriya Bayat",
+      "Spencer Perkins",
+      "Sebastian Clancy",
+      "Sahil Swapnesh Patel",
+      "Richard Fei Yin",
+      "Krištof Bozovičar",
+      "Idorenyin IWE",
+      "Mohammad Simchi",
+      "Ilan Yaniv Zeisler",
+      "Serena Singh",
+      "Vivian White",
+      "Matthew Xie",
+      "Sean Palter",
+      "Keith Pardee"
+    ],
+    "abstract": "Peptide biologics represent a promising therapeutic frontier, but their discovery and optimization are often hindered by the requirement for extensive training datasets in machine learning approaches. Here we present Minimal Data Maximal Insight (MDMI), a novel computational method that enables peptide discovery using limited data (~100 sequences). Using a split Green Fluorescent Protein (GFP) system as our model, we develop a sequence-agnostic model with statistical potential scoring and physics-based evaluation to create an ensemble predictive model. This is coupled with a genetic algorithm for sequence optimization. With only one round of screening, we developed a model that yielded novel functional sequences 63% of which exhibited fluorescence. Notably, by analyzing high-activity sequences to identify favorable amino acids at each position, we were able to design peptide variants with more than 50% sequence difference from the wild type -far exceeding the mutation rates present in our training data- while maintaining functionality. By reducing dependency on large datasets, MDMI democratizes access to advanced computational tools for peptide engineering and offers a blueprint for accelerating therapeutic peptide discovery across various applications, from antimicrobials to targeted drug delivery.",
+    "topic": "Peptide Discovery; Data-Efficient Algorithms; Computational Biology; Machine Learning; GFP",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/4898c29c8d69937c4203a1be4c973944d2c3d938.pdf"
+  },
+  {
+    "id": "4kt87NSJrZ",
+    "title": "Sesame: Opening the door to protein pockets",
+    "authors": [
+      "Raúl Miñán",
+      "Carles Perez-Lopez",
+      "Javier Iglesias-Fernández",
+      "Alvaro Ciudad Serrano",
+      "Alexis Molina"
+    ],
+    "abstract": "Molecular docking is a cornerstone of drug discovery, relying on high-resolution ligand-bound structures to achieve accurate predictions. However, obtaining these structures is often costly and time-intensive, limiting their availability. In contrast, ligand-free structures are more accessible but suffer from reduced docking performance due to pocket geometries being less suited for ligand accommodation in apo structures. Traditional methods for artificially inducing these conformations, such as molecular dynamics simulations, are computationally expensive. In this work, we introduce Sesame, a generative model designed to predict this conformational change efficiently. By generating geometries better suited for ligand accommodation  at a fraction of the computational cost, Sesame aims to provide a scalable solution for improving virtual screening workflows.",
+    "topic": "flow matching; generation of holo conformations; opening cryptic cavities",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/f26230a5e1b655073de843efc1246a40ab0a41c6.pdf"
+  },
+  {
+    "id": "KBMxaCSwpB",
+    "title": "Assessing Quantization and Efficient Fine-Tuning for Protein Language Models",
+    "authors": [
+      "Sebastian Clancy",
+      "Ilan Yaniv Zeisler",
+      "Pouriya Bayat",
+      "Matthew Xie",
+      "Vivian White",
+      "Spencer Perkins",
+      "Sepehr Bayat",
+      "Keith Pardee"
+    ],
+    "abstract": "Proteins are essential to life and function, and discovering new proteins can unlock new therapeutics and industrial applications. However, the space of proteins is incredibly large and diverse, making discovering useful proteins difficult. Machine learning (ML) models help search the space of proteins, finding candidate proteins for specific goals and reducing the need for costly experimentation. The recent trend of increasing scale of ML models creates more demanding computational requirements, especially for large language models (LLMs) and their protein language model (PLM) counterparts. Quantization and efficient fine-tuning methods can help offset this by reducing the amount of memory and training required to use ML models. Here we show that combining 4-bit quantization and efficient training with low rank adapters maintains $>$90\\% of the performance for most models in protein prediction tasks, while simultaneously reducing the required memory consumption by 46.7\\% on average. Generative models that are 4-bit quantized use 76.4\\% less memory while showing no significant difference in the quality of their generated proteins. This represents the first benchmark of quantized training with parameter efficient fine-tuning for PLMs while retaining nearly all of their performance, thus lowering the requirements and barrier of entry for practitioners.",
+    "topic": "Machine Learning; Protein Language Model; LLM; Fine-Tuning; Quantization; 4-bit; PEFT; Protein Generation",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/c9d262657549969669d7d860be1ce2aaa975506b.pdf"
+  },
+  {
+    "id": "c3eb9I0kWQ",
+    "title": "PickPocket Enables Binding Site Prediction at the Proteome Scale",
+    "authors": [
+      "Stelina Tarasi",
+      "Laura Malo",
+      "Alexis Molina"
+    ],
+    "abstract": "Accurately identifying protein binding sites is essential for drug discovery, yet existing computational methods often struggle to balance precision, recall, and scalability. We introduce PickPocket, a deep learning model that integrates sequence-derived evolutionary embeddings from ESM-2 with geometric structural representations from GearNet to predict ligand-binding sites at the proteome scale. PickPocket leverages both residue-level sequence context and graph-based spatial relationships, enabling it to generalize across diverse protein families while maintaining high precision. Evaluated on the LIGYSIS benchmark, PickPocket outperforms state-of-the-art methods, achieving the highest F1 score (0.42) and maintaining a competitive MCC (0.37). PickPocket effectively predicts cryptic pockets, surpassing specialized models like PocketMiner even without explicit training on ligand-induced conformational changes. Our large-scale analysis of 356,711 proteins further demonstrates PickPocket’s ability to identify novel binding sites across human drug targets. By combining evolutionary and geometric learning, PickPocket represents a scalable, data-driven approach for structure-based drug discovery.",
+    "topic": "pocket finding; embedding learning; structural representation; sequence representation; cryptic pockets",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/8fec1f7ce95d05ff4745137730dc020fe907748c.pdf"
+  },
+  {
+    "id": "oSFn9QY0fl",
+    "title": "Preventing cell-to-cell tranmission of disordered proto-fibrils of $\\alpha$-Synuclein",
+    "authors": [
+      "Akshay Chenna"
+    ],
+    "abstract": "The cell-to-cell transmission of the oligomeric proto-fibrils of $\\alpha$Synuclein ($\\alpha$S) is believed to be a key driver in the progression of neurodegeneration including Parkinson's Disease. Here, we present a computational protocol for the design of inhibitors preventing the disordered C-terminal region of $\\alpha$S from interacting with its neuronal cell surface receptor, LAG3. We begin with the structural characterization of the binding of the disordered $\\alpha$S with LAG3 using information-driven docking from NMR derived constraints. Using this docked complex, we use partial diffusion and inverse folding  to generate and design binders to LAG3. We perform exhaustive validation \\textit{in silico} using molecular dynamics and the MM/PBSA-IE method. 12 binders were evaulated \\textit{in vitro} of which several show pM-nM affinity binding (K$_\\mathrm{D}$), as measured by BLI. The best performing binders effectively downregulate neurodegeneration in mammalian cells and the lead candidates will be further validated in animal models to show functional activity of preventing cell-to-cell transmission of $\\alpha$S.",
+    "topic": "Intrinsically disordered proteins; diffusion; neurodegeneration; Parkinson's Disease",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/a7c6cfb1023381338872b51294dc3833963621a9.pdf"
+  },
+  {
+    "id": "k3u89B0nnI",
+    "title": "AI-guided data-scarce engineering of RfxCas13d to create a cell selection tool",
+    "authors": [
+      "Aviv Spinner",
+      "Ayush Noori",
+      "Debora Susan Marks",
+      "George Church",
+      "Lisa Maria Riedmayr"
+    ],
+    "abstract": "CRISPR has revolutionized genetic engineering by providing straightforward tools for many kinds of genetic alterations. CRISPR-Cas13 is a programmable endonuclease that specifically targets and cleaves RNA. After activation by target cis-RNA binding, Cas13 also exhibits non-specific collateral trans-activity against nearby RNAs. In several conditions, this leads to apoptosis. Here, we propose to harness the collateral activity of RfxCas13d for selective induction of apoptosis in heterogeneous cell populations. We design and perform machine-guided engineering of RfxCas13d to increase collateral activity, with applications in highly specific cancer therapeutics.",
+    "topic": "Cas13; CRISPR; machine learning; protein engineering; RNA",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/766386f944e904555f965eed0c4733145c9c89f4.pdf"
+  },
+  {
+    "id": "ZU1m9Y4tYy",
+    "title": "An evaluation of unconditional 3D molecular generation methods",
+    "authors": [
+      "Martin Buttenschoen",
+      "Yael Ziv",
+      "Garrett M Morris",
+      "Charlotte Deane"
+    ],
+    "abstract": "Unconditional molecular generation is a stepping stone for conditional molecular generation, which is important in *de novo* drug design. Recent unconditional 3D molecular generation methods report saturated benchmarks, suggesting it is time to re-evaluate our benchmarks and compare the latest models. We assess five recent high performing 3D molecular generation methods (EQGAT-diff, FlowMol, GCDM, GeoLDM, SemlaFlow), in terms of both standard benchmarks and chemical and physical validity. Overall, the best method, SemlaFlow, has an 87\\% success rate in generating valid, unique, and novel molecules without post-processing and 92.4\\% with post-processing.",
+    "topic": "benchmarking; 3d molecular generation; de novo drug design",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/e3d2df214e8b6f4a1423bb40b109f8c939fd803e.pdf"
+  },
+  {
+    "id": "jVAeX6dgDI",
+    "title": "Towards Scaling Laws for Language Model Powered Evolutionary Algorithms: Case Study on Molecular Optimization",
+    "authors": [
+      "Tigran Fahradyan",
+      "Filya Geikyan",
+      "Philipp Guevorguian",
+      "Hrant Khachatrian"
+    ],
+    "abstract": "The improvement of large language models (LLMs) came from scaling\npretraining. However, a new scaling paradigm emerged called test-time compute, which\nuses more computation at the inference time of language models to get better results. There have been extensive works suggesting various test-time compute scaling strategies, but the modeling of the scaling dynamics of these methods is still an open research question. In this work we try to bridge this gap, developing a parametric law for language model-enhanced evolutionary algorithms depending on the language model parameters (N) and number of evolutionary iterations (k) used. We show that in molecular optimization tasks, our law is able to accurately extrapolate 2.5 times in N and k. Additionally, our law suggests that there is a tradeoff between N and k, which we validate by matching the performance of a 3.2B model with an 8.5 times smaller 380M model using 2.3 times more evolutionary algorithms steps.",
+    "topic": "scaling laws; test-time compute; evolutionary algorithms; molecular optimization",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/1ebc917bc0353598fbcb92c60882bea37ba2b98f.pdf"
+  },
+  {
+    "id": "eIWBNKyQdZ",
+    "title": "TCR-TRANSLATE: CONDITIONAL GENERATION OF REAL ANTIGEN- SPECIFIC T-CELL RECEPTOR SEQUENCES",
+    "authors": [
+      "Dhuvarakesh Karthikeyan",
+      "Colin Raffel",
+      "Benjamin Garrett Vincent",
+      "Alex Rubinsteyn"
+    ],
+    "abstract": "The paradoxical nature of T-cell receptor (TCR) specificity, which requires both\nprecise recognition and adequate coverage of antigenic peptide-MHCs (pMHCs),\nposes a fundamental challenge in immunology. Efforts at modeling this complex\nmany-to-many mapping have focused on the detection of reactive TCR-pMHC\npairs as a binary classification task, with little success on unseen epitopes. Here,\nwe present TCR-TRANSLATE, a framework that adapts low-resource machine\ntranslation techniques including semi-synthetic data augmentation and multi-task\nobjectives to generate target-conditioned CDR3β sequences for unseen input\npMHCs. We examine twelve model variants derived from the BART and T5\nmodel architectures on a target-rich validation set of well-studied antigens, find-\ning an optimal model, TCRT5, that samples known and native-like CDR3β se-\nquences for unseen epitopes. Our findings highlight both the potential and lim-\nitations of sequence-to-sequence modeling in rapidly generating antigen-specific\nTCR repertoires, emphasizing the need for experimental validation to bridge the\ngaps between predictions, metrics, and functional capacity.",
+    "topic": "seq2seq; immunology; generative protein design; LLMs",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/9e873eef55443b10575d09f4282b2d3a0f7659b7.pdf"
+  },
+  {
+    "id": "5zNRgNMxIS",
+    "title": "All-Atom Protein Generation with Latent Diffusion",
+    "authors": [
+      "Amy X. Lu",
+      "Wilson Yan",
+      "Sarah A Robinson",
+      "Simon Kelow",
+      "Kevin K Yang",
+      "Vladimir Gligorijevic",
+      "Kyunghyun Cho",
+      "Richard Bonneau",
+      "Pieter Abbeel",
+      "Nathan C. Frey"
+    ],
+    "abstract": "While generative models hold immense promise for protein design, existing models are typically backbone-only, despite the indispensable role that sidechain atoms play in mediating function. As prerequisite knowledge, all-atom 3D structure generation requires the discrete sequence to specify sidechain identities, which poses a multimodal generation problem. We propose **PLAID** (**P**rotein **La**tent **I**nduced **D**iffusion), which samples from the *latent space* of a pre-trained sequence-to-structure predictor, ESMFold. The sampled latent embedding is then decoded with frozen decoders into the sequence and all-atom structure. Importantly, **PLAID only requires sequence input during training**, thus augmenting the dataset size by 2-4 orders of magnitude compared to the Protein Data Bank. It also makes more annotations available for functional control. As a demonstration of annotation-based prompting, we perform compositional conditioning on function and taxonomy using classifier-free guidance. Intriguingly, function-conditioned generations learn active site residue identities, despite them being non-adjacent on the sequence, *and* can correctly place the sidechain atoms. We further show that PLAID can generate transmembrane proteins with expected hydrophobicity patterns, perform motif scaffolding, and improve unconditional sample quality for long sequences. Links to model weights and training code are publicly available at `[redacted]`.",
+    "topic": "proteins; latent diffusion",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/4d60e3c6fecd0f6d1d262c98ff7e856ddc836279.pdf"
+  },
+  {
+    "id": "jBSI3OGxQZ",
+    "title": "A data guided approach to building an ML ready protein expression dataset",
+    "authors": [
+      "Catherine Baranowski",
+      "Aviv Spinner",
+      "Peter J Kelly"
+    ],
+    "abstract": "Recombinant protein expression is central to academic exploration as well as biotechnology’s advancement of human health, climate applications and the bioeconomy in general. However, not all proteins can be expressed in all organisms, and the field lacks a predictive model of soluble protein expression that could replace laborious experimental trial-and-error. This project aims to design and test an openly available and extensible experimental platform and standardized data ontology for collecting soluble recombinant protein expression data across organisms. The resulting public dataset will be used in building predictive models of protein expression. Here we share preliminary assay feasibility data in our first expression host organism, Escherichia coli.",
+    "topic": "protein expression; ML; machine learning; data",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/5b7ec39cf43bc5ae1c055f4e106f71d58525edf4.pdf"
+  },
+  {
+    "id": "U9COBDM9hz",
+    "title": "GROQ-seq: A Collaborative, Open Data Approach to Addressing Protein Function Prediction",
+    "authors": [
+      "David Ross",
+      "Aviv Spinner",
+      "Simon d'Oelsnitz",
+      "Svetlana P Ikonomova",
+      "Olga Vasilyeva",
+      "Nina Alperovich",
+      "Kristen Sheldon",
+      "Courtney Tretheway",
+      "Dana Cortade",
+      "Erika DeBenedictis",
+      "Peter J Kelly"
+    ],
+    "abstract": "We have developed an experimental platform and unified data ontology for collecting and sharing open-access data on diverse protein functions to enable the development of predictive models linking sequence to function. The experimental strategy for data generation employs the growth-based quantitative sequencing (GROQ-seq) platform as a simple yet adaptable system that can be easily expanded to encompass new functions. This high-throughput experimental platform can produce quantitative functional characterization data for hundreds of thousands of proteins per experiment at a cost of approximately $0.05 per sequence. To date, we have made significant progress in collecting data for our initial protein function: transcription factor binding. We are also developing GROQ-seq for a suite of additional protein functions, including proteases, aminoacyl tRNA synthetases, RNA polymerases, histidine kinases, single-chain antibody fragments, and a variety of metabolic enzymes. Being both highly-scalable and extensible to new protein functions, the GROQ-seq platform enables the collection of the diversity of data necessary to create a generalizable model that quantitatively predicts sequence to function relationships.",
+    "topic": "protein function; ML; machine learning; data",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/1a6073f54446dbf87ea5d1473d49842f6253924e.pdf"
+  },
+  {
+    "id": "vx1uo7AAtW",
+    "title": "Gumbel-Softmax Score and Flow Matching for Discrete Biological Sequence Generation",
+    "authors": [
+      "Sophia Tang",
+      "Yinuo Zhang",
+      "Alexander Tong",
+      "Pranam Chatterjee"
+    ],
+    "abstract": "We introduce Gumbel-Softmax Score and Flow Matching, a generative framework that relies on a novel Gumbel-Softmax interpolation between smooth categorical distributions to one concentrated at a single vertex by defining a time-dependent temperature parameter. Using this interpolant, we explore Gumbel-Softmax Flow Matching by deriving a parameterized velocity field transports smooth categorical distributions to the vertices of the simplex. We alternatively present Gumbel-Softmax Score Matching which learns to regress the gradient of the probability density. Our approach enables controllable generation with tunable temperatures and stochastic Gumbel noise during inference, enabling efficient de novo sequence design. Our experiments demonstrate state-of-the-art performance in conditional DNA promoter design and strong results in de novo sequence-only protein generation.",
+    "topic": "Flow matching; Gumbel-Softmax; protein design; DNA design",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/5b295691aadf5c1acfa6240d04c0a329d6f63ab2.pdf"
+  },
+  {
+    "id": "skws7Q160y",
+    "title": "EquiJump: Protein Dynamics Simulation via SO(3)-Equivariant Stochastic Interpolants",
+    "authors": [
+      "Allan Dos Santos Costa",
+      "Ilan Mitnikov",
+      "Franco Pellegrini",
+      "Ameya Daigavane",
+      "Mario Geiger",
+      "Zhonglin Cao",
+      "Karsten Kreis",
+      "Tess Smidt",
+      "Emine Kucukbenli",
+      "JOSEPH JACOBSON"
+    ],
+    "abstract": "Mapping the conformational dynamics of proteins is crucial for elucidating their functional mechanisms. While Molecular Dynamics (MD) simulation enables detailed time evolution of protein motion, its computational toll hinders its use in practice. To address this challenge, multiple deep learning models for reproducing and accelerating MD have been proposed drawing on transport-based generative methods. However, existing work focuses on generation through transport of samples from prior distributions, that can often be distant from the data manifold. The recently proposed framework of stochastic interpolants, instead, enables transport between arbitrary distribution endpoints. Building upon this work, we introduce EquiJump, a transferable SO(3)-equivariant model that bridges all-atom protein dynamics simulation time steps directly. Our approach unifies diverse sampling methods and is benchmarked against existing models on trajectory data of fast-folding proteins. EquiJump achieves state-of-the-art results in dynamics simulation with a transferable model on all of the fast-folding proteins.",
+    "topic": "proteins; molecular dynamics; stochastic interpolants; simulation; equivariance",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/40e1d7bd2312b096551e15ce2fbe75169b231595.pdf"
+  },
+  {
+    "id": "G0nfe43sOw",
+    "title": "Gradient GA: Gradient Genetic Algorithm for Drug Molecular Design",
+    "authors": [
+      "Chris Zhuang",
+      "Debadyuti Mukherjee",
+      "Yingzhou Lu",
+      "Tianfan Fu",
+      "Ruqi Zhang"
+    ],
+    "abstract": "Molecular discovery has brought great benefits to the chemical industry. Various molecule design techniques are developed to identify molecules with desirable properties. Traditional optimization methods, such as genetic algorithms,\ncontinue to achieve state-of-the-art results across multiple molecular design\nbenchmarks. However, these techniques rely solely on random walk exploration, which hinders both the quality of the final solution and the convergence\nspeed. To address this limitation, we propose a novel approach called Gradient Genetic Algorithm (Gradient GA), which incorporates gradient information from the objective function into genetic algorithms. Instead of random exploration, each proposed sample iteratively progresses toward an optimal solution by following the gradient direction. We achieve this by designing a differentiable objective function parameterized by a neural network and utilizing\nthe Discrete Langevin Proposal to enable gradient guidance in discrete molecular spaces. Experimental results demonstrate that our method significantly\nimproves both convergence speed and solution quality, outperforming cuttingedge techniques. For example, it achieves up to a 25% improvement in the top10 score over the vanilla genetic algorithm. The code is publicly\navailable at https://github.com/debadyuti23/GradientGA.",
+    "topic": "drug discovery; discrete sampling",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/68b6fbf77081cab2343ee29a7ecd11356742a67d.pdf"
+  },
+  {
+    "id": "PtjMeyHcTt",
+    "title": "Decoding the Mechanistic Impact of Genetic Variation on Regulatory Sequences with Deep Learning",
+    "authors": [
+      "Evan Seitz",
+      "David M. McCandlish",
+      "Justin Kinney",
+      "Peter K Koo"
+    ],
+    "abstract": "Non-coding DNA encodes complex cis-regulatory mechanisms that govern gene expression by orchestrating transcription factor binding within specific sequence contexts. While deep learning has advanced our understanding of these mechanisms, how genetic variation reconfigures them remains an open challenge. Here, we introduce SEAM, an AI-driven tool that systematically investigates how mutations reshape regulatory mechanisms. By mapping sequences into a mechanism space and clustering them based on shared features, SEAM reveals how specific mutations can reprogram regulatory DNA, driving mechanistic and functional diversity. SEAM highlights the remarkable evolvability of human regulatory elements, disentangles transcription factor-specific effects from broader sequence context, and provides a powerful framework for decoding the cis-regulatory code. By enabling systematic, unbiased exploration of reprogrammable mechanisms, SEAM illuminates evolutionary pathways and informs the rational design of synthetic sequences with tailored functions.",
+    "topic": "Deep learning; cis-regulatory code; genetic variation; transcription factor binding; regulatory sequences; mechanism-based attribution; evolutionary pathways; synthetic sequence design; functional genomics",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/5d3161cbf5c2dfc72cfc2d59ef2321fef399f620.pdf"
+  },
+  {
+    "id": "V8mVdKQdzI",
+    "title": "Tensor-DTI: Enhancing Biomolecular Interaction Prediction with Contrastive Embedding Learning",
+    "authors": [
+      "Manel Gil-Sorribes",
+      "Alvaro Ciudad Serrano",
+      "Alexis Molina"
+    ],
+    "abstract": "Accurate drug-target interaction (DTI) prediction is essential for computational drug discovery, yet existing models often rely on pre-defined molecular descriptors or sequence-based embeddings with limited generalizability. We propose Tensor-DTI, a contrastive learning framework that integrates multimodal embeddings from molecular graphs, protein language models, and binding site predictions to improve interaction modeling. Tensor-DTI employs a Siamese Dual Encoder architecture, enabling it to capture both chemical and structural interaction features while distinguishing interacting from non-interacting pairs. Evaluations on multiple DTI benchmarks, including BIOSNAP, BindingDB, DAVIS, and PLINDER, demonstrate that Tensor-DTI outperforms existing sequence-based and graph-based models. Additionally, we assess its generalization to unseen drugs and proteins and explore its applicability to protein-RNA and peptide-protein interactions. Our findings highlight the benefits of integrating structural information with contrastive objectives to enhance interaction prediction accuracy and model interpretability.",
+    "topic": "drug-target interaction; contrastive learning; embedding; affinity prediction; pocket specificity",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/3b5a0289ba5a4096e43abd7c96d82d8e712dfa01.pdf"
+  },
+  {
+    "id": "7I0s5AuZix",
+    "title": "Scalable and Cost-Efficient de Novo Template-Based Molecular Generation",
+    "authors": [
+      "Piotr Gaiński",
+      "Oussama Boussif",
+      "Dmytro Shevchuk",
+      "Andrei Rekesh",
+      "Ali Parviz",
+      "Mike Tyers",
+      "Robert A. Batey",
+      "Michał Koziarski"
+    ],
+    "abstract": "Recent advances in reaction-based molecular generation hold great promise for drug design. Composing a molecule from a predefined set of reaction templates and building blocks keeps the generative modeling in line with what can be synthesized in a real-world wet lab. In this paper, we tackle three important challenges of template-based GFlowNets: 1) reducing the synthesis cost, 2) navigating in a large set of building blocks, and 3) exploiting a small set of building blocks. We propose Cost Guidance for a backward policy that uses an auxiliary machine-learning model to approximate the synthesis cost. Our approach limits the costs of proposed molecules, while drastically improving their diversity and quality in large-scale settings. Moreover, we design a Dynamic Library mechanism that allows the generation of full synthesis trees, boosting the results in small-scale settings. The resulting generative model establishes state-of-the-art results in template-based molecular generation in a benchmark concerning synthesis cost and diversity of high-rewarded molecules.",
+    "topic": "GFlownets; molecular generation; synthesis",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/1ad6765cffe0fdce98d400c3582bff6334f2f54d.pdf"
+  },
+  {
+    "id": "mUp7mfNfXz",
+    "title": "SOAPI: Siamese-guided generation of Off-Target-Avoiding Protein Interactions",
+    "authors": [
+      "Sophia Vincoff",
+      "Oscar Davis",
+      "Alexander Tong",
+      "Joey Bose",
+      "Pranam Chatterjee"
+    ],
+    "abstract": "Therapeutics that modulate pathogenic proteins while avoiding off-target interactions are essential for effective drug design. However, designing binders that selectively engage a target protein while minimizing interactions with structurally or functionally similar proteins remains a major challenge. To address this, we introduce Siamese-guided strategy for the generation of Off target-Avoiding Protein Interactions, termed SOAPI. SOAPI leverages a Siamese protein language model with an adaptive Log-Sum-Exp Decoy Loss to enforce specificity by embedding fusion-specific binders close to their target while maintaining separation from off-targets. These optimized embeddings then guide a diffusion protein language model (DPLM), which generates binders using soft-value-based decoding (SVDD) and Sequential Monte Carlo resampling to iteratively refine candidates. In silico validation demonstrates significant off-target avoidance, highlighting SOAPI’s potential for generating precise and selective protein interactions.",
+    "topic": "Siamese neural network; discrete diffusion sampling; protein design",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/c84734e3f03bff584848fb289018ef0f61513768.pdf"
+  },
+  {
+    "id": "iYXaZ1XUXo",
+    "title": "OPUS-GO: Unlocking Residue-level Insights from Sequence-level Annotations Using Biological Language Models",
+    "authors": [
+      "Gang Xu",
+      "Ying Lv",
+      "Ruoxi Zhang",
+      "Xinyuan Xia",
+      "Qinghua Wang",
+      "Jianpeng Ma"
+    ],
+    "abstract": "Accurate annotation of protein is crucial for understanding their structural and functional properties. Existing biological language model (BLM)-based methods, however, often prioritize sequence-level classification accuracy while neglecting residue-level interpretability, as sequence-level annotations are easier to obtain. To address this, we introduce OPUS-GO, a method that improves sequence-level predictions while also providing detailed residue-level insights by pinpointing critical residues associated with functional labels. By employing a modified Multiple Instance Learning (MIL) strategy with BLM representations, OPUS-GO outperforms baseline methods in both sequence-level and residue-level classification accuracy across various downstream tasks for protein sequences, including Gene Oncology (GO)-term prediction for proteins. Furthermore, the identified residues can serve as promising “prompts” for molecular design models, such as ESM-3, enabling the generation of sequences with the desired functionality.",
+    "topic": "protein language model; model interpretability; protein gene oncology",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/765133b912c78c43e077a6bd65418f02ad9d20f3.pdf"
+  },
+  {
+    "id": "s7rb3oswVb",
+    "title": "Guided Generation of B-cell Receptors with Conditional Walk-Jump Sampling",
+    "authors": [
+      "Taylor Joren",
+      "Sarah A Robinson",
+      "Homa MohammadiPeyhani",
+      "Sai Pooja Mahajan",
+      "Edith Lee",
+      "Stephen Lillington",
+      "Qixin Bei",
+      "Saeed Saremi",
+      "Jae Hyeon Lee",
+      "Richard Bonneau",
+      "Isidro Hotzel",
+      "Vladimir Gligorijevic",
+      "Simon Kelow",
+      "Nathan C. Frey"
+    ],
+    "abstract": "Antibody drug discovery campaigns often leverage immune repertoires from antigen-exposed animals, which can be divided into clonotypes, subclasses of sequences derived from the same progenitor B-cell. In this work, we adapt discrete walk-jump sampling (dWJS) to condition generation on categorical variables like clonotype, extending both energy-based and score-based dWJS with predictor-free guidance during Langevin dynamics (\"walking\") and denoising (\"jumping\"). Categorical and numerical variables are learned during training and specified during sampling, producing diverse and novel sequences from target clonotype classes. We train conditional WJS models on datasets of over 1.5M sequences obtained from antigen-exposed rats and human patients post-vaccination. Surprisingly, increasing guidance improves both sample quality and sequence diversity, enabling controllable sampling from thousands of distinct modes.",
+    "topic": "Conditional Generation; Antibodies; Lead discovery; B-cell receptors; Clonotypes",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/a2dae1cac091cdbdcc549650f22b75a48720a07e.pdf"
+  },
+  {
+    "id": "Ilhq4ocWcb",
+    "title": "Molecular design using graph Bayesian optimization with shortest-path kernels",
+    "authors": [
+      "Yilin Xie",
+      "Shiqiang Zhang",
+      "Jixiang Qing",
+      "Ruth Misener",
+      "Calvin Tsay"
+    ],
+    "abstract": "Past decades have seen the great potential of generative machine learning in molecular design while also exposed the gap between research contributions and practical applications. Considering the expensive-to-evaluate nature of molecular properties and hard-to-satisfy validity of molecular structures, this paper tackles molecular design from graph Bayesian optimization viewpoint, i.e., generating feasible and optimal molecular graph with compatible features given limited number of evaluations. Our proposed method, BoGrape, uses shortest-path graph kernels to measure the similarity between molecules and utilizes mixed-integer programming to allow global exploration of molecular space while maintaining the feasibility of generated candidates. Preliminary results show promising performance of BoGrape.",
+    "topic": "Molecular design; graph Bayesian optimization; shortest-path kernel",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/98ef484952bfabbe2c502cb6a2b80a544c118f3a.pdf"
+  },
+  {
+    "id": "edI6X2ricl",
+    "title": "Towards Interpretable Protein Structure Prediction with Sparse Autoencoders",
+    "authors": [
+      "Nithin Parsan",
+      "David J Yang",
+      "John Jingxuan Yang"
+    ],
+    "abstract": "Protein language models have revolutionized structure prediction, but their nonlinear nature obscures how sequence representations inform structure prediction. While sparse autoencoders (SAEs) offer a path to interpretability here by learning linear representations in high-dimensional space, their application has been limited to smaller protein language models unable to perform structure prediction. In this work, we make two key advances: (1) we scale SAEs to ESM2-3B, the base model for ESMFold, enabling mechanistic interpretability of protein structure prediction for the first time, and (2) we adapt Matryoshka SAEs for protein language models, which learn hierarchically organized features by forcing nested groups of latents to reconstruct inputs independently. We demonstrate that our Matryoshka SAEs achieve comparable or better performance than standard architectures. Through comprehensive evaluations, we show that SAEs trained on ESM2-3B significantly outperform those trained on smaller models for both biological concept discovery and contact map prediction. Finally, we present an initial case study demonstrating how our approach enables targeted steering of ESMFold predictions, increasing structure solvent accessibility while fixing the input sequence. To facilitate further investigation by the broader community, we open-source our code, dataset, pretrained models, and visualizer.",
+    "topic": "Mechanistic Interpretability; Protein Structure Prediction; Sparse Autoencoders; Deep Learning; ESMFold; Protein Language Models",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/771a96725e98fe102b78243c791fd6c9b88071e9.pdf"
+  },
+  {
+    "id": "1VLdFJFWhL",
+    "title": "Towards More Accurate Full-Atom Antibody Co-Design",
+    "authors": [
+      "Jiayang Wu",
+      "Xingyi Zhang",
+      "Xiangyu Dong",
+      "Kun XIE",
+      "Ziqi Liu",
+      "Wensheng Gan",
+      "Sibo Wang",
+      "Le Song"
+    ],
+    "abstract": "Antibody co-design represents a critical frontier in drug development, where accurate prediction of both 1D sequence and 3D structure of complementarity-determining regions (CDRs) is essential for targeting specific epitopes. Despite recent advances in equivariant graph neural networks for antibody design, current approaches often fall short in capturing the intricate interactions that govern antibody-antigen recognition and binding specificity. In this work, we present Igformer, a novel end-to-end framework that addresses these limitations through innovative modeling of antibody-antigen binding interfaces. Our approach refines the inter-graph representation by integrating personalized propagation with global attention mechanisms, enabling comprehensive capture of the intricate interplay between local chemical interactions and global conformational dependencies that characterize effective antibody-antigen binding. Through extensive validation on epitope-binding CDR design and structure prediction tasks, Igformer demonstrates significant improvements over existing methods, suggesting that explicit modeling of multi-scale residue interactions can substantially advance computational antibody design for therapeutic applications.",
+    "topic": "Antibody Co-design; Graph Refinement; Equivariant Graph Neural Networks",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/c592548ffa7a28a741fccdc70219abcc8309b729.pdf"
+  },
+  {
+    "id": "2GO8WYNt0R",
+    "title": "FragFM: Efficient Fragment-Based Molecular Generation via Discrete Flow Matching",
+    "authors": [
+      "Joongwon Lee",
+      "Seonghwan Kim",
+      "Woo Youn Kim"
+    ],
+    "abstract": "We introduce FragFM, a novel fragment-based discrete flow matching framework for molecular graph generation. FragFM generates molecules at the fragment level, leveraging a coarse-to-fine autoencoding mechanism to reconstruct atom-level details. This approach reduces computational complexity while maintaining high chemical validity, enabling more efficient and scalable molecular generation. We benchmark FragFM against state-of-the-art diffusion- and flow-based models on standard molecular generation benchmarks and natural product datasets, demonstrating superior performance in validity, property control, and sampling efficiency. Notably, FragFM achieves over 99\\% validity with significantly fewer sampling steps, improving scalability while preserving molecular diversity. These results highlight the potential of fragment-based generative modeling for large-scale, property-aware molecular design, paving the way for more efficient exploration of chemical space.",
+    "topic": "Molecular generative model; Molecular graph; Discrete flow mathcing; Graph generative model; Fragment-based drug discovery",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/fca636469870bde3d5dca75996405423ed68bf05.pdf"
+  },
+  {
+    "id": "D81Qs3VM5o",
+    "title": "Design of Ligand-Binding Proteins with Atomic Flow Matching",
+    "authors": [
+      "Junqi Liu",
+      "Shaoning Li",
+      "Chence Shi",
+      "Zhi Yang",
+      "Jian Tang"
+    ],
+    "abstract": "Designing novel proteins that bind to small molecules is a long-standing challenge in computational biology, with applications in developing catalysts, biosensors, and more. Current computational methods rely on the assumption that the binding pose of the target molecule is known, which is not always feasible, as conformations of novel targets are often unknown and tend to change upon binding. In this work, we formulate proteins and molecules as unified biotokens, and present AtomFlow, a novel deep generative model under the flow-matching framework for the design of ligand-binding proteins from the 2D target molecular graph alone. Operating on representative atoms of biotokens, AtomFlow captures the flexibility of ligands and generates ligand conformations and protein backbone structures iteratively. We consider the multi-scale nature of biotokens and demonstrate that AtomFlow can be effectively trained on a subset of structures from the Protein Data Bank, by matching flow vector field using an SE(3) equivariant structure prediction network. Experimental results show that our method can generate high-fidelity ligand-binding proteins and achieve performance comparable to the state-of-the-art model RFDiffusionAA, while not requiring bound ligand structures. As a general framework, AtomFlow holds the potential to be applied to various biomolecule generation tasks in the future.",
+    "topic": "protein generation; protein-ligand interaction; protein binder design",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/69088051170041aa2e0a7a421711665ff66d3e78.pdf"
+  },
+  {
+    "id": "bLUw471nio",
+    "title": "Active Learning on Synthons for Molecular Design",
+    "authors": [
+      "Tom George Grigg",
+      "Mason Burlage",
+      "Oliver Brook Scott",
+      "Dominique Sydow",
+      "Liam Wilbraham"
+    ],
+    "abstract": "Exhaustive virtual screening is highly informative but often intractable against the expensive objective functions involved in modern drug discovery. This problem is exacerbated in combinatorial contexts such as multi-vector expansion, where molecular spaces can quickly become ultra-large. Here, we introduce Scalable Active Learning via Synthon Acquisition (SALSA): a simple algorithm applicable to multi-vector expansion which extends pool-based active learning to non-enumerable spaces by factoring modeling and acquisition over synthon or fragment choices. Through experiments on ligand- and structure-based objectives we highlight SALSA's sample efficiency, and its ability to scale to spaces of trillions of compounds. Further, we demonstrate application toward multi-parameter objective design tasks on three protein targets – finding SALSA-generated molecules have comparable chemical property profiles to known bioactives, and\nexhibit greater diversity and higher scores over an industry-leading generative approach.",
+    "topic": "Active Learning; Drug Discovery; Chemical Synthesis",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/8dd8c738f7992e92abd99a0111517cd0664fcbe7.pdf"
+  },
+  {
+    "id": "PAjszAMaF1",
+    "title": "Reframing Retreival-Augmented Generation for *in silico* optimization of antibody solubility",
+    "authors": [
+      "Lena Erlach",
+      "Rohit Singh",
+      "Bonnie Berger",
+      "Sai T. Reddy"
+    ],
+    "abstract": "Antibodies are successful biotherapeutics used for the treatment of various diseases. Throughout their therapeutic development, antibody candidates require optimization for drug developability, while retaining their functionality. This task remains a significant challenge as it is constrained by low-throughput experimental measurements. Retrieval Augmented Generation (RAG) was developed in natural language processing to generate more accurate text responses combining a retriever, a generator and a knowledge database. Here, we present a novel adaptation of this framework for the developability optimization of antibodies. Using solubility as a proof-of-concept, we demonstrate that this framework generates optimized antibody sequences with improved solubility scores, when evaluated *in silico*. This RAG framework allows precise control over the optimization process with the aim of preserving functionality of the antibody candidate. Moreover, the modular design enables adaptability across diverse optimization campaigns using a generalizable knowledge database, which has the potential to substantially reduce experimental efforts required for antibody developability optimization.",
+    "topic": "Antibody optimization; in silico developability optimization; Retrieval-Augmented Generation; Protein Language Models",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/5efc69baa8cd34bdf5fd50a3b794553ad3c104a5.pdf"
+  },
+  {
+    "id": "XAhcYXdqSJ",
+    "title": "Structure-based synthetic data augmentation for protein language models",
+    "authors": [
+      "Alex Jihun Lee",
+      "Ava P Amini",
+      "Kevin K Yang",
+      "Sarah Alamdari",
+      "Chentong Wang",
+      "Reza Abbasi-Asl"
+    ],
+    "abstract": "The goal of $\\textit{de novo}$ protein design is to leverage natural proteins to design new ones. Deep generative models of protein structure and sequence are the two dominant $\\textit{de novo}$ design paradigms. Structure-based models can produce highly novel proteins, but are constrained by data to produce proteins with a narrow range of topologies. Sequence-based design models produce more natural samples over a wider range of topologies, but with reduced novelty. Here, we propose a structure-based synthetic data augmentation approach to combine the benefits of structure and sequence in generative models of proteins. \nWe generated and characterized 240,830 $\\textit{de novo}$ backbone structures and used these backbones to generate 45 million sequences for data augmentation. Models trained with structure-based synthetic data augmentation generate a shifted distribution of proteins that are more likely to express successfully in $\\textit{E. coli}$ and are more thermostable. We release the trained models as well as our complete synthetic dataset, BackboneRef.",
+    "topic": "protein design; generative model; de novo design; protein language model; diffusion model; synthetic data; distribution shift",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/4bddda23afb04b3c90737b8a91c1f3daa29338e3.pdf"
+  },
+  {
+    "id": "WELNCRjsIT",
+    "title": "Molecular Property Prediction using Pretrained-BERT and Bayesian Active Learning: A Data-Efficient Approach to Drug Design",
+    "authors": [
+      "Muhammad Arslan Masood",
+      "Samuel Kaski",
+      "Tianyu Cui"
+    ],
+    "abstract": "In drug discovery, prioritizing compounds for experimental testing is a critical task that can be optimized through active learning by strategically selecting informative molecules. Active learning typically trains models on labeled examples alone, while unlabeled data is only used for acquisition. This fully supervised approach neglects valuable information present in unlabeled molecular data, impairing both predictive performance and the molecule selection process. We address this limitation by integrating a transformer-based BERT model, pretrained on 1.26 million compounds, into the active learning pipeline. This effectively disentangles representation learning and uncertainty estimation, leading to more reliable molecule selection. Experiments on Tox21 and ClinTox datasets demonstrate that our approach achieves equivalent toxic compound identification with 50\\% fewer iterations compared to conventional active learning. Analysis reveals that pretrained BERT representations generate a structured embedding space enabling reliable uncertainty estimation despite limited labeled data, confirmed through Expected Calibration Error measurements. This work establishes that combining pretrained molecular representations with active learning significantly improves both model performance and acquisition efficiency in drug discovery, providing a scalable framework for compound prioritization.",
+    "topic": "Active learning; Bayesian; Representation learning; drug design",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/3b816f72a74ddf19734f04956548a118f31dcc41.pdf"
+  },
+  {
+    "id": "yuiQMh52Bm",
+    "title": "Steering Generative Models with Experimental Data for Protein Fitness Optimization",
+    "authors": [
+      "Jason Yang",
+      "Wenda Chu",
+      "Daniel Khalil",
+      "Raul Astudillo",
+      "Bruce James Wittmann",
+      "Frances H. Arnold",
+      "Yisong Yue"
+    ],
+    "abstract": "Protein fitness optimization involves finding an ideal protein sequence satisfying desired quantitative properties in an astronomically large design space of possible sequences, where it is often only possible to measure real-world fitness for few (hundreds of) sequences. Existing machine learning approaches for efficiently navigating the protein design space broadly fall into two categories–discriminative (often supervised) modeling and generative modeling–each with their own strengths and weaknesses. Supervised models can be used to identify promising variants, but require predicting fitness values for all possible sequences in a design space. Generative models, on the contrary, are not hampered by the size of a design space, but historically it has been difficult to direct these models toward specific fitness goals. To address these limitations, we propose a framework for protein sequence optimization in which generative priors on natural sequences are steered with assay-labeled fitness data, taking advantage of both unlabeled and labeled data. Specifically, we evaluate discrete diffusion and language models in combination with various steering techniques such as guidance and reinforcement learning. Our computational studies on the TrpB and CreiLOV protein fitness datasets show that various methods, particularly guidance with discrete diffusion models, are effective strategies for protein fitness optimization.",
+    "topic": "protein engineering; generative model; machine learning; discrete diffusion; guidance; reinforcement learning; language model; optimization",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/6bae2a5bd7b9aa4b3527fc98ea851784c67f7974.pdf"
+  },
+  {
+    "id": "zQhhGPorqI",
+    "title": "Residue-level text conditioning for protein language model mutation effect prediction",
+    "authors": [
+      "Dan Berenberg",
+      "Nate Gruver",
+      "Alan Nawzad Amin",
+      "Peter Mørch Groth",
+      "Leo Chen",
+      "Harsh R. Srivastava",
+      "Pascal Notin",
+      "Debora Susan Marks",
+      "Andrew Gordon Wilson",
+      "Kyunghyun Cho",
+      "Richard Bonneau"
+    ],
+    "abstract": "To augment protein sequence models with language, we introduce Conditioning on Residue-level Annotations from TExt (CRATE), a fine-tuning method that fuses two models using feature-wise linear modulation. \nWe fine-tune protein language models at a large scale, first constructing a dataset (CRATE-train) joining annotations from InterPro and UniProtKB with sequences from UniRef90 resulting in approximately 105 million sequences each with at least three annotations and nearly 100\\% sequence coverage on average. \nApplying CRATE to mutation effect prediction improves performance on the ProteinGym over prior benchmarks. \nLeveraging these improvements, we show CRATE can be used to select annotations with the largest positive impact on mutation effect prediction and estimate the deep mutational scan (DMS) scores tested over multiple different assay selection types.",
+    "topic": "text-conditioning; protein engineering; mutation effect prediction; protein language model; model fusion",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/6e6cfcc5280a2670dbc319a36b762c72bd72b8fa.pdf"
+  },
+  {
+    "id": "RY5S0Rd6L7",
+    "title": "Learning Representations of Instruments for Partial Identification of Treatment Effects",
+    "authors": [
+      "Jonas Schweisthal",
+      "Dennis Frauen",
+      "Maresa Schröder",
+      "Konstantin Hess",
+      "Niki Kilbertus",
+      "Stefan Feuerriegel"
+    ],
+    "abstract": "Reliable estimation of treatment effects from observational data is crucial in fields like medicine, yet challenging when the unconfoundedness assumption is violated. We leverage arbitrary (potentially high-dimensional) instruments to estimate bounds on the conditional average treatment effect (CATE). Our contributions are three-fold: (1) We propose a novel approach for partial identification by mapping instruments into a discrete representation space that yields valid CATE bounds, essential for reliable decision-making. (2) We derive a two-step procedure that learns tight bounds via neural partitioning of the latent instrument space, thereby avoiding instability from numerical approximations or adversarial training and reducing finite-sample variance. (3) We provide theoretical guarantees for valid bounds with reduced variance and demonstrate effectiveness through extensive experiments. Overall, our method offers a new avenue for practitioners to exploit high-dimensional instruments (e.g., in Mendelian randomization).",
+    "topic": "causal inference; Mendelian randomization; partial identification; instrumental variables; treatment effect; representation learning",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/94809ad3410407763a05794b9fbe6646e72b7071.pdf"
+  },
+  {
+    "id": "gMBcOmLsHA",
+    "title": "Scaling Deep Learning Solutions for Transition Path Sampling",
+    "authors": [
+      "Jungyoon Lee",
+      "Michael Plainer",
+      "Yuanqi Du",
+      "Lars Holdijk",
+      "Rob Brekelmans",
+      "Carla P Gomes",
+      "Dominique Beaini",
+      "Kirill Neklyudov"
+    ],
+    "abstract": "Transition path sampling (TPS) is an important method for studying rare events, such as they happen in chemical reactions or protein folding. These events occur so infrequently that traditional simulations are often impractical, and even recent machine-learning approaches struggle to address this issue for larger systems. In this paper, we propose using modern deep learning techniques to improve the scalability of TPS methods significantly. We highlight the need for better evaluations in the existing literature and start by formulating TPS as a sampling problem over an unnormalized target density and introduce relevant evaluation metrics to assess the effectiveness of TPS solutions from this perspective. To develop a scalable approach, we explore several design choices, including a problem-informed neural network architecture, simulated annealing, the integration of prior knowledge into the sampling process, and attention mechanisms. Finally, we conduct a comprehensive empirical study and compare these design choices with other recently developed deep-learning methods for rare event sampling.",
+    "topic": "generative model; sampling; transition path sampling; rare event",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/e5740474d55d6fe742185e0f33f2ef121e1dab3a.pdf"
+  },
+  {
+    "id": "BC4vd3oBXs",
+    "title": "SweetBERT: exploring BERT-based models for IUPAC glycan nomenclature modeling",
+    "authors": [
+      "Irene Rubia-Rodríguez",
+      "Henrik Nielsen",
+      "Garry P. Gippert",
+      "Kristian Barrett",
+      "Bernard Henrissat",
+      "Ole Winther"
+    ],
+    "abstract": "Glycans are the most abundant biomolecules on Earth, and participate in key processes in all living organisms. The chemical variability and topological complexity of their natural branched structures has been a challenge in computational glycobiology. As a tool for improving predictive models associated with glycobiology, we propose SweetBERT, a BERT-based language model for encoding glycan sequences which includes explicit information about the branching structure of the sequence. This is achieved by including a pseudo-graph representation in the input embeddings. Performance on downstream tasks by our model underscore promising results of Transformer architectures in addressing the complexities of glycan representation.",
+    "topic": "Glybiology; BERT; Transformers; Language Models",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/090f47904c368116fe81b7d5f99309d8aaaa6408.pdf"
+  },
+  {
+    "id": "EkV2sPrMy5",
+    "title": "Bio2Token: All-atom tokenization of any biomolecular structure with Mamba",
+    "authors": [
+      "Andrew Liu",
+      "Axel Elaldi",
+      "Nathan Russell",
+      "Olivia Viessmann"
+    ],
+    "abstract": "Efficient encoding and representation of large 3D molecular structures with high fidelity is critical for biomolecular design applications. Despite this, many representation learning approaches restrict themselves to modeling smaller systems or use coarse-grained approximations of the systems, for example modeling proteins at the resolution of amino acid residues rather than at the level of individual atoms. To address this, we develop quantized auto-encoders that learn atom-level tokenizations of complete proteins, RNA and small molecule structures with reconstruction accuracies well below 1 Angstrom. We demonstrate that a simple Mamba state space model architecture is efficient compared to an SE(3)-invariant IPA architecture, reaches competitive accuracies and can scale to systems with almost 100,000 atoms. The learned structure tokens of bio2token may serve as the input for all-atom generative models in the future.",
+    "topic": "all-atom modelization; long context; auto-encoder; tokenization",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/e42676bba18adf5798ad3a7fdd46bc756ad46b49.pdf"
+  },
+  {
+    "id": "H7KaafflRG",
+    "title": "A generalized protein design ML model enables generation of functional de novo proteins",
+    "authors": [
+      "Timothy P Riley",
+      "Oleg Matusovsky",
+      "Mohammad S. Parsa",
+      "Pourya Kalantari",
+      "Kooshiar Azimian",
+      "Kathy Y Wei"
+    ],
+    "abstract": "Despite significant advancements, the creation of functional proteins de novo remains a fundamental challenge. Although deep learning has revolutionized applications such as protein folding, a critical gap persists in integrating design objectives across structure and function. Here, we present MP4, a transformer-based AI model that generates novel sequences from functional text prompts, that enables the design of fully folded, functional proteins from minimal input specifications. Our approach demonstrates the ability to generate entirely novel proteins with high experimental success rates or effectively redesign existing proteins. This transformer-based model highlights the potential of generalist AI to address complex challenges in protein design, offering a versatile alternative to specialized approaches.",
+    "topic": "De novo protein design; molecule programming; text-to-protein; protein ML model; machine learning",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/045b2a55a5d4d84ec255a593f8d9d21e5cc3b513.pdf"
+  },
+  {
+    "id": "wLSOBVoviS",
+    "title": "Action-Minimization Meets Generative Modeling: Efficient Transition Path Sampling with the Onsager-Machlup Functional",
+    "authors": [
+      "Sanjeev Raja",
+      "Martin Sipka",
+      "Michael Psenka",
+      "Tobias Kreiman",
+      "Michal Pavelka",
+      "Aditi S. Krishnapriyan"
+    ],
+    "abstract": "Transition path sampling (TPS), which involves finding probable paths connecting two points on an energy landscape, remains a challenge due to the complexity of real-world atomistic systems. Current machine learning approaches rely on expensive training procedures and under-utilize growing quantities of atomistic data, limiting scalability and generalization. In this work, we address TPS by interpreting candidate paths as trajectories sampled from stochastic dynamics induced by the learned score function of generative models, namely denoising diffusion and flow matching. Under these dynamics, finding high-likelihood transition paths becomes equivalent to minimizing the Onsager-Machlup (OM) action functional, enabling us to repurpose pre-trained generative models for TPS in a zero-shot fashion. We demonstrate our approach on several fast-folding proteins, where we obtain diverse, physically realistic transition pathways, as well as tetrapeptides, where we demonstrate successful TPS on systems not seen by the generative model during training. Our method can be easily incorporated into new generative models, making it practically relevant as models continue to scale and improve.",
+    "topic": "transition path sampling; molecular dynamics; generative models; diffusion models; flow matching models",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/439da8a04ddb0165ae450ee7b48ae009c0469c50.pdf"
+  },
+  {
+    "id": "yCBNLmLqoy",
+    "title": "Flow-Based Fragment Identification via Contrastive Learning of Binding Site-Specific Latent Representations",
+    "authors": [
+      "Rebecca Manuela Neeser",
+      "Ilia Igashov",
+      "Arne Schneuing",
+      "Michael M. Bronstein",
+      "Philippe Schwaller",
+      "Bruno Correia"
+    ],
+    "abstract": "Fragment-based drug design is a promising strategy leveraging the binding of individual fragments, potentially yielding ligands with multiple key interactions, surpassing the efficiency of full ligand screening. The initial step of fragment identification remains challenging, as fragments often bind weakly and non-specifically. We propose a protein-fragment encoder, a new contrastive learning approach that captures protein-fragment interactions. Its latent space allows to perform virtual screening as well as generative design. In the latter case, fragment embeddings are generated conditioned on the protein surface. Our method locates protein-fragment interactions with high sensitivity and can be directly applied to virtual screening for which we observed competitive fragment recovery rates. The generative method outperforms common methods such as virtual screening providing a valuable starting point for fragment hit discovery. Together, these approaches contribute to advancing fragment identification and could provide valuable tools for fragment-based drug discovery. All the code and data can be found on https://github.com/rneeser/LatentFrag.",
+    "topic": "Machine learning; representation learning; fragment based drug design; drug design",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/0e5806df934264cbb1a7273ee4c3b2eb94545140.pdf"
+  },
+  {
+    "id": "CTzjxHGXMT",
+    "title": "Protein structure predictors implicitly define binding energy functions",
+    "authors": [
+      "Divya Nori",
+      "Anisha Parsan",
+      "Caroline Uhler",
+      "Wengong Jin"
+    ],
+    "abstract": "Estimating binding energies is vital for drug discovery, yet supervised methods are hampered by limited experimental data. Recent protein structure predictors (e.g. AlphaFold3) offer unsupervised alternatives via confidence metrics that correlate with binding energies. However, these metrics operate on a fixed scale, limiting their ability to capture fine-grained energy differences. Leveraging the Joint Energy-based Model (JEM) framework, we show that protein structure predictors implicitly define an energy function, and we introduce two new energy-based models derived from the confidence head. Our EBMs consistently improve binding energy prediction, outperforming both traditional confidence metrics and unsupervised baselines, and demonstrate that structure prediction models can be repurposed as powerful unsupervised energy predictors.",
+    "topic": "Energy-based models; protein-protein binding; protein-RNA binding; protein folding models",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/bce908983c69f44ef567607cf4a37711cdaa9a2e.pdf"
+  },
+  {
+    "id": "QjHSgQ5avt",
+    "title": "Mol-MoE: Training Preference-Guided Routers for Molecule Generation",
+    "authors": [
+      "Diego Calanzone",
+      "Pierluca D'Oro",
+      "Pierre-Luc Bacon"
+    ],
+    "abstract": "Recent advances in language models have enabled framing molecule generation as sequence modeling. However, existing approaches often rely on single-objective reinforcement learning, limiting their applicability to real-world drug design, where multiple competing properties must be optimized. Traditional multi-objective reinforcement learning (MORL) methods require costly retraining for each new objective combination, making rapid exploration of trade-offs impractical. To overcome these limitations, we introduce Mol-MoE, a mixture-of-experts (MoE) architecture that enables efficient test-time steering of molecule generation without retraining. Central to our approach is a preference-based router training objective that incentivizes the router to combine experts in a way that aligns with user-specified trade-offs. This provides improved flexibility in exploring the chemical property space at test time, facilitating rapid trade-off exploration. Benchmarking against state-of-the-art methods, we show that Mol-MoE achieves superior sample quality and steerability.",
+    "topic": "drug-design; multi-objective; molecule; sequence models; computational biology; language alignment; transformers",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/61968d3507b62633d6a334a14ac62c9663e9ab6c.pdf"
+  },
+  {
+    "id": "zjGwoJaVPS",
+    "title": "Interpreting and Steering Protein Language Models through Sparse Autoencoders",
+    "authors": [
+      "Edith Natalia Villegas Garcia",
+      "Alessio ansuini"
+    ],
+    "abstract": "The rapid advancements in transformer-based language models have revolutionized natural language processing, yet understanding the internal mechanisms of these models remains a significant challenge. This paper explores the application of sparse autoencoders (SAE) to interpret the internal representations of protein language models, specifically focusing on the ESM-2 8M parameter model. By performing a statistical analysis on each latent component’s relevance to distinct protein annotations, we identify potential interpretations linked to various protein characteristics, including transmembrane regions, binding sites, and specialized motifs. We then leverage these insights to guide sequence generation, shortlisting the relevant latent components that can steer the model toward desired targets such as zinc finger domains. This work contributes to the emerging field of mechanistic interpretability in biological sequence models, offering new perspectives on model steering for sequence design.",
+    "topic": "proteins; interpretability; sparse autoencoders",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/50811a7b9e0c547cc283236eccd71327e80a34dd.pdf"
+  },
+  {
+    "id": "xhvni4WtCt",
+    "title": "Programming co-folding to design binders for intrinsically disordered epitopes",
+    "authors": [
+      "Jakub Lála",
+      "Daniele Visco",
+      "Stefano Angioletti-Uberti"
+    ],
+    "abstract": "Due to their lack of a specific structure and dynamical nature, targeting of epitopes that are part of an intrinsically disordered region of a protein is a notoriously difficult task. Here, we describe a computational approach to overcome this problem, based on the use of a protein folding algorithm within a Monte Carlo optimization pipeline to generate peptide binders that bind by co-folding with their epitope. For different protein targets, we show by accurate free-energy calculations that our approach is able to design strong binders, with binding free energies of the order of tens of $k_B T$ (i.e. stronger than 50 kJ/mol), corresponding to $K_D$ values in the nM regime or lower. Direct observation of the molecular structures during the binding process shows the binder and targeted epitope fold upon binding and acquire a structure not presented in their unbound state, suggesting that co-folding is the implied mechanism, and that the latter is correctly described by the protein folding algorithm we employ. Given the ubiquitous presence of unstructured regions in proteins, our results suggest a potential pathway to design drugs targeting a large variety of previously untargetable epitopes and opens new possibilities for therapeutic intervention in diseases where disordered proteins play a key role.",
+    "topic": "Protein Design; Intrinsically Disordered Proteins; Co-folding; Monte Carlo Optimization; Free Energy Calculations",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/94eec7c5f54256f94f097f2f26f5bec0c0058d21.pdf"
+  },
+  {
+    "id": "MOP4UvU1iY",
+    "title": "Fast and Accurate Antibody Sequence Design via Structure Retrieval",
+    "authors": [
+      "Xingyi Zhang",
+      "Kun XIE",
+      "Ningqiao Huang",
+      "Wei Liu",
+      "Peilin Zhao",
+      "Sibo Wang",
+      "Kangfei Zhao",
+      "Biaobin Jiang"
+    ],
+    "abstract": "Recent advancements in protein design have leveraged diffusion models to generate structural scaffolds, followed by a process known as protein inverse folding, which involves sequence inference on these scaffolds. However, these methodologies face significant challenges when applied to hyper-variable structures such as antibody Complementarity-Determining Regions (CDRs), where sequence inference frequently results in non-functional sequences due to hallucinations. Distinguished from prevailing protein inverse folding approaches, this paper introduces Igseek, a novel structure-retrieval framework that infers CDR sequences by retrieving similar structures from a natural antibody database. Specifically, Igseek employs a simple yet effective multi-channel equivariant graph neural network to generate high-quality geometric representations of CDR backbone structures. Subsequently, it aligns sequences of structurally similar CDRs and utilizes structurally conserved sequence motifs to enhance inference accuracy. Our experiments demonstrate that Igseek not only proves to be highly efficient in structural retrieval but also outperforms state-of-the-art approaches in sequence recovery for both antibodies and T-Cell Receptors, offering a new retrieval-based perspective for therapeutic protein design.",
+    "topic": "Antibody Design; Equivariant Graph Neural Networks",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/72d0dc5af2231951abdddb2ad8c9007ee3d78a23.pdf"
+  },
+  {
+    "id": "6KEIozOj6I",
+    "title": "Why risk matters for protein binder design",
+    "authors": [
+      "Tudor-Stefan Cotet",
+      "Igor Krawczuk"
+    ],
+    "abstract": "Bayesian optimization (BO) has recently become more prevalent in protein engineering applications and hence has become a fruitful target of benchmarks. However, current BO comparisons often overlook real-world considerations like risk and cost constraints. In this work, we compare 72 model combinations of encodings, surrogate models, and acquisition functions on 11 protein binder fitness landscapes, specifically from this perspective. Drawing from the portfolio optimization literature, we adopt metrics to quantify the cold-start performance relative to a random baseline, to assess the risk of an optimization campaign, and to calculate the overall budget required to reach a fitness threshold. Our results suggest the existence of Pareto-optimal models on the risk-performance axis, the shift of this preference depending on the landscape explored, and the robust correlation between landscape properties such as epistasis with the average and worst-case model performance. They also highlight that rigorous model selection requires substantial computational and statistical efforts.",
+    "topic": "Bayesian Optimization; Protein Engineering; Risk Analysis; Model Selection; Benchmarking; Active Learning; Fitness Landscapes; Experimental Design; Portfolio Optimization; Protein-Protein Binding; Uncertainty Quantification; risk-aware optimization; risk-aware benchmarking",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/0000e22d8ada70d12b2578cd74573f9d32d341be.pdf"
+  },
+  {
+    "id": "8F2JrQC2DJ",
+    "title": "De Novo Design of Antigen-Specific Antibodies Using Structural Constraint-Based Generative Language Model",
+    "authors": [
+      "Yuran Jia",
+      "Bing He",
+      "Tianxu Lv",
+      "YangXiao",
+      "Tianyi Zhao",
+      "Jianhua Yao"
+    ],
+    "abstract": "Despite significant advances in computational antibody design, the limited availability of high-quality binding data continues to constrain the exploration of diverse antibody syntax and uncharted evolutionary landscapes. To overcome these challenges, we developed PALM-PA (Pre-trained Antibody Generative Large Language Model–Preference Alignment), which integrates antibody linguistic patterns with structural constraints to explore novel sequence spaces. Experimental validation on influenza A hemagglutinin and programmed death-ligand 1 (PD-L1) demonstrated nanomolar binding affinities (30.2 nM and 1.29 nM, respectively), underscoring the feasibility of using structure-guided language models for the de novo design of antibodies.",
+    "topic": "Antibody engineering; De novo design; Iterative optimization; Large language model",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/2b1ac50bc5143c10e7dc6e8baf77233d7b5008b9.pdf"
+  },
+  {
+    "id": "Q5X8SGQGMM",
+    "title": "RNA-EFM : Energy based Flow Matching for Protein-conditioned RNA Sequence-Structure Co-design",
+    "authors": [
+      "Abrar Rahman Abir",
+      "Liqing Zhang"
+    ],
+    "abstract": "Ribonucleic acids (RNAs) are essential biomolecules involved in gene regulation and molecular recognition. Designing RNA molecules that can bind specific protein targets is crucial for therapeutic applications but remains challenging due to the structural flexibility of RNA and the laborious nature of experimental techniques. We propose RNA-EFM, a novel Energy-based Flow Matching framework for protein conditioned RNA sequence and structure co-design. RNA-EFM integrates biophysical constraints, including the Lennard-Jones potential and sequence-derived free energy, to generate low-energy and biologically plausible RNA conformations. By incorporating an idempotent refinement strategy for iterative structural correction, RNA-EFM consistently outperforms existing baselines, achieving lower RMSD, higher lDDT, and superior sequence recovery across multiple evaluation splits.",
+    "topic": "Flow Matching; RNA Design; Generative Model",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/29f50618a7f443f2403ef84cddc1e7b2ed04cd98.pdf"
+  },
+  {
+    "id": "FFVkHpSV3b",
+    "title": "GENERATIVE PROTEIN DESIGN FOR OVERLAPPING GENES",
+    "authors": [
+      "Chenling Xu",
+      "Jennifer Lynn Chlebek",
+      "Jonathan E Allen",
+      "Hunter Nisonoff",
+      "Dan Mcfarland Park"
+    ],
+    "abstract": "Successfully designed overlapping genes are protected from mutations and horizontal gene transfers, and an effective computational design method can have a large impact on stabilizing genetic constructs in synthetic biology. However, designing overlapping protein sequences in an alternative reading frame is a challenging task because it requires substantial sequence changes to both proteins, and the sequence space is constrained by their shared DNA sequences. We present an experimental dataset of highly divergent overlapping gene pair sequences with functional validation designed using a previously published method CAMEOS. We propose an iterative method for designing overlapping genes making use of a cutting-edge frontier generative model ESM3 and compare its output to the experimentally validated sequences. Our results highlight the surprising effectiveness of ESM3 at predicting \\textit{in vitro} protein fitness with only structure information. We used the new approach to generate over 2800 overlapping sequence designs with ESM3 computed scores higher than the minimum score of experimentally validated variants.",
+    "topic": "protein design; synthetic biology; generative models",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/5a1329c6e4d0fb1c1fabe39c96bae00e02944414.pdf"
+  },
+  {
+    "id": "Ek7HsjIWfb",
+    "title": "Hierarchical Protein Backbone Generation with Latent and Structure Diffusion",
+    "authors": [
+      "Jason Yim",
+      "Marouane Jaakik",
+      "Ge Liu",
+      "Jacob Gershon",
+      "Karsten Kreis",
+      "David Baker",
+      "Regina Barzilay",
+      "Tommi Jaakkola"
+    ],
+    "abstract": "We propose a hierarchical protein backbone generative model that separates coarse and fine-grained details. Our approach called LSD consists of two stages: sampling latents which are decoded into a contact map then sampling atomic coordinates conditioned on the contact map. LSD allows new ways to control protein generation towards desirable properties while scaling to large datasets. In particular, the AlphaFold DataBase (AFDB) is appealing due as its diverse structure topologies but suffers from poor designability. We train LSD on AFDB and show latent diffusion guidance towards AlphaFold2 Predicted Alignment Error and long range contacts can explicitly balance designability, diversity, and noveltys in the generated samples. Our results are competitive with structure diffusion models and outperforms prior latent diffusion models.",
+    "topic": "Proteins; latent diffusion",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/0c461b7e2fe662506c03281df83c0fac32f1978b.pdf"
+  },
+  {
+    "id": "tNDxAZZPBa",
+    "title": "Sampling Protein Language Models for Functional Protein Design",
+    "authors": [
+      "Jeremie Theddy Darmawan",
+      "Yarin Gal",
+      "Pascal Notin"
+    ],
+    "abstract": "Protein language models have emerged as powerful tools for learning rich representations of proteins, enhancing performance across various downstream tasks such as structure prediction, mutation effects prediction, and homology detection. Their ability to learn complex distributions over protein sequences also shows significant potential for designing novel and functional proteins, with broad applications in therapeutics, new materials, and sustainability. Given the vastness of the protein sequence space, efficient exploration methods are critical to the success of protein engineering efforts.\nHowever, the methodologies for effectively sampling from these models to achieve core protein design objectives remain underexplored and have predominantly relied on techniques initially developed for Natural Language Processing tasks.\nIn this work, we first develop a comprehensive *in silico* protein design evaluation framework to systematically compare different sampling methods. After a thorough review of existing sampling strategies for language models, we introduce several approaches specifically tailored for protein design. We then evaluate these strategies using our *in silico* benchmark, investigating the effects of key hyperparameters and providing practical guidance on the relative strengths of each method depending on design objectives.",
+    "topic": "Protein design; protein language models; sampling algorithms; in silico evaluation",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/ca51a0e24b51bf91ae8522530c47b7a9d196ece4.pdf"
+  },
+  {
+    "id": "8xtKcLfIho",
+    "title": "Targeting Aggregating Proteins with Language Model-Designed Degraders",
+    "authors": [
+      "Rio Watson",
+      "Kishan Patel",
+      "Tong Chen",
+      "Pranam Chatterjee"
+    ],
+    "abstract": "Protein aggregation drives several neurological diseases and pediatric cancers, yet current inhibitors fail to directly target aggregating proteins or provide long-term disease modification. Advances in generative artificial intelligence (AI), particularly protein language models (pLMs), have enabled the design of peptide binders for disordered and oncogenic targets. Using these models, we designed peptide binders for mutant GFAP (Alexander Disease) and PAX3::FOXO1 (Alveolar Rhabdomyosarcoma). When fused to E3 ubiquitin ligase domains, these binders selectively degrade their targets, and in the case of GFAP, reducing aggregation. Our results demonstrate that pLM-designed peptide-guided degraders provide a powerful strategy for treating aggregation-driven diseases.",
+    "topic": "Peptide design; language models; cancer; neurodegenerative disease",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/806e3d268e253344ef8205a5fe840c4b7d720450.pdf"
+  },
+  {
+    "id": "qSvGQWNsbB",
+    "title": "Towards Protein Sequence & Structure Co-Design with Multi-Modal Language Models",
+    "authors": [
+      "Stephen Zhewen Lu",
+      "Jiarui Lu",
+      "Hongyu Guo",
+      "Jian Tang"
+    ],
+    "abstract": "Proteins perform diverse biological functions, governed by the intricate relationship between their sequence and three-dimensional structure. While protein language models (PLMs) have demonstrated remarkable success in functional annotation and structure prediction, their potential for sequence-structure co-design remains underexplored. This limitation arises from pre-training objectives that favor masked token prediction over generative modeling. In this work, we systematically explore sampling strategies to enhance the generative capabilities of PLMs for co-design. Notably, we introduce a ranked iterative decoding with re-masking scheme, enabling PLMs to generate sequences and structures more effectively. Benchmarking ESM3 across multiple scales, we demonstrate that using PLMs effectively at sampling time for co-design tasks can outperform specialized architectures that lack comparable scaling properties. Our work advances the field of computational protein design by equipping PLMs with robust generative capabilities tailored to sequence-structure interdependence.",
+    "topic": "protein language model; ESM3; co-design",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/63fb0cfa201c1c16f18cd0408e6227957bc56e70.pdf"
+  },
+  {
+    "id": "0UzOpvcz52",
+    "title": "A Mammalian High-Throughput Assay to Screen AI-Designed Protein Degraders",
+    "authors": [
+      "Lin Zhao",
+      "Aastha Pal",
+      "Tong Chen",
+      "Pranam Chatterjee"
+    ],
+    "abstract": "The development of specific protein binders is crucial for biologics and targeted protein degradation (TPD) therapies. However, existing screening methods are low-throughput, labor-intensive, and often rely on non-human display systems such as phage, yeast, or mRNA display, limiting their translational relevance. To address this, we developed a high-throughput, human cell-based binder screening platform that enables the functional evaluation of artificial intelligence (AI)-designed peptide binders in a mammalian context. Our approach utilizes genetically-encodable, doxycycline-inducible ubiquibodies (uAbs), where a library of computationally designed ``guide'' peptides is fused to an E3 ubiquitin ligase domain, enabling modular, CRISPR-like TPD. By monitoring degradation through an mCherry-fused target protein, we screen and validate AI-generated binders in a physiologically relevant setting. We successfully apply this platform to identify functional binders for EWS::FLI1 and $\\beta$-catenin, two highly challenging oncogenic targets. Overall, our approach facilitates the discovery of AI-designed binders for diverse therapeutic applications.",
+    "topic": "Peptide design; high-throughput screening",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/b676bee26f373808fbeaf95fbf89818628adb0ae.pdf"
+  },
+  {
+    "id": "GL8SGM1Teq",
+    "title": "AffinityFlow: Guided Flows for Antibody Affinity Maturation",
+    "authors": [
+      "Can Chen",
+      "Karla-Luise Herpoldt",
+      "Chenchao Zhao",
+      "Zichen Wang",
+      "Marcus D. Collins",
+      "Shang Shang",
+      "Ron Benson"
+    ],
+    "abstract": "Antibodies are widely used as therapeutics, but their development requires costly affinity maturation, involving iterative mutations to enhance binding affinity. This paper explores a sequence-only scenario for affinity maturation, using solely antibody and antigen sequences. Recently AlphaFlow wraps AlphaFold within flow matching to generate diverse protein structures, enabling a sequence-conditioned generative model of structure. Building on this, we propose an \\textit{alternating optimization} framework that (1) fixes the sequence to guide structure generation toward high binding affinity using a structure-based predictor, then (2) applies inverse folding to create sequence mutations, refined by a sequence-based predictor. A key challenge is the lack of labeled data for training both predictors. To address this, we develop a \\textit{co-teaching} module that incorporates valuable information from noisy biophysical energies into predictor refinement. The sequence-based predictor selects consensus samples to teach the structure-based predictor, and vice versa. Our method, \\textit{AffinityFlow}, achieves state-of-the-art performance in affinity maturation experiments.",
+    "topic": "flow matching; co-teaching; protein design; antibody affinity maturation; protein property prediction",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/3b5a19badadf012f2ff502a424eb8bea1e5c8060.pdf"
+  },
+  {
+    "id": "29YgYt69Kl",
+    "title": "GLID$^2$E: A Gradient-Free Lightweight Fine-tune Approach for Discrete Sequence Design",
+    "authors": [
+      "Hanqun Cao",
+      "Haosen Shi",
+      "Chenyu Wang",
+      "Sinno Jialin Pan",
+      "Pheng-Ann Heng"
+    ],
+    "abstract": "The design of biological sequences is essential for engineering functional biomolecules that contribute to advancements in human health and biotechnology. Recent advances in diffusion models, with their generative power and efficient conditional sampling, have made them a promising approach for sequence generation. To enhance model performance on limited data and enable multi-objective design and optimization, reinforcement learning (RL)-based fine-tuning has shown great potential. However, existing fine-tuning methods are often unstable in discrete optimization when not using gradients or become computationally inefficient when relying on gradient-based approaches, creating significant challenges for achieving both control and stability in the tuning process.\nTo address these issues, we propose GLID$^2$E, a gradient-free RL-based tuning approach for discrete diffusion models. Our method introduces a clipped likelihood constraint to regulate the exploration space and reward shaping to better align the generative process with design objectives, ensuring a more stable and efficient tuning process. By integrating these techniques, GLID$^2$E mitigates training instabilities commonly encountered in RL and diffusion-based frameworks, enabling robust optimization even in challenging biological design tasks. In two biological systems, GLID$^2$E achieves competitive performance in function-based design while ensuring lightweight and efficient tuning.",
+    "topic": "Diffusion model; Biological sequence design; RL-based fine-tuning; AI4Science",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/058aab8d953dcffe030e74a1f6aa53f609975a88.pdf"
+  },
+  {
+    "id": "d6ExTOu00A",
+    "title": "Structural modeling of antibody variant epitope specificity with complementary experimental and computational techniques",
+    "authors": [
+      "Eva Smorodina",
+      "Oliver Crook",
+      "Johannes R. Loeffler",
+      "Monica Lisa Fernandez Quintero",
+      "Lucas Matthias Weissenborn",
+      "Hannah L Turner",
+      "Aleksandar Antanasijevic",
+      "Rahmad Akbar",
+      "Puneet Rawat",
+      "Khang Lê Quý",
+      "Brij Bhushan Mehta",
+      "Ole Magnus Fløgstad",
+      "Dario Segura-Peña",
+      "Nikolina Sekulić",
+      "Andrew B. Ward",
+      "Fridtjof Lund-Johansen",
+      "Jan Terje Andersen",
+      "Victor Greiff"
+    ],
+    "abstract": "Antibodies are key therapeutic biomolecules yet the principles underlying diverse paratopes binding to the same epitope remain unexplained. An insufficient understanding of the structural rules of antibody-antigen binding, due to a lack of experimentally resolved structures, leads to the current inability to characterize antibody variants in silico. Here we explore a rule-based antibody design strategy that relies on a thorough understanding of epitope-paratope interactions, in contrast to generative design based on millions of trials and errors. We identified the epitope of six affinity-verified complexes between HER2 and Trastuzumab paratope variants using cryo-EM and position-resolved HDX-MS. Computational analysis of modeled structural conformational ensembles replicates and expands experimental results and highlights the importance of flexibility in understanding high and low-affinity binders. Structural parameters calculated based on geometry, surface, and biochemical properties were able to stratify antibodies by affinity. Overall, our study describes the structural interfaces of the paratope variants, showing how antibodies with diverse sequences share similar binding rules.",
+    "topic": "antibody; antibody design; binding; HDX; cryo-EM; SPR; molecular docking; molecular modeling; molecular dynamics; structural modeling; structural features; computational structural biology",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/5bfd468eb8966e758d6d3338ea270d7ac0e326e9.pdf"
+  },
+  {
+    "id": "i4x6c0U302",
+    "title": "MeMDLM: De Novo Membrane Protein Design with Property-Guided Discrete Diffusion",
+    "authors": [
+      "Shrey Goel",
+      "Vishrut Thoutam",
+      "Edgar Mariano Marroquin",
+      "Aaron Gokaslan",
+      "Arash Firouzbakht",
+      "Sophia Vincoff",
+      "Volodymyr Kuleshov",
+      "Huong T. Kratochvil",
+      "Pranam Chatterjee"
+    ],
+    "abstract": "Masked Diffusion Language Models (MDLMs) have recently emerged as a strong class of generative models, paralleling state-of-the-art (SOTA) autoregressive (AR) performance across natural language modeling domains. While there have been advances in AR as well as both latent and discrete diffusion-based approaches for protein sequence design, masked diffusion language modeling with protein language models (pLMs) is unexplored. In this work, we introduce MeMDLM, an MDLM tailored for membrane protein design, harnessing the SOTA pLM ESM-2 to de novo generate realistic membrane proteins for downstream experimental applications. Our evaluations demonstrate that MeMDLM-generated proteins exceed AR-based methods by generating sequences with greater transmembrane (TM) character. We further apply our design framework to scaffold soluble and TM motifs in sequences, demonstrating that MeMDLM-reconstructed sequences achieve greater biological similarity to their original counterparts compared to SOTA inpainting methods. Finally, we apply a generalized Bayesian optimization procedure that uniquely uses saliency maps to facilitate the generation of soluble membrane proteins, paving the way for experimental applications. In total, our pipeline motivates future exploration of MDLM-based pLMs for protein design.",
+    "topic": "Membrane protein design; discrete diffusion; property guidance sampling",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/262180a494d654ea7a93f97f2dc97cfa15e0c1ca.pdf"
+  },
+  {
+    "id": "zsBwR6XOHv",
+    "title": "Guided Sequence-Structure Generative Modeling for Iterative Antibody Optimization",
+    "authors": [
+      "Aniruddh Raghu",
+      "Sebastian W. Ober",
+      "Maxwell Kazman",
+      "Hunter Elliott"
+    ],
+    "abstract": "Therapeutic antibody candidates often require extensive engineering to improve key functional and developability properties before clinical development.\nThis can be achieved through iterative design, where starting molecules are optimized over several rounds of in vitro experiments.\nWhile protein structure can provide a strong inductive bias, it is rarely used in iterative design due to the lack of structural data for continually evolving lead molecules over the course of optimization.\nIn this work, we propose a strategy for iterative antibody optimization that leverages both sequence and structure as well as accumulating lab measurements of binding and developability.\nBuilding on prior work, we first train a sequence-structure diffusion generative model that operates on antibody-antigen complexes.\nWe then outline an approach to use this model, together with carefully predicted antibody-antigen complexes, to optimize lead candidates throughout the iterative design process.\nFurther, we describe a guided sampling approach that biases generation toward desirable properties by integrating models trained on experimental data from iterative design.\nWe evaluate our approach in multiple in silico and in vitro experiments, demonstrating that it produces high-affinity binders at multiple stages of an active antibody optimization campaign.",
+    "topic": "generative modeling; diffusion; structure; antibody; iterative design",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/7cf40c1f04a417789c31d6cf3f62fd97a5fab46f.pdf"
+  },
+  {
+    "id": "Ja2le9YnqN",
+    "title": "Repurposing AlphaFold3-like Protein Folding Models for Antibody Sequence and Structure Co-design",
+    "authors": [
+      "Nianzu Yang",
+      "Jian Ma",
+      "Songlin Jiang",
+      "Huaijin Wu",
+      "Shuangjia Zheng",
+      "Wengong Jin",
+      "Junchi Yan"
+    ],
+    "abstract": "Diffusion models hold great potential for accelerating antibody design, but their performance is so far limited by the number of antibody-antigen complexes used for model training. Meanwhile, AlphaFold3-like protein folding models, pre-trained on a large corpus of crystal structures, have acquired a broad understanding of biomolecular interaction. Based on this insight, we develop a new antigen-conditioned antibody design model by adapting the diffusion module of AlphaFold3-like models for sequence-structure co-diffusion. Specifically, we extend their structure diffusion module with a sequence diffusion head and fine-tune the entire protein folding model for antibody sequence-structure co-design. Our benchmark results show that sequence-structure co-diffusion models not only surpass state-of-the-art antibody design methods in performance but also maintain structure prediction accuracy comparable to the original folding model. Notably, in the antibody co-design task, our method achieves a CDR-H3 recovery rate of 65% for typical antibodies, outperforming the baselines by 87%, and attains a remarkable 63% recovery rate for nanobodies.",
+    "topic": "antibody design; alphafold3",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/fa449e7c0c04e638dab5d8b500e85cbb30f29694.pdf"
+  },
+  {
+    "id": "1B11t29Qjn",
+    "title": "Efficient Molecular Conformer Generation with SO(3) Averaged Flow-Matching and Reflow",
+    "authors": [
+      "Zhonglin Cao",
+      "Mario Geiger",
+      "Allan Dos Santos Costa",
+      "Danny Reidenbach",
+      "Karsten Kreis",
+      "Tomas Geffner",
+      "Franco Pellegrini",
+      "Guoqing Zhou",
+      "Emine Kucukbenli"
+    ],
+    "abstract": "Fast and accurate generation of molecular conformers is desired for downstream computational chemistry and drug discovery tasks. In this work, we propose two mechanisms for accelerating the training and inference of flow-based generative model for 3D molecular conformer generation. For fast training, we introduce the SO(3)-*Averaged Flow* training objective, which we show to converge faster and generate better conformer ensembles compared to conditional optimal transport and Kabsch alignment-based optimal transport flow. For fast inference, we demonstrate that reflow methods and distillation of these models enable few-steps or even one-step molecular conformer generation with high quality. Using these two techniques, we demonstrate a model that can match the performance of strong transformer baselines with only a fraction of the number of parameters and generation steps.",
+    "topic": "Flow-matching; few-shot generation; equivariance; small molecules",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/d428ab665bc674a739a8ec61819882d9448902f3.pdf"
+  },
+  {
+    "id": "OcNEnzDMBO",
+    "title": "Programmable Protein Stabilization with Language Model-Derived Peptide Guides",
+    "authors": [
+      "Lauren Hong",
+      "Tian Zi Wang",
+      "Divya Srijay",
+      "Howard Liu",
+      "Rio Watson",
+      "Lin Zhao",
+      "Sophia Vincoff",
+      "Leo Chen",
+      "Kseniia Kholina",
+      "Shrey Goel",
+      "Matthew DeLisa",
+      "Pranam Chatterjee"
+    ],
+    "abstract": "Dysregulated protein degradation via the ubiquitin-proteasomal pathway can induce numerous disease phenotypes, including cancer, neurodegeneration, and diabetes. While small molecule-based targeted protein degradation (TPD) and targeted protein stabilization (TPS) platforms can address this dysregulation, they rely on structured and stable binding pockets, which do not exist to classically “undruggable” targets. Here, we expand the TPS target space by engineering “deubiquibodies” (duAbs) via fusion of computationally-designed peptide binders to the catalytic domain of the potent OTUB1 deubiquitinase. In human cells, duAbs effectively stabilize exogenous and endogenous proteins in a DUB-dependent manner. Using protein language models to generate target-binding peptides, we engineer duAbs to conformationally diverse target proteins, including key tumor suppressor proteins p53 and WEE1, and heavily-disordered fusion oncoproteins, such as PAX3::FOXO1. We further encapsulate p53-targeting duAbs as mRNA in lipid nanoparticles and demonstrate effective intracellular delivery, p53 stabilization, and apoptosis activation, motivating further in vivo translation.",
+    "topic": "Protein stabilization; protein language models",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/1ce5f3bbb3ccc6a28593fc5339ece4e8257c3fbe.pdf"
+  },
+  {
+    "id": "iOF99hElDg",
+    "title": "Compositional Flows for 3D Molecule and Synthesis Pathway Co-design",
+    "authors": [
+      "Tony Shen",
+      "Seonghwan Seo",
+      "Ross Irwin",
+      "Kieran Didi",
+      "Simon Olsson",
+      "Woo Youn Kim",
+      "Martin Ester"
+    ],
+    "abstract": "Many generative applications, such as synthesis-based 3D molecular design, involve constructing compositional objects with continuous features. Here, we introduce Compositional Generative Flows (CGFlow), a novel framework that extends flow matching to generate objects in compositional steps while modeling continuous states. Our key insight is that modeling compositional state transitions\ncan be formulated as a straightforward extension of the flow matching interpolation process. We further build upon the theoretical foundations of generative flow networks (GFlowNets), enabling reward-guided sampling of compositional structures. We apply CGFlow to synthesizable drug design by jointly designing the molecule’s synthetic pathway with its 3D binding pose. Our approach achieves\nstate-of-the-art binding affinity on all 15 targets from the LIT-PCBA benchmark, and 5.8× improvement in sampling efficiency compared to 2D synthesis-based baseline. To our best knowledge, our method is also the first to achieve best performance in both Vina Dock (-9.38 kcal/mol) and AiZynthFinder success rate (62.2%) on the CrossDocked benchmark.",
+    "topic": "drug discovery; synthesizable molecular design; GFlowNets; flow matching",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/0aa18718d077886b0de70a7c07c19daa3d34fae1.pdf"
+  },
+  {
+    "id": "wPZ2seR0iI",
+    "title": "Piloting Structure-Based Drug Design via Modality-Specific Optimal Schedule",
+    "authors": [
+      "Keyue Qiu",
+      "Yuxuan Song",
+      "Zhehuan Fan",
+      "Peidong Liu",
+      "Zhe Zhang",
+      "Mingyue Zheng",
+      "Hao Zhou",
+      "Wei-Ying Ma"
+    ],
+    "abstract": "Structure-Based Drug Design (SBDD) is crucial for identifying bioactive molecules. Recent deep generative models are faced with challenges in geometric structure modeling. A major bottleneck lies in the twisted probability path of multi-modalities—continuous 3D positions and discrete 2D topologies—which jointly determine molecular geometries. By establishing the fact that noise schedules decide the Variational Lower Bound (VLB) for the twisted probability path, we propose VLB-Optimal Scheduling (VOS) strategy in this under-explored area, which optimizes VLB as a path integral for SBDD. Our model effectively enhances molecular geometries and interaction modeling, achieving state-of-the-art PoseBusters passing rate of 95.9\\% on CrossDock, more than 10\\% improvement upon strong baselines, while unlocking the potential of repurposing SBDD model as docking method, with 44.0\\% RMSD $<$ 2\\r{A} on PoseBusters V2.",
+    "topic": "Structure-based Drug Design; Noise Schedule",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/152d8caac6a0343d1a3b88aa2a024c0a6bb96019.pdf"
+  },
+  {
+    "id": "YcC0BYFvgR",
+    "title": "ESM-Effect: An Effective and Efficient Fine-Tuning Framework towards accurate prediction of Mutation's Functional Effect",
+    "authors": [
+      "Moritz Glaser"
+    ],
+    "abstract": "Predicting functional properties of mutations like the change in enzyme activity remains challenging and is not well captured by traditional pathogenicity prediction. Yet such functional predictions are crucial in areas like targeted cancer therapy where some drugs may only be administered if a mutation causes an increase in enzyme activity. Current approaches either leverage static Protein-Language Model (PLM) embeddings or complex multi-modal features (e.g., static PLM embeddings, structure, and evolutionary data) and either (1) fall short in accuracy or (2) involve complex data processing and pre-training. Standardized datasets and metrics for robust benchmarking would benefit model development but do not yet exist for functional effect prediction. \n\nTo address these challenges we develop ESM-Effect, an optimized  PLM-based functional effect prediction framework through extensive ablation studies.\nESM-Effect fine-tunes ESM2 PLM with an inductive bias regression head to achieve state-of-the-art performance. It surpasses the multi-modal state-of-the-art method PreMode, indicating redundancy of structural and evolutionary features, while training 6.7-times faster. \n\nIn addition, we develop a benchmarking framework with robust test datasets and strategies, and  propose a novel metric for prediction accuracy termed relative Bin-Mean Error (rBME): rBME  emphasizes prediction accuracy in challenging, non-clustered, and rare gain-of-function regions and correlates more intuitively with model performance than commonly used Spearman’s rho. Finally, we demonstrate partial generalization of ESM-Effect to unseen mutational regions within the same protein, illustrating its potential in precision medicine applications. Extending this generalization across different proteins remains a promising direction for future research. ESM-Effect is available at: https://github.com/lovelacecode/ESM-Effect.",
+    "topic": "Protein Language Model; PLM; Fine-Tuning; ESM2; Mutation; Functional Effect",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/b21e11d6a5fa8d88fe84be68e50db04e11b427cf.pdf"
+  },
+  {
+    "id": "SX46aWSV5B",
+    "title": "moPPIt: De Novo Generation of Motif-Specific Peptide Binders via Conditional Uniform Discrete Diffusion",
+    "authors": [
+      "Tong Chen",
+      "Yinuo Zhang",
+      "Zachary Quinn",
+      "Pranam Chatterjee"
+    ],
+    "abstract": "The ability to precisely target specific motifs on disease-related proteins, whether conserved epitopes on viral proteins, intrinsically disordered regions within transcription factors, or breakpoint junctions in fusion oncoproteins, is essential for modulating their function while minimizing off-target effects. Current methods often fall short in achieving this specificity due to a lack of reliable structural information. In this work, we introduce moPPIt, a motif-specific PPI targeting algorithm, for de novo generation of motif-specific peptide binders from the target protein sequence alone. At the core of moPPIt is BindEvaluator, a transformer-based model that interpolates protein language model embeddings of two proteins via a series of multi-headed self-attention blocks, with a key focus on local motif features. Trained on over 510,000 annotated PPIs, BindEvaluator accurately predicts binding sites given protein-protein sequence pairs with a test AUC > 0.94, improving to AUC > 0.96 when fine-tuned on peptide-protein pairs. Additionally, we present PepUDLM, a uniform diffusion language model that generates diverse and biologically plausible peptides. By integrating BindEvaluator into PepUDLM’s sampling process, moPPIt generates peptides that bind specifically to user-defined residues on target proteins. We demonstrate moPPIt's efficacy in computationally designing binders to specific motifs, first on targets with known binding peptides and then extending to structured and disordered targets with no known binders. In total, moPPIt serves as a powerful tool for developing highly specific peptide therapeutics without relying on target structure or structure-dependent latent spaces.",
+    "topic": "Discrete diffusion; peptide design; conditional generation",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/bb218b241ca44c931a690a266773af565399e7e9.pdf"
+  },
+  {
+    "id": "rl1nx3fde7",
+    "title": "Implicit Bayesian Markov Decision Process for Resource-Efficient Experimental Design in Drug Discovery",
+    "authors": [
+      "Tianchi Chen",
+      "Jan Bíma",
+      "Sean L. Wu",
+      "Otto Ritter",
+      "Bo Yuan",
+      "Bingjia Yang",
+      "Xiang Yu"
+    ],
+    "abstract": "In drug discovery, researchers make sequential decisions to schedule experiments, aiming to maximize probability of success towards drug candidates while simultaneously minimizing expected costs. However, such tasks pose significant challenges due to complex trade-offs between uncertainty reduction and allocation of constrained resources in a high-dimensional state-action space. Traditional methods based on simple rule-based heuristics or domain expertise often result in either inefficient resource utilization due to risk aversion or missed opportunities arising from reckless decisions. To address these challenges, we developed a Implicit Bayesian Markov Decision Process (IB-MDP) algorithm that constructs an implicit MDP model of the environment’s dynamics by integrating historical data through a similarity-based metric, and enables effective planning by simulating future states and actions. To enhance the robustness of the decision-making process, the IB-MDP also incorporates an ensemble approach that recommends maximum likelihood actions to effectively balance the dual objectives of reducing state uncertainty and optimizing expected costs. Our experimental results demonstrate that the IB-MDP algorithm offers significant improvements over traditional  rule-based methods by identifying optimal decisions that ensure more efficient use of resources in drug discovery.",
+    "topic": "Implicit Bayesian Markov Decision Process; Sequential Decision Making; Resource Efficiency; Ensemble Methods; Drug Discovery",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/62af650178e8c43c5034ef32b4fbfb27d86010ac.pdf"
+  },
+  {
+    "id": "CVokYznJ1i",
+    "title": "Metalorian: De Novo Generation of Heavy Metal-Binding Peptides with Classifier-Guided Diffusion Sampling",
+    "authors": [
+      "Yinuo Zhang",
+      "Divya Srijay",
+      "Pranam Chatterjee"
+    ],
+    "abstract": "We present Metalorian, a conditional diffusion model tailored to generate de novo heavy metal-binding peptides. Our approach leverages the embedding space of MetaLATTE, a multi-label classifier fine-tuned on known metal-binding sequences, to guide the generation of peptides with specific metal-binding capabilities. The model utilizes a co-evolving diffusion framework that simultaneously handles continuous protein embeddings and discrete metal-binding properties, allowing for focused generation of shorter, economically-viable peptides. We demonstrate the effectiveness of our approach by generating peptide binders for copper, cadmium, and cobalt binding. Our results show that the generated peptides maintain key properties such as charge and hydrophobicity while significantly reducing sequence length and molecular weight compared to known metal-binding proteins. Co-folding and binding energy analysis using molecular dynamics further validate the potential binding capacities of these novel sequences. Finally, we experimentally demonstrate that Metalorian-generated peptides effectively bind to cobalt resin via phage display. Overall, our work solidifies a foundational platform for designing heavy metal-binding peptides for targeted bioremediation campaigns, and further motivates utilization of well-trained, continuous latent spaces for diffusion-based de novo peptide design.",
+    "topic": "Conditional diffusion; Phage display; Heavy Metals",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/b46302f75c62df1081559a81cc363e4205d060a0.pdf"
+  },
+  {
+    "id": "VOW9YCgmMA",
+    "title": "Path Planning for Masked Diffusion Models with Applications to Biological Sequence Generation",
+    "authors": [
+      "Fred Zhangzhi Peng",
+      "Zachary Bezemek",
+      "Sawan Patel",
+      "Jarrid Rector-Brooks",
+      "Sherwood Yao",
+      "Alexander Tong",
+      "Pranam Chatterjee"
+    ],
+    "abstract": "In this paper, we investigate how the order in which tokens are unmasked during masked diffusion model (MDM) inference affects generative quality. We derive an expanded evidence lower bound (ELBO) that introduces a planner, responsible for selecting which tokens to unmask at each step. Our analysis suggests that alternative unmasking strategies can improve generative performance. Based on these insights, we propose Path Planning (P2), a training-free inference framework that leverages pre-trained BERT or the denoiser itself to guide unmasking decisions. P2 generalizes all known MDM sampling strategies and enables significant improvements across diverse domains including language generation (in-context learning, code generation, story infilling, mathematical reasoning, reverse curse correction) and biological sequence generation (protein and RNA sequences).",
+    "topic": "Protein Generation; RNA Generation; diffusion language models; discrete diffusion models",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/6ef02ed7c0f337318113b3d17e29238f41373bf9.pdf"
+  },
+  {
+    "id": "a2HORpxW4C",
+    "title": "Reinforcement learning on structure-conditioned categorical diffusion for protein inverse folding",
+    "authors": [
+      "Yasha Ektefaie",
+      "Olivia Viessmann",
+      "Siddharth Narayanan",
+      "Drew Dresser",
+      "J. Mark Kim",
+      "Armen Mkrtchyan"
+    ],
+    "abstract": "Protein inverse folding—that is, predicting an amino acid sequence that will fold into the desired 3D structure—is an important problem for structure-based protein design. Machine learning based methods for inverse folding typically use recovery of the original sequence as the optimization objective. However, inverse folding is a one-to-many problem where several sequences can fold to the same structure. Moreover, for many practical applications, it is often desirable to have multiple, diverse sequences that fold into the target structure since it allows for more candidate sequences for downstream optimizations. Here, we demonstrate that although recent inverse folding methods show increased sequence recovery, their “foldable diversity”—i.e. their ability to generate multiple non-similar sequences that fold into the structures consistent with the target—does not increase. To address this, we present RL-DIF, a categorical diffusion model for inverse folding that is pre-trained on sequence recovery and tuned via reinforcement learning on structural consistency. We find that RL-DIF achieves comparable sequence recovery and structural consistency to benchmark models but shows greater foldable diversity: experiments show RL-DIF can achieve an foldable diversity of 29% on CATH 4.2, compared to 23% from models trained on the same dataset. The PyTorch model weights and sampling code are available on GitHub.",
+    "topic": "Protein Inverse Folding; Diffusion; Reinforcement Learning",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/c67aaca74e5c12b8351ae57792946d5b86b67a1a.pdf"
+  },
+  {
+    "id": "7lX3kOw0FY",
+    "title": "It Takes Two to Tango: Directly Optimizing for Constrained Synthesizability in Generative Molecular Design",
+    "authors": [
+      "Jeff Guo",
+      "Philippe Schwaller"
+    ],
+    "abstract": "Constrained synthesizability is an unaddressed challenge in generative molecular design. In particular, designing molecules satisfying multi-parameter optimization objectives, while simultaneously being synthesizable *and* enforcing the presence of specific building blocks in the synthesis. This is practically important for molecule re-purposing, sustainability, and efficiency. In this work, we propose a novel reward function called **TANimoto Group Overlap (TANGO)**, which uses chemistry principles to transform a sparse reward function into a *dense* reward function -- crucial for reinforcement learning (RL). TANGO can augment molecular generative models to *directly* optimize for constrained synthesizability while simultaneously optimizing for other properties relevant to drug discovery. Our framework is general and addresses starting-material, intermediate, and divergent synthesis constraints. Contrary to many existing works in the field, we show that *incentivizing* a general-purpose model with RL is a productive approach to navigating challenging synthesizability optimization scenarios. We demonstrate this by showing that the trained models explicitly learn a desirable distribution. Our framework is the first *generative* approach to successfully address constrained synthesizability.",
+    "topic": "generative design; constrained synthesizability; drug discovery",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/b392a3abc0b6b97304aad83c274298df7439e769.pdf"
+  },
+  {
+    "id": "z9mxjhz8Nb",
+    "title": "Preferential Multi-Objective Bayesian Optimization for Drug Discovery",
+    "authors": [
+      "Tai Dang",
+      "Long-Hung Pham",
+      "Sang T. Truong",
+      "Ari Glenn",
+      "Wendy Nguyen",
+      "Edward A Pham",
+      "Jeffrey S. Glenn",
+      "Sanmi Koyejo",
+      "Thang Luong"
+    ],
+    "abstract": "Despite decades of advancements in automated ligand screening, large-scale docking remains resource-intensive and requires post-processing hit selection, a step where chemists manually select a few promising molecules based on their chemical intuition. This creates a major bottleneck in the virtual screening process for drug discovery, demanding experts to repeatedly balance complex trade-offs among drug properties across a vast pool of candidates. To improve the efficiency and reliability of this process, we propose a novel human-centered framework CheapVS that allows chemists to guide the ligand selection process through pairwise preference feedback. Our framework combines preferential multi-objective Bayesian optimization with an efficient diffusion docking model to capture human chemical intuition for improving hit identification. Specifically, on a library of 100K chemical candidates that target EGFR, a cancer-associated protein, CheapVS outperforms state-of-the-art docking methods in identifying drugs within a limited computational budget. Notably, our multi-objective algorithm can recover up to 16 out of 37 known drugs while scanning only 6\\% of the library, showcasing its potential to advance drug discovery\\footnote{Code and data for these experiments can be found at \\url{https://anonymous.4open.science/r/vs-9A83}}.",
+    "topic": "Drug Discovery; Virtual Screening; Molecular Docking; Bayesian Optimization; Preference Learning; Human Feedback; Diffusion Models",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/a82f45eaadbb28213fda087cefa3b64b35a8f9b7.pdf"
+  },
+  {
+    "id": "i1Zu9htCMh",
+    "title": "Few-shot active learning for de novo dual-target peptide design with high bio-activity",
+    "authors": [
+      "Tianxu Lv",
+      "Bing He",
+      "Yuran Jia",
+      "Xiang pan",
+      "Jianhua Yao"
+    ],
+    "abstract": "Despite the urgent need for high bio-activity peptides in novel biomedical therapies, the de novo design of such peptides, especially those with dual targets, remains an unsolved challenge. Here, we introduce ORIDTP, a few-shot active learning pipeline that integrates in silico peptide generation with in vitro experimental feedback for de novo design of both single-target and dual-target peptides with high bio-activity. ORIDTP involves single-target or dual-target oriented peptide de novo generation, binding affinity maturation, and iterative reinforcement of bio-activity based on wet-laboratory feedback. Using ORIDTP, we successfully designed high bio-activity peptides targeting GLP-1R after four iterative rounds, achieving $\\rm EC_{50}$ (half maximal effective concentration) values ranging from 35.1 pM to 8.1 pM, which outperform the natural peptide with the highest known bio-activity of 40.8 pM. Furthermore, ORIDTP successfully designed de novo dual-target peptides for activating GLP-1R ($\\rm EC_{50}$ values ranging from 53.4 pM to 8.2 pM) and GCGR ($\\rm EC_{50}$ values ranging from 0.82 nM to 0.21 nM) after four iterative rounds. The best dual-target peptide outperformed two natural peptides with the highest known bio-activity for their respective target proteins (8.2 pM versus 40.8 pM for GLP-1R, and 0.24 nM versus 1.4 nM for GCGR). ORIDTP represents a significant advancement in the rapid and effective design of dual-target peptides for therapeutic applications.",
+    "topic": "de novo peptide design; dual-target peptide; high bio-activity; few-shot learning; active learning",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/389f405d683ab1e018d77d454fa10aa0697e2a66.pdf"
+  },
+  {
+    "id": "a8j0RfpbC1",
+    "title": "PepTune: De Novo Generation of Therapeutic Peptides with Multi-Objective-Guided Discrete Diffusion",
+    "authors": [
+      "Sophia Tang",
+      "Yinuo Zhang",
+      "Pranam Chatterjee"
+    ],
+    "abstract": "We present PepTune, a multi-objective discrete diffusion model for the simultaneous generation and optimization of therapeutic peptide SMILES. Built on the Masked Discrete Language Model (MDLM) framework, PepTune ensures valid peptide structures with state-dependent masking schedules and penalty-based objectives. To guide the diffusion process, we propose a Monte Carlo Tree Search (MCTS)-based strategy that balances exploration and exploitation to iteratively refine Pareto-optimal sequences. MCTS integrates classifier-based rewards with search-tree expansion, overcoming gradient estimation challenges and data sparsity. Using PepTune, we generate diverse, chemically modified peptides simultaneously optimized for multiple therapeutic properties, including target binding affinity, membrane permeability, solubility, hemolysis, and non-fouling for various disease-relevant targets. In total, our results demonstrate that MCTS-guided masked discrete diffusion is a powerful and modular approach for multi-objective sequence design in discrete state spaces.",
+    "topic": "Discrete diffusion; peptide therapeutics; multi-objective optimization",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/87188977e86f6a795235350100c809d0668de83a.pdf"
+  },
+  {
+    "id": "0I6IWUaEKn",
+    "title": "Aligning Chemical and Protein Language Models with Continuous Feedback using Energy Rank Alignment",
+    "authors": [
+      "Shriram Chennakesavalu",
+      "Frank Hu",
+      "Sebastian Ibarraran",
+      "Grant M. Rotskoff"
+    ],
+    "abstract": "Large, autoregressive models trained on databases of chemical compounds and biomolecules have yielded powerful generators, but we still lack robust strategies for controlled generation. This molecular search problem closely resembles the ``alignment'' problem for large language models, though for many chemical tasks we have a specific and easily evaluable reward function. Here, we introduce an algorithm called energy rank alignment (ERA) that leverages an explicit reward function to produce a gradient-based objective that we use to optimize autoregressive policies.  We deploy this approach to align molecular transformers and protein language models to generate molecules and protein sequences, respectively, with externally specified properties and find that it does so robustly, searching through diverse parts of chemical space. The algorithm is highly scalable, does not require reinforcement learning, and performs well relative to DPO when the number of preference observations per pairing is small.",
+    "topic": "alignment; molecular transformer; protein language model; drug discovery; directed evolution",
+    "conference": "gem",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/658198018bd0265f9b52658b6423e0bf76abf639.pdf"
+  }
+]

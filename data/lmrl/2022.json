@@ -1,0 +1,1064 @@
+[
+  {
+    "id": "-1dC64jfmjz",
+    "title": "Self-Supervised Learning of Phenotypic Representations from Cell Images with Weak Labels",
+    "authors": [
+      "Jan Oscar Cross-Zamirski",
+      "Guy Williams",
+      "Elizabeth Mouchet",
+      "Carola-Bibiane Schönlieb",
+      "Riku Turkki",
+      "Yinhai Wang"
+    ],
+    "abstract": "We propose WS-DINO as a novel framework to use weak label information in learning phenotypic representations from high-content fluorescent images of cells. Our model is based on a knowledge distillation approach with a vision transformer backbone (DINO), and we use this as a benchmark model for our study. Using WS-DINO, we fine-tuned with weak label information available in high-content microscopy screens (treatment and compound) and achieve state-of-the-art performance in not-same-compound mechanism of action prediction on the BBBC021 dataset (98%), and not-same-compound-and-batch performance (96%) using the compound as the weak label. Our method bypasses single cell cropping as a pre-processing step, and using self-attention maps we show that the model learns structurally meaningful phenotypic profiles.",
+    "topic": "Deep Learning; Representation Learning; Computer Vision; Self-Supervised Learning; Drug Discovery; Microscopy Imaging",
+    "conference": "lmrl",
+    "year": 2022,
+    "paper_url": "https://openreview.net/pdf/26608bd775004c28972d6ae77ff0cb6fc084e9ad.pdf"
+  },
+  {
+    "id": "1T9JoMuwJ-e",
+    "title": "Data-driven subgroup identification for linear regression",
+    "authors": [
+      "Zachary Izzo",
+      "Ruishan Liu",
+      "James Zou"
+    ],
+    "abstract": "Medical studies frequently require to extract the relationship between each covariate and the outcome with statistical confidence measures. To do this, simple parametric models are frequently used (e.g. coefficients of linear regression) but always fitted on the whole dataset. However, it is common that the covariates may not have a uniform effect over the whole population and thus a unified simple model can miss the heterogeneous signal. For example, a linear model may be able to explain a subset of the data but fail on the rest due to the nonlinearity and heterogeneity in the data. In this paper, we propose DDGroup (data-driven group discovery), a data-driven method to effectively identify subgroups in the data with a uniform linear relationship between the features and the label. DDGroup outputs an interpretable region in which the linear model is expected to hold. It is simple to implement and computationally tractable for use. We show theoretically that, given a large enough sample, DDGroup recovers a region where a single linear model with low variance is well-specified (if one exists), and experiments on real-world medical datasets confirm that it can discover regions where a local linear model has improved performance. Our experiments also show that DDGroup can uncover subgroups with qualitatively different relationships which are missed by simply applying parametric approaches to the whole dataset.",
+    "topic": "subgroup discovery; methods",
+    "conference": "lmrl",
+    "year": 2022,
+    "paper_url": "https://openreview.net/pdf/8b97c5ccf5e369e1215f69d019c70474c8f0de76.pdf"
+  },
+  {
+    "id": "7MBZP77BrY",
+    "title": "Seeded iterative clustering for histology region identification",
+    "authors": [
+      "Eduard Chelebian",
+      "Francesco Ciompi",
+      "Carolina Wahlby"
+    ],
+    "abstract": "Annotations are necessary to develop computer vision algorithms for histopathology, but dense annotations at a high resolution are often time-consuming to make. Deep learning models for segmentation are a way to alleviate the process, but require large amounts of training data, training times and computing power. To address these issues, we present seeded iterative clustering to produce a coarse segmentation densely and at the whole slide level. The algorithm uses precomputed representations as the clustering space and a limited amount of sparse interactive annotations as seeds to iteratively classify image patches. We obtain a fast and effective way of generating dense annotations for whole slide images and a framework that allows the comparison of neural network latent representations in the context of transfer learning.",
+    "topic": "clustering; segmentation; sparse annotations; pretrained embeddings; transfer learning; histology",
+    "conference": "lmrl",
+    "year": 2022,
+    "paper_url": "https://openreview.net/pdf/f9def20bba18335f5653517c341db8ab6e12f17a.pdf"
+  },
+  {
+    "id": "XxRuCIgq2LX",
+    "title": "A single-cell gene expression language model",
+    "authors": [
+      "William Connell",
+      "Umair Khan",
+      "Michael Keiser"
+    ],
+    "abstract": "Gene regulation is a dynamic process that connects genotype and phenotype. Given the difficulty of physically mapping mammalian gene circuitry, we require new computational methods to learn regulatory rules. Natural language is a valuable analogy to the communication of regulatory control. Machine learning systems model natural language by explicitly learning context dependencies between words. We propose a similar system applied to single-cell RNA expression profiles to learn context dependencies between genes. Our model, Exceiver, is trained across a diversity of cell types using a self-supervised task formulated for discrete count data, accounting for feature sparsity. We found agreement between the similarity profiles of latent sample representations and learned gene embeddings with respect to biological annotations. We evaluated Exceiver on a new dataset and a downstream prediction task and found that pretraining supports transfer learning. Our work provides a framework to model gene regulation on a single-cell level and transfer knowledge to downstream tasks.",
+    "topic": "scRNA-seq; gene regulation; transcriptomics; self-supervised; pretraining; transfer learning",
+    "conference": "lmrl",
+    "year": 2022,
+    "paper_url": "https://openreview.net/pdf/69b04c78b7a059663501049e71146d42b3fea44c.pdf"
+  },
+  {
+    "id": "8YKd0rwc4mu",
+    "title": "Regression-Based Elastic Metric Learning on Shape Spaces of Cell Curves",
+    "authors": [
+      "Adele Myers",
+      "Nina Miolane"
+    ],
+    "abstract": "We propose a metric learning paradigm, Regression-based Elastic Metric Learning (REML), which optimizes the elastic metric for geodesic regression on the manifold of discrete curves. Geodesic regression is most accurate when the chosen metric models the data trajectory close to a geodesic on the discrete curve manifold. When tested on cell shape trajectories, regression with REML’s learned metric has better predictive power than with the conventionally used square-root-velocity (SRV) metric. The code is publicly available here: https://github.com/bioshape-lab/dyn.",
+    "topic": "metric learning; cell shape analysis; manifold of discrete curves; elastic metric; geodesic regression",
+    "conference": "lmrl",
+    "year": 2022,
+    "paper_url": "https://openreview.net/pdf/c75b6df702cf8c91dcd75415e9fe495d0a7e8965.pdf"
+  },
+  {
+    "id": "akN8THkPtjM",
+    "title": "Protein language model rescue mutations highlight variant effects and structure in clinically relevant genes",
+    "authors": [
+      "Onuralp Soylemez",
+      "Pablo Cordero"
+    ],
+    "abstract": "Despite being self-supervised, protein language models have shown remarkable performance in fundamental biological tasks such as predicting impact of genetic variation on protein structure and function. The effectiveness of these models on diverse set of tasks suggests that they learn meaningful representations of fitness landscape that can be useful for downstream clinical applications. Here, we interrogate the use of these language models in characterizing known pathogenic mutations in curated, medically actionable genes through an exhaustive search of putative compensatory mutations on each variant's genetic background. Systematic analysis of the predicted effects of these compensatory mutations reveal unappreciated structural features of proteins that are missed by other structure predictors like AlphaFold. While deep mutational scan experiments provide an unbiased estimate of the mutational landscape, we encourage the community to generate and curate rescue mutation experiments to inform the design of more sophisticated co-masking strategies and leverage large language models more effectively for downstream clinical prediction tasks.",
+    "topic": "protein language model; variant effect prediction; molecular evolution; medical genetics; human genetics",
+    "conference": "lmrl",
+    "year": 2022,
+    "paper_url": "https://openreview.net/pdf/2dd5448a27bc82f0a842208f831607729bcb1506.pdf"
+  },
+  {
+    "id": "RpJIZ3S_PLb",
+    "title": "Personalised drug recommendation from augmented gene expression data - the right drug(s) for the right patient",
+    "authors": [
+      "Manuela Salvucci",
+      "Davy Suvee",
+      "Deniz Pirincci",
+      "Dimitrius Raphael",
+      "Eryk Kropiwnicki",
+      "Giovanni Dall’olio",
+      "James O’Reilly",
+      "Katie Sanford",
+      "Marika Catapano",
+      "Marta Sarrico",
+      "Xenia Galkina",
+      "Francesca Mulas"
+    ],
+    "abstract": "Personalised medicine aims to match the right drug(s) to the right patient. However, this challenge is largely unsolved. Several  research groups have focused on different aspects of the challenge, ranging from generating drug screening/perturbation datasets 1–4 and deriving clinically-relevant insights 1–3 to testing a variety of ML approaches 5–8. While a large fraction of the literature has used gene expression or omics data as input to the ML models, more recently, other approaches leveraging a combination of gene expression and image features extracted from microscopy experiments have been applied demonstrating that the data types provide complementary information 9. \nIn this study, we propose to incorporate supervised learning sets for drug response in cell lines, animal models and human patients to provide ranked drug option recommendations on a patient-by-patient basis by integrating multiple and complementary public data sources. Ultimately, we aim to build a model that can take as input multiple types of sample-specific and drug/compound-specific features derived from data collected from multiple experimental models (cell lines, organoids, animal models and human patients) and learn drug response. Sample-specific input features include molecular data and metadata. The molecular data include genetics, transcriptomic, proteomic, microscopy and drug perturbation signatures. The metadata include disease type, histological features and cell type composition. Drug/compound-specific input features include drug doses and chemical properties such as ligandability, protein composition and folding. We aim to predict drug response which could be measured in the experimental models as either mechanistic and/or phenotypic readouts. Mechanistic readouts could include commonly used assays such as apoptosis or proliferation. Phenotypic readouts could include cell viability in cell lines, tumour growth in mouse models and clinical outcome and/or side-effects in human patients.\nWe implemented a supervised machine learning (ML) model that predicts whether a cell line may or may not be responsive to one particular drug (Gemcitabine) based on gene expression patterns using publicly available data from the Genomics of Drug Sensitivity in Cancer (GDSC) database. We benchmarked  the application of different combinations of data pre-processing (e.g. variance filtering and latent variable models), feature engineering and multiple types of ML models architectures (e.g. linear regression, random forest, gradient boosting and neural networks). We assessed model performance using the negated mean squared error comparing the ML predicted drug-response with ground-truth measured drug-response (z-scored IC50). We found similar performance scores as those reported in the literature. We selected the model with best cross-validated performance (random forest on the top 50th percentile most variant genes) for downstream analysis. Additionally, we confirmed that our ML model was able to predict drug-response from gene expression for new unseen samples in an external validation cell line dataset (collected under different experimental conditions) and, to a lesser extent, in a patient-derived xenograft dataset (which had a different readout). Next, we applied the SHapley Additive exPlanations method (SHAP 10) to score features importance and thus identify the most salient genes in driving the model’s predictions. We assessed the biological relevance of the top ranking genes qualitatively and quantitatively. The top ranking genes were reviewed by an expert for relevance and specificity. Furthermore, we used our proprietary masked language model trained to predict targets in sentences from our corpus11, using [x] is related to [drug_name] response as a query to quantitatively score the top ranking genes. Both qualitative and quantitative evaluation confirmed that top genes driving the model predictions were biologically relevant. Indeed, SLFN11, the highest ranking contributor gene, ranked 22nd in our masked language model and is an established predictive biomarker for sensitivity to drugs targeting the DNA damage response and DNA-damaging chemotherapies, such as Gemcitabine 12.\nOngoing work is focussed on improving the ML prediction model by further curating the input data and test alternative omics modalities (genomics, proteomics, metabolomics and sample clinico-pathological metadata) to be used as input either on their own or combined. Furthermore, we aim to do more extensive testing of pre-processing and features engineering as well as model architectures and to extend the model to predict drug-response, as monotherapy, to all available compounds the datasets we have QC-ed covered. Subsequently, we would extend the model to predict drug-response to drug combinations rather than monotherapy.",
+    "topic": "machine learning; drug response; omics; oncology",
+    "conference": "lmrl",
+    "year": 2022,
+    "paper_url": "https://openreview.net/pdf/5495b5fcb5830bc853f48de0c695c06a7b970eca.pdf"
+  },
+  {
+    "id": "iXIyOS2dJ3",
+    "title": "Simultaneous alignment of cells and features of unpaired single-cell multi-omics datasets with co-optimal transport",
+    "authors": [
+      "Pinar Demetci",
+      "Quang Huy TRAN",
+      "Ievgen Redko",
+      "Ritambhara Singh"
+    ],
+    "abstract": "Availability of different single-cell multi-omic datasets provide an opportunity to study various aspects of the genome at the single-cell resolution. Jointly studying multiple genomic features can help us understand gene regulatory mechanisms. Although there are experimental challenges to jointly profile multiple genomic features on the same single-cell, computational methods have been develop to align unpaired single-cell multi-omic datasets. Despite the success of these alingment methods, studying how genomic features interact in gene regulation requires the alignment of features, too. However, most single-cell multi-omic alignment tools can only align cells across different measurements. Here, we introduce \\textsc{SCOOTR}, which aligns both cells and features of the single-cell multi-omic datasets. Our preliminary results show that \\textsc{SCOOTR} provides quality alignments for datasets with sparse correspondences, and for datasets with more complex relationships, supervision on one level (e.g. cells) improves alignment performance on the other level (e.g. features).",
+    "topic": "single-cell multi-omics; data integration; regulatory genomics; optimal transport; manifold alignment",
+    "conference": "lmrl",
+    "year": 2022,
+    "paper_url": "https://openreview.net/pdf/52a569290ce1deea2da02844875602d48239cd60.pdf"
+  },
+  {
+    "id": "skq0ue0tat",
+    "title": "A generative recommender system with GMM prior for cancer drug generation and sensitivity prediction",
+    "authors": [
+      "Krzysztof Koras",
+      "Marcin Możejko",
+      "Paulina Szymczak",
+      "Adam Izdebski",
+      "Eike Staub",
+      "Ewa Maria Szczurek"
+    ],
+    "abstract": "Recent emergence of high-throughput drug screening assays sparkled an intensive development of machine learning methods, including models for prediction of sensitivity of cancer cell lines to anti-cancer drugs, as well as methods for generation of potential drug candidates. \nHowever, the concept of generation of compounds with specific properties and simultaneous modeling of their efficacy against cancer cell lines has not been comprehensively explored. To address this need, we present VADEERS, a Variational Autoencoder-based Drug Efficacy Estimation Recommender System. The generation of compounds is performed by a novel variational autoencoder with a semi-supervised Gaussian Mixture Model (GMM) prior. The prior defines a clustering in the latent space, where the clusters are associated with specific drug properties. In addition, VADEERS is equipped with a cell line autoencoder and a sensitivity prediction network. The model combines data for SMILES string representations of anti-cancer drugs, their inhibition profiles against a panel of protein kinases, cell lines’ biological features and measurements of the sensitivity of the cell lines to the drugs. The evaluated variants of VADEERS achieve a high $r=0.87$ Pearson correlation between true and predicted drug sensitivity estimates. We show that the learned latent representations and new generated data points accurately reflect the given clustering. In summary, VADEERS offers a comprehensive model of drugs’ and cell lines’ properties and relationships between them, as well as a guided generation of novel compounds.",
+    "topic": "deep learning; generative modeling; variational autoencoders; gmm; drug sensitivity prediction; drug generation",
+    "conference": "lmrl",
+    "year": 2022,
+    "paper_url": "https://openreview.net/pdf/04cada6110dd63bfb414539e6d41852fa8ae02ee.pdf"
+  },
+  {
+    "id": "pJsaEV0Tw_",
+    "title": "Energy-based Modelling for Single-cell Data Annotation",
+    "authors": [
+      "Tianyi Liu",
+      "Philip Fradkin",
+      "Lazar Atanackovic",
+      "Leo J Lee"
+    ],
+    "abstract": "Single-cell sequencing has provided profound insights into understanding heterogeneous cellular activities by measuring sequence information at the individual cell resolution. Accurately annotating a single-cell RNA sequencing (scRNA-seq) dataset is a crucial step for the single-cell data analysis pipeline. In particular, previously unobserved cell types and cellular states frequently appear in scRNA-seq experiments and carry valuable information. This highlights the need for reliable annotation tools with out-of-distribution (OOD) detection capability. Recent advances in energy-based modelling have made it possible to design and deploy EBMs for joint discriminative and generative tasks. In this work, we introduce energy-based models (EBMs) for scRNA-seq annotation and investigate generative modelling for OOD detection, which results in more accurate, calibrated, and robust cell type predictions. Specifically, we developed CLAMS, an EBM instance based on the joint energy-based model (JEM), for single-cell data hybrid modelling. Our experiments revealed that hybrid modelling with EBMs maintains the strong discriminative power of baseline classifiers and outperforms the state-of-the-art by integrating generative capabilities in data annotation and OOD detection tasks. In addition, we provided a diagnosis of JEM training and proposed effective regularization methods to boost JEM's performance. To the best of our knowledge, we are the first to apply EBMs for single-cell data modelling.",
+    "topic": "single-cell annotation; out-of-distribution detection; hybrid data modelling; energy-based model",
+    "conference": "lmrl",
+    "year": 2022,
+    "paper_url": "https://openreview.net/pdf/aeddf74fff41601f43ba1904dbab1d872d5861ee.pdf"
+  },
+  {
+    "id": "3ZcryDcnoW2",
+    "title": "Modeling Single-Cell Dynamics Using Unbalanced Parameterized Monge Maps",
+    "authors": [
+      "Luca Eyring",
+      "Dominik Klein",
+      "Giovanni Palla",
+      "Sören Becker",
+      "Philipp Weiler",
+      "Niki Kilbertus",
+      "Fabian J Theis"
+    ],
+    "abstract": "Optimal Transport (OT) has proven useful to infer single-cell trajectories of developing biological systems by aligning distributions across time points. Recently, Parameterized Monge Maps (PMM) were introduced to learn the optimal map between two distributions.\nHere, we apply PMM to model single-cell dynamics and show that PMM fails to account for asymmetric shifts in cell state distributions. To alleviate this limitation, we propose Unbalanced Parameterised Monge Maps (UPMM). We first describe the novel formulation and show on synthetic data how our method extends discrete unbalanced OT to the continuous domain. Then, we demonstrate that UPMM outperforms well-established trajectory inference methods on real-world developmental single-cell data.",
+    "topic": "optimal transport; trajectory inference",
+    "conference": "lmrl",
+    "year": 2022,
+    "paper_url": "https://openreview.net/pdf/0c10b94aa183cef1b17dc7ac8872fb1d0306415c.pdf"
+  },
+  {
+    "id": "0gccw3tTXwR",
+    "title": "Biological Cartography: Building and Benchmarking Representations of Life",
+    "authors": [
+      "Safiye Celik",
+      "Jan-Christian Huetter",
+      "Sandra Melo",
+      "Nathan Lazar",
+      "Rahul Mohan",
+      "Conor Tillinghast",
+      "Tommaso Biancalani",
+      "Marta Fay",
+      "Berton Earnshaw",
+      "Imran S Haque"
+    ],
+    "abstract": "The continued scaling of genetic perturbation technologies combined with high-dimensional assays (microscopy and RNA-sequencing) has enabled genome-scale reverse-genetics experiments that go beyond single-endpoint measurements of growth or lethality. Datasets emerging from these experiments can be combined to construct “maps of biology”, in which perturbation readouts are placed in unified, relatable embedding spaces to capture known biological relationships and discover new ones. Construction of maps involves many technical choices in both experimental and computational protocols, motivating the design of benchmark procedures by which to evaluate map quality in a systematic, unbiased manner.\n\nIn this work, we propose a framework for the steps involved in map building and demonstrate key classes of benchmarks to assess the quality of a map. We describe univariate benchmarks assessing perturbation quality and multivariate benchmarks assessing recovery of known biological relationships from large-scale public data sources. We demonstrate the application and interpretation of these benchmarks through example maps of scRNA-seq and phenomic imaging data.",
+    "topic": "phenomics; transcriptomics; benchmarks; evaluation; gene interaction; pathways; map building; genome-wide; perturbation; pca; deep learning",
+    "conference": "lmrl",
+    "year": 2022,
+    "paper_url": "https://openreview.net/pdf/adf04c2fc1a2cd011d7dc770d38758a4008e33d2.pdf"
+  },
+  {
+    "id": "knxP0g5K8A",
+    "title": "SPOT: Spatial Optimal Transport for Analyzing Cellular Microenvironments",
+    "authors": [
+      "Shouvik Mani",
+      "Doron Haviv",
+      "Russell Kunes",
+      "Dana Pe'er"
+    ],
+    "abstract": "Cellular environments, or niches, are complex biological systems featuring diverse cell types co-localized and interacting with each other. Because these environments orchestrate important functions such as the immune response and stem cell differentiation, it is imperative that we study cells in their spatial context. Although spatial transcriptomic technologies such as MERFISH measure location and gene expressions at the resolution of individual cells, there is a lack of specialized methods to reason about the cellular environments in these datasets. We propose a framework to analyze cellular environments in spatial transcriptomic data, featuring principled methods to represent environments, measure their similarities, and cluster them in order to learn a set of representative, canonical environments. We apply our method on mouse primary motor cortex assayed with MERFISH to learn canonical environments which resemble environments in distinct cortex layers, capture the diversity of cell types present in those environments, and reveal gene expression variation across cells of the same cell type within each layer.",
+    "topic": "spatial transcriptomics; single cell; clustering; optimal transport",
+    "conference": "lmrl",
+    "year": 2022,
+    "paper_url": "https://openreview.net/pdf/6fe3a7ae96ad663a9e6e4b19ed0a5cfd9f6416b5.pdf"
+  },
+  {
+    "id": "Nc7EsfpZ7C",
+    "title": "Designing active and thermostable enzymes with sequence-only predictive models",
+    "authors": [
+      "Clara Fannjiang",
+      "Micah Olivas",
+      "Eric R. Greene",
+      "Craig J. Markin",
+      "Bram Wallace",
+      "Ben Krause",
+      "Margaux M. Pinney",
+      "James Fraser",
+      "Polly M Fordyce",
+      "Ali Madani",
+      "Nikhil Naik"
+    ],
+    "abstract": "Data-driven models of fitness can be useful in designing novel proteins with desired properties, but many questions remain regarding how and in what settings they should be used.  Here, we ask: How can we use predictive models of protein fitness, whose predictions we might not always trust, to design protein sequences enhanced for multiple fitness functions?  We propose a general approach for doing so, and apply it to design novel variants of eight different acylphosphatase and lysozyme wild types, intended to be more thermostable and at least as catalytically active as the wild types.  Our method does not require a structure, experimental measurements of activity, curation of homologous sequences, or family-specific thermostability data.  Experimental characterizations of our designed sequences, as well as sequences designed by PROSS, a competitive baseline method for improving protein thermostability, are currently underway and forthcoming.",
+    "topic": "protein design; enzyme design; fitness prediction; thermostability; distribution shift; language models",
+    "conference": "lmrl",
+    "year": 2022,
+    "paper_url": "https://openreview.net/pdf/1d99ec060d6c99cacad71625abcdbb6900a161b3.pdf"
+  },
+  {
+    "id": "dq3g7Bl9of",
+    "title": "Joint Protein Sequence-Structure Co-Design via Equivariant Diffusion",
+    "authors": [
+      "Ria Vinod",
+      "Kevin K Yang",
+      "Lorin Crawford"
+    ],
+    "abstract": "Protein macromolecules are known to play key roles in cellular processes. Solving inverse design problems can allow us to control targeted cellular processes by designing proteins optimized for downstream tasks. However, current fixed-backbone protein design methods are limited to generating one type of secondary structure for a set of design candidates, that are learned from distributions of a single modality (either sequence or structure). To this end, we propose a diffusion-based generative modelling method that co-designs sequence and structure properties for an arbitrary distribution of proteins structures by optimizing over a function of a downstream protein task. We demonstrate preliminary results of an equivariant joint diffusion process for 2 modalities, with the goal of scaling to more modalities.",
+    "topic": "proteins; generative models; structural biology; optimization; diffusion models",
+    "conference": "lmrl",
+    "year": 2022,
+    "paper_url": "https://openreview.net/pdf/000d84e1242b9fd2856f0763ac859d07c0ef6931.pdf"
+  },
+  {
+    "id": "IGER27k0Pu",
+    "title": "Interpretable visualization of single cell data using Janus autoencoders",
+    "authors": [
+      "Gokul Gowri",
+      "Philippa Anne Richter",
+      "Xiaokang Lun",
+      "Peng Yin"
+    ],
+    "abstract": "The emergence of single-cell transcriptomics and proteomics approaches has resulted in a wealth of high-dimensional data that are challenging to interpret. Dimensionality reduction methods, such as UMAP and t-SNE, project data points onto a low-dimensional space that preserves cellular similarities from the high-dimensional measurement space. However, the projected dimensions typically have no interpretable biological meaning, and the relationships between measured biomolecular features are obscured completely. These limitations can be overcome by finding embeddings in which each dimension is a function of a distinct and biologically meaningful set of features. Here, we introduce Janus autoencoders, a novel neural network architecture capable of finding such low-dimensional embeddings by jointly optimizing multiple distinct one-dimensional embeddings of a dataset. We demonstrate the utility of Janus autoencoders for (1) visualizing multiomic data such that modality-specific contributions to cell state can be deconvolved and (2) visualizing mass cytometry data such that cell cycle effects can be distinguished from “true” cell state differences. Our initial demonstrations indicate that Janus autoencoders can visually represent relationships between cellular states and their underlying cellular features in multiple biological contexts.",
+    "topic": "single cell; multiomics; visualization; autoencoders; dimensionality reduction; interpretability",
+    "conference": "lmrl",
+    "year": 2022,
+    "paper_url": "https://openreview.net/pdf/06d484e45f2189bd79b1eec06ebb5fc9c28f7094.pdf"
+  },
+  {
+    "id": "gM-Xvd9IhMy",
+    "title": "An Empirical Study of ML-based Phenotyping and Denoising for Improved Genomic Discovery",
+    "authors": [
+      "Bo Yuan",
+      "Cory Y McLean",
+      "Farhad I Hormozdiari",
+      "Justin Cosentino"
+    ],
+    "abstract": "Genome-wide association studies (GWAS) are used to identify genetic variants significantly correlated with a target disease or phenotype as a first step to detect potentially causal genes. The availability of high-dimensional biomedical data in population-scale biobanks has enabled novel machine-learning-based phenotyping approaches in which machine learning (ML) algorithms rapidly and accurately phenotype large cohorts with both genomic and clinical data, increasing the statistical power to detect variants associated with a given phenotype. While recent work has demonstrated that these methods can be extended to diseases for which only low quality medical-record-based labels are available, it is not possible to quantify changes in statistical power since the underlying ground-truth liability scores for the complex, polygenic diseases represented by these medical-record-based phenotypes is unknown. In this work, we aim to empirically study the robustness of ML-based phenotyping procedures to label noise by applying varying levels of random noise to vertical cup-to-disc ratio (VCDR), a quantitative feature of the optic nerve that is predictable from color fundus imagery and strongly influences glaucoma referral risk. We show that the ML-based phenotyping procedure recovers the underlying liability score across noise levels, significantly improving genetic discovery and PRS predictive power relative to noisy equivalents. Furthermore, initial denoising experiments show promising preliminary results, suggesting that improving such methods will yield additional gains.",
+    "topic": "genomics; genetics; machine-learning-based phenotyping; denoising",
+    "conference": "lmrl",
+    "year": 2022,
+    "paper_url": "https://openreview.net/pdf/97b5a790261ab592ccd0928b8eaf47772d9b5190.pdf"
+  },
+  {
+    "id": "ZzMeeg0hOuU",
+    "title": "EpiAttend: A transformer model of gene regulation combining single cell epigenomes with DNA sequence",
+    "authors": [
+      "Russell Li",
+      "Heng Xu",
+      "Eran A Mukamel"
+    ],
+    "abstract": "Understanding cell type specific gene expression regulation requires models that integrate information across long genomic distances, such as enhancer-gene interactions spanning many tens of kilobases. Neural network models using deep convolutions and self-attention have achieved highly accurate prediction of cell type specific gene expression and other functional genomics measurements based on DNA sequence in local windows\\citep{avsec,basenji2}. By contrast, leading models for linking enhancers with target genes take advantage of cell type specific epigenomes\\citep{abc}. Here, we propose a framework for combining DNA sequence with epigenetic data from single cell sequencing within a neural network to predict cell type specific functional readouts such as mRNA expression. This approach has the potential to identify long-range gene-regulatory interactions, linking enhancers with genes based on both the epigenome and DNA sequence binding motifs.",
+    "topic": "Epigenome; Attention; Transformer; Single cell",
+    "conference": "lmrl",
+    "year": 2022,
+    "paper_url": "https://openreview.net/pdf/86c85754ca135938b6852fc002801777858d7431.pdf"
+  },
+  {
+    "id": "l7QDJmbxMnL",
+    "title": "Multimodal Cell-Free DNA Embeddings are Informative for Early Cancer Detection",
+    "authors": [
+      "Felix Jackson"
+    ],
+    "abstract": "Cell-free DNA is a promising biomarker for early cancer detection, as it circulates in the blood and can be extracted non-invasively. However, methods of analysing the genetic and epigenetic patterns present in cell-free DNA are outdated, and fail to fully capture the wealth of biological information contained within these molecules. We present a Transformer based deep learning model that combines the three distinct modalities contained within cell-free DNA: epigenetic information in the form of DNA methylation patterns, genetic sequence, and cell-free DNA fragment length. After training on publicly available data, we demonstrate our model can accurately distinguish liver cancer patients using cell-free DNA samples alone. We demonstrate model generalisability by accurate classification of liver cancer patients from entirely distinct patient cohorts. Finally, we show that the vector embeddings of cell-free DNA learnt by this multimodal deep-learning model are biologically informative, and may help shed light on the origins and aetiology of this elusive bio-molecule.",
+    "topic": "epigenetics; multimodal; embeddings; cell-free DNA; cancer; early detection; genetics; transformer; deep learning",
+    "conference": "lmrl",
+    "year": 2022,
+    "paper_url": "https://openreview.net/pdf/1d84307cd0252194db59735992cb23af003399a8.pdf"
+  },
+  {
+    "id": "mmo8ARiI57f",
+    "title": "Continuous cell-state density inference and applications for single-cell data",
+    "authors": [
+      "Dominik Jenz Otto",
+      "Manu Setty",
+      "Brennan Dury"
+    ],
+    "abstract": "Single-cell sequencing continuous to advance our understanding of cell biology, and critical cellular processes such as cell-differentiation. It has been natural to interpret the data as discrete measurements of individual cells and using k-nearest-neighbor graphs to represent the whole population has been a successful computational strategy. However, growing resolution and abundance of single-cell assays and interest to computationally decipher continuous cellular processes call for a likewise continuous representations of the cell populations. This encompasses not only the discrete observed states but instead a likelihood of occurrence for all possible cell states enabling even more specialize methods to model this continuity. To this end we have developed scDensity, an algorithm that leverages diffusion-map representation, nearest-neighbor distributions, and Gaussian processes to infer a differentiable function of the cell-state density representing the whole population. scDensity outperforms existing approaches for single-cell density estimations in accuracy, robustness, and resolution for RNA and ATAC modalities. scDensity is computationally efficient and scales to atlas-size single cell datasets. The resulting density function can comprehensibly represent entire cell populations and enable multiple novel downstream applications. This advancement could serve as a new paradigm of single-cell analysis.",
+    "topic": "single cell; cell differentiation; density; Gaussian process; Bayesian inference",
+    "conference": "lmrl",
+    "year": 2022,
+    "paper_url": "https://openreview.net/pdf/64e51c9f2910ebc0fa7ffded3613c8e4eef77103.pdf"
+  },
+  {
+    "id": "fTBeCw7It-r",
+    "title": "Find your microenvironments faster with Neural Spatial LDA",
+    "authors": [
+      "Sivaramakrishnan Sankarapandian",
+      "Jun Xu",
+      "Zhenghao Chen"
+    ],
+    "abstract": "Spatial organization of different cell types in tissues have been shown to be important factors in many important biological processes such as aging, infection and cancer [\\citenum{blise2022single}]. In particular, organization of the cells in a tumor microenvironment (TME) has been shown to play a crucial role in treatment response, disease pathology and patient outcome [\\citenum{moffitt2022emerging}]. Spatial LDA [\\citenum{chen2020modeling}] is a general purpose probabilistic model that has been used to discover novel microenvironments in settings such as Triple Negative Breast Cancer (TNBC) and Tuberculosis infections. However, the implementation of Spatial LDA proposed in [\\citenum{chen2020modeling}] uses variational inference for learning model parameters and unfortunately does not scale well with dataset size and does not lend itself to speed-up via GPUs / TPUs. As researchers begin to collect larger in-situ multiplexed imaging datasets, there is a growing need for more scalable approaches for analysis of microenvironments. Here we propose a VAE-style network which we call \\textit{Neural Spatial LDA} extending the auto-encoding Variational Bayes formulation of classical LDA from [\\citenum{srivastava2017autoencoding}]. We show Neural Spatial LDA achives significant speed-up over Spatial LDA while at the same time recovering similar topic distributions thus enabling its use in large data domains.",
+    "topic": "Spatial LDA; Neural Spatial LDA; tumor microenvironments; spatial profiling; Variational Autoencoder; Auto Encoding Variational Bayes; reparametrization",
+    "conference": "lmrl",
+    "year": 2022,
+    "paper_url": "https://openreview.net/pdf/8b8717bb124d70db08d275f1f14219d1437ad524.pdf"
+  },
+  {
+    "id": "l7Oo9DcLmR1",
+    "title": "TranceptEVE: Combining Family-specific and Family-agnostic Models of Protein Sequences for Improved Fitness Prediction",
+    "authors": [
+      "Pascal Notin",
+      "Lood Van Niekerk",
+      "Aaron W Kollasch",
+      "Daniel Ritter",
+      "Yarin Gal",
+      "Debora Susan Marks"
+    ],
+    "abstract": "Modeling the fitness landscape of protein sequences has historically relied on training models on family-specific sets of homologous sequences called Multiple Sequence Alignments. Many proteins are however difficult to align or have shallow alignments which limits the potential scope of alignment-based methods. Not subject to these limitations, large protein language models trained on non-aligned sequences across protein families have achieved increasingly high predictive performance – but have not yet fully bridged the gap with their alignment-based counterparts. In this work, we introduce TranceptEVE – a hybrid method between family-specific and family-agnostic models that seeks to build on the relative strengths from each approach. Our method gracefully adapts to the depth of the alignment, fully relying on its autoregressive transformer when dealing with shallow alignments and leaning more heavily on the family-specific models for proteins with deeper alignments. Besides its broader application scope, it achieves state-of-the-art performance for mutation effects prediction, both in terms of correlation with experimental assays and with clinical annotations from ClinVar.",
+    "topic": "Protein fitness; Transformer; EVE; MSA; Mutation effects predictions",
+    "conference": "lmrl",
+    "year": 2022,
+    "paper_url": "https://openreview.net/pdf/cb7353592c1bd471c73f698aa6eb7173ca314a0e.pdf"
+  },
+  {
+    "id": "wngBsamfLnF",
+    "title": "ChromFormer: A transformer-based model for 3D genome structure prediction",
+    "authors": [
+      "Henry Valeyre",
+      "Pushpak Pati",
+      "Federico Gossi",
+      "Vignesh Ram Somnath",
+      "Adriano Martinelli",
+      "Marianna Rapsomaniki"
+    ],
+    "abstract": "Recent research has shown that the three-dimensional (3D) genome structure is strongly linked to cell function. Modeling the 3D genome structure can not only elucidate vital biological processes, but also reveal structural disruptions linked to disease. In the absence of experimental techniques able to determine 3D chromatin structure, this task is achieved computationally by exploiting chromatin interaction frequencies as measured by high-throughput chromosome conformation capture (Hi-C) data. However, existing methods are unsupervised, and limited by underlying assumptions. In this work, we present a novel framework for 3D chromatin structure prediction from Hi-C data. The framework consists of, a novel synthetic data generation module that simulates realistic structures and corresponding Hi-C matrices, and ChromFormer, a transformer-based model to predict 3D chromatin structures from standalone Hi-C data, while providing local structural-level confidence estimates. Our solution outperforms existing methods when tested on unseen synthetic data, and achieves comparable results on experimental data for a full eukaryotic genome.",
+    "topic": "3D chromatin structure prediction; transfer learning; transformers",
+    "conference": "lmrl",
+    "year": 2022,
+    "paper_url": "https://openreview.net/pdf/1ae95bfaae276fb4550925c0926042462320aa30.pdf"
+  },
+  {
+    "id": "tJ0a_aVN4Kp",
+    "title": "Improving Protein Subcellular Localization Prediction with Structural Prediction & Graph Neural Networks",
+    "authors": [
+      "Geoffroy Dubourg-Felonneau",
+      "Arash Abbasi",
+      "Eyal Akiva",
+      "Lawrence Lee"
+    ],
+    "abstract": "We present a method that improves subcellular localization prediction for proteins based on their sequence by leveraging structure prediction and Graph Neural Networks. We demonstrate that Language Models, trained on protein sequences, and Graph Neural Nets, trained on protein's 3D structures, are both efficient approaches. They both learn meaningful, yet different representations of proteins; hence, ensembling them outperforms the reigning state of the art method.",
+    "topic": "proteomics; protein structure; AlphaFold; Graph Neural Networks; Language Model; ensembling",
+    "conference": "lmrl",
+    "year": 2022,
+    "paper_url": "https://openreview.net/pdf/df5837f653de98cdf03a51e69960d29a85bf4cc4.pdf"
+  },
+  {
+    "id": "adODyN-eeJ8",
+    "title": "Standards, tooling and benchmarks to probe representation learning on proteins",
+    "authors": [
+      "Joaquin Gomez Sanchez",
+      "Sebastian Franz",
+      "Michael Heinzinger",
+      "Burkhard Rost",
+      "Christian Dallago"
+    ],
+    "abstract": "With the advent of novel foundational approaches to represent proteins, a race to evaluate and assess their effectiveness to embed biological data for a variety of downstream tasks, from structure prediction to protein engineering, has gained tremendous traction. While tasks like protein 3D structure prediction from sequence have well characterized datasets and methodological approaches, many others, for instance probing the ability to encode protein function from sequence, lack standardization. This becomes particularly relevant when employing experimental biological datasets for machine learning, as curating biologically meaningful data splits requires biological intuition, whilst engineering appropriate machine learning models requires data science expertise. Gold standard experimental datasets annotated with machine learning relevant metadata are thus scarce and often scattered in different file formats in the literature, using a variety of metrics to measure success, hindering rapid evaluation of new foundational representation techniques or machine learning models built on top of them. To address these challenges, we propose a suite of solutions including a) standards for sequence datasets and embedding interfaces, b) curated and machine learning metadata annotated protein sequence datasets, c) machine learning architectures and training scripts, and d) an extensible, automatic evaluation pipeline connecting all these components. In practice, we described new, broad data standards for machine learning protein sequence datasets, including definitions for predictions of a categorical attribute for a residue in a sequence (e.g., secondary structure), or predicting a single value for the entire sequence (e.g., protein fitness). We expanded a previous collection of datasets for protein engineering (FLIP) by adding five traditional tasks from the literature, like residue secondary structure, residue conservation, and protein subcellular location prediction. We created a novel software solution (biotrainer) that collects machine learning architectures used for protein predictions and exposes a reproducible training pipeline that can consume any dataset adhering to the newly proposed data standards. Lastly, we connected all components in a new software solution (autoeval), which collects definitions for embedding methods, datasets and downstream machine learning models to automatically evaluate them. With these solutions, biological experimentalists can contribute new datasets and even train standard models using popular embedding methods, while machine learning researchers can easily plug in new foundational models or architectures in a common interface and test them on a variety of tasks against other solutions. In turn, the combination of solutions presented here unlocks the ability of interest groups to create challenges around new biological datasets, new machine learning architectures, new foundational models, or a combination thereof.",
+    "topic": "protein predictions; machine learning engineering; automatic evaluation; protein framework",
+    "conference": "lmrl",
+    "year": 2022,
+    "paper_url": "https://openreview.net/pdf/e607e0727edf16c6407da1c7c31b373a379d7a1b.pdf"
+  },
+  {
+    "id": "DOOdDbNLZVp",
+    "title": "A Modelling Framework for Catalysing Progress in the Rod-Shaped Bacterial Cell Growth Discourse",
+    "authors": [
+      "Shashi Nagarajan",
+      "Fredrik Lindsten"
+    ],
+    "abstract": "The fundamental question of how cells maintain their characteristic size remains open. Cell size measurements made through microscopic time-lapse imaging of microfluidic single-cell cultivations have seriously questioned classical cell growth models and are calling for newer, nuanced models that explain empirical findings better. Yet current models are limited in that they explain cellular growth either only in specific organisms and/or specific micro-environmental conditions. Together with the fact that tools for robust analysis of said time-lapse images are not widely available as yet, the previously mentioned point presents an opportunity to progress the cell growth and size homeostasis discourse through generative  (probabilistic) modelling. Our contribution is a novel Model Framework for simulating microfluidic single-cell cultivations of rod-shaped bacteria with 36 different simulation modalities, each integrating dominant cell growth theories and generative modelling techniques. Our framework enables the simulation of diverse microscopic image sequences of the said class of single-cell cultivations as well as the generation of corresponding ground truths. More generally, our framework enables simulations of image sequences that imperfect camera and imaging conditions can produce, along with corresponding segmentation and tracking information. It thus enables the generation of datasets consisting of image sequence inputs and corresponding tabular labels, which can help develop robust machine image analysis networks applicable to real-world microfluidic experiments aimed at progressing the cell growth discourse. We demonstrate the usability of our framework through synthetic experiments and conclude by presenting its limitations as well as opportunities for further work.",
+    "topic": "generative models; cell size homeostasis; single-cell microfluidics; cellular growth; rod-shaped bacteria",
+    "conference": "lmrl",
+    "year": 2022,
+    "paper_url": "https://openreview.net/pdf/b46764d2e2f04df517db495e01b84ef27942f7a1.pdf"
+  },
+  {
+    "id": "6n3bjHOa9L8",
+    "title": "CP2Image: generating high-quality single-cell images using CellProfiler representations",
+    "authors": [
+      "Yanni Ji",
+      "Marie Cutiongco",
+      "Bjørn Sand Jensen",
+      "Ke Yuan"
+    ],
+    "abstract": "Single-cell high-throughput microscopy images contain key biological information underlying normal and pathological cellular processes. Image-based analysis and profiling are powerful and promising for extracting this information but are made difficult due to substantial complexity and heterogeneity in cellular phenotype. Hand-crafted methods and machine learning models are popular ways to extract cell image information. Representations extracted via machine learning models, which often exhibit good reconstruction performance, lack biological interpretability. Hand-crafted representations, on the contrary, have clear biological meanings and thus are interpretable. Whether these hand-crafted representations can also generate realistic images is not clear. In this paper, we propose a CellProfiler to image (CP2Image) model that can directly generate realistic cell images from CellProfiler representations. We also demonstrate most biological information encoded in the CellProfiler representations is well-preserved in the generating process. This is the first time hand-crafted representations be shown to have generative ability and provide researchers with an intuitive way for their further analysis.",
+    "topic": "Image-based Profiling; Biological Interpretability; Variational Auto-Encoder",
+    "conference": "lmrl",
+    "year": 2022,
+    "paper_url": "https://openreview.net/pdf/4fd00a06ab7874495236f3c223ae30f80c741067.pdf"
+  },
+  {
+    "id": "kHnsGnZuJz",
+    "title": "meTCRs - Learning a metric for T-cell receptors",
+    "authors": [
+      "Felix Drost",
+      "Lennard Schiefelbein",
+      "Benjamin Schubert"
+    ],
+    "abstract": "T cell receptors (TCRs) bind to pathogen- or self-derived epitopes to elicit a T cell response as part of the adaptive immune system. Determining the specificity of TCRs provides context for immunological studies and can be used to identify candidates for novel immunotherapies. To avoid costly experiments, large-scale TCR-epitope databases are queried for similar sequences via various distance functions. Here, we developed the deep-learning based distance meTCRs. Contrary to most previous approaches, the method avoids computational expansive pairwise string operations by comparing TCRs in a numeric embedding. In contrast to models which are trained specificity-agnostic, we directly utilize epitope information by applying deep metric learning to guide the training. Summarizing, we present meTCRs as a scalable alternative to embed TCR repertoires for clustering, visualization, and querying against the ever-increasing amount TCR-epitope pairs in publicly available databases.",
+    "topic": "Deep Metric Learning; T cell receptor; Specificity prediction",
+    "conference": "lmrl",
+    "year": 2022,
+    "paper_url": "https://openreview.net/pdf/dd60c68d010cfdc50344e7c6566459c5da9ad142.pdf"
+  },
+  {
+    "id": "MGWzBsVVF6",
+    "title": "MolE: a molecular foundation model for drug discovery",
+    "authors": [
+      "Oscar Mendez-Lucio",
+      "Christos A Nicolaou",
+      "Berton Earnshaw"
+    ],
+    "abstract": "Models that accurately predict properties based on chemical structure are valuable tools in drug discovery. However, for many properties, public and private training sets are typically small, and it is difficult for the models to generalize well outside of the training data. Recently, large language models have addressed this problem by using self-supervised pretraining on large unlabeled datasets, followed by fine-tuning on smaller, labeled datasets. In this paper, we report MolE, a molecular foundation model that adapts the DeBERTa architecture to be used on molecular graphs together with a two-step pretraining strategy. The first step of pretraining is a self-supervised approach focused on learning chemical structures, and the second step is a massive multi-task approach to learn biological information. We show that fine-tuning pretrained MolE achieves state-of-the-art results on 9 of the 22 ADMET tasks included in the Therapeutic Data Commons.",
+    "topic": "self-supervised; DeBERTa; molecular property prediction; chemistry; transformers; foundation model",
+    "conference": "lmrl",
+    "year": 2022,
+    "paper_url": "https://openreview.net/pdf/dda7a8f65d44cdb67182d7c20631b7d4e0faeed5.pdf"
+  },
+  {
+    "id": "l5Zn9iMSZW",
+    "title": "Learning representations of cell populations for image-based profiling using contrastive learning",
+    "authors": [
+      "Robert Van Dijk",
+      "John Arevalo",
+      "Shantanu Singh",
+      "Anne E Carpenter"
+    ],
+    "abstract": "Image-based cell profiling is a powerful tool that compares differently perturbed cell populations by measuring thousands of single-cell features and summarizing them into vectors (or profiles). Despite its simplicity, so-called average profiling, where all single-cell features are averaged using measures of center, is still the most commonly used approach. However, this method fails to capture cell populations’ heterogeneity, which has been shown to improve the phenotypic strength of profiles. A recent study proposed a method that did capture cell population heterogeneity, but their method is difficult to use in practice. Therefore, we propose a Deep Sets based method that learns the most effective way of aggregating single-cell feature data into a profile that better predicts a compound’s mechanism of action compared to average profiling. This is achieved by applying weakly supervised contrastive learning in a multiple instance learning setting. Our proposed model provides a more accessible and better performing method for aggregating single-cell feature data than previously published strategies and the average profiling baseline. It is likely that the model achieves this by performing some form of quality control by filtering out noisy cells and prioritizing less noisy cells. The model cannot be directly transferred to unseen batch data; however, it can readily be used by training on new data and inferring the improved profiles directly after because the labels required for training are naturally available in cell profiling experiments. The application of this method could help improve the effectiveness of future cell profiling studies.",
+    "topic": "image-based cell profiling; contrastive learning; representation learning; deep sets; aggregation",
+    "conference": "lmrl",
+    "year": 2022,
+    "paper_url": "https://openreview.net/pdf/e99142e020e5932151501f980ed5a6338d2924e5.pdf"
+  },
+  {
+    "id": "qM_oQJZqr5",
+    "title": "Forecasting labels under distribution-shift for machine-guided sequence design",
+    "authors": [
+      "Lauren Berk Wheelock",
+      "Stephen Malina",
+      "Jeffrey Gerold",
+      "Sam Sinai"
+    ],
+    "abstract": "The ability to design and optimize biological sequences with specific functionalities would unlock enormous value in technology and healthcare. In recent years, machine learning-guided sequence design has progressed this goal significantly, though validating designed sequences in the lab or clinic takes many months and substantial labor.  It is therefore valuable to assess the likelihood that a designed set contains sequences of the desired quality (which often lies outside the label distribution in our training data) before committing resources to an experiment. Forecasting, a prominent concept in many domains where feedback can be delayed (e.g. elections), has not been used or studied in the context of sequence design. Here we propose a method to guide decision-making that forecasts the performance of high-throughput libraries (e.g. containing $10^5$ unique variants) based on estimates provided by models, providing a posterior for the distribution of labels in the library. We show that our method outperforms baselines that naively use model scores to estimate library performance, which are the only tool available today for this purpose.",
+    "topic": "forecasting; distribution shift; biological sequence design",
+    "conference": "lmrl",
+    "year": 2022,
+    "paper_url": "https://openreview.net/pdf/ff4ecde1c4c9a97b0b3ada576f38ac9e49315fc4.pdf"
+  },
+  {
+    "id": "euBgC9yLeyl",
+    "title": "Double trouble: Predicting new variant counts across two heterogeneous populations",
+    "authors": [
+      "Yunyi Shen",
+      "Lorenzo Masoero",
+      "Joshua Schraiber",
+      "Tamara Broderick"
+    ],
+    "abstract": "Collecting genomics data across multiple heterogeneous populations (e.g., across different cancer types) has the potential to improve our understanding of disease. Despite sequencing advances, though, resources often remain a constraint when gathering data. So it would be useful for experimental design if experimenters with access to a pilot study could predict the number of new variants they might expect to find in a follow-up study: both the number of new variants shared between the populations and the total across the populations. While many authors have developed prediction methods for the single-population case, we expect these predictions to fair poorly across multiple populations that are heterogeneous. We prove that, surprisingly, a natural extension of a state-of-the-art single-population predictor to multiple populations fails for fundamental reasons. We provide the first predictor for the number of new shared variants and new total variants that can handle heterogeneity in multiple populations. We show that our proposed method works well empirically using both synthetic data and real cancer data.",
+    "topic": "Bayesian nonparametric; Beta process; Variants discovery",
+    "conference": "lmrl",
+    "year": 2022,
+    "paper_url": "https://openreview.net/pdf/8a77f696d824eee20fff1cbe30eebb0f1ef52ed6.pdf"
+  },
+  {
+    "id": "EjG6qIpBXx7",
+    "title": "decOM: Similarity-based microbial source tracking of ancient oral samples using k-mer-based methods",
+    "authors": [
+      "Camila Duitama González",
+      "Riccardo Vicedomini",
+      "Teo Lemane",
+      "Nicolas Rascovan",
+      "Hugues Richard",
+      "Rayan Chikhi"
+    ],
+    "abstract": "The analysis of ancient oral metagenomes from archaeological human and animal samples is largely confounded by contaminant DNA sequences from modern and environmental sources. Existing methods for Microbial Source Tracking (MST) estimate the proportions of environmental sources, but do not perform well on ancient metagenomes. We developed a novel method called MaskedName for Microbial Source Tracking and classification of ancient and modern metagenomic samples using k-mer matrices. MaskedName estimates the contributions of several source environments in ancient oral metagenomic samples with high accuracy, outperforming two state-of-the-art machine learning methods for source tracking, FEAST and mSourceTracker. We anticipate that MaskedName will be a valuable tool for MST of ancient metagenomic studies.\nNote: This submission is under revision in a journal at the moment\nSupplementary File: https://drive.google.com/file/d/1aDjWdg9Jx0f2vZqzzTC9JHcQB3Lw4IYZ/view?usp=sharing",
+    "topic": "ancient metagenomics; microbial source tracking; k-mer matrix; paleogenomics",
+    "conference": "lmrl",
+    "year": 2022,
+    "paper_url": "https://openreview.net/pdf/e8d430011fac6279ad8cd2ef07878ae9fab18439.pdf"
+  },
+  {
+    "id": "PfdWl0H0Zq",
+    "title": "MatchCLOT: Single-Cell Modality Matching with Contrastive Learning and Optimal Transport",
+    "authors": [
+      "Federico Gossi",
+      "Pushpak Pati",
+      "Adriano Martinelli",
+      "Marianna Rapsomaniki"
+    ],
+    "abstract": "Recent advances in single-cell technologies have enabled the simultaneous quantification of multiple biomolecules in the same cell, opening new avenues for understanding cellular complexity and heterogeneity. However, the resulting multimodal single-cell datasets present unique challenges arising from the high dimensionality of the data and the multiple sources of acquisition noise. In this work, we propose MatchCLOT, a novel method for single-cell data integration based on ideas borrowed from contrastive learning, optimal transport, and transductive learning. In particular, we use contrastive learning to learn a common representation between two modalities and apply entropic optimal transport as an approximate maximum weight bipartite matching algorithm. Our model obtains state-of-the-art performance in the modality matching task from the NeurIPS 2021 multimodal single-cell data integration challenge, improving the previous best competition score by 28.9%.",
+    "topic": "multimodal data integration; single-cell analysis; optimal transport; contrastive learning",
+    "conference": "lmrl",
+    "year": 2022,
+    "paper_url": "https://openreview.net/pdf/1c0751b9fd6cc1dec92895f7821a8a8a4e5f3575.pdf"
+  },
+  {
+    "id": "j3D2I-mTsf",
+    "title": "Conditional Neural Processes for Molecules",
+    "authors": [
+      "Miguel Garcia Ortegon",
+      "Andreas Bender",
+      "Sergio Bacallado"
+    ],
+    "abstract": "Neural processes (NPs) are models for transfer learning with properties reminiscent of Gaussian Processes (GPs). They are adept at modelling data consisting of few observations of many related functions on the same input space and are trained by minimizing a variational objective, which is computationally much less expensive than the Bayesian updating required by GPs. So far, most studies of NPs have focused on low-dimensional datasets which are not representative of realistic transfer learning tasks. Drug discovery is one application area that is characterized by datasets consisting of many chemical properties or functions which are sparsely observed, yet depend on shared features or representations of the molecular inputs. This paper applies the conditional neural process (CNP) to DOCKSTRING, a dataset of docking scores for benchmarking ML models. CNPs show competitive performance in few-shot learning tasks relative to supervised learning baselines common in QSAR modelling, as well as an alternative model for transfer learning based on pre-training and refining neural network regressors. We present a Bayesian optimization experiment which showcases the probabilistic nature of CNPs and discuss shortcomings of the model in uncertainty quantification.",
+    "topic": "Machine Learning for Molecules; Chemoinformatics; Neural Process; Meta-learning; Few-shot learning; Transfer learning",
+    "conference": "lmrl",
+    "year": 2022,
+    "paper_url": "https://openreview.net/pdf/05000d9a20e239bf119785a0c8b0b558326364c8.pdf"
+  },
+  {
+    "id": "KhdgF56cbY",
+    "title": "Fuzzy Logic for Biological Networks as ML Regression: Scaling to Single-Cell Datasets With Autograd",
+    "authors": [
+      "Constance LE GAC",
+      "Alice Driessen",
+      "Nicolas Deutschmann",
+      "Maria Rodriguez Martinez"
+    ],
+    "abstract": "We present the BioFuzzNet module, a fuzzy logic tool to model signal transduction in biological networks. By equating the optimisation of the fuzzy logic transfer functions to a regression problem, we show that gradient descent is a suitable optimisation method for fuzzy logic modelling. The speed of this approach allows us to scale fuzzy logic modelling to single-cell datasets and leverage available transcriptomics data. Furthermore, the flexibility of gradient descent optimisation allows us to perform arbitrary computations, thereby enabling us to model feedback loops and fit them in simple cases. Promising results also suggest that BioFuzzNet can generate insights in the signalling network topology by identifying logical gates and spurious connections.",
+    "topic": "Biological Networks; Systems Biology; Fuzzy Logic; Autograd",
+    "conference": "lmrl",
+    "year": 2022,
+    "paper_url": "https://openreview.net/pdf/3a3be3e527a89f3350ab4105362265539a9e28f6.pdf"
+  },
+  {
+    "id": "EXg0R_-waR",
+    "title": "Learning relationships between histone modifications in single cells",
+    "authors": [
+      "Jake Yeung",
+      "Maria Florescu",
+      "Peter Zeller",
+      "Buys Anton de Barbanson",
+      "Max D Wellenstein",
+      "Alexander van Oudenaarden"
+    ],
+    "abstract": "Recent advances have enabled mapping of histone marks in single cells, but most methods are constrained to profile only one histone mark per cell. Here we present an integrated statistical and experimental framework, scChIX (single-cell chromatin immunocleavage and unmixing), to map multiple histone marks in single cells. scChIX multiplexes two histone marks together in single cells, then computationally deconvolves the signal using training data from respective histone mark profiles. This framework learns the cell type-specific correlation structure between histone marks, and therefore does not require a priori assumptions of their genomic distributions. Applying scChIX to two active marks during in vitro macrophage differentiation, we find H3K4me1 dynamics preceding H3K36me3. Modeling these dynamics enables integrated analysis of chromatin velocity during differentiation. Overall, scChIX reveals unique biological insights by leveraging multimodal analysis  between histone modifications in single cells.",
+    "topic": "single-cell epigenomics; statistical inference; experimental design; histone modifications",
+    "conference": "lmrl",
+    "year": 2022,
+    "paper_url": "https://openreview.net/pdf/ef6d26fcff061edc6a10eecadf4028c5d3f4da81.pdf"
+  },
+  {
+    "id": "UaPDU3XHiyI",
+    "title": "Generative model for Pseudomonad genomes",
+    "authors": [
+      "Manasa Kesapragada",
+      "R Shane Canon",
+      "Sean P Jungbluth",
+      "Marcin P Joachimiak",
+      "Adam P Arkin",
+      "Paramvir S Dehal"
+    ],
+    "abstract": "Recent advances in genomic sequencing have resulted in several thousands of full genomes of pseudomonads, a genera of bacteria important in many science areas ranging from biogeochemical cycling in the environment to bacterial pneumonia in humans. With these high-quality data sets, combined with tens of thousands of somewhat lower quality metagenomically assembled genomes, we create a generative model for pseudomonad genomes. We present a GAN model that generates gene family presence absence lists as a representation of a novel genome. We also demonstrate that the discriminator of this model can be used as a binary classifier to identify incorrect genomes with missing content. In the future, our desired model can be used to generate genomes within a given set of parameters such as, “Generate a genome that is root associated, drought resistant, salt tolerant that will produce this natural product”.",
+    "topic": "GAN; Synthetic Biology; PanGenome",
+    "conference": "lmrl",
+    "year": 2022,
+    "paper_url": "https://openreview.net/pdf/57f1d9a7f225dd29d909aaefcda2a2c8db73de0c.pdf"
+  },
+  {
+    "id": "xrUy7m0zwqA",
+    "title": "LANTERN-RD: Enabling Deep Learning for Mitigation of the Invasive Spotted Lanternfly",
+    "authors": [
+      "Srivatsa R Kundurthy"
+    ],
+    "abstract": "The Spotted Lanternfly (SLF) is an invasive planthopper that threatens the local biodiversity and agricultural economy of regions such as the Northeastern United States and Japan. As researchers scramble to study the insect, there is a great potential for computer vision tasks such as detection, pose estimation, and accurate identification to have important downstream implications in containing the SLF. However, there is currently no publicly available dataset for training such AI models. To enable computer vision applications and motivate advancements to challenge the invasive SLF problem, we propose LANTERN-RD, the first curated image dataset of the spotted lanternfly and its look-alikes, featuring images with varied lighting conditions, diverse backgrounds, and subjects in assorted poses. A VGG16- based baseline CNN validates the potential of this dataset for stimulating fresh computer vision applications to accelerate invasive SLF research. Additionally, we implement the trained model in a simple mobile classification application in order to directly empower responsible public mitigation efforts. The overarching mission of this work is to introduce a novel SLF image dataset and release a classification framework that enables computer vision applications, boosting studies surrounding the invasive SLF and assisting in minimizing its agricultural and economic damage.",
+    "topic": "computer vision; machine learning; invasive species; spotted lanternfly; dataset",
+    "conference": "lmrl",
+    "year": 2022,
+    "paper_url": "https://openreview.net/pdf/715f5971da85c70743d91325e499d5d777054588.pdf"
+  },
+  {
+    "id": "AacTaPwWN6a",
+    "title": "Protein Language Model Predicts Mutation Pathogenicity and Clinical Prognosis",
+    "authors": [
+      "Xiangling Liu",
+      "Xinyu Yang",
+      "Linkun Ouyang",
+      "Guibing Guo",
+      "Jin Su",
+      "Ruibin Xi",
+      "Ke Yuan",
+      "Fajie Yuan"
+    ],
+    "abstract": "Accurately predicting the effects of mutations in cancer has the potential to improve existing treatments and identify novel therapeutic targets. In this paper, we evidence for the first time that the large-scale pre-trained protein language models (PPLMs) are zero-shot predictors for two clinically relevant tasks: identifying disease-causing mutations and predicting patient survival rate. Then we benchmark a series of state-of-the-art (SOTA) PPLMs on 2279 protein variants across 20 cancer-related genes. Our empirical results show that the PPLMs outperform the SOTA baseline, EVE, trained on multiple sequence alignment (MSA) data. We also demonstrate that the evolutionary index score, generated from the PPLM’s softmax layer, is good indicator for both mutation pathogenicity and patient survival rate. Our paper has taken a key step toward the clinical utility of large-scale PPLMs.",
+    "topic": "Protein language models; zero-shot learning; cancer genomics; survival analysis; mutation effect prediction",
+    "conference": "lmrl",
+    "year": 2022,
+    "paper_url": "https://openreview.net/pdf/53778b1a3c8db70036fc4789abdf682c62da8555.pdf"
+  },
+  {
+    "id": "WSJLe1sDtsw",
+    "title": "Translating L-peptides into non-canonical linear and macrocyclic peptides",
+    "authors": [
+      "Somesh Mohapatra"
+    ],
+    "abstract": "Peptide-based drug discovery efforts has made significant advances in the recent past, enabling targeting of previously undruggable protein-protein interactions. Current efforts of high-throughput library screening involves L-peptide libraries, while non-canonical linear and macrocyclic peptides have been shown to be more metabolically stable, while having similar or higher biological activity. Here, we present a method to translate L-peptides into their non-canonical variants using a genetic algorithm-based approach. We optimize against a dual objective function of matching the chemical similarity of the mutated sequence to the reference L-peptide, and maximizing the binding affinity, characterized by the docking score against the target protein. We demonstrate the applicability of this method by discovering previously unknown non-canonical linear and macrocyclic peptides with high binding affinity against DRD2 kinase inhibitor. This work will provide a chemistry-informed approach for the discovery of non-canonical peptides from L-peptide library screening, thereby accelerating drug development efforts.",
+    "topic": "genetic algorithm; stereochemistry; peptides; chemical similarity",
+    "conference": "lmrl",
+    "year": 2022,
+    "paper_url": "https://openreview.net/pdf/fd1d8c768aa8f1f8aff773e1180f54f70fbe955c.pdf"
+  },
+  {
+    "id": "VRddCJfaKEY",
+    "title": "Using hierarchical variational autoencoders to incorporate conditional independent priors for paired single-cell multi-omics data integration",
+    "authors": [
+      "Ping-Han Hsieh",
+      "Ru-Xiu Hsiao",
+      "Tatiana Belova",
+      "Katalin Ferenc",
+      "Anthony Mathelier",
+      "Rebekka Burkholz",
+      "Chien-Yu Chen",
+      "Geir Kjetil Sandve",
+      "Marieke Lydia Kuijjer"
+    ],
+    "abstract": "Recently, paired single-cell sequencing technologies have allowed the measurement of multiple modalities of molecular data simultaneously, at single-cell resolution. Along with the advances in these technologies, many methods based on variational autoencoder have been developed aiming at integrating paired single-cell multi-omics data. However, how to incorporate prior biological understanding of data properties into such models remains an open question in the field. Here, we propose a novel probabilistic learning framework that explicitly incorporates conditional independence relationships between multi-modal data as a directed acyclic graph using a generalized hierarchical variational autoencoder. Applying our approach to single-cell ATAC and RNA-seq data, we find that our method can identify cell clusters with distinct expression profiles that are not driven by chromatin state. We anticipate that our proposed framework can help construct flexible graphical models that reflect biological hypotheses with ease and unravel the interactions between different biological data types, such as different modalities of paired single-cell multi-omics data. The implementation of the proposed framework can be found in the repository https://github.com/kuijjerlab/CAVACHON.",
+    "topic": "multi-modal variational autoencoder; hierarchical variational autoencoder; single-cell multi-omics data integration",
+    "conference": "lmrl",
+    "year": 2022,
+    "paper_url": "https://openreview.net/pdf/92d47fd7935715451250d5f1aa1d1981b8648627.pdf"
+  },
+  {
+    "id": "kvGt-zLo9L",
+    "title": "3D single-cell shape analysis of cancer cells using geometric deep learning",
+    "authors": [
+      "Matt De Vries",
+      "Lucas G Dent",
+      "Nathan Curry",
+      "Leo Rowe-Brown",
+      "Adam Tyson",
+      "Chris Dunsby",
+      "Chris Bakal"
+    ],
+    "abstract": "3D cell shape is linked to disease. Despite this, there is a paucity of methods to quantify 3D cell shapes. Current methods utilise pre-defined measures of cell geometry as opposed to data-driven approaches. Furthermore, we do not fully understand the cell shape landscape of cancer cells in 3D and the different shape classes that exist in a dataset or how these are correlated with drug treatments. To address this, we have developed a geometric deep learning method to learn 3D cell shape features and classes simultaneously. This technique combines an existing dynamic graph convolutional neural network encoder with a foldingnet decoder and improved deep embedded clustering. We use this model to learn meaningful shape representations of over 70 000 drug-treated melanoma cells imaged by 3D light-sheet microscopy. We propose describing cells and treatments by a 3D quantitative morphological signature, representing a cell's similarity to the learned shape classes in the dataset. This led to the insight that drugs treated with similar inhibitors share morphological signatures, which can be used to predict the activity of a drug.",
+    "topic": "3D; geometric; deep learning; single-cell; shape; cancer",
+    "conference": "lmrl",
+    "year": 2022,
+    "paper_url": "https://openreview.net/pdf/b0cd540bdaf17a1a1a0a1e27d199a1c0f09747fa.pdf"
+  },
+  {
+    "id": "fvBVj5djg3",
+    "title": "Kernelized Stein Discrepancies for Biological Sequences",
+    "authors": [
+      "Alan Nawzad Amin",
+      "Eli N Weinstein",
+      "Debora Susan Marks"
+    ],
+    "abstract": "Generative models of biological sequences are a powerful tool for learning from complex sequence data, predicting the effects of mutations, and designing novel biomolecules with desired properties. The problem of measuring differences between high-dimensional distributions is central to the successful construction and use of generative probabilistic models. In this paper we propose the KSD-B, a novel divergence measure for distributions over biological sequences that is based on the kernelized Stein discrepancy (KSD). As for all KSDs, the KSD-B between a model and dataset can be evaluated even when the normalizing constant of the model is unknown; unlike any previous KSD, the KSD-B can be applied to arbitrary distributions over variable-length discrete sequences, and can take into account biological notions of mutational distance.  Our theoretical results rigorously establish that the KSD-B is not only a valid divergence measure, but also that it detects non-convergence in distribution. We outline the wide variety of possible applications of the KSD-B, including (a) goodness-of-fit tests, which enable generative sequence models to be evaluated on an absolute instead of relative scale; (b) measurement of posterior sample quality, which enables accurate semi-supervised sequence design and ancestral sequence reconstruction; and (c) selection of a set of representative points, which enables the design of libraries of sequences that are representative of a given generative model for efficient experimental testing.",
+    "topic": "Testing; generativ sequence models; goodness of fit; sequence optimization; kernels",
+    "conference": "lmrl",
+    "year": 2022,
+    "paper_url": "https://openreview.net/pdf/30c5b39f25915d8b62e4b2c921ae04636fa2cdee.pdf"
+  },
+  {
+    "id": "rgbeZljllwu",
+    "title": "scPerturb: Information Resource for Harmonized Single-Cell Perturbation Data",
+    "authors": [
+      "Tessa Durakis Green",
+      "Stefan Peidli",
+      "Ciyue Shen",
+      "Torsten Gross",
+      "Joseph Min",
+      "Samuele Garda",
+      "Jake P. Taylor-King",
+      "Debora Susan Marks",
+      "Augustin Luna",
+      "Nils Blüthgen",
+      "Chris Sander"
+    ],
+    "abstract": "Recent biotechnological advances led to growing numbers of single-cell studies, which reveal molecular and phenotypic responses to large numbers of perturbations. However, analysis across diverse datasets is typically hampered by differences in format, naming conventions, data filtering and normalization. To facilitate development and benchmarking of computational methods in systems biology, we collect a set of 44 publicly available single-cell perturbation-response datasets with molecular readouts, including RNA, proteins and chromatin accessibility (Figure Panel A). We apply uniform pre-processing and quality control pipelines and harmonize feature annotations. The resulting information resource enables efficient development and testing of computational analysis methods, and facilitates direct comparison and integration across datasets. 32 RNA datasets in this resource were perturbed using CRISPR and 9 were perturbed with drugs (Figure Panel B). We also include three scATAC datasets, as well as three CITE-seq datasets with protein and RNA counts separately downloadable. For each scRNA-seq dataset we supply count matrices, where each cell has a perturbation annotation, quality control metrics including gene counts and mitochondrial read percentage. Quality control plots for each dataset are also available on scperturb.org. Notably, more than 8000 CRISPR perturbations are shared across multiple datasets. We anticipate this data resource being useful for developing machine learning models for perturbation responses across datasets and other tasks.",
+    "topic": "Bioinformatics; Systems Biology; Statistics; Similarity and Distance Learning; Big Data",
+    "conference": "lmrl",
+    "year": 2022,
+    "paper_url": "https://openreview.net/pdf/0d915601287ff99a30d9e4712ed44a81f0e8bbe6.pdf"
+  },
+  {
+    "id": "5vJ8doH-lqE",
+    "title": "Utilizing Mutations to Evaluate Interpretability of Neural Networks on Genomic Data",
+    "authors": [
+      "Utku Ozbulak",
+      "Solha Kang",
+      "Jasper Zuallaert",
+      "Stephen Depuydt",
+      "Joris Vankerschaver"
+    ],
+    "abstract": "Even though deep neural networks (DNNs) achieve state-of-the-art results for a number of problems involving genomic data, getting DNNs to explain their decision-making process has been a major challenge due to their black-box nature. One way to get DNNs to explain their reasoning for prediction is via attribution methods which are assumed to highlight the parts of the input that contribute to the prediction the most. Given the existence of numerous attribution methods and a lack of quantitative results on the fidelity of those methods, selection of an attribution method for sequence-based tasks has been mostly done qualitatively. In this work, we take a step towards identifying the most faithful attribution method by proposing a computational approach that utilizes point mutations. Providing quantitative results on seven popular attribution methods, we find Layerwise Relevance Propagation (LRP) to be the most appropriate one for translation initiation, with LRP identifying two important biological features for translation: the integrity of Kozak sequence as well as the detrimental effects of premature stop codons.",
+    "topic": "deep neural networks; interpretability; explainability; important features; mutations; translation; genomic data",
+    "conference": "lmrl",
+    "year": 2022,
+    "paper_url": "https://openreview.net/pdf/103fbade52a282d626d5e7858c4cad45063f6487.pdf"
+  },
+  {
+    "id": "tHvY8Np50FI",
+    "title": "Box Prediction Rebalancing for Training Single-Stage Object Detectors with Partially Labeled Data",
+    "authors": [
+      "Shafin Haque",
+      "R. Austin McEver"
+    ],
+    "abstract": "Partial labeling schemes, in which annotators may label some instances of classes of interest and not label other instances, can significantly reduce annotation budgets and enable machine learning algorithms that might otherwise be impossible. However, these schemes introduce noise that makes training machine learning models difficult. The Dataset for Underwater Substrate and Invertebrate Analysis (DUSIA) uses a partial labeling scheme for its training set, which consists of thousands of partially labeled video frames. To combat the challenge of training on partially labeled data, we propose Box Prediction Rebalancing for single-stage object detectors and test our method on YOLOv5, a state-of-the-art single-stage detector. We rebalance the percentage of positive and negative detections included in the loss computation of the end-to-end model, improving our model's performance and generalizability.",
+    "topic": "invertebrate detection; partially labeled object detection data",
+    "conference": "lmrl",
+    "year": 2022,
+    "paper_url": "https://openreview.net/pdf/4ebeaee4f9d16c4ebcdfeae93f39994f984e9908.pdf"
+  },
+  {
+    "id": "yrfz8PKEvR5",
+    "title": "Unsupervised language models for disease variant prediction",
+    "authors": [
+      "Allan Zhou",
+      "Nicholas Charles Landolfi",
+      "Dan O'Neill"
+    ],
+    "abstract": "There is considerable interest in predicting the pathogenicity of protein variants in human genes. Due to the sparsity of high quality labels, recent approaches turn to \\textit{unsupervised} learning, using Multiple Sequence Alignments (MSAs) to train generative models of natural sequence variation within each gene. These generative models then predict variant likelihood as a proxy to evolutionary fitness. In this work we instead combine this evolutionary principle with pretrained protein language models (LMs), which have already shown promising results in predicting protein structure and function. Instead of training separate models per-gene, we find that a single protein LM trained on broad sequence datasets can score pathogenicity for any gene variant zero-shot, without MSAs or finetuning. We call this unsupervised approach \\textbf{VELM} (Variant Effect via Language Models), and show that it achieves scoring performance comparable to the state of the art when evaluated on clinically labeled variants of disease-related genes.",
+    "topic": "protein language models; gene variant pathogenicity",
+    "conference": "lmrl",
+    "year": 2022,
+    "paper_url": "https://openreview.net/pdf/8f3cf27e7e6fb7ea09dbf4c477be29e606f57f11.pdf"
+  },
+  {
+    "id": "v4Aw2nZShkf",
+    "title": "Spatially-aware dimension reduction of transcriptomics data",
+    "authors": [
+      "Lauren Okamoto",
+      "Andrew Jones",
+      "Archit Verma",
+      "Barbara E. Engelhardt"
+    ],
+    "abstract": "Spatial sequencing technologies have allowed for studying the relationship between the physical organization of cells and their functional behavior. However, interpreting these data and deriving insights from them remains difficult. Here, we present a Bayesian statistical model that performs dimension reduction for these data in a spatially-aware manner. In particular, our proposed model captures the low-dimensional structure of gene expression while accounting for the spatial variability of expression. Our model also allows us to project dissociated scRNA-seq data onto a spatial grid, as well as use scRNA-seq impute and smooth the expression of spatial sequencing data. Through simulations and applications to spatial sequencing data, we show that our model captures joint structure of spatially-resolved and dissociated sequencing data.",
+    "topic": "spatial genomics; dimension reduction; transcriptomics; Gaussian processes",
+    "conference": "lmrl",
+    "year": 2022,
+    "paper_url": "https://openreview.net/pdf/99fd8cd83e8251910e22885cee567dc606edf668.pdf"
+  },
+  {
+    "id": "lU0LHB9tk4T",
+    "title": "Designing and Evolving Neuron-Specific Proteases",
+    "authors": [
+      "Han Spinner",
+      "Colin Hemez",
+      "Julia McCreary",
+      "David Ruchien Liu",
+      "Debora Susan Marks"
+    ],
+    "abstract": "Directed evolution has remarkably advanced protein engineering. However, these experiments are typically seeded with a single sequence, and they are limited by the amount of sequence space they can explore. Here, we aim to develop a machine learning method that learns from the natural distribution of sequences to design diverse seed sequences. We use Botulinum Neurotoxin X (BoNT/X) as a proof of concept for this approach since there is published data on this evolution campaign, and there are many therapeutic applications of neuron-specific proteases. Additionally, BoNT/X is especially promising for this approach since related BoNT proteases have specific substrate specificity, limiting the utility of simply drawing from the natural sequences. We hypothesize that our machine learning model can learn the ‘essence’ of the protein family and generate diverse substrate binding domains. We built an alignment of 452 sequences around BoNT/X and show that models trained on this data can separate known beneficial and deleterious mutations. Next, we will use these models to generate sequences and perform new evolution experiments. Finally, we will evaluate the impact of starting with a diverse set of seed sequences versus only one seed sequence. This work will not only create new proteases that can be used for therapeutic indications, but also puts forth a new approach for machine-learning-guided evolution experiments.",
+    "topic": "protein engineering; directed evolution; unsupervised machine learning",
+    "conference": "lmrl",
+    "year": 2022,
+    "paper_url": "https://openreview.net/pdf/74690631906946dd4ac94a6efea1c546fdf75dba.pdf"
+  },
+  {
+    "id": "mnvPgQTt2Xs",
+    "title": "Network-Based Clustering of Pan-Cancer Data Accounting for Clinical Covariates",
+    "authors": [
+      "Fritz Bayer",
+      "Giusi Moffa",
+      "Niko Beerenwinkel",
+      "Jack Kuipers"
+    ],
+    "abstract": "Identifying subgroups of shared biological properties based on mutational features is a key step towards precision treatment of cancer patients. However, clustering patients based on their mutational profile is challenging due to considerable heterogeneity within and across cancer types. Here, we approach the heterogeneity of cancer by learning probabilistic relationships within pan-cancer data. We present a network-based clustering method, that integrates mutational and clinical covariate data in distinct networks of their probabilistic relationships. To avoid learning the clusters based on covariates such as age and stage, we remove their effect on the cluster assignment, by exploiting causal relationships among the variables.  In simulations, we demonstrate that our method outperforms standard clustering methods.  We apply our method to a large-scale genomic dataset of 8085 cancer patients, where we identify novel clusters that are predictive of survival beyond clinical information and could serve as biomarkers for targeted treatment.",
+    "topic": "Clustering; Graphs; Bayesian Networks; Cancer; Networks",
+    "conference": "lmrl",
+    "year": 2022,
+    "paper_url": "https://openreview.net/pdf/9b4b694767f14703ded10776033679c654dd005c.pdf"
+  },
+  {
+    "id": "bUyk2atqXqt",
+    "title": "What cleaves? Is proteasomal cleavage prediction reaching a ceiling?",
+    "authors": [
+      "Ingo Ziegler",
+      "Bolei Ma",
+      "Ercong Nie",
+      "Bernd Bischl",
+      "David Rügamer",
+      "Benjamin Schubert",
+      "Emilio Dorigatti"
+    ],
+    "abstract": "Epitope vaccines are a promising direction to enable precision treatment for cancer, autoimmune diseases, and allergies. Effectively designing such vaccines requires accurate prediction of proteasomal cleavage in order to ensure that the epitopes in the vaccine are presented to T cells by the major histocompatibility complex (MHC). While direct identification of proteasomal cleavage in vitro is cumbersome and low throughput, it is possible to implicitly infer cleavage events from the termini of MHC-presented epitopes, which can be detected in large amounts thanks to recent advances in high-throughput MHC ligandomics. Inferring cleavage events in such a way provides an inherently noisy signal which can be tackled with new developments in the field of deep learning that supposedly make it possible to learn predictors from noisy labels. Inspired by such innovations, we sought to modernize proteasomal cleavage predictors by benchmarking a wide range of recent methods, including LSTMs, transformers, CNNs, and denoising methods, on a recently introduced cleavage dataset. We found that increasing model scale and complexity appeared to deliver limited performance gains, as several methods reached about 88.5\\% AUC on C-terminal and 79.5\\% AUC on N-terminal cleavage prediction. This suggests that the noise and/or complexity of proteasomal cleavage and the subsequent biological processes of the antigen processing pathway are the major limiting factors for predictive performance rather than the specific modeling approach used. While biological complexity can be tackled by more data and better models, noise and randomness inherently limit the maximum achievable predictive performance. All our datasets and experiments are available at https://anonymous.4open.science/r/cleavage_prediction-E8FD.",
+    "topic": "Epitope Vaccine; Proteasomal Cleavage; LSTM; CNN; Transformer",
+    "conference": "lmrl",
+    "year": 2022,
+    "paper_url": "https://openreview.net/pdf/77ae7bde9ca509d00b43559ff4cb1f02aa73b5f9.pdf"
+  },
+  {
+    "id": "oRULd-eaNZH",
+    "title": "Learning More Effective Cell Representations Efficiently",
+    "authors": [
+      "Jason Xiaotian Dou",
+      "Minxue Jia",
+      "Nika Zaslavsky",
+      "Mark Ebeid",
+      "Runxue Bao",
+      "Shiyi Zhang",
+      "Ke Ni",
+      "Paul Pu Liang",
+      "Haiyi Mao",
+      "Zhi-Hong Mao"
+    ],
+    "abstract": "Capturing similarity among cells is at the core of many tasks in single-cell transcriptomics, such as the identification of cell types and cell states. This problem can be formulated in a paradigm called metric learning. Metric learning aims to learn data embeddings (feature vectors) in a way that reduces the distance between similar feature vectors corresponding to cells of the same cell type and increases the distance between feature vectors corresponding to cells of different cell types. As a variation of metric learning, deep metric learning uses neural networks to automatically learn discriminative features from the cells and then compute the distance. These (deep) metric learning approaches have been successfully applied to computational biology tasks like similar cell identification, and synthesis of heterogeneous single-cell modalities. Here, we identify two computational challenges: precise distance measurement between cells, and scalability over a large amount of data in the applications of (deep) metric learning. We then propose our solutions: optimal transport and coreset optimization. Optimal transport has the potential to measure cell similarity more effectively, and coreset optimization is promising to train representation learning models more efficiently. Empirical studies in image retrieval and clustering tasks show the promise of the proposed approaches. We propose to further explore the applicability of our methods to cell representation learning.",
+    "topic": "Cell Identification; Representation Learning; Optimal Transport",
+    "conference": "lmrl",
+    "year": 2022,
+    "paper_url": "https://openreview.net/pdf/b2e58d3d52365877d329e7c43e3903bb6652180a.pdf"
+  },
+  {
+    "id": "N5qLXpc7HQy",
+    "title": "Biological Neurons vs Deep Reinforcement Learning: Sample efficiency in a simulated game-world",
+    "authors": [
+      "Forough Habibollahi",
+      "Moein Khajehnejad",
+      "Amitesh Gaurav",
+      "Brett Joseph Kagan"
+    ],
+    "abstract": "How do synthetic biological systems and artificial neural networks compete in their performance in a game environment? Reinforcement learning has undergone significant advances, however remains behind biological neural intelligence in terms of sample efficiency. Yet most biological systems are significantly more complicated than most algorithms. Here we compare the inherent intelligence of in vitro biological neuronal networks to state-of-the-art deep reinforcement learning algorithms in the arcade game 'pong'. We employed DishBrain, a system that embodies in vitro neural networks with in silico computation using a high-density multielectrode array. We compared the learning curve and the performance of these biological systems against time-matched learning from DQN, A2C, and PPO algorithms. Agents were implemented in a reward-based environment of the `Pong' game. Key learning characteristics of the deep reinforcement learning agents were tested with those of the biological neuronal cultures in the same game environment. We find that even these very simple biological cultures typically outperform deep reinforcement learning systems in terms of various game performance characteristics, such as the average rally length implying a higher sample efficiency. Furthermore, the human cell cultures proved to have the overall highest relative improvement in the average number of hits in a rally when comparing the initial 5 minutes and the last 15 minutes of each designed gameplay session.",
+    "topic": "Deep Reinforcement Learning; In Vitro Neuronal Cultures; Sample efficiency; Neural Networks",
+    "conference": "lmrl",
+    "year": 2022,
+    "paper_url": "https://openreview.net/pdf/1b6495201850d9a1d56420425283d1bfa4c7ec7c.pdf"
+  },
+  {
+    "id": "Dou7a5eJRYm",
+    "title": "Knowledge distillation for fast and accurate DNA sequence correction",
+    "authors": [
+      "Anastasiya Belyaeva",
+      "Joel Shor",
+      "Daniel E Cook",
+      "Kishwar Shafin",
+      "Daniel Liu",
+      "Armin Töpfer",
+      "Aaron M Wenger",
+      "William J Rowell",
+      "Howard Yang",
+      "Alexey Kolesnikov",
+      "Cory Y McLean",
+      "Maria Nattestad",
+      "Andrew Carroll",
+      "Pi-Chuan Chang"
+    ],
+    "abstract": "Accurate genome sequencing can improve our understanding of biology and the genetic basis of disease. The standard approach for generating DNA sequences from PacBio instruments relies on HMM-based models. Here, we introduce Distilled DeepConsensus - a distilled transformer–encoder model for sequence correction, which improves upon the HMM-based methods with runtime constraints in mind. Distilled DeepConsensus is 1.3x faster and 1.5x smaller than its larger counterpart while improving the yield of high quality reads (Q30) over the HMM-based method by 1.69x (vs. 1.73x for larger model). With improved accuracy of genomic sequences, Distilled DeepConsensus improves downstream applications of genomic sequence analysis such as reducing variant calling errors by 39% (34% for larger model) and improving genome assembly quality by 3.8% (4.2% for larger model). We show that the representations learned by Distilled DeepConsensus are similar between faster and slower models.",
+    "topic": "DNA sequencing; transformers; variant calling; genome assembly",
+    "conference": "lmrl",
+    "year": 2022,
+    "paper_url": "https://openreview.net/pdf/d9e26340fc513d746608e3e009f3987a11d6c0ac.pdf"
+  },
+  {
+    "id": "xwn3ywFknri",
+    "title": "Transformer Model for Genome Sequence Analysis",
+    "authors": [
+      "Noah Hurmer",
+      "Xiao-Yin To",
+      "Martin Binder",
+      "Hüseyin Anil Gündüz",
+      "Philipp C. Münch",
+      "René Mreches",
+      "Alice C McHardy",
+      "Bernd Bischl",
+      "Mina Rezaei"
+    ],
+    "abstract": "One major challenge of applying machine learning in genomics is the scarcity of labeled data, which often requires expensive and time-consuming physical experimentation under laboratory conditions to obtain. However, the advent of high throughput sequencing has made large quantities of unlabeled genome data available. This can be used to apply semi-supervised learning methods through representation learning.\nIn this paper, we investigate the impact of a popular and well-established language model, namely BERT [Devlin et al., 2018], for sequence genome analysis. Specifically, we adapt DNABERT [Ji et al., 2021] to GenomeNet-BERT in order to produce useful representations for downstream tasks such as classification and semi10 supervised learning. We explore different pretraining setups and compare their performance on a virus genome classification task to strictly supervised training and baselines on different training set size setups.\nThe conducted experiments show that this architecture provides an increase in performance compared to existing methods at the cost of more resource-intensive training.",
+    "topic": "transformer; BERT; genome sequences; self-supervised; semi-supervised",
+    "conference": "lmrl",
+    "year": 2022,
+    "paper_url": "https://openreview.net/pdf/ff76aa72b44f3e41e8ef3173b25d5a1a30644a5d.pdf"
+  },
+  {
+    "id": "l-Y1igioRF_",
+    "title": "Deep Fitness Inference for Drug Discovery with Directed Evolution",
+    "authors": [
+      "Nathaniel Lee Diamant",
+      "Ziqing Lu",
+      "Christina Helmling",
+      "Kangway V Chuang",
+      "Christian Cunningham",
+      "Tommaso Biancalani",
+      "Gabriele Scalia",
+      "Max W Shen"
+    ],
+    "abstract": "Directed evolution, with iterated mutation and human-designed selection, is a powerful approach for drug discovery. Here, we establish a fitness inference problem given time series DNA sequencing data. We describe maximum likelihood solutions for the nonlinear dynamical system induced by fitness-based competition. Our approach learns from multiple time series rounds in a principled manner, in contrast to prior work focused on two-round enrichment prediction. While fitness inference does not require deep learning in principle, we show that inferring fitness while jointly learning a sequence-to-fitness transformer (DeepFitness) improves performance over a non-deep baseline, and a two-round enrichment baseline. Finally, we highlight how DeepFitness can improve the diversity of the discovered hits in a directed evolution experiment.\n\n\n(Non-archival paper removed at authors' request)",
+    "topic": "",
+    "conference": "lmrl",
+    "year": 2022,
+    "paper_url": "https://openreview.net/forum?id=l-Y1igioRF_"
+  },
+  {
+    "id": "t_DDaakU1Qf",
+    "title": "Benchmarking Graph Neural Network-based Imputation Methods on Single-Cell Transcriptomics Data",
+    "authors": [
+      "Han-Bo Li",
+      "Ramon Viñas Torné",
+      "Pietro Lio"
+    ],
+    "abstract": "Single-cell RNA sequencing (scRNA-seq) provides vast amounts of gene expression data. In this paper, we benchmark several graph neural network (GNN) approaches for cell-type classification using imputed single-cell gene expression data. We model the data in the Paul15 dataset, describing the development of myeloid progenitors, as a bipartite graph consisting of cell and gene nodes, with edge values signifying gene expression. We train a 3-layer GraphSage GNN to impute data by training it to reconstruct the dataset based on a downstream cell classification task. For this, we use a cell-cell graph representation on a small graph convolutional network (GCN) and an adjacency matrix predetermined by spectral clustering. When combined with the data imputation model, GNN classification performance is 58\\%, marginally worse than an SVM benchmark of 59.4\\%, however exhibits better learning and generalisation characteristics along with producing an auxiliary imputation model. Our findings catalyse the development of new tools to analyse complex single-cell datasets.",
+    "topic": "scRNA-seq; GNN; data imputation",
+    "conference": "lmrl",
+    "year": 2022,
+    "paper_url": "https://openreview.net/pdf/d24f3341636513f9b32160d6f7395657ae1ecc75.pdf"
+  },
+  {
+    "id": "dIo3v4Vwh73",
+    "title": "Multimodal deep transfer learning for the analysis of optical coherence tomography scans and retinal fundus photographs",
+    "authors": [
+      "Zoi Tsangalidou",
+      "Edwin Fong",
+      "Josefine Vilsbøll Sundgaard",
+      "Trine Julie Abrahamsen",
+      "Kajsa Kvist"
+    ],
+    "abstract": "Deep learning methods are increasingly applied to ophthalmologic scans in order to diagnose and prognosticate eye diseases, cardiovascular or renal outcomes. In this work, we create a multimodal deep learning model that combines retinal fundus photographs and optical coherence tomography scans and evaluate it in predictive tasks, matching state-of-the-art performance with a smaller dataset. We use saliency maps to showcase which sections of the eye morphology influence the model’s prediction and benchmark the performance of the multimodal model against algorithms that utilize only the individual modalities.",
+    "topic": "deep learning; transfer learning; multimodality; eye imaging",
+    "conference": "lmrl",
+    "year": 2022,
+    "paper_url": "https://openreview.net/pdf/6699d1fa61ce93e15a4d467d44f58961f9bb4388.pdf"
+  },
+  {
+    "id": "xHCFkGvbU-8",
+    "title": "CoSpar identifies early cell fate biases from single cell transcriptomic and lineage information",
+    "authors": [
+      "Shou-Wen Wang",
+      "Michael J Herriges",
+      "Kilian Hurley",
+      "Darrell N. Kotton"
+    ],
+    "abstract": "A goal of single cell genome-wide profiling is to reconstruct dynamic transitions during cell differentiation, disease onset, and drug response. Single cell assays have recently been integrated with lineage tracing, a set of methods that identify cells of common ancestry to establish bona fide dynamic relationships between cell states. These integrated methods have revealed unappreciated cell dynamics, but their analysis faces recurrent challenges arising from noisy, dispersed lineage data.  Here, we develop coherent, sparse optimization (CoSpar) as a robust computational approach to infer cell dynamics from single-cell transcriptomics integrated with lineage tracing. Built on assumptions of coherence and sparsity of transition maps, CoSpar is robust to severe down-sampling and dispersion of lineage data, which enables simpler experimental designs and requires less calibration. In datasets representing hematopoiesis, reprogramming, and directed differentiation, CoSpar identifies early fate biases not previously detected, predicting transcription factors and receptors implicated in fate choice. Documentation and detailed examples for common experimental designs are available at https://cospar.readthedocs.io/.",
+    "topic": "Cell fate choice; single-cell lineage tracing; differentiation dynamics; compressed sensing",
+    "conference": "lmrl",
+    "year": 2022,
+    "paper_url": "https://openreview.net/pdf/55dbc4598bd26a2421a40f0282d4bb6ba54401ea.pdf"
+  },
+  {
+    "id": "XG8EoZm4HG",
+    "title": "Designing Proteins using Sparse Data",
+    "authors": [
+      "Ada Shaw",
+      "Jung-Eun Shin",
+      "Nicole Nisha Thadani",
+      "Alan Nawzad Amin",
+      "Debora Susan Marks"
+    ],
+    "abstract": "A major goal in biotechnology is to generate libraries of functional proteins that display useful phenotypes. Towards this goal, previous approaches have leveraged probabilistic models of evolutionary sequences to design proteins reflecting the constraints that govern natural evolution. Other approaches have incorporated labeled data from experiments reflecting a desired phenotype, either alone or alongside models of evolutionary sequences, to design proteins exhibiting a useful functional property. With the goal of minimizing experimental effort and accelerating design cycles, we seek to quantify the minimal amounts and types of evolutionary and experimental data required for designing novel sequences with useful properties, and to identify the best models for utilizing all available data. Using a published model dataset of AAV gene therapy vector designs developed to achieve a desired tissue tropism, we evaluate models using evolutionary and experimental data independently and in concert for their ability to predict capsid liver targeting. We find that particularly when using data on capsid formation for the related  phenotype of liver tropism and when evaluating sequences farther away from the wild-type, natural sequence data becomes more important and a combination of both data-types outperforms other supervised and unsupervised benchmarks. We introduce a semi-supervised Bayesian approach trained on a combination of evolutionary sequences and capsid viability that can best predict AAV2 liver tropism for sequences greater than 3 mutations away from wild-type. This has beneficial implications for the design of diverse and functional AAV2 libraries, as well as the broader objective of protein design.",
+    "topic": "",
+    "conference": "lmrl",
+    "year": 2022,
+    "paper_url": "https://openreview.net/pdf/a3e58be180460b49c3c93cb72966ad48b9d6bc35.pdf"
+  },
+  {
+    "id": "Pp2jPHrlzc",
+    "title": "Using co-localization priors and microenvironment statistics to reconstruct tissue organization from single-cell data",
+    "authors": [
+      "Yitzchak Vaknin",
+      "Noa Moriel",
+      "Mor Nitzan"
+    ],
+    "abstract": "Unveiling spatial expression patterns across tissues has been key for studying developmental processes, division of labor mechanisms, as well as variations in health and disease. Along the rapid development of improved experimental assays, computational methods have been shown to successfully recover spatial information from non-spatial single-cell data using reference atlases and/or assumptions about tissue organization such as relative smoothness of expression.\nHowever, spatial reconstruction can still be challenging for complex tissues, especially given a limited reference atlas. Here we show how information about tissue microenvironments statistics, such as cell type neighborhoods, or co-localization priors, can enhance tissue reconstruction in such cases. Specifically, we incorporate co-localization priors as a generalization of novoSpaRc, an optimal transport based framework for tissue reconstruction given single-cell data, which relies at its core on an interpolation between a structural correspondence assumption between expression and physical space and a potential reference atlas. We demonstrate that incorporating cell type co-localization priors can enhance the reconstruction of the mammalian organ of Corti and testicular spatial structure.",
+    "topic": "",
+    "conference": "lmrl",
+    "year": 2022,
+    "paper_url": "https://openreview.net/pdf/0e8f0cca0b76bb222613977abb2f307d9592e288.pdf"
+  },
+  {
+    "id": "dzhc1XjMZ4F",
+    "title": "Machine Learning enabled Pooled Optical Screening in Human Lung Cancer Cells",
+    "authors": [
+      "Srinivasan Sivanandan",
+      "Max Salick",
+      "Bobby Leitmann",
+      "Kara Marie Liu",
+      "Mohammad Sultan",
+      "Navpreet Ranu",
+      "Cynthia Vivian Hao",
+      "Owen Chen",
+      "John Bisognano",
+      "Eric Lubeck",
+      "Ajamete Kaykas",
+      "Eilon Sharon",
+      "Ci Chu"
+    ],
+    "abstract": "Pooled CRISPR-based gene knockout (KO) screening has emerged as a powerful method to uncover gene effects on various phenotypes [1, 2]. Recently, an optical pooled CRISPR screening method was developed [3] in which gene targeting guide-RNA (gRNA) are determined using in situ sequencing coupled with microscopy imaging of cellular structure and spatial features [3-6]. Pooled optical screening is very scalable and cost-effective. It can be coupled with different imaging assays to perform large-scale high-content image-based CRISPR-based KO screens. However, development of automated and general approaches for data processing and analysis are required to unlock its full potential as a tool for drug target discovery. Here, we introduce a machine-learning enabled computational framework for in situ sequencing, segmentation and feature representations of cell morphology from pooled optical screens and apply it to human lung cancer cells (A549). We develop a convolutional neural network (CNN) method for gRNA sequence calling, and show that it increases the cell yield by 10% and enables automation. We suggest self-supervised single-cell embeddings as a method to create informative representations of cell morphology, moderately improving upon commonly used engineered features. We demonstrate that such embeddings, aggregated for each gene KO, are more similar for gene pairs that are known to interact and cluster genetic perturbations by their cellular components, biological pathways, and molecular functions. We also highlight ways to use the perturbation clusters to generate hypotheses about gene functions, which are consistent with results from orthogonal studies. Put together, we develop a scalable and general computational approach to process and analyze pooled CRISPR-based morphological screens that can be applied to screen for various disease relevant phenotypes.",
+    "topic": "",
+    "conference": "lmrl",
+    "year": 2022,
+    "paper_url": "https://openreview.net/pdf/484287c430ce5ec2ecbd263fb14bc9701d1ca45e.pdf"
+  },
+  {
+    "id": "-wkrHeGLzPh",
+    "title": "Neural Unbalanced Optimal Transport via Cycle-Consistent Semi-Couplings",
+    "authors": [
+      "Frederike Lübeck",
+      "Charlotte Bunne",
+      "Gabriele Gut",
+      "Jacobo Sarabia del Castillo",
+      "Lucas Pelkmans",
+      "David Alvarez-Melis"
+    ],
+    "abstract": "Comparing unpaired samples of a distribution or population taken at different points in time is a fundamental task in many application domains where measuring populations is destructive and cannot be done repeatedly on the same sample, such as in single-cell biology. Optimal transport (OT) can solve this challenge by learning an optimal coupling of samples across distributions from unpaired data. However, the usual formulation of OT assumes conservation of mass, which is violated in unbalanced scenarios in which the population size changes (e.g., cell proliferation or death) between measurements. In this work, we introduce NubOT, a neural unbalanced OT formulation that relies on the formalism of semi-couplings to account for creation and destruction of mass. To estimate such semi-couplings and generalize out-of-sample, we derive an efficient parameterization based on neural optimal transport maps and propose a novel algorithmic scheme through a cycle-consistent training procedure. We apply our method to the challenging task of forecasting heterogeneous responses of multiple cancer cell lines to various drugs, where we observe that by accurately modeling cell proliferation and death, our method yields notable improvements over previous neural optimal transport methods.",
+    "topic": "",
+    "conference": "lmrl",
+    "year": 2022,
+    "paper_url": "https://openreview.net/pdf/1d3ef93c9793f4d7f3f5bb27e372934d761f4d5c.pdf"
+  },
+  {
+    "id": "DlSPmTqOqz",
+    "title": "Is brightfield all you need for MoA prediction?",
+    "authors": [
+      "Ankit Gupta",
+      "Philip John Harrison",
+      "Håkan Wieslander",
+      "Jonne Rietdijk",
+      "Jordi Carreras Puigvert",
+      "Polina Georgiev",
+      "Carolina Wahlby",
+      "Ola Spjuth",
+      "Ida-Maria Sintorn"
+    ],
+    "abstract": "Fluorescence staining techniques, such as Cell Painting, together with fluorescence microscopy have proven invaluable in visualizing and quantifying the effects that drugs and other perturbations have on cultured cells. However, fluorescence microscopy is expensive, time-consuming, and labour-intensive, and the stains applied can be cytotoxic, interfering with the activity under study. The simplest form of microscopy, brightfield microscopy, lacks these downsides, but the images produced have low contrast and the cellular compartments are difficult to discern. Nevertheless, harnessing deep learning for these brightfield images may still be sufficient for various predictive endeavours. In this study, we compare the predictive performance of models trained on fluorescence images to those trained on brightfield images for predicting the mechanism of action (MoA) of different drugs. We also extracted CellProfiler features from the fluorescence images and used them to benchmark the performance. Overall, we found comparable and correlated predictive performance for the two imaging modalities. This is promising for future studies of MoAs in time-lapse experiments.",
+    "topic": "",
+    "conference": "lmrl",
+    "year": 2022,
+    "paper_url": "https://openreview.net/pdf/69c860c9742dbd6266ba4ebce746ec8ea22b1672.pdf"
+  },
+  {
+    "id": "F8zJALi_CR",
+    "title": "Representation Learning to Integrate and Interpret Omics Data",
+    "authors": [
+      "Sara Masarone"
+    ],
+    "abstract": "The last decade has seen an increase in the amount of high throughput data available to researchers. While this has allowed scientists to explore various hypotheses and research questions, it has also highlighted the importance of data integration in order to facilitate knowledge extraction and discovery. Although many strategies have been developed over the last few years, integrating data whilst generating an interpretable embedding still remains challenging due to difficulty in regularisation, especially with deep generative models. Thus, we introduce a framework called Regularised Multi-View Variational Autoencoder (RMV-VAE) to integrate different omics data types whilst allowing researchers to obtain more biologically meaningful embeddings.\n\n* This work is under consideration*",
+    "topic": "",
+    "conference": "lmrl",
+    "year": 2022,
+    "paper_url": "https://openreview.net/pdf/e12f492e25cd2477dedf8887441f3a938c9d6422.pdf"
+  }
+]

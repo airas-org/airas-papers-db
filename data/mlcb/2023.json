@@ -1,0 +1,272 @@
+[
+  {
+    "id": "sims24a",
+    "title": "A Masked Image Modeling Approach to CyCIF Panel Reduction and Marker Imputation",
+    "authors": [
+      "Zachary S. Sims",
+      "Young Hwan Chang"
+    ],
+    "abstract": "Cyclic Immunofluorescence (CyCIF) has emerged as a powerful technique that can measure multiple biomarkers in a single tissue sample but it is limited in panel size due to technical issues and tissue loss. We develop a computational model that imputes a surrogate in silico high-plex CyCIF from only a few experimentally measured biomarkers by learning co-expression and morphological patterns at the single-cell level. The reduced panel is optimally designed to enable full reconstruction of an expanded marker panel that retains the information from the original panel necessary for downstream analysis. Using a masked image modeling approach based on the self-supervised training objective of reconstructing full images at the single-cell level, we demonstrate significant performance improvement over previous attempts on the breast cancer tissue microarray dataset. Our approach offers users access to a more extensive set of biomarkers beyond what has been experimentally measured. It also allows for allocating resources toward exploring novel biomarkers and facilitates greater cell type differentiation and disease characterization. Additionally, it can handle assay failures such as low-quality markers, technical noise, and/or tissue loss in later rounds as well as artificially upsample to include additional panel markers.",
+    "topic": "",
+    "conference": "mlcb",
+    "year": 2023,
+    "paper_url": "https://proceedings.mlr.press/v240/sims24a/sims24a.pdf"
+  },
+  {
+    "id": "wu24a",
+    "title": "Multitask-Guided Self-Supervised Tabular Learning for Patient-Specific Survival Prediction",
+    "authors": [
+      "You Wu",
+      "Omid Bazgir",
+      "Yongju Lee",
+      "Tommaso Biancalani",
+      "James Lu",
+      "Ehsan Hajiramezanali"
+    ],
+    "abstract": "Survival prediction, central to the analysis of clinical trials, has the potential to be transformed by the availability of RNA-seq data as it reveals the underlying molecular and genetic mechanisms for disease and outcomes. However, the amount of RNA-seq samples available for understudied or rare diseases is often limited. To address this, leveraging data across different cancer types can be a viable solution, necessitating the application of self-supervised learning techniques. Yet, this wealth of data often comes in a tabular format without a known structure, hindering the development of a generally effective augmentation method for survival prediction. While traditional methods have been constrained by a one cancer-one model philosophy or have relied solely on a single modality, our approach, Guided-STab, on the contrary, offers a comprehensive approach through pretraining on all available RNA-seq data from various cancer types while guiding the representation by incorporating sparse clinical features as auxiliary tasks. With a multitask-guided self-supervised representation learning framework, we maximize the potential of vast unlabeled datasets from various cancer types, leading to genomic-driven survival predictions. These auxiliary clinical tasks then guide the learned representations to enhance critical survival factors. Extensive experiments reinforce the promise of our approach, as Guided-STab consistently outperforms established benchmarks on TCGA dataset.",
+    "topic": "",
+    "conference": "mlcb",
+    "year": 2023,
+    "paper_url": "https://proceedings.mlr.press/v240/wu24a/wu24a.pdf"
+  },
+  {
+    "id": "liu24a",
+    "title": "Open Biomedical Network Benchmark: A Python Toolkit for Benchmarking Datasets with Biomedical Networks",
+    "authors": [
+      "Renming Liu",
+      "Arjun Krishnan"
+    ],
+    "abstract": "Over the past decades, network biology has been a major driver of computational methods developed to better understand the functional roles of each gene in the human genome in their cellular context. Following the application of traditional semi-supervised and supervised machine learning (ML) techniques, the next wave of advances in network biology will come from leveraging graph neural networks (GNN). However, to test new GNN-based approaches, a systematic and comprehensive benchmarking resource that spans a diverse selection of biomedical networks and gene classification tasks is lacking. Here, we present the Open Biomedical Network Benchmark (OBNB), a collection of node-classification benchmarking datasets derived using networks from 15 sources and tasks that include predicting genes associated with a wide range of functions, traits, and diseases. The accompanying Python package, obnb, contains reusable modules that enable researchers to download source data from public databases or archived versions and set up ML-ready datasets that are compatible with popular GNN frameworks such as PyG and DGL. Our work lays the foundation for novel GNN applications in network biology. obob will also help network biologists easily set-up custom benchmarking datasets for answering new questions of interest and collaboratively engage with graph ML practitioners to enhance our understanding of the human genome. OBNB is released under the MIT license and is freely available on GitHub: https://github.com/krishnanlab/obnb",
+    "topic": "",
+    "conference": "mlcb",
+    "year": 2023,
+    "paper_url": "https://proceedings.mlr.press/v240/liu24a/liu24a.pdf"
+  },
+  {
+    "id": "martens24a",
+    "title": "Disentangling shared and private latent factors in multimodal Variational Autoencoders",
+    "authors": [
+      "Kaspar Märtens",
+      "Christopher Yau"
+    ],
+    "abstract": "Generative models for multimodal data permit the identification of latent factors that may be associated with important determinants of observed data heterogeneity. Common or shared factors could be important for explaining variation across modalities whereas other factors may be private and important only for the explanation of a single modality. Multimodal Variational Autoencoders, such as MVAE and MMVAE, are a natural choice for inferring those underlying latent factors and separating shared variation from private. In this work, we investigate their capability to reliably perform this disentanglement. In particular, we highlight a challenging problem setting where modality-specific variation dominates the shared signal. Taking a cross-modal prediction perspective, we demonstrate limitations of existing models, and propose a modification how to make them more robust to modality-specific variation. Our findings are supported by experiments on synthetic as well as various real-world multi-omics data sets. ",
+    "topic": "",
+    "conference": "mlcb",
+    "year": 2023,
+    "paper_url": "https://proceedings.mlr.press/v240/martens24a/martens24a.pdf"
+  },
+  {
+    "id": "nathansen24a",
+    "title": "Evaluating Tuning Strategies for Sequence Generation with Protein Language Models",
+    "authors": [
+      "Andrea Nathansen",
+      "Kevin Klein",
+      "Bernhard Renard",
+      "Melania Nowicka",
+      "Jakub M Bartoszewicz"
+    ],
+    "abstract": "Designing artificial proteins with specialized functions promises new solutions for biological, medical, and environmental use cases. This field benefits from advances in natural language processing, with state-of-the-art text generation models already being successfully applied to protein sequences. Openly available pre-trained protein language models are able to generate artificial protein sequences and can be finetuned on very specific tasks. Considering the high computational cost of finetuning a model exclusively for one downstream task, prompt tuning has been proposed as a more cost-efficient alternative that shares one model across different tasks. However, no openly available implementation of this approach compatible with protein language models has been previously published. Thus, we adapt an open-source codebase designed for NLP models to build a pipeline for prompt tuning on protein sequence data, supporting the protein language models ProtGPT2 and RITA.  We benchmark this implementation for generating proteins of a specific family and evaluate the approach using text processing metrics as well as family membership prediction and protein activity prediction of generated sequences. Our results confirm the advantages of prompt tuning in resource usage, especially storage, encouraging further research and expansion of this technique to related use cases. For our evaluated use case, prompt tuning does not reach up to finetuning in terms of the quality of generated protein sequences, indicating the need for more extensive optimization. Lastly, we observe discrepancies between results of similar evaluation tools, highlighting open problems for principled assessment of protein sequence generation quality.",
+    "topic": "",
+    "conference": "mlcb",
+    "year": 2023,
+    "paper_url": "https://proceedings.mlr.press/v240/nathansen24a/nathansen24a.pdf"
+  },
+  {
+    "id": "tu24a",
+    "title": "A Supervised Contrastive Framework for Learning Disentangled Representations of Cellular Perturbation Data",
+    "authors": [
+      "Xinming Tu",
+      "Jan-Christian Hütter",
+      "Zitong Jerry Wang",
+      "Takamasa Kudo",
+      "Aviv Regev",
+      "Romain Lopez"
+    ],
+    "abstract": "CRISPR technology, combined with single-cell RNA-Seq, has opened the way to large scale pooled perturbation screens, allowing more systematic interrogations of gene functions in cells at scale. However, such Perturb-seq data poses many analysis challenges, due to its high-dimensionality, high level of technical noise, and variable Cas9 efficiency. The single-cell nature of the data also poses its own challenges, as we observe the heterogeneity of phenotypes in the unperturbed cells, along with the effect of the perturbations. All in all, these characteristics make it difficult to discern subtler effects. Existing tools, like mixscape and ContrastiveVI, provide partial solutions, but may oversimplify biological dynamics, or have low power to characterize perturbations with a smaller effect size. Here, we address these limitations by introducing the Supervised Contrastive Variational Autoencoder (SC-VAE). SC-VAE integrates guide RNA identity with gene expression data, ensuring a more discriminative analysis, and adopts the Hilbert-Schmidt Independence Criterion as a way to achieve disentangled representations, separating the heterogeneity in the control population from the effect of the perturbations. Evaluation on large-scale data sets highlights SC-VAE’s superior sensitivity in identifying perturbation effects compared to ContrastiveVI, scVI and PCA. The perturbation embeddings better reflect known protein complexes (evaluated on CORUM), while its classifier offers promise in identifying assignment errors and cells escaping the perturbation phenotype. SC-VAE is readily applicable across diverse perturbation data sets.",
+    "topic": "",
+    "conference": "mlcb",
+    "year": 2023,
+    "paper_url": "https://proceedings.mlr.press/v240/tu24a/tu24a.pdf"
+  },
+  {
+    "id": "alzaid24a",
+    "title": "A Transductive Approach to Survival Ranking for Cancer Risk Stratification",
+    "authors": [
+      "Ethar Alzaid",
+      "Muhammad Dawood",
+      "Fayyaz Minhas"
+    ],
+    "abstract": "How can we stratify patients into subgroups based on their expected survival in a purely data-driven manner? Identifying cancer patients at higher risk is crucial in planning personalized treatment to improve patient survival outcomes. The main challenge with existing approaches is the underlying complexity of handling censoring in the survival data and manually setting a precise threshold to stratify patients into risk groups. In this paper, a Transductive Survival Ranking (TSR) model for patient risk stratification is proposed. The model handles samples in pairs to make use of instances with censored survival information. It incorporates unlabeled test samples in the training process to maximize the margin between their predicted survival scores resulting in automatic patient stratification into subgroups without the need for any additional post-processing or manual threshold selection. The model was evaluated on several datasets with varying sets of covariates, and all stratification were significant ($p < 0.05$) with high concordance indices of up to 0.78 in Disease Specific Survival and 0.75 in Overall Survival.",
+    "topic": "",
+    "conference": "mlcb",
+    "year": 2023,
+    "paper_url": "https://proceedings.mlr.press/v240/alzaid24a/alzaid24a.pdf"
+  },
+  {
+    "id": "szatkownik24a",
+    "title": "Towards creating longer genetic sequences with GANs: Generation in principal component space",
+    "authors": [
+      "Antoine Szatkownik",
+      "Cyril Furtlehner",
+      "Guillaume Charpiat",
+      "Burak Yelmen",
+      "Flora Jay"
+    ],
+    "abstract": "Synthetic data generation via generative modeling has recently become a prominent research field in genomics, with applications ranging from functional sequence design to high-quality, privacy-preserving artificial in silico genomes. Following a body of work on Artificial Genomes (AGs) created via various generative models trained with raw genomic input, we propose a conceptually different approach to address the issues of scalability and complexity of genomic data generation in very high dimensions. Our method combines dimensionality reduction, achieved by Principal Component Analysis (PCA), and a Generative Adversarial Network (GAN) learning in this reduced space. We compare the quality of AGs generated by our approach with AGs generated by the established models and report improvements on capturing population structure and linkage disequilibrium.",
+    "topic": "",
+    "conference": "mlcb",
+    "year": 2023,
+    "paper_url": "https://proceedings.mlr.press/v240/szatkownik24a/szatkownik24a.pdf"
+  },
+  {
+    "id": "majha24a",
+    "title": "On Modelability and Generalizability: Are Machine Learning Models for Drug Synergy Exploiting Artefacts and Biases in Available Data?",
+    "authors": [
+      "Arushi G. K. Majha",
+      "Ian Stott",
+      "Andreas Bender"
+    ],
+    "abstract": "Synergy models are useful tools for exploring drug combinatorial search space and identifying promising sub-spaces for in vitro/vivo experiments. Here, we report that distributional biases in the training-validation-test sets used for predictive modeling of drug synergy can explain much of the variability observed in model performances (up to $0.22$ $\\Delta$AUPRC). We built 145 classification models spanning 4,577 unique drugs and 75,276 pair-wise drug combinations extracted from DrugComb, and examined spurious correlations in both the input feature and output label spaces. We posit that some synergy datasets are easier to model than others due to factors such as synergy spread, class separation, chemical structural diversity, physicochemical diversity, combinatorial tests per drug, and combinatorial label entropy. We simulate distribution shifts for these dataset attributes and report that the drug-wise homogeneity of combinatorial labels most influences modelability ($0.16\\pm0.06$ $\\Delta$AUPRC). Our findings imply that seemingly high-performing drug synergy models may not generalize well to broader medicinal space. We caution that the synergy modeling community’s efforts may be better expended in examining data-specific artefacts and biases rigorously prior to model building.",
+    "topic": "",
+    "conference": "mlcb",
+    "year": 2023,
+    "paper_url": "https://proceedings.mlr.press/v240/majha24a/majha24a.pdf"
+  },
+  {
+    "id": "yu24a",
+    "title": "A Multi-Granularity Approach to Similarity Search in Multiplexed Immunofluorescence Images",
+    "authors": [
+      "Jennifer Yu",
+      "Zhenqin Wu",
+      "Aaron Mayer",
+      "Alexandro Trevino",
+      "James Zou"
+    ],
+    "abstract": "Due to the rapid increase and importance of multiplexed immunofluorescence (mIF) imaging data in spatial biology, there is a pressing need to develop efficient image-to-image search pipelines for both diagnostic and research purposes. While several image search methods have been introduced for conventional images and digital pathology, mIF images present three main challenges: (1) high dimensionality, (2) domain-specificity, and (3) complex additional molecular information. To address this gap, we introduce the MIISS framework, a Multi-granularity mIF Image Similarity Search pipeline that employs self-supervised learning models to extract features from mIF image patches and an entropy-based aggregation method to enable similarity searches at higher, multi-granular levels. We then benchmarked various feature generation approaches to handle high dimensional images and tested them on various foundation models. We conducted evaluations using datasets from different tissues on both patch- and patient-level, which demonstrate the framework’s effectiveness and generalizability. Notably, we found that domain-specific models consistently outperformed other models, further showing their robustness and generalizability across different datasets. The MIISS framework offers an effective solution for navigating the growing landscape of mIF images, providing tangible clinical benefits and opening new avenues for pathology research.",
+    "topic": "",
+    "conference": "mlcb",
+    "year": 2023,
+    "paper_url": "https://proceedings.mlr.press/v240/yu24a/yu24a.pdf"
+  },
+  {
+    "id": "zhang24a",
+    "title": "ViDa: Visualizing DNA hybridization trajectories with biophysics-informed deep graph embeddings",
+    "authors": [
+      "Chenwei Zhang",
+      "Jordan Lovrod",
+      "Boyan Beronov",
+      "Khanh Dao Duc",
+      "Anne Condon"
+    ],
+    "abstract": "Visualization tools can help synthetic biologists and molecular programmers understand the complex reactive pathways of nucleic acid reactions, which can be designed for many potential applications and can be modeled using a continuous-time Markov chain (CTMC). Here we present ViDa, a new visualization approach for DNA reaction trajectories that uses a 2D embedding of the secondary structure state space underlying the CTMC model. To this end, we integrate a scattering transform of the secondary structure adjacency, a variational autoencoder, and a nonlinear dimensionality reduction method. We augment the training loss with domain-specific supervised terms that capture both thermodynamic and kinetic features. We assess ViDa on two well-studied DNA hybridization reactions. Our results demonstrate that the domain-specific features lead to significant quality improvements over the state-of-the-art in DNA state space visualization, successfully separating different folding pathways and thus providing useful insights into dominant reaction mechanisms.",
+    "topic": "",
+    "conference": "mlcb",
+    "year": 2023,
+    "paper_url": "https://proceedings.mlr.press/v240/zhang24a/zhang24a.pdf"
+  },
+  {
+    "id": "isaev24a",
+    "title": "Investigating RNA splicing as a source of cellular diversity using a binomial mixture model",
+    "authors": [
+      "Keren Isaev",
+      "David A. Knowles"
+    ],
+    "abstract": "Alternative splicing (AS) contributes significantly to RNA and protein variability yet its role in defining cellular diversity is not fully understood. While Smart-seq2 offers enhanced coverage across transcripts compared to 10X single cell RNA-sequencing (scRNA-seq), current computational methods often miss the full complexity of AS. Most approaches for single cell based differential splicing analysis focus on simple AS events such as exon skipping, and rely on predefined cell type labels or low-dimensional gene expression representations. This limits their ability to detect more complex AS events and makes them dependent on prior knowledge of cell classifications. Here, we present Leaflet, a splice junction centric approach inspired by Leafcutter, our tool for quantifying RNA splicing variation with bulk RNA-seq. Leaflet is a probabilistic mixture model designed to infer AS-driven cell states without the need for cell type labels. We detail Leaflet’s generative model, inference methodology, and its efficiency in detecting differentially spliced junctions. By applying Leaflet to the Tabula Muris brain cell dataset, we highlight cell-state specific splicing patterns, offering a deeper insight into cellular diversity beyond that captured by gene expression alone.",
+    "topic": "",
+    "conference": "mlcb",
+    "year": 2023,
+    "paper_url": "https://proceedings.mlr.press/v240/isaev24a/isaev24a.pdf"
+  },
+  {
+    "id": "shokraneh-kenari24a",
+    "title": "Model-based imputation enables improved resolution for identifying differential chromatin contacts in single-cell Hi-C data",
+    "authors": [
+      "Neda Shokraneh Kenari",
+      "Megan Andrews",
+      "Max Libbrecht"
+    ],
+    "abstract": "Recent advances in single-cell Hi-C (scHi-C) assays allow studying the chromatin conformation at the resolution of a single cell or a cluster of cells. A key question is to identify changes in the contact strength between two cell types, known as differential chromatin contacts (DCCs). While existing statistical methods can identify changes in contact strength in bulk Hi-C data, these methods cannot be effectively applied to scHi-C data due to its severe sparsity. Thus it is necessary to develop methods for identifying differential chromatin contacts in scHi-C data.   Recently-developed scHi-C imputation approaches can mitigate the issue of sparsity. We propose an approach for identifying differential chromatin contacts using these imputation approaches. We build upon the existing SnapHiC-D method by replacing its imputation step with recent learning-based imputation approaches. We show that, via analysis of real scHi-C datasets with different coverages and at different resolutions, imputation approaches that consider the spatial correlation between bin pairs, Higashi, and random walk with restart, outperform other approaches. Furthermore, we show that careful considerations are needed when imputation is done in preprocessing steps as it may invalidate downstream statistical approaches. Finally, our results indicate that model-based imputations greatly improve performance when analyzing chromatin contacts at moderate resolution (100kb); however, current imputation approaches are inefficient in terms of both accuracy and computational complexity when being applied to high-resolution scHi-C resolution (10kb).",
+    "topic": "",
+    "conference": "mlcb",
+    "year": 2023,
+    "paper_url": "https://proceedings.mlr.press/v240/shokraneh-kenari24a/shokraneh-kenari24a.pdf"
+  },
+  {
+    "id": "wu24b",
+    "title": "TCR-BERT: learning the grammar of T-cell receptors for flexible antigen-binding analyses",
+    "authors": [
+      "Kevin E. Wu",
+      "Kathryn Yost",
+      "Bence Daniel",
+      "Julia Belk",
+      "Yu Xia",
+      "Takeshi Egawa",
+      "Ansuman Satpathy",
+      "Howard Chang",
+      "James Zou"
+    ],
+    "abstract": "The T-cell receptor (TCR) allows T-cells to recognize and respond to antigens presented by infected and diseased cells. However, due to TCRs’ staggering diversity and the complex binding dynamics underlying TCR antigen recognition, it is challenging to predict which antigens a given TCR may bind to. Here, we present TCR-BERT, a deep learning model that applies self-supervised transfer learning to this problem. TCR-BERT leverages unlabeled TCR sequences to learn a general, versatile representation of TCR sequences, enabling numerous downstream applications. TCR-BERT can be used to build state-of-the-art TCR-antigen binding predictors with improved generalizability compared to prior methods. Simultaneously, TCR-BERT’s embeddings yield clusters of TCRs likely to share antigen specificities. It also enables computational approaches to challenging, unsolved problems such as designing novel TCR sequences with engineered binding affinities. Importantly, TCR-BERT enables all these advances by focusing on residues with known biological significance. ",
+    "topic": "",
+    "conference": "mlcb",
+    "year": 2023,
+    "paper_url": "https://proceedings.mlr.press/v240/wu24b/wu24b.pdf"
+  },
+  {
+    "id": "visani24a",
+    "title": "H-Packer: Holographic Rotationally Equivariant Convolutional Neural Network for Protein Side-Chain Packing",
+    "authors": [
+      "Gian Marco Visani",
+      "William Galvin",
+      "Michael Pun",
+      "Armita Nourmohammad"
+    ],
+    "abstract": "Accurately modeling protein 3D structure is essential for the design of functional proteins. An important sub-task of structure modeling is protein side-chain packing: predicting the conformation of side-chains (rotamers) given the protein’s backbone structure and amino-acid sequence. Conventional approaches for this task rely on expensive sampling procedures over hand-crafted energy functions and rotamer libraries. Recently, several deep learning methods have been developed to tackle the problem in a data-driven way, albeit with vastly different formulations (from image-to-image translation to directly predicting atomic coordinates). Here, we frame the problem as a joint regression over the side-chains’ true degrees of freedom: the dihedral $\\chi$ angles. We carefully study possible objective functions for this task, while accounting for the underlying symmetries of the task. We propose Holographic Packer (H-Packer), a novel two-stage algorithm for side-chain packing built on top of two light-weight rotationally equivariant neural networks. We evaluate our method on CASP13 and CASP14 targets. H-Packer is computationally efficient and shows favorable performance against conventional physics-based algorithms and is competitive against alternative deep learning solutions.",
+    "topic": "",
+    "conference": "mlcb",
+    "year": 2023,
+    "paper_url": "https://proceedings.mlr.press/v240/visani24a/visani24a.pdf"
+  },
+  {
+    "id": "robson24a",
+    "title": "GUANinE v1.0: Benchmark Datasets for Genomic AI Sequence-to-Function Models",
+    "authors": [
+      "eyes s. robson",
+      "Nilah Ioannidis"
+    ],
+    "abstract": "Computational genomics increasingly relies on machine learning methods for genome interpretation, and the recent adoption of neural sequence-to-function models highlights the need for rigorous model specification and controlled evaluation, problems familiar to other fields of AI. Research strategies that have greatly benefited other fields — including benchmarking, auditing, and algorithmic fairness — are also needed to advance the field of genomic AI and to facilitate model development. Here we propose a genomic AI benchmark, GUANinE, for evaluating model generalization across a number of distinct genomic tasks. Compared to existing task formulations in computational genomics, GUANinE is large-scale, de-noised, and suitable for evaluating pretrained models. GUANinE v1.0 primarily focuses on functional genomics tasks such as functional element annotation and gene expression prediction, and it also draws upon connections to evolutionary biology through sequence conservation tasks. The current GUANinE tasks provide insight into the performance of existing genomic AI models and non-neural baselines, with opportunities to be refined, revisited, and broadened as the field matures. Finally, the GUANinE benchmark allows us to evaluate new self-supervised T5 models and explore the tradeoffs between tokenization and model performance, while showcasing the potential for self-supervision to complement existing pretraining procedures.",
+    "topic": "",
+    "conference": "mlcb",
+    "year": 2023,
+    "paper_url": "https://proceedings.mlr.press/v240/robson24a/robson24a.pdf"
+  },
+  {
+    "id": "hong24a",
+    "title": "Improving transformer secondary structure predictions with secondary structure ”fixing” task",
+    "authors": [
+      "Juneki Hong",
+      "Dezhong Deng",
+      "David A. Hendrix"
+    ],
+    "abstract": "The structure of RNA can determine the function, and improvements in RNA secondary structure prediction can help in understanding the functions of RNA. Nucleotides in RNA sequences form base-pairing interactions in context-specific preferential behavior to help determine the secondary structure. Structure prediction algorithms have been developed to predict the secondary structure, including dynamic programming, and machine learning approaches. One of the central challenges in the prediction of secondary structure with deep learning is that these architectures are not good at bracketed structure prediction. To overcome this challenge, we present a deep learning approach for predicting secondary structure that uses an input predicted structure to provide a scaffolding for the structure prediction. We find that architectures using LSTM and  self-attention-based transformer layers predict a strong baseline in the prediction of base pairs (F1=53.73), but significantly improves (F1=59.52) when predictions from dynamic programming methods are provided as input. Model interpretation shows that patterns of attention for different layers of the network are enriched for specific paired regions or regions that should be paired. Analysis of neural network models like this can shed light on possible missed interactions, and what other positions contribute most to output fixed positions.",
+    "topic": "",
+    "conference": "mlcb",
+    "year": 2023,
+    "paper_url": "https://proceedings.mlr.press/v240/hong24a/hong24a.pdf"
+  },
+  {
+    "id": "bajwa24a",
+    "title": "Characterizing uncertainty in predictions of genomic sequence-to-activity models",
+    "authors": [
+      "Ayesha Bajwa",
+      "Ruchir Rastogi",
+      "Pooja Kathail",
+      "Richard W. Shuai",
+      "Nilah Ioannidis"
+    ],
+    "abstract": "Genomic sequence-to-activity models are increasingly utilized to understand gene regulatory syntax and probe the functional consequences of regulatory variation. Current models make accurate predictions of relative activity levels across the human reference genome, but their performance is more limited for predicting the effects of genetic variants, such as explaining gene expression variation across individuals. To better understand the causes of these shortcomings, we examine the uncertainty in predictions of genomic sequence-to-activity models using an ensemble of Basenji2 model replicates. We characterize prediction consistency on four types of sequences: reference genome sequences, reference genome sequences perturbed with TF motifs, eQTLs, and personal genome sequences. We observe that models tend to make high-confidence predictions on reference sequences, even when incorrect, and low-confidence predictions on sequences with variants. For eQTLs and personal genome sequences, we find that model replicates make inconsistent predictions in >50% of cases. Our findings suggest strategies to improve performance of these models. ",
+    "topic": "",
+    "conference": "mlcb",
+    "year": 2023,
+    "paper_url": "https://proceedings.mlr.press/v240/bajwa24a/bajwa24a.pdf"
+  }
+]

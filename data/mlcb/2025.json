@@ -1,0 +1,362 @@
+[
+  {
+    "id": "hao25a",
+    "title": "GeST: Towards Building A Generative Pretrained Transformer for Learning Cellular Spatial Context",
+    "authors": [
+      "Minsheng Hao",
+      "Nan Yan",
+      "Haiyang Bian",
+      "Yixin Chen",
+      "Jin Gu",
+      "Lei Wei",
+      "Xuegong Zhang"
+    ],
+    "abstract": "Learning spatial context of cells through pretraining on spatial transcriptomics (ST) data may empower us to decipher tissue organization and cellular interactions. Yet, transformer-based generative models often focus on modeling individual cells, overlooking the intricate spatial relationships within them. To address this limitation, we develop GeST, a deep transformer model pretrained by a novel spatially informed generation task: Predicting cellular expression profile of a given location based on the information from its neighboring cells. GeST integrates a specialized spatial attention mechanism for efficient pretraining, a flexible serialization strategy for sequentializing ST data, and a cell tokenization method for quantizing gene expression profiles. We pretrained GeST on large-scale ST datasets across multiple ST technologies, achieving superior performance in generating previously unseen spatial cell profiles, extracting spatial niche embeddings in a zero-shot manner, and annotating spatial regions. Furthermore, GeST can simulate gene expression changes in response to perturbations of cells within spatial context, closely matching existing experimental results. GeST offers a powerful generative pre-training framework for learning spatial contexts.",
+    "topic": "",
+    "conference": "mlcb",
+    "year": 2025,
+    "paper_url": "https://raw.githubusercontent.com/mlresearch/v311/main/assets/hao25a/hao25a.pdf"
+  },
+  {
+    "id": "ravi25a",
+    "title": "TCR-ECHO: Evolutionary Cross-attention with Physicochemical Bias for Hierarchical TCR-Peptide Binding Prediction",
+    "authors": [
+      "Tapanmitra Ravi",
+      "Irene M Ong"
+    ],
+    "abstract": "Accurate prediction of T-cell receptor (TCR)-peptide binding specificity remains challenging due to vast immune receptor diversity and complex molecular recognition principles. We present a deep learning framework integrating evolutionary protein representations with physicochemical binding principles for TCR-epitope interaction prediction. Our approach employs separate ESM2 encoders for TCR CDR3beta and peptide sequences, capturing evolutionary patterns from millions of proteins. The architecture introduces two key innovations: physicochemically-informed cross-attention incorporating Atchley factor biases to model molecular complementarity, and hierarchical contrastive learning operating at residue and interaction levels to structure binding-specific representations. The bidirectional cross-attention mechanism models mutual recognition between binding partners, while Atchley factor integration provides physicochemical context—hydrophobicity, polarity, and structural propensities—governing biochemical interactions beyond sequence patterns. Hierarchical contrastive learning progressively refines representations from sequence patterns to interaction compatibility, creating peptide-specific clusters in TCR embedding space. Comprehensive evaluation demonstrates superior performance across multiple scenarios. Systematic ablation studies confirm each component’s importance, particularly for novel peptide generalization. The learned representations show clear biological interpretability, with TCRs binding identical peptides clustering in embedding space.  This framework establishes foundations for computational immunology tools by integrating evolutionary information with molecular binding principles, which are informative for understanding TCR-peptide binding. ",
+    "topic": "",
+    "conference": "mlcb",
+    "year": 2025,
+    "paper_url": "https://raw.githubusercontent.com/mlresearch/v311/main/assets/ravi25a/ravi25a.pdf"
+  },
+  {
+    "id": "qiao25a",
+    "title": "Unsupervised Evolutionary Cell Type Matching via Entropy-Minimized Optimal Transport",
+    "authors": [
+      "Mu Qiao"
+    ],
+    "abstract": "Identifying evolutionary correspondences between cell types across species is a fundamental challenge in comparative genomics and evolutionary biology. Existing approaches often rely on either reference-based matching, which imposes asymmetry by designating one species as the reference, or projection-based matching, which may increase computational complexity and obscure biological interpretability at the cell-type level. Here, we present OT-MESH, an unsupervised computational framework leveraging entropy-regularized optimal transport (OT) to systematically determine cross-species cell type homologies. Our method uniquely integrates the Minimize Entropy of Sinkhorn (MESH) technique to refine the OT plan, transforming diffuse transport matrices into sparse, interpretable correspondences. Through systematic evaluation on synthetic datasets, we demonstrate that OT-MESH achieves near-optimal matching accuracy with computational efficiency, while maintaining remarkable robustness to noise. Compared to other OT-based methods like RefCM, OT-MESH provides speedup while achieving comparable accuracy. Applied to retinal bipolar cells (BCs) and retinal ganglion cells (RGCs) from mouse and macaque, OT-MESH accurately recovers known evolutionary relationships and uncovers novel correspondences, one of which was independently validated experimentally. Thus, our framework offers a principled, scalable, and interpretable solution for evolutionary cell type mapping, facilitating deeper insights into cellular specialization and conservation across species.",
+    "topic": "",
+    "conference": "mlcb",
+    "year": 2025,
+    "paper_url": "https://raw.githubusercontent.com/mlresearch/v311/main/assets/qiao25a/qiao25a.pdf"
+  },
+  {
+    "id": "hao25b",
+    "title": "PerTurboAgent: An LLM-based Agent for Designing Iterative Perturb-Seq Experiments",
+    "authors": [
+      "Minsheng Hao",
+      "yongju lee",
+      "Hanchen Wang",
+      "Gabriele Scalia",
+      "Aviv Regev"
+    ],
+    "abstract": "Understanding how genetic interventions alter cell phenotypes is crucial for uncovering gene regulatory mechanisms and identifying drug targets. Methods like Perturb-seq assess the impact of many genetic interventions on cellular profiles (e.g., RNA). However, exhaustively testing all perturbations, especially combinations, is infeasible. Iterative experimental design offers a solution. By using gene circuit modularity, sparsity, and prior knowledge, we can predict the effects of unseen perturbations and group genes into co-functional modules. Subsequent Perturb-seq rounds test these predictions, refining the model. This cycle prioritizes gene testing, maximizing knowledge from limited resources, and enabling general predictive models. Designing these experiments is complex, requiring a system to analyze data, integrate knowledge, use statistical tools, predict outcomes, and prioritize perturbations. We developed PerTurboAgent, an LLM-based agent for designing iterative Perturb-seq experiments. It excels at predicting candidate gene panels through self-directed data analysis and knowledge retrieval. We evaluated its ability to identify genes affecting gene expression upon perturbation using genome-scale data. PerTurboAgent surpasses existing agent-based and active learning strategies, providing an efficient, understandable method for designing sequential perturbation experiments.",
+    "topic": "",
+    "conference": "mlcb",
+    "year": 2025,
+    "paper_url": "https://raw.githubusercontent.com/mlresearch/v311/main/assets/hao25b/hao25b.pdf"
+  },
+  {
+    "id": "lam25a",
+    "title": "CN-SBM: Categorical Block Modelling For Primary and Residual Copy Number Variation",
+    "authors": [
+      "Kevin Lam",
+      "William Daniels",
+      "Maxwell Douglas",
+      "Daniel Lai",
+      "Samuel Aparicio",
+      "Benjamin Bloem-Reddy",
+      "Yongjin Park"
+    ],
+    "abstract": "Cancer is a genetic disorder whose clonal evolution can be monitored by tracking noisy genome-wide copy number variants. We introduce the Copy Number Stochastic Block Model (CN-SBM), a probabilistic framework that jointly clusters samples and genomic regions based on discrete copy number states using a bipartite categorical block model. Unlike models relying on Gaussian or Poisson assumptions, CN-SBM respects the discrete nature of CNV calls and captures subpopulation-specific patterns through block-wise structure. Using a two-stage approach, CN-SBM decomposes CNV data into primary and residual components, enabling detection of both large-scale chromosomal alterations and finer aberrations. We derive a scalable variational inference algorithm for application to large cohorts and high-resolution data. Benchmarks on simulated and real datasets show improved model fit over existing methods. Applied to TCGA low-grade glioma data, CN-SBM reveals clinically relevant subtypes and structured residual variation, aiding patient stratification in survival analysis. These results establish CN-SBM as an interpretable, scalable framework for CNV analysis with direct relevance for tumor heterogeneity and prognosis.",
+    "topic": "",
+    "conference": "mlcb",
+    "year": 2025,
+    "paper_url": "https://raw.githubusercontent.com/mlresearch/v311/main/assets/lam25a/lam25a.pdf"
+  },
+  {
+    "id": "schuster25a",
+    "title": "Can sparse autoencoders make sense of gene expression latent variable models?",
+    "authors": [
+      "Viktoria Schuster"
+    ],
+    "abstract": "Sparse autoencoders (SAEs) have lately been used to uncover interpretable latent features in large language models. By projecting dense embeddings into a much higher-dimensional and sparse space, learned features become disentangled and easier to interpret. This work explores the potential of SAEs for decomposing embeddings in complex and high-dimensional biological data. Using simulated data, it outlines the efficacy, hyperparameter landscape, and limitations of SAEs when it comes to extracting ground truth generative variables from latent space. The application to embeddings from pretrained single-cell models shows that SAEs can find and steer key biological processes and even uncover subtle biological signals that might otherwise be missed. This work further introduces scFeatureLens, an automated interpretability approach for linking SAE features and biological concepts from gene sets to enable large-scale analysis and hypothesis generation in single-cell gene expression models.",
+    "topic": "",
+    "conference": "mlcb",
+    "year": 2025,
+    "paper_url": "https://raw.githubusercontent.com/mlresearch/v311/main/assets/schuster25a/schuster25a.pdf"
+  },
+  {
+    "id": "shearer25a",
+    "title": "A Genomic Language Model for Zero-Shot Prediction of Promoter Indel Effects",
+    "authors": [
+      "Courtney Shearer",
+      "Rose Orenbuch",
+      "Felix Teufel",
+      "Christian Steinmetz",
+      "Daniel Ritter",
+      "Erik Xie",
+      "Artem Gazizov",
+      "Aviv Spinner",
+      "Mafalda Dias",
+      "Jonathan Frazer",
+      "Pascal Notin",
+      "Debora Marks"
+    ],
+    "abstract": "Disease-associated genetic variants occur extensively across the human genome, predominantly in noncoding regions like promoters. While crucial for understanding disease mechanisms, current methods struggle to predict effects of insertions and deletions (indels) that can disrupt gene expression. We present LOL-EVE (Language Of Life for Evolutionary Variant Effects), a conditional autoregressive transformer trained on 13.6 million mammalian promoter sequences. By leveraging evolutionary patterns and genetic context, LOL-EVE enables zero-shot prediction of indel effects in human promoters. We introduce three new benchmarks for promoter indel prediction: ultra rare variant prioritization, causal eQTL identification, and transcription factor binding site disruption analysis. LOL-EVE’s superior performance across these tasks suggests the potential of region-specific autoregressive genomic language models for identifying disease-causing non-coding variants.",
+    "topic": "",
+    "conference": "mlcb",
+    "year": 2025,
+    "paper_url": "https://raw.githubusercontent.com/mlresearch/v311/main/assets/shearer25a/shearer25a.pdf"
+  },
+  {
+    "id": "abante25a",
+    "title": "Context-Dependent Genetic Modifiers of Huntington’s Disease Revealed Through Multimodal Machine Learning",
+    "authors": [
+      "Caterina Fuses",
+      "Georgia Zavou",
+      "Berta Ros",
+      "Josep M Canals",
+      "Jordi Abante"
+    ],
+    "abstract": "Huntington’s disease (HD) exhibits substantial variability in age of onset (AO), only partially explained by the length of the CAG repeat in the HTT gene. While most studies seeking additional genetic modifiers (GeMs) have relied on linear models, we investigate the potential of non-linear machine learning (ML) approaches, such as tree-based models and graph neural networks (GNNs), to capture complex, context-dependent genetic interactions influencing AO. To address the challenges posed by high-dimensional genotyping data, we introduce a strategy based on gene-specific variational autoencoders for genotype compression. This framework reveals novel modifiers with effects dependent on CAG repeat length, underscoring the importance of accounting for feature interactions. Additionally, we integrate predicted gene expression levels from Borzoi— a genomic language model—into a multimodal prediction architecture. This integration allows us to identify regulatory variants likely to affect AO through expression changes. To our knowledge, this is the first application of a gLM in multimodal genotype-to-phenotype prediction, offering a new paradigm for interpretable modeling of complex traits in HD and related polyglutamine disorders.",
+    "topic": "",
+    "conference": "mlcb",
+    "year": 2025,
+    "paper_url": "https://raw.githubusercontent.com/mlresearch/v311/main/assets/abante25a/abante25a.pdf"
+  },
+  {
+    "id": "walton25a",
+    "title": "GOLF: A Generative AI Framework for Pathogenicity Prediction of Myocilin OLF Variants",
+    "authors": [
+      "Thomas Walton",
+      "Darin Tsui",
+      "Amirali Aghazadeh",
+      "Raquel Lieberman",
+      "Lauren Fogel",
+      "Rafael Chagas",
+      "Dustin Huard"
+    ],
+    "abstract": "Missense mutations in the MYOC gene, particularly those affecting the olfactomedin (OLF) domain of the myocilin protein, can be causal for open-angle glaucoma, a leading cause of irreversible blindness. However, predicting the pathogenicity of these mutations remains challenging due to the complex effects of toxic gain-of-function variants and the scarcity of labeled clinical data. Herein, we present GOLF, a generative AI framework for assessing and explaining the pathogenicity of OLF domain variants. GOLF collects and curates a comprehensive dataset of OLF homologs and trains generative models that evaluate monoallelic missense mutations. While these models exhibit diverse predictive behaviors, they collectively achieve accurate classification of known pathogenic and benign variants. To interpret their decision mechanisms, GOLF uses a sparse autoencoder (SAE) that reveals the underlying biochemical features exploited by the generative models to categorize variant effects. GOLF enables accurate evaluation of disease-causing mutations, supporting early genetic risk stratification for glaucoma and facilitating interpretable investigations into the molecular basis of pathogenic variants.",
+    "topic": "",
+    "conference": "mlcb",
+    "year": 2025,
+    "paper_url": "https://raw.githubusercontent.com/mlresearch/v311/main/assets/walton25a/walton25a.pdf"
+  },
+  {
+    "id": "gupta25a",
+    "title": "Representation Learning Methods for Single-Cell Microscopy are Confounded by Background Cells",
+    "authors": [
+      "Arushi Gupta",
+      "Alan Moses",
+      "Alex Lu"
+    ],
+    "abstract": "Deep learning models are widely used to extract feature representations from microscopy images. While these models are used for single-cell analyses, such as studying single-cell heterogeneity, they typically operate on image crops centered on individual cells with background information present, such as other cells, and it remains unclear to what extent the conclusion of single-cell analyses may be altered by this. In this paper, we introduce a novel evaluation framework that directly tests the robustness of crop-based models to background information. We create synthetic single-cell crops where the center cell’s localization is fixed and the background is swapped, e.g., with backgrounds from other protein localizations. We measure how different backgrounds affect localization classification performance using model-extracted features. Applying this framework to three leading models for single-cell microscopy for analyzing yeast protein localization, we find that all lack robustness to background cells. Localization classification accuracy drops by up to 15.8% when background cells differ in localization from the center cell compared to when the localization is the same. We further show that this lack of robustness can affect downstream biological analyses, such as the task of estimating proportions of cells for proteins with single-cell heterogeneity in localization. Ultimately, our framework provides a concrete way to evaluate single-cell model robustness to background information and highlights the importance of learning background-invariant features for reliable single-cell analysis.",
+    "topic": "",
+    "conference": "mlcb",
+    "year": 2025,
+    "paper_url": "https://raw.githubusercontent.com/mlresearch/v311/main/assets/gupta25a/gupta25a.pdf"
+  },
+  {
+    "id": "ganguly25a",
+    "title": "Automated Seizure Detection in Animal EEG Signals",
+    "authors": [
+      "Shreyan Ganguly",
+      "Zhanhong Jiang",
+      "Nyzil Massey",
+      "Nikhil Sanjay Rao",
+      "Thimmasettappa Thippeswamy",
+      "Soumik Sarkar"
+    ],
+    "abstract": "Automated seizure detection in animal electroencephalography (EEG) is crucial for accelerating epilepsy research. While machine learning (ML) and deep learning (DL) techniques have shown promise in seizure detection for human EEG and some rodent models, their application to chemically diverse animal data remains limited. In particular, no prior work has explored deep learning approaches for EEG data where seizure/epilepsy was induced by exposure to Soman (GD), a potent agent known to generate complex and variable seizure dynamics. In this work, we evaluate deep recurrent neural networks—Gated Recurrent Units (GRU) and Long Short-Term Memory networks (LSTM)—for seizure detection in EEG signals acquired by single channel (bipotential electrodes) from the rats exposed to either  kainate or GD, which later animals developed epilepsy (measured by spontaneously recurring seizures). We benchmark these models against classical baselines including Random Forest and XGBoost, using intracranial EEG data from eight animals. Our results show that GRU and LSTM substantially outperform other shallow models in both accuracy and robustness across EEG traces.",
+    "topic": "",
+    "conference": "mlcb",
+    "year": 2025,
+    "paper_url": "https://raw.githubusercontent.com/mlresearch/v311/main/assets/ganguly25a/ganguly25a.pdf"
+  },
+  {
+    "id": "haghani25a",
+    "title": "Harnessing DNA Foundation Models for Cross-Species Transcription Factor Binding Site Prediction in Plant Genomes",
+    "authors": [
+      "Maryam Haghani",
+      "Krishna vamsi Dhulipalla",
+      "Song Li"
+    ],
+    "abstract": "Accurate prediction of transcription factor binding sites (TFBSs) is crucial for understanding gene regulation. While experimental methods like ChIP-seq and DAP-seq are informative, they are labor-intensive and species-specific. Recent advancements in large-scale pretrained DNA foundation models have shown promise in overcoming these limitations. This study evaluates the performance of three such models—DNABERT-2, AgroNT, and HyenaDNA—in predicting TFBSs in plants. Using DAP-seq data from Arabidopsis thaliana and Sisymbrium irio, we benchmark their accuracy against specialized approaches, including a motif-based method and two deep learning models, DeepBind and BERT-TFBS. Our results demonstrate that foundation models, particularly HyenaDNA, offer superior predictive accuracy and computational efficiency, highlighting their potential for scalable, genome-wide TFBS prediction in plants.",
+    "topic": "",
+    "conference": "mlcb",
+    "year": 2025,
+    "paper_url": "https://raw.githubusercontent.com/mlresearch/v311/main/assets/haghani25a/haghani25a.pdf"
+  },
+  {
+    "id": "chaudhary25a",
+    "title": "AI-based histopathology phenotyping reveals germline loci shaping breast cancer morphology",
+    "authors": [
+      "Shubham Chaudhary",
+      "Almut Voigts",
+      "Sergey Vilov",
+      "Matthias Heinig",
+      "Francesco Paolo Casale"
+    ],
+    "abstract": "AI foundation models have transformed cancer histopathology by enabling rich, data-driven feature extraction from H&E-stained whole-slide images. However, their application to studying how germline variation shapes tumor morphology remains limited. Here, we perform the first genome-wide association study of breast cancer morphology, independently analyzing AI-derived features from histology images and diagnostic pathology reports. Analyzing H&E slides from 753 patients with matched germline data, we identified six genome-wide significant loci associated with either imaging or textual features, two of which replicated across modalities. We then linked these two loci to histological features described in pathology reports, visual histological features through generative modelling, gene expression modules and patient survival. We found that rs819976 in ATAD3B is associated with disorganized, necrotic tumor morphology, poor-prognosis expression programs, and clinical features including invasive lobular carcinoma and ER positivity. These findings demonstrate the power of AI-based histology to uncover and characterize germline variants that shape tumor morphology, and assess their clinical significance.",
+    "topic": "",
+    "conference": "mlcb",
+    "year": 2025,
+    "paper_url": "https://raw.githubusercontent.com/mlresearch/v311/main/assets/chaudhary25a/chaudhary25a.pdf"
+  },
+  {
+    "id": "shokraneh-kenari25a",
+    "title": "Variational Graph Auto-encoder for Denoising Single-cell Hi-C Data",
+    "authors": [
+      "Neda Shokraneh Kenari",
+      "Maxwell Libbrecht"
+    ],
+    "abstract": "Single-cell Hi-C (scHi-C) enables the study of 3D genome organization at the resolution of individual cells and cell types that cannot be isolated for bulk profiling. However, the extreme sparsity of scHi-C data presents major challenges, particularly in recovering cell-type-specific 3D structures when only a small number of cells are available. We introduce contactVI, a method that combines the strengths of graph-based models and variational autoencoders (VAEs) to account for spatial dependencies in noisy chromatin interaction data and effectively denoise them. On simulated data, contactVI outperforms existing imputation methods in recovering Hi-C contact maps at both the single-cell and cell-type levels. On real datasets, contactVI performs comparably to or better than other graph-based methods across different resolutions. When applied to jointly profiled single-cell Hi-C and RNA-seq data, contactVI successfully recovers the expected association between genome compartmentalization and gene expression.",
+    "topic": "",
+    "conference": "mlcb",
+    "year": 2025,
+    "paper_url": "https://raw.githubusercontent.com/mlresearch/v311/main/assets/shokraneh-kenari25a/shokraneh-kenari25a.pdf"
+  },
+  {
+    "id": "mathelin25a",
+    "title": "Addressing the Cold-Start Problem for Personalized Combination Drug Screening",
+    "authors": [
+      "Antoine de Mathelin",
+      "Christopher Tosh",
+      "Wesley Tansey"
+    ],
+    "abstract": "Personalizing combination therapies in oncology requires navigating an immense space of possible drug and dose combinations, a task that remains largely infeasible through exhaustive experimentation. Recent developments in patient-derived models have enabled high-throughput ex vivo screening, but the number of feasible experiments is limited. Further, a tight therapeutic window makes gathering molecular profiling information (e.g. RNA-seq) impractical as a means of guiding drug response prediction. This leads to a challenging cold-start problem: how do we select the most informative combinations to test early, when no prior information about the patient is available? We propose a strategy that leverages a pretrained deep learning model built on historical drug response data. The model provides both embeddings for drug combinations and dose-level importance scores, enabling a principled selection of initial experiments. We combine clustering of drug embeddings to ensure functional diversity with a dose-weighting mechanism that prioritizes doses based on their historical informativeness. Retrospective simulations on large-scale drug combination datasets show that our method substantially improves initial screening efficiency compared to baselines, offering a viable path for more effective early-phase decision-making in personalized combination drug screens.",
+    "topic": "",
+    "conference": "mlcb",
+    "year": 2025,
+    "paper_url": "https://raw.githubusercontent.com/mlresearch/v311/main/assets/mathelin25a/mathelin25a.pdf"
+  },
+  {
+    "id": "im25a",
+    "title": "Somatic Hypermutation Informed Vocabulary Encoder Representations",
+    "authors": [
+      "Chiho Im",
+      "Artem Mikelov",
+      "Ryan Zhao",
+      "Anshul Kundaje",
+      "Scott Boyd"
+    ],
+    "abstract": "Somatic hypermutations (SHMs) acquired during affinity maturation of memory B cell receptors (mBCRs) carry important immunological signals, but remain challenging for protein language models (PLMs) to capture effectively. We introduce SHIVER, a mutation-aware antibody language model that treats each amino acid substitution as a distinct token, allowing the model to directly encode the context-dependent impact of SHMs. Trained on paired heavy and light chain sequences from human mBCR repertoires, SHIVER incorporates a tailored vocabulary, a subsampling strategy for data augmentation, and a mutation-focused masking scheme to better model the dynamics of affinity maturation. We evaluate SHIVER on the task of predicting mBCR binding to influenza antigens and find that it outperforms both general and antibody-specific PLMs using a simple logistic head. Our results suggest that explicitly modeling SHMs improves biological relevance and generalization of learned representations.",
+    "topic": "",
+    "conference": "mlcb",
+    "year": 2025,
+    "paper_url": "https://raw.githubusercontent.com/mlresearch/v311/main/assets/im25a/im25a.pdf"
+  },
+  {
+    "id": "zhang25a",
+    "title": "Self-Contemplating In-Context Learning Enhances T Cell Receptor Generation for Novel Epitopes",
+    "authors": [
+      "Pengfei Zhang",
+      "Sonal Prabhu",
+      "Gloria Grama",
+      "Seojin Bang",
+      "Heewook Lee"
+    ],
+    "abstract": "Computational design of T cell receptors (TCRs) that bind to epitopes holds the potential to revolutionize targeted immunotherapy. However, computational design of TCRs for novel epitopes is challenging due to the scarcity of training data, and the absence of known cognate TCRs for novel epitopes. In this study, we aim to generate high-quality cognate TCRs particularly for novel epitopes with no known cognate TCRs, a problem that remains under-explored in the field. We propose to incorporate in-context learning, successfully used with large language models to perform new generative tasks, to the task of TCR generation for novel epitopes. By providing cognate TCRs as additional context, we enhance the model’s ability to generate high-quality TCRs for novel epitopes. We first unlock the power of in-context learning by training a model to generate new TCRs based on both a target epitope and a small set of its cognate TCRs, so-called in-context training (ICT). We then self-generate its own TCR contexts based on a target epitope, as novel epitopes lack known binding TCRs, and use it as an inference prompt, referred to as self-contemplation prompting (SCP). Our experiments first demonstrate that aligning training and inference distribution by ICT is critical for effectively leveraging context TCRs. Subsequently, we show that providing context TCRs significantly improves TCR generation for novel epitopes. Furthermore, we show TCR generation using SCP-synthesized context TCRs achieves performance comparable to, and sometimes surpassing, ground-truth context TCRs, especially when combined with refined prompt selection based on binding affinity and authenticity metrics. We assess the designed sequences’ binding probability and sequence authenticity using seven diverse computational models.",
+    "topic": "",
+    "conference": "mlcb",
+    "year": 2025,
+    "paper_url": "https://raw.githubusercontent.com/mlresearch/v311/main/assets/zhang25a/zhang25a.pdf"
+  },
+  {
+    "id": "cicekli25a",
+    "title": "BIRDccNEST: Interpretable single cell characterization with inferred directed cell networks",
+    "authors": [
+      "Gizem Cicekli",
+      "Adrita Samanta",
+      "Hao Zhu",
+      "Donna Slonim"
+    ],
+    "abstract": "We introduce BIRDccNEST (pronounced \"bird’s nest\"), an efficient unsupervised framework for characterizing cells and defining trajectories in single cell RNA-sequencing data by inferring directed cell-cell relationship networks. These networks are then transformed into cluster flow networks describing directed relationships between cell-cell communities, naturally capturing an interpretable trajectory and characterizing subgroups of cells. We demonstrate that this approach finds interpretable and more coherent cell communities and trajectories on several data sets. Code is available at:  https://bcb.cs.tufts.edu/BIRDccNEST.html",
+    "topic": "",
+    "conference": "mlcb",
+    "year": 2025,
+    "paper_url": "https://raw.githubusercontent.com/mlresearch/v311/main/assets/cicekli25a/cicekli25a.pdf"
+  },
+  {
+    "id": "silberg25a",
+    "title": "Towards functional annotation with latent protein language model features",
+    "authors": [
+      "Jacob Silberg",
+      "Elana Simon",
+      "James Zou"
+    ],
+    "abstract": "Protein Language Models (PLMs) create high-dimensional embeddings that can be transformed into interpretable sparse features using Sparse Autoencoders (SAEs), where each feature activates on specific protein elements or patterns. However, scalably identifying which features are cohesive and reliable enough for protein annotation remains challenging. We address this by developing a validation pipeline combining three complementary methods: (1) expanded database matching across 20+ annotation sources including hierarchical codes, (2) feature-guided local structural alignment to identify structurally consistent activation regions, and (3) LLM-based feature description generation. Our annotation pipeline demonstrates three key properties of SAE features that make them a useful source of functional annotation complementary to existing methods. First, they can represent more granular patterns than existing protein databases, enabling the identification of sub-domains. Second, they can detect  missing annotations by finding proteins that display recognizable structural motifs but lack corresponding database labels. Here, we automatically identify at least 491 missing CATH topology annotations with our pipeline. Third, they can maintain structural consistency across unseen proteins. Of our 10,240 SAE features, we find 615 that are consistently structurally similar in unannotated metagenomic proteins, allowing us to structurally match at least 8,077 metagenomic proteins to characterized proteins. This provides a rapid annotation pipeline with constant time search regardless of database size, that automatically includes structural and function information about the feature that triggered the match. ",
+    "topic": "",
+    "conference": "mlcb",
+    "year": 2025,
+    "paper_url": "https://raw.githubusercontent.com/mlresearch/v311/main/assets/silberg25a/silberg25a.pdf"
+  },
+  {
+    "id": "papineni25a",
+    "title": "Augmenting DNABERT Embeddings with Multimodal DNA Features for Improved Regulatory Sequence Interpretation",
+    "authors": [
+      "Nimisha Papineni",
+      "Pratik Dutta",
+      "Max Chao",
+      "Orbin Acanto",
+      "Rekha Sathian",
+      "Pallavi Surana",
+      "Ramana Davuluri"
+    ],
+    "abstract": "While DNABERT leverages k-mer embeddings to model genomic sequences, its exclusive reliance on nucleotide k-mers can limit its effectiveness in capturing regulatory elements that lack distinct motif signals or display subtle, compositionally diffuse patterns. In this study, we explore a multimodal approach by augmenting DNABERT embeddings with DNA-intrinsic features—including nucleotide composition, purine-pyrimidine balance, CpG density, and structural properties such as minor groove width and electrostatic potential. These physicochemical and sequence-derived features offer complementary information about DNA shape and stability, often critical in regulatory regions such as non-TATA promoters and certain transcription factor binding sites (TFBS). By integrating these features with DNABERT representations, we show improved model performance in terms of overall prediction accuracy and ability to interpret pattern-depleted regulatory sequences. We applied this framework, DNABERT-CoreProm-MM (Core Promoter model with MultiModalities), to the task of promoter prediction, with a focus on both TATA and non-TATA Core promoter sequences. Our results demonstrate that the DNABERT-CoreProm-MM model improves prediction accuracy by 3.72% for TATA promoters and 22.56% for non-TATA promoters. These findings highlight the value of sequence-intrinsic and shape feature multimodalities in enhancing the interpretability and accuracy of transformer-based models, particularly for genomic sequences lacking strong motif structure. This approach offers a more comprehensive and biologically informed framework for modeling DNA regulatory elements.",
+    "topic": "",
+    "conference": "mlcb",
+    "year": 2025,
+    "paper_url": "https://raw.githubusercontent.com/mlresearch/v311/main/assets/papineni25a/papineni25a.pdf"
+  },
+  {
+    "id": "mares25a",
+    "title": "Continued domain-specific pre-training of protein language models for pMHC-I binding prediction",
+    "authors": [
+      "Sergio Mares",
+      "Ariel Espinoza",
+      "Nilah Ioannidis"
+    ],
+    "abstract": "Predicting peptide-major histocompatibility complex I (pMHC-I) binding affinity remains challenging due to extreme allelic diversity ( 30,000 HLA alleles), severe data scarcity for most alleles, and noisy experimental measurements. Current methods particularly struggle with underrepresented alleles and quantitative binding prediction. We test whether domain-specific continued pre-training of protein language models (pLM) is beneficial for their application to pMHC-I binding affinity prediction. Starting from ESM Cambrian, we perform masked-language modeling based continued pre-training on HLA-associated peptides. We then fine-tune for functional IC50 binding affinity prediction using only high-quality quantitative data, avoiding mass spectrometry biases that are inherited by existing methods. After continued pre-training and fine-tuning, our resulting model (ESMCBA) achieves a median Spearman correlation of 0.61 for predicting binding affinity across 24 common HLA alleles, outperforming other state-of-the-art predictors. Continued pre-training provides consistent gains relative to models that are directly fine-tuned without the continued pre-training step, particularly for alleles with smaller data, improving correlations by  0.08 over models, with diminishing returns as training data increases beyond 3000 peptides, where pretrained and non-pretrained models converge to similar performance (0.57). Additionally, the method requires substantial computational resources and performance remains fundamentally limited by the inherent noise and experimental heterogeneity in binding affinity measurements from diverse assay protocols. This work has important potential application to neoantigen vaccine prioritization and provides a framework for improving pLMs performance on specialized tasks through domain-specific continued pre-training.",
+    "topic": "",
+    "conference": "mlcb",
+    "year": 2025,
+    "paper_url": "https://raw.githubusercontent.com/mlresearch/v311/main/assets/mares25a/mares25a.pdf"
+  },
+  {
+    "id": "yaish25a",
+    "title": "F-MoDA: Efficient Fourier-based motif discovery in attribution maps",
+    "authors": [
+      "Ofir Yaish",
+      "Yaron Orenstein"
+    ],
+    "abstract": "Deep neural networks have been transforming the field of bioinformatics and computational biology in recent years, especially in genomic-related tasks. Trained neural networks have enabled unprecedented capabilities in predicting molecular and genomic phenotypes. A fundamental step following deep-neural-network training and performance evaluation is the interpretation of the trained neural networks to learn new biology and validate the trained models. Techniques like integrated gradients have been highly successful in local interpretability, i.e., attributing importance to a specific residue in a given DNA, RNA, or amino acid sequence. But, there still remains the challenge of finding the global patterns that are shared among many sequences to understand the biological mechanism. Currently, TF-MoDISco is the only available method for this task. However, TF-MoDISco takes hours to run on standard datasets, and it reports many redundant and false motifs. Here, we present F-MoDA (Fourier-based Motif Discovery in Attribution maps), a novel computational method for efficiently and accurately discovering shared sequence motifs in residue-level attribution maps. F-MoDA leverages signal processing techniques and a hierarchical clustering approach to identify recurring regulatory patterns. We evaluated F-MoDA against TF-MoDISco over an established motif-finding benchmark and found that F-MoDA reports motifs that are more similar to the ground truth, in addition to reporting fewer redundant motifs and fewer false motifs. Moreover, F-MoDA runs much faster and uses less memory. We expect F-MoDA to be utilized in many studies applying deep neural networks to genomics data. F-MoDA is publicly available at https://github.com/OrensteinLab/F-MoDA.",
+    "topic": "",
+    "conference": "mlcb",
+    "year": 2025,
+    "paper_url": "https://raw.githubusercontent.com/mlresearch/v311/main/assets/yaish25a/yaish25a.pdf"
+  },
+  {
+    "id": "rocha25a",
+    "title": "STAGED: A Multi-Agent Neural Network for Learning Cellular Interaction Dynamics",
+    "authors": [
+      "Joao F. Rocha",
+      "Ke Xu",
+      "Xingzhi Sun",
+      "Ananya Krishna",
+      "Dhananjay Bhaskar",
+      "Blanche Mongeon",
+      "Morgan Craig",
+      "Mark Gerstein",
+      "Smita Krishnaswamy"
+    ],
+    "abstract": "The advent of single-cell technology has significantly improved our understanding of cellular states and subpopulations in various tissues under normal and diseased conditions by employing data-driven approaches such as clustering and trajectory inference. However, these methods consider cells as independent data points of population distributions. With spatial transcriptomics, we can represent cellular organization, along with dynamic cell-cell interactions that lead to changes in cell state. Still, key computational advances are necessary to enable the data-driven learning of such complex interactive cellular dynamics. While agent-based modeling (ABM) provides a powerful framework, traditional approaches rely on handcrafted rules derived from domain knowledge rather than data-driven approaches. To address this, we introduce Spatio Temporal Agent-Based Graph Evolution Dynamics (STAGED) integrating ABM with deep learning to model intercellular communication, and its effect on the intracellular gene regulatory network. Using graph ODE networks (GDEs) with shared weights per cell type, our approach represents genes as vertices and interactions as directed edges, dynamically learning their strengths through a designed attention mechanism. Trained to match continuous trajectories of simulated as well as inferred trajectories from spatial transcriptomics data, the model captures both intercellular and intracellular interactions, enabling a more adaptive and accurate representation of cellular dynamics.",
+    "topic": "",
+    "conference": "mlcb",
+    "year": 2025,
+    "paper_url": "https://raw.githubusercontent.com/mlresearch/v311/main/assets/rocha25a/rocha25a.pdf"
+  }
+]

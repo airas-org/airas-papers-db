@@ -1,0 +1,173 @@
+[
+  {
+    "id": "liu22a",
+    "title": "CVQVAE: A representation learning based method for multi-omics single cell data integration",
+    "authors": [
+      "Tianyu Liu",
+      "Grant Greenberg",
+      "Ilan Shomorony"
+    ],
+    "abstract": "The rapid development of second-generation sequencing has brought about a significant increase in the amount of omics data. Integrating and analyzing these single-cell datasets is a challenging problem. In this paper, we propose a new model, called as CVQVAE, based on a cross-trained VAE, and strengthened by the Vector Quantization technique for multi-omics data integration. CVQVAE projects data vectors from different omics onto a common latent space in such a way that (1) similar cells are close in the latent space and (2) the original biological information present in each of the omics (including cell cycle and trajectory) are preserved. Our model is trained and optimized solely based on the multi-omics data and requires no additional information such as cell-type labels. We empirically demonstrate the stability and efficiency of our method in data integration (alignment) on datasets from a recent competition on Open Problems in Single Cell Analysis.",
+    "topic": "",
+    "conference": "mlcb",
+    "year": 2022,
+    "paper_url": "https://proceedings.mlr.press/v200/liu22a/liu22a.pdf"
+  },
+  {
+    "id": "weinberger22a",
+    "title": "Disentangling shared and group-specific variations in single-cell transcriptomics data with multiGroupVI",
+    "authors": [
+      "Ethan Weinberger",
+      "Romain Lopez",
+      "Jan-Christian Huetter",
+      "Aviv Regev"
+    ],
+    "abstract": "Single-cell RNA sequencing (scRNA-seq) technologies have enabled a greater understanding of previously unexplored biological diversity. By design of such experiments, individual cells from scRNA-seq datasets can often be attributed to non-overlapping “groups”. For example, these group labels may denote the cell’s tissue or cell line of origin. In this setting, one important problem consists in discerning patterns in the data that are shared across groups versus those that are group-specific. However, existing methods for this type of analysis are mainly limited to (generalized) linear latent variable models. Here we introduce multiGroupVI, a deep generative model for analyzing grouped scRNA-seq datasets that decomposes the data into shared and group-specific factors of variation. We first validate our approach on a simulated dataset, on which we significantly outperform state-of-the-art methods. We then apply it to explore regional differences in an scRNA-seq dataset sampled from multiple regions of the mouse small intestine. We implemented multiGroupVI using the scvi-tools library, and released it as open-source software at www.placeholder.com.",
+    "topic": "",
+    "conference": "mlcb",
+    "year": 2022,
+    "paper_url": "https://proceedings.mlr.press/v200/weinberger22a/weinberger22a.pdf"
+  },
+  {
+    "id": "gyawali22a",
+    "title": "Ensembling improves stability and power of feature selection for deep learning models",
+    "authors": [
+      "Prashnna K. Gyawali",
+      "Xiaoxia Liu",
+      "James Zou",
+      "Zihuai He"
+    ],
+    "abstract": "With the growing adoption of deep learning models in different real-world domains, including computational biology, it is often necessary to understand which data features are essential for the model’s decision. Despite extensive recent efforts to define different feature importance metrics for deep learning models, we identified that inherent stochasticity in the design and training of deep learning models makes commonly used feature importance scores unstable. This results in varied explanations or selections of different features across different runs of the model. We demonstrate how the signal strength of features and correlation among features directly contribute to this instability. To address this instability, we explore the ensembling of feature importance scores of models across different epochs and find that this simple approach can substantially address this issue. For example, we consider knockoff inference as they allow feature selection with statistical guarantees. We discover considerable variability in selected features in different epochs of deep learning training, and the best selection of features doesn’t necessarily occur at the lowest validation loss, the conventional approach to determine the best model. As such, we present a framework to combine the feature importance of trained models across different hyperparameter settings and epochs, and instead of selecting features from one best model, we perform an ensemble of feature importance scores from numerous good models. Across the range of experiments in simulated and various real-world datasets from the biological domain, we demonstrate that the proposed framework consistently improves the power of feature selection.",
+    "topic": "",
+    "conference": "mlcb",
+    "year": 2022,
+    "paper_url": "https://proceedings.mlr.press/v200/gyawali22a/gyawali22a.pdf"
+  },
+  {
+    "id": "lalchand22a",
+    "title": "Modelling Technical and Biological Effects in scRNA-seq data with Scalable GPLVMs",
+    "authors": [
+      "Vidhi Lalchand",
+      "Aditya Ravuri",
+      "Emma Dann",
+      "Natsuhiko Kumasaka",
+      "Dinithi Sumanaweera",
+      "Rik G. H. Lindeboom",
+      "Shaista Madad",
+      "Sarah Teichmann",
+      "Neil D. Lawrence"
+    ],
+    "abstract": "Single-cell RNA-seq datasets are growing in size and complexity, enabling the study of cellular composition changes in various biological/clinical contexts. Scalable dimensionality reduction techniques are in need to disentangle biological variation in them, while accounting for technical and biological confounders. In this work, we extend a popular approach for probabilistic non-linear dimensionality reduction, the Gaussian process latent variable model, to scale to massive single-cell datasets while explicitly accounting for technical and biological confounders. The key idea is to use an augmented kernel which preserves the factorisability of the lower bound allowing for fast stochastic variational inference. We demonstrate its ability to reconstruct previously described latent signatures of innate immunity with 9x speed-up on training time. We further analyse a dataset of blood cells from COVID-19 patients and demonstrate that this framework enables to capture interpretable signatures of infection, while integrating data across individuals and technical batches. Specifically, we explore COVID-19 severity as a latent dimension to refine patient stratification and capture disease-specific gene expression signatures.",
+    "topic": "",
+    "conference": "mlcb",
+    "year": 2022,
+    "paper_url": "https://proceedings.mlr.press/v200/lalchand22a/lalchand22a.pdf"
+  },
+  {
+    "id": "koras22a",
+    "title": "A generative recommender system with GMM prior for cancer drug generation and sensitivity prediction",
+    "authors": [
+      "Krzysztof Koras",
+      "Marcin Možejko",
+      "Paulina Szymczak",
+      "Adam Izdebski",
+      "Eike Staub",
+      "Ewa Szczurek"
+    ],
+    "abstract": "Recent emergence of high-throughput drug screening assays sparkled an intensive development of machine learning methods, including models for prediction of sensitivity of cancer cell lines to anti-cancer drugs, as well as methods for generation of potential drug candidates. However, the concept of generating compounds with specific properties and simultaneous modeling of their efficacy against cancer cell lines has not been comprehensively explored. To address this need, we present VADEERS, a Variational Autoencoder-based Drug Efficacy Estimation Recommender System. The generation of compounds is performed by a novel variational autoencoder with a semi-supervised Gaussian mixture model (GMM) prior. The prior defines a clustering in the latent space, where the clusters are associated with specific drug properties. In addition, VADEERS is equipped with a cell line autoencoder and a sensitivity prediction network. The model combines data for SMILES string representations of anti-cancer drugs, their inhibition profiles against a panel of protein kinases, cell lines{’} biological features and measurements of the sensitivity of the cell lines to the drugs. The evaluated variants of VADEERS achieve a high r=0.87 Pearson correlation between true and predicted drug sensitivity estimates. We show that the learned latent representations and new generated data points accurately reflect the given clustering. In summary, VADEERS offers a comprehensive model of drugs{’} and cell lines{’} properties and relationships between them, as well as a guided generation of novel compounds.",
+    "topic": "",
+    "conference": "mlcb",
+    "year": 2022,
+    "paper_url": "https://proceedings.mlr.press/v200/koras22a/koras22a.pdf"
+  },
+  {
+    "id": "lin22a",
+    "title": "Incorporating knowledge of plates in batch normalization improves generalization of deep learning for microscopy images  ",
+    "authors": [
+      "Alexander Lin",
+      "Alex Lu"
+    ],
+    "abstract": "Data collected by high-throughput microscopy experiments are affected by batch effects, stemming from slight technical differences between experimental batches. Batch effects significantly impede machine learning efforts, as models learn spurious technical variation that do not generalize.  We introduce batch effects normalization (BEN), a simple method for correcting batch effects that can be applied to any neural network with batch normalization (BN) layers.  BEN aligns the concept of a ”batch” in biological experiments with that of a ”batch” in deep learning. During each training step, data points forming the deep learning batch are always sampled from the same experimental batch. This small tweak turns the batch normalization layers into an estimate of the shared batch effects between images, allowing for these technical effects to be standardized out during training and inference. We demonstrate that BEN results in dramatic performance boosts in both supervised and unsupervised learning, leading to state-of-the-art performance on the RxRx1-Wilds benchmark.",
+    "topic": "",
+    "conference": "mlcb",
+    "year": 2022,
+    "paper_url": "https://proceedings.mlr.press/v200/lin22a/lin22a.pdf"
+  },
+  {
+    "id": "liu22b",
+    "title": "Energy-based Modelling for Single-cell Data Annotation",
+    "authors": [
+      "Tianyi Liu",
+      "Philip Fradkin",
+      "Lazar Atanackovic",
+      "Leo J Lee"
+    ],
+    "abstract": "Single-cell sequencing has provided profound insights into understanding heterogeneous cellular activities by measuring sequence information at the individual cell resolution. Accurately annotating a single-cell RNA sequencing (scRNA-seq) dataset is a crucial step for the single-cell data analysis pipeline. In particular, previously unobserved cell types and cellular states frequently appear in scRNA-seq experiments and carry valuable information. This highlights the need for reliable annotation tools with out-of-distribution (OOD) detection capability. Recent advances in energy-based modelling have made it possible to design and deploy EBMs for joint discriminative and generative tasks. In this work, we introduced energy-based models (EBMs) for scRNA-seq annotation and investigated generative modelling for OOD detection, which result in more accurate, calibrated, and robust cell-type predictions. Specifically, we developed CLAMS, an EBM instance improved upon the previous joint energy-based model (JEM), for single-cell data hybrid modelling. Our experiments reveal that hybrid modelling with EBMs maintains the strong discriminative power of baseline classifiers and outperforms the state-of-the-art by integrating generative capabilities in data annotation and OOD detection tasks. To the best of our knowledge, we are the first to apply EBMs for single-cell data modelling.",
+    "topic": "",
+    "conference": "mlcb",
+    "year": 2022,
+    "paper_url": "https://proceedings.mlr.press/v200/liu22b/liu22b.pdf"
+  },
+  {
+    "id": "swanson22a",
+    "title": "Predicting Immune Escape with Pretrained Protein Language Model Embeddings",
+    "authors": [
+      "Kyle Swanson",
+      "Howard Chang",
+      "James Zou"
+    ],
+    "abstract": "Assessing the severity of new pathogenic variants requires an understanding of which mutations enable escape of the human immune response. Even single point mutations to an antigen can cause immune escape and infection by disrupting antibody binding. Recent work has modeled the effect of single point mutations on proteins by leveraging the information contained in large-scale, pretrained protein language models (PLMs). PLMs are often applied in a zero-shot setting, where the effect of each mutation is predicted based on the output of the language model with no additional training. However, this approach cannot appropriately model immune escape, which involves the interaction of two proteins—antibody and antigen—instead of one protein and requires making different predictions for the same antigenic mutation in response to different antibodies. Here, we explore several methods for predicting immune escape by building models on top of embeddings from PLMs. We evaluate our methods on a SARS-CoV-2 deep mutational scanning dataset and show that our embedding-based methods significantly outperform zero-shot methods, which have almost no predictive power. We also highlight insights gained into how best to use embeddings from PLMs to predict escape. Despite these promising results, simple statistical and machine learning baseline models that do not use pretraining perform comparably, showing that computationally expensive pretraining approaches may not be beneficial for escape prediction. Furthermore, all models perform relatively poorly, indicating that future work is necessary to improve escape prediction with or without pretrained embeddings.",
+    "topic": "",
+    "conference": "mlcb",
+    "year": 2022,
+    "paper_url": "https://proceedings.mlr.press/v200/swanson22a/swanson22a.pdf"
+  },
+  {
+    "id": "majdandzic22a",
+    "title": "Selecting deep neural networks that yield consistent attribution-based interpretations for genomics",
+    "authors": [
+      "Antonio Majdandzic",
+      "Chandana Rajesh",
+      "Ziqi Tang",
+      "Shushan Toneyan",
+      "Ethan L. Labelson",
+      "Rohit K. Tripathy",
+      "Peter K. Koo"
+    ],
+    "abstract": "Deep neural networks (DNNs) have advanced our ability to take DNA primary sequence as input and predict a myriad of molecular activities measured via high-throughput functional genomic assays. Post hoc attribution analysis has been employed to provide insights into the importance of features learned by DNNs, often revealing patterns such as  sequence motifs. However, attribution maps typically harbor spurious importance scores to an extent that varies from model to model, even for DNNs whose predictions generalize well. Thus, the standard approach for model selection, which relies on performance of a held-out validation set, does not guarantee that a high-performing DNN will provide reliable explanations. Here we introduce two approaches that quantify the consistency of important features across a population of attribution maps; consistency reflects a qualitative property of human interpretable attribution maps. We employ the consistency metrics as part of a multivariate model selection framework to identify models that yield high generalization performance and interpretable attribution analysis. We demonstrate the efficacy of this approach across various DNNs quantitatively with synthetic data and qualitatively with chromatin accessibility data.",
+    "topic": "",
+    "conference": "mlcb",
+    "year": 2022,
+    "paper_url": "https://proceedings.mlr.press/v200/majdandzic22a/majdandzic22a.pdf"
+  },
+  {
+    "id": "sneddon22a",
+    "title": "Language-Informed Basecalling Architecture for Nanopore Direct RNA Sequencing",
+    "authors": [
+      "Alexandra Sneddon",
+      "Pablo Acera Mateos",
+      "Nikolay Shirokikh",
+      "Eduardo Eyras"
+    ],
+    "abstract": "Algorithms developed for basecalling Nanopore signals have primarily focused on DNA to date and utilise the raw signal as the only input.  However, it is known that messenger RNA (mRNA), which dominates Nanopore direct RNA (dRNA) sequencing libraries, contains specific nucleotide patterns that are implicitly encoded in the Nanopore signals since RNA is always sequenced from the 3’ to 5’ direction.  In this study we present an approach to exploit the sequence biases in mRNA as an additional input to dRNA basecalling.  We developed a probabilistic model of mRNA language and propose a modified CTC beam search decoding algorithm to conditionally incorporate the language model during basecalling.  Our findings demonstrate that inclusion of mRNA language is able to guide CTC beam search decoding towards the more probable nucleotide sequence.  We also propose a time efficient approach to decoding variable length nanopore signals.  This work provides the first demonstration of the potential for biological language to inform Nanopore basecalling.  Code is available at:  https://github.com/comprna/radian.",
+    "topic": "",
+    "conference": "mlcb",
+    "year": 2022,
+    "paper_url": "https://proceedings.mlr.press/v200/sneddon22a/sneddon22a.pdf"
+  },
+  {
+    "id": "wheelock22a",
+    "title": "Forecasting labels under distribution-shift for machine-guided sequence design",
+    "authors": [
+      "Lauren B Wheelock",
+      "Stephen Malina",
+      "Jeffrey Gerold",
+      "Sam Sinai"
+    ],
+    "abstract": "The ability to design and optimize biological sequences with specific functionalities would unlock enormous value in technology and healthcare. In recent years, machine learning-guided sequence design has progressed this goal significantly, though validating designed sequences in the lab or clinic takes many months and substantial labor.  It is therefore valuable to assess the likelihood that a designed set contains sequences of the desired quality (which often lies outside the label distribution in our training data) before committing resources to an experiment. Forecasting, a prominent concept in many domains where feedback can be delayed (e.g. elections), has not been used or studied in the context of sequence design. Here we propose a method to guide decision-making that forecasts the performance of high-throughput libraries (e.g. containing $10{^}5$ unique variants) based on estimates provided by models, providing a posterior for the distribution of labels in the library. We show that our method outperforms baselines that naively use model scores to estimate library performance, which are the only tool available today for this purpose.",
+    "topic": "",
+    "conference": "mlcb",
+    "year": 2022,
+    "paper_url": "https://proceedings.mlr.press/v200/wheelock22a/wheelock22a.pdf"
+  }
+]
