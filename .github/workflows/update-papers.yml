@@ -44,7 +44,7 @@ jobs:
           with open("scripts/configs/conferences.jsonc", encoding="utf-8") as f:
               configs = json.load(f)
           assert isinstance(configs, list) and configs, "config must be a non-empty list"
-          allowed = {"virtual_conference", "pmlr", "acl_anthology", "openreview"}
+          allowed = {"virtual_conference", "pmlr", "acl_anthology", "openreview", "europepmc"}
           for c in configs:
               assert "name" in c, f"missing name: {c}"
               st = c.get("source_type", "virtual_conference")

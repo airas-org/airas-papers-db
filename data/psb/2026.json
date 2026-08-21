@@ -1,0 +1,1143 @@
+[
+  {
+    "id": "10.1142/9789819824755_0060",
+    "title": "DRIVE-KG: Enhancing variant-phenotype association discovery in understudied complex diseases using heterogeneous knowledge graphs",
+    "authors": [
+      "Rajagopalan A",
+      "Nguyen TA",
+      "Guare LA",
+      "Rico ALG",
+      "Venkatesh R",
+      "Caruth L",
+      "Genetics Center R",
+      "Medicine BioBank P",
+      "Verma A",
+      "Ritchie MD",
+      "Hall MA",
+      "Romano JD",
+      "Setia-Verma S"
+    ],
+    "abstract": "Multi-omics data are instrumental in obtaining a comprehensive picture of complex biological systems. This is particularly useful for women's health conditions such as endometriosis, which has been historically understudied despite having a high prevalence (around 10% of women of reproductive age). Subsequently, endometriosis has limited genetic characterization: current genome-wide association studies explain only 11% of its 47% total estimated heritability, underscoring the need for integrative approaches. Graph representations provide an intuitive and meaningful way to harmonize biological data, using nodes to represent biological concepts (e.g., genes, single nucleotide polymorphisms, proteins, and phenotypes) and edges to represent their relationships. We present DRIVE-KG (Disease Risk Inference and Variant Exploration Knowledge Graph), which uses a heterogeneous graph representation to integrate data from diverse multi-omics datasets. We trained two distinct models using DRIVE-KG: a link prediction model to suggest associations between SNPs and two pilot phenotypes (endometriosis and obesity), and a graph convolutional network (GCN) for patient-level classification of endometriosis/adenomyosis as a combined phenotype. We conducted patient-level classification using data from 1,441 Penn Medicine BioBank participants with gold standard chart-reviewed endometriosis/adenomyosis status. The link prediction model uncovered 66 high-confidence (model score ≥ 0.95) candidate SNP-endometriosis associations, representing largely distinct genetic signals (R2 < 0.1). These variants were enriched for obesity/body mass index traits (24.2%), lipid metabolism (6%), and depressive disorders (4.5%), showing agreement with emerging hypotheses about endometriosis etiology. In contrast, of the high-confidence, candidate SNP-obesity associations that could be evaluated using LDlink, 38.22% were in high linkage disequilibrium (R2 ≥ 0.8) with known obesity or comorbidity associations. The GCN to classify patient endometriosis/adenomyosis status had an F1 score of 0.752 compared to 0.698 for a genetic risk score. Despite this moderate improvement, we found that the GCN learned meaningful stratification of underlying adenomyosis signal and severe endometriosis grades. Together, these results demonstrate that heterogeneous integration of multi-omics data is valuable for diverse downstream tasks-including discovery and clinical prediction-particularly for understudied diseases where traditional genomic approaches are insufficient.",
+    "topic": "",
+    "conference": "psb",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1142/9789819824755_0060"
+  },
+  {
+    "id": "10.1142/9789819824755_0053",
+    "title": "Literature-driven extraction and computational prediction of causal statements linking genetic variants to biological processes, pathways and phenotypes",
+    "authors": [
+      "Jiang J",
+      "Radivojac P",
+      "Gyori BM"
+    ],
+    "abstract": "Understanding the mechanistic basis of pathogenic genetic variants requires reconstructing the molecular pathways connecting the variant, via a chain of molecular intermediates, to a disease-causing biological process and phenotype. However, a literature-wide assembly of causal networks connecting variants, molecular pathways, biological processes and phenotypes has not been previously available. To create such a resource, we developed an automated pathway reconstruction approach building on the Integrated Network and Dynamical Reasoning Assembler (INDRA) system which extracts causal mechanistic statements (positive regulation, phosphorylation, complex formation, etc.) by combining structured databases and literature mining. We traversed INDRA statements extracted from publications to identify those describing a genetic variant resulting in a protein point mutation. We then reconstructed directed paths (consisting of one or more linked INDRA statements) connecting this variant to a term representing a biological process, phenotype or disease within the same publication. This resulted in a directed multigraph obtained from 25,862 paths for variants in 2,561 proteins. Each node in this graph corresponds to an ontology-grounded molecular or process term and each edge is explicitly linked to supporting literature evidence, enabling full auditability of inferred mechanisms. To leverage the assembled networks, we trained a classification model to predict likely downstream biological processes or specific disease associations for protein variants. As features to the model, we integrated molecular annotations (including protein sequence features, ClinVar pathogenicity labels, and UniProt domain mappings) in combination with representations from the ESM2 transformer-based protein language model. The performance achieved by this model shows promise for reconstructing causal mechanistic statements associated with function of genetic variants, a framing of the variant effect prediction task that goes significantly beyond simple assessment of pathogenicity. This integrative framework enables the mechanistic interpretation of known variants and prediction of functional relevance for variants lacking prior phenotypic annotation.",
+    "topic": "",
+    "conference": "psb",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1142/9789819824755_0053"
+  },
+  {
+    "id": "10.1142/9789819824755_0051",
+    "title": "Patch-level phenotype identification via weakly supervised neuron selection in sparse autoencoders for CLIP-derived pathology embeddings",
+    "authors": [
+      "Tamura K",
+      "Zhang YZ",
+      "Okubo Y",
+      "Imoto S"
+    ],
+    "abstract": "Computer-aided analysis of whole slide images (WSIs) has advanced rapidly with the emergence of multi-modal pathology foundation models. In this study, we propose a weakly supervised neuron selection approach to extract disentangled representations from CLIPderived pathology foundation models, leveraging the interpretability of sparse autoencoders. Specifically, neurons are ordered and selected using whole-slide level labels within a multiple instance learning (MIL) framework. We investigate the impact of different pre-trained image embeddings derived from general and pathology images and demonstrate that a selected single neuron can effectively enable patch-level phenotype identification. Experiments on the Camelyon16 and PANDA datasets demonstrate both the effectiveness and explainability of the proposed method, as well as its generalization ability for tumor patch identification.",
+    "topic": "",
+    "conference": "psb",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1142/9789819824755_0051"
+  },
+  {
+    "id": "10.1142/9789819824755_0039",
+    "title": "From Detection to Mitigation: Addressing Bias in Deep Learning Models for Chest X-Ray Diagnosis",
+    "authors": [
+      "Mottez C",
+      "Fay L",
+      "Varma M",
+      "Ostmeier S",
+      "Langlotz C"
+    ],
+    "abstract": "Deep learning models have shown promise in improving diagnostic accuracy from chest X-rays, but they also risk perpetuating healthcare disparities when performance varies across demographic groups. In this work, we present a comprehensive bias detection and mitigation framework targeting sex, age, and race-based disparities when performing diagnostic tasks with chest X-rays. We extend a recent CNN-XGBoost pipeline to support multi-label classification and evaluate its performance across four medical conditions. We show that replacing the final layer of CNN with an eXtreme Gradient Boosting classifier improves the fairness of the subgroup while maintaining or improving the overall predictive performance. To validate its generalizability, we apply the method to different backbones, namely DenseNet-121 and ResNet-50, and achieve similarly strong performance and fairness outcomes, confirming its model-agnostic design. We further compare this lightweight adapter training method with traditional full-model training bias mitigation techniques, including adversarial training, reweighting, data augmentation, and active learning, and find that our approach offers competitive or superior bias reduction at a fraction of the computational cost. Finally, we show that combining eXtreme Gradient Boosting retraining with active learning yields the largest reduction in bias across all demographic subgroups, both in and out of distribution on the CheXpert and MIMIC datasets, establishing a practical and effective path toward equitable deep learning deployment in clinical radiology.",
+    "topic": "",
+    "conference": "psb",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1142/9789819824755_0039"
+  },
+  {
+    "id": "10.1142/9789819824755_0033",
+    "title": "PertSpectra: Interpretable Matrix Factorization for Predicting Functional Impact of Genetic Perturbation Experiments",
+    "authors": [
+      "Chang S",
+      "Shcherbina A",
+      "Ashuach T",
+      "Mohammadi S",
+      "See S",
+      "Ranadive N",
+      "Fox E",
+      "Ranu N"
+    ],
+    "abstract": "In drug discovery, measuring the effects of genetic perturbations is a powerful tool for studying unknown disease mechanisms, but biological interpretation of these effects, especially with the advent of screens involving combinatorial perturbations, remains challenging. To address limitations in current methodology we introduce PertSpectra, a guided triple matrix factorization that incorporates perturbation information and regularizes the model using a known gene-gene interaction graph prior to generate sparse, biologically relevant latent factors that capture perturbational effects. We evaluate PertSpectra on three single-cell RNAseq datasets with both single and combinatorial genetic perturbations, measuring latent space interpretability, predictive ability on unseen combinations of observed perturbations, and stratification of functionally similar perturbations. We show that PertSpectra provides an integrated modeling approach to understanding combinatorial perturbation data in the context of drug discovery.",
+    "topic": "",
+    "conference": "psb",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1142/9789819824755_0033"
+  },
+  {
+    "id": "10.1142/9789819824755_0040",
+    "title": "Deciphering the influence of demographic factors on the treatment of pediatric patients in the emergency department",
+    "authors": [
+      "Coggan H",
+      "Bischops A",
+      "Chaudhari P",
+      "Barak-Corren Y",
+      "Fine AM",
+      "Reis BY",
+      "Aysola J",
+      "La Cava WG"
+    ],
+    "abstract": "Persistent demographic disparities have been identified in the treatment of patients seeking care in the emergency department (ED). These may be driven in part by subconscious biases, which providers themselves may struggle to identify. To better understand the operation of these biases, we performed a retrospective cross-sectional analysis using electronic health records describing 339,400 visits to the ED of a single US pediatric medical center between 2019-2024. Odds ratios were calculated using propensity-score matching. Analyses were adjusted for confounding variables, including chief complaint, insurance type, socioeconomic deprivation, and patient comorbidities. We also trained a machine learning [ML] model on this dataset to identify predictors of admission. We found significant demographic disparities in admission (Non-Hispanic Black [NHB] relative to Non-Hispanic White [NHW]: OR 0.77, 95% CI 0.73-0.81; Hispanic relative to NHW: OR 0.80, 95% CI 0.76-0.83). We also identified disparities in individual decisions taken during the ED stay. For example, NHB patients were significantly less likely than NHW patients to be assigned an 'emergent' triage acuity score of (OR 0.70, 95% CI 0.67-0.72), but emergent NHB patients were also significantly less likely to be admitted than NHW patients with the same triage acuity (OR 0.86, 95% CI 0.80-0.93). Demographic disparities were particularly acute wherever patients had normal vital signs, public insurance, moderate socio-economic deprivation, or a home address distant from the hospital. An ML model assigned higher importance to triage score for NHB than NHW patients when predicting admission, reflecting these disparities in assignment. We conclude that many visit characteristics, clinical and otherwise, may influence the operation of subconscious biases and affect ML-driven decision support tools.",
+    "topic": "",
+    "conference": "psb",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1142/9789819824755_0040"
+  },
+  {
+    "id": "10.1142/9789819824755_0024",
+    "title": "WATCH-SS: Developing a Trustworthy and Explainable Modular Framework for Detecting Cognitive Impairment from Spontaneous Speech",
+    "authors": [
+      "Pugh S",
+      "Hill M",
+      "Hwang S",
+      "Wu R",
+      "Jang K",
+      "Iannone S",
+      "O'Connor K",
+      "O'Brien K",
+      "Eaton E",
+      "Johnson K"
+    ],
+    "abstract": "Early detection of cognitive impairment (CI) is critical for timely intervention in Alzheimer's disease and AD-related dementias. To address this, we propose the Warning Assessment and Alerting Tool for Cognitive Health from Spontaneous Speech (WATCH-SS), a modular and explainable three-stage framework for detecting CI from a patient's speech sample. The framework uses detectors for five linguistic and acoustic indicators of CI, aggregates their outputs into a set of clinically interpretable summary features, and uses a predictive model for CI classification. We consider multiple approaches to implementing these detectors that range from simple, computationally efficient methods suitable for real-time analysis to strong, resource-intensive methods, better for high accuracy offline analysis. On the DementiaBank ADReSS dataset, WATCH-SS achieved strong predictive performance (AUC = 80% on the test set). This work demonstrates that a modular, feature-based approach can achieve strong performance while providing a transparent diagnostic profile, representing a significant step towards a trustworthy and clinically-usable screening tool for primary care.",
+    "topic": "",
+    "conference": "psb",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1142/9789819824755_0024"
+  },
+  {
+    "id": "10.1142/9789819824755_0019",
+    "title": "Detecting PTSD in Clinical Interviews: A Comparative Analysis of NLP Methods and Large Language Models",
+    "authors": [
+      "Chen F",
+      "Ben-Zeev D",
+      "Sparks G",
+      "Kadakia A",
+      "Cohen T"
+    ],
+    "abstract": "Post-Traumatic Stress Disorder (PTSD) remains under-detected in clinical settings, presenting opportunities for automated detection to identify at-risk patients. This study evaluates natural language processing approaches for binary PTSD classification from clinical interview transcripts using the DAIC-WOZ dataset, which contains semi-structured interviews with standardized psychological assessments. We compared embedding-based methods (SentenceBERT/LLaMA with logistic regression), general and mental health-specific transformer models (BERT/RoBERTa), and large language model prompting strategies (zero-shot/few-shot/chain-ofthought). SentenceBERT embeddings with logistic regression achieved the highest overall performance (AUPRC=0.758±0.128), outperforming domain-specific end-to-end fine-tuning models like Mental-RoBERTa (AUPRC=0.675±0.084 vs. RoBERTa-base 0.599±0.145). Few-shot prompting using DSM-5 criteria and two examples yielded competitive results (AUPRC=0.737). Performance varied significantly across symptom severity and comorbidity status with depression, with higher accuracy for severe PTSD cases and patients with comorbid depression. Our findings highlight the potential of embedding-based methods and LLMs for scalable screening while underscoring the need for improved detection of nuanced presentations.",
+    "topic": "",
+    "conference": "psb",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1142/9789819824755_0019"
+  },
+  {
+    "id": "10.1142/9789819824755_0018",
+    "title": "ReXVQA: A Large-scale Visual Question Answering Benchmark for Generalist Chest X-ray Understanding",
+    "authors": [
+      "Pal A",
+      "Lee JO",
+      "Zhang X",
+      "Sankarasubbu M",
+      "Roh S",
+      "Kim WJ",
+      "Lee M",
+      "Rajpurkar P"
+    ],
+    "abstract": "We present ReXVQA, the largest and most comprehensive benchmark for visual question answering (VQA) in chest radiology, comprising 694,841 questions paired with 160,000 chest X-rays studies across training, validation, and test sets. Unlike prior efforts that rely heavily on template based queries, ReXVQA introduces a diverse and clinically authentic task suite reflecting five core radiological reasoning skills: presence assessment, location analysis, negation detection, differential diagnosis, and geometric reasoning. We evaluate eight state-of-the-art multimodal large language models, including MedGemma-4Bit, Qwen2.5-VL, Janus-Pro-7B, and Eagle2-9B. The best-performing model (MedGemma) achieves 83.24% overall accuracy. To bridge the gap between AI performance and clinical expertise, we conducted a comprehensive human reader study involving 3 senior radiology residents on 200 randomly sampled cases. Our evaluation demonstrates that MedGemma achieved superior performance (83.84% accuracy) compared to human readers (best radiology resident: 77.27%), representing a significant milestone where AI performance exceeds human evaluation on chest X-ray interpretation. The reader study reveals distinct performance patterns between AI models and radiology residents, with strong inter-reader agreement among the human readers while showing more variable agreement patterns between human readers and AI models. ReXVQA establishes a new standard for evaluating generalist radiological AI systems, offering public leaderboards, fine-grained evaluation splits, structured explanations, and category-level breakdowns. This benchmark lays the foundation for next-generation AI systems capable of mimicking expert-level clinical reasoning beyond narrow pathology classification.Dataset: https://hf.co/datasets/rajpurkarlab/ReXVQA; Supplementary Material: https://github.com/monk1337/PSB-Conference-2025/blob/main/Appendix.pdf.",
+    "topic": "",
+    "conference": "psb",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1142/9789819824755_0018"
+  },
+  {
+    "id": "10.1142/9789819824755_0006",
+    "title": "Scoring Physician Risk Communication in Prostate Cancer Using Large Language Models",
+    "authors": [
+      "Lopez-Garcia G",
+      "Xu D",
+      "Luu M",
+      "Zheng R",
+      "Daskivich TJ",
+      "Gonzalez-Hernandez G"
+    ],
+    "abstract": "Effective risk communication is essential to shared decision-making in prostate cancer care. However, the quality of physician communication of key concepts varies widely in real-world consultations. Manual evaluation of communication is labor-intensive and not scalable. We present a structured, rubric-based framework that uses large language models (LLMs) to automatically score the quality of risk communication in prostate cancer consultations. Using transcripts from 20 clinical visits, we curated and annotated 487 physician-spoken sentences that referenced five key concepts for shared decision-making: cancer prognosis, life expectancy, and three treatment side effects (erectile dysfunction, incontinence, and irritative urinary symptoms). Each sentence was assigned a score from 0 to 5 based on the precision and patient-specificity of communicated risk, using a validated scoring rubric. We modeled this task as five multiclass classification problems and evaluated both finetuned transformer baselines and GPT-4o with rubric-based and chain-of-thought (CoT) prompting. Our best performing approach, which combined rubric-based CoT prompting with few-shot learning, achieved micro averaged F1 scores between 85.0 and 92.0 across domains, outperforming supervised baselines and matching inter-annotator agreement. These findings establish a scalable foundation for AI-driven evaluation of physician-patient communication in oncology and beyond.",
+    "topic": "",
+    "conference": "psb",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1142/9789819824755_0006"
+  },
+  {
+    "id": "10.1142/9789819824755_0062",
+    "title": "AI for Health: Leveraging Artificial Intelligence to Revolutionize Healthcare",
+    "authors": [
+      "Li R",
+      "Davison BD",
+      "Bright T",
+      "He L"
+    ],
+    "abstract": "The following sections are included: Introduction to the Workshop; Session Scope, Organizing Team.",
+    "topic": "",
+    "conference": "psb",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1142/9789819824755_0062"
+  },
+  {
+    "id": "10.1142/9789819824755_0063",
+    "title": "Applications of AI &amp; ML in Biomanufacturing of Cell and Gene Therapies",
+    "authors": [
+      "Neumann E",
+      "Weisinger K",
+      "Londo T"
+    ],
+    "abstract": "This workshop highlights how AI/ML technologies are beginning to be applied to biomanufacturing and bioengineering of cell and gene therapies (CGT). AI/ML have demonstrated their utility in biocomputing and biomedical research applications, and are poised to become central to design, scaling, and optimization of bioengineering processes such as CAR-T cells, iPSC, and biomolecule production. Invited speakers from academia and industry will speak of their experience in leveraging these new intelligent technologies.",
+    "topic": "",
+    "conference": "psb",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1142/9789819824755_0063"
+  },
+  {
+    "id": "10.1142/9789819824755_0056",
+    "title": "REPEL - Random Embedding Perturbation for Enhanced Learning of Protein Function",
+    "authors": [
+      "Zhou D",
+      "Cowen LJ",
+      "Wu K",
+      "Hu X",
+      "Slonim DK"
+    ],
+    "abstract": "Protein function prediction from multiplex protein-protein association networks is a crucial approach to extending functional annotation. Current methods use embeddings of the heterogeneous network data that aim to place related proteins near each other in embedding space. However, such embeddings suffer from spurious protein proximity as well, reducing function prediction accuracy. Because heterogeneous input networks often have very different structures, it is hard to confidently declare proteins to be dissimilar using the network structure or the resulting embeddings. Here we address this problem with REPEL, a function prediction tool using a random graph augmentation method that applies a uniform weak force to push nodes apart. We assess this method on simulated networks with planted overlapping communities, as well as on real multiplex yeast and E.coli protein association networks. Surprisingly, we find that this method consistently improves protein function prediction over competing methods Mashup, deepNF, and BIONIC. The random repelling nature of the augmented graphs has a denoising effect on the learning process, distancing node pairs with spurious proximity while preserving true functional connections, thus increasing robustness. This graph augmentation principle may generalize to denoising and improving robustness in other graph-based learning algorithms.",
+    "topic": "",
+    "conference": "psb",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1142/9789819824755_0056"
+  },
+  {
+    "id": "10.1142/9789819824755_0047",
+    "title": "BioLM-NET: an interpretable deep learning model combining prior biological knowledge and contextual LLM gene embeddings on multi-omics data to predict disease",
+    "authors": [
+      "Rifat JM",
+      "Tabashum T",
+      "Rahman MM",
+      "Mokter MF",
+      "Engala S",
+      "Bozdag S"
+    ],
+    "abstract": "Biologically informed deep neural networks, which connect input layer to hidden layers based on genepathway relationship have gained popularity in recent years. However, most existing methods do not incorporate protein-protein interactions (PPI) and protein-DNA interactions (PDI) in their designs. In this study, we introduce BioLM-NET, a deep learning-based framework that fuses single cell or bulk gene expression data and DNA methylation data with prior biological knowledge including Protein- Protein Interactions (PPI), Protein-DNA Interactions (PDI). BioLM-NET also aggregates latent representation of omics signals at pathway-level through an attention-based pathway layer where a pretrained large language model (LLM) was incorporated to generate context-specific gene embeddings. We evaluated BioLM-NET on single cell colorectal cancer data from scTrioseq2 platform to predict primary and metastatic cancer cells, on TCGA-BRCA, TCGA-GBM, TCGA-COAD to predict cancer subtypes and ROSMAP data to predict Alzheimer's disease patient. Our results showed that BioLMNET outperformed baseline and state-of-the-art (SOTA) methods, P-NET and PASNet with statistical significance on scTrioseq2 data, TCGA-COAD and ROSMAP data and ties with SVM and Dense neural network on TCGA-BRCA data. Our ablation studies demonstrated the importance of incorporating PPI, PDI data and attention-based pathway layer. We also interpret our models and found out that our important input features are significantly enriched in GO terms and KEGG pathways and can serve as potential biomarkers or therapeutic targets for the corresponding disease.",
+    "topic": "",
+    "conference": "psb",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1142/9789819824755_0047"
+  },
+  {
+    "id": "10.1142/9789819824755_0041",
+    "title": "Barriers to Designing Inclusive Ecological Momentary Assessment and Wearable Data Collection Protocols for AI-Driven Substance Use Monitoring in Hawai'i",
+    "authors": [
+      "Sun Y",
+      "Jaiswal A",
+      "Kargarandehkordi A",
+      "Slade C",
+      "Benzo RM",
+      "Phillips KT",
+      "Washington P"
+    ],
+    "abstract": "Ecological momentary assessment (EMA) and wearable sensors offer unprecedented opportunities to capture the dynamics of substance use through real-time, high-resolution behavioral and physiological data. These data streams are increasingly used to train AI/ML models for digital phenotyping and predictive intervention, raising critical questions about fairness, bias, and inclusivity in model development. However, the adoption of these technologies, or the lack thereof, among diverse and historically marginalized groups raises questions and challenges of equity, cultural relevance, and participant trust. In this study, we conducted a four-week observational study with adults in Hawai.i where we combined continuous Fitbit monitoring and daily EMA surveys to document substance use patterns and cravings. Through semi-structured interviews and grounded theory analysis, we identified six primary barriers to study participation and adherence: (1) disruptions to daily routines, (2) physical and psychosocial discomfort associated with wearing the Fitbit device, (3) concerns about aesthetic compatibility and professional appearance, (4) phonerelated issues, (5) challenges related to substance use and cravings, and (6) socially sensitive contexts. We also highlight participant-identified facilitators, such as the value of participant-driven scheduling, motivational feedback, and contextually adaptive protocols. Drawing on these collective findings, we propose a set of design guidelines aimed at advancing the inclusivity, engagement, and fairness of wearable-based EMA research.",
+    "topic": "",
+    "conference": "psb",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1142/9789819824755_0041"
+  },
+  {
+    "id": "10.1142/9789819824755_0038",
+    "title": "Using Large Language Models to Audit Model Healthcare Biases",
+    "authors": [
+      "Ansari ZN",
+      "Fanous A",
+      "Omiye JA",
+      "Agarwal A",
+      "Daneshjou R"
+    ],
+    "abstract": "Large language models (LLMs) can potentially mitigate pain points in healthcare tasks such as decision support, text summarization, and question-answering. However, LLMs exhibit bias related to race, gender identity, sexual orientation, and other demographics, posing a major concern. Although human review helps reduce bias, the sheer data volume renders thorough evaluation impractical and onerous at scale. This motivates the use of LLMs in auditing models for bias. This study uses the Stanford Healthcare red-teaming dataset, which contains prompts, outputs, and expert-level bias labels, to examine how model size and prompting techniques affect bias detection with GPT-3.5-turbo, GPT-4o, llama3.3, and o1-mini. Our results show that the best model for bias detection depends on the chosen metric. Smaller, cost-effective models like o1-mini outperformed GPT-4o in precision and F1 scores, with up to 53.11% higher precision and 10.32% higher F1. This suggests that smaller models may be preferable when precision or F1 is a priority. Additionally, self-critiquing capabilities in larger models do not significantly improve bias detection over smaller models (χ2, p = 0.597). Moreover, the use of prompting techniques, particularly Thread of Thought, significantly enhanced bias detection across all models, (χ2, p < 0.001). Our findings suggest that depending on the metric of concern for the auditor, smaller models can offer a costeffective alternative to larger models.",
+    "topic": "",
+    "conference": "psb",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1142/9789819824755_0038"
+  },
+  {
+    "id": "10.1142/9789819824755_0029",
+    "title": "Session Introduction: Biological molecular function: methods and benchmarks for finding function in biological dark matter",
+    "authors": [
+      "McDermott JE",
+      "Bromberg Y",
+      "Carter H",
+      "Wheeler T"
+    ],
+    "abstract": "The accurate determination of biological molecular function remains one of the most significant challenges in computational biology, with vast areas of biological \"dark matter\" persisting in microbiomes, viruses, and unexplored sequence space. To meet this challenge, we developed at PSB session to address the limitations of traditional sequence similarity-based functional annotation methods and explores how recent advances in AI/ML and high-throughput data generation are transforming the field. We highlight four innovative contributions presented in this session: a geometric framework using signed distance functions for modeling protein surfaces; a reinforcement learning-based approach for steering protein generative models to design functional sequences; an ensemble framework combining sequence, structural, and network features for subcellular localization prediction; and a scalable factorization method integrating gene-gene interaction data for analyzing high-dimensional genetic perturbation profiles. Together, these methodologies showcase the potential for computational and AI-driven tools to address the complex and multiscale nature of molecular function prediction, paving the way for new discoveries in understanding and engineering biological systems.",
+    "topic": "",
+    "conference": "psb",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1142/9789819824755_0029"
+  },
+  {
+    "id": "10.1142/9789819824755_0021",
+    "title": "The Intention-Execution Disconnect in Medical AI: The ReXecution Framework for Evaluating Real-World Clinical Performance",
+    "authors": [
+      "Banerjee O",
+      "Bijnens L",
+      "Adithan S",
+      "Rajpurkar P"
+    ],
+    "abstract": "We present the ReXecution framework for conducting clinician-centered assessments of medical AI assistants, providing detailed insights into their reliability in realistic clinical settings. Using this framework, we assessed AI assistants for chest X-ray (CXR) interpretation, exploring the gap between current model capabilities and real-world radiological needs. Unlike prior benchmarks that rely on automatically generated questions with limited clinical relevance, our dataset consists of 100 expert-curated tasks that radiologists might realistically present to an AI assistant in their day-to-day workflow. Through detailed manual review by a radiologist, we evaluated two leading foundation models, ChatGPTo3 and MedGemma, on our tasks. While both models demonstrated considerable medical knowledge and reasoning capabilities on our tasks, they frequently struggled to interpret images and execute tasks accurately, producing correct outputs in only 5-10% of cases. Our detailed manual evaluation highlights a critical mismatch: models often abstractly understand radiology concepts but cannot reliably execute their plans when interpreting specific medical images. This work identifies key gaps in current models' ability to serve as comprehensive radiology assistants and provides insights into how the development and evaluation of models can better align with real-world clinician needs, enabling seamless clinician-AI collaboration.",
+    "topic": "",
+    "conference": "psb",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1142/9789819824755_0021"
+  },
+  {
+    "id": "10.1142/9789819824755_0013",
+    "title": "Quantifying surprise in clinical care: Detecting highly informative events in electronic health records with foundation models",
+    "authors": [
+      "Burkhart MC",
+      "Ramadan B",
+      "Solo L",
+      "Parker WF",
+      "Beaulieu-Jones BK"
+    ],
+    "abstract": "We present a foundation model-derived method to identify highly informative tokens and events in electronic health records. Our approach considers incoming data for the entire context of a patient's hospitalization to find surprising events. Context enables flagging anomalous events that rule-based approaches would consider within a normal range. We demonstrate that the events our model flags are significantly more useful than average events for predicting downstream patient outcomes and show that a fraction of events we identify as unsurprising can be safely dropped without an adverse impact on performance. Finally, we show how informativeness can help interpret the predictions of prognostic models trained on foundation model-derived representations.",
+    "topic": "",
+    "conference": "psb",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1142/9789819824755_0013"
+  },
+  {
+    "id": "10.1142/9789819824755_0011",
+    "title": "Speaker Role Identification in Clinical Conversations",
+    "authors": [
+      "Zolensky A",
+      "Jang KJ",
+      "Sabin J",
+      "Hartzler A",
+      "Alasaly B",
+      "Mopidevi S",
+      "Liberman M",
+      "Johnson K"
+    ],
+    "abstract": "Patient-clinician communication research is crucial for understanding interaction dynamics and for predicting outcomes that are associated with clinical discourse. Traditionally, interaction analysis is conducted manually because of challenges such as Speaker Role Identification (SRI), which must reliably differentiate between doctors, medical assistants, patients, and other caregivers in the same room. Although automatic speech recognition with diarization can efficiently create a transcript with separate labels for each speaker, these systems are not able to assign roles to each person in the interaction. Previous SRI studies in task-oriented scenarios have directly predicted roles using linguistic features, bypassing diarization. However, to our knowledge nobody has investigated SRI in clinical settings. We explored whether Large Language Models (LLMs) such as BERT could accurately identify speaker roles in clinical transcripts, with and without diarization. We used veridical turn segmentation and diarization identifiers, fine-tuning each model at varying levels of identifier corruption to assess impact on performance. Our results demonstrate that BERT achieves high performance with linguistic signals alone (82% accuracy/82% F1-score), while incorporating accurate diarization identifiers further enhances accuracy (95%/95%). We conclude that fine-tuned LLMs are effective tools for SRI in clinical settings.",
+    "topic": "",
+    "conference": "psb",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1142/9789819824755_0011"
+  },
+  {
+    "id": "10.1142/9789819824755_0008",
+    "title": "3DReasonKnee: Advancing Grounded Reasoning in Medical Vision Language Models",
+    "authors": [
+      "Sambara S",
+      "Kim SE",
+      "Zhang X",
+      "Luo L",
+      "Johri S",
+      "Baharoon M",
+      "Ro DH",
+      "Rajpurkar P"
+    ],
+    "abstract": "Current Vision-Language Models (VLMs) struggle to ground anatomical regions in 3D medical images and reason about them in a step-by-step manner-a key requirement of realworld diagnostic assessment. This ability is essential for aligning model outputs with the diagnostic workflows clinicians use in practice, enabling trustworthy clinician-AI collaboration. Existing 3D datasets provide localization labels, but none support this \"grounded reasoning\" ability. To address this gap, we introduce 3DReasonKnee, the first 3D grounded reasoning dataset for medical images, which provides 494k high-quality quintuples derived from 7,970 3D knee MRI volumes. Each quintuple includes: (1) the 3D MRI volume, (2) a diagnostic question targeting a specific anatomical region (3) a 3D bounding box localizing the relevant anatomical structures, (4) clinician-generated diagnostic reasoning steps that explicitly detail the 3D reasoning process, and (5) structured severity assessments for the relevant anatomical region. The meticulous creation and validation of 3DReasonKnee, involving over 450 hours of expert clinician time for manually segmenting MRIs and generating reasoning chains, ensures its superior quality and clinical relevance. We establish ReasonKnee-Bench to evaluate localization and diagnostic accuracy, providing novel insight into VLM ability to perform grounding and severity assessment across diverse anatomical regions and diagnostic inquiries. We benchmark five state-of-the-art VLMs, providing baseline performance for ReasonKnee-Bench. By providing this unique resource of expertannotated 3D reasoning pathways, 3DReasonKnee serves as a repository of orthopedic surgeons' diagnostic expertise and offers a vital testbed for advancing multimodal medical AI systems towards 3D, clinically aligned, localized decision-making capabilities. The dataset can be found in HuggingFace: rajpurkarlab/3DReasonKnee.",
+    "topic": "",
+    "conference": "psb",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1142/9789819824755_0008"
+  },
+  {
+    "id": "10.1142/9789819824755_0003",
+    "title": "ColonCrafter: A Depth Estimation Model for Colonoscopy Videos Using Diffusion Priors",
+    "authors": [
+      "Hardy R",
+      "Berzin TM",
+      "Rajpurkar P"
+    ],
+    "abstract": "Three-dimensional (3D) scene understanding in colonoscopy presents significant challenges that necessitate automated methods for accurate depth estimation. However, existing depth estimation models for endoscopy struggle with temporal consistency across video sequences, limiting their applicability for 3D reconstruction.We present ColonCrafter, a diffusion-based depth estimation model that generates temporally consistent depth maps from monocular colonoscopy videos. Our approach learns robust geometric priors from synthetic colonoscopy sequences, enabling reliable depth estimation across frames. We also introduce a style transfer technique that preserves geometric structure while adapting realistic clinical videos to match our synthetic training domain. ColonCrafter achieves state-of-the-art zero-shot performance on the C3VD dataset, outperforming both general-purpose and endoscopyspecific approaches. Although full trajectory 3D reconstruction remains a challenge, we demonstrate clinically relevant applications of ColonCrafter, including 3D point cloud generation and surface coverage assessment. Our code will be made publicly available at https://github.com/rajpurkarlab/ColonCrafter.",
+    "topic": "",
+    "conference": "psb",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1142/9789819824755_0003"
+  },
+  {
+    "id": "10.1142/9789819824755_0055",
+    "title": "Provenance Tracing in Network Diffusion Algorithms",
+    "authors": [
+      "Tasnina N",
+      "Crovella M",
+      "Kasif S",
+      "Murali TM"
+    ],
+    "abstract": "We propose a novel strategy for provenance tracing in random walk-based network diffusion algorithms, a problem that has been surprisingly overlooked in spite of the widespread use of diffusion algorithms in biological applications. Our path-based approach enables ranking paths by the magnitude of their contribution to each node's score, offering insight into how information propagates through a network. Building on this capability, we introduce two quantitative measures: (i) path-based effective diffusion, which evaluates how well a diffusion algorithm leverages the full topology of a network, and (ii) diffusion betweenness, which quantifies a node's importance in propagating scores. We applied our framework to SARSCoV- 2 protein interactors and human PPI networks. Provenance tracing of the Regularized Laplacian and Random Walk with Restart algorithms revealed that a substantial amount of a node's score is contributed via multi-edge paths, demonstrating that diffusion algorithms exploit the non-local structure of the network. Analysis of diffusion betweenness identified proteins playing a critical role in score propagation; proteins with high diffusion betweenness are enriched with essential human genes and interactors of other viruses, supporting the biological interpretability of the metric. Finally, in a signaling network composed of causal interactions between human proteins, the top contributing paths showed strong overlap with COVID-19-related pathways. These results suggest that our path-based framework offers valuable insight into diffusion algorithms and can serve as a powerful tool for interpreting diffusion scores in a biologically meaningful context, complementing existing module- or node-centric approaches in systems biology. The code is publicly available at https://github.com/n-tasnina/provenance-tracing.git under the GNU General Public License v3.0.",
+    "topic": "",
+    "conference": "psb",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1142/9789819824755_0055"
+  },
+  {
+    "id": "10.1142/9789819824755_0046",
+    "title": "Integrating Polygenic Scores with Clinical, Lifestyle, and Social Risk Factors to Improve Heart Failure Risk Prediction",
+    "authors": [
+      "Cardone KM",
+      "Kim D",
+      "Ritchie MD"
+    ],
+    "abstract": "Heart failure (HF) is highly prevalent, high-burden disorder with its prevalence expected to increase. Early detection of HF can reduce morbidity and mortality; therefore, novel early detection methods are needed. Polygenic scores (PGS) can combine common variants across the genome and provide phenotype-specific risk scores. However, there are also many well-known, non-genomic risk factors of HF, in the clinical, lifestyle, and social determinant of health (SDOH) domains, and it is not clear how genetic and non-genetic risk factors collectively contribute to HF risk. To address this question, we assessed whether combining HF PGS with clinical, lifestyle, and SDOH risk factors improves risk prediction. Leveraging data from the All of Us Research Program (n = 22,275), clinical risk factors were aggregated into a clinical risk score (CRS) while lifestyle and SDOH risk factors were aggregated into a polyexposure score (PXS). Feature selection was conducted with LASSO regression and statistical significance thresholding from logistic regression models (p < 0.05). Features were included in the model if they were statistically significant and important in ≥ 95% of 1000 iterations. To assess model performance, logistic regressions with HF case/control status were conducted with each risk score individually, as well as integrated models. The integrated model (PGS + CRS + PXS) performed better than individual risk scores (AUROC = 0.763, AUPRC = 0.047, F1 score = 0.062, balanced accuracy = 0.683). To assess the validity of the CRS and PXS, an integrated model with the PGS along with clinical and exposure risk factors as independent features was also evaluated. Based on AUPRC and F1 score, this integrated risk model (PGS + CRS risk factors + PXS risk factors) performed better than the combining the PGS with the CRS and PXS (AUROC = 0.738, AUPRC = 0.047, F1 score = 0.066, balanced accuracy = 0.657). These findings demonstrate that integration of risk factors across multiple domains can improve HF prediction. Knowing that PGS combined with clinical, lifestyle, and SDOH risk factors is predictive of HF risk provides greater opportunity for the identification of individuals at risk of HF prior to disease onset with the goal of prevention or early intervention.",
+    "topic": "",
+    "conference": "psb",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1142/9789819824755_0046"
+  },
+  {
+    "id": "10.1142/9789819824755_0044",
+    "title": "Integrating Polygenic Risk Improves Generative Forecasting of Disease Trajectories",
+    "authors": [
+      "German C",
+      "Shringarpure S",
+      "Dibaeinia P",
+      "Ashenhurst J",
+      "Koelsch BL",
+      "Auton A",
+      "Khan AA"
+    ],
+    "abstract": "Predicting the longitudinal sequence of diseases an individual will develop over their lifetime is a central challenge in medicine. While recent AI models can process health histories, they have been limited by cohort size and the omission of genetic data. Here we introduce the Next Health Event (NHE) model, a generative transformer trained on the health trajectories of 7.1 million research participants. By using a transformer architecture to integrate demographic data, longitudinal BMI, and polygenic risk scores (PRS) for 297 traits with sequential health history, NHE significantly outperforms baseline models, including XGBoost with the same inputs, in predicting the next diagnosis across 129 conditions (Top-1 accuracy 25.5% vs. 22.3%). Systematic ablation studies reveal that both PRS and longitudinal BMI provide substantial, non-redundant predictive power, whereas self-reported lifestyle information offers limited additional value. The model's predictive accuracy is the same when forecasting prospectively reported incident outcomes vs. combined prospectively and retrospectively reported outcomes (AUROC 0.917), demonstrating its utility for real-world risk assessment. By uniting large-scale health histories with genetics, our work establishes a new framework for predictive health and demonstrates that generative models can effectively forecast individual disease pathways.",
+    "topic": "",
+    "conference": "psb",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1142/9789819824755_0044"
+  },
+  {
+    "id": "10.1142/9789819824755_0043",
+    "title": "Session Introduction: Precision Medicine: Integrating Large-Scale Data and Intermediate Phenotypes for Understanding Health and Treating Disease",
+    "authors": [
+      "Brenner SE",
+      "Ioannidis NM",
+      "Obafemi-Ajayi T",
+      "O'Donnell-Luria A"
+    ],
+    "abstract": "The field of precision medicine has undergone rapid development over the past three decades, driven by advances in high-throughput molecular profiling, large-scale electronic health data, and computational modeling. The central objective is to refine disease risk prediction, diagnosis, and treatment strategies by incorporating genetic, molecular, environmental, and clinical information into individualized care. However, the effective integration of these heterogeneous data sources presents substantial analytical challenges. The 2026 Precision Medicine session of the Pacific Symposium on Biocomputing (PSB) highlights computational methods that bridge large-scale biological data and intermediate phenotypes, emphasizing approaches that advance mechanistic understanding, risk prediction, and clinical utility. The contributions span multi-modal risk modeling, biomarker discovery, and causal inference frameworks, demonstrating the breadth and depth of research in computational precision medicine.",
+    "topic": "",
+    "conference": "psb",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1142/9789819824755_0043"
+  },
+  {
+    "id": "10.1142/9789819824755_0027",
+    "title": "MedFactEval and MedAgentBrief: A Framework and Workflow for Generating and Evaluating Factual Clinical Summaries",
+    "authors": [
+      "Grolleau F",
+      "Alsentzer E",
+      "Keyes T",
+      "Chung P",
+      "Swaminathan A",
+      "Aali A",
+      "Hom J",
+      "Huynh T",
+      "Lew T",
+      "Liang A",
+      "Chu W",
+      "Steele N",
+      "Lin C",
+      "Yang J",
+      "Black K",
+      "Ma S",
+      "Haredasht FN",
+      "Shah NH",
+      "Schulman K",
+      "Chen JH"
+    ],
+    "abstract": "Evaluating factual accuracy in Large Language Model (LLM)-generated clinical text is a critical barrier to adoption, as expert review is unscalable for the continuous quality assurance these systems require. We address this challenge with two complementary contributions. First, we introduce MedFactEval, a framework for scalable, fact-grounded evaluation where clinicians define high-salience key facts and an \"LLM Jury\"-a multi-LLM majority vote-assesses their inclusion in generated summaries. Second, we present MedAgentBrief, a model-agnostic, multi-step workflow designed to generate high-quality, factual discharge summaries. To validate our evaluation framework, we established a gold-standard reference using a seven-physician majority vote on clinician-defined key facts from inpatient cases. The MedFactEval LLM Jury achieved almost perfect agreement with this panel (Cohen's κ = 81%), a performance statistically non-inferior to that of a single human expert (κ = 67%, P < 0.001). Our work provides both a robust evaluation framework (MedFactEval) and a high-performing generation workflow (MedAgentBrief), offering a comprehensive approach to advance the responsible deployment of generative AI in clinical workflows.",
+    "topic": "",
+    "conference": "psb",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1142/9789819824755_0027"
+  },
+  {
+    "id": "10.1142/9789819824755_0028",
+    "title": "Asking the Right Questions: Benchmarking Large Language Models in the Development of Clinical Consultation Templates",
+    "authors": [
+      "McCoy LG",
+      "Wu D",
+      "Khemani S",
+      "Maharaj SK",
+      "Pahwa A",
+      "Rosengaus L",
+      "Giang L",
+      "Jee O",
+      "Goh E",
+      "Haredasht FN",
+      "Chopra K",
+      "Wu DJ",
+      "Conteh A",
+      "Ravi V",
+      "Weng Y",
+      "Li KZ",
+      "Shirvani D",
+      "Chen JH"
+    ],
+    "abstract": "This study evaluates the capacity of large language models (LLMs) to generate structured clinical consultation templates for electronic consultation. Using 145 expert-crafted templates developed and routinely used by Stanford's eConsult team, we assess frontier models-including o3, GPT-4o, Kimi K2, Claude 4 Sonnet, Llama 3 70B, and Gemini 2.5 Pro-for their ability to produce clinically coherent, concise, and prioritized clinical question schemas. Through a multi-agent pipeline combining prompt optimization, semantic autograding, and prioritization analysis, we show that while models like o3 achieve high comprehensiveness (up to 92.2%), they consistently generate excessively long templates and fail to correctly prioritize the most clinically important questions under length constraints. Performance varies across specialties, with significant degradation in narrative-driven fields such as psychiatry and pain medicine. Our findings demonstrate that LLMs can enhance structured clinical information exchange between physicians, while highlighting the need for more robust evaluation methods that capture a model's ability to prioritize clinically salient information within the time constraints of real-world physician communication. Limitations include reliance on Stanford-specific templates and concordancebased grading, which may not capture all clinically reasonable outputs.",
+    "topic": "",
+    "conference": "psb",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1142/9789819824755_0028"
+  },
+  {
+    "id": "10.1142/9789819824755_0017",
+    "title": "Automated Chest X-ray Report Generation Remains Unsolved",
+    "authors": [
+      "Zhang X",
+      "Acosta JN",
+      "Yang X",
+      "Adithan S",
+      "Luo L",
+      "Zhou HY",
+      "Miller J",
+      "Huang O",
+      "Zhou Z",
+      "Hamamci IE",
+      "Bannur S",
+      "Bouzid K",
+      "Zhang X",
+      "Meng Z",
+      "Nicolson A",
+      "Koopman B",
+      "Baek I",
+      "Ko H",
+      "Ranjit MP",
+      "Srivastav S",
+      "Sambanthan SG",
+      "Rajpurkar P"
+    ],
+    "abstract": "Accurate interpretation of chest radiograph images and generation of narrative reports is essential for patient care but places a heavy burden on radiologists and clinical experts. While AI models for automated report generation show promise, standardized evaluation frameworks remain limited. Here we present the ReXrank Challenge V1.0, a competition in the generation of chest radiograph reports utilizing ReXGradient, the largest test dataset consisting of 10,000 studies across 67 sites. The challenge attracted diverse participants from academic institutions, industry, and independent research teams, resulting in 8 new submissions alongside 16 state-of-the-art models previously benchmarked. Through comprehensive evaluation using multiple metrics, we analyzed model performance across various dimensions: differences between normal and abnormal studies, generalization capabilities across healthcare sites, and error rates in identifying clinical findings. This benchmark reveals that automated chest X-ray report generation remains fundamentally unsolved, with significant performance gaps between normal and abnormal studies, where even top-performing models achieve less than 45% error-free reporting on abnormal cases, and substantial variability across healthcare institutions, indicating that robust, clinically-ready systems require continued development before widespread deployment.",
+    "topic": "",
+    "conference": "psb",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1142/9789819824755_0017"
+  },
+  {
+    "id": "10.1142/9789819824755_0020",
+    "title": "ED-Explain: Personalized Video Instructions for Patients Discharged from the Emergency Department",
+    "authors": [
+      "Luo L",
+      "Chen E",
+      "Zhang X",
+      "Acosta JN",
+      "Jin BT",
+      "Gunturkun F",
+      "Rose C",
+      "Preiksaitis C",
+      "Suffoletto B",
+      "Rajpurkar P",
+      "Kim DA"
+    ],
+    "abstract": "This paper presents ED-Explain, an integrated, AI-driven system that transforms emergency department (ED) discharge instructions and electronic health records into personalized video presentations featuring a virtual healthcare provider. By leveraging multimodal ED data, large language models, and video generation, we aimed to produce accessible discharge instructions tailored to patients' ED visits. Four board-certified Emergency Medicine physicians reviewed 39 pairs of original and ED-Explain-produced discharge instructions. AI video summaries received significantly higher (p<0.001) average ratings (1-5) of completeness (4.1 vs. 3.1), correctness (3.9 vs. 3.5) and patient accessibility (3.4 vs. 2.9). Physicians expressed reservations about 13.3% of ED-Explain's discharge instructions for patient viewing, and only 4.6% of ED-Explain's instructions were found inappropriate for use with patients. Physician feedback suggests that AI-enhanced video discharge summaries have potential to improve communication of discharge information to ED patients, though patient-centered evaluation is needed. This work contributes to the growing field of AIassisted healthcare communication and offers insights into the potential for AI to improve physician-patient communication and patient self-efficacy.",
+    "topic": "",
+    "conference": "psb",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1142/9789819824755_0020"
+  },
+  {
+    "id": "10.1142/9789819824755_0007",
+    "title": "SeizureFormer: A Multi-Scale Transformer for Seizure Risk Forecasting from RNS-Derived Biomarkers",
+    "authors": [
+      "Feng T",
+      "Ni J",
+      "Jin W",
+      "Gleichgerrcht E"
+    ],
+    "abstract": "We present SeizureFormer, a Transformer-based model for long-horizon seizure risk forecasting (1-14 days) using structured biomarkers-interictal epileptiform activity (IEA) and long episodes (LE)-extracted from responsive neurostimulation (RNS) systems. Unlike prior models based on raw scalp EEG, SeizureFormer leverages stable RNS biomarkers and integrates multi-scale CNN patch embedding, cross-variable temporal convolution, and squeeze-and-excitation attention to capture both short-term fluctuations and long-term seizure cycles. Tested across five patients and multiple prediction windows (1-14 days), SeizureFormer achieved state-of-the-art performance with mean ROC AUC of 79.44% and mean PR AUC of 76.29% across five patients and four prediction windows. Compared to statistical, classical ML, and deep learning baselines, it demonstrates superior generalizability under class imbalance. Clinically, it enables actionable multi-day forecasting, supporting personalized and proactive intervention in epilepsy care by forecasting seizurerelated events 1 to 14 days ahead.",
+    "topic": "",
+    "conference": "psb",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1142/9789819824755_0007"
+  },
+  {
+    "id": "10.1142/9789819824755_0004",
+    "title": "A Clinician-Guided Framework for Endoscopic AI: Developing PanEndoAtlas and Benchmarking Foundation Models Across the Full GI Spectrum",
+    "authors": [
+      "Johri S",
+      "Luo L",
+      "Zhou HY",
+      "Brenner T",
+      "Elamin S",
+      "Geissler ME",
+      "Berzin TM",
+      "Rajpurkar P"
+    ],
+    "abstract": "Endoscopic procedures play a central role in the diagnosis and management of gastrointestinal (GI) diseases, yet the field lacks large-scale, clinically diverse benchmarks and unified datasets to evaluate vision foundation models. We introduce PanEndoSuite, the first unified ecosystem for endoscopic AI, developed through systematic collaboration between AI researchers and practicing gastroenterologists. PanEndoSuite consists of three complementary components: PanEndoAtlas, PanEndoX, and PanEndoFM. PanEndoAtlas is a harmonized dataset of over 420,000 labeled images from 30 public endoscopy datasets across 13 countries and 26 hospitals, creating a clinically-grounded hierarchical taxonomy that mirrors diagnostic reasoning patterns across 111 GI diseases. PanEndoX is a benchmark of 10 clinically grounded tasks, including hierarchical GI-tree classification, Barrett's esophagus grading, ulcerative colitis scoring, polyp subtyping, Boston Bowel Preparation Scale assessment, multi-organ disease classification, and anatomical landmark identification-designed to probe generalization across anatomical regions, disease presentations, and annotation granularities. PanEndoFM is a foundation model pretrained on a 10 million-image corpus curated from public data sources, spanning the entire GI tract. We benchmark PanEndoFM against two endoscopy-specific foundation models (EndoFM-LV, EndoSSL) and two general-purpose vision models (ViT-B/16, ResNet-50). PanEndoFM achieves the highest macro-AUC on 6 of 10 tasks, demonstrating broad clinical generalization; EndoFM-LV performs best on colon-focused tasks, EndoSSL excels in polyp subtyping, and ViT-B/16 shows strengths on small-intestine conditions. Together, PanEndoSuite establishes a foundation for building robust, generalist AI systems in gastrointestinal endoscopy that bridge current AI capabilities and clinical practice.",
+    "topic": "",
+    "conference": "psb",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1142/9789819824755_0004"
+  },
+  {
+    "id": "10.1142/9789819824755_0061",
+    "title": "Workshop Introduction: Advances of AI Methods in Single Cell Spatial Omics",
+    "authors": [
+      "Garmire L",
+      "Zhang X",
+      "Levy J"
+    ],
+    "abstract": "The workshop \"Advances of AI Methods in Single Cell Spatial Omics\" will highlight recent developments in applying AI and machine learning to spatial transcriptomics, proteomics, and metabolomics. Featuring invited speakers and contributed talks, the program will cover methods for data integration, modeling cell-cell interactions, and translational applications to disease and precision medicine.",
+    "topic": "",
+    "conference": "psb",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1142/9789819824755_0061"
+  },
+  {
+    "id": "10.1142/9789819824755_0059",
+    "title": "A random-walk-based learning framework to uncover novel gene candidates for Alzheimer's disease therapy",
+    "authors": [
+      "Orlenko A",
+      "Li B",
+      "Khanjani N",
+      "Venkatesan M",
+      "Shen L",
+      "Ritchie MD",
+      "Wang ZP",
+      "Obafemi-Ajayi T",
+      "Moore JH"
+    ],
+    "abstract": "Identifying repurposable therapeutic targets for Alzheimer's disease (AD) remains challenging due to various clinical and biological factors. This study aimed to identify candidate genes for AD therapy. We hypothesize that gene and disease-specific network properties-learnable from these large-scale biomedical knowledge graphs-can inform implicit gene-AD connections and prioritize repurposable AD drug targets. To evaluate the hypothesis, we focused on druggable genes curated from Drug-Gene Interaction Database and Alzheimer's Knowledge Base (AlzKB). We applied scalable random walk methods to Hetionet to learn unbiased gene and disease embeddings, representative of their topological and semantic network properties. The embeddings were then used to compute gene-AD similarity and derive network-based scores for each gene. To validate the scores, using Alzheimer's Disease Sequencing Project (ADSP) data, we constructed AD classifier models with Tree-based pipeline optimizer 2 (TPOT2), an automated machine learning framework. Models were optimized for performance, model complexity, and high aggregate network-based scores. Network-based scores successfully prioritized diverse feature sets-many not previously associated with AD-that are enriched in biologically meaningful body parts such as brain, and pathways including neuronal signaling, potassium channels, and creatine metabolism. The results suggested that knowledge graphs and network-informed embeddings can capture both known and novel insights into AD mechanisms. Additionally, integrating networkbased scores with feature-set-guided TPOT2 offers a scalable and biologically interpretable framework for AD drug repurposing and discovery.",
+    "topic": "",
+    "conference": "psb",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1142/9789819824755_0059"
+  },
+  {
+    "id": "10.1142/9789819824755_0049",
+    "title": "Prototype Learning to Create Refined Interpretable Digital Phenotypes from ECGs",
+    "authors": [
+      "Sethi S",
+      "Chen D",
+      "Burkhart MC",
+      "Bhandari N",
+      "Ramadan B",
+      "Beaulieu-Jones B"
+    ],
+    "abstract": "Prototype-based neural networks offer interpretable predictions by comparing inputs to learned, representative signal patterns anchored in training data. While such models have shown promise in the classification of physiological data, it remains unclear whether their prototypes capture an underlying structure that aligns with broader clinical phenotypes.We use a prototype-based deep learning model trained for multi-label ECG classification using the PTB-XL dataset. Then without modification we performed inference on the MIMIC-IV clinical database. We assess whether individual prototypes, trained solely for classification, are associated with hospital discharge diagnoses in the form of phecodes in this external population. Individual prototypes demonstrate significantly stronger and more specific associations with clinical outcomes compared to the classifier's class predictions, NLP-extracted concepts, or broader prototype classes across all phecode categories. Prototype classes with mixed significance patterns exhibit significantly greater intra-class distances (p < 0.0001), indicating the model learned to differentiate clinically meaningful variations within diagnostic categories. The prototypes achieve strong predictive performance across diverse conditions, with AUCs ranging as high as 0.89 for atrial fibrillation to 0.91 for heart failure, while also showing substantial signal for non-cardiac conditions such as sepsis and renal disease. These findings suggest that prototype-based models can support interpretable digital phenotyping from physiologic time-series data, providing transferable intermediate phenotypes that capture clinically meaningful physiologic signatures beyond their original training objectives.",
+    "topic": "",
+    "conference": "psb",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1142/9789819824755_0049"
+  },
+  {
+    "id": "10.1142/9789819824755_0048",
+    "title": "Impact of using PRS-CSx and pruning and thresholding for polygenic partitioning of apparent treatment resistant hypertension",
+    "authors": [
+      "Seagle HM",
+      "Kim J",
+      "Akerele AT",
+      "Hung A",
+      "Hellwege JN",
+      "Edwards TL"
+    ],
+    "abstract": "Apparent treatment-resistant hypertension (aTRH) is a clinically challenging condition with heterogeneous etiologies. Understanding the biological pathways underlying resistance to antihypertensive treatment could inform targeted therapeutic strategies. To evaluate how methodological choices in SNP selection influence biological inference, we applied two approaches to select aTRH-associated variants for clustering: PRS-CSx and pruning and thresholding (P&T). Using k-means clustering, we grouped aTRH-associated variants based on their association profiles across 91 cardiometabolic-related phenotypes. We then performed pathway and tissue enrichment analyses to evaluate the biological processes represented by each cluster. Both methods identified multiple genetic clusters, but the distribution of variants and biological signals differed. Clustering based on PRS-CSx produced unequally distributed clusters of SNPs and yielded limited tissue enrichment, while P&T-based clustering captured more uniform trends across cardiometabolic traits and broader tissue and pathway enrichment. These results demonstrate that methodological choices in SNP selection influence downstream clustering and biological interpretation. Despite some overlap in identified pathways and tissue enrichment, each approach identified unique biological signals, highlighting the potential of pairing polygenic methods and k-means clustering to elucidate the biological heterogeneity of aTRH and guide future mechanistic studies.",
+    "topic": "",
+    "conference": "psb",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1142/9789819824755_0048"
+  },
+  {
+    "id": "10.1142/9789819824755_0054",
+    "title": "Systems Biology and Network Analysis: From Multi-omics Integration to Biological Mechanisms",
+    "authors": [
+      "Bebek G",
+      "Mutlu O",
+      "Hajirasouliha I",
+      "Welch J",
+      "Pakhomov S"
+    ],
+    "abstract": "The following sections are included: Session Introduction: Systems Biology and Network Analysis; Session Summary; Acknowledgments.",
+    "topic": "",
+    "conference": "psb",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1142/9789819824755_0054"
+  },
+  {
+    "id": "10.1142/9789819824755_0037",
+    "title": "Session Introduction: Fairness and Bias in Biomedical AI/ML: Defining Goals and Putting Them Into Practice",
+    "authors": [
+      "Martinez-Martin N",
+      "Mahamadou AJD",
+      "Ng M",
+      "Cho MK"
+    ],
+    "abstract": "Concerns regarding generalizability and ensuring that artificial intelligence and machine learning (AI/ML) work effectively and accurately across different populations continue to present challenges for the ethical development and deployment of biomedical. Even though bias and fairness have been prioritized as issues for biomedical AI/ML, underlying differences in how researchers conceptualize and operationalize bias and fairness can contribute to difficulties in achieving goals for addressing fairness and mitigating bias. This session of the 2026 Pacific Symposium on Biocomputing offers the opportunity for interdisciplinary discussion and perspectives on addressing fairness in biomedical AI/ML.",
+    "topic": "",
+    "conference": "psb",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1142/9789819824755_0037"
+  },
+  {
+    "id": "10.1142/9789819824755_0030",
+    "title": "Implicitly and Differentiably Representing Protein Surfaces and Interfaces",
+    "authors": [
+      "Scott CB",
+      "Rothschild C",
+      "Nye BE"
+    ],
+    "abstract": "We introduce a pipeline for implicitly representing a protein, or protein complex, as the union of signed distance functions (SDFs) by representing each atom as a sphere with the appropriate van der Waals radius. While this idea has been used previously as a way to render images of proteins, it has not, to our knowledge, been widely adopted in a machine learning setting. Mirroring recent successful work applying SDFs to represent 3D geometry, we present a proof of concept that this representation of proteins could be useful in several biologically relevant applications. We also propose further experiments that are necessary to validate the proposed approach.",
+    "topic": "",
+    "conference": "psb",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1142/9789819824755_0030"
+  },
+  {
+    "id": "10.1142/9789819824755_0025",
+    "title": "MedAgentBench v2: Improving Medical LLM Agent Design",
+    "authors": [
+      "Chen E",
+      "Postelnik S",
+      "Black K",
+      "Jiang Y",
+      "Chen JH"
+    ],
+    "abstract": "MedAgentBench is the first benchmark for evaluating LLM agents on clinical tasks in a FHIR-compliant EHR. In this paper, we present significant prompt engineering and tool design improvements over the original agent implementation and introduce a memory component that enables the agent to learn from prior failures. We added new tools for the agent to properly format its output for tasks, interact with an EHR without constructing explicit HTTP requests, which were prone to syntax errors, and make math calculations. We also wrote a new system prompt that asked the agent to outline its plan before making any tool calls and think step by step using chain of thought reasoning, and provided few shot examples of good vs. bad outputs. Using GPT-4.1 as the base model, our agent achieved a success rate of 91.0% without memory and 98.0% with memory. A surprising consequence is that the agent performed better on a different task that had no associated memory entry, possibly demonstrating that LLMs can adapt to the style of tasks presented by users. To contribute to the benchmark and evaluate the generalization of our agent, we developed 300 new multi-step clinically-driven tasks in collaboration with a physician. Lastly, we show the current limitations of these benchmarks and highlight the necessary next steps and challenges for the responsible deployment of AI agents in real-world healthcare settings. We hope that this paper leads to further development of EHR agents and benchmarks.",
+    "topic": "",
+    "conference": "psb",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1142/9789819824755_0025"
+  },
+  {
+    "id": "10.1142/9789819824755_0015",
+    "title": "Leveraging Large Language Models for Adverse Drug Event Detection: A Comparative Study of Token and Span-Based Named Entity Recognition",
+    "authors": [
+      "Prioleau H",
+      "Aryal SK",
+      "Blackstone J"
+    ],
+    "abstract": "Adverse Drug Events (ADEs) pose a persistent threat to patient safety and public health. This study investigates the use of large language models (LLMs) fine-tuned for both token classification and span-based named entity recognition (NER) to improve ADE detection in clinical text. Using the 2018 n2c2 Track 2 dataset, we evaluate models under both predefined (gold label) and end-to-end settings. RoBERTa Large consistently outperforms other models, particularly in identifying ADEs, which remain more challenging due to their contextual ambiguity. Token-based models generally deliver stronger performance than span-based approaches, and ensemble methods, especially majority voting and XGBoost-based aggregation, further enhance end-to-end relation extraction by mitigating individual model weaknesses. These findings highlight the potential of fine-tuned LLMs, augmented by strategic ensembling, to advance clinical NLP pipelines and support safer, more personalized healthcare.",
+    "topic": "",
+    "conference": "psb",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1142/9789819824755_0015"
+  },
+  {
+    "id": "10.1142/9789819824755_0009",
+    "title": "Abstention and Threshold Identification for Uncertainty Management in Clinical Decision Tools: A Case Study using Human-In-The-Loop Pediatric Autism Classifiers",
+    "authors": [
+      "Ko A",
+      "Kline A",
+      "Dunlap K",
+      "Surabhi S",
+      "Azizian P",
+      "Washington PY",
+      "Wall DP"
+    ],
+    "abstract": "Uncertainty quantification remains an underdeveloped aspect of AI-based clinical decision tools. As AI systems become increasingly prevalent in healthcare, it is essential not only to measure uncertainty but also to manage it in ways that support clinical decision-making. In this study, we investigate abstention as a practical mechanism for managing uncertainty in diagnostic classifiers. To stress-test this approach, we deliberately evaluate abstention performance on a purposefully noisy dataset of pediatric autism video assessments comprising heterogeneous video sources and a diverse range of human raters. We apply abstention strategies to existing autism classifiers trained on diagnostic assessment data, comparing baseline performance to a range of thresholding configurations that trade off retained sample coverage against key clinical metrics. We compare performance gains from prioritizing sensitivity or specificity to targeting a balanced increase in Youden's J to demonstrate a wide variety of use cases that abstention can enable. This work demonstrates a concrete use case of introducing abstention into the output range of clinical decision models, enabling both uncertainty quantification and management in diagnostic classifiers.",
+    "topic": "",
+    "conference": "psb",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1142/9789819824755_0009"
+  },
+  {
+    "id": "10.1142/9789819824755_0001",
+    "title": "Session Introduction: AI and Machine Learning in Clinical Medicine Bridging or Separating Model Intelligence and Human Expertise",
+    "authors": [
+      "Haredasht FN",
+      "Romano JD",
+      "Beaulieu-Jones BK",
+      "Kim D",
+      "Ioannidis A",
+      "Tison GH",
+      "Daneshjou R",
+      "Chen JH"
+    ],
+    "abstract": "Artificial Intelligence (AI) technologies continue to expand their role in clinical medicine, with large language models (LLMs) and multimodal systems now applied to communication, imaging, and predictive analytics. Advances in generative and retrieval-augmented methods have improved the accuracy and contextual grounding of clinical summaries, patient messaging, and decision support. At the same time, new benchmarks in imaging, vision, and spontaneous speech have underscored both progress and the persistence of unsolved challenges. Predictive modeling efforts highlight causality, longitudinal trajectories, and informative clinical events, while methodological contributions emphasize uncertainty management, abstention, and interpretable causal structures. Finally, frameworks for evaluation and governance address the crucial gap between laboratory performance and real-world deployment.",
+    "topic": "",
+    "conference": "psb",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1142/9789819824755_0001"
+  },
+  {
+    "id": "10.1142/9789819824755_0058",
+    "title": "Discovery of Disease Relationships via Transcriptomic Signature Analysis Powered by Agentic AI",
+    "authors": [
+      "Chen K",
+      "Wang H"
+    ],
+    "abstract": "Modern disease classification often overlooks molecular commonalities hidden beneath divergent clinical presentations. This study introduces a transcriptomics-driven framework for discovering disease relationships by analyzing over 1,300 disease-condition pairs using GenoMAS, a fully automated agentic AI system. Beyond identifying robust gene-level overlaps, we develop a novel pathway-based similarity framework that integrates multi-database enrichment analysis to quantify functional convergence across diseases. The resulting disease similarity network reveals both known comorbidities and previously undocumented crosscategory links. By examining shared biological pathways, we explore potential molecular mechanisms underlying these connections-offering functional hypotheses that go beyond symptom-based taxonomies. We further show how background conditions such as obesity and hypertension modulate transcriptomic similarity, and identify therapeutic repurposing opportunities for rare diseases like autism spectrum disorder based on their molecular proximity to better-characterized conditions. In addition, this work demonstrates how biologically grounded agentic AI can scale transcriptomic analysis while enabling mechanistic interpretation across complex disease landscapes. All results are publicly accessible at https://github.com/KeeeeChen/Pathway_Similarity_Network.",
+    "topic": "",
+    "conference": "psb",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1142/9789819824755_0058"
+  },
+  {
+    "id": "10.1142/9789819824755_0052",
+    "title": "DeepDiff-SHAP: Interpretable deep learning for subgroup-specific causal hypothesis generation using conditional SHAP",
+    "authors": [
+      "Sriram A",
+      "Kim S",
+      "Carcillo JA",
+      "Park HJ"
+    ],
+    "abstract": "Precision medicine aims to tailor healthcare strategies to individual differences in genetic, clinical, and environmental factors. However, identifying subgroup-specific causal relationships in complex biomedical data remains a major challenge, especially when standard causal inference methods average over population heterogeneity. We introduce DeepDiff-SHAP, a novel framework that combines regression-based and deep learning-based differential causal inference to detect changes in causal relationships across patient subgroups. DeepDiff-SHAP integrates conditional SHapley Additive exPlanations (SHAP) to estimate conditional dependencies and perform nonlinear differential causal inference in a principled, interpretable manner. Applying DeepDiff-SHAP to two population-scale datasets, the CDC Diabetes Health Indicators Dataset and a UK Biobank sepsis cohort stratified by hypertension status, we identified clinically meaningful and subgroupspecific causal changes in relationships between features across the datasets including age, general health, alkaline phosphatase, and cholesterol. Our results reinforce the idea that deep learning enhances sensitivity to complex interaction patterns overlooked by linear models, providing new biological insights into disease progression and comorbidity-specific risk mechanisms. DeepDiff-SHAP offers a scalable and interpretable solution to uncover individualized causal pathways, advancing the goal of truly personalized medicine.",
+    "topic": "",
+    "conference": "psb",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1142/9789819824755_0052"
+  },
+  {
+    "id": "10.1142/9789819824755_0036",
+    "title": "LLM Agent Based Protein Function Prediction",
+    "authors": [
+      "Zhapa-Camacho F",
+      "Mashkova O",
+      "Hoehndorf R",
+      "Kulmanov M"
+    ],
+    "abstract": "Protein function prediction remains a fundamental challenge in computational biology. Here, we present a Large Language Model (LLM) agent-based system that improves protein function prediction performance using knowledge-augmented reasoning and multi-source evidence synthesis.Our approach integrates computational predictions with structured protein metadata, scientific literature, and ontological knowledge through a multi-stage reasoning process. An LLM agent equipped with specialized tools progressively refines functional predictions by querying constraints, cross-referencing evidence, and ensuring biological plausibility. Furthermore, the system provides detailed explanations for each prediction update, documenting the reasoning process and evidence sources.We evaluate our approach against established baseline methods across three Gene Ontology sub-ontologies using four complementary metrics, achieving superior performance in threshold-dependent measures, attaining the lowest Smin scores across all ontologies and the best Fmax for Molecular Function and Cellular Component ontologies. We make our code publicly available at https://github.com/bio-ontology-research-group/go-agent.",
+    "topic": "",
+    "conference": "psb",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1142/9789819824755_0036"
+  },
+  {
+    "id": "10.1142/9789819824755_0042",
+    "title": "Building Fair and Trustworthy Biomedical AI: A Tool for Identifying Key Decision Points",
+    "authors": [
+      "Foti N",
+      "Shim JK",
+      "McMahon C",
+      "Lee SS"
+    ],
+    "abstract": "Recent advancements in artificial intelligence (AI) have transformed biomedicine, offering tools for improved diagnostics, drug discovery, and patient care. Yet these innovations raise pressing ethical concerns, including bias, inequitable outcomes, and privacy risks, which highlight the need for deliberate attention to fairness, trust, and trustworthiness in AI development. In this paper, we argue that ethical responsibility should be embedded at both institutional and individual levels, and that multi-stakeholder engagement, especially with underrepresented groups, is essential to ensure AI tools meet diverse needs. Building on a framework originally developed for precision medicine research, we present an adapted decision-mapping tool-the Trustworthy AI Decision Map-that can anchor and structure dialogue about the ethical implications of specific AI tools. The map identifies key decision points across the AI life cycle that impact fairness and trustworthiness and facilitates dialogue among stakeholders. In making these decisions visible, the map seeks to enable teams to anticipate downstream consequences, integrate multiple perspectives, and support institutional accountability. We illustrate its potential through a case involving the deployment of AI in rural healthcare settings. Moving forward, we suggest that empirical testing with stakeholders is needed to validate and refine the map's utility in biomedical AI contexts to promote fair and trustworthy AI practices.",
+    "topic": "",
+    "conference": "psb",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1142/9789819824755_0042"
+  },
+  {
+    "id": "10.1142/9789819824755_0032",
+    "title": "HALO: Hybrid Attention Model for Subcellular Localization",
+    "authors": [
+      "Ahmed S",
+      "Moumi NA",
+      "Zhang L"
+    ],
+    "abstract": "Subcellular localization prediction is critical for understanding protein functions and interactions, providing insights into cellular mechanisms and potential therapeutic targets. We propose HALO (Hybrid Attention model for subcellular LOcalization), a framework that integrates semantic embeddings from fine-tuned protein language models (e.g., ESM) with structural information derived from AlphaFold. HALO uses a graph attention network (GAT) to incorporate biochemical, structural, and sequence-derived features into a unified representation, while dynamically balancing their contributions. Crucially, the design allows HALO to operate in two modes: (i) a sequence-only mode, where predictions are made from the fine-tuned protein language model (PLM) when structural data are unavailable, and (ii) a hybrid mode, where structural adjacency and biochemical features complement PLM predictions, especially in low-confidence regions. We evaluate HALO on multiple datasets with minimal homology between training and test sets, where it achieves competitive performance across key metrics. By flexibly combining sequence-based and structure-informed predictions, HALO addresses the limitations of relying on a single modality and offers an adaptable framework for accurate and generalizable subcellular localization.",
+    "topic": "",
+    "conference": "psb",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1142/9789819824755_0032"
+  },
+  {
+    "id": "10.1142/9789819824755_0031",
+    "title": "Steering Protein Generative Models at Test-Time for Guided AAV2 Capsid Design",
+    "authors": [
+      "Viggiano B",
+      "Lu WS",
+      "Zhang X",
+      "Mille-Fragoso LS",
+      "Gao XJ",
+      "Ashley E",
+      "Wong WH"
+    ],
+    "abstract": "Recent advances in protein generative models have created new opportunities for protein engineering. However, a significant challenge remains in effectively steering these models to generate sequences with specific, desired functionalities, especially when these properties are defined by \"black-box\" or non-differentiable fitness functions. To address this, we present ProVADA+, a model-agnostic framework that guides pretrained generative models at testtime without costly retraining. Our approach introduces a reinforcement learning-based adaptive masking technique (MADA-DUCB) that significantly accelerates convergence. We demonstrate this framework on the challenging task of designing novel Adeno-Associated Virus 2 (AAV2) capsids. By coupling a ProteinMPNN generative prior with a fine-tuned AAV viability oracle, our method successfully navigates the rugged fitness landscape where unguided random mutagenesis is ineffective-with prior experiments showing as few as 0.3% of variants with six or more mutations are viable. In its final iterations, ProVADA generated a pool of novel candidates with a mean viral selection score of 2.72, consistently scoring highly viable variants while maintaining a diverse range of sequence similarity to the wildtype sequence. Our results show that ProVADA provides a powerful and efficient framework for accelerating the design of proteins with complex, user-defined properties.",
+    "topic": "",
+    "conference": "psb",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1142/9789819824755_0031"
+  },
+  {
+    "id": "10.1142/9789819824755_0022",
+    "title": "Leveraging Generative AI for Interpretable Clinical Decision Making Through Causal Graphs",
+    "authors": [
+      "Ahsen ME",
+      "Kittani R",
+      "Gerke T",
+      "Krishnan L",
+      "Rogan S",
+      "Scott ER"
+    ],
+    "abstract": "Clinical AI systems' lack of interpretability limits their adoption in evidence-based medicine. To address this challenge, we propose a computational framework that harnesses generative AI's medical knowledge to create interpretable structural causal models (SCMs) for clinical decision support, quality improvement evaluation, and population health management. We evaluated our approach through a case study using data from the Midwest Healthcare Conference Causal Diagram Challenge, where we compared transformer-based large language models against human performance on a complex causal reasoning task: estimating COVID- 19 treatment effects through target trial emulation. Both groups designed SCMs to evaluate glucocorticoid treatment effects on 28-day mortality using real-world data from more than 2,000 hospitalized patients, benchmarked against published RECOVERY randomized controlled trial results. The best performing SCMs achieved bootstrap coverage rates exceeding 90% for two of three severity strata. Both human and AI models demonstrated equivalent clinical plausibility (n=3 expert reviewers) and similar statistical performance, though both struggled with critical disease severity. Ablation experiments comparing SCM-based approaches against traditional potential outcomes methods revealed SCMs achieved 76-98% coverage versus 1-37% for traditional methods. These results suggest that structural causal models can effectively bridge the interpretability gap in clinical AI by providing essential scaffolding for reliable causal inference and enabling meaningful human-AI collaboration while preserving methodological rigor essential for evidence-based medicine.",
+    "topic": "",
+    "conference": "psb",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1142/9789819824755_0022"
+  },
+  {
+    "id": "10.1142/9789819824755_0014",
+    "title": "Retrieval-Augmented Guardrails for AI-Drafted Patient-Portal Messages: Error Taxonomy Construction and Large-Scale Evaluation",
+    "authors": [
+      "Chen W",
+      "Haredasht FN",
+      "Black KC",
+      "Grolleau F",
+      "Alsentzer E",
+      "Chen JH",
+      "Ma SP"
+    ],
+    "abstract": "Asynchronous patient-clinician messaging via EHR portals is a growing source of clinician workload, prompting interest in large language models (LLMs) to assist with draft responses. However, LLM outputs may contain clinical inaccuracies, omissions, or tone mismatches, making robust evaluation essential. Our contributions are threefold: (1) we introduce a clinically grounded error ontology comprising 5 domains and 59 granular error codes, developed through inductive coding and expert adjudication; (2) we develop a Retrieval-Augmented Error Checking (RAEC) pipeline that leverages semantically similar historical message-response pairs to improve judgment quality; and (3) we provide a two-stage prompting architecture using DSPy to enable scalable, interpretable, and hierarchical error detection. Our approach assesses the quality of drafts both in isolation and with reference to similar past message-response pairs retrieved from institutional archives. Using a two-stage DSPy pipeline, we compared baseline and reference-enhanced evaluations on over 1,500 patient messages. Retrieval context improved error identification in domains such as clinical completeness and workflow appropriateness. Human validation on 100 messages demonstrated superior agreement (concordance = 50% vs. 33%) and performance (F1 = 0.500 vs. 0.256) of context-enhanced labels vs. baseline, supporting the use of our RAEC pipeline as AI guardrails for patient messaging.",
+    "topic": "",
+    "conference": "psb",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1142/9789819824755_0014"
+  },
+  {
+    "id": "10.1142/9789819824755_0012",
+    "title": "Learning Causally Predictable Outcomes from Psychiatric Longitudinal Data",
+    "authors": [
+      "Strobl EV"
+    ],
+    "abstract": "Causal inference in longitudinal biomedical data remains a central challenge, especially in psychiatry, where symptom heterogeneity and latent confounding frequently undermine classical estimators. Most existing methods for treatment effect estimation presuppose a fixed outcome variable and address confounding through observed covariate adjustment. However, the assumption of unconfoundedness may not hold for a fixed outcome in practice. To address this foundational limitation, we directly optimize the outcome definition to maximize causal identifiability. Our DEBIAS (Durable Effects with Backdoor-Invariant Aggregated Symptoms) algorithm learns non-negative, clinically interpretable weights for outcome aggregation, maximizing durable treatment effects and empirically minimizing both observed and latent confounding by leveraging the time-limited direct effects of prior treatments in psychiatric longitudinal data. The algorithm also furnishes an empirically verifiable test for outcome unconfoundedness. DEBIAS consistently outperforms state-ofthe- art methods in recovering causal effects for clinically interpretable composite outcomes across comprehensive experiments in depression and schizophrenia. R code is available at https://github.com/ericstrobl/DEBIAS.",
+    "topic": "",
+    "conference": "psb",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1142/9789819824755_0012"
+  },
+  {
+    "id": "10.1142/9789819824755_0005",
+    "title": "Higher-order Interaction Matters: Modeling Epidemics via Dynamic Hypergraph Neural Networks",
+    "authors": [
+      "Liu S",
+      "Gong S",
+      "Feng T",
+      "Liu Z",
+      "Lau MSY",
+      "Jin W"
+    ],
+    "abstract": "The ongoing need for effective epidemic modeling has driven advancements in capturing the complex dynamics of infectious diseases. Traditional models, such as Susceptible-Infected- Recovered, and graph-based approaches often fail to account for higher-order interactions and the nuanced structure pattern inherent in human contact networks. Higher-order interactions, such as those in schools, workplaces, or public transit, involve simultaneous contact among more than two individuals. This study introduces a novel Human Contact-Tracing Hypergraph Neural Network framework tailored for epidemic modeling called EpiDHGNN, leveraging the capabilities of hypergraphs to model intricate, higher-order relationships from both location and individual level. Both real-world and synthetic epidemic data are used to train and evaluate the model. Results demonstrate that EpiDHGNN consistently outperforms baseline models across various epidemic modeling tasks, such as source detection and forecast, by approximately 12.1% through effectively capturing the higher-order interactions and preserving the complex structure of human interactions. This work underscores the potential of representing human contact data as hypergraphs and employing hypergraphbased methods to improve epidemic modeling, providing reliable insights for public health decision-making.",
+    "topic": "",
+    "conference": "psb",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1142/9789819824755_0005"
+  },
+  {
+    "id": "10.1142/9789819824755_0065",
+    "title": "Trust, Reproducibility, and Progress: The Roles of Independent Blind Prediction and Assessment and Benchmarking in Computational Biology",
+    "authors": [
+      "Andreoletti G",
+      "Mangul S",
+      "Radivojac P",
+      "Brenner SE"
+    ],
+    "abstract": "When evaluations aren't trustworthy, entire research programs can chase mirages. Objective benchmarks and independent assessment have repeatedly catalyzed progress across computational biology, from protein structure prediction to variant interpretation and single‑cell analysis. This workshop gathers leaders of community challenges and benchmarking infrastructures together with domain experts to provide a contemporary view of how to design trustworthy evaluations, why blind prediction matters, and where standards, infrastructure, and policy must evolve to meet the demands of AI‑driven biology. We summarize the motivation and scope of the workshop; provide background on methodological and infrastructural advances that enable rigorous benchmarking; highlight invited speakers' contributions; and outline anticipated outcomes and community calls‑to‑action.",
+    "topic": "",
+    "conference": "psb",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1142/9789819824755_0065"
+  },
+  {
+    "id": "10.1142/9789819824755_0064",
+    "title": "The Evolving Cyberinfrastructure at the National Institutes of Health to Support Data and AI in Biomedical Research",
+    "authors": [
+      "Ramwala OA",
+      "Weber N",
+      "Mooney SD"
+    ],
+    "abstract": "Technological advancements have made biomedicine rich in data. With the generation of enormous volumes of biomedical and clinical data, it has become imperative to support biomedical computing investigators to utilize this wealth of biologically meaningful information. Moreover, advancements in Artificial Intelligence (AI) techniques, in conjunction with improved capabilities in implementing large-scale data processing pipelines, have led to the development of robust computational techniques and algorithms to solve complex biological problems. However, there are many challenges associated with providing researchers with secure systems for accessing biomedical data and computational resources that must be addressed. Establishing and maintaining an impactful data and AI ecosystem to support efforts in advancing biomedical research requires effective, scalable, and standardized information technology solutions, funding programs, and technical guidance that facilitate researchers in utilizing the state-of-the-art. The U.S. National Institutes of Health (NIH) has established novel initiatives to implement a cyberinfrastructure that democratizes secure access to large biomedical datasets and cloud-based computing resources, equipping biocomputing scientists to pursue pioneering research. This workshop will highlight the major issues restraining researchers' access to biomedical datasets and computing infrastructures and will cover the key components of the NIH's cyberinfrastructure aimed at advancing data science and AI research for biomedical applications.",
+    "topic": "",
+    "conference": "psb",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1142/9789819824755_0064"
+  },
+  {
+    "id": "10.1142/9789819824755_0057",
+    "title": "Network optimal retrieval of sparse perturbations for steady-state control",
+    "authors": [
+      "Krishnan K",
+      "Shi T",
+      "Kumar S",
+      "Yu H",
+      "Blair RH"
+    ],
+    "abstract": "Prioritizing targeted perturbation experiments remains a central challenge in systems biology, where experimental constraints limit network manipulation. We introduce NORSP (Network Optimal Retrieval of Sparse Perturbations). This novel computational framework integrates network propagation with supervised subset selection to identify minimal perturbation sets that can shift a system from its initial to a desired steady state. NORSP leverages a sensitivity matrix derived solely from network topology, enabling control prediction without requiring full knowledge of system dynamics. Applicable to undirected, directed, and signed networks, NORSP accommodates a broad range of biological models and experimental scenarios. We validate its effectiveness using YBX1 knockdown transcriptomics data and 61 curated metabolic networks from the BioModels repository, demonstrating NORSP's robustness, scalability, and experimental relevance. Even under constraints that obscure true perturbations, the algorithm reliably infers alternative targets that achieve comparable control. Control is confirmed both in graphical approximations and through full dynamical model simulations. Overall, NORSP provides a practical and generalizable solution for steady-state control in complex biological systems, laying the foundation for multi-omics hypothesis generation and systems-level experimental design.",
+    "topic": "",
+    "conference": "psb",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1142/9789819824755_0057"
+  },
+  {
+    "id": "10.1142/9789819824755_0050",
+    "title": "Deep Learning-based Classification of Patients with Postural Orthostatic Tachycardia Syndrome using Wearable ECG and Accelerometer Data",
+    "authors": [
+      "Choi H",
+      "Matsumoto N",
+      "Li X",
+      "Teodorescu D",
+      "Kote A",
+      "Yang MJ",
+      "Liu X",
+      "Hernandez ME",
+      "Moore JH",
+      "Hernandez GG",
+      "Chen PS"
+    ],
+    "abstract": "Postural Orthostatic Tachycardia Syndrome (POTS) is a chronic autonomic disorder characterized by chronic (> 3 months) orthostatic intolerance and an increase in heart rate (HR) of ≥ 30 beats per minute (bpm) without orthostatic hypotension. Traditional diagnostic approaches, such as the active standing or tilt-table test, are typically conducted under controlled clinical conditions, limiting their ability to capture the natural variability of symptoms and the intricate physiological responses occurring in daily life. These tests may cause patient discomfort, dizziness, nausea, or syncope. Furthermore, they are timeconsuming and cannot be used as a screening tool for POTS. To address these limitations, this study explored wearable devices that continuously collect physiological data-specifically, electrocardiogram (ECG) and accelerometer (ACC)-derived metrics-from POTS patients and healthy controls during routine daily activities. Physiological features around posturechange events identified in the data were processed and used to train and test a baseline deep learning model. The model demonstrated promising performance in accurately differentiating POTS patients from healthy controls in a relatively small cohort (66 from POTS patients and 20 from controls), indicating its potential as a feasibility study for clinical decision support. Future studies involving larger and more diverse samples under varying clinical conditions would be necessary to enhance the robustness and viability of our diagnostic model.",
+    "topic": "",
+    "conference": "psb",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1142/9789819824755_0050"
+  },
+  {
+    "id": "10.1142/9789819824755_0045",
+    "title": "Integrating Imaging-Derived Clinical Endotypes with Plasma Proteomics and External Polygenic Risk Scores Enhances Coronary Microvascular Disease Risk Prediction",
+    "authors": [
+      "Venkatesh R",
+      "Cherlin T",
+      "BioBank PM",
+      "Ritchie MD",
+      "Guerraty MA",
+      "Verma SS"
+    ],
+    "abstract": "Coronary microvascular disease (CMVD) is an underdiagnosed but significant contributor to the burden of ischemic heart disease, characterized by angina and myocardial infarction. The development of risk prediction models such as polygenic risk scores (PRS) for CMVD has been limited by a lack of large-scale genome-wide association studies (GWAS). However, there is significant overlap between CMVD and enrollment criteria for coronary artery disease (CAD) GWAS. In this study, we developed CMVD PRS models by selecting variants identified in a CMVD GWAS and applying weights from an external CAD GWAS, using CMVD-associated loci as proxies for the genetic risk. We integrated plasma proteomics, clinical measures from perfusion PET imaging, and PRS to evaluate their contributions to CMVD risk prediction in comprehensive machine and deep learning models. We then developed a novel unsupervised endotyping framework for CMVD from perfusion PET-derived myocardial blood flow data, revealing distinct patient subgroups beyond traditional case-control definitions. This imaging-based stratification substantially improved classification performance alongside plasma proteomics and PRS, achieving AUROCs between 0.65 and 0.73 per class, significantly outperforming binary classifiers and existing clinical models, highlighting the potential of this stratification approach to enable more precise and personalized diagnosis by capturing the underlying heterogeneity of CMVD. This work represents the first application of imaging-based endotyping and the integration of genetic and proteomic data for CMVD risk prediction, establishing a framework for multimodal modeling in complex diseases.",
+    "topic": "",
+    "conference": "psb",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1142/9789819824755_0045"
+  },
+  {
+    "id": "10.1142/9789819824755_0034",
+    "title": "Large language models identify causal genes in complex trait GWAS",
+    "authors": [
+      "Shringarpure SS",
+      "Wang W",
+      "Karagounis S",
+      "Wang X",
+      "Reisetter AC",
+      "Auton A",
+      "Khan AA"
+    ],
+    "abstract": "Pinpointing causal genes at genome-wide association study (GWAS) loci remains a major bottleneck. Existing literature-mining approaches are often limited in accuracy and scalability. We show that large language models (LLMs) can accurately prioritize likely causal genes at GWAS loci. We systematically evaluated several widely available general-purpose LLMs against benchmark datasets of high-confidence causal genes, including a unique set from 23 unpublished GWAS. Our results demonstrate that LLMs outperform or match current state-of-the-art methods and, crucially, exhibit robust performance on novel loci not previously linked to traits, underscoring their generalizability. Moreover, when integrated with existing methods, LLMs substantially enhance overall performance. This work establishes LLMs as an accurate, scalable, and broadly generalizable approach to accelerate causal gene identification in complex traits.",
+    "topic": "",
+    "conference": "psb",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1142/9789819824755_0034"
+  },
+  {
+    "id": "10.1142/9789819824755_0035",
+    "title": "Gene-R1: Reasoning with Data-Augmented Lightweight LLMs for Gene Set Analysis",
+    "authors": [
+      "Wang Z",
+      "Yang Y",
+      "Jin Q",
+      "Lu Z"
+    ],
+    "abstract": "The gene set analysis (GSA) is a foundational approach for uncovering the molecular functions associated with a group of genes. Recently, LLM-powered methods have emerged to annotate gene sets with biological functions together with coherent explanatory insights. However, existing studies primarily focus on proprietary models, which have been shown to outperform their open-source counterparts despite concerns over cost and data privacy. Furthermore, no research has investigated the application of advanced reasoning strategies to the GSA task. To address this gap, we introduce Gene-R1, a data-augmented learning framework that equips lightweight and open-source LLMs with step-by-step reasoning capabilities tailored to GSA. Experiments on 1,508 in-distribution gene sets demonstrate that Gene-R1 achieves substantial performance gains, matching commercial LLMs. On 106 out-of-distribution gene sets, Gene-R1 performs comparably to both commercial and large-scale LLMs, exhibiting robust generalizability across diverse gene sources.",
+    "topic": "",
+    "conference": "psb",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1142/9789819824755_0035"
+  },
+  {
+    "id": "10.1142/9789819824755_0026",
+    "title": "Automated Evaluation of Large Language Model Response Concordance with Human Specialist Responses on Physician-to-Physician eConsult Cases",
+    "authors": [
+      "Wu DJ",
+      "Haredasht FN",
+      "Wu D",
+      "Ravi V",
+      "McCoy LG",
+      "Weng Y",
+      "Chopra K",
+      "Everett SS",
+      "Nageeb G",
+      "Chen W",
+      "Ma SP",
+      "Maharaj SK",
+      "Tran J",
+      "Rosengaus L",
+      "Giang L",
+      "Jee O",
+      "Goh E",
+      "Chen JH"
+    ],
+    "abstract": "Specialist consults in primary care and inpatient settings typically address complex clinical questions beyond standard guidelines. eConsults have been developed as a way for specialist physicians to review cases asynchronously and provide clinical answers without a formal patient encounter. Meanwhile, large language models (LLMs) have approached human-level performance on structured clinical tasks, but their real-world effectiveness requires evaluation, which is bottlenecked by time-intensive manual physician review. To address this, we evaluate two automated methods: LLM-as-judge and a decompose-thenverify framework that breaks down AI answers into verifiable claims against human eConsult responses. Using 40 real-world physician-to-physician eConsults, we compared AI-generated responses to human answers using both physician raters and automated tools. LLM-as-judge outperformed decompose-then-verify, achieving human-level concordance assessment with F1-score of 0.89 (95% CI: 0.750, 0.960) and Cohen's kappa of 0.75 (95% CI 0.47,0.90) , comparable to physician inter-rater agreement κ = 0.69-0.90 (95% CI 0.43-1.0).",
+    "topic": "",
+    "conference": "psb",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1142/9789819824755_0026"
+  },
+  {
+    "id": "10.1142/9789819824755_0023",
+    "title": "Leveraging Large Language Models to Derive Multiple Sclerosis Progression Assessments from Clinical Notes: A Feasibility Study",
+    "authors": [
+      "Hwang S",
+      "Thomas S",
+      "Williams H",
+      "Hutchinson T",
+      "Schriver E",
+      "Batugo A",
+      "Bar-Or A",
+      "Sharma V",
+      "Buijs F",
+      "Perrone C",
+      "Mowery D"
+    ],
+    "abstract": "Ascertainment of multiple sclerosis (MS) progression is important for informing clinical care decisions and supporting biomedical research. However, the details to infer a patient's MS progression status are locked within clinical notes. In this feasibility study, we assessed the feasibility of developing and validating a large language model (LLM)-based EDSS and FS classifier for ascertaining MS progression from clinical notes.",
+    "topic": "",
+    "conference": "psb",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1142/9789819824755_0023"
+  },
+  {
+    "id": "10.1142/9789819824755_0016",
+    "title": "Towards Automated Analysis of Gaze Behavior from Consumer VR Devices for Neurological Diagnosis",
+    "authors": [
+      "Schmitz L",
+      "Plack M",
+      "Koyak B",
+      "Ullah ME",
+      "Aziz A",
+      "Klein R",
+      "Lähner Z",
+      "Dröge H"
+    ],
+    "abstract": "Recent studies have demonstrated that eye tracking is a valuable tool in the detection, classification and staging of neurodegenerative diseases such as Parkinson's Disease (PD). However, traditional methods for capturing gaze data often rely on expensive and non-engaging clinical equipment such as video-oculography, limiting their accessibility and scalability. In this work, we investigate the feasibility of using eye tracking data collected via consumer-grade virtual reality (VR) headsets to support neurological diagnostics in a more accessible and user-friendly manner.This approach enables large-scale, low-cost, and remote assessments, which are particularly valuable in early detection and monitoring of neurodegenerative conditions. We show that relevant oculomotor features extracted from VR-based eye tracking can be used for predictive assessment. Despite the inherent noise and lower precision of consumer devices, careful preprocessing and robust feature engineering, including deep learning embeddings, mitigate these limitations. Our results demonstrate that both handcrafted and learned features from gaze behavior enable promising levels of classification performance. This research represents an important step towards scalable, automated, and accessible diagnostic tools for neurodegenerative diseases using ubiquitous VR technology.",
+    "topic": "",
+    "conference": "psb",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1142/9789819824755_0016"
+  },
+  {
+    "id": "10.1142/9789819824755_0010",
+    "title": "Evaluation of Large Language Models as Emergency Department Revisit Predictors",
+    "authors": [
+      "Chen E",
+      "Luo L",
+      "Gunturkun F",
+      "Sambara S",
+      "Arora R",
+      "Jin BT",
+      "Rajpurkar P",
+      "Kim DA"
+    ],
+    "abstract": "Large Language Models (LLMs) have shown promise in clinical reasoning and question answering, yet their effectiveness for real-world clinical prediction remains an open question. We present the first large-scale study evaluating LLMs for predicting 30-day emergency department (ED) revisits using 138,010 visits from the Adult Emergency Department at Stanford. We assessed two modeling paradigms: (1) direct prediction, where the LLM generates revisit risk assessments in natural language, and (2) embedding-based approaches that leverage LLM-derived vector representations (LLM2Vec) of patient data for downstream modeling. Retrieval augmentation improved direct prediction performance (e.g., Claude 3.7 F1 from 0.3755 (95% CI [0.3647, 0.3864]) to 0.4160 (95% CI [0.4024, 0.4294])), and embedding-based methods consistently outperformed direct approaches, with LLM2Vec achieving F1=0.4505 (95% CI [0.4345, 0.4666]). Despite having access to comprehensive structured and unstructured clinical data, all LLM approaches (F1=0.3022-0.4505) failed to exceed a traditional LightGBM model using only structured data (F1=0.4614 (95% CI [0.4496, 0.4789])). Through systematic analysis of the reasoning chains in 17,488 predictions, we suggest potential failure patterns: reasoning may systematically degrade performance through overweighting medical histories and similar visits, neglecting protective factors, and risk aversion. Our work establishes essential baseline performance while revealing fundamental limitations in current-generation LLMs for clinical prediction tasks.",
+    "topic": "",
+    "conference": "psb",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1142/9789819824755_0010"
+  },
+  {
+    "id": "10.1142/9789819824755_0002",
+    "title": "Inference Gap in Domain Expertise and Machine Intelligence in Named Entity Recognition: Creation of and Insights from a Substance Use-related Dataset",
+    "authors": [
+      "Dey SK",
+      "Powell JM",
+      "Ismail A",
+      "Perrone J",
+      "Sarker A"
+    ],
+    "abstract": "Nonmedical opioid use is an urgent public health challenge, with far-reaching clinical and social consequences that are often underreported in traditional healthcare settings. Social media platforms, where individuals candidly share first-person experiences, offer a valuable yet underutilized source of insight into these impacts. In this study, we present a named entity recognition (NER) framework to extract two categories of self-reported consequences from social media narratives related to opioid use: ClinicalImpacts (e.g., withdrawal, depression) and SocialImpacts (e.g., job loss). To support this task, we introduce RedditImpacts 2.0, a high-quality dataset with refined annotation guidelines and a focus on first-person disclosures, addressing key limitations of prior work. We evaluate both fine-tuned encoderbased models and state-of-the-art large language models (LLMs) under zero- and few-shot in-context learning settings. Our fine-tuned DeBERTa-large model achieves a relaxed tokenlevel F1 of 0.61 [95% CI: 0.43-0.62], consistently outperforming LLMs in precision, span accuracy, and adherence to task-specific guidelines. Furthermore, we show that strong NER performance can be achieved with substantially less labeled data, emphasizing the feasibility of deploying robust models in resource-limited settings. Our findings underscore the value of domain-specific fine-tuning for clinical NLP tasks and contribute to the responsible development of AI tools that may enhance addiction surveillance, improve interpretability, and support real-world healthcare decision-making. The best performing model, however, still significantly underperforms compared to inter-expert agreement (Cohen's kappa: 0.81), demonstrating that a gap persists between expert intelligence and current state-of-the-art NER/AI capabilities for tasks requiring deep domain knowledge. The dataset, annotation guidelines, appendix, and training scripts are publicly available to support future research.**https://github.com/SumonKantiDey/Reddit_Impacts_NER.",
+    "topic": "",
+    "conference": "psb",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1142/9789819824755_0002"
+  }
+]

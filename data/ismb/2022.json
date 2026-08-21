@@ -1,0 +1,775 @@
+[
+  {
+    "id": "10.1093/bioinformatics/btac257",
+    "title": "DECODE: a computational pipeline to discover T cell receptor binding rules",
+    "authors": [
+      "Papadopoulou I",
+      "Nguyen AP",
+      "Weber A",
+      "Martínez MR"
+    ],
+    "abstract": "<h4>Motivation</h4>Understanding the mechanisms underlying T cell receptor (TCR) binding is of fundamental importance to understanding adaptive immune responses. A better understanding of the biochemical rules governing TCR binding can be used, e.g. to guide the design of more powerful and safer T cell-based therapies. Advances in repertoire sequencing technologies have made available millions of TCR sequences. Data abundance has, in turn, fueled the development of many computational models to predict the binding properties of TCRs from their sequences. Unfortunately, while many of these works have made great strides toward predicting TCR specificity using machine learning, the black-box nature of these models has resulted in a limited understanding of the rules that govern the binding of a TCR and an epitope.<h4>Results</h4>We present an easy-to-use and customizable computational pipeline, DECODE, to extract the binding rules from any black-box model designed to predict the TCR-epitope binding. DECODE offers a range of analytical and visualization tools to guide the user in the extraction of such rules. We demonstrate our pipeline on a recently published TCR-binding prediction model, TITAN, and show how to use the provided metrics to assess the quality of the computed rules. In conclusion, DECODE can lead to a better understanding of the sequence motifs that underlie TCR binding. Our pipeline can facilitate the investigation of current immunotherapeutic challenges, such as cross-reactive events due to off-target TCR binding.<h4>Availability and implementation</h4>Code is available publicly at https://github.com/phineasng/DECODE.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac257"
+  },
+  {
+    "id": "10.1093/bioinformatics/btac218",
+    "title": "DeepCRISTL: deep transfer learning to predict CRISPR/Cas9 functional and endogenous on-target editing efficiency",
+    "authors": [
+      "Elkayam S",
+      "Orenstein Y"
+    ],
+    "abstract": "<h4>Motivation</h4>CRISPR/Cas9 technology has been revolutionizing the field of gene editing in recent years. Guide RNAs (gRNAs) enable Cas9 proteins to target specific genomic loci for editing. However, editing efficiency varies between gRNAs. Thus, computational methods were developed to predict editing efficiency for any gRNA of interest. High-throughput datasets of Cas9 editing efficiencies were produced to train machine-learning models to predict editing efficiency. However, these high-throughput datasets have low correlation with functional and endogenous editing. Another difficulty arises from the fact that functional and endogenous editing efficiency is more difficult to measure, and as a result, functional and endogenous datasets are too small to train accurate machine-learning models on.<h4>Results</h4>We developed DeepCRISTL, a deep-learning model to predict the on-target efficiency given a gRNA sequence. DeepCRISTL takes advantage of high-throughput datasets to learn general patterns of gRNA on-target editing efficiency, and then uses transfer learning (TL) to fine-tune the model and fit it to the functional and endogenous prediction task. We pre-trained the DeepCRISTL model on more than 150 000 gRNAs, produced through the DeepHF study as a high-throughput dataset of three Cas9 enzymes. We improved the DeepHF model by multi-task and ensemble techniques and achieved state-of-the-art results over each of the three enzymes: up to 0.89 in Spearman correlation between predicted and measured on-target efficiencies. To fine-tune model weights to predict on-target efficiency of functional or endogenous datasets, we tested several TL approaches, with gradual learning being the overall best performer, both when pre-trained on DeepHF and when pre-trained on CRISPROn, another high-throughput dataset. DeepCRISTL outperformed state-of-the-art methods on all functional and endogenous datasets. Using saliency maps, we identified and compared the important features learned by the model in each dataset. We believe DeepCRISTL will improve prediction performance in many other CRISPR/Cas9 editing contexts by leveraging TL to utilize both high-throughput datasets, and smaller and more biologically relevant datasets, such as functional and endogenous datasets.<h4>Availability and implementation</h4>DeepCRISTL is available via github.com/OrensteinLab/DeepCRISTL.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac218"
+  },
+  {
+    "id": "10.1093/bioinformatics/btac246",
+    "title": "Bridging the gaps in statistical models of protein alignment",
+    "authors": [
+      "Sumanaweera D",
+      "Allison L",
+      "Konagurthu AS"
+    ],
+    "abstract": "<h4>Summary</h4>Sequences of proteins evolve by accumulating substitutions together with insertions and deletions (indels) of amino acids. However, it remains a common practice to disconnect substitutions and indels, and infer approximate models for each of them separately, to quantify sequence relationships. Although this approach brings with it computational convenience (which remains its primary motivation), there is a dearth of attempts to unify and model them systematically and together. To overcome this gap, this article demonstrates how a complete statistical model quantifying the evolution of pairs of aligned proteins can be constructed using a time-parameterized substitution matrix and a time-parameterized alignment state machine. Methods to derive all parameters of such a model from any benchmark collection of aligned protein sequences are described here. This has not only allowed us to generate a unified statistical model for each of the nine widely used substitution matrices (PAM, JTT, BLOSUM, JO, WAG, VTML, LG, MIQS and PFASUM), but also resulted in a new unified model, MMLSUM. Our underlying methodology measures the Shannon information content using each model to explain losslessly any given collection of alignments, which has allowed us to quantify the performance of all the above models on six comprehensive alignment benchmarks. Our results show that MMLSUM results in a new and clear overall best performance, followed by PFASUM, VTML, BLOSUM and MIQS, respectively, amongst the top five. We further analyze the statistical properties of MMLSUM model and contrast it with others.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac246"
+  },
+  {
+    "id": "10.1093/bioinformatics/btac250",
+    "title": "SPARSE: a sparse hypergraph neural network for learning multiple types of latent combinations to accurately predict drug-drug interactions",
+    "authors": [
+      "Nguyen DA",
+      "Nguyen CH",
+      "Petschner P",
+      "Mamitsuka H"
+    ],
+    "abstract": "<h4>Motivation</h4>Predicting side effects of drug-drug interactions (DDIs) is an important task in pharmacology. The state-of-the-art methods for DDI prediction use hypergraph neural networks to learn latent representations of drugs and side effects to express high-order relationships among two interacting drugs and a side effect. The idea of these methods is that each side effect is caused by a unique combination of latent features of the corresponding interacting drugs. However, in reality, a side effect might have multiple, different mechanisms that cannot be represented by a single combination of latent features of drugs. Moreover, DDI data are sparse, suggesting that using a sparsity regularization would help to learn better latent representations to improve prediction performances.<h4>Results</h4>We propose SPARSE, which encodes the DDI hypergraph and drug features to latent spaces to learn multiple types of combinations of latent features of drugs and side effects, controlling the model sparsity by a sparse prior. Our extensive experiments using both synthetic and three real-world DDI datasets showed the clear predictive performance advantage of SPARSE over cutting-edge competing methods. Also, latent feature analysis over unknown top predictions by SPARSE demonstrated the interpretability advantage contributed by the model sparsity.<h4>Availability and implementation</h4>Code and data can be accessed at https://github.com/anhnda/SPARSE.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac250"
+  },
+  {
+    "id": "10.1093/bioinformatics/btac233",
+    "title": "An approachable, flexible and practical machine learning workshop for biologists",
+    "authors": [
+      "Magnano CS",
+      "Mu F",
+      "Russ RS",
+      "Cvetkovic M",
+      "Treu D",
+      "Gitter A"
+    ],
+    "abstract": "<h4>Summary</h4>The increasing prevalence and importance of machine learning in biological research have created a need for machine learning training resources tailored towards biological researchers. However, existing resources are often inaccessible, infeasible or inappropriate for biologists because they require significant computational and mathematical knowledge, demand an unrealistic time-investment or teach skills primarily for computational researchers. We created the Machine Learning for Biologists (ML4Bio) workshop, a short, intensive workshop that empowers biological researchers to comprehend machine learning applications and pursue machine learning collaborations in their own research. The ML4Bio workshop focuses on classification and was designed around three principles: (i) emphasizing preparedness over fluency or expertise, (ii) necessitating minimal coding and mathematical background and (iii) requiring low time investment. It incorporates active learning methods and custom open-source software that allows participants to explore machine learning workflows. After multiple sessions to improve workshop design, we performed a study on three workshop sessions. Despite some confusion around identifying subtle methodological flaws in machine learning workflows, participants generally reported that the workshop met their goals, provided them with valuable skills and knowledge and greatly increased their beliefs that they could engage in research that uses machine learning. ML4Bio is an educational tool for biological researchers, and its creation and evaluation provide valuable insight into tailoring educational resources for active researchers in different domains.<h4>Availability and implementation</h4>Workshop materials are available at https://github.com/carpentries-incubator/ml4bio-workshop and the ml4bio software is available at https://github.com/gitter-lab/ml4bio.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac233"
+  },
+  {
+    "id": "10.1093/bioinformatics/btac240",
+    "title": "From drug repositioning to target repositioning: prediction of therapeutic targets using genetically perturbed transcriptomic signatures",
+    "authors": [
+      "Namba S",
+      "Iwata M",
+      "Yamanishi Y"
+    ],
+    "abstract": "<h4>Motivation</h4>A critical element of drug development is the identification of therapeutic targets for diseases. However, the depletion of therapeutic targets is a serious problem.<h4>Results</h4>In this study, we propose the novel concept of target repositioning, an extension of the concept of drug repositioning, to predict new therapeutic targets for various diseases. Predictions were performed by a trans-disease analysis which integrated genetically perturbed transcriptomic signatures (knockdown of 4345 genes and overexpression of 3114 genes) and disease-specific gene transcriptomic signatures of 79 diseases. The trans-disease method, which takes into account similarities among diseases, enabled us to distinguish the inhibitory from activatory targets and to predict the therapeutic targetability of not only proteins with known target-disease associations but also orphan proteins without known associations. Our proposed method is expected to be useful for understanding the commonality of mechanisms among diseases and for therapeutic target identification in drug discovery.<h4>Availability and implementation</h4>Supplemental information and software are available at the following website [http://labo.bio.kyutech.ac.jp/~yamani/target_repositioning/].<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac240"
+  },
+  {
+    "id": "10.1093/bioinformatics/btac228",
+    "title": "PolarMorphism enables discovery of shared genetic variants across multiple traits from GWAS summary statistics",
+    "authors": [
+      "von Berg J",
+      "Ten Dam M",
+      "van der Laan SW",
+      "de Ridder J"
+    ],
+    "abstract": "<h4>Motivation</h4>Pleiotropic SNPs are associated with multiple traits. Such SNPs can help pinpoint biological processes with an effect on multiple traits or point to a shared etiology between traits. We present PolarMorphism, a new method for the identification of pleiotropic SNPs from genome-wide association studies (GWAS) summary statistics. PolarMorphism can be readily applied to more than two traits or whole trait domains. PolarMorphism makes use of the fact that trait-specific SNP effect sizes can be seen as Cartesian coordinates and can thus be converted to polar coordinates r (distance from the origin) and theta (angle with the Cartesian x-axis, in the case of two traits). r describes the overall effect of a SNP, while theta describes the extent to which a SNP is shared. r and theta are used to determine the significance of SNP sharedness, resulting in a P-value per SNP that can be used for further analysis.<h4>Results</h4>We apply PolarMorphism to a large collection of publicly available GWAS summary statistics enabling the construction of a pleiotropy network that shows the extent to which traits share SNPs. We show how PolarMorphism can be used to gain insight into relationships between traits and trait domains and contrast it with genetic correlation. Furthermore, pathway analysis of the newly discovered pleiotropic SNPs demonstrates that analysis of more than two traits simultaneously yields more biologically relevant results than the combined results of pairwise analysis of the same traits. Finally, we show that PolarMorphism is more efficient and more powerful than previously published methods.<h4>Availability and implementation</h4>code: https://github.com/UMCUGenetics/PolarMorphism, results: 10.5281/zenodo.5844193.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac228"
+  },
+  {
+    "id": "10.1093/bioinformatics/btac265",
+    "title": "QuCo: quartet-based co-estimation of species trees and gene trees",
+    "authors": [
+      "Rabiee M",
+      "Mirarab S"
+    ],
+    "abstract": "<h4>Motivation</h4>Phylogenomics faces a dilemma: on the one hand, most accurate species and gene tree estimation methods are those that co-estimate them; on the other hand, these co-estimation methods do not scale to moderately large numbers of species. The summary-based methods, which first infer gene trees independently and then combine them, are much more scalable but are prone to gene tree estimation error, which is inevitable when inferring trees from limited-length data. Gene tree estimation error is not just random noise and can create biases such as long-branch attraction.<h4>Results</h4>We introduce a scalable likelihood-based approach to co-estimation under the multi-species coalescent model. The method, called quartet co-estimation (QuCo), takes as input independently inferred distributions over gene trees and computes the most likely species tree topology and internal branch length for each quartet, marginalizing over gene tree topologies and ignoring branch lengths by making several simplifying assumptions. It then updates the gene tree posterior probabilities based on the species tree. The focus on gene tree topologies and the heuristic division to quartets enables fast likelihood calculations. We benchmark our method with extensive simulations for quartet trees in zones known to produce biased species trees and further with larger trees. We also run QuCo on a biological dataset of bees. Our results show better accuracy than the summary-based approach ASTRAL run on estimated gene trees.<h4>Availability and implementation</h4>QuCo is available on https://github.com/maryamrabiee/quco.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac265"
+  },
+  {
+    "id": "10.1093/bioinformatics/btac266",
+    "title": "A graph neural network approach for molecule carcinogenicity prediction",
+    "authors": [
+      "Fradkin P",
+      "Young A",
+      "Atanackovic L",
+      "Frey B",
+      "Lee LJ",
+      "Wang B"
+    ],
+    "abstract": "<h4>Motivation</h4>Molecular carcinogenicity is a preventable cause of cancer, but systematically identifying carcinogenic compounds, which involves performing experiments on animal models, is expensive, time consuming and low throughput. As a result, carcinogenicity information is limited and building data-driven models with good prediction accuracy remains a major challenge.<h4>Results</h4>In this work, we propose CONCERTO, a deep learning model that uses a graph transformer in conjunction with a molecular fingerprint representation for carcinogenicity prediction from molecular structure. Special efforts have been made to overcome the data size constraint, such as multi-round pre-training on related but lower quality mutagenicity data, and transfer learning from a large self-supervised model. Extensive experiments demonstrate that our model performs well and can generalize to external validation sets. CONCERTO could be useful for guiding future carcinogenicity experiments and provide insight into the molecular basis of carcinogenicity.<h4>Availability and implementation</h4>The code and data underlying this article are available on github at https://github.com/bowang-lab/CONCERTO.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac266"
+  },
+  {
+    "id": "10.1093/bioinformatics/btac239",
+    "title": "Phage-bacterial contig association prediction with a convolutional neural network",
+    "authors": [
+      "Tang T",
+      "Hou S",
+      "Fuhrman JA",
+      "Sun F"
+    ],
+    "abstract": "<h4>Motivation</h4>Phage-host associations play important roles in microbial communities. But in natural communities, as opposed to culture-based lab studies where phages are discovered and characterized metagenomically, their hosts are generally not known. Several programs have been developed for predicting which phage infects which host based on various sequence similarity measures or machine learning approaches. These are often based on whole viral and host genomes, but in metagenomics-based studies, we rarely have whole genomes but rather must rely on contigs that are sometimes as short as hundreds of bp long. Therefore, we need programs that predict hosts of phage contigs on the basis of these short contigs. Although most existing programs can be applied to metagenomic datasets for these predictions, their accuracies are generally low. Here, we develop ContigNet, a convolutional neural network-based model capable of predicting phage-host matches based on relatively short contigs, and compare it to previously published VirHostMatcher (VHM) and WIsH.<h4>Results</h4>On the validation set, ContigNet achieves 72-85% area under the receiver operating characteristic curve (AUROC) scores, compared to the maximum of 68% by VHM or WIsH for contigs of lengths between 200 bps to 50 kbps. We also apply the model to the Metagenomic Gut Virus (MGV) catalogue, a dataset containing a wide range of draft genomes from metagenomic samples and achieve 60-70% AUROC scores compared to that of VHM and WIsH of 52%. Surprisingly, ContigNet can also be used to predict plasmid-host contig associations with high accuracy, indicating a similar genetic exchange between mobile genetic elements and their hosts.<h4>Availability and implementation</h4>The source code of ContigNet and related datasets can be downloaded from https://github.com/tianqitang1/ContigNet.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac239"
+  },
+  {
+    "id": "10.1093/bioinformatics/btac236",
+    "title": "Characterizing domain-specific open educational resources by linking ISCB Communities of Special Interest to Wikipedia",
+    "authors": [
+      "Kilpatrick AM",
+      "Rahman F",
+      "Anjum A",
+      "Shome S",
+      "Andalib KMS",
+      "Banik S",
+      "Chowdhury SF",
+      "Coombe P",
+      "Astroz YC",
+      "Douglas JM",
+      "Eranti P",
+      "Kiran AD",
+      "Kumar S",
+      "Lim H",
+      "Lorenzi V",
+      "Lubiana T",
+      "Mahmud S",
+      "Puche R",
+      "Rybarczyk A",
+      "Al Sium SM",
+      "Twesigomwe D",
+      "Zok T",
+      "Orengo CA",
+      "Friedberg I",
+      "Kelso JF",
+      "Welch L"
+    ],
+    "abstract": "<h4>Motivation</h4>Wikipedia is one of the most important channels for the public communication of science and is frequently accessed as an educational resource in computational biology. Joint efforts between the International Society for Computational Biology (ISCB) and the Computational Biology taskforce of WikiProject Molecular Biology (a group of expert Wikipedia editors) have considerably improved computational biology representation on Wikipedia in recent years. However, there is still an urgent need for further improvement in quality, especially when compared to related scientific fields such as genetics and medicine. Facilitating involvement of members from ISCB Communities of Special Interest (COSIs) would improve a vital open education resource in computational biology, additionally allowing COSIs to provide a quality educational resource highly specific to their subfield.<h4>Results</h4>We generate a list of around 1500 English Wikipedia articles relating to computational biology and describe the development of a binary COSI-Article matrix, linking COSIs to relevant articles and thereby defining domain-specific open educational resources. Our analysis of the COSI-Article matrix data provides a quantitative assessment of computational biology representation on Wikipedia against other fields and at a COSI-specific level. Furthermore, we conducted similarity analysis and subsequent clustering of COSI-Article data to provide insight into potential relationships between COSIs. Finally, based on our analysis, we suggest courses of action to improve the quality of computational biology representation on Wikipedia.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac236"
+  },
+  {
+    "id": "10.1093/bioinformatics/btac245",
+    "title": "Sparse and skew hashing of K-mers",
+    "authors": [
+      "Pibiri GE"
+    ],
+    "abstract": "<h4>Motivation</h4>A dictionary of k-mers is a data structure that stores a set of n distinct k-mers and supports membership queries. This data structure is at the hearth of many important tasks in computational biology. High-throughput sequencing of DNA can produce very large k-mer sets, in the size of billions of strings-in such cases, the memory consumption and query efficiency of the data structure is a concrete challenge.<h4>Results</h4>To tackle this problem, we describe a compressed and associative dictionary for k-mers, that is: a data structure where strings are represented in compact form and each of them is associated to a unique integer identifier in the range [0,n). We show that some statistical properties of k-mer minimizers can be exploited by minimal perfect hashing to substantially improve the space/time trade-off of the dictionary compared to the best-known solutions.<h4>Availability and implementation</h4>https://github.com/jermp/sshash.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac245"
+  },
+  {
+    "id": "10.1093/bioinformatics/btac237",
+    "title": "CMash: fast, multi-resolution estimation of k-mer-based Jaccard and containment indices",
+    "authors": [
+      "Liu S",
+      "Koslicki D"
+    ],
+    "abstract": "<h4>Motivation</h4>K-mer-based methods are used ubiquitously in the field of computational biology. However, determining the optimal value of k for a specific application often remains heuristic. Simply reconstructing a new k-mer set with another k-mer size is computationally expensive, especially in metagenomic analysis where datasets are large. Here, we introduce a hashing-based technique that leverages a kind of bottom-m sketch as well as a k-mer ternary search tree (KTST) to obtain k-mer-based similarity estimates for a range of k values. By truncating k-mers stored in a pre-built KTST with a large k=kmax value, we can simultaneously obtain k-mer-based estimates for all k values up to kmax. This truncation approach circumvents the reconstruction of new k-mer sets when changing k values, making analysis more time and space-efficient.<h4>Results</h4>We derived the theoretical expression of the bias factor due to truncation. And we showed that the biases are negligible in practice: when using a KTST to estimate the containment index between a RefSeq-based microbial reference database and simulated metagenome data for 10 values of k, the running time was close to 10× faster compared to a classic MinHash approach while using less than one-fifth the space to store the data structure.<h4>Availability and implementation</h4>A python implementation of this method, CMash, is available at https://github.com/dkoslicki/CMash. The reproduction of all experiments presented herein can be accessed via https://github.com/KoslickiLab/CMASH-reproducibles.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac237"
+  },
+  {
+    "id": "10.1093/bioinformatics/btac226",
+    "title": "Syotti: scalable bait design for DNA enrichment",
+    "authors": [
+      "Alanko JN",
+      "Slizovskiy IB",
+      "Lokshtanov D",
+      "Gagie T",
+      "Noyes NR",
+      "Boucher C"
+    ],
+    "abstract": "<h4>Motivation</h4>Bait enrichment is a protocol that is becoming increasingly ubiquitous as it has been shown to successfully amplify regions of interest in metagenomic samples. In this method, a set of synthetic probes ('baits') are designed, manufactured and applied to fragmented metagenomic DNA. The probes bind to the fragmented DNA and any unbound DNA is rinsed away, leaving the bound fragments to be amplified for sequencing. Metsky et al. demonstrated that bait-enrichment is capable of detecting a large number of human viral pathogens within metagenomic samples.<h4>Results</h4>We formalize the problem of designing baits by defining the Minimum Bait Cover problem, show that the problem is NP-hard even under very restrictive assumptions, and design an efficient heuristic that takes advantage of succinct data structures. We refer to our method as Syotti. The running time of Syotti shows linear scaling in practice, running at least an order of magnitude faster than state-of-the-art methods, including the method of Metsky et al. At the same time, our method produces bait sets that are smaller than the ones produced by the competing methods, while also leaving fewer positions uncovered. Lastly, we show that Syotti requires only 25 min to design baits for a dataset comprised of 3 billion nucleotides from 1000 related bacterial substrains, whereas the method of Metsky et al. shows clearly super-linear running time and fails to process even a subset of 17% of the data in 72 h.<h4>Availability and implementation</h4>https://github.com/jnalanko/syotti.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac226"
+  },
+  {
+    "id": "10.1093/bioinformatics/btac255",
+    "title": "Markov chains improve the significance computation of overlapping genome annotations",
+    "authors": [
+      "Gafurov A",
+      "Brejová B",
+      "Medvedev P"
+    ],
+    "abstract": "<h4>Motivation</h4>Genome annotations are a common way to represent genomic features such as genes, regulatory elements or epigenetic modifications. The amount of overlap between two annotations is often used to ascertain if there is an underlying biological connection between them. In order to distinguish between true biological association and overlap by pure chance, a robust measure of significance is required. One common way to do this is to determine if the number of intervals in the reference annotation that intersect the query annotation is statistically significant. However, currently employed statistical frameworks are often either inefficient or inaccurate when computing P-values on the scale of the whole human genome.<h4>Results</h4>We show that finding the P-values under the typically used 'gold' null hypothesis is NP-hard. This motivates us to reformulate the null hypothesis using Markov chains. To be able to measure the fidelity of our Markovian null hypothesis, we develop a fast direct sampling algorithm to estimate the P-value under the gold null hypothesis. We then present an open-source software tool MCDP that computes the P-values under the Markovian null hypothesis in O(m2+n) time and O(m) memory, where m and n are the numbers of intervals in the reference and query annotations, respectively. Notably, MCDP runtime and memory usage are independent from the genome length, allowing it to outperform previous approaches in runtime and memory usage by orders of magnitude on human genome annotations, while maintaining the same level of accuracy.<h4>Availability and implementation</h4>The software is available at https://github.com/fmfi-compbio/mc-overlaps. All data for reproducibility are available at https://github.com/fmfi-compbio/mc-overlaps-reproducibility.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac255"
+  },
+  {
+    "id": "10.1093/bioinformatics/btac264",
+    "title": "The effect of genome graph expressiveness on the discrepancy between genome graph distance and string set distance",
+    "authors": [
+      "Qiu Y",
+      "Kingsford C"
+    ],
+    "abstract": "<h4>Motivation</h4>Intra-sample heterogeneity describes the phenomenon where a genomic sample contains a diverse set of genomic sequences. In practice, the true string sets in a sample are often unknown due to limitations in sequencing technology. In order to compare heterogeneous samples, genome graphs can be used to represent such sets of strings. However, a genome graph is generally able to represent a string set universe that contains multiple sets of strings in addition to the true string set. This difference between genome graphs and string sets is not well characterized. As a result, a distance metric between genome graphs may not match the distance between true string sets.<h4>Results</h4>We extend a genome graph distance metric, Graph Traversal Edit Distance (GTED) proposed by Ebrahimpour Boroojeny et al., to FGTED to model the distance between heterogeneous string sets and show that GTED and FGTED always underestimate the Earth Mover's Edit Distance (EMED) between string sets. We introduce the notion of string set universe diameter of a genome graph. Using the diameter, we are able to upper-bound the deviation of FGTED from EMED and to improve FGTED so that it reduces the average error in empirically estimating the similarity between true string sets. On simulated T-cell receptor sequences and actual Hepatitis B virus genomes, we show that the diameter-corrected FGTED reduces the average deviation of the estimated distance from the true string set distances by more than 250%.<h4>Availability and implementation</h4>Data and source code for reproducing the experiments are available at: https://github.com/Kingsford-Group/gtedemedtest/.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac264"
+  },
+  {
+    "id": "10.1093/bioinformatics/btac260",
+    "title": "Deep kernel learning improves molecular fingerprint prediction from tandem mass spectra",
+    "authors": [
+      "Dührkop K"
+    ],
+    "abstract": "<h4>Motivation</h4>Untargeted metabolomics experiments rely on spectral libraries for structure annotation, but these libraries are vastly incomplete; in silico methods search in structure databases, allowing us to overcome this limitation. The best-performing in silico methods use machine learning to predict a molecular fingerprint from tandem mass spectra, then use the predicted fingerprint to search in a molecular structure database. Predicted molecular fingerprints are also of great interest for compound class annotation, de novo structure elucidation, and other tasks. So far, kernel support vector machines are the best tool for fingerprint prediction. However, they cannot be trained on all publicly available reference spectra because their training time scales cubically with the number of training data.<h4>Results</h4>We use the Nyström approximation to transform the kernel into a linear feature map. We evaluate two methods that use this feature map as input: a linear support vector machine and a deep neural network (DNN). For evaluation, we use a cross-validated dataset of 156 017 compounds and three independent datasets with 1734 compounds. We show that the combination of kernel method and DNN outperforms the kernel support vector machine, which is the current gold standard, as well as a DNN on tandem mass spectra on all evaluation datasets.<h4>Availability and implementation</h4>The deep kernel learning method for fingerprint prediction is part of the SIRIUS software, available at https://bio.informatik.uni-jena.de/software/sirius.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac260"
+  },
+  {
+    "id": "10.1093/bioinformatics/btac220",
+    "title": "MOJITOO: a fast and universal method for integration of multimodal single-cell data",
+    "authors": [
+      "Cheng M",
+      "Li Z",
+      "Costa IG"
+    ],
+    "abstract": "<h4>Motivation</h4>The advent of multi-modal single-cell sequencing techniques have shed new light on molecular mechanisms by simultaneously inspecting transcriptomes, epigenomes and proteomes of the same cell. However, to date, the existing computational approaches for integration of multimodal single-cell data are either computationally expensive, require the delineation of parameters or can only be applied to particular modalities.<h4>Results</h4>Here we present a single-cell multi-modal integration method, named Multi-mOdal Joint IntegraTion of cOmpOnents (MOJITOO). MOJITOO uses canonical correlation analysis for a fast and parameter free detection of a shared representation of cells from multimodal single-cell data. Moreover, estimated canonical components can be used for interpretation, i.e. association of modality-specific molecular features with the latent space. We evaluate MOJITOO using bi- and tri-modal single-cell datasets and show that MOJITOO outperforms existing methods regarding computational requirements, preservation of original latent spaces and clustering.<h4>Availability and implementation</h4>The software, code and data for benchmarking are available at https://github.com/CostaLab/MOJITOO and https://doi.org/10.5281/zenodo.6348128.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac220"
+  },
+  {
+    "id": "10.1093/bioinformatics/btac222",
+    "title": "MLGL-MP: a Multi-Label Graph Learning framework enhanced by pathway interdependence for Metabolic Pathway prediction",
+    "authors": [
+      "Du BX",
+      "Zhao PC",
+      "Zhu B",
+      "Yiu SM",
+      "Nyamabo AK",
+      "Yu H",
+      "Shi JY"
+    ],
+    "abstract": "<h4>Motivation</h4>During lead compound optimization, it is crucial to identify pathways where a drug-like compound is metabolized. Recently, machine learning-based methods have achieved inspiring progress to predict potential metabolic pathways for drug-like compounds. However, they neglect the knowledge that metabolic pathways are dependent on each other. Moreover, they are inadequate to elucidate why compounds participate in specific pathways.<h4>Results</h4>To address these issues, we propose a novel Multi-Label Graph Learning framework of Metabolic Pathway prediction boosted by pathway interdependence, called MLGL-MP, which contains a compound encoder, a pathway encoder and a multi-label predictor. The compound encoder learns compound embedding representations by graph neural networks. After constructing a pathway dependence graph by re-trained word embeddings and pathway co-occurrences, the pathway encoder learns pathway embeddings by graph convolutional networks. Moreover, after adapting the compound embedding space into the pathway embedding space, the multi-label predictor measures the proximity of two spaces to discriminate which pathways a compound participates in. The comparison with state-of-the-art methods on KEGG pathways demonstrates the superiority of our MLGL-MP. Also, the ablation studies reveal how its three components contribute to the model, including the pathway dependence, the adapter between compound embeddings and pathway embeddings, as well as the pre-training strategy. Furthermore, a case study illustrates the interpretability of MLGL-MP by indicating crucial substructures in a compound, which are significantly associated with the attending metabolic pathways. It is anticipated that this work can boost metabolic pathway predictions in drug discovery.<h4>Availability and implementation</h4>The code and data underlying this article are freely available at https://github.com/dubingxue/MLGL-MP.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac222"
+  },
+  {
+    "id": "10.1093/bioinformatics/btac232",
+    "title": "High-sensitivity pattern discovery in large, paired multiomic datasets",
+    "authors": [
+      "Ghazi AR",
+      "Sucipto K",
+      "Rahnavard A",
+      "Franzosa EA",
+      "McIver LJ",
+      "Lloyd-Price J",
+      "Schwager E",
+      "Weingart G",
+      "Moon YS",
+      "Morgan XC",
+      "Waldron L",
+      "Huttenhower C"
+    ],
+    "abstract": "<h4>Motivation</h4>Modern biological screens yield enormous numbers of measurements, and identifying and interpreting statistically significant associations among features are essential. In experiments featuring multiple high-dimensional datasets collected from the same set of samples, it is useful to identify groups of associated features between the datasets in a way that provides high statistical power and false discovery rate (FDR) control.<h4>Results</h4>Here, we present a novel hierarchical framework, HAllA (Hierarchical All-against-All association testing), for structured association discovery between paired high-dimensional datasets. HAllA efficiently integrates hierarchical hypothesis testing with FDR correction to reveal significant linear and non-linear block-wise relationships among continuous and/or categorical data. We optimized and evaluated HAllA using heterogeneous synthetic datasets of known association structure, where HAllA outperformed all-against-all and other block-testing approaches across a range of common similarity measures. We then applied HAllA to a series of real-world multiomics datasets, revealing new associations between gene expression and host immune activity, the microbiome and host transcriptome, metabolomic profiling and human health phenotypes.<h4>Availability and implementation</h4>An open-source implementation of HAllA is freely available at http://huttenhower.sph.harvard.edu/halla along with documentation, demo datasets and a user group.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac232"
+  },
+  {
+    "id": "10.1093/bioinformatics/btac231",
+    "title": "Computing optimal factories in metabolic networks with negative regulation",
+    "authors": [
+      "Krieger S",
+      "Kececioglu J"
+    ],
+    "abstract": "<h4>Motivation</h4>A factory in a metabolic network specifies how to produce target molecules from source compounds through biochemical reactions, properly accounting for reaction stoichiometry to conserve or not deplete intermediate metabolites. While finding factories is a fundamental problem in systems biology, available methods do not consider the number of reactions used, nor address negative regulation.<h4>Methods</h4>We introduce the new problem of finding optimal factories that use the fewest reactions, for the first time incorporating both first- and second-order negative regulation. We model this problem with directed hypergraphs, prove it is NP-complete, solve it via mixed-integer linear programming, and accommodate second-order negative regulation by an iterative approach that generates next-best factories.<h4>Results</h4>This optimization-based approach is remarkably fast in practice, typically finding optimal factories in a few seconds, even for metabolic networks involving tens of thousands of reactions and metabolites, as demonstrated through comprehensive experiments across all instances from standard reaction databases.<h4>Availability and implementation</h4>Source code for an implementation of our new method for optimal factories with negative regulation in a new tool called Odinn, together with all datasets, is available free for non-commercial use at http://odinn.cs.arizona.edu.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac231"
+  },
+  {
+    "id": "10.1093/bioinformatics/btac253",
+    "title": "Reconstructing tumor clonal lineage trees incorporating single-nucleotide variants, copy number alterations and structural variations",
+    "authors": [
+      "Fu X",
+      "Lei H",
+      "Tao Y",
+      "Schwartz R"
+    ],
+    "abstract": "<h4>Motivation</h4>Cancer develops through a process of clonal evolution in which an initially healthy cell gives rise to progeny gradually differentiating through the accumulation of genetic and epigenetic mutations. These mutations can take various forms, including single-nucleotide variants (SNVs), copy number alterations (CNAs) or structural variations (SVs), with each variant type providing complementary insights into tumor evolution as well as offering distinct challenges to phylogenetic inference.<h4>Results</h4>In this work, we develop a tumor phylogeny method, TUSV-ext, which incorporates SNVs, CNAs and SVs into a single inference framework. We demonstrate on simulated data that the method produces accurate tree inferences in the presence of all three variant types. We further demonstrate the method through application to real prostate tumor data, showing how our approach to coordinated phylogeny inference and clonal construction with all three variant types can reveal a more complicated clonal structure than is suggested by prior work, consistent with extensive polyclonal seeding or migration.<h4>Availability and implementation</h4>https://github.com/CMUSchwartzLab/TUSV-ext.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac253"
+  },
+  {
+    "id": "10.1093/bioinformatics/btac254",
+    "title": "Phylovar: toward scalable phylogeny-aware inference of single-nucleotide variations from single-cell DNA sequencing data",
+    "authors": [
+      "Edrisi M",
+      "Valecha MV",
+      "Chowdary SBV",
+      "Robledo S",
+      "Ogilvie HA",
+      "Posada D",
+      "Zafar H",
+      "Nakhleh L"
+    ],
+    "abstract": "<h4>Motivation</h4>Single-nucleotide variants (SNVs) are the most common variations in the human genome. Recently developed methods for SNV detection from single-cell DNA sequencing data, such as SCIΦ and scVILP, leverage the evolutionary history of the cells to overcome the technical errors associated with single-cell sequencing protocols. Despite being accurate, these methods are not scalable to the extensive genomic breadth of single-cell whole-genome (scWGS) and whole-exome sequencing (scWES) data.<h4>Results</h4>Here, we report on a new scalable method, Phylovar, which extends the phylogeny-guided variant calling approach to sequencing datasets containing millions of loci. Through benchmarking on simulated datasets under different settings, we show that, Phylovar outperforms SCIΦ in terms of running time while being more accurate than Monovar (which is not phylogeny-aware) in terms of SNV detection. Furthermore, we applied Phylovar to two real biological datasets: an scWES triple-negative breast cancer data consisting of 32 cells and 3375 loci as well as an scWGS data of neuron cells from a normal human brain containing 16 cells and approximately 2.5 million loci. For the cancer data, Phylovar detected somatic SNVs with high or moderate functional impact that were also supported by bulk sequencing dataset and for the neuron dataset, Phylovar identified 5745 SNVs with non-synonymous effects some of which were associated with neurodegenerative diseases.<h4>Availability and implementation</h4>Phylovar is implemented in Python and is publicly available at https://github.com/NakhlehLab/Phylovar.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac254"
+  },
+  {
+    "id": "10.1093/bioinformatics/btac248",
+    "title": "MeConcord: a new metric to quantitatively characterize DNA methylation heterogeneity across reads and CpG sites",
+    "authors": [
+      "Zhang X",
+      "Wang X"
+    ],
+    "abstract": "<h4>Motivation</h4>Intermediately methylated regions occupy a significant fraction of the human genome and are closely associated with epigenetic regulations or cell-type deconvolution of bulk data. However, these regions show distinct methylation patterns, corresponding to different biological mechanisms. Although there have been some metrics developed for investigating these regions, the high noise sensitivity limits the utility for distinguishing distinct methylation patterns.<h4>Results</h4>We proposed a method named MeConcord to measure local methylation concordance across reads and CpG sites, respectively. MeConcord showed the most stable performance in distinguishing distinct methylation patterns ('identical', 'uniform' and 'disordered') compared with other metrics. Applying MeConcord to the whole genome data across 25 cell lines or primary cells or tissues, we found that distinct methylation patterns were associated with different genomic characteristics, such as CTCF binding or imprinted genes. Further, we showed the differences of CpG island hypermethylation patterns between senescence and tumorigenesis by using MeConcord. MeConcord is a powerful method to study local read-level methylation patterns for both the whole genome and specific regions of interest.<h4>Availability and implementation</h4>MeConcord is available at https://github.com/WangLabTHU/MeConcord.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac248"
+  },
+  {
+    "id": "10.1093/bioinformatics/btac249",
+    "title": "Visualizing hierarchies in scRNA-seq data using a density tree-biased autoencoder",
+    "authors": [
+      "Garrido Q",
+      "Damrich S",
+      "Jäger A",
+      "Cerletti D",
+      "Claassen M",
+      "Najman L",
+      "Hamprecht FA"
+    ],
+    "abstract": "<h4>Motivation</h4>Single-cell RNA sequencing (scRNA-seq) allows studying the development of cells in unprecedented detail. Given that many cellular differentiation processes are hierarchical, their scRNA-seq data are expected to be approximately tree-shaped in gene expression space. Inference and representation of this tree structure in two dimensions is highly desirable for biological interpretation and exploratory analysis.<h4>Results</h4>Our two contributions are an approach for identifying a meaningful tree structure from high-dimensional scRNA-seq data, and a visualization method respecting the tree structure. We extract the tree structure by means of a density-based maximum spanning tree on a vector quantization of the data and show that it captures biological information well. We then introduce density-tree biased autoencoder (DTAE), a tree-biased autoencoder that emphasizes the tree structure of the data in low dimensional space. We compare to other dimension reduction methods and demonstrate the success of our method both qualitatively and quantitatively on real and toy data.<h4>Availability and implementation</h4>Our implementation relying on PyTorch and Higra is available at github.com/hci-unihd/DTAE.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac249"
+  },
+  {
+    "id": "10.1093/bioinformatics/btac247",
+    "title": "On the reliability and the limits of inference of amino acid sequence alignments",
+    "authors": [
+      "Rajapaksa S",
+      "Sumanaweera D",
+      "Lesk AM",
+      "Allison L",
+      "Stuckey PJ",
+      "Garcia de la Banda M",
+      "Abramson D",
+      "Konagurthu AS"
+    ],
+    "abstract": "<h4>Motivation</h4>Alignments are correspondences between sequences. How reliable are alignments of amino acid sequences of proteins, and what inferences about protein relationships can be drawn? Using techniques not previously applied to these questions, by weighting every possible sequence alignment by its posterior probability we derive a formal mathematical expectation, and develop an efficient algorithm for computation of the distance between alternative alignments allowing quantitative comparisons of sequence-based alignments with corresponding reference structure alignments.<h4>Results</h4>By analyzing the sequences and structures of 1 million protein domain pairs, we report the variation of the expected distance between sequence-based and structure-based alignments, as a function of (Markov time of) sequence divergence. Our results clearly demarcate the 'daylight', 'twilight' and 'midnight' zones for interpreting residue-residue correspondences from sequence information alone.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac247"
+  },
+  {
+    "id": "10.1093/bioinformatics/btac256",
+    "title": "DeepGOZero: improving protein function prediction from sequence and zero-shot learning based on ontology axioms",
+    "authors": [
+      "Kulmanov M",
+      "Hoehndorf R"
+    ],
+    "abstract": "<h4>Motivation</h4>Protein functions are often described using the Gene Ontology (GO) which is an ontology consisting of over 50 000 classes and a large set of formal axioms. Predicting the functions of proteins is one of the key challenges in computational biology and a variety of machine learning methods have been developed for this purpose. However, these methods usually require a significant amount of training data and cannot make predictions for GO classes that have only few or no experimental annotations.<h4>Results</h4>We developed DeepGOZero, a machine learning model which improves predictions for functions with no or only a small number of annotations. To achieve this goal, we rely on a model-theoretic approach for learning ontology embeddings and combine it with neural networks for protein function prediction. DeepGOZero can exploit formal axioms in the GO to make zero-shot predictions, i.e., predict protein functions even if not a single protein in the training phase was associated with that function. Furthermore, the zero-shot prediction method employed by DeepGOZero is generic and can be applied whenever associations with ontology classes need to be predicted.<h4>Availability and implementation</h4>http://github.com/bio-ontology-research-group/deepgozero.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac256"
+  },
+  {
+    "id": "10.1093/bioinformatics/btac221",
+    "title": "BITES: balanced individual treatment effect for survival data",
+    "authors": [
+      "Schrod S",
+      "Schäfer A",
+      "Solbrig S",
+      "Lohmayer R",
+      "Gronwald W",
+      "Oefner PJ",
+      "Beißbarth T",
+      "Spang R",
+      "Zacharias HU",
+      "Altenbuchinger M"
+    ],
+    "abstract": "<h4>Motivation</h4>Estimating the effects of interventions on patient outcome is one of the key aspects of personalized medicine. Their inference is often challenged by the fact that the training data comprises only the outcome for the administered treatment, and not for alternative treatments (the so-called counterfactual outcomes). Several methods were suggested for this scenario based on observational data, i.e. data where the intervention was not applied randomly, for both continuous and binary outcome variables. However, patient outcome is often recorded in terms of time-to-event data, comprising right-censored event times if an event does not occur within the observation period. Albeit their enormous importance, time-to-event data are rarely used for treatment optimization. We suggest an approach named BITES (Balanced Individual Treatment Effect for Survival data), which combines a treatment-specific semi-parametric Cox loss with a treatment-balanced deep neural network; i.e. we regularize differences between treated and non-treated patients using Integral Probability Metrics (IPM).<h4>Results</h4>We show in simulation studies that this approach outperforms the state of the art. Furthermore, we demonstrate in an application to a cohort of breast cancer patients that hormone treatment can be optimized based on six routine parameters. We successfully validated this finding in an independent cohort.<h4>Availability and implementation</h4>We provide BITES as an easy-to-use python implementation including scheduled hyper-parameter optimization (https://github.com/sschrod/BITES). The data underlying this article are available in the CRAN repository at https://rdrr.io/cran/survival/man/gbsg.html and https://rdrr.io/cran/survival/man/rotterdam.html.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac221"
+  },
+  {
+    "id": "10.1093/bioinformatics/btac225",
+    "title": "DeepMHCII: a novel binding core-aware deep interaction model for accurate MHC-II peptide binding affinity prediction",
+    "authors": [
+      "You R",
+      "Qu W",
+      "Mamitsuka H",
+      "Zhu S"
+    ],
+    "abstract": "<h4>Motivation</h4>Computationally predicting major histocompatibility complex (MHC)-peptide binding affinity is an important problem in immunological bioinformatics. Recent cutting-edge deep learning-based methods for this problem are unable to achieve satisfactory performance for MHC class II molecules. This is because such methods generate the input by simply concatenating the two given sequences: (the estimated binding core of) a peptide and (the pseudo sequence of) an MHC class II molecule, ignoring biological knowledge behind the interactions of the two molecules. We thus propose a binding core-aware deep learning-based model, DeepMHCII, with a binding interaction convolution layer, which allows to integrate all potential binding cores (in a given peptide) with the MHC pseudo (binding) sequence, through modeling the interaction with multiple convolutional kernels.<h4>Results</h4>Extensive empirical experiments with four large-scale datasets demonstrate that DeepMHCII significantly outperformed four state-of-the-art methods under numerous settings, such as 5-fold cross-validation, leave one molecule out, validation with independent testing sets and binding core prediction. All these results and visualization of the predicted binding cores indicate the effectiveness of our model, DeepMHCII, and the importance of properly modeling biological facts in deep learning for high predictive performance and efficient knowledge discovery.<h4>Availability and implementation</h4>DeepMHCII is publicly available at https://github.com/yourh/DeepMHCII.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac225"
+  },
+  {
+    "id": "10.1093/bioinformatics/btac252",
+    "title": "A LASSO-based approach to sample sites for phylogenetic tree search",
+    "authors": [
+      "Ecker N",
+      "Azouri D",
+      "Bettisworth B",
+      "Stamatakis A",
+      "Mansour Y",
+      "Mayrose I",
+      "Pupko T"
+    ],
+    "abstract": "<h4>Motivation</h4>In recent years, full-genome sequences have become increasingly available and as a result many modern phylogenetic analyses are based on very long sequences, often with over 100 000 sites. Phylogenetic reconstructions of large-scale alignments are challenging for likelihood-based phylogenetic inference programs and usually require using a powerful computer cluster. Current tools for alignment trimming prior to phylogenetic analysis do not promise a significant reduction in the alignment size and are claimed to have a negative effect on the accuracy of the obtained tree.<h4>Results</h4>Here, we propose an artificial-intelligence-based approach, which provides means to select the optimal subset of sites and a formula by which one can compute the log-likelihood of the entire data based on this subset. Our approach is based on training a regularized Lasso-regression model that optimizes the log-likelihood prediction accuracy while putting a constraint on the number of sites used for the approximation. We show that computing the likelihood based on 5% of the sites already provides accurate approximation of the tree likelihood based on the entire data. Furthermore, we show that using this Lasso-based approximation during a tree search decreased running-time substantially while retaining the same tree-search performance.<h4>Availability and implementation</h4>The code was implemented in Python version 3.8 and is available through GitHub (https://github.com/noaeker/lasso_positions_sampling). The datasets used in this paper were retrieved from Zhou et al. (2018) as described in section 3.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac252"
+  },
+  {
+    "id": "10.1093/bioinformatics/btac242",
+    "title": "Simulating domain architecture evolution",
+    "authors": [
+      "Cui X",
+      "Xue Y",
+      "McCormack C",
+      "Garces A",
+      "Rachman TW",
+      "Yi Y",
+      "Stolzer M",
+      "Durand D"
+    ],
+    "abstract": "<h4>Motivation</h4>Simulation is an essential technique for generating biomolecular data with a 'known' history for use in validating phylogenetic inference and other evolutionary methods. On longer time scales, simulation supports investigations of equilibrium behavior and provides a formal framework for testing competing evolutionary hypotheses. Twenty years of molecular evolution research have produced a rich repertoire of simulation methods. However, current models do not capture the stringent constraints acting on the domain insertions, duplications, and deletions by which multidomain architectures evolve. Although these processes have the potential to generate any combination of domains, only a tiny fraction of possible domain combinations are observed in nature. Modeling these stringent constraints on domain order and co-occurrence is a fundamental challenge in domain architecture simulation that does not arise with sequence and gene family simulation.<h4>Results</h4>Here, we introduce a stochastic model of domain architecture evolution to simulate evolutionary trajectories that reflect the constraints on domain order and co-occurrence observed in nature. This framework is implemented in a novel domain architecture simulator, DomArchov, using the Metropolis-Hastings algorithm with data-driven transition probabilities. The use of a data-driven event module enables quick and easy redeployment of the simulator for use in different taxonomic and protein function contexts. Using empirical evaluation with metazoan datasets, we demonstrate that domain architectures simulated by DomArchov recapitulate properties of genuine domain architectures that reflect the constraints on domain order and adjacency seen in nature. This work expands the realm of evolutionary processes that are amenable to simulation.<h4>Availability and implementation</h4>DomArchov is written in Python 3 and is available at http://www.cs.cmu.edu/~durand/DomArchov. The data underlying this article are available via the same link.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac242"
+  },
+  {
+    "id": "10.1093/bioinformatics/btac251",
+    "title": "Do-calculus enables estimation of causal effects in partially observed biomolecular pathways",
+    "authors": [
+      "Mohammad-Taheri S",
+      "Zucker J",
+      "Hoyt CT",
+      "Sachs K",
+      "Tewari V",
+      "Ness R",
+      "Vitek O"
+    ],
+    "abstract": "<h4>Motivation</h4>Estimating causal queries, such as changes in protein abundance in response to a perturbation, is a fundamental task in the analysis of biomolecular pathways. The estimation requires experimental measurements on the pathway components. However, in practice many pathway components are left unobserved (latent) because they are either unknown, or difficult to measure. Latent variable models (LVMs) are well-suited for such estimation. Unfortunately, LVM-based estimation of causal queries can be inaccurate when parameters of the latent variables are not uniquely identified, or when the number of latent variables is misspecified. This has limited the use of LVMs for causal inference in biomolecular pathways.<h4>Results</h4>In this article, we propose a general and practical approach for LVM-based estimation of causal queries. We prove that, despite the challenges above, LVM-based estimators of causal queries are accurate if the queries are identifiable according to Pearl's do-calculus and describe an algorithm for its estimation. We illustrate the breadth and the practical utility of this approach for estimating causal queries in four synthetic and two experimental case studies, where structures of biomolecular pathways challenge the existing methods for causal query estimation.<h4>Availability and implementation</h4>The code and the data documenting all the case studies are available at https://github.com/srtaheri/LVMwithDoCalculus.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac251"
+  },
+  {
+    "id": "10.1093/bioinformatics/btac267",
+    "title": "Scaling multi-instance support vector machine to breast cancer detection on the BreaKHis dataset",
+    "authors": [
+      "Seo H",
+      "Brand L",
+      "Barco LS",
+      "Wang H"
+    ],
+    "abstract": "<h4>Motivation</h4>Breast cancer is a type of cancer that develops in breast tissues, and, after skin cancer, it is the most commonly diagnosed cancer in women in the United States. Given that an early diagnosis is imperative to prevent breast cancer progression, many machine learning models have been developed in recent years to automate the histopathological classification of the different types of carcinomas. However, many of them are not scalable to large-scale datasets.<h4>Results</h4>In this study, we propose the novel Primal-Dual Multi-Instance Support Vector Machine to determine which tissue segments in an image exhibit an indication of an abnormality. We derive an efficient optimization algorithm for the proposed objective by bypassing the quadratic programming and least-squares problems, which are commonly employed to optimize Support Vector Machine models. The proposed method is computationally efficient, thereby it is scalable to large-scale datasets. We applied our method to the public BreaKHis dataset and achieved promising prediction performance and scalability for histopathological classification.<h4>Availability and implementation</h4>Software is publicly available at: https://1drv.ms/u/s!AiFpD21bgf2wgRLbQq08ixD0SgRD?e=OpqEmY.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac267"
+  },
+  {
+    "id": "10.1093/bioinformatics/btac224",
+    "title": "Quintet Rooting: rooting species trees under the multi-species coalescent model",
+    "authors": [
+      "Tabatabaee Y",
+      "Sarker K",
+      "Warnow T"
+    ],
+    "abstract": "<h4>Motivation</h4>Rooted species trees are a basic model with multiple applications throughout biology, including understanding adaptation, biodiversity, phylogeography and co-evolution. Because most species tree estimation methods produce unrooted trees, methods for rooting these trees have been developed. However, most rooting methods either rely on prior biological knowledge or assume that evolution is close to clock-like, which is not usually the case. Furthermore, most prior rooting methods do not account for biological processes that create discordance between gene trees and species trees.<h4>Results</h4>We present Quintet Rooting (QR), a method for rooting species trees based on a proof of identifiability of the rooted species tree under the multi-species coalescent model established by Allman, Degnan and Rhodes (J. Math. Biol., 2011). We show that QR is generally more accurate than other rooting methods, except under extreme levels of gene tree estimation error.<h4>Availability and implementation</h4>Quintet Rooting is available in open source form at https://github.com/ytabatabaee/Quintet-Rooting. The simulated datasets used in this study are from a prior study and are available at https://www.ideals.illinois.edu/handle/2142/55319. The biological dataset used in this study is also from a prior study and is available at http://gigadb.org/dataset/101041.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac224"
+  },
+  {
+    "id": "10.1093/bioinformatics/btac263",
+    "title": "Self-supervised learning of cell type specificity from immunohistochemical images",
+    "authors": [
+      "Murphy M",
+      "Jegelka S",
+      "Fraenkel E"
+    ],
+    "abstract": "<h4>Motivation</h4>Advances in bioimaging now permit in situ proteomic characterization of cell-cell interactions in complex tissues, with important applications across a spectrum of biological problems from development to disease. These methods depend on selection of antibodies targeting proteins that are expressed specifically in particular cell types. Candidate marker proteins are often identified from single-cell transcriptomic data, with variable rates of success, in part due to divergence between expression levels of proteins and the genes that encode them. In principle, marker identification could be improved by using existing databases of immunohistochemistry for thousands of antibodies in human tissue, such as the Human Protein Atlas. However, these data lack detailed annotations of the types of cells in each image.<h4>Results</h4>We develop a method to predict cell type specificity of protein markers from unlabeled images. We train a convolutional neural network with a self-supervised objective to generate embeddings of the images. Using non-linear dimensionality reduction, we observe that the model clusters images according to cell types and anatomical regions for which the stained proteins are specific. We then use estimates of cell type specificity derived from an independent single-cell transcriptomics dataset to train an image classifier, without requiring any human labelling of images. Our scheme demonstrates superior classification of known proteomic markers in kidney compared to selection via single-cell transcriptomics.<h4>Availability and implementation</h4>Code and trained model are available at www.github.com/murphy17/HPA-SimCLR.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac263"
+  },
+  {
+    "id": "10.1093/bioinformatics/btac258",
+    "title": "Topsy-Turvy: integrating a global view into sequence-based PPI prediction",
+    "authors": [
+      "Singh R",
+      "Devkota K",
+      "Sledzieski S",
+      "Berger B",
+      "Cowen L"
+    ],
+    "abstract": "<h4>Summary</h4>Computational methods to predict protein-protein interaction (PPI) typically segregate into sequence-based 'bottom-up' methods that infer properties from the characteristics of the individual protein sequences, or global 'top-down' methods that infer properties from the pattern of already known PPIs in the species of interest. However, a way to incorporate top-down insights into sequence-based bottom-up PPI prediction methods has been elusive. We thus introduce Topsy-Turvy, a method that newly synthesizes both views in a sequence-based, multi-scale, deep-learning model for PPI prediction. While Topsy-Turvy makes predictions using only sequence data, during the training phase it takes a transfer-learning approach by incorporating patterns from both global and molecular-level views of protein interaction. In a cross-species context, we show it achieves state-of-the-art performance, offering the ability to perform genome-scale, interpretable PPI prediction for non-model organisms with no existing experimental PPI data. In species with available experimental PPI data, we further present a Topsy-Turvy hybrid (TT-Hybrid) model which integrates Topsy-Turvy with a purely network-based model for link prediction that provides information about species-specific network rewiring. TT-Hybrid makes accurate predictions for both well- and sparsely-characterized proteins, outperforming both its constituent components as well as other state-of-the-art PPI prediction methods. Furthermore, running Topsy-Turvy and TT-Hybrid screens is feasible for whole genomes, and thus these methods scale to settings where other methods (e.g. AlphaFold-Multimer) might be infeasible. The generalizability, accuracy and genome-level scalability of Topsy-Turvy and TT-Hybrid unlocks a more comprehensive map of protein interaction and organization in both model and non-model organisms.<h4>Availability and implementation</h4>https://topsyturvy.csail.mit.edu.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac258"
+  },
+  {
+    "id": "10.1093/bioinformatics/btac243",
+    "title": "Robust fingerprinting of genomic databases",
+    "authors": [
+      "Ji T",
+      "Ayday E",
+      "Yilmaz E",
+      "Li P"
+    ],
+    "abstract": "<h4>Motivation</h4>Database fingerprinting has been widely used to discourage unauthorized redistribution of data by providing means to identify the source of data leakages. However, there is no fingerprinting scheme aiming at achieving liability guarantees when sharing genomic databases. Thus, we are motivated to fill in this gap by devising a vanilla fingerprinting scheme specifically for genomic databases. Moreover, since malicious genomic database recipients may compromise the embedded fingerprint (distort the steganographic marks, i.e. the embedded fingerprint bit-string) by launching effective correlation attacks, which leverage the intrinsic correlations among genomic data (e.g. Mendel's law and linkage disequilibrium), we also augment the vanilla scheme by developing mitigation techniques to achieve robust fingerprinting of genomic databases against correlation attacks.<h4>Results</h4>Via experiments using a real-world genomic database, we first show that correlation attacks against fingerprinting schemes for genomic databases are very powerful. In particular, the correlation attacks can distort more than half of the fingerprint bits by causing a small utility loss (e.g. database accuracy and consistency of SNP-phenotype associations measured via P-values). Next, we experimentally show that the correlation attacks can be effectively mitigated by our proposed mitigation techniques. We validate that the attacker can hardly compromise a large portion of the fingerprint bits even if it pays a higher cost in terms of degradation of the database utility. For example, with around 24% loss in accuracy and 20% loss in the consistency of SNP-phenotype associations, the attacker can only distort about 30% fingerprint bits, which is insufficient for it to avoid being accused. We also show that the proposed mitigation techniques also preserve the utility of the shared genomic databases, e.g. the mitigation techniques only lead to around 3% loss in accuracy.<h4>Availability and implementation</h4>https://github.com/xiutianxi/robust-genomic-fp-github.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac243"
+  },
+  {
+    "id": "10.1093/bioinformatics/btac227",
+    "title": "psupertime: supervised pseudotime analysis for time-series single-cell RNA-seq data",
+    "authors": [
+      "Macnair W",
+      "Gupta R",
+      "Claassen M"
+    ],
+    "abstract": "<h4>Motivation</h4>Improvements in single-cell RNA-seq technologies mean that studies measuring multiple experimental conditions, such as time series, have become more common. At present, few computational methods exist to infer time series-specific transcriptome changes, and such studies have therefore typically used unsupervised pseudotime methods. While these methods identify cell subpopulations and the transitions between them, they are not appropriate for identifying the genes that vary coherently along the time series. In addition, the orderings they estimate are based only on the major sources of variation in the data, which may not correspond to the processes related to the time labels.<h4>Results</h4>We introduce psupertime, a supervised pseudotime approach based on a regression model, which explicitly uses time-series labels as input. It identifies genes that vary coherently along a time series, in addition to pseudotime values for individual cells, and a classifier that can be used to estimate labels for new data with unknown or differing labels. We show that psupertime outperforms benchmark classifiers in terms of identifying time-varying genes and provides better individual cell orderings than popular unsupervised pseudotime techniques. psupertime is applicable to any single-cell RNA-seq dataset with sequential labels (e.g. principally time series but also drug dosage and disease progression), derived from either experimental design and provides a fast, interpretable tool for targeted identification of genes varying along with specific biological processes.<h4>Availability and implementation</h4>R package available at github.com/wmacnair/psupertime and code for results reproduction at github.com/wmacnair/psupplementary.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac227"
+  },
+  {
+    "id": "10.1093/bioinformatics/btac229",
+    "title": "Prediction of recovery from multiple organ dysfunction syndrome in pediatric sepsis patients",
+    "authors": [
+      "Fan B",
+      "Klatt J",
+      "Moor MM",
+      "Daniels LA",
+      "Sanchez-Pinto LN",
+      "Agyeman PKA",
+      "Schlapbach LJ",
+      "Borgwardt KM"
+    ],
+    "abstract": "<h4>Motivation</h4>Sepsis is a leading cause of death and disability in children globally, accounting for ∼3 million childhood deaths per year. In pediatric sepsis patients, the multiple organ dysfunction syndrome (MODS) is considered a significant risk factor for adverse clinical outcomes characterized by high mortality and morbidity in the pediatric intensive care unit. The recent rapidly growing availability of electronic health records (EHRs) has allowed researchers to vastly develop data-driven approaches like machine learning in healthcare and achieved great successes. However, effective machine learning models which could make the accurate early prediction of the recovery in pediatric sepsis patients from MODS to a mild state and thus assist the clinicians in the decision-making process is still lacking.<h4>Results</h4>This study develops a machine learning-based approach to predict the recovery from MODS to zero or single organ dysfunction by 1 week in advance in the Swiss Pediatric Sepsis Study cohort of children with blood-culture confirmed bacteremia. Our model achieves internal validation performance on the SPSS cohort with an area under the receiver operating characteristic (AUROC) of 79.1% and area under the precision-recall curve (AUPRC) of 73.6%, and it was also externally validated on another pediatric sepsis patients cohort collected in the USA, yielding an AUROC of 76.4% and AUPRC of 72.4%. These results indicate that our model has the potential to be included into the EHRs system and contribute to patient assessment and triage in pediatric sepsis patient care.<h4>Availability and implementation</h4>Code available at https://github.com/BorgwardtLab/MODS-recovery. The data underlying this article is not publicly available for the privacy of individuals that participated in the study.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac229"
+  },
+  {
+    "id": "10.1093/bioinformatics/btac262",
+    "title": "Semi-deconvolution of bulk and single-cell RNA-seq data with application to metastatic progression in breast cancer",
+    "authors": [
+      "Lei H",
+      "Guo XA",
+      "Tao Y",
+      "Ding K",
+      "Fu X",
+      "Oesterreich S",
+      "Lee AV",
+      "Schwartz R"
+    ],
+    "abstract": "<h4>Motivation</h4>Identifying cell types and their abundances and how these evolve during tumor progression is critical to understanding the mechanisms of metastasis and identifying predictors of metastatic potential that can guide the development of new diagnostics or therapeutics. Single-cell RNA sequencing (scRNA-seq) has been especially promising in resolving heterogeneity of expression programs at the single-cell level, but is not always feasible, e.g. for large cohort studies or longitudinal analysis of archived samples. In such cases, clonal subpopulations may still be inferred via genomic deconvolution, but deconvolution methods have limited ability to resolve fine clonal structure and may require reference cell type profiles that are missing or imprecise. Prior methods can eliminate the need for reference profiles but show unstable performance when few bulk samples are available.<h4>Results</h4>In this work, we develop a new method using reference scRNA-seq to interpret sample collections for which only bulk RNA-seq is available for some samples, e.g. clonally resolving archived primary tissues using scRNA-seq from metastases. By integrating such information in a Quadratic Programming framework, our method can recover more accurate cell types and corresponding cell type abundances in bulk samples. Application to a breast tumor bone metastases dataset confirms the power of scRNA-seq data to improve cell type inference and quantification in same-patient bulk samples.<h4>Availability and implementation</h4>Source code is available on Github at https://github.com/CMUSchwartzLab/RADs.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac262"
+  },
+  {
+    "id": "10.1093/bioinformatics/btac261",
+    "title": "DEMA: a distance-bounded energy-field minimization algorithm to model and layout biomolecular networks with quantitative features",
+    "authors": [
+      "Weng Z",
+      "Yue Z",
+      "Zhu Y",
+      "Chen JY"
+    ],
+    "abstract": "<h4>Summary</h4>In biology, graph layout algorithms can reveal comprehensive biological contexts by visually positioning graph nodes in their relevant neighborhoods. A layout software algorithm/engine commonly takes a set of nodes and edges and produces layout coordinates of nodes according to edge constraints. However, current layout engines normally do not consider node, edge or node-set properties during layout and only curate these properties after the layout is created. Here, we propose a new layout algorithm, distance-bounded energy-field minimization algorithm (DEMA), to natively consider various biological factors, i.e., the strength of gene-to-gene association, the gene's relative contribution weight and the functional groups of genes, to enhance the interpretation of complex network graphs. In DEMA, we introduce a parameterized energy model where nodes are repelled by the network topology and attracted by a few biological factors, i.e., interaction coefficient, effect coefficient and fold change of gene expression. We generalize these factors as gene weights, protein-protein interaction weights, gene-to-gene correlations and the gene set annotations-four parameterized functional properties used in DEMA. Moreover, DEMA considers further attraction/repulsion/grouping coefficient to enable different preferences in generating network views. Applying DEMA, we performed two case studies using genetic data in autism spectrum disorder and Alzheimer's disease, respectively, for gene candidate discovery. Furthermore, we implement our algorithm as a plugin to Cytoscape, an open-source software platform for visualizing networks; hence, it is convenient. Our software and demo can be freely accessed at http://discovery.informatics.uab.edu/dema.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac261"
+  },
+  {
+    "id": "10.1093/bioinformatics/btac241",
+    "title": "Fast and interpretable genomic data analysis using multiple approximate kernel learning",
+    "authors": [
+      "Bektaş AB",
+      "Ak Ç",
+      "Gönen M"
+    ],
+    "abstract": "<h4>Motivation</h4>Dataset sizes in computational biology have been increased drastically with the help of improved data collection tools and increasing size of patient cohorts. Previous kernel-based machine learning algorithms proposed for increased interpretability started to fail with large sample sizes, owing to their lack of scalability. To overcome this problem, we proposed a fast and efficient multiple kernel learning (MKL) algorithm to be particularly used with large-scale data that integrates kernel approximation and group Lasso formulations into a conjoint model. Our method extracts significant and meaningful information from the genomic data while conjointly learning a model for out-of-sample prediction. It is scalable with increasing sample size by approximating instead of calculating distinct kernel matrices.<h4>Results</h4>To test our computational framework, namely, Multiple Approximate Kernel Learning (MAKL), we demonstrated our experiments on three cancer datasets and showed that MAKL is capable to outperform the baseline algorithm while using only a small fraction of the input features. We also reported selection frequencies of approximated kernel matrices associated with feature subsets (i.e. gene sets/pathways), which helps to see their relevance for the given classification task. Our fast and interpretable MKL algorithm producing sparse solutions is promising for computational biology applications considering its scalability and highly correlated structure of genomic datasets, and it can be used to discover new biomarkers and new therapeutic guidelines.<h4>Availability and implementation</h4>MAKL is available at https://github.com/begumbektas/makl together with the scripts that replicate the reported experiments. MAKL is also available as an R package at https://cran.r-project.org/web/packages/MAKL.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac241"
+  },
+  {
+    "id": "10.1093/bioinformatics/btac238",
+    "title": "CALDERA: finding all significant de Bruijn subgraphs for bacterial GWAS",
+    "authors": [
+      "Roux de Bézieux H",
+      "Lima L",
+      "Perraudeau F",
+      "Mary A",
+      "Dudoit S",
+      "Jacob L"
+    ],
+    "abstract": "<h4>Motivation</h4>Genome-wide association studies (GWAS), aiming to find genetic variants associated with a trait, have widely been used on bacteria to identify genetic determinants of drug resistance or hypervirulence. Recent bacterial GWAS methods usually rely on k-mers, whose presence in a genome can denote variants ranging from single-nucleotide polymorphisms to mobile genetic elements. This approach does not require a reference genome, making it easier to account for accessory genes. However, a same gene can exist in slightly different versions across different strains, leading to diluted effects.<h4>Results</h4>Here, we overcome this issue by testing covariates built from closed connected subgraphs (CCSs) of the de Bruijn graph defined over genomic k-mers. These covariates capture polymorphic genes as a single entity, improving k-mer-based GWAS both in terms of power and interpretability. However, a method naively testing all possible subgraphs would be powerless due to multiple testing corrections, and the mere exploration of these subgraphs would quickly become computationally intractable. The concept of testable hypothesis has successfully been used to address both problems in similar contexts. We leverage this concept to test all CCSs by proposing a novel enumeration scheme for these objects which fully exploits the pruning opportunity offered by testability, resulting in drastic improvements in computational efficiency. Our method integrates with existing visual tools to facilitate interpretation.<h4>Availability and implementation</h4>We provide an implementation of our method, as well as code to reproduce all results at https://github.com/HectorRDB/Caldera_ISMB.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac238"
+  },
+  {
+    "id": "10.1093/bioinformatics/btac219",
+    "title": "Synthetic-to-real: instance segmentation of clinical cluster cells with unlabeled synthetic training",
+    "authors": [
+      "Zhao M",
+      "Wang S",
+      "Shi F",
+      "Jia C",
+      "Sun X",
+      "Chen S"
+    ],
+    "abstract": "<h4>Motivation</h4>The presence of tumor cell clusters in pleural effusion may be a signal of cancer metastasis. The instance segmentation of single cell from cell clusters plays a pivotal role in cluster cell analysis. However, current cell segmentation methods perform poorly for cluster cells due to the overlapping/touching characters of clusters, multiple instance properties of cells, and the poor generalization ability of the models.<h4>Results</h4>In this article, we propose a contour constraint instance segmentation framework (CC framework) for cluster cells based on a cluster cell combination enhancement module. The framework can accurately locate each instance from cluster cells and realize high-precision contour segmentation under a few samples. Specifically, we propose the contour attention constraint module to alleviate over- and under-segmentation among individual cell-instance boundaries. In addition, to evaluate the framework, we construct a pleural effusion cluster cell dataset including 197 high-quality samples. The quantitative results show that the numeric result of APmask is > 90%, a more than 10% increase compared with state-of-the-art semantic segmentation algorithms. From the qualitative results, we can observe that our method rarely has segmentation errors.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac219"
+  },
+  {
+    "id": "10.1093/bioinformatics/btac259",
+    "title": "PhyloPGM: boosting regulatory function prediction accuracy using evolutionary information",
+    "authors": [
+      "Ahsan F",
+      "Yan Z",
+      "Precup D",
+      "Blanchette M"
+    ],
+    "abstract": "<h4>Motivation</h4>The computational prediction of regulatory function associated with a genomic sequence is of utter importance in -omics study, which facilitates our understanding of the underlying mechanisms underpinning the vast gene regulatory network. Prominent examples in this area include the binding prediction of transcription factors in DNA regulatory regions, and predicting RNA-protein interaction in the context of post-transcriptional gene expression. However, existing computational methods have suffered from high false-positive rates and have seldom used any evolutionary information, despite the vast amount of available orthologous data across multitudes of extant and ancestral genomes, which readily present an opportunity to improve the accuracy of existing computational methods.<h4>Results</h4>In this study, we present a novel probabilistic approach called PhyloPGM that leverages previously trained TFBS or RNA-RBP binding predictors by aggregating their predictions from various orthologous regions, in order to boost the overall prediction accuracy on human sequences. Throughout our experiments, PhyloPGM has shown significant improvement over baselines such as the sequence-based RNA-RBP binding predictor RNATracker and the sequence-based TFBS predictor that is known as FactorNet. PhyloPGM is simple in principle, easy to implement and yet, yields impressive results.<h4>Availability and implementation</h4>The PhyloPGM package is available at https://github.com/BlanchetteLab/PhyloPGM.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac259"
+  },
+  {
+    "id": "10.1093/bioinformatics/btac244",
+    "title": "The minimizer Jaccard estimator is biased and inconsistent",
+    "authors": [
+      "Belbasi M",
+      "Blanca A",
+      "Harris RS",
+      "Koslicki D",
+      "Medvedev P"
+    ],
+    "abstract": "<h4>Motivation</h4>Sketching is now widely used in bioinformatics to reduce data size and increase data processing speed. Sketching approaches entice with improved scalability but also carry the danger of decreased accuracy and added bias. In this article, we investigate the minimizer sketch and its use to estimate the Jaccard similarity between two sequences.<h4>Results</h4>We show that the minimizer Jaccard estimator is biased and inconsistent, which means that the expected difference (i.e. the bias) between the estimator and the true value is not zero, even in the limit as the lengths of the sequences grow. We derive an analytical formula for the bias as a function of how the shared k-mers are laid out along the sequences. We show both theoretically and empirically that there are families of sequences where the bias can be substantial (e.g. the true Jaccard can be more than double the estimate). Finally, we demonstrate that this bias affects the accuracy of the widely used mashmap read mapping tool.<h4>Availability and implementation</h4>Scripts to reproduce our experiments are available at https://github.com/medvedevgroup/minimizer-jaccard-estimator/tree/main/reproduce.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac244"
+  },
+  {
+    "id": "10.1093/bioinformatics/btac230",
+    "title": "Exploring automatic inconsistency detection for literature-based gene ontology annotation",
+    "authors": [
+      "Chen J",
+      "Goudey B",
+      "Zobel J",
+      "Geard N",
+      "Verspoor K"
+    ],
+    "abstract": "<h4>Motivation</h4>Literature-based gene ontology annotations (GOA) are biological database records that use controlled vocabulary to uniformly represent gene function information that is described in the primary literature. Assurance of the quality of GOA is crucial for supporting biological research. However, a range of different kinds of inconsistencies in between literature as evidence and annotated GO terms can be identified; these have not been systematically studied at record level. The existing manual-curation approach to GOA consistency assurance is inefficient and is unable to keep pace with the rate of updates to gene function knowledge. Automatic tools are therefore needed to assist with GOA consistency assurance. This article presents an exploration of different GOA inconsistencies and an early feasibility study of automatic inconsistency detection.<h4>Results</h4>We have created a reliable synthetic dataset to simulate four realistic types of GOA inconsistency in biological databases. Three automatic approaches are proposed. They provide reasonable performance on the task of distinguishing the four types of inconsistency and are directly applicable to detect inconsistencies in real-world GOA database records. Major challenges resulting from such inconsistencies in the context of several specific application settings are reported. This is the first study to introduce automatic approaches that are designed to address the challenges in current GOA quality assurance workflows. The data underlying this article are available in Github at https://github.com/jiyuc/AutoGOAConsistency.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac230"
+  },
+  {
+    "id": "10.1093/bioinformatics/btac223",
+    "title": "ReadBouncer: precise and scalable adaptive sampling for nanopore sequencing",
+    "authors": [
+      "Ulrich JU",
+      "Lutfi A",
+      "Rutzen K",
+      "Renard BY"
+    ],
+    "abstract": "<h4>Motivation</h4>Nanopore sequencers allow targeted sequencing of interesting nucleotide sequences by rejecting other sequences from individual pores. This feature facilitates the enrichment of low-abundant sequences by depleting overrepresented ones in-silico. Existing tools for adaptive sampling either apply signal alignment, which cannot handle human-sized reference sequences, or apply read mapping in sequence space relying on fast graphical processing units (GPU) base callers for real-time read rejection. Using nanopore long-read mapping tools is also not optimal when mapping shorter reads as usually analyzed in adaptive sampling applications.<h4>Results</h4>Here, we present a new approach for nanopore adaptive sampling that combines fast CPU and GPU base calling with read classification based on Interleaved Bloom Filters. ReadBouncer improves the potential enrichment of low abundance sequences by its high read classification sensitivity and specificity, outperforming existing tools in the field. It robustly removes even reads belonging to large reference sequences while running on commodity hardware without GPUs, making adaptive sampling accessible for in-field researchers. Readbouncer also provides a user-friendly interface and installer files for end-users without a bioinformatics background.<h4>Availability and implementation</h4>The C++ source code is available at https://gitlab.com/dacs-hpi/readbouncer.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac223"
+  }
+]
