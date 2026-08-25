@@ -1,0 +1,867 @@
+[
+  {
+    "id": "7hIc6bK7tR",
+    "title": "Uncertainty-Guided Model Selection for Tabular Foundation Models in Biomolecule Efficacy Prediction",
+    "authors": [
+      "Jie Li",
+      "Andrew McCarthy",
+      "Zhizhuo Zhang"
+    ],
+    "abstract": "In-context learners like TabPFN are promising for biomolecule efficacy prediction, where established molecular feature sets and relevant experimental results can serve as powerful contextual examples. However, their performance is highly sensitive to the provided context, making strategies like post-hoc ensembling of models trained on different data subsets a common approach. An open question is how to select the best models for the ensemble without access to ground truth labels. In this study, we investigate an uncertainty-guided strategy for model selection. We demonstrate on an siRNA knockdown efficacy task that a TabPFN model using simple sequence-based features can surpass specialized state-of-the-art predictors. We also show that the model's predicted inter-quantile range (IQR), a measure of its uncertainty, strongly correlates with true prediction error. By selecting and averaging an ensemble of models with the lowest mean IQR, we achieve superior performance compared to naive ensembling or using a single model trained on all available data. This finding highlights model uncertainty as a powerful, label-free heuristic for optimizing biomolecule efficacy predictions.",
+    "topic": "in context learning; post hoc ensembe; siRNA efficacy predition",
+    "conference": "fm4ls-neurips",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/323b7ac40b8274936c2633da0f50c7ff3ea81809.pdf"
+  },
+  {
+    "id": "sFNomCGcA8",
+    "title": "Not all representations are equal: Comparing protein language models for antibody thermostability prediction",
+    "authors": [
+      "Rudrasis Chakraborty",
+      "Jacob Pettit",
+      "Mary S Silva",
+      "Emily Alipio Lyon",
+      "Anastassya Davis",
+      "Emilia Solomon",
+      "Joseph Sanchez",
+      "Colin Singer Kruse",
+      "Corey Quackenbush",
+      "Yuliya Kunde",
+      "Antonietta M. Lillo",
+      "Tavish Malcolm McDonald",
+      "T.S. Jayram",
+      "Barry Y. Chen",
+      "Daniel faissol",
+      "Ana Paula De Oliveira Sales"
+    ],
+    "abstract": "Predicting antibody thermostability is an important and challenging task in computational antibody design. Antibodies which are not thermostable may be incompatible with mass production and distribution. To this end, we assess how different protein language model (pLM) representations affect performance in the downstream task of predicting antibody thermostability. Our findings demonstrate that the choice of pLM has a large effect on predictor performance, even when data, model size, and hyperparameters are held stable. We also show that a performance boost may be obtained by combining pLM representations.",
+    "topic": "LLM; Thermostability",
+    "conference": "fm4ls-neurips",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/993b6e7068e2444a64f259b495f60f2e3052c8b5.pdf"
+  },
+  {
+    "id": "PXxfD7xrl5",
+    "title": "Motif-aware Tokenization of the Genome: Towards Interpretable Modeling of Gene Regulation",
+    "authors": [
+      "Parmida Davarmanesh",
+      "Adityanarayanan Radhakrishnan",
+      "Ashia C. Wilson",
+      "Ruochi Zhang",
+      "Jimin Tan",
+      "Joshua Pereira",
+      "Bo Xia"
+    ],
+    "abstract": "Genomic Language Models achieve strong performance on biological tasks but rely on tokenization methods that overlook the complexity of the genome. We introduce a biologically grounded tokenization strategy that partitions the DNA sequence into meaningful “words” based on transcription factor (TF) motifs. Embedding biological insight into vocabulary design preserves predictive power while potentially improving interpretability and computational efficiency. Proof-of-concept results demonstrate that motif-informed tokens generate representations that better capture the language of gene regulation, opening the door to models that are both highly predictive and capable of decoding the regulatory genomic grammar vital for drug discovery and precision medicine.",
+    "topic": "genomic language models; tokenization; interpretability; genome regulation; DNA",
+    "conference": "fm4ls-neurips",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/1ffc66607a8fff6f3cd732ed2768634d851d8342.pdf"
+  },
+  {
+    "id": "JkKS5vvWLd",
+    "title": "Revealing bias in antibody language models through systematic training data processing with OAS-explore",
+    "authors": [
+      "Wiona Sophie Glänzer",
+      "Sai T. Reddy",
+      "Alexander Yermanos"
+    ],
+    "abstract": "Antibody language models (LMs) trained on immune receptor sequences have been applied to diverse immunological tasks such as humanization and prediction of antigen specificity. While promising, these models are often trained on datasets with limited donor diversity, raising concerns that biases in the training data may hinder their generalizability. To quantify the impact of biased training data, we introduce an open-source processing pipeline for the 2.4 billion unpaired antibody sequences in the Observed Antibody Space (OAS) database, enabling customizable filtering and balanced sampling by donor, species, chain type and other metadata. Analysis of OAS revealed that 13 individuals contribute over 70% of human antibody sequences. Using our pipeline, we trained 17 RoBERTa antibody LMs on datasets of different compositions. Models failed to generalize across chain types and showed limited transfer between human and mouse repertoires. Both\nindividual- and batch-specific effects influenced model performance, and expanding donor diversity did not improve generalization to unseen individuals from unseen publications.",
+    "topic": "antibodies; antibody language modeling; training data diversity; immunology",
+    "conference": "fm4ls-neurips",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/4727bef3d48e32cdc91cf1518db71ca1e70c825e.pdf"
+  },
+  {
+    "id": "8YSB7aZ0xy",
+    "title": "A Multi-Modal Deep Learning Model for Drug Potency Prediction: Leveraging Features from Physics-Based Docking and Advanced Co-Folding Methods",
+    "authors": [
+      "Claire Suen",
+      "BoRam Lee",
+      "Matthew Adrian",
+      "Jeffrey Zhou",
+      "Hyeyun Jung",
+      "David He",
+      "Gean Hu",
+      "Kelly Hui",
+      "Aditi Jain",
+      "Qamil Mirza Bin Abdullah",
+      "Milena Novakovic",
+      "Joseph Park",
+      "Winston Qian",
+      "Aarav Shah",
+      "Xina Wang",
+      "Yunsie Chung",
+      "Alan C Cheng"
+    ],
+    "abstract": "In drug discovery, the accurate prediction of a compound's potency is crucial for efficient design and optimization of small molecules as drugs. While machine learning and deep learning approaches can be useful, they generally require significant amounts of data that is not typically available in drug discovery programs in practice. We address this limitation by developing a multi-modal deep learning framework that enhances a graph neural network, Chemprop, by integrating explicit protein-ligand interaction features. We generated protein-ligand poses using both a physics-based docking method and two deep learning-based co-folding methods, Boltz-1 and Boltz-2. Our model demonstrates improved predictive accuracy for $IC_{50}$ values for two diverse targets, CYP2D6 Inhibition and EGFR kinase. Additionally, our methods leveraging co-folding consistently outperforms the traditional docking-based approach. Feature selection analysis further revealed that pi-stacking interactions were the most informative, appearing in the top-performing feature sets across all methods. In low-data regimes, the PLIP-informed models consistently outperformed established baselines. This work provides a scalable method to fuse complementary data modalities, offering both enhanced predictive performance and valuable mechanistic insights into drug-target interactions.",
+    "topic": "Drug Discovery; Deep Learning; D-MPNN; Co-folding; Docking; Pre-trained models",
+    "conference": "fm4ls-neurips",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/1d0001b2175e6c3b8d88d9ddaba38ce8ff269712.pdf"
+  },
+  {
+    "id": "7Y3DEpuEQm",
+    "title": "BioCLIP 2: Emergent Properties from Scaling Hierarchical Contrastive Learning",
+    "authors": [
+      "Jianyang Gu",
+      "Samuel Stevens",
+      "Elizabeth G Campolongo",
+      "Matthew J Thompson",
+      "Net Zhang",
+      "Jiaman Wu",
+      "Andrei Kopanev",
+      "Zheda Mai",
+      "Alexander E. White",
+      "James Balhoff",
+      "Wasila Dahdul",
+      "Daniel Rubenstein",
+      "Hilmar Lapp",
+      "Tanya Berger-Wolf",
+      "Wei-Lun Chao",
+      "Yu Su"
+    ],
+    "abstract": "Foundation models trained at scale exhibit remarkable emergent behaviors, learning new capabilities beyond their initial training objectives. \nWe find such emergent behaviors in biological vision models via large-scale contrastive vision-language training. To achieve this, we first curate TreeOfLife-200M, comprising 214 million images of living organisms, the largest and most diverse biological organism image dataset to date. We then train BioCLIP 2 on TreeOfLife-200M to distinguish different species. Despite the narrow training objective, BioCLIP 2 yields extraordinary accuracy when applied to various biological visual tasks such as habitat classification and trait prediction. We identify emergent properties in the learned embedding space of BioCLIP 2. At the inter-species level, the embedding distribution of different species aligns closely with functional and ecological meanings (e.g., beak sizes and habitats). At the intra-species level, instead of being diminished, the intra-species variations (e.g., life stages and sexes) are preserved and better separated in subspaces orthogonal to inter-species distinctions. We provide formal proof and analyses to explain why hierarchical supervision and contrastive objectives encourage these emergent properties. Crucially, our results reveal that these properties become increasingly significant with larger-scale training data, leading to a biologically meaningful embedding space.",
+    "topic": "AI for science; organismal biology; foundation models",
+    "conference": "fm4ls-neurips",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/52388f337fea536096a3af8e0b19d72030d81e37.pdf"
+  },
+  {
+    "id": "wZkXSbC3S7",
+    "title": "Hyperbolic Multimodal Representation Learning for Biological Taxonomies",
+    "authors": [
+      "ZeMing Gong",
+      "Chuanqi Tang",
+      "Xiaoliang Huo",
+      "Nicholas Pellegrino",
+      "Austin Wang",
+      "Graham W. Taylor",
+      "Angel X Chang",
+      "Scott C. Lowe",
+      "Joakim Bruslund Haurum"
+    ],
+    "abstract": "Taxonomic classification in biodiversity research involves organizing biological specimens into structured hierarchies based on evidence, which can come from multiple modalities such as images and genetic information. We investigate whether hyperbolic networks can provide a better embedding space for such hierarchical models. Our method embeds multimodal inputs into a shared hyperbolic space using contrastive and a novel stacked entailment-based objective. Experiments on the BIOSCAN-1M dataset show that hyperbolic embedding achieves competitive performance with Euclidean baselines, and outperforms all other models on unseen species classification using DNA barcodes. However, fine-grained classification and open-world generalization remain challenging. Our framework offers a structure-aware foundation for biodiversity modelling, with potential applications to species discovery, ecological monitoring, and conservation efforts.",
+    "topic": "Hyperbolic embeddings; Multimodal learning; Hierarchical classification; Biodiversity monitoring; DNA barcodes; Taxonomic hierarchy; Entailment loss; Species identification",
+    "conference": "fm4ls-neurips",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/b78e3ef8d701c9a6fd65d2535568b38d4c5ba377.pdf"
+  },
+  {
+    "id": "1QjLmB3J3R",
+    "title": "GRAM-DTI: Adaptive Multimodal Representation Learning for Drug–Target Interaction Prediction",
+    "authors": [
+      "Feng Jiang",
+      "Amina Mollaysa",
+      "Hehuan Ma",
+      "Tommaso Mansi",
+      "Junzhou Huang",
+      "Mangal Prakash",
+      "Rui Liao"
+    ],
+    "abstract": "Drug target interaction (DTI) prediction is central to computational drug discovery. While deep learning has advanced DTI modeling, existing approaches primarily rely on SMILES–protein pairs, failing to exploit rich multimodal information available for molecules and proteins. We introduce GRAM-DTI, a pre-training framework that integrates multimodal molecular and protein inputs into unified representations. GRAM-DTI extends volume-based contrastive learning to four modalities, capturing higher-order semantic alignment beyond pairwise approaches. We propose adaptive modality dropout to dynamically regulate each modality's contribution during pre-training, and incorporate IC50 activity measurements, when available, as weak supervision to ground representations in biologically meaningful interaction strengths. Experiments on four datasets demonstrate that GRAM-DTI consistently outperforms state-of-the-art baselines, highlighting the benefits of multimodal alignment and adaptive modality utilization for robust DTI prediction.",
+    "topic": "Drug target interaction prediction; Multimodal alignment; Adaptive modality regulation",
+    "conference": "fm4ls-neurips",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/b31bce3ec52a325e909f795d05c25cc5b27049de.pdf"
+  },
+  {
+    "id": "SYde5bQKJN",
+    "title": "Explainable Insulin Pump Control with LLM Controllers for Type 1 Diabetes",
+    "authors": [
+      "Maya Sarkar"
+    ],
+    "abstract": "Living with Type 1 Diabetes (T1D) is a constant balancing act, requiring patients to make complex decisions based on endless streams of data. While Artificial Pancreas Systems (APS) powered by Reinforcement Learning (RL) have shown promise in automating insulin delivery, their \"black-box\" nature makes it hard for patients and doctors to trust them fully. This paper presents LLM-T1D, a groundbreaking approach that combines the precision of RL with the clear, human-like reasoning of Large Language Models (LLMs) to create a more transparent and reliable insulin pump controller. By training an expert RL system and then distilling its knowledge into fine-tuned Llama 3.1 8B and Qwen3 8B models using a LoRA architecture, we developed a controller that not only matches or surpasses the RL system’s performance but also explains its decisions in plain, understandable language. Tested on the FDA-approved UVA/Padova T1D simulator, the LLM controllers deliver excellent blood sugar control while giving patients clear, data-driven insights they can trust. This hybrid system transforms a complex algorithm into an approachable \"copilot,\" paving the way for safer, more understandable, and patient-centered AI solutions for managing chronic conditions like T1D.",
+    "topic": "LLM Control; Insulin Pump Control; Type 1 Diabetes; Artificial Pancreas Systems; Reinforcement Learning; Large Language Models; LLM; Explainable AI; XAI; Trustworthy AI; Policy Distillation; LoRA; Fine-Tuning; Llama 3.1; Qwen3; Simglucose",
+    "conference": "fm4ls-neurips",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/7bdd38aa3292358889931e31900420aadbe65528.pdf"
+  },
+  {
+    "id": "wZDGdcUaZ7",
+    "title": "FlashRNA: an efficient model for regulatory genomics",
+    "authors": [
+      "Andrew J Jung",
+      "ALICE J. GAO",
+      "Leo J Lee",
+      "Brendan Frey"
+    ],
+    "abstract": "Transformer-based genomic sequence-to-function models effectively capture long-range genomic interactions but incur high computational costs due to the quadratic complexity of their self-attention layers. In this work, we introduce FlashRNA, which significantly improves computational and memory efficiencies through FlashAttention, advancements in model architecture, and optimized training setup. FlashRNA achieves comparable or slightly improved predictive performance compared to similar sized Borzoi or Flashzoi, notably without depending on pre-trained weights -- a major limitation of Flashzoi. Remarkably, we trained FlashRNA from scratch in one day, significantly accelerating training and inference speed. These improvements can facilitate further developments in models for regulatory genomics by reducing computational cost. We demonstrate this in two downstream applications: 1) we train a large ensemble of 16 FlashRNA models and distill them into a single model to improve performance while maintaining efficiency, and 2) we fine-tune FlashRNA on two RNA property prediction tasks to achieve competitive performance compared to state-of-the-art task specific models.",
+    "topic": "genomics; sequence-to-function models; efficient transformers",
+    "conference": "fm4ls-neurips",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/ce794fbe58af9b0abc25cb859b5c418e4445b3ce.pdf"
+  },
+  {
+    "id": "ajKzbnaH0d",
+    "title": "A Comparative Study of Semi-supervised Deep Anomaly Detection and LLMs for Monitoring Patients with Severe Health Status Undergoing Radiotherapy",
+    "authors": [
+      "Yang Yan",
+      "Xinglei Shen",
+      "Ronald Chen",
+      "Hao Gao",
+      "Chen Zhao",
+      "Guihong Wan",
+      "Yi He",
+      "Zhong Chen"
+    ],
+    "abstract": "This study assesses semi-supervised deep anomaly detection (AD) methods and novel zero-shot LLM prompts for identifying prostate cancer patients at risk of severe radiotherapy-induced symptoms via patient-reported outcomes (PROs). While LLMs underperformed compared to semi-supervised AD models in key metrics (e.g., precision, recall, and F1-score), they provided valuable decision explanations and required no training data. This highlights their potential for straightforward clinical deployment without the need for extensive model development.",
+    "topic": "Semi-supervised anomaly detection; Patient-reported outcomes (PROs); zero-shot Large Language Model; Llama 3.1-8B; Radiotherapy",
+    "conference": "fm4ls-neurips",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/322cd8a70fdadbadb1ad274ec8ec6bc37e39c43c.pdf"
+  },
+  {
+    "id": "KXfnfdix12",
+    "title": "Multimodal Survival Analysis with Locally Deployable Large Language Models",
+    "authors": [
+      "Moritz Gögl",
+      "Peter Watkinson",
+      "Christopher Yau"
+    ],
+    "abstract": "We study multimodal survival analysis integrating clinical text, tabular covariates, and genomic profiles using locally deployable LLMs. As many institutions face tight computational and privacy constraints, this setting motivates lightweight, on‑premises models. Our approach jointly estimates calibrated survival probabilities and generates concise, evidence‑grounded prognosis text via teacher–student distillation and principled multimodal fusion. On a TCGA cohort, it outperforms baselines, avoids reliance on cloud services and associated privacy concerns, and reduces the risk of hallucinated or miscalibrated estimates from base LLMs.",
+    "topic": "Large Language Models; Survival Analysis; Multimodal Learning",
+    "conference": "fm4ls-neurips",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/4485a0ad0adf5c391aace389935474453d67e9cd.pdf"
+  },
+  {
+    "id": "uGrHjgDbBF",
+    "title": "Predicting Influenza Reassortment Potential Using Foundation Models and Genetic Algorithms for Pandemic Preparedness",
+    "authors": [
+      "Seeraja Konnur"
+    ],
+    "abstract": "Influenza A virus (IAV) poses a persistent global\nthreat due to its rapid evolution through reassort-\nment, which hampers vaccine design, antiviral\ndevelopment, and causes recurring outbreaks. We\npresent a novel computational framework that\ncombines DNABERT-2, a foundation model for\ngenomic sequences, with genetic algorithms to\npredict reassortment events. Using environmen-\ntal surveillance data, our method identifies both\nknown and hypothetical reassortants and scores\nthem based on biological plausibility. Dimension-\nality reduction reveals clear separation between\nreassortant and non-reassortant embeddings. This\nenables early detection of high-risk strains, of-\nfering a scalable tool for pandemic preparedness.\nOur approach supports proactive strategies for\nvaccine, therapeutic, and economic resilience.",
+    "topic": "Reassortment; Influenza; Foundation Model; Genetic Algorithm",
+    "conference": "fm4ls-neurips",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/2a330f8e1324b7071b423359413e114d3f2a100e.pdf"
+  },
+  {
+    "id": "QOMkmXVyiv",
+    "title": "Predicting cellular responses to perturbation across diverse contexts with State",
+    "authors": [
+      "Abhinav Adduri",
+      "Dhruv Gautam",
+      "Beatrice Bevilacqua",
+      "Alishba Imran",
+      "Rohan Shah",
+      "Mohsen Naghipourfar",
+      "Noam Teyssier",
+      "Rajesh Ilango",
+      "Sanjay Nagaraj",
+      "Chiara Ricci-Tam",
+      "Chris Carpenter",
+      "Vishvak Subramanyam",
+      "Aidan Winters",
+      "Mingze Dong",
+      "Sravya Tirukkovalur",
+      "Jeremy Sullivan",
+      "Brian Plosky",
+      "Basak Eraslan",
+      "Nicholas D. Youngblut",
+      "Jure Leskovec",
+      "Luke A. Gilbert",
+      "Silvana Konermann",
+      "Patrick D Hsu",
+      "Alexander Dobin",
+      "Dave P. Burke",
+      "Hani Goodarzi",
+      "Yusuf H Roohani"
+    ],
+    "abstract": "Cellular responses to perturbations are a cornerstone for understanding biological mechanisms and selecting drug targets. While machine learning models offer tremendous potential for predicting perturbation effects, they currently struggle to generalize to unobserved cellular contexts. Here, we introduce STATE, a transformer model that predicts perturbation effects while accounting for cellular heterogeneity within and across experiments. STATE predicts perturbation effects across sets of cells and is trained using gene expression data from over 100 million perturbed cells. STATE improved discrimination of effects on large datasets by more than 30% and identified differentially expressed genes across genetic, signaling and chemical perturbations with significantly improved accuracy. Using its cell embedding trained on observational data from 167 million cells, STATE identified strong perturbations in novel cellular contexts where no perturbations were observed during training. Overall, the performance and flexibility of STATE sets the stage for scaling the development of virtual cell models.",
+    "topic": "machine learning; computational biology; transcriptomics; transformers; cell state; virtual cell; perturbation prediction",
+    "conference": "fm4ls-neurips",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/5e7a357fedb16281dfc09b7933cc8ef625da951f.pdf"
+  },
+  {
+    "id": "dSVhT9WnVC",
+    "title": "Learning In-Silico Maps of Transcription Factor Binding and Cooperativity interactions",
+    "authors": [
+      "Ruben Solozabal",
+      "Albert Baichorov",
+      "Tamir Avioz",
+      "Le Song",
+      "Ariel Afek",
+      "Martin Takáč"
+    ],
+    "abstract": "Genomic deep learning has rapidly advanced the prediction of transcription factor (TF) binding and other genomic profiles directly from DNA sequence, yet the biological mechanisms captured by these models remain largely unexplored. In this work, we investigate how state-of-the-art genomic models encode the regulatory logic underlying TF binding. We first systematically analyze the model-derived patterns for each TF, revealing that models frequently rely on broad contextual co-associations of motifs to predict a TF to bind. To quantify the dispersity of this association, we introduce the \\textit{Jaccard Overlap Score (JOS)}, which distinguishes concentrated recognition of canonical motifs from more distributed binding signatures. Next, we investigate TF--TF cooperativity through \\textit{in silico} knockout experiments, revealing pronounced self-dependence of key regulators and cell-type--specific cooperative grammars. Together, our results provide a mechanistic interpretation of genomic deep learning models, demonstrating both their ability to capture biologically meaningful combinatorial regulation and their reliance on contextual sequence features. Our code is publicly available at https://github.com/AlbertBay/EpiBinder.",
+    "topic": "genomic models; DNA; transcription factor binding",
+    "conference": "fm4ls-neurips",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/8381c1631fba15476cb3fc0d685f459a60119a2a.pdf"
+  },
+  {
+    "id": "mL4OENJWHw",
+    "title": "HIP-HOP: Invariants for 2D Tilings with Biomedical Case Study",
+    "authors": [
+      "Madhava Gaikwad",
+      "Ashwini Ramchandra Doke"
+    ],
+    "abstract": "We present HIP-HOP, a pair of geometric invariants for two-dimensional cellular tilings.\nHOP captures orientational order among neighbors, while HOI quantifies polygonal regularity.\nBoth are invariant to translation, rotation, and scale, and robust to segmentation noise and null models.\nApplied to corneal endothelium, HIP-HOP separates control and PMMA groups more consistently than standard morphometric indices. HIP-HOP thus serves as a clinically relevant descriptor and an interpretable benchmark for representation learning.",
+    "topic": "Multi-modal foundation models; Multi-modal LLMs; Multi-omics representation learning; Generative models for biomolecular design",
+    "conference": "fm4ls-neurips",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/6b47b72220b0b2e9bee279a70271d083dcedc21c.pdf"
+  },
+  {
+    "id": "tIbil1qAZb",
+    "title": "Multimodal Alignment Reveals Interpretable Gene–Morphology Links in Perineuronal Net Pathology",
+    "authors": [
+      "Wenjun Liu",
+      "Saeed Hassanpour"
+    ],
+    "abstract": "Perineuronal nets are extracellular matrix structures that enmesh specific neurons, and their disruption has been linked to glioma progression and epilepsy. Yet most studies analyze pathology images, gene expression, or clinical variables in isolation, limiting our understanding of how perineuronal net changes connect to disease. We present a joint multimodal framework that learns aligned embeddings from three inputs: pathology images, RNA expression, and clinical covariates, using a contrastive objective with cross-modality reconstruction and pathway-informed regularization. The approach supports missing modalities via modality dropout and gated fusion at inference, and provides interpretability through pathway enrichment analyses and attention maps that highlight morphology consistent with perineuronal net biology. On a small, patient-level multimodal cohort, the method outperforms early/intermediate/late fusion and unimodal baselines and yields transparent gene--morphology associations, suggesting a practical route to integrating limited multimodal data for perineuronal net pathology.",
+    "topic": "Multimodal Learning; Perineuronal nets",
+    "conference": "fm4ls-neurips",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/f0e2a26a159da90f892b5335e6fca9161b3d5a7d.pdf"
+  },
+  {
+    "id": "M0sNFCtSd8",
+    "title": "Disentangling Protein Family Signals in Protein Language Models: Composition or Motifs?",
+    "authors": [
+      "Sohel Bashar",
+      "M Saifur Rahman"
+    ],
+    "abstract": "We test whether family-level separation in protein language model (pLMs) embeddings persists after controlling for amino-acid composition. For six Pfam families and four models (ESM-2, ProtBERT, ProtXLNet, ProteinBERT), we compute layer-wise within-family (In) and between-family (Out) cosine similarities for true sequences and composition-preserving shuffles. We report a ratio-based fidelity (In/Out) and a difference metric ∆ = In−Out, and visualize the geometry with t-SNE against a pooled negative bank. Across families and models, shuffled curves closely track true curves in both fidelity and ∆, and frequently match or exceed them. ProtXLNet’s fidelity rises with depth, but the shuffled curve is typically comparable or higher; ProtBERT’s mid-layer spike is mirrored by shuffles; ESM-2 and ProteinBERT are weak overall. t-SNE strips show compact clusters for both true and shuffled sequences, with negatives separated. These results indicate that amino-acid composition accounts for much of the apparent family fidelity in current embeddings, motivating composition-controlled baselines and reporting of both ratio- and difference-based metrics",
+    "topic": "protein language models; amino acid composition; protein families; embeddings; representation learning",
+    "conference": "fm4ls-neurips",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/e8ba0a86ebefe7527cd37f2320d7dc2850da0b73.pdf"
+  },
+  {
+    "id": "Cwz0l16Lk4",
+    "title": "Multitask Asynchronous Bidirectional Multimodal Agent for Personalized Treatment Companions",
+    "authors": [
+      "Muhamad Iqbal Januadi Putra",
+      "Raka Admiral Abdurrahman",
+      "Vincent Alexander"
+    ],
+    "abstract": "Personalized treatment requires intelligent systems that can continuously monitor patients, adapt to evolving conditions, and communicate naturally with both patients and clinicians. Existing healthcare technologies often rely on unimodal data streams (e.g., wearables or medical imaging) or offline analysis, limiting their responsiveness and interactivity. In this work, we demonstrated a Multitask Asynchronous Bidirectional Multimodal Agent powered by a multimodal large language model (MLLM) and integrated with retrieval-augmented generation (RAG) from multimodal sources, including text, images, and video. The agent combines vision (video) & audio (speech) for patient monitoring & natural interaction, supporting real-time personalized treatment. We define three representative asynchronous tasks: (i) vision-based patient monitoring for mobility, posture, and facial cues, (ii) aggregation of health metrics for adaptive treatment planning, and (iii) speech-based dialogue to engage patients and support clinician decision-making. Our architecture integrates Gemini’s multimodal reasoning with a WebSocket-based backend for bidirectional streaming interaction, enabling both proactive alerts and conversational explanations. Evaluation on simulated healthcare monitoring datasets demonstrates improved accuracy in patient state recognition, reduced latency in adaptive feedback, and enhanced interpretability compared to unimodal baselines. This work highlights the potential of multimodal agents to act as personalized treatment companions, advancing adaptive, human-centered healthcare. Evaluation in simulated healthcare communication scenarios shows strong performance with a Usefulness Metric of 0.78, a Relevance Metric of 0.93, a Hallucination Metric of 0.3, a Contain Metric of 0.88, an Equals Metric of 0.88, and a Sentence BLEU score of 0.98. These results highlight the potential of multimodal agents to act as personalized treatment companions, advancing adaptive, human-centered healthcare.",
+    "topic": "asynchronous task; bidirectional streaming; multimodal agent; multimodal RAG; personalized treatment",
+    "conference": "fm4ls-neurips",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/dd1f0a6d4d19f8e0e2cd6cb5f7fa96d9b1b42b6c.pdf"
+  },
+  {
+    "id": "uAoMKadOZR",
+    "title": "Aligning Protein Language Models to Stability Preferences using 1M+ Experimental Mutant Effects",
+    "authors": [
+      "Niksa Praljak",
+      "Sung-Won Hwang",
+      "Cheng-Yen Lin",
+      "Allen Po-Chih Liu",
+      "Andrew Ferguson"
+    ],
+    "abstract": "Protein language models (pLMs) demonstrate clear scaling laws for structure prediction but exhibit deteriorating performance on mutation effect prediction as model size increases. We present StableESM, applying Direct Preference Optimization (DPO) to ESM2 using over 1 million experimental stability measurements across 1,000 protein domains. Similar to the GPT-3 to ChatGPT transition that aligned language models to be more helpful and aligned with human preferences, we show that preference alignment enables larger model sizes to continue improving on mutation effect prediction while maintaining structure prediction capabilities. StableESM demonstrates improved zero-shot generalization to unseen protein domains and families, and to higher-order mutational effects. In a computational protein design campaign to engineer more stable variants of multicopper oxidase which was unseen during preference alignment, StableESM identified promising designs that were both novel compared to the natural protein and different from what the original model would suggest. Moreover, experimental testing validated StableESM predictions, with designed mutants showing performance equal to or exceeding wild type across normal, thermophilic, and extremophilic temperature conditions. This study shows that preference optimization for protein language models not only improves the base model in mutational effects, but also improves on unseen protein domains and families, and even changes the fitness/stability landscape for a completely unseen/distant protein from the preference alignment dataset.",
+    "topic": "protein language models; direct preference optimization; deep mutational scans; experimental validation",
+    "conference": "fm4ls-neurips",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/4548009d359359571176fb90719a8bdd958d88a3.pdf"
+  },
+  {
+    "id": "ihsZ3fn0tr",
+    "title": "Thin Bridges for Drug Text Alignment: Lightweight Contrastive Learning for Target Specific Drug Retrieval",
+    "authors": [
+      "Mallikarjuna Tupakula"
+    ],
+    "abstract": "Multimodal foundation models hold promise for drug discovery and biomedical applications, but most existing approaches rely on heavy pretraining or large scale multimodal corpora. We investigate whether thin contrastive bridges lightweight projection heads over frozen unimodal encoders can align chemical and textual representations without training a full multimodal model. Using paired mechanisms from ChEMBL, we align ECFP4 molecular fingerprints with biomedical sentence embeddings through dual linear projections trained with a contrastive objective. To better handle drugs sharing the same therapeutic target, we incorporate hard negative weighting and a margin loss. Evaluation under scaffold based splits, which require generalization across disjoint chemical cores, demonstrates that our approach achieves non-trivial cross modal alignment and substantially improves within target discrimination compared to frozen baselines. These results suggest that thin bridges offer a compute efficient alternative to large scale multimodal pre-training, enabling scaffold aware drug–text alignment and target specific retrieval in precision medicine.",
+    "topic": "Contrastive Learning; Multimodal Drug–Text Alignment; Molecular Fingerprints (ECFP4); Scaffold Split; Within-Target Retrieval; Precision Medicine",
+    "conference": "fm4ls-neurips",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/b3ce29515af7b53806c76dfccae558cea34fd902.pdf"
+  },
+  {
+    "id": "jXVC4kaocW",
+    "title": "Predicting and generating antibiotics against future pathogens with ApexOracle",
+    "authors": [
+      "Tianang Leng",
+      "Fangping Wan",
+      "Marcelo Der Torossian Torres",
+      "Cesar de la Fuente-Nunez"
+    ],
+    "abstract": "Antimicrobial resistance (AMR) is escalating and outpacing current antibiotic development. Thus, discovering antibiotics effective against emerging pathogens is becoming increasingly critical. However, existing approaches cannot rapidly identify effective molecules against novel pathogens or emerging drug-resistant strains. Here, we introduce ApexOracle, an artificial intelligence (AI) model that both predicts the antibacterial potency of existing compounds and designs de novo molecules active against strains it has never encountered. Departing from models that rely solely on molecular features, ApexOracle incorporates pathogen-specific context through the integration of molecular features—captured via a foundational discrete diffusion language model—and a dual-embedding framework that combines genomic- and literature-derived strain representations. Across diverse bacterial species and chemical modalities, ApexOracle consistently outperformed state-of-the-art approaches in activity prediction and demonstrated reliable transferability to novel pathogens with little or no antimicrobial data. Its unified representation–generation architecture further enables the $\\textit{in silico}$ creation of “new-to-nature” molecules with high predicted efficacy against priority threats. By pairing rapid activity prediction with targeted molecular generation, ApexOracle offers a scalable strategy for countering AMR and preparing for future infectious-disease outbreaks.",
+    "topic": "Multi-modal; Foundation model; Antibiotics; Antimicrobials; Diffusion Language Model; Drug Discovery",
+    "conference": "fm4ls-neurips",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/e90df00cdeefb9cc84d46f0578bf898190a4a43e.pdf"
+  },
+  {
+    "id": "8M04oZgMkt",
+    "title": "MolVision: Molecular Property Prediction with Vision Language Models",
+    "authors": [
+      "Deepan Adak",
+      "Yogesh S Rawat",
+      "Shruti Vyas"
+    ],
+    "abstract": "Molecular property prediction is a fundamental task in computational chemistry with critical applications in drug discovery and materials science. While recent works have explored Large Language Models (LLMs) for this task, they primarily rely on textual molecular representations such as SMILES/SELFIES, which can be ambiguous and structurally less informative. In this work, we introduce MolVision, a novel approach that leverages Vision-Language Models (VLMs) by integrating both molecular structure as images and textual descriptions to enhance property prediction. We construct a benchmark spanning ten diverse datasets, covering classification, regression and description tasks. Evaluating nine different VLMs in zero-shot, few-shot, and fine-tuned settings, we find that visual information improves prediction performance, particularly when combined with efficient fine-tuning strategies such as LoRA. Our results reveal that while visual information alone is insufficient, multimodal fusion significantly enhances generalization across molecular properties. Adaptation of vision encoder for molecular images in conjunction with LoRA further improves the performance. The code and data is available at : https://molvision.github.io/MolVision/ .",
+    "topic": "Vision Language Models; Molecular properties",
+    "conference": "fm4ls-neurips",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/647c97e598711879eba76be5c03ff9d0dc3b4695.pdf"
+  },
+  {
+    "id": "teu3GAjqLi",
+    "title": "BaggingCPP: An Inductive PU-Learning Framework for Discovering Cell-Penetrating Peptides",
+    "authors": [
+      "Omri Yakir",
+      "Chieh Chang",
+      "Maayan Gal",
+      "Jerome Tubiana"
+    ],
+    "abstract": "Cell Penetrating Peptides (CPPs) are a promising approach for intracellular delivery of diverse molecular cargos. Although hundreds of CPPs have been previously characterized, most are cationic peptides with limited penetration efficiency or poor pharmaceutical properties; new high-throughput discovery approaches are thus needed. Here we introduce \\textbf{BaggingCPP}, a machine learning-based CPP discovery framework that integrates inductive Positive-Unlabeled (PU) learning, protein language models and parameter-efficient fine-tuning algorithms. Unlike prior works, we do not use an artificial negative set that leads to distribution shift but instead use PU learning to train and infer on the same dataset - a large corpora of naturally expressed peptides such as hormones, neuropeptides, and small proteins. BaggingCPP reaches a cross-validated \\textbf{AUC-ROC of 0.984} on our dataset and matches the performance of the state-of-the-art GraphCPP when both methods are trained \\textit{and} inferred on the public CPP1708 benchmark. We used BaggingCPP to identify several candidate CPPs with low similarity to any known CPP and experimentally validated two. BaggingCPP thus represents a data-driven, biologically grounded route to expand the chemical diversity of known CPPs.",
+    "topic": "cell-penetrating peptides; positive-unlabeled learning; protein language models; LoRA; light attention; bagging ensembles",
+    "conference": "fm4ls-neurips",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/76e0a5cfd4dbeb53213ceadf945c52dd584233dd.pdf"
+  },
+  {
+    "id": "gVAYy9dnr3",
+    "title": "CellSpliceNet: Explainable Multimodal Transformers for Splicing in C. elegans Neurons",
+    "authors": [
+      "Arman Afrasiyabi",
+      "Jake Kovalic",
+      "Chen Liu",
+      "Egbert Castro",
+      "Alexis Weinreb",
+      "Erdem Varol",
+      "David M. Miller III",
+      "Marc Hammarlund",
+      "Smita Krishnaswamy"
+    ],
+    "abstract": "Alternative splicing diversifies the transcriptome, yet its regulation remains difficult to decode. We present CellSpliceNet, an interpretable transformer model that predicts splicing outcomes across  C. elegans neurons by integrating four modalities: long-range genomic sequence, local RNA regions of interest (ROIs), predicted RNA secondary structure, and cell-type–specific gene expression. Modality-specific encoders—including graph-signal scattering for structure and expression—feed a multimodal multi-head attention module that preserves per-modality signals while enabling expression-informed interactions with sequence and structure. Attention pooling highlights salient biology (e.g., splice boundaries and single-stranded loop regions) and enables deep model interpretability. On held-out data, CellSpliceNet outperforms strong baselines and achieves Spearman $\\rho=0.88$, with robust accuracy across neuron subtypes.",
+    "topic": "Multimodal Learning; Transformer; Computational models; Alternative Splicing",
+    "conference": "fm4ls-neurips",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/8cee0a8953d320bbaf199aadb088a46f12a22f32.pdf"
+  },
+  {
+    "id": "HIlgNdObra",
+    "title": "LLMGEN: Evolving Interpretable Surrogate Programs for Genomics with LLMs",
+    "authors": [
+      "Chandana Rajesh",
+      "Wilson Ho",
+      "Ziqi Tang",
+      "Peter K Koo",
+      "Thomas Pierrot"
+    ],
+    "abstract": "Deep learning models have achieved state-of-the-art performance in predicting complex regulatory tasks. Yet their black-box nature often limits the discovery of new biological insights. Here we present LLMGEN, a framework that leverages large language models (LLMs) and evolutionary algorithms to automate the discovery of compact, human-readable symbolic programs. LLMGEN integrates multiple modalities—including biological sequences, functional readouts, natural language descriptions, and executable Python functions—to bridge complex genomic models with interpretable rules. Inspired by recent program-synthesis frameworks such as FunSearch and AlphaEvolve, LLMGEN adapts LLM-guided program evolution to the genomic domain, with prior-guided seeding using biologically relevant attribution features to improve convergence. Across datasets including CRISPRi screens, STARR-seq enhancer assays, and ATAC-seq chromatin accessibility profiles, LLMGEN evolves concise prediction rules that are competitive with deep learning models, rediscovers known motifs and interactions, and generates testable mechanistic hypotheses. These results demonstrate that LLM-guided program evolution is a flexible, model-agnostic approach for building interpretable genomic predictors, advancing multi-modal foundation models toward trustworthy and transparent AI in the life sciences.",
+    "topic": "Large Language Models; Model Interpretability; Evolutionary Algorithms; Program Synthesis; Regulatory Genomics",
+    "conference": "fm4ls-neurips",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/d3f5da0a7c5888f76f0b074b6643185db2bcce04.pdf"
+  },
+  {
+    "id": "nHrLXMMjRh",
+    "title": "Quantifying the Role of OpenFold Components in Protein Structure Prediction",
+    "authors": [
+      "Tyler L. Hayes",
+      "Giri P Krishnan"
+    ],
+    "abstract": "Models such as AlphaFold2 and OpenFold have transformed protein structure prediction, yet their inner workings remain poorly understood. We present a methodology to systematically evaluate the contribution of individual OpenFold components to structure prediction accuracy. We identify several components that are broadly critical, while others vary in importance across proteins. We further show that the contribution of multiple components is statistically significantly correlated with protein length. These findings provide insight into how OpenFold achieves accurate predictions and highlight directions for interpreting protein prediction networks more broadly.",
+    "topic": "Protein Structure Prediction; Interpretability; OpenFold",
+    "conference": "fm4ls-neurips",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/329f2cdb80f1bb38d30c913b874ab9000ed9f303.pdf"
+  },
+  {
+    "id": "r0rhvIa42t",
+    "title": "Mechanistic Interpretability of Semantic Abstraction in Biomedical Texts",
+    "authors": [
+      "Nikhil Gourisetty",
+      "Snata Mohanty",
+      "Vishnu Srinivas",
+      "Soumil Jain",
+      "Sunith Vallabhaneni",
+      "Kevin Zhu",
+      "Sunishchal Dev"
+    ],
+    "abstract": "We investigate whether biomedical language models create register-invariant semantic representations of sentences: a cognitive ability that allows consistent and reliable clinical communication across different language styles. Using aligned sentence pairs (technical vs. plain language abstracts that mean the same thing), we analyze how BioBERT, SciBERT, Clinical-T5, and BioGPT react to varying registers through similarity measures, trajectory visualization, and activation patching. Results show models converge to shared semantic states in mid-to-late layers through internal processes that preserve meaning across stylistic variation.",
+    "topic": "mechanistic interpretability; biomedical natural language processing; activation patching; masked language modeling; representation alignment; model ablation; semantic equivalence; plain-language medical communication",
+    "conference": "fm4ls-neurips",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/29c9e81711a1b626061b5bada90a47c5292fbb0a.pdf"
+  },
+  {
+    "id": "YPHxpQH4wx",
+    "title": "Benchmarking Biomolecular Foundation Models for Cross-Modal Genomics-Proteomics",
+    "authors": [
+      "Joseph G. Wakim",
+      "Vinayak Gupta",
+      "Jose Manuel Marti",
+      "Jonathan E Allen",
+      "Brian R. Bartoldson",
+      "Bhavya Kailkhura"
+    ],
+    "abstract": "Genome and protein foundation models (gFMs and pFMs) are designed to encode intricate patterns in nucleotide and amino acid sequences, respectively. While existing models are often trained on a single data modality, recent findings suggest that joint training on both nucleotide and amino acid sequences can improve a model’s versatility. However, due to the limited availability of multimodal datasets, training and evaluating models across modalities pose a significant challenge. To address this gap, we introduce Geno-Prot, a new benchmark formed from matched gene and protein sequences mapped to nine attributes that capture structural, functional, and biomedical characteristics of the human proteome. The benchmark poses questions, such as: _Do proteins A and B interact? Do they co-localize in the same subcellular region? Do they bind a common ligand?_ Using Geno-Prot, we evaluate leading gFMs, pFMs, and multimodal foundation models, along with ensembles that combine them. Our comprehensive analysis shows that, across all prediction tasks, ensembles tend to match or outperform the individual models they contain. Ultimately, Geno-Prot serves as a vital tool for model assessment, highlighting the predictive benefits of integrating both genomic and proteomic data. The code for this benchmark is available at https://github.com/LLNL/geno-prot.",
+    "topic": "Machine Learning; Artificial Intelligence; Foundation Model; Genome; Protein; Benchmark",
+    "conference": "fm4ls-neurips",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/d31fb6af85261f4172dfe08fa512d7a8d90567b9.pdf"
+  },
+  {
+    "id": "Uu5VVb11Ip",
+    "title": "Beyond Labels: Explanatory Collapse due to Instruction Tuning in Protein LLMs",
+    "authors": [
+      "Yining Yang",
+      "Ruihong Huang",
+      "Yang Shen"
+    ],
+    "abstract": "Instruction tuning on domain-specific datasets improves categorical accuracy but consistently degrades explanatory behavior. In protein large language models, we observe that tuned models ignore explanation requests, fall back on generic templates, and produce degenerate structured outputs with trivial repetitions or hallucinated lists. This collapse of expressive diversity renders models terse and uninformative, limiting their scientific utility. Our findings highlight a trade-off in current protein instruction-tuning practices: accuracy is gained at the cost of interpretive value, underscoring the need for strategies that preserve explanatory depth.",
+    "topic": "Instruction Tuning; LLM; Explanatory Collapse; Protein Understanding",
+    "conference": "fm4ls-neurips",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/d9d61bc4f4208be9f809db06317dc0430968fdce.pdf"
+  },
+  {
+    "id": "AlLZnZX01x",
+    "title": "Learning monosemantic features in multitask DNA regulatory sequence models via sparse autoencoder decomposition",
+    "authors": [
+      "Anya Korsakova",
+      "David Roy Kelley"
+    ],
+    "abstract": "Deep learning models for regulatory genomics achieve high predictive performance across diverse molecular phenotypes, yet their internal representations remain opaque. Here, we apply sparse autoencoders (SAEs) to decompose learned representations of Borzoi, a state-of-the-art CNN-transformer that predicts genome-wide transcriptional and epigenetic profiles from DNA sequence. Training TopK-SAEs on activations from Borzoi's early convolutional layers, we discover monosemantic regulatory features that correspond to transcription factor (TF) and RNA binding protein (RBP) motifs and transposable element sequences. We identify hundreds of significant position weight matrices that map SAE-discovered features to established TF binding sites through motif discovery using MEME suite against known TF databases. This work demonstrates that SAEs can systematically decompose regulatory genomics models into biologically interpretable components.",
+    "topic": "genomics; interpretability; gene regulation; sparse autoencoders",
+    "conference": "fm4ls-neurips",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/947d185539c46758ae3681aea1cdc087d64b22e3.pdf"
+  },
+  {
+    "id": "SIVkGvPDuM",
+    "title": "Decoding Histone Modification Signatures of Non-Coding RNAs via Foundation Models",
+    "authors": [
+      "Nishant Sharma",
+      "Mohammad Atif Quamar",
+      "Pengtao Xie"
+    ],
+    "abstract": "Histone modifications help regulate ncRNA genes, but measuring these interactions at scale is difficult. High-throughput experimental techniques such as ChIP-seq are costly and time-consuming, limiting their scalability for mapping histone modifications across diverse cell types and histone markers. We test whether sequence alone can predict histone–ncRNA regulation by training a single marker-conditioned classifier that outputs 50 histone marks. We evaluate two inputs: (i) spliced transcript RNA sequence and (ii) genomic context comprising the gene body plus up to 30 kb upstream DNA. On a curated benchmark with Ensembl coordinates, the context-based model attains a micro-AUROC of 0.95. Despite using frozen pretrained encoders and no cell-type-specific tracks, the approach is simple and data-efficient, providing a practical baseline for studying ncRNA–histone modification interactions.",
+    "topic": "Histone Modifications; ncRNA; Deep Learning; Transfer Learning",
+    "conference": "fm4ls-neurips",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/804266022c8fca9d4f2a673f77524275298187a1.pdf"
+  },
+  {
+    "id": "N19jaxmPWz",
+    "title": "Position: Adjacent Technologies Are the Key Enablers of Scalable and Safe Clinical MLLM Deployment",
+    "authors": [
+      "Azmine Toushik Wasi",
+      "Md. Iqramul Hoque"
+    ],
+    "abstract": "Rise of Multimodal Large Language Models (MLLMs) represents a paradigm shift in healthcare, with the potential to revolutionize diagnostics, personalized medicine, and predictive analytics. In this position paper, we argue that the clinical impact of MLLMs depends not solely on the models themselves, but critically on an integrated ecosystem of enabling technologies. High-fidelity data curation pipelines, multimodal data lakes, continuous model monitoring, secure API infrastructures, workflow orchestration, and EHR/PACS connectors collectively form the foundation for scalable, safe, and trustworthy deployment. We contend that strategic investment and cross-disciplinary collaboration in these adjacent technologies are essential for realizing the full potential of MLLMs in real-world clinical settings, establishing a distinct and emerging sector within digital health.",
+    "topic": "Multimodal Large Language Models; Clinical AI Ecosystem; Healthcare Infrastructure; Precision Medicine Technologies",
+    "conference": "fm4ls-neurips",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/6364ea586ca4edc6d2b22b1b410f76ceed92ddc7.pdf"
+  },
+  {
+    "id": "ee6UbOypQU",
+    "title": "g-DPO: Scalable Preference Optimization for Protein Language Models",
+    "authors": [
+      "Constance Ferragu",
+      "Cradle ML Team"
+    ],
+    "abstract": "Direct Preference Optimization (DPO) is an effective approach for aligning protein language models with experimental design goals. However, DPO faces a scalability bottleneck: the number of possible training pairs grows quadratically with the number of labeled sequences, leading to prohibitive training times even for modestly sized datasets. We introduce g-DPO, a framework that (i) uses sequence space clustering to prune redundant pairs while preserving training signal, and (ii) amortizes likelihood computations with group-based approximations. Across three protein engineering tasks, g-DPO maintains _in-silico_ and _in-vitro_ performance that is statistically indistinguishable from standard DPO, while converging 1.8–3.7x faster, with larger gains expected as dataset size increases.",
+    "topic": "Protein language models; Direct Preference Optimization; scalability; protein engineering; sequence design; in-vitro validation; clustering; masked language models",
+    "conference": "fm4ls-neurips",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/3eccb40fffc5e48ca14e98ea2777e7e806963ca5.pdf"
+  },
+  {
+    "id": "UOCu3nNeLL",
+    "title": "Challenges in Leveraging Functional Information to Evaluate Predicted Protein-Ligand Interactions",
+    "authors": [
+      "Joseph G. Wakim",
+      "Jose Manuel Marti",
+      "Jonathan E Allen",
+      "Adam T. Zemla"
+    ],
+    "abstract": "Protein-ligand interactions (PLIs) are fundamental to the efficacy and toxicity of drugs, and predicting these interactions with computational models can accelerate drug development. Given an uncharacterized protein and its predicted structure, putative interactions with ligands can be identified based on structural alignment with known binding pockets. However, the accuracy of these predictions depends on the reliability of the protein model. Functional information offers an observable comparator for evaluating predicted PLIs. Yet, existing methods for embedding protein function cluster proteins inconsistently; for the same protein pairs, their relative distances in a functional latent space can vary depending on the embedding method used. To assess challenges in scoring protein function similarity, we evaluate similarity scores using benchmarks that label protein pairs based on shared attributes. For example, we consider benchmarks that label proteins based on shared localization or disease associations, where positive examples share the attribute and negative examples do not. For each benchmark, we quantify how well popular protein representations differentiate between the positive and negative groups. We then demonstrate an innovative framework for leveraging functional similarity scores to characterize drug selectivity and evaluate predicted PLIs. We show that our function-based evaluations remain limited by uncertainty in similarity scores. Overall, we demonstrate the critical need for more reliable similarity-scoring metrics and present a framework for their use in evaluating predicted PLIs during computational drug development.",
+    "topic": "Foundation Models; Deep Learning; Embeddings; Benchmarking; Protein-Ligand Interactions; Drug Discovery; Drug Selectivity; Protein Function",
+    "conference": "fm4ls-neurips",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/8fa5a6bb584a22550aff0d94be67e04d9627950b.pdf"
+  },
+  {
+    "id": "gQX8HyOfUh",
+    "title": "Improved Therapeutic Antibody Reformatting through Multimodal Machine Learning",
+    "authors": [
+      "Jiayi Xin",
+      "Aniruddh Raghu",
+      "Nick Bhattacharya",
+      "Adam Carr",
+      "Melanie Montgomery",
+      "Hunter Elliott"
+    ],
+    "abstract": "Modern therapeutic antibody design often involves composing multi-part assemblages of individual functional domains, each of which may be derived from a different source or engineered independently. While these complex formats can expand disease applicability and improve safety, they present a significant engineering challenge: the function and stability of individual domains are not guaranteed in the novel format, and the entire molecule may no longer be synthesizable. To address these challenges, we develop a machine learning framework to predict \"reformatting success\" -- whether converting an antibody from one format to another will succeed or not. Our framework incorporates both antibody sequence and structural context, incorporating an evaluation protocol that reflects realistic deployment scenarios. In experiments on a real-world antibody reformatting dataset, we find the surprising result that large pretrained protein language models (PLMs) fail to outperform simple, domain-tailored, multimodal representations. This is particularly evident in the most difficult evaluation setting, where we test model generalization to a new starting antibody. In this challenging \"new antibody, no data\" scenario, our best multimodal model achieves high predictive accuracy, enabling prioritization of promising candidates and reducing wasted experimental effort.",
+    "topic": "Antibody Therapeutics; Antibody Reformatting; Multimodal Machine Learning",
+    "conference": "fm4ls-neurips",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/9ad223a04be6828d883a0170bea3c81403aaa379.pdf"
+  },
+  {
+    "id": "lg9K5z0t0Y",
+    "title": "Boundary Guidance for Efficient 3D CT Vision–Language Reasoning",
+    "authors": [
+      "Soo Yong Kim"
+    ],
+    "abstract": "Interpreting volumetric CT with vision–language models (VLMs) demands alignment of long-range spatial–temporal evidence with radiology text under tight memory budgets. In this setting, Med3DVLM—a 3D vision encoder coupled to a 7B decoder—reports 79.95 percent closed-ended accuracy and 36.76 METEOR on M3D. Yet contemporary VLM attention often diffuses, lighting up many non-diagnostic regions instead of the truly salient ones. We propose slice-wise visual-instruction prompting: on every axial slice of the 3D volume, a sub-voxel thin, colored contour traces the anatomy referenced by the question, turning the image itself into a focus cue. On RadGenome-ChestCT and PMC-VQA, Qwen variants (0.5B/1.5B/3B) with these prompts perform on par with a prompt-free Qwen-7B while cutting GPU memory. Moreover, prompt-guided fine-tuning further lifts closed-ended accuracy and improves open-ended VQA on BLEU-4, ROUGE-L, and METEOR.",
+    "topic": "Boundary",
+    "conference": "fm4ls-neurips",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/923fae422cc5a08a744f55afc5817570c90be13e.pdf"
+  },
+  {
+    "id": "ofCkwXQKaz",
+    "title": "DeepSpot2Cell: Predicting Virtual Single-Cell Spatial Transcriptomics from H&E images using Spot-Level Supervision",
+    "authors": [
+      "Kalin Nonchev",
+      "Glib Manaiev",
+      "Viktor Koelzer",
+      "Gunnar Ratsch"
+    ],
+    "abstract": "Spot-based spatial transcriptomics (ST) technologies like 10x Visium combine RNA sequencing with spatial imaging to quantify genome-wide gene expression while retaining tissue organization. However, their coarse spot-level resolution aggregates signals from multiple cells, preventing accurate single-cell analysis and detailed cellular characterization. Here, we present DeepSpot2Cell, a novel multi-modal DeepSet neural network that fuses sub‑spot image detail and neighborhood context with pathology foundation-model features to effectively predict virtual single-cell gene expression from histopathological images using spot-level supervision. DeepSpot2Cell substantially improves gene expression correlations on a newly curated benchmark we specifically designed for single-cell ST deconvolution and prediction from H&E images. The benchmark includes 20 lung, 7 breast, and 2 pancreatic cancer samples, across which DeepSpot2Cell outperformed previous super-resolution methods, achieving respective improvements of 46%, 65%, and 38% in cell expression correlation for the top 100 genes. We hope that DeepSpot2Cell and this benchmark will stimulate further advancements in virtual single-cell ST, enabling more precise delineation of cell-type-specific expression patterns and facilitating enhanced downstream analyses. \nCode availability: https://github.com/ratschlab/DeepSpot",
+    "topic": "Computational Pathology; Spatial Transcriptomics; Deconvolution; Single-cell prediction; Virtual Cells; Representation Learning; Machine Learning in Medicine",
+    "conference": "fm4ls-neurips",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/b5655f12b6fe4aab83d5fda68aaae3c60a1a844b.pdf"
+  },
+  {
+    "id": "9FKXvTdAAL",
+    "title": "LLM-Integrated Representative Path Selection for Context-Aware Drug Repurposing on Biomedical Knowledge Graphs",
+    "authors": [
+      "Haerin Song",
+      "Dongmin Bang",
+      "Bonil Koo",
+      "Sun Kim",
+      "Sangseon Lee"
+    ],
+    "abstract": "Drug repurposing, which seeks novel drug–disease associations by integrating biomedical knowledge, is hindered by modeling complex multi-hop relationships in knowledge graphs. We propose DrugCORpath, which integrates biomedical knowledge graphs with pretrained biomedical large language models (LLMs). Unlike node-centric methods, it captures biological context by converting multi-hop drug–disease paths into sentences reflecting plausible mechanisms of action (MoAs) and embedding them. We then apply clustering–based selective filtering with a distance metric to retain meaningful paths while removing redundancy and noise. Experiments show DrugCORpath outperforms graph-based, LLM-based, and path-based baselines in drug repurposing, achieving up to 4.9% higher accuracy than the prior SOTA. Analyses confirm that filtering reduces noise and enhances biological diversity, and case studies validate clinically relevant rationales, improving interpretability. Collectively, these results underscore the method’s potential for interpretable, biologically plausible drug repurposing.",
+    "topic": "Drug Repurposing; Biomedical Knowledge Graph; Large Language Model; Mechanism of Action; Path Selection; Biomedical Reasoning; Interpretability",
+    "conference": "fm4ls-neurips",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/ef1bd8eac7f9b36ebe39bb77188fdd6857324921.pdf"
+  },
+  {
+    "id": "uWqWanEUjB",
+    "title": "Horizon-Aware Vision–Language Forecasting of Diabetic Retinopathy with Text Prototypes",
+    "authors": [
+      "Gongyu Zhang",
+      "YT",
+      "Zengxiang Li",
+      "Timothy L Jackson",
+      "Christos Bergeles"
+    ],
+    "abstract": "Identifying eyes at high risk of diabetic retinopathy (DR) progression is essential for timely intervention and prevention of vision loss. We introduce the first vision–language model (VLM) designed to forecast DR progression using paired fundus images and structured narrative prompts. Each prompt encodes demographic and clinical information—such as age, gender, and eye laterality—which is combined with retinal photographs to predict the likelihood of referable DR within 1-, 2-, or 3-year horizons. Our framework employs a vision transformer for image encoding and BioClinicalBERT for text encoding, with multimodal representations aligned through a contrastive learning objective. Experiments on a large national screening dataset show that incorporating demographic context consistently improves predictive accuracy compared to image-only models. At the one-year horizon, for example, AUROC increased from 0.654 to 0.683 and accuracy from 0.608 to 0.645 when age and gender were included. These findings establish a simple yet effective multimodal baseline, demonstrating that demographic-aware prompts provide complementary prognostic value beyond fundus imaging alone. This work pioneers the application of vision–language modeling to DR progression forecasting and offers a reproducible foundation for future multimodal and longitudinal research.",
+    "topic": "Vision–Language Model; Longitudinal risk prediction; Text prototypes",
+    "conference": "fm4ls-neurips",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/bea96220f9506a9d66b95ea07ad5c29a9403eabe.pdf"
+  },
+  {
+    "id": "b3wLATJtAH",
+    "title": "Learning to Align Molecules and Proteins: A Geometry-Aware Approach to Binding Affinity",
+    "authors": [
+      "Mohammadsaleh Refahi",
+      "Bahrad A. Sokhansanj",
+      "James R. Brown",
+      "Gail Rosen"
+    ],
+    "abstract": "Accurate prediction of drug–target binding affinity can accelerate drug discovery by prioritizing promising compounds before costly wet‑lab screening.  While deep learning has advanced this task, most models fuse ligand and protein representations via simple concatenation and lack explicit geometric regularization, resulting in poor generalization across chemical space and time.  We introduce a lightweight framework that conditions molecular embeddings on protein embeddings through a feature‑wise linear modulation (FiLM) layer and enforces metric structure with a triplet loss.  An RBF regression head operating on embedding distances yields smooth, interpretable affinity predictions.  Despite its modest size, the proposed model achieves state‑of‑the‑art performance on the Therapeutics Data Commons DTI‑DG benchmark, as demonstrated by an extensive ablation study and out‑of‑domain evaluation.  Our results underscore the value of conditioning and metric learning for robust drug–target affinity prediction.",
+    "topic": "Binding Affinity Prediction; Language Models; Triplet Loss; RBF Regression; FiLM Conditioning; Metric Learning",
+    "conference": "fm4ls-neurips",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/5ab266314d48a35d9db8dc9ab9f485bf2c29680a.pdf"
+  },
+  {
+    "id": "Qp4lF6ZNfp",
+    "title": "A multi-domain EHR foundation model for predicting Hepatitis B liver disease: a clinical perspective",
+    "authors": [
+      "Caroline V Weis",
+      "Max Horn",
+      "Max F Burg",
+      "Filippo Grazioli",
+      "Adam Kania",
+      "Giovanni Visona",
+      "Jonathan Golob",
+      "Patrick Schwab"
+    ],
+    "abstract": "Foundation models trained on patient electronic health records (EHRs) hold promise for transforming clinical care by enabling effective decision support and personalized healthcare delivery but have been limited by a focus on intensive care objectives. Here we present a multi-domain transformer-based EHR foundation model designed to predict two liver disease outcomes in patients with Chronic Hepatitis B, an infection characterized by diverse and uncertain medical trajectories. Through case studies employing attention maps, we demonstrate that the transformer model identifies patterns similar to one-liners employed by clinical staff and depends on distinct clinical events to estimate disease progression. Our findings underscore both the utility and challenges of EHR foundation models in clinical care and the necessity to evaluate EHR-models on less-regimented diseases.",
+    "topic": "foundation model; electronic health records; hepatitis b",
+    "conference": "fm4ls-neurips",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/adccb0e8bc7405eb147afa88963f81fe8ef0ab9a.pdf"
+  },
+  {
+    "id": "JBwlfTevuC",
+    "title": "BiDoRA: Bi-level Optimization-Based Weight-Decomposed Low-Rank Adaptation for Overfitting-Resilient Fine-Tuning of Biological Foundation Models",
+    "authors": [
+      "Peijia Qin",
+      "Ruiyi Zhang",
+      "Pengtao Xie"
+    ],
+    "abstract": "Biological foundation models (e.g., protein language models) are typically fine-tuned on small and noisy datasets, making overfitting a central challenge. We present BiDoRA, an overfitting-resilient parameter-efficient fine-tuning (PEFT) method tailored for foundation models.\nBiDoRA builds on weight-decomposed low-rank adaptation (DoRA) but addresses its over-expressiveness by decoupling magnitude and direction optimization within a bi-level optimization (BLO) framework: the direction is learned on a training split with magnitudes fixed, while magnitudes are updated on a validation split via hypergradient descent. This design reduces overfitting and yields update patterns that better mimic full fine-tuning under the same parameter budget. On a broad suite of biological and natural language tasks, BiDoRA matches or surpasses strong PEFT baselines. Code is available at https://github.com/t2ance/BiDoRA",
+    "topic": "Large Language Models; Protein Language Models; Parameter-Efficient Fine-Tuning",
+    "conference": "fm4ls-neurips",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/5dc6deb3cfd4a959a309b66784659b2f34962d37.pdf"
+  },
+  {
+    "id": "TnPtpP3xud",
+    "title": "Harnessing biomedical foundation models for genomic feature engineering to investigate patient drug response",
+    "authors": [
+      "Laura-Jayne Gardiner",
+      "Jennifer Kelly",
+      "Stephen Checkley",
+      "Karen Bingham",
+      "Graeme Macluskie",
+      "David Bunton"
+    ],
+    "abstract": "Utilising pre-trained biomedical foundation models (BMFMs) for inference on multi-omic data from small cohorts, represents a promising and practical route to demonstrate advantage of this technology in real-world drug discovery tasks. Here, we show this via an innovative and unique BMFM inference workflow, where BMFMs provide discernible advantage for predicting patient drug response from omics data. We utilise open-source, pre-trained, fine-tuned, multi-omics BMFMs for inference to enable feature selection and engineering. Firstly, predicting drug- target binding affinity (BA) prediction, enabling ranking and prioritisation of gene targets and associated SNPs, and secondly, using patient SNPs to mutate reference proteins and assess their impact on prednisolone BA. BMFM-derived features were composed and used alongside non-BMFM features to predict patient-specific prednisolone response using an explainable machine learning approach. We demon- strate superior predictive power of BMFM-derived feature sets, and downstream explainability distinguished SNPs that were most influential for personalised drug response prediction.",
+    "topic": "BMFM; multi-omics; drug response; AI; SNPs; genomics",
+    "conference": "fm4ls-neurips",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/24e2235eb9855af7a85d7bdf4e09f9aab8a767b4.pdf"
+  },
+  {
+    "id": "1fkPh6XTVe",
+    "title": "MoAgent: A Hypothesis-Driven Multi-Agent Framework for Drug Mechanism of Action Discovery",
+    "authors": [
+      "Jun Hyeong Kim",
+      "Seokhyun Moon",
+      "Seonghwan Kim",
+      "Junhyeok Jeon",
+      "Taein Kim",
+      "Jisu Seo",
+      "Songmi Kim",
+      "Woo Youn Kim"
+    ],
+    "abstract": "Determining the mechanism of action (MoA) of novel chemical compounds is a critical yet challenging task in drug discovery. \nWe introduce MoAgent, a multi-agent framework that reframes MoA inference as a hypothesis-driven scientific discovery process.\nMoAgent integrates multi-modal data from chemical structure, gene expression, and biological pathways, deploying a committee of specialized agents to collaboratively generate and validate mechanistic hypotheses.\nThe framework operates through an iterative cycle of evidence triangulation and hypothesis validation, where a bioinformatician agent assesses causal plausibility using a knowledge graph and a medicinal chemist agent verifies direct target engagement.\nOur experiments demonstrate that the integrated, hypothesis-driven strategy significantly enhances the accuracy and reliability of MoA inference, and maintains robust performance even in zero-shot scenarios.\nBy emulating scientific reasoning, MoAgent offers a more effective paradigm for accelerating drug discovery.",
+    "topic": "Multi-agent system; Virtual Cell; Mechanism of Action; Hypothesis testing",
+    "conference": "fm4ls-neurips",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/317cfbd4eabce69e374aba2585c726785a43e3bd.pdf"
+  },
+  {
+    "id": "qVTV5kAzw3",
+    "title": "CHEMSETS: How Capable Are Chemistry LLMs?",
+    "authors": [
+      "Christoph Bartmann",
+      "Mykyta Ielanskyi",
+      "Johannes Schimunek",
+      "Philipp Seidl",
+      "Günter Klambauer",
+      "Sohvi Luukkonen"
+    ],
+    "abstract": "Large Language Models (LLMs) have demonstrated immense versatility and have been successfully adapted to tackle numerous problems in scientific domains. In chemistry, specialized LLMs have been recently developed for molecule structure tasks such as molecule name conversion, captioning, text-guided generation, and property or reaction prediction. However, evaluations of chemistry-focused LLMs remain inconsistent and often lack rigor: new models are typically assessed only on tasks they were explicitly trained for, while compared models have been trained on different sets of tasks. In addition, several proposed benchmarks introduce idiosyncratic features, e.g., task-specific input or output tags, and, thus, the LLMs' performance is highly sensitive to prompting strategies, answer formatting, and generation parameters, further complicating reproducible evaluation. To address these shortcomings, we perform a standardized and reproducible method comparison of chemical reasoning models on CHEMSETS, a flexible benchmark suite integrated into lm-evaluation-harness. CHEMSETS unifies existing benchmarks with newly designed symbolically verifiable tasks, thereby expanding both task diversity and difficulty. Through this evaluation, we establish a fair leaderboard and provide new insights into the limitations of recently proposed chemistry-aware LLMs. We show that current chemistry LLMs exhibit limited generalization beyond the specific tasks they were trained on. Remarkably, across chemical tasks, recent open-weight non-specialist reasoning models outperform specialist models.",
+    "topic": "Large language models; chemistry; benchmark; symbolic reasoning; molecule structure; evaluation; general models; domain-specific models; reproducibility; domain-specific evaluation; molecular reasoning;",
+    "conference": "fm4ls-neurips",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/b0668e44bab3e774cfb63be7b0e36425cf6df7fe.pdf"
+  },
+  {
+    "id": "vE4RTuSLhf",
+    "title": "The Exposome Interpreter: A Multi-Modal Framework for Personalized Autoimmune Care",
+    "authors": [
+      "KRITIKA CHUGH"
+    ],
+    "abstract": "The exposome, the totality of an individual's environmental exposures throughout their lifetime is estimated to account for up to 70\\% of autoimmune disease risk. Despite this significant contribution, the systematic identification of patient-specific environmental triggers remains an intractable challenge in clinical practice. This translational gap arises from the difficulty of synthesizing vast, heterogeneous data sources: semi-structured clinical lab reports, patient product usage history, and the exponentially growing corpus of biomedical literature on environmental toxicology and immunology. We introduce the Exposome Interpreter, a multimodal framework designed to infer patient-specific relationships between environmental exposures and immunological dysregulation. Our approach first employs fine-tuned Vision-Language Models (VLMs), including Gemini 2.5 Flash and PaliGemma, for high-fidelity information extraction from visually complex lab reports, canonicalizing semi-structured biomarker data into a machine-readable format. Concurrently, a Retrieval-Augmented Generation (RAG) pipeline, leveraging a domain-adapted Gemma model, queries the biomedical literature to construct a knowledge graph linking chemical agents to specific immune pathways. By integrating the structured patient data with this synthesized knowledge base and the patient's product history, the Exposome Interpreter generates ranked, evidence-backed hypotheses for environmental triggers, including direct mapping of abnormal biomarkers to specific consumer products.",
+    "topic": "exposome; autoimmune disease; multi-modal models; Vision-Language Models (VLMs); Retrieval-Augmented Generation (RAG); personalized medicine; Gemini; Gemma",
+    "conference": "fm4ls-neurips",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/c053bad0c4bb59cfc619f3540f82283488f65fab.pdf"
+  },
+  {
+    "id": "99ZsbARrrZ",
+    "title": "Multi-Modal Foundation Models for Computational Pathology: A Survey",
+    "authors": [
+      "Dong Li",
+      "Guihong Wan",
+      "Xintao Wu",
+      "Xinyu Wu",
+      "Xiaohui Chen",
+      "Yi He",
+      "Zhong Chen",
+      "Ninghui Hao",
+      "Chen Zhao"
+    ],
+    "abstract": "Foundation models have become a key paradigm in computational pathology (CPath), enabling scalable and generalizable analysis of histopathological images. Early work centered on uni-modal models trained solely on visual data, but recent advances highlight the potential of multi-modal approaches that integrate textual reports, structured knowledge, and molecular profiles. In this survey, we review 32 multi-modal foundation models built primarily on hematoxylin and eosin (H&E) whole-slide images (WSIs) and tile-level representations, categorizing them into vision–language, vision–knowledge graph, and vision–gene expression paradigms, with vision–language models further divided into non-LLM- and LLM-based variants. We also analyze 28 datasets, grouped into image–text pairs, instruction datasets, and image–other modality pairs, and summarize downstream tasks, training and evaluation strategies, and future challenges. This survey provides a comprehensive resource for advancing AI in pathology.",
+    "topic": "Computational Pathology; Foundation Model; Multi-Modality",
+    "conference": "fm4ls-neurips",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/f2474d29d016006883ac6bccb40101bd08fdc8bb.pdf"
+  },
+  {
+    "id": "mlsRY6Z7Jo",
+    "title": "From Base Pairs to Functions: Rich RNA Representations via Multimodal Language Modeling",
+    "authors": [
+      "Joel Bonnie",
+      "Tin Vlašić",
+      "Mile Sikic"
+    ],
+    "abstract": "RNA foundation models have recently emerged as powerful tools for learning from large sequence databases, yet their embeddings often fall short in simple probing setups, necessitating additional finetuning. Most existing models are pretrained solely on sequences, assuming that structural information will emerge implicitly. We introduce RABONA, a multimodal RNA language model jointly pretrained on sequence-structure pairs using modality-specific masking, designed for both generative and understanding tasks. It produces embeddings that form clearer family-specific clusters and shows stronger attention alignment with RNA base pairs compared to other RNA language models. In this paper, we focus on RABONA's predictive capabilities and show that it consistently outperforms larger baselines across diverse downstream tasks in both finetuning and linear probing setups, demonstrating that incorporating structure during pretraining yields richer RNA embeddings and enables more efficient foundation models.",
+    "topic": "multimodal RNA language model; RNA language model; RNA reactivity; RNA classification; RNA degradation; mean ribosome loading",
+    "conference": "fm4ls-neurips",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/8d080bdbce231a78240fb2260eb98848cce4d779.pdf"
+  },
+  {
+    "id": "En4Q41ZA3T",
+    "title": "LINKER: Learning Interactions Between Functional Groups and Residues With Chemical Knowledge-Enhanced Reasoning and Explainability",
+    "authors": [
+      "PhucPhamHuyThien",
+      "Viet Thanh Duy Nguyen",
+      "Truong-Son Hy"
+    ],
+    "abstract": "Accurate mapping of protein-ligand interactions is key to understanding molecular recognition and guiding drug design. Existing deep learning methods typically depend on 3D structures or distance-based labels, limiting their scope and interpretability. We present LINKER, the first sequence-based model that predicts residue-functional group (FG) interactions in biologically defined types directly from protein sequences and ligand SMILES. Trained with structure-supervised attention using FG-derived labels from experimental complexes, LINKER focuses on chemically meaningful substructures and predicts interaction types such as hydrogen bonds and $\\pi$-stacking. Crucially, it requires only sequence input at inference, enabling scalable application without structural data. Experiments on the LP-PDBBind benchmark show that LINKER achieves accurate, biochemically interpretable interaction maps aligned with ground-truth annotations.",
+    "topic": "protein-ligand binding affinity; interpretability; deep learning; functional groups; sequence-based model; SMILES; protein sequence; attention mechanism; multi-task learning; structure-supervised attention; drug discovery; biochemical interactions",
+    "conference": "fm4ls-neurips",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/2de9c29d80c52fe6e536703385e05c995277842f.pdf"
+  },
+  {
+    "id": "I0hzddNny7",
+    "title": "Token-Level Guided Discrete Diffusion for Membrane Protein Design",
+    "authors": [
+      "Shrey Goel",
+      "Peregrine Michael Schray",
+      "Yinuo Zhang",
+      "Sophia Vincoff",
+      "Huong T. Kratochvil",
+      "Pranam Chatterjee"
+    ],
+    "abstract": "Reparameterized diffusion models (RDMs) have recently matched autoregressive methods in protein generation, motivating their use for challenging design tasks such as membrane proteins, which possess interleaved soluble and transmembrane (TM) regions. We introduce the MeMbrane Diffusion Language Model (MeMDLM), a fine-tuned RDM-based protein language model that enables controllable membrane protein sequence design. MeMDLM-generated sequences recapitulate the TM residue density and structural features of natural proteins, achieving comparable biological plausibility and outperforming state-of-the-art diffusion baselines in motif scaffolding tasks by producing lower perplexity, higher BLOSUM-62 scores, and improved pLDDT confidence. To enhance controllability, we develop Per-Token Guidance (PET), a novel classifier-guided sampling strategy that selectively solubilizes residues while preserving conserved TM domains, yielding sequences with reduced TM density but intact functional cores. Importantly, MeMDLM designs validated in TOXCAT β-lactamase growth assays demonstrate successful TM insertion, distinguishing high-quality generated sequences from poor ones. Together, our framework establishes the first experimentally validated diffusion-based model for rational membrane protein generation, integrating de novo design, motif scaffolding, and targeted property optimization.",
+    "topic": "Discrete diffusion; per-token sampling; membrane protein design",
+    "conference": "fm4ls-neurips",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/b3b8a242690a74b5236ffde3b8df8eb6b0cc2034.pdf"
+  },
+  {
+    "id": "TIUUcBIuk6",
+    "title": "GLM-Prior: A Genomic Language Model for Sequence-Derived Prior Knowledge in GRN Inference",
+    "authors": [
+      "Claudia Skok Gibbs",
+      "Angelica Chen",
+      "Richard Bonneau",
+      "Kyunghyun Cho"
+    ],
+    "abstract": "Gene regulatory network (GRN) inference relies on high-quality prior knowledge, which are often incomplete or unavailable, particularly for complex organisms and diverse cell types. We present GLM-Prior, a genomic language model that fine-tunes the pretrained Nucleotide Transformer to learn transcription factor to target gene regulatory interactions from nucleotide sequence, yielding a sequence-derived prior for downstream GRN inference. In yeast, GLM-Prior outperforms motif-based and curated prior knowledge. When trained on general interaction data in human or mouse, GLM-Prior recovers cell line-specific regulatory structure and enables zero-shot transfer between species. Across settings, adding expression-based inference provides only modest improvements, indicating that most recoverable regulatory structure is capture by sequence features learned by GLM-Prior. These results support sequence-derived prior knowledge as a strong basis for GRN inference, with expression data used primarily to refine and contextualize a fixed regulatory scaffold.",
+    "topic": "Foundation Models; Finetuning; Genomic Language Model; Gene Regulatory Network Inference; Priors",
+    "conference": "fm4ls-neurips",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/04c3a40a3850c2a5920f5eec5994b8de2bee5a52.pdf"
+  },
+  {
+    "id": "U1DWJKbNte",
+    "title": "A Multi-Modal Foundation Model Across Species for Interpreting Gene Functions",
+    "authors": [
+      "Tianyu Liu"
+    ],
+    "abstract": "Artificial Intelligence shows impressive performances in computational biology, especially in modelling DNA sequences and processing biomedical text annotations. However, most of the current computational methods analyze these two modalities separately, lack a discussion for their integration, for example, how to utilize gene annotations for functional inference of under-explored genes across different species. To interpret the contributions of modality representations in learning and predicting patterns in genomics and genetics, we develop DNACLIP and train it with paired DNA sequences and text descriptions from over 300,000 genes across 24 species, to model text and DNA sequences jointly and perform cross-species gene functional analysis. Through extensive benchmarking analysis, we show the unique contributions of aligned gene embeddings and text embeddings in various downstream applications, including gene clustering, gene annotation, disease risk prediction, function prediction, perturbation prediction, and expression prediction, etc. We also use DNACLIP to discover disease-specific gene programs from atlas data. Finally, we discuss the dominant areas of modality-specific embeddings and provide guidelines for users to select embeddings based on their requirements.",
+    "topic": "DNA Sequence Model; Large Language Model; Multi-Modal Machine Learning; Sequence-to-Function Model; Genome Annotation",
+    "conference": "fm4ls-neurips",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/4cc3799c621b65ad0d4f862f0890cda78cffef7f.pdf"
+  }
+]
