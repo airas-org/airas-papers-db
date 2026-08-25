@@ -1,0 +1,1292 @@
+[
+  {
+    "id": "RnpsYhzwg4",
+    "title": "PaSTel: Anchoring Histology in Spatial Transcriptomics via Multi-Scale Hierarchical Bio-Prior Contrastive Pretraining",
+    "authors": [
+      "Azim Dehghani Amirabad",
+      "Junchao Zhu",
+      "Pushpak Pati",
+      "Walid Abdelmoula",
+      "Tommaso Mansi",
+      "Rui Liao"
+    ],
+    "abstract": "Spatial transcriptomics (ST) links tissue morphology with molecular programs, motivating multimodal pretraining methods that align histology images with gene expression. However, existing approaches suffer from two key limitations: spatially informative gene selection is often dominated by ubiquitous housekeeping genes, leading to weakly discriminative representations, and independent spot–patch alignment fails to capture spatial dependencies that are critical for tissue organization. To address these challenges, we introduce PaSTel, a hierarchical multimodal pretraining framework that integrates biological priors at three levels. At the spot level, TF-IDF reweighting is used to identify spatially informative genes; at the functional level, curated KEGG pathways serve as anchors for encoding global biological semantics; and at the regional level, spatial clustering aggregates neighboring spots to model meso-scale tissue structure. Across multiple downstream tasks, PaSTel consistently outperforms existing vision and vision–omics encoders, demonstrating that incorporating multiscale biological priors yields more informative and transferable representations for spatial transcriptomics.",
+    "topic": "Multimodal Foundational Model; Spatial Transcriptomics; H&E",
+    "conference": "fm4ls",
+    "year": 2026,
+    "paper_url": "https://openreview.net/forum?id=RnpsYhzwg4"
+  },
+  {
+    "id": "CUpqGH72hv",
+    "title": "Pre-training on noncovalent interactions in synthetic protein-ligand structures to better predict binding affinity",
+    "authors": [
+      "Arun Raja",
+      "Garrett A. Stevenson",
+      "Garrett M Morris",
+      "Jonathan E Allen",
+      "Hyojin Kim"
+    ],
+    "abstract": "Accurate prediction of protein-ligand binding affinity is a central challenge in computational drug discovery, yet existing graph neural network approaches typically represent protein-ligand complexes as homogeneous atom-level graphs, neglecting the role of aromatic ring systems and the rich hierarchy of noncovalent interactions that govern binding. In this work, we introduce the Protein-Ligand Interaction Pre-training or PLIP approach, a heterogeneous equivariant graph transformer that explicitly encodes four node types - ligand atoms, protein atoms, ligand rings, and protein rings connected by interaction- specific edge relations such as hydrogen bonds, hydrophobic contacts, π-π stacking, and cation-π interactions. We pretrain on interactions found in 5.1 million synthetic protein-ligand structures from the Structurally Augmented IC50 Repository (SAIR) using a multi-task self-supervised objective comprising interaction-type classification, interatomic distance regression, and binding affinity prediction. Systematic evaluation on four drug targets - acetylcholinesterase (AChE), SARS- CoV-2 main protease (SARS-Mpro), Zika protease, and μ-opioid receptor - demonstrates that multi-task pretraining on all three pretraining objectives (interaction type, distance and affinity) achieves Pearson correlations of 0.667 on AChE (+26% over training from scratch), 0.490 on Zika (+6%), 0.374 on μ-opioid receptor (+32%), and 0.255 on SARS-Mpro (+39%). Comparisons against competing baselines demonstrate the benefits of pre-training on protein-ligand interactions for structure-based binding affinity prediction.",
+    "topic": "pretraining; binding affinity; noncovalent; synthetic; protein-ligand",
+    "conference": "fm4ls",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/59601d1e936071236ad7256f6bb9a0ef5c5f7f1e.pdf"
+  },
+  {
+    "id": "9DneZlwAZp",
+    "title": "Structural Bottleneck Reasoning: Efficient Medical VQA via Concept Alignment",
+    "authors": [
+      "Hoang Nguyen",
+      "Tran Anh Dang Le",
+      "Ta Duc Huy",
+      "Nguyen Bui Ngoc Han",
+      "Vy Tuong Dang",
+      "Duy Duong-Tran",
+      "Khoa D Doan",
+      "Anji Liu",
+      "Li Shen",
+      "Pengtao Xie",
+      "Mathias Niepert",
+      "Duy Minh Ho Nguyen",
+      "James Zou",
+      "Daniel Sonntag"
+    ],
+    "abstract": "The adoption of a medical visual Chain-of-Thought (CoT) is fundamental to establishing trustworthy predictions; by externalizing the model's internal logic, it allows clinicians to verify that a diagnosis is derived from valid clinical indicators rather than spurious correlations. However, the expert-driven CoT paradigm is often bottlenecked by the prohibitive cost of dense manual annotations. To resolve this, we introduce \\textsc{StructAlign}, a framework that enables the seamless integration of expert knowledge via a predefined list of clinical concepts. Rather than requiring expensive, sentence-level supervision, our method leverages these concepts as \\textit{latent causal mediators} to anchor the model’s reasoning. This prevents \\textit{reasoning collapse} and ensures diagnostic consistency, providing a scalable, cost-effective path toward interpretable AI in high-stakes medicine. Our results demonstrate that StructAlign maintains high performance even in data-scarce regimes (10\\% and 40\\%), achieving large-margin improvements of up to +24.64\\%, demonstrating that conceptual grounding can effectively restore high-fidelity diagnostic reasoning, thereby reducing reliance on exhaustive expert supervision.",
+    "topic": "medical visual chain-of-thought; XAI for healthcare; concept alignment",
+    "conference": "fm4ls",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/3adea7ebf25824a387ba585948cbecaaf1c576f3.pdf"
+  },
+  {
+    "id": "CLKfooTAiO",
+    "title": "Group Contrastive Learning for Weakly Paired Multimodal Data",
+    "authors": [
+      "Aditya Gorla",
+      "Hugues Van Assel",
+      "Jan-Christian Huetter",
+      "Heming Yao",
+      "Kyunghyun Cho",
+      "Aviv Regev",
+      "Russell Littman"
+    ],
+    "abstract": "We present GROOVE, a semi-supervised representation learning approach for weakly paired multi-modal data, where samples across modalities share perturbation labels but lack instance-level correspondence. Our central contribution is GroupCLIP, a group-level contrastive loss that fills the gap between CLIP (cross-modal, instance-paired) and SupCon (uni-modal, label-supervised) for the weakly-paired regime. We integrate GroupCLIP with on-the-fly backtranslating autoencoders to learn cross-modally entangled, group-coherent representations. We additionally propose a combinatorial benchmarking framework that pairs representation learners with multiple optimal-transport aligners, revealing that no single aligner uniformly dominates. Across simulations and two single-cell genetic perturbation datasets, GROOVE matches or outperforms existing approaches on cross-modal matching and imputation, with ablations showing GroupCLIP as the key driver of performance gains.",
+    "topic": "Multimodal learning; Weakly paired data; Contrastive learning; Single-cell genomics",
+    "conference": "fm4ls",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/6e3880b2b140c72e6f734dfbd3e7da1dceb61484.pdf"
+  },
+  {
+    "id": "U7nPb0GkvG",
+    "title": "Few-Shot Biomedical Image Classification by Alignment of Independently Pretrained Encoders",
+    "authors": [
+      "Daniel Shalam",
+      "Simon Korman"
+    ],
+    "abstract": "Few-shot biomedical classification is dominated by methods built on jointly trained vision-language models such as BiomedCLIP, which rely on paired image-report corpora that are costly to assemble. In parallel, strong unimodal biomedical encoders, such as the self-supervised vision model RAD-DINO, are trained independently of text. We introduce a framework that aligns independently pretrained vision and text encoders using only the few-shot support set, combining a closed-form orthogonal Procrustes map with a lightweight flow-matching refinement. On the 11-dataset BiomedCoOp benchmark, replacing the jointly trained biomedical vision encoder with a general-purpose DINOv3 encoder matches or surpasses BiomedCoOp at higher shot counts. On VinDr-CXR multi-label chest X-ray classification, aligning RAD-DINO with BiomedCLIP text consistently outperforms linear probing of RAD-DINO across all shot counts. These results show that post-hoc alignment can reduce dependence on paired multimodal pretraining while enabling flexible combinations of independently trained unimodal models.",
+    "topic": "few-shot learning; biomedical image classification; vision-language models; cross-modal alignment; orthogonal Procrustes; flow matching; foundation models; post-hoc adaptation",
+    "conference": "fm4ls",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/00c2e655588ef789818daf511631b6648850e3b2.pdf"
+  },
+  {
+    "id": "Nfc6WxZG2x",
+    "title": "Virtual Cell Models Inflate Perturbation Effect Sizes and Undermine Causal Gene Regulatory Network Recovery",
+    "authors": [
+      "Aayan Alwani",
+      "Ethan Y Wang"
+    ],
+    "abstract": "Virtual cell models are deep neural networks that predict transcriptional responses to genetic perturbations and are proposed as in silico substitutes for laboratory CRISPR screens. Ahlmann-Eltze and Huber (2025) recently showed that current models fail to outperform simple linear baselines at per-gene prediction; we ask whether the same holds downstream when their predictions are used to recover causal gene regulatory networks. We introduce PerturbCausal, a benchmark that pushes predictions from four virtual cell models (GEARS, CPA, Geneformer, and the 2025 Arc Institute STATE foundation model) through four causal discovery algorithms (GIES, inspre, PC, NOTEARS) on the Replogle K562 and RPE1 Perturb-seq datasets and the Norman 2019 K562 dataset. Across five seeds, the three pre-2025 models do not significantly outperform a sparse linear regression trained on control cells alone. STATE is the first model in the roster to materially exceed the linear baseline ($F_1 = 0.462$), but its absolute causal F1 remains below $0.5$, leaving more than half of real interventional edges unrecovered. We reconcile two competing narratives in the recent literature, mode collapse and effect-size inflation, as two views of the same failure: deep models predict similar dense response patterns across perturbations. A model-agnostic quantile-matching calibration corrects this magnitude failure exactly but recovers only about 40% of the causal gap, locating the remainder in joint-distribution structure that distributional calibration cannot reach. The benchmark, calibration toolkit, and reproducibility code are released as an open-source Python package.",
+    "topic": "Virtual cell models; Causal discovery; Perturb-seq; Gene regulatory networks; Foundation models; Single-cell genomics; Mode collapse; Effect-size inflation; Calibration; Benchmark",
+    "conference": "fm4ls",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/d30c9fe8c336c8d3e4ead8a28d58ce99bf10d949.pdf"
+  },
+  {
+    "id": "8N08lLCs9H",
+    "title": "Auditing Generative Graph Foundation Models for Connectomics: A Score × Predictor × Sampler Decomposition on Real Sparse Directed Connectomes",
+    "authors": [
+      "Ethan Y Wang",
+      "Aayan Alwani"
+    ],
+    "abstract": "It is known that degree-preserving baselines are hard for learned graph generators to beat on marginal statistics. We bring this question to sparse directed connectomes and ask: when a generative pipeline produces realistic-looking brain wiring, how much credit belongs to the trained model versus the cheap degree-correction step?\n\nWe decompose the standard pipeline into three stages — score × predictor × sampler — and audit it on two real connectomes: MICrONS Phase-1 L2/3 (density ~0.022) and FlyWire (~0.001). We evaluate on four axes: three-hop reachability, triadic motifs, a learned-classifier metric (PolyGraph Discrepancy), and persistent-homology cycle distance.\n\nThe verdict is metric-specific. On the two marginal-summary axes, the Pareto front contains only structural nulls that use ground-truth degrees; every trained pipeline is dominated. On the classifier axis, the trained pipeline beats the null. On cycle distance, it ties. The verdict is also substrate-specific: on FlyWire at N=500 the structural null is no longer dominant. A previously reported RandomForest advantage turned out to be a cross-validation leakage artifact. Of four score families, only discrete-flow scores retain meaningful signal (~15% top-edge overlap, z=+3.97 above the ~6% random baseline) through the Sinkhorn projection. The contribution is a connectome-specific diagnostic and reporting standard, not the headline phenomenon, which is known.",
+    "topic": "foundation models for life sciences; generative graph models; connectomics; MICrONS; FlyWire; sparse directed graphs; discrete flow matching; structural null; configuration model; Sinkhorn; Pareto audit; computational neuroscience",
+    "conference": "fm4ls",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/ae7ffaf6c6a6724f91462d6b3e401cd5c5c110f6.pdf"
+  },
+  {
+    "id": "PSwrUaBwIa",
+    "title": "Generalization of Protein Foundation Models for Engineered Fluorescent Biosensors",
+    "authors": [
+      "Anirudh Palutla",
+      "Caroline Malin-Mayor",
+      "John N. Koberstein",
+      "Alison G. Tebo",
+      "Srinivas C Turaga"
+    ],
+    "abstract": "Protein foundation models (PFMs) are increasingly used in fitness prediction tasks in which engineers seek to identify sequences with improved function. However, these models are often evaluated under random splits, which may not reflect the generalization required for engineering superior variants. Further, results from existing classical protein fitness benchmarks may not generalize to fluorescent protein biosensors which require designing finely tuned protein dynamics. We benchmark embeddings from seven PFMs across four regression heads on a dataset of 1,314 mutated GCaMP variants, evaluating each model–head pair under a random baseline and two extrapolation regimes: novel-region splits that hold out protein sequence regions, and low-to-high fitness splits that hold out the highest-fitness variants. Extrapolative splits result in substantial performance drops across all models, and structure- and MSA-based conditioning partially mitigate this drop on novel-region splits but not on low-to-high splits. The two extrapolation regimes also differ in ranking transfer: novel-region rankings closely track random-split rankings while low-to-high rankings diverge. These findings indicate that model and architecture choices should be driven by which form of generalization the application requires, with no single configuration optimal across regimes.",
+    "topic": "proteins; foundation models; biosensors; generalization",
+    "conference": "fm4ls",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/365b04888068bd541e0c196091262e53895a2a76.pdf"
+  },
+  {
+    "id": "b6j6BqMDir",
+    "title": "Transferable Lesion-Supervised Speech Representations for Post-Stroke Modelling",
+    "authors": [
+      "Giulia Sanguedolce",
+      "Niamh Parkinson",
+      "Fatemeh Geranmayeh",
+      "Patrick Naylor"
+    ],
+    "abstract": "Characterising post-stroke brain injury typically relies on structural neuroimaging, which is costly, infrastructure-dependent, and difficult to repeat. Speech is a behavioural marker of stroke-related dysfunction that can be collected non-invasively at scale, yet whether lesion topology can be automatically decoded from speech remains largely unexplored. Linking speech to brain structure requires paired speech-MRI data, but the limited availability of MRI creates a data-efficiency bottleneck for supervised modelling. To address this, we propose a two-stage transfer-learning framework that reuses representations learned from lesion inference to predict downstream structural and clinical phenotypes available only for a subset of the cohort. First, a multi-head speech-to-lesion (S2L) model was trained on 639 patients to predict stroke location anatomical labels and lesion volume from speech, generating patient-level speech-to-lesion probability profiles (S2Lpp) from out-of-fold predictions and uncertainty estimates. Then, these S2Lpp profiles were used as features in downstream models predicting finer-grained lesion geometry and clinical phenotypes for a subset of patients ($N=110$) absent from the original S2L training, benchmarked against speech features, Whisper embeddings, and demographic and clinical baselines under nested cross-validation. The transferred S2Lpp emerged as the strongest predictors of focal lesion bounding-box extent ($R^2=0.241$, $r=0.503$), despite spatial extent being unseen during S2L training, whereas Whisper embeddings performed best for cognitive outcomes ($R^2=0.486$, $r=0.702$), with further gains after residual adaptation using S2Lpp ($R^2=0.501$). Together, the findings suggest that transferred and normal speech-derived representations can improve modelling of post-stroke brain-behaviour relationships when clinical MRI information are sparse, supporting more accessible brain-health monitoring.",
+    "topic": "Embeddings; Clinical Speech; Stroke",
+    "conference": "fm4ls",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/18f696b593f1169c9609d9339483a6bbeee53381.pdf"
+  },
+  {
+    "id": "Nrnk7F5ccA",
+    "title": "MESH-HR: Multimodal Fusion of Somatic DNA Profiles and Histopathology for Continuous Breast Cancer Receptor Subtyping via LLM-Assisted Annotation",
+    "authors": [
+      "Shaye Carver",
+      "Kodi Taraszka",
+      "Intae Moon",
+      "Alexander Gusev"
+    ],
+    "abstract": "Breast cancer receptor subtyping determines eligibility for targeted therapies\nbased on estrogen receptor (ER), progesterone receptor (PR), and human epidermal\ngrowth factor receptor 2 (HER2) expression, which are typically assessed via\n immunohistochemistry (IHC) for ER and PR, and IHC or fluorescence in situ hybridization (FISH) for HER2. We introduce MESH-HR (Multimodal Ensemble of Somatic\nVariants and H\\&E Slides for Hormone Receptor subtyping), a multimodal framework\nthat integrates two biological modalities, somatic DNA profiles and whole-slide\nhistopathology images, to predict receptor status probabilities without molecular marker assays (IHC/FISH). To enable large-cohort training without manual curation, ground truth receptor labels\nare extracted at scale from unstructured pathology reports using a GPT-4-based\nLLM pipeline. MESH-HR combines an attention-based multiple instance learning\n(ABMIL) vision encoder with an XGBoost model over somatic features, fusing\ncomplementary signal across DNA and imaging modalities. Trained on $>$1,300 breast\ncancers, MESH-HR achieves AUCs of 0.94 (ER), 0.83 (PR), and 0.96 (HER2) on\nheld-out data, outperforming unimodal baselines, and generalizes zero-shot to The\nCancer Genome Atlas Breast Cancer cohort (TCGA-BRCA). Continuous probabilistic\noutputs improve survival stratification over binary clinical labels, recovering\nprognostic signal lost under discrete IHC thresholds. We further apply MESH-HR\nzero-shot to cancers of unknown primary (CUP), a population in which receptor\nprofiling is rarely performed due to the absence of a known tissue of origin,\nobtaining biologically consistent, survival-predictive receptor estimates that\nsupport receptor-informed personalized treatment stratification.",
+    "topic": "Breast cancer; receptor subtyping; Multimodal learning; Somatic DNA / genomics; Whole-slide imaging (WSI); Histopathology; Attention-based multiple instance learning (ABMIL); XGBoost; LLM-assisted annotation (GPT-4); Cancers of unknown primary (CUP); Zero-shot generalization; TCGA-BRCA; Continuous / probabilistic predictions; Survival stratification; IHC-free prediction; Computational pathology",
+    "conference": "fm4ls",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/b2be471096952a4846af9208d0ca12fdbdb64eda.pdf"
+  },
+  {
+    "id": "uexI49pco3",
+    "title": "PaCX-MAE: Physiology-Augmented Chest X-Ray Masked Autoencoder",
+    "authors": [
+      "Yancheng Liu",
+      "Kenichi Maeda",
+      "Manan Pancholy"
+    ],
+    "abstract": "Clinical diagnosis often requires combining imaging with physiological measurements, yet deployed models typically operate on unimodal data. We present $\\textbf{PaCX-MAE}$, a cross-modal distillation framework that injects physiological priors into chest X-ray (CXR) encoders while remaining strictly unimodal at inference. PaCX-MAE augments in-domain masked autoencoding with a dual contrastive-predictive objective, aligning CXR representations with paired ECG and laboratory embeddings. Extensive evaluation across nine benchmarks demonstrates consistent improvements over domain-specific MAE, particularly on physiology-dependent tasks (e.g., $\\textbf{+2.7 AUROC}$ on MedMod; $\\textbf{+6.5 F1}$ on VinDr). The method proves highly label-efficient in the $\\textbf{1}$% regime and preserves anatomical fidelity, achieving parity with MAE on segmentation tasks. Zero-shot and attention analyses confirm that PaCX-MAE successfully learns to attend to physiological indicators, such as the cardiac silhouette, absent in standard visual pretraining.",
+    "topic": "self-supervised learning; medical machine learning; multimodal learning; distillation; chest x-ray",
+    "conference": "fm4ls",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/646744a3d90b3a8bf2f374574b2ff6ee80899325.pdf"
+  },
+  {
+    "id": "CMsk8XJSA4",
+    "title": "ProSAM: Modular and Energy-Guided Fine-Tuning of Protein Language Models for Structure Prediction",
+    "authors": [
+      "Yiyang Zheng",
+      "Zhiguo Tao"
+    ],
+    "abstract": "Fine-tuning Protein Language Models (PLMs) for structure prediction is limited by uniform feature treatment and the absence of uncertainty modeling during training. We introduce ProSAM, a modular framework that decomposes PLM representations via a Dual-path Encoder, modulates them through a Protein-Aware Structural Adapter (PASA) and Fold-Specific Prompting (FSP), and regularizes outputs with an Energy-Guided Conformational Uncertainty (ECU) module. On CASP14, ProSAM achieves TM-score 0.892±0.005 and RMSD-Cα 1.23±0.08A, improving +4.1 points over ESMFold (p<0.01, paired Wilcoxon, Cohen's =1.42). Gains persist on CASP15 (+3.4), CAMEO-hard, and PDB-2022, and are largest for low-MSA-depth targets (+4.9). ProSAM outperforms LoRA and Adapter baselines while adding only 12.3M parameters (1.9% of the frozen PLM). Code and weights will be released upon acceptance.",
+    "topic": "Protein Language Models (PLMs) · Protein Structure Prediction · Parameter-Efficient Fine-Tuning (PEFT) · Conformational Uncertainty · Biophysical Priors · Modular Adaptation · Energy-Guided Learning · Multi-Objective Loss",
+    "conference": "fm4ls",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/9494fac620faf56a68bfdc46fec2976da0a71116.pdf"
+  },
+  {
+    "id": "ALWkvFC0O1",
+    "title": "PertReasonQA: A Knowledge-Grounded Benchmark and Framework for Cell-State–Conditioned Mechanistic Reasoning of Perturbation Effects",
+    "authors": [
+      "Dongkwan Kim",
+      "Yiming Gao",
+      "Yining Yang",
+      "Yang Shen"
+    ],
+    "abstract": "Evaluating machine learning in scientific domains requires separating correct predictions from correct reasons under distribution shifts. We introduce PertReasonQA, a knowledge‑grounded benchmark for cell‑state--conditioned reasoning about perturbation effects. It tests whether models can generate mechanistically faithful explanations and assesses their robustness against complex shifts, such as new cells and unseen perturbations. PertReasonQA combines multiple single‑cell genetic and chemical perturbation data with knowledge graphs, and dynamically conditions pathways on cell‑specific basal states to avoid generic memorization. Evaluations on state-of-the-art models reveal systematic gaps between outcome prediction and mechanistic reasoning, exhibiting failure modes invisible to standard benchmarks. As a reference probe, we present PertReasonLM, a large language model that aligns outcome predictions with context-specific regulatory reasoning. PertReasonQA thus provides a rigorous diagnostic benchmark for studying faithful, generalizable reasoning in data-rich scientific systems.",
+    "topic": "AI for Science; Perturb-Seq Modeling; Large Language Models; Knowledge Graphs",
+    "conference": "fm4ls",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/c23e99ff7acca16215a41783ed3cc56815dc0c88.pdf"
+  },
+  {
+    "id": "x8uvYI5WGG",
+    "title": "Retrieval-Augmented Foundation Model Enhances Risk Prediction Using Electronic Health Records",
+    "authors": [
+      "Saeed Shurrab",
+      "Mariam Al-Omari",
+      "Dana El Samad",
+      "Farah E. Shamout"
+    ],
+    "abstract": "Electronic Health Records (EHR) contain rich longitudinal patient information widely used for predictive modeling. However, effectively leveraging historical data remains challenging due to long trajectories, event heterogeneity, temporal irregularity, and varying relevance of past visits. Existing approaches rely on fixed windows or uniform aggregation, which may obscure clinically important signals. We introduce $\\texttt{EHR-RAGp}$, a retrieval-augmented foundation model that dynamically integrates relevant patient history. We construct an EHR vector database via clinically relevant chunking strategies and employ a prototype-guided retrieval module to identify and weight the most relevant historical segments for a given prediction task. Across multiple tasks, $\\texttt{EHR-RAGp}$ consistently outperforms state-of-the-art EHR foundation models.",
+    "topic": "Retrieval; EHR; Risk; Prediction; RAG",
+    "conference": "fm4ls",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/3dcc6de2d8717d7487ff6c79e319162a9f3ae0dc.pdf"
+  },
+  {
+    "id": "npTFOLkCDf",
+    "title": "SIGMMA: Hierarchical Graph-Based Multi-Scale Multi-modal Contrastive Alignment of Histopathology Image and Spatial Transcriptome",
+    "authors": [
+      "Dabin Jeong",
+      "Amirhossein Vahidi",
+      "Ciro Ramírez-Suástegui",
+      "Marie Moullet",
+      "Kevin Ly",
+      "Mohammad Vali Sanian",
+      "Sebastian Birk",
+      "Yinshui Chang",
+      "Adam Boxall",
+      "Daniyal Jafree",
+      "Lloyd Steele",
+      "Vijaya Baskar MS",
+      "Muzlifah Haniffa",
+      "Mohammad Lotfollahi"
+    ],
+    "abstract": "Recent advances in computational pathology have leveraged vision–language models to learn joint representations of Hematoxylin and Eosin (H\\&E) images with spatial transcriptomic (ST) profiles, but existing approaches typically align H\\&E tiles and ST profiles at a single scale, overlooking fine-grained cellular structures and their spatial organization. We propose \\textsc{Sigmma}, a multi-modal contrastive alignment framework for learning hierarchical H\\&E-ST representations.\nBy enforcing multi-scale contrastive alignment, \\textsc{Sigmma} ensures coherent representations across modalities, while a graph-based modeling of cell interactions integrates both inter- and intra-subgraph relationships to capture cellular organization from fine to coarse scales.\nAcross datasets, \\textsc{Sigmma} consistently improves gene-expression prediction and cross-modal retrieval performance, and its learned multi-scale embeddings recover tumor microenvironments and immune-exclusion programs in pancreatic cancer.",
+    "topic": "spatial transcriptomics; histopathology; multi-modal contrastive learning; multi-scale representation learning; graph neural networks; H&E-ST alignment; cell-resolution imaging",
+    "conference": "fm4ls",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/b64fa950a7c03d6a94a04f28c3d7a8e608bab4f1.pdf"
+  },
+  {
+    "id": "d6nkUwkFSn",
+    "title": "LLMs Can Learn the Language of the Microbiome",
+    "authors": [
+      "Neythen J Treloar",
+      "Saif Ur-Rehman",
+      "Jenny Yang"
+    ],
+    "abstract": "We explore the application of large language models (LLMs) to microbiome data, a domain that remains underexplored despite the rise of self-supervised learning in biology. We introduce Atlas, a large-scale pretraining dataset comprising over 539,000 data points from MGnify, spanning multiple DNA sequencing modalities including amplicon, assembly, and whole-metagenome data. Using Atlas, we train the Waypoint family of models, GPT-style causal language models trained to understand microbiomes. To enable standardized evaluation, we present Compass, a benchmark of eight downstream microbiome prediction tasks. We show that our pretrained Waypoint models outperform classical methods and prior foundation models, with gains driven by both dataset scale and representation choices. Our results establish pretrained LLMs as a strong and practical approach for microbiome prediction tasks.",
+    "topic": "large language models; microbiome foundation models; multi-modality sequencing data; self-supervised pretraining; causal language modelling; scaling; metagenomics; benchmark",
+    "conference": "fm4ls",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/181353f0c6aba3b3df6387c5e4a514f0bf87406b.pdf"
+  },
+  {
+    "id": "yTHTv6djD4",
+    "title": "How Do Medical MLLMs Fail? A Study on Visual Grounding in Medical Images",
+    "authors": [
+      "Guimeng Liu",
+      "Tianze Yu",
+      "Somayeh Ebrahimkhani",
+      "Lin Zhi Zheng Shawn",
+      "Kok Pin Ng",
+      "Ngai-Man Cheung"
+    ],
+    "abstract": "Generalist multimodal large language models (MLLMs) have achieved impressive performance across a wide range of vision-language tasks. However, their performance on medical tasks—particularly in zero-shot settings where generalization is critical—remains suboptimal. A key research gap is the limited understanding of why medical MLLMs underperform in medical image interpretation.\n**In this work**, we present a pioneering systematic investigation into the visual grounding capabilities of state-of-the-art medical MLLMs. To disentangle *visual grounding* from *semantic grounding*, we design VGMED, a novel evaluation dataset developed with expert clinical guidance, explicitly assessing the visual grounding capability of medical MLLMs. \nWe introduce new quantitative metrics and conduct detailed qualitative analyses. Our study across **eight** state-of-the-art (SOTA) medical MLLMs validates that they often fail to ground their predictions in clinically relevant image regions. We note that this finding is specific to medical image analysis; in contrast, prior work has shown that MLLMs are capable of grounding their predictions in the correct image regions when applied to natural scene images.\nMotivated by these findings, we propose VGRefine, a simple yet effective inference-time method that refines attention distribution to improve visual grounding in medical settings. Our approach achieves SOTA performance across  6 diverse Med-VQA benchmarks (over 110K VQA samples from 8 imaging modalities) \nwithout requiring additional training or external expert models.  Overall, our work, for the first time, systematically validates inadequate visual grounding as one of the key contributing factors for medical MLLMs' under-performance.",
+    "topic": "Medical MLLM; Visual Grounding",
+    "conference": "fm4ls",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/15cf05bc236c590cdeb556f3271fd1cd01d943e2.pdf"
+  },
+  {
+    "id": "x5zDSkJEsw",
+    "title": "Neuro-Anatomy–Informed Self-Supervised Learning for Structural Brain MRI",
+    "authors": [
+      "Sean Chen Jiale",
+      "Tianze Yu",
+      "Somayeh Ebrahimkhani",
+      "Lin Zhi Zheng Shawn",
+      "Kok Pin Ng",
+      "Ngai-Man Cheung"
+    ],
+    "abstract": "Self-supervised learning (SSL) has become a foundational paradigm for representation learning from large-scale unlabeled data and underpins many modern foundation models across biological and biomedical domains, including biomedical imaging. However, most existing SSL approaches for biomedical imaging rely on objectives originally designed for natural images, such as contrastive alignment or reconstruction, which primarily enforce instance-level consistency based on generic features. As a result, these objectives are insufficient to capture biologically meaningful structural relationships that emerge across samples and populations, limiting their ability to learn representations aligned with underlying biological organization. **In this work**, we introduce neuro-anatomy-informed self-supervised learning (NAI-SSL), a framework that moves beyond conventional instance-level objectives by incorporating biologically grounded inductive bias. Focusing on structural brain MRI, we leverage *inter-hemispheric structural consistency*, a fundamental principle of brain organization, to formulate a structure-aware self-supervised task based on inter-regional covariance.  Unlike conventional SSL objectives that operate on individual samples, the proposed task leverages cross-sample covariance statistics to model coordinated variation across anatomically related brain regions, enabling the learning of *biologically meaningful cross-sample structural relationships*. Empirical results demonstrate that the proposed approach consistently improves representation quality across downstream neuroimaging tasks, while producing representations that better reflect underlying brain organization. **Additional analysis and experiments are included in the Supp.**",
+    "topic": "Neuroscience; Cognitive Science; Representation Learning; Magnetic Resonance Imaging; AI for science",
+    "conference": "fm4ls",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/85de559e7eaacbda488c2a326ac40ec20ceb87b0.pdf"
+  },
+  {
+    "id": "Nmf9fBxCgq",
+    "title": "Marking the Wrong Symptoms: Evaluating LLM Watermarks in Medical Texts",
+    "authors": [
+      "Melanie Rieff",
+      "Robin Staab",
+      "Thibaud Gloaguen",
+      "Stefan Hegselmann",
+      "Martin Vechev"
+    ],
+    "abstract": "Large language models (LLMs) are increasingly integrated into clinical workflows, stressing the need for reliable traceability of model-generated output with watermarking. Yet, most watermarks are evaluated on general-purpose benchmarks, leaving domains like medicine, where small token-level perturbations can result in significant semantic changes, under-explored. In this work, we present the first rigorous study of how LLM watermarks affect medical performance, benchmarking 5 watermarking schemes across 11 LLMs and 7 VLMs on various tasks spanning unimodal and multimodal clinical reasoning. Importantly, we complement existing evaluations by introducing a human-expert-validated pipeline for systematically auditing medical reasoning quality, terminological precision, and induced hallucinations. Our results reveal that watermarking can induce substantial degradation across multiple failure modes, including lexical corruption, hallucinated terminology, and amplified misattribution or omission of image findings. Notably, we find that the absence of domain-specific analyses, combined with aggregate metrics that miss failures inherent to clinical text, can systematically obscure practical watermark-induced degradations. Our findings establish domain-specific evaluation as a prerequisite for the safe deployment of watermarked models in medicine, where current benchmarks can otherwise mask clinically consequential failures.",
+    "topic": "LLM watermarking; medical AI; clinical reasoning; hallucination; LLM-as-a-judge; vision-language models",
+    "conference": "fm4ls",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/a242ea74057e507ec5f35b8b2a39777f70e553b5.pdf"
+  },
+  {
+    "id": "i2Onnie8Ao",
+    "title": "AMR-Bench-mini: A Diagnostic Benchmark for Agentic Mechanistic AMR Reasoning under Evidence Insufficiency",
+    "authors": [
+      "Ali Ihsan Nergiz",
+      "Erva Nur Cinar"
+    ],
+    "abstract": "Frontier language-model agents have rapidly converged on a planner+tools+critic architecture for biological reasoning, but it is unclear whether they reason about evidence sufficiency or merely pattern-match plausible mechanisms. We introduce AMR-Bench-mini, a focused diagnostic benchmark for agentic mechanistic antimicrobial-resistance (AMR) reasoning, scoped strictly to retrospective evidence synthesis on Klebsiella pneumoniae. The benchmark pairs a 924-task corpus generated from public isolate metadata, genome assemblies, laboratory antimicrobial-susceptibility testing (AST), and pinned annotation outputs with two evaluation splits: a balanced 50-task pilot and a 50-task hard diagnostic split organised into seven category-level failure modes. We document a stratified audit-and-fix loop that lifts heuristic gold credibility from 71 % to 93 %, with four further cases where all three models agreed against the heuristic gold and were reviewed as candidate gold errors. Three frontier models (GPT-5.4, Gemini 3.1 Pro, Claude Opus 4.7) score 82–88 % on the pilot and 50–64 % on the hard split. All three converge on ∼25 % accuracy on the abstention category, while contrastive-control categories remain high descriptively. A pre-resolved CARD ARO substrate-context tool injected into Gemini’s prompt produces a zero-percentage-point net effect on hard accuracy, with two gains and two losses: pre-resolved substrate context alone is not sufficient for evidence-sufficiency reasoning.",
+    "topic": "AMR; agentic AI; benchmark; evidence sufficiency",
+    "conference": "fm4ls",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/1b55cb943484291a38c4e13d2e582713ca70dfad.pdf"
+  },
+  {
+    "id": "gjMQHsi2RL",
+    "title": "The Hallucination Dependence Index: A Cross-Condition Diagnostic for Clinical-LLM Faithfulness",
+    "authors": [
+      "Ishan Gonehal",
+      "Hanson Wen",
+      "Bowman Novey"
+    ],
+    "abstract": "We introduce the Hallucination Dependence Index (HDI), a paired metric that reports the fraction of a clinical LLM's ungrounded hallucination that grounding actually suppresses, computed under bit-for-bit identical prompts with only the evidence bundle substituted between conditions. Standard clinical-LLM faithfulness evaluations report a single supported-claim rate, which by construction cannot tell a model that reads the bundle apart from one whose pretraining priors already match the cohort; HDI plus an embedding-overlap probe distinguishes calibrated refusal from silent prior-recycling. We instantiate HDI in a cross-condition harness on 119 TCGA-LUAD cases anchored to a two-expert consensus adjudication ($\\kappa = 0.64$; independent inter-annotator $\\kappa = 0.71$), with a fixed external LLM judge (gpt-4.1-mini, in neither factorial row) that neutralizes self-preference bias. Across gpt-4o-mini, gpt-5.4-mini, gemini-2.5-flash, and the gemini-3-flash *preview* endpoint, HDI spans 0.336–0.984 while grounded support compresses to 81.9–93.2%, inverting safety rankings; gpt-5.4-mini's low HDI reflects calibrated refusal, not prior-recycling (3.2% semantic overlap). Pairwise patient-paired bootstrap separates all six model pairs at Holm-corrected $p \\leq 0.009$. These structural findings are invisible to grounded-only metrics.",
+    "topic": "clinical LLM; LLM faithfulness; hallucination evaluation; Hallucination Dependence Index; cross-condition evaluation; foundation models for biomedical summarization; multimodal evidence grounding; TCGA-LUAD; LLM-as-judge; paired bootstrap; reproducible benchmarks",
+    "conference": "fm4ls",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/d0d5525a42d3fb03b8b48e0779c3940d9ae2e329.pdf"
+  },
+  {
+    "id": "ClVNdyCzFh",
+    "title": "Mode-Aware Phenotype Profiling from Korean Clinical Reports: An LLM-Derived Two-Layer Fingerprint for Autism Characterization",
+    "authors": [
+      "Yeojin Ryu",
+      "Miae Oh",
+      "Joon-Yong An"
+    ],
+    "abstract": "Autism spectrum disorder (ASD) is phenotypically heterogeneous. Clinical diagnostic reports provide a richer and more clinically proximal basis for heterogeneity analysis than questionnaire totals. We analyzed 309 Korean clinical reports with a sentence-attention KLUE-RoBERTa model and an LLM silver-labeling workflow that mapped high-attention clinical sentences into 18 DSM-5-grounded phenotype domains. Report-level domain frequency vectors agreed closely with expert-gold profiles. To test for discrete subtypes, we fit Gaussian mixture models on isometric log-ratio coordinates and benchmarked the resulting clusters against a permutation null with multi-seed stability checks. Four \\emph{weak density modes} emerged consistently across random seeds but were not well separated enough for hard subtype assignment, comprising a dual prototype core, a broad diffuse mode, and a physiological-adaptive directional mode. Mahalanobis tail tests then located individual idiosyncrasy in the residual PC subspace rather than in the leading mode-carrying dimensions. We summarize the phenotype space with a two-layer fingerprint, mode membership plus within-mode tail deviation per domain, as a descriptive alternative to hard subtype labels, with the individual-deviation layer remaining exploratory.",
+    "topic": "Autism Spectrum Disorder; Clinical NLP; Phenotype Profiling; Large Language Models; Heterogeneity",
+    "conference": "fm4ls",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/4a7e291a28d41a4b2d624165b2df085ec8e0e3b8.pdf"
+  },
+  {
+    "id": "7cdGdKdnYA",
+    "title": "Is PEFT Enough for Cell Segmentation? An Empirical No-Go Result on Frozen Foundation Models",
+    "authors": [
+      "Joonsuk Hwang",
+      "Hyowon Woo",
+      "Hyobin Seok",
+      "Jangwon Seo",
+      "Jeong Hoon Lee"
+    ],
+    "abstract": "In cell microscopy, downstream analysis increasingly requires precise cell instance segmentation rather than a high average segmentation score. Using Cellpose-SAM on LIVECell as a controlled case study, we examine whether various adaptation strategies, including backbone adapters, decoder-side LoRA and partial unfreezing, reweighting losses, and cell-separation losses, together with full fine-tuning can further improve performance. Across all of them, performance stays within a narrow band around $AP_{\\mathrm{COCO}} \\approx 0.56$: the best setting (a flow-repulsion separation loss) improves over the base model but still leaves missed and merged cells in dense regions, and even full fine-tuning ($AP_{\\mathrm{COCO}} = 0.5627$) does not escape this band. These results suggest that the observed ceiling is difficult to explain solely by PEFT capacity or the number of trainable parameters. Instead, they point to a representational limitation of existing cell-domain models, motivating structure-aware cell foundation models trained to encode microscopy-specific structural properties, including dense cells, weak boundaries, touching instances, and flow-based separation, from the pretraining stage.",
+    "topic": "cell instance segmentation; parameter-efficient fine-tuning; foundation models; Cellpose-SAM; instance separation; cell microscopy",
+    "conference": "fm4ls",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/175649a60611cb133d5ec72bd8e7fe0353d1c0ae.pdf"
+  },
+  {
+    "id": "fphATMAzi4",
+    "title": "ARO: Aligned Representation learning for multi-Omics data",
+    "authors": [
+      "Amogh Singh",
+      "Yash Shah",
+      "Chiara D'Ercoli",
+      "Arash Mehrjou",
+      "Patrick Schwab",
+      "Timothy M. Jones",
+      "Pietro Lio"
+    ],
+    "abstract": "The high cost of functional molecular assays, and prevalence of missing modalities and unmatched samples in computational biology, create significant barriers to comprehensive multi-omic profiling, essential for capturing and reasoning over molecules, cells, tissues, and organisms. \nThis work proposes a model that learns meaningful representations from multi-omics cancer data supporting the reconstruction of missing and unpaired modalities. Contrary to increasingly complex, larger models, e.g.~Foundation Models (FMs), ARO prioritizes practical applicability in limited or incomplete data settings.\nARO optimally reconstructs missing modalities (MSE of 0.166 on validation and of 0.168 on test data), with its learned latent embeddings enabling a downstream cancer classification task. Our findings indicate that analyzing diverse molecular layers as a single integrated system offers a reliable and cost-efficient approach, reducing dependence on large-scale experimental testing, while still supporting multi-omic exploration in limited data settings.",
+    "topic": "Multi-Omics; Foundation Models; Computational Biology",
+    "conference": "fm4ls",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/184c6daa786b023bfcd3204dc67fffc015a35739.pdf"
+  },
+  {
+    "id": "faHMTX8CnE",
+    "title": "Predicting host-pathogen interactions using a proteome-scale language model",
+    "authors": [
+      "Cyril Malbranke",
+      "Cecilia Fruet",
+      "Anne-Florence Bitbol"
+    ],
+    "abstract": "ProteomeLM is a proteome-scale language model trained on proteomes spanning the tree of life to reconstruct masked protein embeddings from proteome context within each species. Its attention coefficients capture protein-protein interactions without supervision. Here, we show that this capability extends to cross-species host-pathogen interactions~(HPI) across ten human pathogen taxa spanning viruses and bacteria, and can be further improved with lightweight fine-tuning. We introduce \\textbf{ProteomeLM-HPI}, a parameter-efficient adaptation via LoRA, trained on concatenated host-pathogen proteomes to reconstruct masked pathogen embeddings from host context. ProteomeLM-HPI involves two key design choices: \\emph{asymmetric masking} (pathogen-heavy masking) and \\emph{blocked self-attention}. Systematic ablations show that both choices contribute. To assess generalization, we introduce a strict cross-species benchmark enforcing pathogen-level holdout and 40\\% sequence-identity filtering. On this benchmark, Proteome-HPI improves AUC on 8 out of 10 unseen pathogens. This is a work-in-progress report; code, data and models will be made publicly available.",
+    "topic": "host-pathogen interactions; protein language models; fine-tuning; LoRA; attention coefficients",
+    "conference": "fm4ls",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/3fa9bcec18be93b17f54ec40ca13faff3708aada.pdf"
+  },
+  {
+    "id": "LUeHTZtwNZ",
+    "title": "AgriPerceiver: A Parameter-Efficient Vision-Language Model for Structured Macroscopic Crop Phenotyping",
+    "authors": [
+      "Vatsal Khanna",
+      "Davinder Singh"
+    ],
+    "abstract": "Modern agriculture suffers from systemic crop yield instability, with plant pathogens contributing to 20-40\\% of global yield losses. Adapting generalist Vision-Language Models (VLMs) to produce structured, actionable phenotyping from crop images, creates a scalability crisis at the intersection of computer vision and agricultural life sciences. We present AgriPerceiver, a lightweight VLM that frames this challenge as structured report generation: given a single leaf photograph, the model produces a schema-compliant JSON diagnostic report detailing disease identity, pathology type, severity score, symptom characterisation, and actionable steps. To process high-resolution visual imagery, the input is spatially decomposed to preserve fine-grained pathological features that are typically lost during standard resizing. Our central contribution is a perception bridge that mitigates visual token explosion by compressing visual tokens into just 128 learned latents ($28.5\\times$ reduction) while critically preserving learned tile-position embeddings for spatial grounding. We employ a two-stage training curriculum: the bridge (${{\\sim}}391$M parameters) is first aligned, followed by LoRA specialization on Gemma-3-labelled structured annotations. Both the vision and language backbones remain strictly frozen throughout training to maintain parameter efficiency. Evaluated across nine metrics, AgriPerceiver achieves a composite score of 0.810 and 99.7\\% schema compliance on a held-out test set, demonstrating the viability of parameter-efficient domain specialization in life sciences AI for structured knowledge extraction.",
+    "topic": "Vision-Language Models; Perceiver Resampler; Parameter-Efficient Fine-Tuning; Agricultural Pathology; Crop Phenotyping; Multimodal Grounding; Visual Token Compression; Scalable AI for Life Sciences",
+    "conference": "fm4ls",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/2593c69f742f0c183929d4c31223d4a2f3fab478.pdf"
+  },
+  {
+    "id": "obitoePwOG",
+    "title": "Probing, Fusion, and Trustworthiness: A Systematic Evaluation of Foundation Model Representations for Multimodal Cancer Analysis",
+    "authors": [
+      "Jingyu Hu",
+      "Giuseppe Tripodi",
+      "Reed Naidoo",
+      "Sarah F McGough",
+      "Tapabrata Chakraborti"
+    ],
+    "abstract": "Foundation models (FMs) have emerged as powerful representation extractors for medical data, yet their generalizability to datasets under distribution shift remains underexplored. This work systematically evaluates FM-based representations on a suite of computational pathology tasks across two real-world commercial cohorts, IH-BC and IH-NSCLC, drawn from the licensed in-house (IH) oncology dataset. The analysis focuses on two modalities, whole-slide images and transcriptomic profiles, drawn from the IH multimodal data. We first benchmark unimodal probing performance across five FMs on eight downstream classification tasks, and find that image and omics representations carry complementary predictive signals. Then we investigate whether multimodal fusion can yield additional gains over unimodal baselines by comparing three image-omics fusion strategies built on paired representations. The trustworthiness of selected unimodal and multimodal pipelines is further assessed through conformal prediction. Our results show that FM representations achieve competitive performance on out-of-distribution data and that multimodal fusion helps mainly when no single modality dominates the signal. Conformal prediction reveals that in the majority of cases where a point prediction fails, the true diagnosis remains recoverable within the prediction set, reinforcing the value of uncertainty-aware inference for clinical support.",
+    "topic": "Foundation Models; Multimoldal Learning; Cancer Analysis; Uncertainty Quantification; Conformal Prediction",
+    "conference": "fm4ls",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/5b1901847801d5a8bbbe36782fb5e6f23087b631.pdf"
+  },
+  {
+    "id": "Nq5XAAIUSe",
+    "title": "Detecting Sparse Colorectal Cancer Signals from Multi-Modal Cell-Free DNA Representations Using Modern Hopfield Attention",
+    "authors": [
+      "Michael Widrich",
+      "Anooj Patel",
+      "Elisabeth Rumetshofer",
+      "Peter Ulz",
+      "Kaitlyn Coil",
+      "Thomas Royce",
+      "Cheng-Ho Jimmy Lin",
+      "Richard Bourgon",
+      "Anindita Dutta"
+    ],
+    "abstract": "Next-generation sequencing-based early cancer detection from cell-free DNA (cfDNA) presents an extreme-scale multiple instance learning challenge: identifying rare tumor signals amidst millions of instances per sample (with witness rates as low as $<$0.0001\\%). It also provides a testbed for translating DNA foundation model embeddings to a clinically important supervised learning task. We propose Fragment-Level Deep Learning (FLDL), an end-to-end deep learning framework that combines multi-modal fragment features, including a \nHyenaDNA-derived sequence embedding, with Modern Hopfield Networks to perform dense associative retrieval over the massive cfDNA instance space. Using held-out real-world clinical and challenging contrived test sets, we compare FLDL’s performance to a state-of-the-art machine learning model and to a deep learning model without attention (max pooling). Our results demonstrate that only the attention-based FLDL model outperforms the machine learning model, in spite of a modest training set size ($n = 4,394$). FLDL also scales effectively with sample size and with the number of instances per sample while offering useful biological insights via attention weights and learned sample representations. This work establishes a new frontier for foundation-model-augmented cfDNA representations and highly scalable attention-based deep learning in clinical cfDNA diagnostics.",
+    "topic": "DNA Foundation Model Embeddings; Multi-modal Representations; High Dimensional and Multi-resolution Signal; Early Cancer Detection; Clinical Diagnostics; Deep Learning for Genomics; Attention Mechanism; Multiple Instance Learning; Modern Hopfield Networks; Associative Memory; Interpretability; Liquid Biopsy; Cell-free DNA; DNA Methylation; Circulating Tumor DNA; Next-Generation Sequencing",
+    "conference": "fm4ls",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/89034708b03d91f5bc3f4fdae2a345a61e53f5c6.pdf"
+  },
+  {
+    "id": "ACHMa1e8J1",
+    "title": "Cell Painting Generates Single-Cell Transcriptomics via Conditional Diffusion",
+    "authors": [
+      "Reed Naidoo",
+      "Jingyu Hu",
+      "Giuseppe Tripodi",
+      "Chris Bakal",
+      "Tapabrata Chakraborti"
+    ],
+    "abstract": "Transcriptomic profiling resolves mechanism-of-action signal at single-cell resolution, but cannot match the scale or cost of morphological imaging. If the fingerprint of a treated cell population carries recoverable structure in transcriptomic space, every imaging experiment, spanning millions of cells at a fraction of the sequencing cost, becomes a latent source of molecular insight. We introduce PhenoSeq, a conditional diffusion model with a cross-attention denoising architecture that bridges two biological foundation models: a vision transformer for morphological features and a transcriptomic language model for single-cell gene expression. Operating under population-level supervision, it learns a conditional distribution over transcriptomic profiles from treatment-matched morphological observations. Evaluated on a 28-compound treatment-identification benchmark, PhenoSeq-generated embeddings outperform raw imaging in single-profile classification, and multimodal fusion recovers ≈29% of the gap to the real-transcriptomics ceiling; in the multi-profile setting, synthetic fusion more than doubles imaging-only balanced accuracy. Embedding-space fidelity confirms correct treatment localisation for the majority of conditions. These results demonstrate that generative cross-modal modelling from imaging to transcriptomics is both architecturally feasible and downstream-useful in phenotypic drug discovery. Our code is available at: https://anonymous.4open.science/r/PhenoSeq-E3E0/README.md",
+    "topic": "Computational Biology; Phenotypic screening; Foundation Models",
+    "conference": "fm4ls",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/5ea322584cf4349808f2390b1633e93be9c1f53a.pdf"
+  },
+  {
+    "id": "dD95A7ATXn",
+    "title": "MolEmb: Multimodal Large Language Models Can Be Strong Molecular Embedding Models",
+    "authors": [
+      "Xinjian Zhao",
+      "Xiangru Jian",
+      "Yaoyao Xu",
+      "Xiaozhuang Song",
+      "Wei Pang",
+      "LEI BAI",
+      "Tianshu Yu"
+    ],
+    "abstract": "Small-molecule modeling is important across drug discovery, chemical biology, and computational life sciences, where molecular embedding models can serve as foundational infrastructure for property prediction, virtual screening, toxicity assessment, and retrieval. Most molecular encoders are specialist models built around a single molecular view, producing unconditional vectors with no language interface for varying the representation. We ask whether multimodal large language models (MLLMs), which natively process images, text, and symbolic inputs, can instead serve as general molecular embedding models that produce embeddings conditioned on both a molecular profile and a natural-language semantic context. We introduce MolEmb, a lightweight framework that adapts MLLMs by aligning molecular profiles with textual descriptions in a shared embedding space using a bidirectional contrastive objective. The resulting embedding model is competitive on molecular property prediction and supports cross-modal molecule--text retrieval in the same space. We further introduce MolCAR, a diagnostic benchmark for context-aware retrieval, and find that context-aware molecular embedding is primarily a data property of the supervision. These results suggest that MLLMs are not merely chemistry assistants or generators, but a viable and extensible route to general molecular embedding models for life-science workflows.",
+    "topic": "Multimodal Foundation Models; Molecular Embedding Models; Multimodal Large Language Models; Small-Molecule Modeling; Drug Discovery",
+    "conference": "fm4ls",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/30224c7f8f33a7634deddaf61319fefb19ab6ea8.pdf"
+  },
+  {
+    "id": "Hn46pxVev9",
+    "title": "HistoTx: Early fusion of H&E images and spatial transcriptomics at varying spatial transcriptomics resolution with self-supervised learning",
+    "authors": [
+      "Alice Driessen",
+      "Steffen Wolf",
+      "Emil Malmsten",
+      "Bernd Illing",
+      "Isinsu Katircioglu",
+      "Adriano Martinelli",
+      "Raphael Gottardo",
+      "Marianna Rapsomaniki",
+      "Fei Tang"
+    ],
+    "abstract": "Spatial transcriptomics maps gene expression across tissue sections and, when integrated with whole slide images, jointly captures both morphological architecture and molecular activity to provide a rich, multimodal view of tissue biology. ML approaches combining spatial transcriptomics and WSIs typically learn a mapping from morphological features to molecular profiles via contrastive alignment or supervised fine-tuning of pathology foundation models. In both cases, transcriptomics serves as a training signal rather than a true input modality, leaving inference fundamentally image-driven. We propose an early-fusion vision transformer architecture in which transcript tokens are constructed at arbitrary spatial resolution, merged with image patch tokens, and jointly processed through a shared transformer stack for deep cross-modal interaction. Starting from a pretrained vision-only pathology foundation model, we train HistoTx by continuing self-supervised pretraining on paired image and spatial transcriptomics data and demonstrate that: 1) at inference with image only, performance remains on par with the baseline on most tasks while improving on tasks that inherently benefit from molecular knowledge, such as gene expression prediction; 2) when both modalities are available at inference, jointly providing image and transcript inputs out- performs either modality alone.",
+    "topic": "pathology; self-supervised learning; dino; wsis; spatial transcriptomics; H&E; hest bench",
+    "conference": "fm4ls",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/c52090680619e17fde06e57f7126978fe769080b.pdf"
+  },
+  {
+    "id": "5bHHy81McV",
+    "title": "Cross-modal transfer learning for mapping bulk transcriptomes at cellular level",
+    "authors": [
+      "Aarthi Venkat",
+      "Zhiwen Jiang",
+      "Daniel Marbach",
+      "Nir Hacohen",
+      "Marinka Zitnik"
+    ],
+    "abstract": "Bulk transcriptomics is widely used in clinical research, yet existing methods struggle to extract single-cell-level structure from bulk measurements, which aggregate signals across heterogeneous cell populations. Here we introduce POPPY, a framework which uses ontology-based contrastive learning to align single-cell and bulk transcriptomic foundation models and construct cell-type-aware bulk patient embeddings. Trained on 1,458 single-cell tumor samples from the Curated Cancer Cell Atlas (3CA) and 1,286 bulk profiles derived from sorted cell populations, POPPY recovers cell type and gene program structure from bulk tumor transcriptomes without fine-tuning. Using a single-cell melanoma atlas, POPPY predicts immunotherapy response across six bulk melanoma cohorts and identifies individual cells associated with response in bulk tumors. These results demonstrate single-cell foundation models can be leveraged to build bulk embeddings that capture cellular biology, enabling interpretable patient stratification from bulk data.",
+    "topic": "single-cell transcriptomics; bulk transcriptomics; multimodal alignment; contrastive learning; foundation models",
+    "conference": "fm4ls",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/21001b7fe473292ab17e2a7768d784d154a0d414.pdf"
+  },
+  {
+    "id": "nY8p8HPMc5",
+    "title": "HealthBot: An Open-Source AI Assistant for Longitudinal Personal Health Management",
+    "authors": [
+      "Zheng Yu",
+      "Yanyuan Qiao",
+      "Qi Wu",
+      "Yutong Xie"
+    ],
+    "abstract": "Medical LLMs and VLMs perform well on clinical QA and report generation, but remain largely stateless and cannot manage personal health data over time. Existing medical agents mainly target specific benchmarks or workflows, while commercial systems such as ChatGPT Health are closed-source and cloud-dependent. We present HealthBot, an open-source personal health assistant that runs locally, stores data on-device, supports messaging-platform interfaces, and works with model-agnostic LLM backends. HealthBot integrates multimodal extraction of heterogeneous health inputs into normalized records, Hierarchical Health Context (H-Context) for budget-aware longitudinal reasoning, and tool-augmented reasoning grounded in the local archive for report interpretation, trend analysis, consultation preparation, and medication tracking. We evaluate longitudinal context on a diagnosis prediction benchmark, where models infer the current diagnosis from laboratory and vital measurements under three settings: no history, raw history, and H-Context. Across two LLM backbones, history substantially improves accuracy, and H-Context further improves over raw history while reducing context length by 39\\% (up to +20~pp over no-history), demonstrating the value of structured longitudinal context for personal health agents.",
+    "topic": "Multimodal Foundation Models; Large Language Models; Biomedical Multimodal Data; Health Agent Reasoning; Personalized Healthcare Applications",
+    "conference": "fm4ls",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/84aff3f83079c4c6d85762e5e328d10f083caf5a.pdf"
+  },
+  {
+    "id": "8sCCiit00K",
+    "title": "Learning Protein Fitness Landscapes with Multimodal Stability Priors",
+    "authors": [
+      "Shannon SQ Zhang",
+      "Yunan Luo"
+    ],
+    "abstract": "Predicting how mutations change protein fitness is central to protein engineering and variant interpretation, yet most experimentally measured fitness landscapes contain only limited labeled variants. We present PsiFit, a stability-informed framework that adapts protein language models for low-$N$ fitness prediction by injecting mutation-induced stability changes predicted by a multimodal sequence-structure foundation model. By integrating biophysical stability priors into contrastive fine-tuning, PsiFit aims to improve data efficiency, reduce overfitting, and provide a general strategy for learning protein fitness landscapes from sparse assays.",
+    "topic": "protein engineering; protein function prediction; protein language models; multi-modal foundation models; protein stability; protein fitness",
+    "conference": "fm4ls",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/23230cf4bb9dbd8e7e96de25c738353fcf91c85f.pdf"
+  },
+  {
+    "id": "rR0OLTGE9j",
+    "title": "Empirical Observations on Parameter Scaling in Chemical Language Models",
+    "authors": [
+      "Artur Safrastyan",
+      "Hrant Khachatrian"
+    ],
+    "abstract": "Recent studies have shown that increasing parameter count improves the performance in graph-based architectures for molecular property prediction. In this work, we try to examine whether similar scaling behavior can be observed in autoregressive chemical language models trained on SMILES-based datasets. Experiments were conducted on three LLaMA-based models (170M, 380M, and 1.3B parameters) on diverse downstream tasks, including multi-task ADME regression from Polaris, single-task PXR induction prediction, and large-scale binding classification on a DNA-encoded library dataset (BELKA). The results show that larger models can achieve better performance in some settings, particularly in regression tasks, though this behavior is not consistent across all the benchmarks. The PXR induction task showed consistent performance gain with increased model size. On the other hand, the models showed task-dependent variability on the Polaris benchmark. In the BELKA dataset, increased model size improved performance on the public test set but failed to generalize consistently with the private and more out-of-distribution set. The findings in this study suggest that while scaling benefits can extend to chemical language models, they are highly dependent on both task characteristics and the fine-tuning strategies used. We hope this work motivates further research using larger and more diverse model variants to better understand scaling trends in chemical language models.",
+    "topic": "Chemical Language Models; Parameter Scaling; Molecular Property Prediction; Cheminformatics; SMILES Representation",
+    "conference": "fm4ls",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/a33736ce78afdf7b8f84a7073882a1f503808660.pdf"
+  },
+  {
+    "id": "YKMnLFmkiv",
+    "title": "ProtQueSt: Query-Conditioned Retrieval-Augmented Generation for Protein Function Annotation",
+    "authors": [
+      "Linrui Ma",
+      "Yiwei Liang",
+      "Yishu Yu",
+      "Chuhan Joyce Qi"
+    ],
+    "abstract": "Protein function prediction from sequence is inherently query-dependent: the same protein may be characterized by its catalytic activity, domain architecture, or cellular localization depending on the biological question. Prior work has shown that large language models consistently underperform retrieval-based methods on this task, yet simple retrieval transfers annotations from embedding-space neighbors without adapting to the query. We introduce ProtQueSt, a retrieval-augmented framework that pairs a structure-aware retriever with a query-conditioned contrastive retriever that aligns protein and annotation representations via Feature-wise Linear Modulation (FiLM). FiLM conditioning and query-pooled negative sampling prove jointly essential, as neither alone improves over the structural baseline. ProtQueSt achieves the highest Entity-BLEU (48.79, +37% over RAPM) and LLM-as-a-judge score reported on Prot-Inst-OOD. This result supports reframing text-based protein understanding as a query-conditioned retrieval problem rather than a single fixed sequence-to-text mapping.",
+    "topic": "Protein function prediction; query conditioning; contrastive learning; retrieval-augmented generation; protein–text alignment; protein language models",
+    "conference": "fm4ls",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/473070731133bc7dedc04faa907f1fca14579a56.pdf"
+  },
+  {
+    "id": "9RKfXWSQme",
+    "title": "ImmunoFoundation: A Multimodal Foundation Model     for Immunogenicity Prediction and Peptide Optimization",
+    "authors": [
+      "João Felipe Rocha",
+      "Hiren Madhu",
+      "Jenny Yongjia Liu",
+      "Apurva Mishra",
+      "Chen Liu",
+      "Rishabh Anand",
+      "Rex Ying",
+      "Smita Krishnaswamy"
+    ],
+    "abstract": "Peptide immunogenicity, whether a peptide presented by an MHC molecule elicits a T-cell response, is central to designing vaccines, cancer immunotherapy, and therapeutic proteins. Existing tools rely on a single modality, such as peptide sequences or peptide-MHC interactions, and often ignore the T-cell response that depends on the TCR-peptide-MHC complex (TCR-pMHC) and its three-dimensional structure. The scarcity of labeled TCR-pMHC data with known structures makes it difficult to build a model that captures how all components of the TCR-pMHC contribute to immunogenicity. However, a foundation model of TCR-pMHCs can learn transferable representations across components, which can be adapted to immunogenicity, binding, and TCR specificity tasks, even with limited labeled data. We introduce **ImmunoFoundation**, a self-supervised multimodal backbone for protein-complex representation, fine-tuned for peptide--MHC immunogenicity. The model couples an ESM-2 sequence encoder with a graph transformer over structure, fused via cross-modal attention. Pretraining follows a curriculum that progressively introduces structural inductive bias. **ImmunoFoundation** ourperforms prior multimodal class-I predictors on cancer neoepitope and infectious-disease tasks.",
+    "topic": "foundation models; immunogenicity; AI4Science; AI4Cancer; computational biology",
+    "conference": "fm4ls",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/f3c1fc2bcd9c77ead2ae7f32e21b43bbfe7ee903.pdf"
+  },
+  {
+    "id": "nSDxbVaJpQ",
+    "title": "DrugAgent: Reliable Multi-Agent Aggregation under Conflicting Biomedical Evidence",
+    "authors": [
+      "Yoshitaka Inoue",
+      "Tianci Song",
+      "Xinling Wang",
+      "Augustin Luna",
+      "Tianfan Fu"
+    ],
+    "abstract": "Integrating heterogeneous evidence into reliable decisions remains challenging: existing approaches typically rely on single-modality data or loosely coupled multi-agent prompting and therefore lack principled mechanisms for reconciling conflicts. We present DrugAgent, a multi-agent aggregation framework that separates evidence reasoning from rule-guided final decision-making over outputs from machine learning (ML), knowledge graphs (KG), and retrieval-augmented generation (RAG), enabling explicit analysis of cross-source agreement, conflict, and uncertainty. This design supports interpretable, conflict-aware aggregation. As a case study, we apply DrugAgent to drug-target interaction prediction. On a kinase benchmark of 900 pairs spanning 179 kinases and 54 inhibitors, DrugAgent produces outputs judged faithful to the provided evidence (98.7%). Plausibility scores are broadly high across all ground-truth classes. In the DrugAgent setting, 79% of Weak cases, 81% of Moderate cases, and 77% of Strong cases receive plausibility scores of 3--4 for the returned label explanations; Strong cases are somewhat more likely to receive a score of 5 (15% versus 1% for Weak and 3% for Moderate). This work establishes a benchmark for evaluating reasoning over diverse evidence sources common in biomedicine, as well as the ability of agent systems to produce rationales that are human-interpretable and faithful to the source evidence. Code: https://github.com/sciluna/DrugAgent.",
+    "topic": "Multi-Agent Systems; Evidence Aggregation; Drug-Target Interaction Prediction; Knowledge Graph Reasoning; Retrieval-Augmented Generation; Biomedical AI; Conflict-Aware Reasoning; Interpretable AI; LLM-as-a-Judge; Scientific Decision-Making",
+    "conference": "fm4ls",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/7ea9d0e9f6243b1dc17b5c362c9c46a9837e21b8.pdf"
+  },
+  {
+    "id": "jyTXfvXOHv",
+    "title": "Synergy-Aware Contrastive Pretraining for Co-recorded Physiological Signals",
+    "authors": [
+      "Lei Chen",
+      "Junetae Kim"
+    ],
+    "abstract": "Co-recorded electrocardiography (ECG) and photoplethysmography (PPG) waveforms encode complementary electrical and volumetric perspectives of cardiovascular function. Prevailing contrastive pretraining frameworks adopt pairwise or leave-one-out alignment between per-channel views, capturing shared information but failing to recover the synergistic interactions that emerge only when channels are processed jointly. We present SyneCo, a synergy-aware contrastive pretraining framework that integrates per-channel embeddings through an attention-based fusion block before applying the contrastive objective on the fused representation. A dual InfoNCE loss supervises the fused representation and per-channel components jointly, and channel dropout confers robustness against incomplete recordings. Pretrained on 3.92 million co-recorded segments from MIMIC-III, MIMIC-IV, and VitalDB, SyneCo consistently surpasses pairwise and leave-one-out baselines on six ECG, four PPG, and three multi-channel benchmarks, with the largest gains on patient attribute prediction tasks that depending on cross-channel synergistic correlates.",
+    "topic": "Physiological Signal; Representation Learning",
+    "conference": "fm4ls",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/ecf6439b66b73c6657c5362e872fd397790e281e.pdf"
+  },
+  {
+    "id": "UTdSecHKb0",
+    "title": "Exploring Set-Aggregated Genome Embeddings for Microbiome Abundance Prediction",
+    "authors": [
+      "Younhun Kim",
+      "Georg K. Gerber",
+      "Travis E Gibson"
+    ],
+    "abstract": "Microbiome functions are encoded within the genes of the community-wide metagenome. A natural question is whether properties of a microbial community can be predicted just from knowing the raw DNA sequences of its members. In this work, we employ set-aggregated genome embeddings (SAGE) to predict community-level abundance profiles, exploiting the few-shot learning capabilities of genomic language models (GLMs). We benchmark this approach to show improved generalization on novel genomes compared to classical bioinformatics approaches. Model ablation shows that community-level latent representations directly result in improved performance. Lastly, we demonstrate the benefits of intermediate transformations between latent representations and the differences between GLM embedding choices.",
+    "topic": "Large Language Models; Microbiome; Genomic Language Models; Feature Extraction",
+    "conference": "fm4ls",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/374115b0596bdea92857c3acb93943058b2f4662.pdf"
+  },
+  {
+    "id": "ZoBAklPA7R",
+    "title": "Lightweight Alignment of Unimodal Foundation Models for Metabolite Identification",
+    "authors": [
+      "Paul Krzakala",
+      "Gabriel Melo",
+      "Camille Lançon",
+      "Charlotte Laclau",
+      "Rémi Flamary",
+      "Etienne A. Thévenot",
+      "Florence d'Alché-Buc"
+    ],
+    "abstract": "A central challenge in building multimodal foundation models for the life sciences is the imbalance between abundant unimodal data and scarce paired observations, which limits the scalability of joint multimodal pretraining. We investigate an alternative approach based on aligning pretrained unimodal models. Focusing on metabolite identification, we introduce MSAlign, which maps a molecular transformer (ChemBERTa) and a mass spectra transformer (DreaMS) into a shared embedding space. Despite its simplicity, MSAlign substantially outperforms prior methods across benchmarks, setting a new state-of-the-art in retrieval performance. These results suggest that aligning unimodal foundation models offers an effective route to multimodal learning in biological settings where paired data remain limited.",
+    "topic": "Multimodal; Metabolite Identification; MS/MS; Alignement; Fondation Model",
+    "conference": "fm4ls",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/3dc70bb799288a32f1cc698fe11462a41b6bde0c.pdf"
+  },
+  {
+    "id": "XpyWPRksDS",
+    "title": "Single-Cell Cross-Modal Transfer by Adversarial Fine-Tuning of Foundation Models",
+    "authors": [
+      "Joseph Boyd",
+      "Matthew Lyon",
+      "Martino Mansoldo",
+      "Christian John Hurry",
+      "Finnian Firth"
+    ],
+    "abstract": "Spatial transcriptomics (ST) is a powerful tool for exploring biological properties dependent on structure, proximity, and interaction in tissue. The methods underpinning ST are developing rapidly but are limited in their ability to profile many thousands of genes at a subcellular scale. Although dissociated from tissue, it is known that the whole-transcriptome readouts of cells in single-cell RNA sequencing (scRNA-seq) retain information about their former in situ neighbourhoods, motivating computational methods to recover it. While paired ST and scRNA-seq datasets are scarce, each modality in its own right is abundantly available. We therefore propose to perform cross-modal translation between unpaired ST and scRNA-seq data. In this work we show that a single-cell foundation model can perform this translation via adversarial fine-tuning. We demonstrate that our method performs favourably against methods built for multi-omics translation.",
+    "topic": "Foundation models; multi-modal transfer; spatial transcriptomics; scRNA-Seq; semi-supervised learning",
+    "conference": "fm4ls",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/a44d12a2efd40e55ad266503d6454c4ef1748bc9.pdf"
+  },
+  {
+    "id": "4BkYpMJ9zC",
+    "title": "Beyond Nativeness: Viral Proteins in Protein Language Models",
+    "authors": [
+      "Arthur Bigot",
+      "Harmon Bhasin",
+      "Core Francisco Park",
+      "Eugene Shakhnovich",
+      "Dianzhuo Wang"
+    ],
+    "abstract": "Protein language models are trained on highly imbalanced datasets, raising the question of how they represent underrepresented biological sequences. Using viral proteins as a case study across ESM model families, we identify a dominant nativeness axis in embedding space, aligned with masked-reconstruction perplexity, that orders sequences from well-modeled cellular proteins through viral proteins to shuffled and random sequences. Scaling contracts this axis unevenly across viral families. Despite this, protein language model embeddings retain viral-specific signal: viral proteins remain linearly separable beyond zero-shot perplexity and shallow sequence features. Together, these results suggest that pLM representations are structured by a general notion of nativeness while preserving information specific to distinct biological groups.",
+    "topic": "protein language models; viral proteins; embedding geometry; representation learning; biological sequence modeling; viral classification; scaling laws; underrepresented data; sequence embeddings; bioinformatics; machine learning for biology",
+    "conference": "fm4ls",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/95f11e25bcb5e817177e89b0d46fa3c90418387e.pdf"
+  },
+  {
+    "id": "yiN1dLm0H0",
+    "title": "Contrastive Learning for Gene Set Enrichment Analysis Post-Processing",
+    "authors": [
+      "Leonardo P.A. Biral",
+      "Sandeep Dave"
+    ],
+    "abstract": "Gene Set Enrichment Analysis (GSEA) is one of the most frequently used tools in computational biology, but often returns hundreds to thousands of significant pathways, which makes evaluation time-consuming and limits interpretability. Current GSEA post-processing methods cluster pathways by pairwise gene set overlap, but these approaches fail on the >80% of pathway pairs that share no genes and largely ignore textual annotations. We introduce gtCLIP, the first contrastive learning framework for GSEA post-processing. gtCLIP aligns gene set embeddings from a gene set foundation model with pathway descriptions encoded by PubMedBERT in a shared embedding space, enabling clustering of GSEA result sets into communities of biologically-related pathways. Our key methodological contribution is a soft-target contrastive objective that preserves cross-modal alignment and incorporates gene set overlap, placing biologically related pathways near each other in the embedding space. We evaluated gtCLIP on held-out GSEA results from five blood cancer cohorts, achieving cross-modal retrieval Recall@5 (R@5) of 59.8% and 51.3% on validation and test pathways respectively. On downstream clustering, gtCLIP attained 92.4% mean NES sign coherence as well as 3.3-fold higher within-cluster gene set overlap and 3.9-fold higher silhouette scores compared to the strongest overlap-based baseline. Ablations confirmed the contributions of the soft-target loss, PubMedBERT's biomedical text pretraining, combined pathway title-description input, and foundation encoder fine-tuning. gtCLIP is open-source and available on HuggingFace at DaveLab/gtCLIP.",
+    "topic": "Contrastive learning; GSEA; foundation models; post-processing; soft-target loss",
+    "conference": "fm4ls",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/d9d7be434ebee13419b981ba94a6f1e8ec33c435.pdf"
+  },
+  {
+    "id": "9OVKsH5DXt",
+    "title": "PRIMA: a bidirectional state-space architecture and training approach for sequence modelling of protein-protein interactions",
+    "authors": [
+      "Arturo Fiorellini-Bernardis",
+      "Sebastien Boyer",
+      "Jean QUENTIN",
+      "Ghassene Jebali",
+      "Oliver Bent"
+    ],
+    "abstract": "Protein-protein interactions (PPIs) govern essential biological processes, yet building protein language models (PLMs) that directly capture the complexity of interacting multi-chain sequences remains an open challenge. Transformer-based PLMs rely on self-attention whose quadratic complexity makes processing long interacting complexes resource-intensive, leaving an emerging gap between a rich diversity of current single-chain PLMs and scalable PPI PLMs. We present PRIMA, a proof-of-concept PLM for PPIs built on bidirectional Mamba (BiMamba), a selective state-space model that scales linearly with sequence length and processes arbitrarily long inputs without positional encodings. PRIMA is trained in two phases: first on diverse single protein sequences to learn general representations, then on concatenated PPI pairs to capture interaction-specific context. At an 8 million parameter scale and equal count to a transformer baseline, PRIMA (i) outperforms transformer-based PLMs on standard-length inputs, (ii) outperforms them on longer sequences and length extrapolation tasks, and (iii) does so at significantly lower computational cost, establishing BiMamba as a strong backbone for scalable PPI PLMs.",
+    "topic": "State-space Models; Protein-Protein Interactions; LLM; Binding Affinity Prediction",
+    "conference": "fm4ls",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/8d0fd99534a036d87356b656f5338493b8c53134.pdf"
+  },
+  {
+    "id": "ps1a2Qp7xS",
+    "title": "Mechanistic Synergy in Multi-Modal VEP: DNA Context Complements PLMs under Biophysical Constraints",
+    "authors": [
+      "Yoojin Kim",
+      "Doyeon Ha"
+    ],
+    "abstract": "While Protein Language Models (PLMs) have advanced Variant Effect Prediction (VEP), they can sometimes overlook the complex physical and regulatory contexts of the cell. To address this limitation, we propose a parameter-efficient multi-modal foundation model architecture that integrates DNA signals from a DNA Language Model (DLM) with protein representations from a PLM. Through a systematic analysis across 29 activity-based Deep Mutational Scanning (DMS) datasets from ProteinGym, we demonstrate that the nucleotide modality provides more than a simple ensemble gain; it specifically corrects PLM failure modes localized to charged residues. Ultimately, this work highlights that moving beyond unimodal representations is essential for capturing the mechanistic complexity of biological systems and for accurately identifying experimentally validated functional hotspots.",
+    "topic": "Variant Effect Prediction; Multi-modal Foundation Models; Protein Language Models; DNA Language Models; Mechanistic Synergy",
+    "conference": "fm4ls",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/967edbaf92d5e53505bc67000160f783f17a7032.pdf"
+  },
+  {
+    "id": "2sJAFlZR3a",
+    "title": "TriFit: Trimodal Fusion with Protein Dynamics for Mutation Fitness Prediction",
+    "authors": [
+      "Seungik Cho"
+    ],
+    "abstract": "Predicting the functional impact of single amino acid substitutions (SAVs) is central to understanding genetic disease and engineering therapeutic proteins. While protein language models and structure-based methods have achieved strong performance on this task, they systematically neglect protein dynamics; residue flexibility, correlated motions, and allosteric coupling are well-established determinants of mutational tolerance in structural biology, yet have not been incorporated into supervised variant effect predictors. We present TriFit, a multimodal framework that integrates sequence, structure, and protein dynamics through a four-expert Mixture-of-Experts (MoE) fusion module with trimodal cross-modal contrastive learning. Sequence embeddings are extracted via masked marginal scoring with ESM-2 (650M); structural embeddings from AlphaFold2-predicted C-alpha geometries; and dynamics embeddings from Gaussian Network Model (GNM) B-factors, mode shapes, and residue-residue cross-correlations. The MoE router adaptively weights modality combinations conditioned on the input, enabling protein-specific fusion without fixed modality assumptions. On the ProteinGym substitution benchmark (217 DMS assays, 696k SAVs), TriFit achieves AUROC 0.897 +/- 0.0002, outperforming all supervised baselines including Kermut (0.864) and ProteinNPT (0.844), and the best zero-shot model ESM3 (0.769). Ablation studies confirm that dynamics provides the largest marginal contribution over pairwise modality combinations, and TriFit achieves well-calibrated probabilistic outputs (ECE = 0.044) without post-hoc correction.",
+    "topic": "Multimodal Fusion; Mixture-of-Experts; Cross-Modal Contrastive Learning; Protein Mutation Fitness Prediction; Protein Dynamics",
+    "conference": "fm4ls",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/d5f72d2597978a29cf76d92d60f1bb48ab8777cb.pdf"
+  },
+  {
+    "id": "HFhtMLAKT0",
+    "title": "SaNano - Structure Aware Transfer Learning For Data Limited Protein Modality",
+    "authors": [
+      "Hugo Frelin",
+      "Andrei Kamenski",
+      "Paolo Marcatili"
+    ],
+    "abstract": "Single domain antibodies such as camelid VHH (or NANOBODY®) are increasingly adopted as therapeutics due to their compact architecture, stability, and favorable developability. However, their distinct structural features limit transferability from general protein language models, and the limited number of available sequences constrains training large VHH-specific foundation models from scratch. We introduce SaNano, a structure-aware VHH language model that unifies sequence and Foldseek 3Di structural tokens, fine-tuned from SaProt. Trained on curated VHH sequences paired with NanobodyBuilder2 structures and mixed with SwissProt/AlphaFold data, SaNano interleaves structure-conditioned and sequence-only masked language modeling to internalize structural priors while retaining strong sequence-only inference. SaNano outperforms general protein and antibody/VHH baseline models on few-shot contact prediction, biophysical property prediction, and sequence reconstruction (pseudo-perplexity), with especially large gains in the highly variable complementarity-determining region 3 (CDR3). Crucially, structure-aware fine-tuning improves sequence-only performance, reducing reliance on costly structure prediction in high-throughput screening. SaNano is available at \n\\url{https://huggingface.co/novonordisk-red/SaNano}.",
+    "topic": "Multi-modal foundation models; Structure-aware protein language models; Biomolecular representation learning; Protein design; Drug discovery; NANOBODY; VHH antibodies",
+    "conference": "fm4ls",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/ca5e8122c3a7e09cbf992274915aec849e541fb8.pdf"
+  },
+  {
+    "id": "cKrZo7L60A",
+    "title": "E1: Retrieval-Augmented Protein Encoder Models",
+    "authors": [
+      "Sarthak Jain",
+      "Joel Beazer",
+      "Jeffrey A. Ruffolo",
+      "Aadyot Bhatnagar",
+      "Ali Madani"
+    ],
+    "abstract": "Large language models trained on natural proteins learn powerful representations of protein sequences that are useful for downstream understanding and prediction tasks.\nBecause they are only exposed to individual protein sequences during pretraining without any additional contextual information, conventional protein language models suffer from parameter inefficiencies in learning, baked-in phylogenetic biases, and functional performance issues at larger scales.\nTo address these challenges, we introduce E1, a family of retrieval-augmented protein language models that explicitly condition on homologous sequences. By integrating retrieved evolutionary context through block-causal multi-sequence attention, E1 captures both general and family-specific constraints without fine-tuning.\nWe train E1 models on four trillion tokens from the PPA-1 and achieve state-of-the-art performance across zero-shot fitness and unsupervised contact-map prediction benchmarks -- surpassing alternative sequence-only models.\nPerformance scales with model size from 150M to 600M parameters, and E1 can be used flexibly in single-sequence or retrieval-augmented inference mode for fitness prediction, variant ranking, and embeddings for structural tasks.\nTo encourage open science and further advances in retrieval-augmented protein language models, we release three models for free research and commercial use at https://github.com/Profluent-AI/E1.",
+    "topic": "Protein LLM; Retrieval-Augmented Models",
+    "conference": "fm4ls",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/32b46ee16802450fc2084248b2e947e521eca527.pdf"
+  },
+  {
+    "id": "la1YG6sSlf",
+    "title": "Transcriptomics-Conditioned Virtual Tissue Synthesis via Diffusion Transformers",
+    "authors": [
+      "Pantelis Vlachas",
+      "Kalin Nonchev",
+      "Viktor Koelzer",
+      "Gunnar Ratsch"
+    ],
+    "abstract": "Spatial transcriptomics couples hematoxylin and eosin (H&E) tissue morphology with spatially resolved gene expression (GE). However, generative models that exploit this coupling to synthesize tissue images from transcriptomic profiles remain scarce. \n\nWe present STMDiT (Spatial Transcriptomics and Morphology Diffusion Transformer), a diffusion transformer that synthesizes H&E histopathology patches conditioned jointly on morphological embeddings and transcriptomic profiles. Building on PixCell (Yellapragada et al., 2025), we integrate gene expression from a frozen CancerFoundation encoder (Theus et al., 2024) through adaptive layer normalization and per-block cross-attention, and we train under dual classifier-free guidance with independent modality dropout. \n\nOn the 10x_TuPro Visium melanoma cohort, GE conditioning improves both image quality over the no-GE PixCell-B baseline (best FID = 252.9 vs 330.7) and transcriptomic fidelity (best AUC = 0.267 vs 0.229, reaching 82% of the real-tile ceiling). Training with DeepSpot’s predicted-transcriptomics pseudo-labels (PTPL) uniquely transfers zero-shot to TCGA_SKCM, an out-of-distribution (OOD) H&E-only melanoma cohort: PTPL-XAttn-PMA-B reaches FID = 690.0, a 57-point improvement over the no-GE baseline (747.1), with a within-model GE-ablation effect of Δ_OOD = +309.5, enabling virtual tissue synthesis beyond native spatial-transcriptomics coverage. \n\nOur results indicate that gene-expression conditioning produces morphologically distinct tissue images and supports virtual tissue simulation for hypothesis testing in computational pathology.",
+    "topic": "spatial transcriptomics; diffusion models; gene expression; histopathology; conditional generation",
+    "conference": "fm4ls",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/da8425a6bee14b51911fa5dc2923f60c9893c7ce.pdf"
+  },
+  {
+    "id": "TeMVV5Yp6V",
+    "title": "Position: Saturation in Single-Cell Foundation Model Benchmarks Signals Identifiability Failure, Not Solved Capability",
+    "authors": [
+      "Zezheng Lin",
+      "Fengming Liu"
+    ],
+    "abstract": "Single-cell foundation models (scFMs) including scGPT, Geneformer, and scFoundation now report cell-type classification accuracies of 0.85 to 0.95 on standard benchmarks. The community routinely interprets clustering of top scFMs near these accuracies as evidence that the benchmark is solved, or that differences among top scFMs are negligible. We argue both interpretations are wrong. Saturation is, structurally, an identifiability-failure signal: as observed pass-rates compress against the upper bound, the Fisher information on each scFM's latent capability collapses exponentially, and the data become uninformative about pairwise capability contrasts. We support the position with a controlled simulation of nine scFMs on 200 benchmark cells, mirroring the panel evaluated by Elmarakeby et al. (2025). As mean pass-rate rises from 0.50 to 0.95, the probability that the empirically-best scFM is also the truly-best scFM drops from 0.75 to 0.41, and Fisher information at p_hat=0.95 is only 18% of its maximum at p_hat=0.5. We propose a four-item identifiability-aware scFM benchmarking standard: pass-rate distribution disclosure, posterior pairwise comparison, Fisher-information reporting, and a saturation-triggered redesign protocol.",
+    "topic": "single-cell foundation models; benchmark saturation; identifiability; item response theory; position paper",
+    "conference": "fm4ls",
+    "year": 2026,
+    "paper_url": "https://openreview.net/forum?id=TeMVV5Yp6V"
+  },
+  {
+    "id": "wZVHPYvc65",
+    "title": "PROTEUS: Predicting How Post-Translational Modifications Alter Drug Binding Affinity",
+    "authors": [
+      "Bryan Cheng",
+      "Austin Jin",
+      "Jasper Zhang",
+      "Arnav Pemmaraju",
+      "Joshua Chang",
+      "Brendan Lo"
+    ],
+    "abstract": "Post-translational modifications (PTMs) dynamically reshape the binding landscapes of protein drug targets, yet no computational method predicts how specific PTMs alter drug binding affinity. We introduce PROTEUS, a multimodal deep learning framework that fuses protein language model embeddings, 3D protein contact graphs, PTM-site annotations, and drug molecular graphs to directly predict ΔΔG---the change in binding free energy caused by a PTM. A Normal-Inverse-Gamma evidential head provides calibrated epistemic and aleatoric uncertainty without ensemble overhead. To enable systematic study of this previously unaddressed prediction task, we construct PTM-BIND-Bench, the first benchmark linking PTM states to quantitative binding affinity changes: 831 curated protein-PTM-drug triples spanning 48 kinases, 120 inhibitors, and 5 PTM types. Under protein-level GroupKFold cross-validation, PROTEUS achieves Spearman ρ = 0.527 and concordance index = 0.715, outperforming all baselines with non-overlapping 95% CIs. On 10 experimentally measured ΔΔG values, the model attains Pearson r = 0.967 with 100% direction accuracy. Zero-shot evaluation on 17 novel drugs yields 88.9% direction accuracy, and split conformal prediction provides distribution-free 90% intervals of ±0.64 kcal/mol.",
+    "topic": "multimodal deep learning; drug-target interaction; post-translational modifications; foundational benchmark; graph neural networks; protein language models; uncertainty quantification; binding affinity prediction",
+    "conference": "fm4ls",
+    "year": 2026,
+    "paper_url": "https://openreview.net/forum?id=wZVHPYvc65"
+  },
+  {
+    "id": "L8TR5pzlF2",
+    "title": "Search, Edit, and Fold: LLM-Guided MSA Optimization for Protein Conformation Prediction",
+    "authors": [
+      "Yu Pei",
+      "Jiangtao Feng",
+      "Hao Wang",
+      "Dongyu Xue",
+      "Keyue Qiu",
+      "Hao Zhou",
+      "Wei-Ying Ma"
+    ],
+    "abstract": "Accurately identifying alternative protein conformations remains a fundamental challenge, particularly when functionally relevant states are encoded by sparse evolutionary signals within large multiple sequence alignments (MSAs). In this work, protein conformation prediction is formulated as a combinatorial search problem in MSA space, shifting the focus from structure divergence to evolutionary information discovery. We introduce **MSA-Evolver**, an optimization framework that enables LLM with direct manipulation and iterative exploration of MSAs. With unified action space and feedback-guided multi-step reasoning strategy, our framework efficiently identifies informative sub-MSAs under limited folding budgets and substantially improves the prediction accuracy of alternative conformations, including open-closed, inward-outward, apo-holo, fold-switching, and intrinsically disordered proteins.",
+    "topic": "Protein Conformation Prediction; Long-Context reasoning; Multiple Sequence Alignment; Heuristic Search",
+    "conference": "fm4ls",
+    "year": 2026,
+    "paper_url": "https://openreview.net/forum?id=L8TR5pzlF2"
+  },
+  {
+    "id": "kbn0sqjGFv",
+    "title": "ERVNet: A Three-Module Framework for Predicting Endogenous Retrovirus Reactivation, Gene Propagation, and Immunogenicity",
+    "authors": [
+      "Bryan Cheng",
+      "Austin Jin",
+      "Jasper Zhang",
+      "Brendan Lo",
+      "Arnav Pemmaraju",
+      "Joshua Chang"
+    ],
+    "abstract": "Endogenous retroviruses (ERVs) comprise 8% of the human genome across ~725K loci and can reactivate in cancer, triggering potent antitumor immunity via viral mimicry—yet all existing tools quantify ERV expression post-hoc from RNA-seq, and none predict which loci will reactivate prospectively from chromatin state. This gap limits rational immunotherapy target selection, as the vast locus space makes experimental screening intractable without computational prioritization. We present ERVNet, a three-module multimodal pipeline that bridges this gap. Its core innovation, Multi-Resolution Epigenomic Encoding (MREE), tokenizes each histone mark at its characteristic domain scale—75bp for narrow activation peaks like H3K27ac, 225bp for broad repressive domains like H3K9me3—rather than forcing all marks through a single resolution. CASCADE then propagates predicted activation through real Hi-C chromatin loops via a heterogeneous GNN to model downstream gene dysregulation, and MIMIC classifies ERV subfamily immunogenicity from sequence-derived features validated against real DNMTi perturbation data. Resolution-matched encoding improves AUPRC by 16.4% over single-resolution baselines, with MREE achieving LOCO-CV AUROC 0.984 across 25 cell types and cross-dataset AUROC 0.969 on independently generated ENCODE data. CASCADE captures gene-level consequences at Pearson r=0.422, while MIMIC attains AUROC 0.749 with permutation p<0.002 and external validation ρ=0.118. Gradient attribution reveals why the multi-resolution design works: H3K9me3 at coarse resolution provides the dominant discriminative signal, capturing 10–50kb heterochromatin domain boundaries that uniform encoding fragments—a finding that reconciles the apparent paradox between dropout analysis (H3K27ac dominant) and saliency mapping (H3K9me3 dominant). Applying the full pipeline across 25 cell types identifies 336 cancer-specific ERV loci with 1.43× enrichment over somatic tissues, yielding a tractable candidate set for experimental immunotherapy validation. More broadly, the principle of encoding each genomic feature at its characteristic spatial scale may generalize to other multimodal epigenomic prediction tasks where input signals span diverse resolutions.",
+    "topic": "endogenous retroviruses; multi-resolution encoding; epigenomics; multimodal deep learning; chromatin state prediction; graph neural networks; immunotherapy target discovery; transposable elements; histone modifications; cancer genomics",
+    "conference": "fm4ls",
+    "year": 2026,
+    "paper_url": "https://openreview.net/forum?id=kbn0sqjGFv"
+  },
+  {
+    "id": "2EhO9Exmhi",
+    "title": "Causal-IQD-DTA: Counterfactual Interaction-Quality Disentanglement for Robust Drug–Target Affinity Prediction",
+    "authors": [
+      "khan huang",
+      "Chang Li"
+    ],
+    "abstract": "Drug–target affinity (DTA) prediction estimates\nbinding strength between compounds and protein\ntargets, providing an early computational screen\nbefore expensive biochemical assays. Structure-\naware DTA models now combine molecular, se-\nquence, structural, and conformer inputs, but\ncomplex-level affinity labels can entangle selec-\ntive binding evidence with abundance shortcuts\nsuch as ligand size, pocket size, and candidate\ncontact mass. The central goal is robustness under\nabundance shortcuts: affinity predictions should\ndepend on selective binding evidence rather than\nchanges in contact opportunity alone. Causal-\nIQD-DTA addresses this bottleneck by separating\nthese signals: zQ aggregates pocket-calibrated\natom–residue evidence for binding, and zN en-\ncodes size and contact-mass factors that describe\nthe candidate interaction map. We then perform\nrepresentation-level counterfactual intervention\non zN while holding zQ fixed, suppressing affinity\nchanges caused by nuisance abundance. Across\nDavis, KIBA, and PDBbind, the model improves\nrandom and transfer splits, with diagnostics show-\ning lower abundance-residual coupling and re-\nduced counterfactual sensitivity.",
+    "topic": "drug--target affinity; protein--ligand learning; multimodal life-science models; causal representation learning; abundance    shortcut robustness",
+    "conference": "fm4ls",
+    "year": 2026,
+    "paper_url": "https://openreview.net/forum?id=2EhO9Exmhi"
+  },
+  {
+    "id": "4Kj8btmGbK",
+    "title": "Local-Atlas Control-Anchored Flow Matching for Unpaired Single-Cell Perturbation Prediction",
+    "authors": [
+      "khan huang",
+      "Chang Li"
+    ],
+    "abstract": "Destructive single-cell perturbation assays ob-\nserve control and treated populations without\ntrue before/after pairs, so response prediction\nis an unpaired conditional distribution problem\nrather than paired regression. We introduce\nAtlas-CFM, a local-atlas control-anchored flow-\nmatching formulation for this setting. The method\nconstructs training paths and inference rollouts\nfrom the same observed control-derived anchor,\nuses transport-aware pseudo-pairing to reduce tra-\njectory noise, and regularizes dynamics with a soft\ntangent/normal vector-field decomposition. On\nNorman perturbation-OOD and sciPlex3-K562\ndose-extrapolation benchmarks, the largest gains\noccur in the harder generalization regimes. Sup-\nplementary native-space checks, distribution met-\nrics, consistency studies, sensitivity analyses, and\nA549 cross-context results show that training-\ninference-consistent control anchoring strength-\nens perturbation-response modules in life-science\nfoundation-model systems.",
+    "topic": "single-cell perturbation prediction; flow matching; optimal transport; causal invariance; foundation models for life sciences",
+    "conference": "fm4ls",
+    "year": 2026,
+    "paper_url": "https://openreview.net/forum?id=4Kj8btmGbK"
+  },
+  {
+    "id": "HbSthyi1GG",
+    "title": "WACA-DTA: Water-Aware Geometric Biases for Structure-Conditioned Drug-Target Affinity Prediction",
+    "authors": [
+      "khan huang",
+      "Chang Li"
+    ],
+    "abstract": "Drug-target affinity (DTA) prediction is central to\nvirtual screening, hit prioritization, and lead opti-\nmization because it estimates binding strength\nbefore costly experiments. However, current\nstructure-aware DTA models often treat pocket\ngeometry and solvent information as auxiliary\nfeatures, leaving atom-residue matching weakly\nconstrained by 3D locality, orientation, and water-\nmediated contacts. We present WACA-DTA, a\nstructure-conditioned affinity model that refor-\nmulates interface matching as pose-conditioned\natom-residue cross-attention with factorized di-\nrect, geometric, and hydration-mediated logits.\nDistance/orientation and HydraProt-derived hy-\ndration cues are injected as additive logit-level\npriors rather than post hoc features. Under a fixed\npair-pose protocol and shared structural prepro-\ncessing, WACA-DTA improves over a matched\npocket-aware baseline on Davis and KIBA across\ndrug, target, and pair affinity cold-start splits,\nwhile controlled ablations across Davis, KIBA,\nand PDBbind indicate that the gains are most con-\nsistent when pair-specific geometry and hydration\nare injected directly into the interaction logits.",
+    "topic": "drug-target affinity prediction; structure-conditioned learning; water-mediated interactions; hydration field; geometric bias; cold-start",
+    "conference": "fm4ls",
+    "year": 2026,
+    "paper_url": "https://openreview.net/forum?id=HbSthyi1GG"
+  },
+  {
+    "id": "xeJC38ljVM",
+    "title": "ProtSent: Protein Sentence Transformers",
+    "authors": [
+      "Dan Ofer",
+      "Oriel Perets",
+      "Michal Linial",
+      "Nadav Rappoport"
+    ],
+    "abstract": "Protein language models produce representations that capture evolutionary and structural information, yet their sequence-level embeddings are not trained to reflect biological similarity between proteins. We present ProtSent, a contrastive fine-tuning framework that adapts protein language models into general-purpose embedding models using MultipleNegativesRankingLoss across five protein-pair datasets: Pfam families, structurally derived hard negatives, AlphaFold~DB structural pairs, StringDB interactions, and deep mutational scanning data. Evaluated on 23 downstream tasks with a frozen k-nearest-neighbor probe, ProtSent on ESM-2 150M improves 15 of 23 tasks, with +105% on remote homology detection, +17% on variant effect prediction, and +19.9% Recall@1 on SCOPe-40 retrieval. We release the models, code, and training recipe.",
+    "topic": "Proteins; Sentence Transformers; ESM; Protein Language Models; pLM; sentencebert",
+    "conference": "fm4ls",
+    "year": 2026,
+    "paper_url": "https://openreview.net/forum?id=xeJC38ljVM"
+  },
+  {
+    "id": "wduEG2D9uR",
+    "title": "ProteinJEPA: Latent prediction complements protein language models",
+    "authors": [
+      "Dan Ofer",
+      "Dafna Shahaf",
+      "Michal Linial"
+    ],
+    "abstract": "Protein language models are trained primarily with masked language modeling (MLM), which predicts amino-acid identities at masked positions. We ask whether latent-space prediction can complement these token-level objectives under matched wall-clock budget. Across pretrained and random-init protein sequence encoders at 35--150M parameters, we find that the best protein-JEPA design is not all-position latent prediction but a variant: predicting latent targets only at masked positions, and retaining the MLM cross-entropy. We call this recipe masked-position MLM+JEPA.\n\nOn a 16-task downstream suite (15 linear probes plus SCOPe-40 zero-shot fold retrieval), under matched wall-clock budgets, this recipe wins more tasks than it loses against MLM-only continuation: 10 wins / 3 losses / 3 ties (hereafter W/L/T) on pretrained ESM2-35M, 11/2/3 on ESM2-150M, while results in pretraining from scratch are mixed (6/8/2). Gains are seen for multiple models on 11 of 16 tasks, including stability, beta-lactamase fitness, variant effect, intrinsic disorder, remote homology, enzyme classification, and SCOPe-40 fold retrieval. Tasks with more losses than wins are Fluorescence (TAPE) and Peptide-HLA Binding. All-position MLM+JEPA matches MLM-only overall but does not reproduce the masked-position gains. JEPA-only (no MLM) collapses in nearly every experiment. \nWe conclude that JEPA, when combined with MLM, is competitive and can outperform pure MLM in pretraining and continued training, even under matched wall-clock budgets. Code and models will be freely released post anonymization period. https://anonymous.4open.science/r/protJepa-FF24",
+    "topic": "LLM; Machine learning; Protein; JEPA; self supervised learning; Protein language models; Biology",
+    "conference": "fm4ls",
+    "year": 2026,
+    "paper_url": "https://openreview.net/forum?id=wduEG2D9uR"
+  },
+  {
+    "id": "pEFnReWFQh",
+    "title": "esm-bind: How much protein–RNA binding signal is already in frozen ESM-2 + RNA-FM representations?",
+    "authors": [
+      "Ethan B Arnold"
+    ],
+    "abstract": "How much protein–RNA binding signal is already accessible from frozen pre-trained encoders, and how small can the task head be? esm-bind is a ~7.8M-parameter bidirectional cross-attention head over frozen ESM-2 650M and RNA-FM, trained on 100K ENCODE eCLIP positives with a three-class blended negative sampler. Without fine-tuning to either external benchmark, it reaches zero-shot AUROC 0.840 on RPI7317 protein-disjoint, a standard protein–RNA pair benchmark with held-out proteins. On TheNovel — a 2,364-pair NPInter5-derived holdout from the ZHMolGraph 2025 supervised graph baseline, constructed node-disjoint to our NPInter2 training set so no train protein or RNA appears at evaluation — our 5-fold ensemble scores the same pairs and matches the published numbers (AUROC 0.793 [0.774, 0.810] vs 0.798; AUPRC 0.815 [0.796, 0.834] vs 0.820, both reference points inside our 95% CIs), despite training on a different dataset (NPInter2 vs NPInter5). Five capacity-augmenting ablations — encoder LoRA, RNA-encoder swap, extended training, fixed-weight graph context, and learnable graph attention — all fail to lift in-bench RPI7317 multi-seed AUROC outside a 0.812 ± 0.005 band. A zero-vector input ablation isolates a protein-class \"RBP-vs-non-RBP\" shortcut that inflates within-distribution headlines but does not transfer. We read these as evidence that frozen protein and RNA language-model representations already carry the bulk of pair-specific binding signal accessible at this scale. Head-only weights and a script that reproduces the 0.840 RPI7317 AUROC exactly are released anonymously at https://anonymous.4open.science/r/esm-bind-anon-3FCC/.",
+    "topic": "protein–RNA binding; foundation models; frozen encoders; cross-attention; ESM-2; RNA-FM; RBP; eCLIP",
+    "conference": "fm4ls",
+    "year": 2026,
+    "paper_url": "https://openreview.net/forum?id=pEFnReWFQh"
+  },
+  {
+    "id": "nYuVOEWuza",
+    "title": "Medmarks: An Open-Source LLM Benchmark Suite for Medical Tasks",
+    "authors": [
+      "Benjamin Warner",
+      "Ratna Sagari Grandhi",
+      "Max Kieffer",
+      "Aymane Ouraq",
+      "Saurav Panigrahi",
+      "Geetu Ambwani",
+      "Kunal Bagga",
+      "Nikhil Khandekar",
+      "Arya Hariharan",
+      "Nishant Mishra",
+      "Manish Ram",
+      "Shamus Sim Zi Yang",
+      "Ahmed Essouaied",
+      "Adepoju Jeremiah Moyondafoluwa",
+      "Robert Scholz",
+      "Bofeng Huang",
+      "Molly Beavers",
+      "Srishti Gureja",
+      "Anish Mahishi",
+      "Sameed Khan",
+      "Maxime Griot",
+      "Hunar Batra",
+      "Jean-Benoit Delbrouck",
+      "Siddhant Bharadwaj",
+      "Ronald Clark",
+      "Ashish Vashist",
+      "Anas Zafar",
+      "Leema Krishna Murali",
+      "Harsh Deshpande",
+      "Ameen Patel",
+      "William Brown",
+      "Johannes Hagemann",
+      "Connor Lane",
+      "Paul Steven Scotti",
+      "Tanishq Mathew Abraham"
+    ],
+    "abstract": "Evaluating large language models (LLMs) for medical applications remains challenging due to benchmark saturation, limited data accessibility, and insufficient coverage of relevant tasks. Existing suites have either saturated, heavily depend on restricted datasets, or lack comprehensive model coverage. We introduce \\textsc{Medmarks}, a fully open-source evaluation suite with 30 benchmarks spanning question answering, information extraction, medical calculations, and open-ended clinical reasoning. We perform a systematic evaluation of 61 models across 71 configurations using verifiable metrics and LLM-as-a-Judge. Our results show that frontier reasoning models (Gemini 3 Pro Preview, GPT-5.1, \\& GPT-5.2) achieve the highest performance across both benchmarks, most frontier proprietary models are significantly more token efficient than open-weight alternatives, medically fine-tuned models outperform their generalist counterparts, and that models are susceptible to answer-order bias (particularly smaller models and Grok 4). Code is available at \\url{https://anonymous.4open.science/r/med-lm-envs-B76C/}.",
+    "topic": "Medical AI; Large Language Models; Benchmarking; Model Evaluation; Health NLP; Open-Source Datasets; LLM-as-a-Judge",
+    "conference": "fm4ls",
+    "year": 2026,
+    "paper_url": "https://openreview.net/forum?id=nYuVOEWuza"
+  },
+  {
+    "id": "RChoYAHJvi",
+    "title": "Position: AI for Drug Discovery Models Often Do Not Learn as Expected and How to Diagnose These Failure Modes",
+    "authors": [
+      "Nikhil Branson",
+      "Aaron Wenteler",
+      "Guy Durant",
+      "Charlotte Deane"
+    ],
+    "abstract": "We argue that in multiple areas of AI for drug discovery (AIDD), deep learning models are not learning the meaningful biological or chemical features they were hypothesised to capture, but instead learn non-generalisable features, for example, from dataset biases. To address this, we propose the systematic use of misaligned baselines. We define misaligned baselines as models that rely on signals purposely misaligned with the intended learning objective. Rather than modelling the underlying biology or chemistry directly, these baselines draw on reductionist sources of information, heavily perturbed input features, or heuristic models. Competitive performance of such baselines reveals when models are not learning the biologically meaningful representations they were designed to learn. By examining case studies across multiple branches of AIDD, we demonstrate that misaligned baselines have consistently exposed such failure modes and crucially informed the evaluation and improvement of these models. We argue that adopting them as standard practice will help to ensure that progress in AIDD reflects genuine advances rather than artefacts of data-generating processes or evaluation design.",
+    "topic": "AIDD; MLDD; AI for Drug Discovery",
+    "conference": "fm4ls",
+    "year": 2026,
+    "paper_url": "https://openreview.net/forum?id=RChoYAHJvi"
+  },
+  {
+    "id": "jAPrtGqaZE",
+    "title": "Survival-Relevant Directional Pathology–Omics Discordance from Frozen Whole-Slide Foundation Embeddings",
+    "authors": [
+      "KuanTing Wu"
+    ],
+    "abstract": "Multimodal life-science foundation models are often evaluated by direct endpoint prediction: can a learned image representation recover a molecular or clinical label? We study a complementary use case for frozen whole-slide embeddings. After generating an out-of-fold morphology-derived molecular readout, we ask whether the direction of disagreement between the image-derived score and the measured molecular assay retains survival information. Using fixed TITAN–CONCH whole-slide embeddings, we define a signed image–molecular residual, adjust it only for outcome-free technical quality variables, and decompose it into positive and negative directional components. In an anonymized in-house resected NSCLC/LUAD cohort and in public TCGA-KIRC, locked directional discordance terms remain associated with recurrence-free or overall survival after adjustment for the observed molecular target and available clinicopathologic covariates. These retrospective findings do not imply that pathology can replace molecular testing. Instead, they support directional cross-modal residual analysis as a lightweight way to evaluate and interpret biomedical foundation embeddings.",
+    "topic": "computational pathology; multimodal foundation models; multi-omics; survival analysis; precision oncology",
+    "conference": "fm4ls",
+    "year": 2026,
+    "paper_url": "https://openreview.net/forum?id=jAPrtGqaZE"
+  },
+  {
+    "id": "Gm3WOUJfJA",
+    "title": "OmicsDefense: The First Unified Framework for Defending Against Backdoor Attacks in Single-cell Foundation Models",
+    "authors": [
+      "Bioclaw Team",
+      "Peiting Shi"
+    ],
+    "abstract": "Single-cell foundation models have become indispensable tools for cellular heterogeneity analysis, disease mechanism discovery, and clinical diagnostics, yet they face critical biosecurity vulnerabilities from backdoor attacks that remain unaddressed. **We present OmicsDefense, the first unified defense framework for single-cell foundation models, featuring Weighted Divergence Filtering (WDF) for poisoned sample detection.** We apply our framework to seven foundation models (Geneformer, scGPT, scCELLO, scPRINT, LangCell, UCE, scFoundation) on two datasets (Human Pancreas and Myeloid), achieving an average 98.7% reduction in attack success rates while preserving clean accuracy. OmicsDefense establishes a new paradigm for trustworthy single-cell analysis, enabling reliable cell atlas construction and clinical diagnosis in the era of foundation model-powered biomedicine.",
+    "topic": "single-cell foundation models; backdoor defense; AI security; bioinformatics",
+    "conference": "fm4ls",
+    "year": 2026,
+    "paper_url": "https://openreview.net/forum?id=Gm3WOUJfJA"
+  },
+  {
+    "id": "Sui9KfHzRn",
+    "title": "Position: Multi-Modal LLMs for Video Behavioral Coding in High-Stakes Decision-Making Are Bounded by Polysemy, Not by Model Scale",
+    "authors": [
+      "Zezheng Lin",
+      "Jinhao Gan"
+    ],
+    "abstract": "Multi-modal LLMs are increasingly applied to video data in life-science-adjacent settings: clinical training assessment, surgical performance evaluation, doctor-patient communication audits, police body-camera analysis (Dube et al. 2025 QJE), and inter-agency emergency response coordination. The standard reporting practice evaluates these models by aggregate accuracy on benchmark datasets where surface behaviors map cleanly to a single ground-truth code. Real high-stakes behavioral coding, by contrast, is characterized by polysemy: the same observable behavior maps to multiple latent codes with prior probabilities that depend on context. We argue that aggregate benchmark accuracy is a poor proxy for clinical or operational utility because it does not surface the polysemy-induced identifiability gap. We support the position with a controlled simulation calibrated to an 18-code IPA-style scheme adapted from Bales (1950) for inter-agency conflict analysis: as polysemy grows from 1 to 7 latent codes per surface behavior, Bayes-optimal accuracy drops from 0.70 to 0.22 and posterior entropy on latent codes grows from 0.48 to 1.85 nats (out of log 18 = 2.89). Multi-modal augmentation helps: combining audio (44% accurate), visual (54%), and text (62%) modalities yields 71% accuracy. We propose a per-segment uncertainty reporting protocol for video-LLM papers in life-science applications.",
+    "topic": "multi-modal LLMs; video understanding; behavioral coding; identifiability; life sciences; position paper",
+    "conference": "fm4ls",
+    "year": 2026,
+    "paper_url": "https://openreview.net/forum?id=Sui9KfHzRn"
+  },
+  {
+    "id": "V8rj3UkC5J",
+    "title": "Position: Saturation in Single-Cell Foundation Model Benchmarks Signals Identifiability Failure, Not Solved Capability",
+    "authors": [
+      "Zezheng Lin",
+      "Fengming Liu"
+    ],
+    "abstract": "Single-cell foundation models (scFMs) including scGPT (Cui et al. 2024), Geneformer (Theodoris et al. 2023), and scFoundation now report cell-type classification accuracies above 85-95% on standard benchmarks (Hou et al. 2026). The community routinely interprets clustering of top scFMs near these accuracies as evidence that \"the benchmark is solved\" or that \"differences between scFMs are negligible.\" We argue both interpretations are wrong. Saturation is, structurally, an identifiability-failure signal: as observed pass-rates compress against the upper bound, the Fisher information on the latent capability of each scFM collapses exponentially, and the data become uninformative about pairwise capability contrasts. We support the claim with a simulation modeling 13 scFMs on 200 benchmark cells: as mean pass-rate rises from 0.50 to 0.95, the probability that the empirically-best scFM is also the truly-best scFM drops from 0.76 to 0.35, and Fisher information at p_hat=0.95 is only 18% of its maximum at p_hat=0.5 (theta=3 vs theta=0). Bayesian posterior probabilities Pr(theta_top > theta_second | y) degrade similarly. We propose a four-item identifiability-aware scFM benchmarking standard: pass-rate distribution disclosure, Fisher information reporting, posterior pairwise comparison, and saturation-triggered redesign protocol.",
+    "topic": "single-cell foundation models; benchmark saturation; item response theory; identifiability; multi-omics; position paper",
+    "conference": "fm4ls",
+    "year": 2026,
+    "paper_url": "https://openreview.net/forum?id=V8rj3UkC5J"
+  },
+  {
+    "id": "yQZ93BNJxT",
+    "title": "Do Clinical VLMs Need Dense Visual Tokens? Probing Spatial Grounding in Radiology Report Generation",
+    "authors": [
+      "Leopoldo Julian Lechuga Lopez",
+      "Tim G. J. Rudner",
+      "Farah E. Shamout"
+    ],
+    "abstract": "Clinical vision-language models (VLMs) for chest X-ray report generation are typically evaluated on generated text quality, but strong generation performance does not necessarily imply fine-grained visual grounding.\nIn this work, we empirically evaluate how much spatial visual information a clinical VLM uses for radiology report generation.\nUsing our own implementation of LLaVARad, a state-of-the-art VLM for radiology report generation, we apply a simple intervention framework that selects, removes, or randomly samples visual tokens before projection into the language model.\nWe find that dense visual token samples are not required, as\ncompressing the full set of visual patch tokens (i.e., T=1369) into a single mean-pooled token, preserves baseline performance.\nRegion-level interventions produce measurable but modest degradation, with the largest effects in CheXbert-based clinical metrics.\nNotably, retaining only $\\sim1\\%$ (i.e., T=14) of randomly sampled visual tokens before mean-pooling, nearly matches the full-token setting.\nThese results suggest that the model uses the image primarily through a low-dimensional visual conditioning signal rather than strong fine-grained spatial grounding, raising concerns about the limited use of visual inputs by current clinical VLMs.",
+    "topic": "Clinical vision-language models; radiology report generation; chest X-ray; visual grounding; spatial visual information",
+    "conference": "fm4ls",
+    "year": 2026,
+    "paper_url": "https://openreview.net/forum?id=yQZ93BNJxT"
+  },
+  {
+    "id": "ZswqCu8lj1",
+    "title": "Position: Multi-Omics Foundation Models Need a Modality Identifiability Standard, Not Just Aggregate Accuracy",
+    "authors": [
+      "Zezheng Lin",
+      "Fengming Liu"
+    ],
+    "abstract": "Multi-omics foundation models that integrate DNA, RNA, protein, and other biological modalities are increasingly used for phenotype prediction, drug response, and disease modeling (Cui et al. 2024; Theodoris et al. 2023). The standard reporting practice evaluates these models by aggregate prediction accuracy on held-out cells or patients. We argue this practice obscures a structural identifiability failure: when modalities partially measure the same underlying biological signal (a near-universal property of multi-omics data, where DNA variants, RNA expression, and protein abundance all reflect overlapping regulatory mechanisms), the contribution of each modality to phenotype prediction is not identifiable from aggregate data alone, regardless of cohort size. We support the position with a controlled simulation: with 3 modalities, 5 features each, and 500 samples, the per-modality posterior std on coefficients collapses from 0.005 (full-rank, identifiable) to 0.817 (rank-deficient, essentially the prior) as the shared-signal dimension grows from 0 to 5; the design rank drops from 15 to 5. Critically, even in the unidentifiable case, the sum of modality contributions is recovered exactly, which is exactly what the aggregate accuracy metric measures, while the per-modality contributions remain at the prior. Claims like \"the protein modality drives prediction\" or \"adding DNA improves performance\" may not be licensed by the design even when aggregate accuracy is high. We propose a four-item modality identifiability disclosure standard for FM4LS papers: modality-design rank reporting, per-modality posterior contraction quantification, shared-signal estimation, and ablation-vs-identification distinction.",
+    "topic": "multi-omics; foundation models; identifiability; modality fusion; single-cell; position paper",
+    "conference": "fm4ls",
+    "year": 2026,
+    "paper_url": "https://openreview.net/forum?id=ZswqCu8lj1"
+  },
+  {
+    "id": "ZjK8BNTzvl",
+    "title": "Biophysics-Guided Genomic Foundation Models via Attention Gating",
+    "authors": [
+      "Bryan Cheng"
+    ],
+    "abstract": "Predicting DNA regulatory function demands models that integrate sequence context with the physical chemistry of nucleic acids. Genomic foundation models (GFMs) are widely used for this task, yet we show they are biophysically blind: attention weights ignore biophysical structure (regulatory attention score ≈ 1.0), representations occupy <4% of embedding dimensionality, and pretraining on raw sequence statistics degrades performance on certain regulatory tasks. We introduce PhysGFM (Physics-Guided Genomic Foundation Models), which injects biophysical knowledge into every attention head via a scalar gate g = σ(W_g · [x; φ(x)]), where φ(x) ∈ ℝ¹¹ encodes stacking free energy, melting temperature, dinucleotide entropy, and minor groove width—computed analytically from sequence alone. PhysGFM adds only 184K parameters (0.19% overhead) with no architectural changes. On the Nucleotide Transformer v2, it improves all 12 GUE tasks at 100M scale (+0.0170 mean MCC, t=4.91, p<0.001, n=36) and 11/12 at 250M (+0.0091, p<0.01). Mechanistic analysis reveals task-adaptive attention calibration: PhysGFM focuses attention for promoters (entropy −0.07) and broadens it for chromatin marks (+0.05 to +0.13), increasing intrinsic dimensionality by +3.2–10.6 across all tasks. Cross-species validation on E. coli σ70 promoters via the Mechanistic Invariance Test yields CSS = 0.74 (p<0.0001), outperforming HyenaDNA (0.63) and Evo2-1B (0.60)—notably, the gate is trained exclusively on human data, demonstrating that biophysical priors transfer across species without retraining. A controlled ablation confirms that 11 curated features outperform a 45-dimensional expansion (+0.0170 vs. +0.0086): targeted physical priors beat breadth of coverage. By recovering regulatory intelligence that sequence-only training leaves on the table at <0.2% parameter cost, PhysGFM establishes biophysical attention gating as a general mechanism for grounding foundation models in the physical sciences.",
+    "topic": "multi-modal representation learning; genomic foundation models; DNA biophysics; cross-modal attention; parameter-efficient fine-tuning; interpretability; intrinsic dimensionality; regulatory genomics",
+    "conference": "fm4ls",
+    "year": 2026,
+    "paper_url": "https://openreview.net/forum?id=ZjK8BNTzvl"
+  },
+  {
+    "id": "L38ex5K96w",
+    "title": "Gene-Embedding Perturbation Operators for Zero-Shot and Transferable Prediction of Transcriptional Responses",
+    "authors": [
+      "Bryan Cheng",
+      "Austin Jin",
+      "Jasper Zhang"
+    ],
+    "abstract": "Predicting how genetic perturbations alter transcriptional programs is fundamental to understanding gene function, yet existing methods require perturbation-specific training data and cannot generalize to unseen target genes or new cell types. We introduce DYNAMO, a framework that parameterizes perturbation effects through gene embeddings derived from gene regulatory networks (GRNs), enabling prediction for any gene with a network embedding, including genes never perturbed during training. DYNAMO’s key architectural innovation is a frozen-plus-learnable embedding decomposition: pretrained embeddings, including Node2Vec or spectral embeddings, preserve GRN structure for unseen genes, while a zero-initialized learnable component adapts representations for training genes. Each perturbation is encoded as a low-rank operator within a Koopman formalism, and combinatorial perturbations compose via operator products. On K562 Perturb-seq with zero train–test perturbation overlap, DYNAMO achieves a Pearson correlation of predicted expression changes of ρΔ = 0.283, while GEARS crashes and scGen produces anti-correlated predictions (−0.126). The structured operator enables cross-cell-type transfer: a K562-trained model achieves ρΔ = 0.576 on RPE1 without retraining. On Norman combinatorial perturbations, DYNAMO achieves ρΔ = 0.563, outperforming GEARS by 2.7× and scGen by 2.8×. A systematic comparison of six embedding strategies reveals that GRN topology provides a 19% advantage over text, co-expression, and foundation-model embeddings. Ablations show that the structured operator, rather than a direct MLP, is critical for cross-cell-type transfer, retaining 51% of native performance compared with 30% for an unstructured alternative.",
+    "topic": "foundation model embeddings; frozen pretrained representations; Node2Vec; scGPT; gene embeddings; transfer learning; genomics; multi-omics; biological language models; GRN; zero-shot; fine-tuning; learnable adapters",
+    "conference": "fm4ls",
+    "year": 2026,
+    "paper_url": "https://openreview.net/forum?id=L38ex5K96w"
+  },
+  {
+    "id": "1jo35HDiWu",
+    "title": "VFUSE: Virulent Feature Understanding with Sparse autoEncoders",
+    "authors": [
+      "Michael Yu",
+      "Matthew Lyle Olson"
+    ],
+    "abstract": "Generative models have shown remarkable progress in a variety of domains such as protein design, but such power enables the opaque generation of hazardous proteins. In this work, we introduce VFUSE (Virulent Feature Understanding with Sparse autoEncoders), a mechanistic interpretability approach that trains SAEs on diffusion-transformer activations to audit protein models for hazard-aware features. We apply VFUSE to RoseTTAFold3 and RFDiffusion3, popular open-weight models for protein folding and synthesis. We find that for certain blocks, linear probes detect hazardous designs significantly better when fit in the SAE latent space over the original model's representations: improving interpretability without sacrificing model performance. Furthermore, we identify monosemantic features from the SAE that fire only on hazardous designs at up to AUROC $0.84$ ($q < 10^{-13}$). To our knowledge this is the first SAE trained on an all-atom diffusion model and the first feature-level virulence audit of a protein design model, paving the way towards safe and interpretable protein design.",
+    "topic": "Biology; Biosecurity; Biosafety; Protein Design; RFDiffusion; RoseTTAFold; Interpretability",
+    "conference": "fm4ls",
+    "year": 2026,
+    "paper_url": "https://openreview.net/forum?id=1jo35HDiWu"
+  },
+  {
+    "id": "1uE9rtYYzp",
+    "title": "ConfPert: Distribution-Free Conformal Coverage for Single-Cell Perturbation Predictors",
+    "authors": [
+      "Aayan Alwani",
+      "Ethan Y Wang"
+    ],
+    "abstract": "Single-cell perturbation predictors are typically evaluated on mean-prediction metrics, but recent work shows that deep-learning foundation models systematically underperform a simple bilinear ridge baseline on these metrics (Ahlmann-Eltze et al. 2025; Csendes et al. 2025), and no existing method provides coverage guarantees on the distributional fit between predicted and observed cell populations. We introduce ConfPert, a model-agnostic conformal prediction framework that gives finite-sample coverage guarantees on six per-population distributional discrepancies, exposed at four head levels: per-gene, per-perturbation, per-population, and subgroup-conditional. We use ConfPert to evaluate eight perturbation predictors spanning $0$ to $\\sim 6 \\times 10^8$ parameters across five single-cell datasets, including a cross-cell-line transfer split. The protocol is pre-registered: hypotheses, permutation-test thresholds, and multiple-comparisons corrections are committed to git before any first run. We find three things. First, distributional-output predictors with sparse-additive structure recover bimodal cell-fate structure that mean-only predictors cannot, achieving near-exact nominal coverage on the variance-sensitive metrics. Second, the pre-registered capacity-hurts hypothesis fails the overall threshold but passes on the non-cancer cell line, identifying cell-line context (not model size alone) as the load-bearing covariate for whether scaling improves calibration. Third, on real PRISM Repurposing drug-screen data, calibrated signatures recover more Benjamini-Hochberg-corrected drug-resistance pathways than uncalibrated baselines, a result robust across signature-size choices. We release a pip-installable confpert library and a Cell-Eval plug-in that fills a gap in Arc Institute's evaluation backbone.",
+    "topic": "generative biology; conformal prediction; single-cell perturbation; Perturb-seq benchmark; foundation model evaluation",
+    "conference": "fm4ls",
+    "year": 2026,
+    "paper_url": "https://openreview.net/forum?id=1uE9rtYYzp"
+  },
+  {
+    "id": "U0Hhxd7Vod",
+    "title": "OmicsLM: A Multimodal Large Language Model for Multi-Sample Omics Reasoning",
+    "authors": [
+      "Maciej Sypetkowski",
+      "Joanna Krawczyk",
+      "Łukasz Smoliński",
+      "Remigiusz Kinas",
+      "Przemysław Pietrzak",
+      "Tomasz Jetka",
+      "Rafal Powalski"
+    ],
+    "abstract": "Interpreting transcriptomic data is one of the most common analytical tasks in modern biology. Yet most models either consume expression profiles without producing natural-language explanations, or reason in language without direct access to quantitative omics measurements. We introduce OmicsLM, a multimodal LLM that connects quantitative omics profiles with natural-language biological tasks by representing each transcriptomic profile as a compact continuous embedding in the LLM context. This preserves quantitative expression signal while supporting natural-language instructions, explicit gene mentions, and multiple interleaved samples. \nWe train OmicsLM on more than 5.5 million instruction-following examples spanning over 70 task types, combining continuous transcriptomic inputs, diverse language templates, and free-text biological knowledge. This mixture covers cell type annotation, perturbation prediction, clinical prediction, pathway reasoning, and open-ended biological question answering. \nExisting benchmarks evaluate either profile-level prediction or text-only biological QA, leaving language-guided, multi-sample reasoning over expression profiles unmeasured. To close this gap, we introduce GEO-OmicsQA, a benchmark for multi-sample biological question answering built from Gene Expression Omnibus (GEO) studies. We demonstrate that OmicsLM can use expression profiles directly and perform comparably to specialized omics models on profile-level tasks, while outperforming both omics-specialized models and general LLMs on language-guided biological reasoning over expression data.",
+    "topic": "multimodal large language models; omics foundation models; transcriptomics; single-cell RNA-seq; bulk RNA-seq; instruction tuning; biological question answering; gene expression; cross-modal alignment; perturbation prediction; cell type annotation; GEO; multi-sample reasoning; conversational biology; continuous token embeddings; Qwen3; Gene Expression Omnibus; biological benchmarks; zero-shot transfer",
+    "conference": "fm4ls",
+    "year": 2026,
+    "paper_url": "https://openreview.net/forum?id=U0Hhxd7Vod"
+  },
+  {
+    "id": "DXiTuQCMKE",
+    "title": "Bolek: A Multimodal Language Model for Molecular Reasoning",
+    "authors": [
+      "Frederic Grabowski",
+      "Jacek Szczerbiński",
+      "Maciej Jaśkowski",
+      "Kalina Jasinska-Kobus",
+      "Pawel Dabrowski-Tumanski",
+      "Tomasz Jetka",
+      "Bartosz Topolski"
+    ],
+    "abstract": "AI models and platforms for molecular science underpin high-stakes applications in drug discovery, yet the systems delivering them are largely opaque: they expose either a score and a binary answer with no rationale, or fluent prose rarely anchored in molecular structure.\nWe introduce Bolek, a compact multimodal language model that injects a molecular embedding into an instruction-tuned decoder to predict molecular properties and explain them in auditable terms.\nBolek outperforms the chemistry-specialist TxGemma-9B-Chat on 13 of 15 downstream binary classification tasks and exceeds it on five unseen TDC endpoints, while grounding its reasoning with concrete numerical and structural descriptors.\nTogether, these results suggest that targeted modality injection paired with reasoning supervision tied to verifiable features can match domain-specialist systems at a fraction of the parameter count while producing auditable explanations for downstream decisions.",
+    "topic": "molecular language models; multimodal learning; molecular reasoning; drug discovery; grounded reasoning",
+    "conference": "fm4ls",
+    "year": 2026,
+    "paper_url": "https://openreview.net/forum?id=DXiTuQCMKE"
+  },
+  {
+    "id": "QYhZc5ANx9",
+    "title": "ProteomeLM: A Proteome-Scale Language Model Enables Accurate and Rapid Prediction of Protein-Protein Interactions and Gene Essentiality Across Taxa",
+    "authors": [
+      "Cyril Malbranke",
+      "Gionata Paolo Zalaffi",
+      "Anne-Florence Bitbol"
+    ],
+    "abstract": "Language models trained on biological sequences are advancing inference tasks from the scale of single proteins to that of genomic neighborhoods. Here, we introduce ProteomeLM, a transformer-based language model that uniquely operates on entire proteomes from species spanning the tree of life. ProteomeLM is trained to reconstruct masked protein embeddings using the whole proteomic context, yielding contextualized protein representations that reflect proteome-scale functional constraints.\nNotably, ProteomeLM's attention coefficients encode protein-protein interactions~(PPI), despite being trained without interaction labels.\nFurthermore, it enables interactome-wide PPI screening that is substantially more accurate, and orders of magnitude faster, than amino-acid coevolution-based methods.\nWe further develop ProteomeLM-PPI, a supervised model that combines ProteomeLM embeddings and attention coefficients to achieve state-of-the-art PPI prediction across benchmarks and species.\nFinally, we introduce ProteomeLM-Ess, a supervised gene essentiality predictor that generalizes across diverse taxa.\nOur results demonstrate the potential of proteome-scale language models for addressing function and interactions at the organism level.",
+    "topic": "protein language models; protein-protein interactions; gene essentiality; coevolution; proteomics",
+    "conference": "fm4ls",
+    "year": 2026,
+    "paper_url": "https://openreview.net/forum?id=QYhZc5ANx9"
+  },
+  {
+    "id": "eavD11LSJ6",
+    "title": "DELBERT-2: Pretrained Fingerprint Language Models for DEL Protein Binder Prediction",
+    "authors": [
+      "Bing Xu Hu",
+      "Sun Sun",
+      "Shaik salman basha",
+      "Anita Layton",
+      "Helen Hong Chen"
+    ],
+    "abstract": "We present DELBERT-2, a pretrained fingerprint language model that converts sparse molecular fingerprints into unified token sequences using a ModernBERT encoder trained with masked language modelling on 2.5M molecules from the AIRCHECK DEL corpus. We evaluate across six targets (WDR91, WDR12, SETDB1, PLCZ1, LRRK2, DCAF7) under three out-of-distribution (OOD) protocols: hierarchical cluster splits probe chemical novelty, library splits test cross-library transfer, and building-block splits assess compositional generalization.\nDELBERT-2 consistently improves PR-AUC and NDCG@1000 relative to LightGBM ensemble baselines and transformers trained from scratch, with the largest gains in stringent OOD regimes. DELBERT-2 achieves 13.28+/-3.72 enrichment factor at top-100 vs. 12.36+/-3.75 for no-pretraining (p=0.040), representing 7.4% improvement and 13x enrichment over random selection. These results demonstrate that fingerprint-centric self-supervised learning effectively improves hit prioritization under distribution shift, enabling practical DEL virtual screening.",
+    "topic": "Molecular Foundation Models; Chemical Fingerprints; Protein Binder Prediction",
+    "conference": "fm4ls",
+    "year": 2026,
+    "paper_url": "https://openreview.net/forum?id=eavD11LSJ6"
+  },
+  {
+    "id": "YyI469JbU3",
+    "title": "What Makes a Virtual Cell a World Model? Three Gaps, Three Axes, and a Roadmap",
+    "authors": [
+      "Chang Yu",
+      "Jingbo Zhou",
+      "Zhongqi Wang",
+      "Zhen Lei",
+      "Stan Z. Li"
+    ],
+    "abstract": "Virtual-cell research increasingly combines mechanistic simulators, foundation models, and perturbation predictors. Yet the field often applies world-model language to systems with very different commitments. We introduce virtual cell world models (VCWMs) as a structured perspective for judgment, not a naming claim. This perspective isolates three recurring overclaims: representation is not dynamics, prediction is not intervention, and multimodality is not multiscale world modeling. We formalize a VCWM as a tuple over observations, maintained state, context, interventions, time-varying structure, transition, decoding, uncertainty, and evaluation. Assessment is compressed into three diagnostic axes: whether a model rolls out intervenable trajectories, whether it couples scales rather than only fusing modalities, and whether biological structure constrains transitions rather than only annotating embeddings. We further stage progress through capability gates from candidate VCWMs to multiscale and interactive systems. Together, these may provide a principled basis for judging when a virtual-cell system qualifies as a world model.",
+    "topic": "AIVC; Virtual Cell; World Model",
+    "conference": "fm4ls",
+    "year": 2026,
+    "paper_url": "https://openreview.net/forum?id=YyI469JbU3"
+  },
+  {
+    "id": "noM7RJiGVs",
+    "title": "VirtualCeLLM: A Comprehensive Benchmark and Guidance for Large Language Models in Cellular Biology",
+    "authors": [
+      "Jingbo Zhou",
+      "Zhongqi Wang",
+      "Zhen Lei",
+      "Stan Z. Li",
+      "Chang Yu"
+    ],
+    "abstract": "High-throughput single-cell sequencing has enabled large-scale cellular profiling and accelerated the development of single-cell foundation models. While these models learn general-purpose representations from transcriptomic data, they remain limited in modality coverage, causal reasoning, and interpretability, falling short of the vision of an Artificial Intelligence Virtual Cell (AIVC). In contrast, large language models (LLMs) offer a complementary paradigm: unify heterogeneous inputs, adapt to diverse tasks via prompting, and produce human-readable rationales, making them promising building blocks for AIVC. Recent efforts have applied LLMs to problems such as cell type annotation and perturbation-related reasoning, yet a systematic evaluation is still missing. To bridge this gap, we introduce VirtualCeLLM, a comprehensive benchmark for evaluating LLMs in cellular biology. VirtualCeLLM spans tasks across gene, cell, and omics-level analyses, evaluates 15 models including open-source, closed-source and biology-specialized LLMs, and supports diverse metrics under multiple settings. As a cross-scale, reproducible, and extensible benchmark, VirtualCeLLM enables consistent tracking of progress, facilitates principled comparisons, and provides actionable insights to accelerate LLM-powered virtual cell modeling.",
+    "topic": "AIVC; LLMs",
+    "conference": "fm4ls",
+    "year": 2026,
+    "paper_url": "https://openreview.net/forum?id=noM7RJiGVs"
+  },
+  {
+    "id": "ReGsQIsuad",
+    "title": "GeneZip: Region-Aware Compression for Long Context DNA Modeling",
+    "authors": [
+      "Jianan Zhao",
+      "Xixian Liu",
+      "Zhihao Zhan",
+      "Xinyu Yuan",
+      "Hongyu Guo",
+      "Jian Tang"
+    ],
+    "abstract": "Genomic sequences span billions of base pairs (bp), posing a fundamental challenge for genome-scale foundation models. Existing approaches largely sidestep this barrier by either scaling relatively small models to long contexts or relying on heavy multi-GPU parallelism. Here we introduce GeneZip, a DNA compression model that leverages a key biological prior: genomic information is highly imbalanced—coding regions comprise only a small fraction ($\\sim$ 2\\%) yet are information-dense, whereas most non-coding sequence is comparatively information-sparse. GeneZip couples HNet-style dynamic routing with a region-aware compression-ratio objective, enabling adaptive allocation of representation budget across genomic regions. As a result, GeneZip learns region-aware compression and achieves 137.6× compression with only 0.31 perplexity increase. On downstream long-context benchmarks, GeneZip achieves comparable or better performance on contact map prediction, expression quantitative trait loci prediction, and enhancer–target gene prediction. By reducing effective sequence length, GeneZip unlocks simultaneous scaling of context and capacity: compared to the prior state-of-the-art model JanusDNA, it enables training models 82.6× larger at 1M-bp context, supporting a 636M-parameter GeneZip model at 1M-bp context. All experiments in this paper can be trained on a single A100 80GB GPU.",
+    "topic": "DNA; LLM; compression; gene",
+    "conference": "fm4ls",
+    "year": 2026,
+    "paper_url": "https://openreview.net/forum?id=ReGsQIsuad"
+  },
+  {
+    "id": "qIjCEIueMh",
+    "title": "PerturbDiff: Functional Diffusion for Single-Cell Perturbation Modeling",
+    "authors": [
+      "Xinyu Yuan",
+      "Xixian Liu",
+      "Ya Shi Zhang",
+      "Zuobai Zhang",
+      "Hongyu Guo",
+      "Jian Tang"
+    ],
+    "abstract": "Building Virtual Cells that can accurately simulate cellular responses to perturbations is a long-standing goal in systems biology. A fundamental challenge is that high-throughput single-cell sequencing is destructive: the same cell cannot be observed both before and after a perturbation. Thus, perturbation prediction requires mapping unpaired control and perturbed populations. Existing models address this by learning maps between distributions, but typically assume a single fixed response distribution when conditioned on observed cellular context (e.g., cell type) and the perturbation type. In reality, responses vary systematically due to unobservable latent factors such as microenvironmental fluctuations and complex batch effects, forming a manifold of possible distributions for the same observed conditions. To capture this variability, we introduce PerturbDiff, which shifts modeling from individual cells to entire distributions. By embedding distributions as points in a Hilbert space, we define a diffusion-based generative process operating directly over probability distributions. This allows PerturbDiff to capture population-level response shifts across hidden factors, improving generalization. Benchmarks on established datasets show that PerturbDiff achieves state-of-the-art performance in single-cell response prediction and generalizes substantially better to unseen perturbations. All code and data will be released upon acceptance.",
+    "topic": "Single-Cell Perturbation Prediction; Functional Diffusion over Cell Distributions",
+    "conference": "fm4ls",
+    "year": 2026,
+    "paper_url": "https://openreview.net/forum?id=qIjCEIueMh"
+  },
+  {
+    "id": "6tELDJkI1v",
+    "title": "Selective Benefits of Sequence-Drug Multimodal Learning for Antimicrobial Resistance Prediction",
+    "authors": [
+      "Mateusz A. Wlodarski"
+    ],
+    "abstract": "Antimicrobial resistance (AMR) prediction from genomic data is typically treated as a unimodal problem based on sequence-derived features, yet the reliability of genomic signal alone remains unclear. We evaluate Escherichia coli AMR phenotype prediction using proteome-level protein language model embeddings with multiple instance learning, comparing single-drug (sequence-only) models to multimodal models that incorporate drug representations. Proteome-based models achieve strong performance, with antibiotic-specific models performing best overall, but exhibit a consistent gap between resistant and susceptible prediction. Incorporating drug representations improves susceptibility prediction in settings with weaker or imbalanced genomic signal, while providing little benefit when genomic features are already sufficient. Overall, multimodal learning provides conditional, rather than universal, gains, highlighting when additional biological context is required beyond sequence alone.",
+    "topic": "Protein language models; Antibiotic resistance; Antibiotics; Chemical language models",
+    "conference": "fm4ls",
+    "year": 2026,
+    "paper_url": "https://openreview.net/forum?id=6tELDJkI1v"
+  },
+  {
+    "id": "IJhaKVIApS",
+    "title": "Uncovering evolutionarily remote and highly potent antimicrobial peptides with protein language models",
+    "authors": [
+      "Qinze Yu",
+      "Yu Li"
+    ],
+    "abstract": "Identifying evolutionarily remote antimicrobial peptides (AMPs) is crucial for discovering underexplored clinical candidates to combat antibiotic resistance. Existing experimental and computational methods are limited by their reliance on sequence identity to known AMPs, missing distant homologues. Here we introduce HMD-AMP, a protein language model-based approach for AMP discovery. HMD-AMP outperforms previous methods in identifying evolutionarily distant AMPs and enables the discovery of unknown and highly potent AMPs from metagenomic data. Applied to host and gut microorganism genomes of nine mammals, HMD-AMP revealed over 37 million predicted AMPs. Of 91 high-confidence sequences experimentally validated, 74 showed strong antibacterial activity and 48 were evolutionarily remote from known AMPs. Four of these AMPs exhibited broad-spectrum antibacterial activity at low effective concentrations and showed low toxicity, with the most potent peptide demonstrating therapeutic efficacy in a mouse model of peritoneal Escherichia coli infection. This study introduces an effective strategy to uncover AMPs.",
+    "topic": "Antimicrobial peptides; Protein language models; Drug discovery",
+    "conference": "fm4ls",
+    "year": 2026,
+    "paper_url": "https://openreview.net/forum?id=IJhaKVIApS"
+  },
+  {
+    "id": "56DIsM13xO",
+    "title": "GFETM: Genome Foundation-based Embedded Topic Model for scATAC-seq Modeling",
+    "authors": [
+      "Yimin Fan",
+      "Yu Li",
+      "Jun Ding",
+      "Yue Li"
+    ],
+    "abstract": "Single-cell Assay for Transposase-Accessible Chromatin with sequencing (scATAC-seq) enables investigation of open chromatin landscapes at single-cell resolution, but its analysis remains challenging because of sparsity, noise, and dataset-specific peak vocabularies. Genome Foundation Models (GFMs), pre-trained on large DNA sequence corpora, offer a potential source of transferable sequence information for scATAC-seq modeling. We introduce the Genome Foundation Embedded Topic Model (\\model{}), an interpretable framework that combines GFMs with the Embedded Topic Model (ETM) for sequence-informed scATAC-seq analysis. By integrating GFM-derived DNA sequence embeddings into a topic-model decoder, \\model{} improves clustering quality on standard benchmarks and captures cell-state-specific transcription factor activity through motif scoring and attention-based interpretation.",
+    "topic": "Foundation Model; scATAC-seq; Multi-scale modeling",
+    "conference": "fm4ls",
+    "year": 2026,
+    "paper_url": "https://openreview.net/forum?id=56DIsM13xO"
+  }
+]

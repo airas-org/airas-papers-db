@@ -1,0 +1,692 @@
+[
+  {
+    "id": "RrUhBEbKnt",
+    "title": "SHIVER: Somatic Hypermutation Informed Vocabulary Encoder Representations",
+    "authors": [],
+    "abstract": "Somatic hypermutations (SHMs) acquired during affinity maturation of memory B cell receptors (mBCRs) carry important immunological signals, but remain challenging for protein language models (PLMs) to capture effectively. We introduce SHIVER, a mutation-aware antibody language model that treats each amino acid substitution as a distinct token, allowing the model to directly encode the context-dependent impact of SHMs. Trained on paired heavy and light chain sequences from human mBCR repertoires, SHIVER incorporates a tailored vocabulary, mutation subsampling strategy, and partial masking scheme to better model the dynamics of affinity maturation. We evaluate SHIVER on the task of predicting mBCR binding to influenza antigens and find that it outperforms both general and antibody-specific PLMs using a simple logistic head. Our results suggest that explicitly modeling SHMs improves biological relevance and generalization of learned representations.",
+    "topic": "protein language models; representation learning",
+    "conference": "fm4ls",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/35b750adc6b2d5a718916190ed773a44e6a32be6.pdf"
+  },
+  {
+    "id": "UY21DHURDW",
+    "title": "Closing the gap between the biology and the clinic with a foundation model of immunology and inflammation",
+    "authors": [],
+    "abstract": "Drug development is a risky and lengthy process during which most compounds fail due to insufficient efficacy in the clinic. For this reason, there is an urgent need for scalable in silico approaches that can help identify promising drug candidates using preclinical data. We introduce EVA, the first foundation model for immunology and inflammation (I&I), specifically tailored to power such applications at the interface between transcriptomics (handling both bulk and single-cell data) and clinical modalities, pretrained on a large corpus of single-cell and bulk RNA-seq samples sourced from various clinical studies and databases. Throughout a retrospective in silico study conducted in ulcerative colitis, we illustrate how EVA can be fine-tuned to predict the clinical effect of new compounds in I&I patients, leveraging preclinical data from disease models and observational cohort data. We model the biological effect of the drug at the patient level as a transcriptomic perturbation in the primary organ, which can be extracted from EVA's latent gene representations. Using a secondary disease model, this perturbation can be transformed into a predicted change in disease activity. In addition to direct drug effect forecasting at the patient level, the pipeline output can also be used to stratify patients according to their expected drug responses, enabling the early identification of biomarkers of response in investigational treatments. This first-in-class study highlights how foundation models in computational biology can be harnessed to address modeling challenges in drug discovery, bridging the gap between molecular and clinical data, and paving the way for more effective and personalized treatments.",
+    "topic": "Machine Learning; ICML; Foundation Model; Computational Biology; Immunity and Inflammation; RNA-seq; Precision Medicine",
+    "conference": "fm4ls",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/37dfd8ff02d329105b987081d44a5e5b4307f9f0.pdf"
+  },
+  {
+    "id": "Wsiuwaf30l",
+    "title": "Multimodal Modeling of CRISPR-Cas12 Activity Using Foundation Models and Chromatin Accessibility Data",
+    "authors": [],
+    "abstract": "Predicting guide RNA (gRNA) activity is critical for effective CRISPR-Cas12 genome editing but remains challenging due to limited data, variation across protospacer adjacent motifs (PAMs—short sequence requirements for Cas binding), and reliance on large-scale training. We investigate whether pre-trained biological foundation model—originally trained on transcriptomic data—can improve gRNA activity estimation even without domain-specific pre-training. Using embeddings from existing RNA foundation model as input to lightweight regressor, we show substantial gains over traditional baselines. We also integrate chromatin accessibility data to capture regulatory context, improving performance further. Our results highlight the effectiveness of pre-trained foundation models and chromatin accessibility data for gRNA activity prediction.",
+    "topic": "Multimodal CRISPR-Cas12 Guide RNA (gRNA) activity prediction; Foundation Models",
+    "conference": "fm4ls",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/53cf4d58ae4c7f9bee4b2f82d0d81d4a54fe65bb.pdf"
+  },
+  {
+    "id": "WxHbIY90IS",
+    "title": "A Genomic Language Model for Zero-Shot Prediction of Promoter Indel Effects",
+    "authors": [],
+    "abstract": "Disease-associated genetic variants occur extensively across the human genome, predominantly in noncoding regions like promoters. While crucial for understanding disease mechanisms, current methods struggle to predict effects of insertions and deletions (indels) that can disrupt gene expression. We present LOL-EVE (Language Of Life for Evolutionary Variant Effects), a conditional autoregressive transformer trained on 13.6 million mammalian promoter sequences. By leveraging evolutionary patterns and genetic context, LOL-EVE enables zero-shot prediction of indel effects in human promoters. We introduce three new benchmarks for promoter indel prediction: ultra rare variant prioritization, causal eQTL identification, and transcription factor binding site disruption analysis. LOL-EVE's dominate performance across these tasks suggests the potential of region-specific genomic language models for identifying causal non-coding variants in disease studies.",
+    "topic": "genetics; machine learning; variant effect prediction; evolutionary sequences; disease",
+    "conference": "fm4ls",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/057e66fe721a115a926e83cbe8807dbc8b6fea96.pdf"
+  },
+  {
+    "id": "tjOgUF4pFa",
+    "title": "Towards Molecular Conformer Generation with Language Models",
+    "authors": [],
+    "abstract": "Generating accurate 3D conformations of small molecules from their 2D representations is a central task in computational drug discovery, impacting molecular docking, virtual screening, and property prediction. While most recent advances rely on diffusion-based generative models, these methods come with limitations such as slow sampling and architectural rigidity. In this work, we demonstrate that autoregressive language models can effectively learn to generate 3D molecular conformations from text-only data. We propose a simple yet expressive representation that combines canonical SMILES with raw 3D atomic coordinates in a unified tokenized format. Using this approach, we train language models ranging from 100 million to 1 billion parameters on a dataset curated from GEOM-Drugs. While our models currently perform slightly behind the best diffusion-based methods, they achieve competitive results and show consistent improvements with scale. We derive empirical scaling laws demonstrating that generation quality improves predictably with model size and data, suggesting a clear path toward closing the performance gap. These findings indicate that language models are a scalable and flexible alternative for 3D molecular generation, with potential for further improvement through recent advancements in large language models, such as in-context learning and post-training adaptation.",
+    "topic": "conformation generation; language model; computational biology",
+    "conference": "fm4ls",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/6166a99e225fb70d98717965ada1c7ce07e7bd31.pdf"
+  },
+  {
+    "id": "EMXKuwRNL8",
+    "title": "GeneChat: A Multi-Modal Large Language Model for Gene Function Prediction",
+    "authors": [],
+    "abstract": "Accurately predicting gene function from DNA sequences remains a fundamental challenge in genomics, particularly given the limited experimental annotation available for most genes. Existing computational approaches often formulate function prediction as a classification task over predefined categories, limiting their flexibility and expressiveness. We introduce GeneChat, a multi-modal large language model designed to generate free-form, natural language descriptions of gene functions directly from nucleotide sequences and textual prompts. GeneChat integrates three components: a DNABERT-2-based gene encoder optimized for long-range genomic context, an adaptor that aligns gene representations with the input space of a large language model, and Vicuna-13B, a fine-tuned LLaMA-2 variant used to produce coherent functional narratives. Trained on over 50,000 genes from the NCBI database, GeneChat outperforms GPT-4o on BLEU and METEOR metrics, demonstrating superior ability to generate accurate, context-aware, and semantically rich descriptions. This work highlights the potential of foundation models for advancing interpretable and scalable gene function prediction in a free-form, language-driven paradigm.",
+    "topic": "Gene Function Prediction; Large Language Models; Multi-modal Learning",
+    "conference": "fm4ls",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/b395ced68779a1f9e113dc2a1fcf32a78b329ddb.pdf"
+  },
+  {
+    "id": "K12ZDGL3ik",
+    "title": "A Multi-Modal Large Language Model for Free-Form, Open-Ended, and Interactive Prediction of Properties and Mechanisms of Candidate Drug Molecules",
+    "authors": [],
+    "abstract": "Accurately predicting the mechanisms and properties of candidate drug molecules is critical for advancing drug discovery. However, existing models are often limited to structured outputs, fixed task sets, and  static, one-shot predictions. We present DrugChat, a multi-modal large language model that addresses these limitations through three key capabilities: (i) free-form text generation for predicting complex drug attributes such as indications, pharmacodynamics, and mechanisms of action; (ii) generalization to an open-ended set of tasks via prompt-based multi-task learning; and (iii) interactive, multi-turn dialogue for dynamic exploration for molecules. DrugChat integrates a molecular graph encoder, a molecular image encoder, and an instruction-tuned large language model. Pretrained on 248 million molecule-bioactivity records, DrugChat outperforms existing baselines across both unstructured and structured  tasks, demonstrating strong zero-shot generalization.",
+    "topic": "Drug discovery; molecule property prediction; QSAR; multi-modal large language model",
+    "conference": "fm4ls",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/ddba6ce0903e572b1aeade535d1f0268dfcd444f.pdf"
+  },
+  {
+    "id": "LjlJBnmZ0M",
+    "title": "ProteinAligner: A Tri-Modal Contrastive Learning Framework for Protein Representation Learning",
+    "authors": [],
+    "abstract": "Protein foundation models, particularly protein language models, have shown strong success in learning meaningful protein representations using transformer architectures pretrained on large-scale datasets through self-supervised learning. These representations have proven effective for downstream tasks such as predicting protein functions and properties. However, most existing models focus solely on amino acid sequences, overlooking other informative modalities such as 3D structures and literature text. While some recent efforts incorporate multiple modalities, they often suffer from limitations in modality coverage or training strategy. To address this gap, we propose a multimodal pretraining framework that integrates three complementary modalities — protein sequences, structures, and literature text. Our method uses the sequence modality as an anchor and aligns the other two modalities to it via contrastive learning, enabling the model to capture richer and more holistic protein representations. Across a diverse set of downstream tasks, ProteinAligner outperforms state-of-the-art foundation models in predicting protein functions and properties.",
+    "topic": "Protein foundation model; multimodal learning; Protein function prediction; Protein property prediction",
+    "conference": "fm4ls",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/6e3aa1e0c96a00a0cf2fb4942952acf0eb97eb3f.pdf"
+  },
+  {
+    "id": "pbsw0tNdJ5",
+    "title": "Multi-Modal Large Language Model Enables Protein Function Prediction",
+    "authors": [],
+    "abstract": "Predicting the functions of proteins can greatly accelerate biological discovery and applications, where deep learning methods have recently shown great potential. However, these methods predominantly predict protein functions as  discrete categories, which  fails to capture the nuanced and complex nature of protein functions.  Furthermore, existing methods require the development of separate models for each  prediction task, a process that can be both resource-heavy and time-consuming. Here, we present ProteinChat, a versatile, multi-modal large language model that takes a protein's amino acid sequence as input and generates comprehensive narratives describing its function.  ProteinChat is trained using over 1,500,000 (protein, prompt, answer) triplets curated from the Swiss-Prot dataset, covering diverse functions. This novel model can universally predict a wide range of protein functions, all within a single, unified framework.  Furthermore, ProteinChat supports interactive dialogues with human users,  allowing for iterative refinement of predictions and deeper exploration of protein functions. Our experimental results, evaluated through both human expert assessment and automated metrics, demonstrate that ProteinChat markedly outperforms various state-of-the-art baselines.",
+    "topic": "Protein Function Prediction; Large Language Models; Multi-modal Learning",
+    "conference": "fm4ls",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/2fec0bf881c54ab0907d1cb5f8e90141f15bdbd8.pdf"
+  },
+  {
+    "id": "QX3717DWry",
+    "title": "A Look at the Isotropy of Pretrained Protein Language Models",
+    "authors": [],
+    "abstract": "Large pretrained language models have transformed natural language processing, and their adaptation to protein sequences---viewed as strings of amino acid characters---has advanced protein analysis. However, the distinct properties of proteins, such as variable sequence lengths and lack of word-sentence analogs, necessitate a deeper understanding of protein language models (LMs). We investigate the isotropy of protein LM embedding spaces using average pairwise cosine similarity and the IsoScore method, revealing that models like ProtBERT and ProtXLNet are highly anisotropic, utilizing only 2--14 dimensions for global and local representations. In contrast, multi-modal training in ProteinBERT, which integrates sequence and gene ontology data, enhances isotropy, suggesting that diverse biological inputs improve representational efficiency. We also find that embedding distances weakly correlate with alignment-based similarity scores, particularly at low similarity.",
+    "topic": "Protein Language Models; Isotropy",
+    "conference": "fm4ls",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/ba3f2b1f9aaf6b047407707536ef8c43d6ad1e76.pdf"
+  },
+  {
+    "id": "TQgyeWdrJx",
+    "title": "SOAPIA: Siamese-Guided Generation of Off Target-Avoiding Protein Interactions with High Target Affinity",
+    "authors": [],
+    "abstract": "Therapeutic molecules must selectively interact with a target protein while avoiding structurally or functionally similar off-targets. However, no existing generative strategy explicitly optimizes both target affinity and off-target avoidance. To address this, we introduce SOAPIA, a framework for the Siamese-guided generation of Off-target-Avoiding Protein Interactions with high target Affinity. SOAPIA generates de novo peptide binders by steering the generative process of a Diffusion Protein Language Model (DPLM) using a multi-objective Monte Carlo Tree Search (MCTS). Affinity is optimized via a pre-trained predictor, while specificity is enforced using a Siamese model trained with an adaptive Log-Sum-Exp Decoy Loss. This dual-guidance scheme enables Pareto-efficient exploration of discrete sequence space without gradient access. In benchmarks across 17 fusion oncoproteins, SOAPIA consistently identifies binders with strong affinity and high selectivity. For multiple clinically relevant targets, SOAPIA generated peptides that preferentially bind the fusion by engaging both its head and tail domains, while avoiding the wild-type counterparts. These results underscore SOAPIA’s promise for designing safe, specific biologics for fusion-driven cancers and other rare, currently untreatable diseases.",
+    "topic": "multi-objective optimization; protein design; peptide binders; discrete diffusion; Monte Carlo Tree Search; fusion oncoproteins; Siamese networks; biologics; off-target avoidance; affinity prediction; DPLM; AlphaFold-Multimer; rare diseases; therapeutic peptides",
+    "conference": "fm4ls",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/2f3d86262bbe510886ae1efaedd9324becea0550.pdf"
+  },
+  {
+    "id": "22fuMKfQVJ",
+    "title": "Unified Representation of Genomic and Biomedical Concepts through Multi-Task, Multi-Source Contrastive Learning",
+    "authors": [],
+    "abstract": "Phenotype vocabularies and genomic studies use incompatible coding systems for biomedical concepts, hindering large biobanks from realizing their full potential for precision medicine. Existing biomedical language models (LMs) bypass code heterogeneity but cannot embed single-nucleotide polymorphisms (SNPs), while graph-based methods require brittle manual cross-walks. We introduce **GENEREL** (**GEN**omic **E**ncoding **RE**presentation with **L**anguage model), the first *ontology-agnostic, genetic-contextualized* framework that unifies diseases, drugs, pathways, genes, and 65,000 common SNPs in a single vector space.  GENEREL encodes free-text concepts with a Transformer, embeds SNPs via a lightweight multilayer perceptron (MLP) with trainable embeddings, and aligns both domains through multi-task, weighted contrastive learning over UMLS synonyms, PrimeKG relations, GWAS/eQTL variant–trait links, and UK Biobank correlations.  On four external benchmarks&mdash;DisGeNET, DrugBank, Million Veteran Program (MVP) and a held-out GWAS split&mdash;GENEREL surpasses specialized LMs and graph baselines, while its cosine similarity reliably tracks odds-ratio effect sizes. The resulting representation paves the way for cross-biobank retrieval, variant prioritization, and downstream integrative analyses.",
+    "topic": "biomedical concept; genomic variant; large language model; representation learning; multimodal learning",
+    "conference": "fm4ls",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/37265f1ddcda612282efc34a8cf9af0daf9976ea.pdf"
+  },
+  {
+    "id": "fCiLJFMTi4",
+    "title": "HPP-Voice: A Large-Scale Evaluation of Speech Embeddings for Multi-Phenotypic Classification",
+    "authors": [],
+    "abstract": "Human speech contains paralinguistic cues that reflect a speaker's physiological and neurological state, potentially enabling non-invasive detection of various medical phenotypes. We introduce the Human Phenotype Project Voice corpus (HPP-Voice): a dataset of 7,188 recordings in which Hebrew-speaking adults count for 30 seconds, with each speaker linked to up to 15 potentially voice-related phenotypes spanning respiratory, sleep, mental health, metabolic, immune, and neurological conditions. We present a systematic comparison of 14 modern speech embedding models, where modern speech embeddings from these 30-second counting tasks outperform MFCCs and demographics for downstream health condition classifications. We found that embedding learned from a speaker identification model can predict objectively measured moderate to severe sleep apnea in males with an AUC of 0.64 ± 0.03, while MFCC and demographic features led to AUCs of 0.56 ± 0.02 and 0.57 ± 0.02, respectively. Additionally, our results reveal gender-specific patterns in model effectiveness across different medical domains. For males, speaker identification and diarization models consistently outperformed speech foundation models for respiratory conditions (e.g., asthma: 0.61 ± 0.03 vs. 0.56 ± 0.02) and sleep-related conditions (insomnia: 0.65 ± 0.04 vs. 0.59 ± 0.05). For females, speaker diarization models performed best for smoking status (0.61 ± 0.02 vs 0.55 ± 0.02), while Hebrew-specific models performed best (0.59 ± 0.02 vs. 0.58 ± 0.02) in classifying anxiety compared to speech foundation models. Our findings provide evidence that a simple counting task can support large-scale, multi-phenotypic voice screening and highlight which embedding families generalize best to specific conditions, insights that can guide future vocal biomarker research and clinical deployment.",
+    "topic": "Digital Healthcare; Speech foundational models; Audio embeddings; Voice biomarkers",
+    "conference": "fm4ls",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/b58f550cb8f8988c729271917560b8fca12d2430.pdf"
+  },
+  {
+    "id": "dlQzbaYTsW",
+    "title": "TICA-Based Free Energy Matching for Machine-Learned Molecular Dynamics",
+    "authors": [],
+    "abstract": "Molecular dynamics (MD) simulations provide atomistic insight into biomolecular systems but are often limited by high computational costs required to access long timescales. Coarse-grained machine learning models offer a promising avenue for accelerating sampling, yet conventional force matching approaches often fail to capture the full thermodynamic landscape as fitting a model on the gradient may not fit the absolute differences between low-energy conformational states. In this work, we incorporate a complementary energy matching term into the loss function. We evaluate our framework on the Chignolin protein using the CGSchNet model, systematically varying the weight of the energy loss term. While energy matching did not yield statistically significant improvements in accuracy, it revealed distinct tendencies in how models generalize the free energy surface. Our results suggest future opportunities to enhance coarse-grained modeling through improved energy estimation techniques and multi-modal loss formulations.",
+    "topic": "Machine Learning; ICML; Biomolecular; Biomed; Molecular Dynamics; Thermodynamics; Statistical Mechanics; Proteins",
+    "conference": "fm4ls",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/ffd4a7fdb94825cd91c0fc0ceda42adef482b36a.pdf"
+  },
+  {
+    "id": "JsBmdzLZqX",
+    "title": "Multi-Modal Medical Image Augmentation for Controlled Heterogeneity and Fair Outcomes",
+    "authors": [],
+    "abstract": "Limited data in medical imaging exacerbate class imbalance and fairness gaps, undermining deep-learning across diverse patient subgroups. GAN- and diffusion-based augmenters can expand datasets but often lack precise control over multiple clinical attributes and fail to cover the full range of real-world variability. We introduce a four-step augmentation pipeline. First, an automated scoring function identifies which classes or regions most urgently need synthetic examples. Second, we construct sketch–image–text triplets from real scans, embedding age, sex, and disease labels. Third, we fine-tune a sketch-conditioned diffusion network for reliable sketch-to-image synthesis and boost variability by generating multiple, similarity-penalized sketches per case. Fourth, we propose a novel diversity metric that simultaneously measures semantic feature-space coverage and pixel-level dispersion—unlike FID or IS, it captures intra-class spread and boundary sharpness without human annotations. Experiments on chest X-rays show our pipeline delivers high-fidelity, diverse images aligned with user-specified conditions, substantially improving fairness and generalizability.",
+    "topic": "Medical Image Augmentation; Sketch-Conditioned Diffusion; Fairness and Class Imbalance; Diversity Metric",
+    "conference": "fm4ls",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/1b45d16787ea48c5af94be484b4d4ec643753814.pdf"
+  },
+  {
+    "id": "NLjtvrVg7i",
+    "title": "Towards functional annotation with latent protein language model features",
+    "authors": [],
+    "abstract": "Protein Language Models (PLMs) create high-dimensional embeddings that can be transformed into interpretable features using Sparse Autoencoders (SAEs), where each feature activates on specific protein patterns. However, scalably identifying which features are reliable enough for protein annotation remains challenging. We address this by developing a pipeline combining three complementary methods: (1) expanded database matching across 20+ annotation sources, (2) feature-guided local structural alignment to identify consistent activation regions, and (3) LLM-based feature description generation. Our annotation pipeline demonstrates three properties of SAE features that make them a useful source for functional annotation. First, they can represent more granular patterns than existing annotations, enabling the identification of sub-domains. Second, they can detect missing annotations by finding proteins that display recognizable structural motifs but lack corresponding labels. Here, we identify at least 491 missing CATH topology annotations with our pipeline. Third, they can maintain structural consistency across unseen proteins. Of our 10,240 SAE features, we find 615 that are structurally similar in unannotated metagenomic proteins, allowing us to match at least 8,077 metagenomic proteins to characterized proteins. This provides a rapid annotation pipeline with constant time search, that automatically includes structural and functional information about the feature that triggered the match.",
+    "topic": "Proteins; computational biology; interpretability; sparse autoencoders",
+    "conference": "fm4ls",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/4d5f93944dce24695b9a85a21f9c5d5aa01f28ff.pdf"
+  },
+  {
+    "id": "0V48k7XIRQ",
+    "title": "Multimodal Benchmarking of Foundation Model Representations for Cellular Perturbation Response Prediction",
+    "authors": [],
+    "abstract": "The decreasing cost of single-cell RNA sequencing (scRNA-seq) has enabled the collection of massive scRNA-seq datasets, which are now being used to train transformer-based cell foundation models (FMs). One of the most promising applications of these FMs is perturbation response modeling. This task aims to forecast how cells will respond to drugs or genetic interventions. Accurate perturbation response models could drastically accelerate drug discovery by reducing the space of interventions that need to be tested in the wet lab. However, recent studies have shown that FM-based models often struggle to outperform simpler baselines for perturbation response prediction. A key obstacle is the lack of understanding of the components driving performance in FM-based perturbation response models. In this work, we conduct the first systematic pan-modal study of perturbation embeddings, with an emphasis on those derived from biological FMs. We benchmark their predictive accuracy, analyze patterns in their predictions, and identify the most successful representation learning strategies. Our findings offer insights into what FMs are learning and provide practical guidance for improving perturbation response modeling.",
+    "topic": "foundation models; virtual cell; perturbation response modeling",
+    "conference": "fm4ls",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/4247a1fbf299b128e8566fba13330d3a3101615c.pdf"
+  },
+  {
+    "id": "L5RgTfNE6h",
+    "title": "Knowledge Graph-Augmented DNA Representation Learning",
+    "authors": [],
+    "abstract": "Understanding the language of the genome remains a key challenge in biology, with pre-trained models such as DNABERT-2 achieving substantial advancement. These models leverage massive nucleotide sequences through a self-supervised learning paradigm, yet they often overlook the rich, structured knowledge already curated by human experts. Inspired by the knowledge-enhanced foundation models in other biological molecules (e.g., proteins and drugs), we introduce Knowledge Graph-Augmented DNABERT (KGA-DNABERT), augmenting the objective of masked language modeling with knowledge graph (KG) modeling. Specifically, we construct KGs by extracting factual triplets from GenomicKB, a comprehensive human genome database. In addition to DNABERT-2’s MLM, we incorporate six popular KG embedding methods to model the curated KG beyond sequence-level representations. We did not observe substantial benefits from incorporating KGs into DNA representation learning with the KGs tested here and attribute this to the insufficient coverage of the constructed KGs, as they represent only an excerpt of GenomicKB. This motivates us to explore further a better integration of KG for DNA representation learning.",
+    "topic": "DNA; Representation Learning; Pre-Training; Foundation Model; Knowledge Graph; Biological Engineering",
+    "conference": "fm4ls",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/25d7155cbb1be7dd3eb9e0222d3d2f6ec627ea8e.pdf"
+  },
+  {
+    "id": "2gLAV6ROxQ",
+    "title": "Multi-Objective-Guided Generative Design of mRNA with Therapeutic Properties",
+    "authors": [],
+    "abstract": "Therapeutic mRNA design requires simultaneous optimization of multiple competing properties, including stability, translation efficiency, and protein expression—a challenge that current single objective approaches struggle to address systematically. We introduce mRNA generation via Unrolled Trajectories and Informed Latent UpdateS (mRNAutilus), the first multi-objective guided generative model for simultaneous mRNA codon optimization and de novo design of untranslated region (UTR) sequences. mRNAutilus combines a Masked Diffusion Model (MDM) trained on 6 million evolutionary-scale mRNA sequences with Monte Carlo Tree Search to guide generation toward Pareto-optimal solutions across multiple therapeutic properties. As objective functions, we use the latent mRNAutilus embeddings to train classifiers for predicting half-life, ribosome profiling, and translation rate. Guided by our classifiers, we demonstrate that mRNAutilus successfully generates diverse, high-quality mRNA sequences with enhanced properties compared to natural sequences while preserving coding regions for therapeutic applications, establishing a new paradigm for rational mRNA design.",
+    "topic": "mrna; diffusion; design; therapeutics",
+    "conference": "fm4ls",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/a50cfaf123da3bd92c4e9e9d6fe426012ccfca69.pdf"
+  },
+  {
+    "id": "GEf5jnNIND",
+    "title": "Uncertainty-Aware Discrete Diffusion Improves Protein Design",
+    "authors": [],
+    "abstract": "Protein inverse folding involves generating amino acid sequences that adopt a specified 3D structure---a key challenge in structural biology and molecular engineering. While discrete diffusion models have demonstrated strong performance, existing methods often apply uniform denoising across residues, overlooking position-specific uncertainty. We propose an uncertainty-aware discrete denoising diffusion model that employs a prior-posterior signaling mechanism to dynamically guide the denoising process. Our approach further integrates learned priors from a pretrained protein large language model and a structure encoder within a modular framework, jointly optimized through multi-objective training. Across multiple benchmarks, our method achieves substantial improvements over state-of-the-art baselines, offering a principled framework for structure-conditioned sequence generation in proteins and beyond.",
+    "topic": "Protein Inverse Folding; Protein Desing; Discrete Diffusion Models; Uncertainty-Award Guidance",
+    "conference": "fm4ls",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/c8222d75390d7f02be69c92d88918b985c9f9234.pdf"
+  },
+  {
+    "id": "2JsJqQbjJn",
+    "title": "Self-Supervised Representation Learning for Microbiome Improves Downstream Prediction in Data-Limited Settings and Cross-Cohort Generalizability",
+    "authors": [],
+    "abstract": "The gut microbiome plays a crucial role in human health, but machine learning applications in this field face significant challenges, including limited data availability, high dimensionality, and batch effects across different cohorts. While foundation models have transformed other biological domains, metagenomic data remains relatively under-explored despite its complexity and clinical importance. We developed self-supervised representation learning methods for gut microbiome metagenomic data by implementing multiple approaches on 85,364 samples, including masked autoencoders and novel cross-domain adaptation of single-cell RNA sequencing models. Systematic benchmarking against the standard practice in microbiome machine learning demonstrated significant advantages of our learned representations in limited-data scenarios, improving prediction for age (r = 0.14 vs. 0.06), BMI (r = 0.16 vs. 0.11), visceral fat mass (r = 0.25 vs. 0.18), and drug usage (PR-AUC = 0.81 vs. 0.73). Cross-cohort generalization was enhanced by up to 81\\%, addressing transferability challenges across different populations and technical protocols. Our approach provides a valuable framework for overcoming data limitations in microbiome research, with particular potential for the many clinical and intervention studies that operate with small cohorts.",
+    "topic": "self-supervised learning; representation learning; microbiome; metagenomic data; cross-cohort generalization; limited data; masked autoencoders; foundation models",
+    "conference": "fm4ls",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/e9a2fc05ee63068da043ba333816fecae8eaa7d6.pdf"
+  },
+  {
+    "id": "gYUAJPJeWP",
+    "title": "Advancing Knotted Protein Design with ESM3: Guided Generation and Topological Insights",
+    "authors": [],
+    "abstract": "Knotted proteins represent a rare but functionally important class of proteins with complex topological features. While previous work demonstrated the generation of artificial knotted proteins using diffusion models and sequence design tools, these approaches suffered from low success rates (~0.5%). We present a novel approach leveraging ESM3, a multi-modal protein language model, to achieve guided generation of knotted proteins with an 87% success rate. We introduce a continuous knot score metric that captures the robustness of protein knots, revealing that approximately 85% of a protein sequence must be altered to break its knot. Using ESM3 embeddings, we achieve 93% accuracy in knotted protein classification and demonstrate the ability to convert unknotted proteins to knotted variants through iterative modifications (31% success rate). Our work showcases the power of unified multi-modal models in tackling complex protein design challenges.",
+    "topic": "Protein Design; Knotted Proteins; ESM3; Multi-modal Foundation Models; Guided Generation",
+    "conference": "fm4ls",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/caeedc5f3cd358ec144cd1c8601578f2998d3235.pdf"
+  },
+  {
+    "id": "nGezW51Mrj",
+    "title": "Multimodal Protein Language Models for Flexibility Prediction and Loop Design",
+    "authors": [],
+    "abstract": "In this paper we use multimodal embeddings from the ESM-3 protein language model to predict protein flexibility. ESM-3's multi-modality allows for simultaneous integration of structural, sequence-based, and functional information into a residue-level embedding, yielding informative protein representations that can be used to predict protein flexibility. We demonstrate improved RMSF prediction compared to established methods such as CABS-flex. Additionally, we present a practical application of ESM-3 embeddings for loop design by sampling novel loop sequences conditioned on fixed structural and functional contexts. Such an approach may efficiently identify potential loop designs with increased rigidity.",
+    "topic": "protein flexibility; molecular dynamics; root-mean-square fluctuation; loop modeling; ESM-3",
+    "conference": "fm4ls",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/79d5bdb044e525c416645e6f214c704a306b1bad.pdf"
+  },
+  {
+    "id": "NO8UEX4dMb",
+    "title": "Scaling up measurement noise scaling laws",
+    "authors": [],
+    "abstract": "Learning meaningful representations of cellular states is a key problem in computational biology. Yet, the scaling behavior of single-cell representation learning models remains poorly understood. While recent work has proposed that model performance scales predictably with measurement noise, this hypothesis has only been validated with relatively small models and datasets. In this work-in-progress, we present the first empirical evidence supporting measurement noise scaling laws at large scales using datasets on the order of $10^7$ cells and transformer-based models with $>10^7$ parameters. We demonstrate that previously observed noise-scaling behavior again consistently emerge in these large-scale models and datasets. Our results provide further evidence that measurement noise is an important scaling axis for cellular representation learning.",
+    "topic": "scaling laws; scRNA-seq; data quality",
+    "conference": "fm4ls",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/e7602624050d2db4ef57197ad1c38546aaf4c656.pdf"
+  },
+  {
+    "id": "luqaGrDvUd",
+    "title": "Rapid and Reproducible Multimodal Biological Foundation Model Development with AIDO.ModelGenerator",
+    "authors": [],
+    "abstract": "Foundation models (FMs) for DNA, RNA, proteins, cells, and tissues have begun to close long-standing performance gaps in biological prediction tasks, yet each modality is usually studied in isolation. \nBridging them requires software that can ingest heterogeneous data, apply large pretrained backbones from various sources, and perform multimodal benchmarking studies at scale.\nWe present [AIDO.ModelGenerator](https://genbio-ai.github.io/ModelGenerator/), an open-source toolkit \nthat turns these needs into declarative experiment recipes through a structured experimental framework.\nAIDO.ModelGenerator provides\n(i) 300+ datasets covering DNA, RNA, protein, cell, spatial, and multimodal data types;\n(ii) 30+ pretrained FMs ranging from 3M to 16B parameters;\n(iii) 10+ plug-and-play use-cases covering inference, adaptation, prediction, generation, and zero-shot evaluation; and\n(iv) YAML-driven experiment recipes that enable exact reproducibility.\nOn a sequence-to-expression prediction task, AIDO.ModelGenerator systematically builds and tests unimodal and multimodal models, achieving a new SOTA by combining DNA and RNA FMs that outperforms unimodal baselines by over $10\\%$.\nIn a Crohn’s disease case-study, the framework’s simulated knockout protocol ranks the clinically implicated target SOX4 6,000 positions higher than differential-expression baselines, illustrating its utility for therapeutic target discovery.\nWe release code, tutorials, checkpoints, datasets, and API reference\nto accelerate multimodal FM research in the life sciences.",
+    "topic": "Foundation Models; Multimodal Fusion; Prototyping; Reproducibility",
+    "conference": "fm4ls",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/c664a5d4ae1ba21f785411913f451dfa6f95ab93.pdf"
+  },
+  {
+    "id": "wVLDfxHHRP",
+    "title": "Ligand Iterative Sampling for Affinity Refinement and Drug Discovery (LISARDD)",
+    "authors": [],
+    "abstract": "*De novo* drug generation is a challenging task that aims to generate novel molecules with specific properties from scratch. Deep learning can accelerate this process by efficiently exploring the drug-like chemical space. Here, we introduce LISARDD, a Reinforcement Learning framework to optimize sampling in the latent space of a pretrained target-agnostic generative model. We demonstrate that our approach can generate candidate molecules that simultaneously optimize multiple drug properties, including target-specific binding affinity, drug-likeness, and synthetic accessibility. This fully modular framework can leverage any molecular generative model, binding affinity scoring model, or optimization algorithm to identify novel drug candidates for future experimental validation.",
+    "topic": "Reinforcement Learning; Drug Generation; Drug Discovery; Molecular Generation; Binding Affinity Prediction; Multi-objective Optimization",
+    "conference": "fm4ls",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/96762802c67bbb65ef4da57398182d13a39a8a1a.pdf"
+  },
+  {
+    "id": "adweKg5NZa",
+    "title": "RepoLLM: A Multi-modal Foundation Model for Drug Repurposing via Alignment of Molecules, EHRs, and Knowledge Graphs",
+    "authors": [],
+    "abstract": "We propose a novel multi-modal foundation model for drug repurposing that integrates drug molecules (SMILES sequences), electronic health records (EHRs), and knowledge graphs (KGs) through a cross-modal attention mechanism. Our framework achieves state-of-the-art performance on drug-disease prediction (0.824 AUROC) while maintaining knowledge graph consistency (0.642 Hit@10), demonstrating significant improvements over unimodal baselines. The model exhibits exceptional robustness to missing data, retaining 92.1\\% of performance when two modalities are absent. Clinical validation shows 83.4\\% agreement with physician decisions, with attention-guided knowledge graph paths providing interpretable biological explanations. This work establishes a new paradigm for therapeutic discovery by effectively bridging molecular, clinical, and relational biomedical data.",
+    "topic": "drug repurposing; multi-modal learning; knowledge graphs; electronic health records; attention mechanisms; translational medicine; foundation models",
+    "conference": "fm4ls",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/1e8f208ba4b7af39e5c52938a9cef47b5833335c.pdf"
+  },
+  {
+    "id": "80sgKQBPpg",
+    "title": "NextGenPLM: A Novel Structure-Infused Foundational Protein Language Model for Antibody Discovery and Optimization",
+    "authors": [],
+    "abstract": "Sequence-only PLMs lack spatial context and miss critical folding, interface, and environment-dependent cues, while structure-prediction and docking methods are too slow and underperform on antibody complexes. $NextGenPLM$ bridges this gap with a modular, scalable design that fuses pretrained PLMs with multimodal inputs—from raw sequences and functional assays to high-resolution structures—via spectral contact-map embeddings. It natively models multi-chain antigen structures and processes four complexes per second, enabling real-time, repertoire-scale insights such as epitope clustering. On a diverse benchmark of antibody–antigen complexes, $NextGenPLM$ matches Chai-1 and Boltz-1x on contact-map and epitope accuracy at a fraction of the compute cost. In an internal affinity-maturation campaign, ranking mutants by predicted contact probabilities and masked-language-modeling (MLM) log-likelihoods helped achieve up to 17× affinity improvements—demonstrating its potential for rapid, data-driven biologics discovery.",
+    "topic": "Protein language models; antibody-antigen; machine learning; protein engineering; antibody discovery; structure prediction",
+    "conference": "fm4ls",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/a1239c85094af034246a65a0c1e2926ad93f4bcb.pdf"
+  },
+  {
+    "id": "FcfpwlFDUZ",
+    "title": "Challenges and Guidelines in Deep Generative Protein Design: Four Case Studies",
+    "authors": [],
+    "abstract": "Deep generative models show promise for $\\textit{de novo}$ protein design, yet reliably producing designs that are geometrically plausible, evolutionarily consistent, functionally relevant, and dynamically stable remains challenging.\nWe present a deep generative modeling pipeline for early $\\textit{de novo}$ design of monomeric proteins, based on Score Matching and Flow Matching.\nWe apply this pipeline to four diverse protein families with an adaptable evaluation protocol.\nGenerated structures display realistic, clash-free conformations enriched with family-specific features, while the designed sequences preserve essential functional residues while retaining variability. Molecular dynamics and binding simulations show dynamic stability, with wild-type-like binding pockets that interact favorably with family-specific ligands. \nThese results provide practical guidelines for integrating generative models into protein design workflows.",
+    "topic": "Generative Protein Design; Score Matching; Flow Matching; Structural Phylogenetics; Molecular Dynamics; Ligand Docking",
+    "conference": "fm4ls",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/7a458f556aea712a8c23f139a2740e8f26599ddb.pdf"
+  },
+  {
+    "id": "hMQU2gfYzF",
+    "title": "ATOMICA: Learning Universal Representations of Intermolecular Interactions",
+    "authors": [],
+    "abstract": "Molecular interactions underlie nearly all biological processes. However, most machine learning models treat molecules in isolation or specialize in a single type of interaction, which prevents generalization across biomolecular classes and limits the ability to systematically model interaction interfaces. We introduce ATOMICA, a geometric deep learning model that learns atomic-scale representations of intermolecular interfaces across diverse biomolecular modalities, including small molecules, metal ions, amino acids, and nucleic acids. ATOMICA uses a self-supervised denoising and masking objective to train on 2,037,972 interaction complexes and generate hierarchical embeddings at the levels of atoms, chemical blocks, and molecular interfaces. The model learns generalizable representations across molecular classes. We apply ATOMICA to the interfaceome and show that proteins that interact similarly with ions, small molecules, nucleic acids, lipids, and proteins tend to be involved in the same disease. We then construct five modality-specific interfaceome networks termed ATOMICANets, which connect proteins based on interaction interface similarity. These networks identify disease pathways across 27 conditions. Finally, we use ATOMICA to annotate the dark proteome—proteins lacking known structure or function—by predicting 2,646 previously uncharacterized ligand-binding sites for metal ions and cofactors.",
+    "topic": "Molecular interactions; representation learning; self-supervised learning; all-atom encoder; proteins; nucleic acids; small molecules",
+    "conference": "fm4ls",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/fff9c02e4ef140d1f5fd4aba8a13e4ba19196c26.pdf"
+  },
+  {
+    "id": "W64NsKUpMy",
+    "title": "H&Enium, Applying Foundation Models to Computational Pathology and Spatial Transcriptomics to Learn an Aligned Latent Space",
+    "authors": [],
+    "abstract": "Bridging the gap from transcriptomic to imaging data at single-cell resolution is essential for understanding tumor biology and improving cancer diagnostics. Spatial transcriptomics enables mapping gene expression onto H&E images of segmented single cells, but remains limited by cost and throughput. We introduce H&Enium, a contrastive alignment framework that projects image and gene expression embeddings from foundation models into an aligned latent space using projection heads and a novel soft alignment target. This alignment enriches image-derived embeddings with transcriptomic context improving downstream tasks such as cell type classification and gene expression prediction. Additional evaluations on independent pathology datasets demonstrate superior generalization of our aligned representations over unaligned baselines. Our method offers a scalable path to enhance the utility of standard H&E imaging in both research and clinical settings.",
+    "topic": "Multimodal alignment; Foundation models; Histopathology; Spatial transcriptomics; Contrastive learning",
+    "conference": "fm4ls",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/2563e4c55b4971adcead2debff3850bbf47dd78e.pdf"
+  },
+  {
+    "id": "1o89PN84NH",
+    "title": "Joint Diffusion Sampling via Positive-Unlabeled Guidance for Multi-Modal Data",
+    "authors": [],
+    "abstract": "Multi-modal generative models typically require abundant training data from multi-modal joint distributions, which is often unavailable in the life sciences. We propose to treat each modality as a marginal distribution and correct their independent diffusion processes to sample from their joint distribution. Specifically, we introduce \"joint diffusion sampling,\" a method that generates a sample from joint distributions using pre-trained models for individual (uni-modal) marginal distributions and minimal data from the (multi-modal) joint distribution. We demonstrate preliminary uni- and multi-modal results for images, molecules, and Boolean values, and discuss multi-modal applications of our approach.",
+    "topic": "joint modeling; joined models; weakly-supervised learning",
+    "conference": "fm4ls",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/749f5d2ae2a1b024f3406b59dc30687f0e058272.pdf"
+  },
+  {
+    "id": "uuQjL4L0J9",
+    "title": "Conditional Normalizing Flows for the Design of T Cell Therapies",
+    "authors": [],
+    "abstract": "Designing effective cell therapies requires understanding how transcriptional regulation within infusion products influence patient outcomes. Here, we propose a generative model that leverages single-cell RNA sequencing (scRNA-seq) data paired with clinical outcomes to learn the gene regulatory networks within engineered Chimeric Antigen Receptor (CAR) T cells. Using conditional normalizing flows, our model captures the high-dimensional distribution of gene activity while conditioning on patient and response-specific features. This approach enables patient response prediction with 73\\% accuracy and accurate simulations of gene knockdown, knockouts, and over-expression experiments. Our model identified function-recovering genetic modifications for CAR T infusion products, which were validated experimentally in the context of a genetic screen.",
+    "topic": "single-cell foundation model; gene expression anaylsis; CAR T; normalizing flows",
+    "conference": "fm4ls",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/1c69bbdf9766feebbc14e5f37a521e218819e608.pdf"
+  },
+  {
+    "id": "CNzHlxrRlR",
+    "title": "Enriched Instruction-Following Graph Alignment for Efficient Medical Vision-Language Models",
+    "authors": [],
+    "abstract": "State-of-the-art medical multi-modal LLMs (med-MLLMs), such as LLaVA-Med and BioMedGPT, primarily depend on scaling model size and data volume, with training driven largely by autoregressive objectives. However, we reveal that this approach can lead to weak vision-language alignment, making these models overly dependent on costly instruction-following data. To address this, we introduce ExGra-Med, a novel multi-graph alignment framework that jointly aligns images, instruction responses, and extended captions in the latent space, advancing semantic grounding and cross-modal coherence. To scale to large LLMs (e.g., LLaMa-7B), we develop an efficient end-to-end training scheme using black-box gradient estimation, enabling fast and scalable optimization. Empirically, ExGra-Med matches LLaVA-Med’s performance using just 10\\% of pre-training data, achieving a 20.13\\% gain on VQA-RAD and approaching full-data performance. It also outperforms strong baselines like BioMedGPT and RadFM on visual chatbot and zero-shot classification tasks, demonstrating its promise for efficient, high-quality vision-language integration in medical AI.",
+    "topic": "multi-modal healthcare LLM; vision-language model",
+    "conference": "fm4ls",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/aa90d62c35d2b384f0d60f88ad8793a5c43fc935.pdf"
+  },
+  {
+    "id": "a42RSnbI6l",
+    "title": "MiST: Understanding the Role of Mid-Stage Scientific Training in Developing Chemical Reasoning Models",
+    "authors": [],
+    "abstract": "Large Language Models (LLMs) can acquire emergent reasoning via online fine-tuning with simple rule-based rewards when tasks are already latent-solvable by the base model. We study chemical reasoning and identify two pre-requisites for RL-based training: (1) symbolic competence and (2) latent domain knowledge. We introduce MiST, a mid-stage training protocol using SMILES-aware data mix and continued pre-training on 2.9 B tokens, and supervised finetuning on chain-of-thoughts reasoning data. MiST doubles the latent-solvability score of IUPAC-to-SMILES translation and increases the precision of reaction prediction from 4.1% to 25.2%, while producing faithful reasoning traces. Our work defines clear prerequisites for chemical reasoning and under-scores the value of mid-stage pre-training.",
+    "topic": "LLM; reasoning; chemistry; science; ai4science; reinforcement learning; drug discovery",
+    "conference": "fm4ls",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/8884984bb9d8b8a04c01099a7c22bdd87abc2042.pdf"
+  },
+  {
+    "id": "Ej9zvGxbva",
+    "title": "Molecularly informed analysis of histopathology images using natural language",
+    "authors": [],
+    "abstract": "Histopathology refers to the microscopic examination of diseased tissues and routinely guides treatment decisions for cancer and other diseases. Currently, this analysis focuses on morphological features but rarely considers gene expression information, which can add an important molecular dimension.\nHere, we introduce SpotWhisperer, an AI method that links histopathological images to spatial gene expression profiles and their text annotations, enabling molecularly grounded histopathology analysis through natural language.\nOur method outperforms pathology vision-language models on a newly curated benchmark dataset, dedicated to spatially resolved H&E annotation.\nIntegrated into a web interface, SpotWhisperer enables interactive exploration of cell types and disease mechanisms using free-text queries with access to inferred spatial gene expression profiles.\nIn summary, SpotWhisperer analyzes cost-effective pathology images with spatial gene expression and natural-language AI, demonstrating a path for routine integration of microscopic molecular information into histopathology.",
+    "topic": "Computational Pathology; Histopathology Image Analysis; Multimodal Learning; Interpretable Representations; Machine Learning in Medicine",
+    "conference": "fm4ls",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/7485bce7bd00611f444ebf709518c3836145bc03.pdf"
+  },
+  {
+    "id": "UMibDfJAO8",
+    "title": "Evaluating Multi-Modal Models for Enzyme-Reaction Retrieval",
+    "authors": [],
+    "abstract": "Identifying functional enzymes that can perform unannotated reactions is a major biotechnological bottleneck. While multi-modal machine learning models can be used to retrieve enzymes given target functions (reactions), existing methods have not been adequately compared to each other. Two key areas warrant further investigation: first, the optimal way to incorporate 3D protein structure and predicted binding pockets for enzyme retrieval, and second, the most effective learning objectives for training such multi-modal models. We examine these questions through experiments on Task 2 of Classification and Retrieval for Enzymes (CARE) benchmark, demonstrating that multi-modal representations combining protein structure with pocket information have better performance than sequence-only methods. Second, we evaluate learning objectives and found that contrastive learning generally provides superior performance for enzyme retrieval compared to a binary classification. Our work underscores the value of integrating structural and pocket information for precise enzyme-reaction matching and offers insights into effective training objectives for such retrieval models.",
+    "topic": "enzyme; protein; enzyme retrieval; catalytic sites; proteins structure; protein language models; multi-modal learning; contrastive learning; binary classification",
+    "conference": "fm4ls",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/bedba56cedc3af40e4e553da1ca8278454535d6b.pdf"
+  },
+  {
+    "id": "lYxwbDyTL1",
+    "title": "Leveraging the Structure of Medical Data for Improved Representation Learning",
+    "authors": [],
+    "abstract": "Building generalizable medical AI systems requires pretraining strategies that are data-efficient and domain-aware. Unlike internet-scale corpora, clinical datasets such as MIMIC-CXR offer limited image counts and scarce annotations, but exhibit rich internal structure through multi-view imaging. We propose a self-supervised framework that leverages the inherent structure of medical datasets. Specifically, we treat paired chest X-rays (i.e., frontal and lateral views) as natural positive pairs, learning to reconstruct each view from sparse patches while aligning their latent embeddings. Our method requires no textual supervision and produces informative representations. Evaluated on MIMIC-CXR, we show strong performance compared to supervised objectives and baselines being trained without leveraging structure. This work provides a lightweight, modality-agnostic blueprint for domain-specific pretraining where data is structured but scarce.",
+    "topic": "self-supervised learning; masked autoencoder; multi-view contrastive learning; medical imaging; chest X-ray; MIMIC-CXR; representation learning; domain-specific pretraining",
+    "conference": "fm4ls",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/c7c6909db16a3b2971511a0bc70efa08480dadef.pdf"
+  },
+  {
+    "id": "Pn1fGoE2a7",
+    "title": "AnnoDPO: Protein Functional Annotation Learning with Direct Preference Optimization",
+    "authors": [],
+    "abstract": "Deciphering protein function remains a fundamental challenge in protein representation learning. The task presents significant difficulties for protein language models (PLMs) due to the sheer volume of functional annotation categories and the highly imbalanced distribution of annotated instances across biological ontologies. Inspired by the remarkable success of reinforcement learning from human feedback (RLHF) in large language model (LLM) alignment, we propose AnnoDPO, a novel multi-modal framework for protein function prediction that leverages Direct Preference Optimization (DPO) to enhance annotation learning. Our methodology addresses the dual challenges of annotation scarcity and category imbalance through preference-aligned training objectives, establishing a new paradigm for biological knowledge integration in protein representation learning.  We provide the code for AnnoDPO at https://github.com/AzusaXuan/AnnoDPO.",
+    "topic": "protein annotation prediction; protein multimodal learning; Direct Preference Optimization; RLHF",
+    "conference": "fm4ls",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/f8efce8f763abab52a57339d9a99426a06a8b620.pdf"
+  },
+  {
+    "id": "aSLfhoL0Ig",
+    "title": "Stabilizing protein fitness predictors via the PCS framework",
+    "authors": [],
+    "abstract": "We improve protein fitness prediction by addressing an often-overlooked source\nof instability in machine learning models: the choice of data representation.\nGuided by the Predictability–Computability–Stability (PCS) framework for\nveridical (truthful) data science, we construct $\\textit{Stable}$ predictors by\napplying a prediction-based screening procedure (pred-check in PCS) to select\npredictive representations, followed by ensembling models trained on each—thereby leveraging representation-level diversity. This approach\nimproves predictive accuracy, out-of-distribution generalization, and uncertainty\nquantification across a range of model classes. Our $\\textit{Stable}$ variant of the recently introduced\nkernel regression method, Kermut, achieves state-of-the-art performance on the\nProteinGym supervised fitness prediction benchmark: it reduces mean squared error\nby up to 20\\% and improves Spearman correlation by up to 10\\%, with the largest improvements\non splits representing a distribution shift. We further demonstrate that $\\textit{Stable}$ predictors yield statistically significant improvements in in-silico protein\ndesign tasks. Our results highlight the critical role of representation-level variability in fitness prediction and, more broadly, underscore the need to address instability throughout the entire data science lifecycle to advance robust protein design.",
+    "topic": "protein engineering; uncertainty quantification",
+    "conference": "fm4ls",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/aefed0e89e997f30fd6038ef72508f223e3642ef.pdf"
+  },
+  {
+    "id": "wYuhYuIYT9",
+    "title": "Segmentation Helps Understanding: Mask-Infused Vision-Language Pre-training for 3D Medical Images",
+    "authors": [],
+    "abstract": "Pretraining effective 3D medical image encoders is crucial for downstream tasks such as diagnosis and prognosis. Existing vision-language methods learn global semantics from paired radiology reports but often miss fine-grained cues like small lesions. We introduce SegVL, a unified contrastive learning framework that integrates segmentation masks into vision-language pretraining. SegVL aligns voxel-level features with segmentation labels using mask names as textual anchors and enhances image-text contrast via segmentation informed features. A Tversky loss addresses class imbalance, and a lightweight decoder preserves encoder capacity. Experiments show SegVL outperforms prior methods on multiple classification and segmentation benchmarks, highlighting the complementary strengths of segmentation and language supervision.",
+    "topic": "3D medical image pretraining; contrastive learning",
+    "conference": "fm4ls",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/1013f61adf396ff47dbf28116816d2190b841159.pdf"
+  },
+  {
+    "id": "9tMSnJMRfE",
+    "title": "Transferring Cell-level Drug Response to Patient via Tumor Heterogeneity-Aware Alignment and Gene-level Foundational Models",
+    "authors": [],
+    "abstract": "Prediction of patient-level drug response is critical for precision oncology but remains limited by the scarcity of labeled clinical data. While machine learning models trained on cancer cell lines offer a scalable alternative, biological differences introduce domain shifts that hinder direct translation to patient tumors. We present THERAPI (Tumor Heterogeneity-aware Embedding for Response Adaptation and Patient Inference), a deep learning framework designed to bridge this gap. THERAPI aligns patient and cell line transcriptomes via an attention-based aggregation of cell lines guided by tissue context, enabling tumor heterogeneity-aware modeling. For drug response prediction, it further transfers gene-level knowledge from foundation models based on drug-induced perturbations and rank-based representations. Our approach outperforms nine baselines in predicting patient drug responses and generalizes to external cohorts, while providing interpretable insights into tumor heterogeneity and clinical outcomes. These results highlight the promise of biological context-aware domain adaptation and gene-level knowledge integration for robust, interpretable drug response prediction in precision medicine.",
+    "topic": "Precision medicine; Drug response prediction; Transfer learning; Domain Adaptation; Foundational model",
+    "conference": "fm4ls",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/58c27610aa56922f3db5f69dccbfebde83bb1585.pdf"
+  },
+  {
+    "id": "zNjXOZxEYB",
+    "title": "DeepSeq: High-Throughput Single-Cell RNA Sequencing Data Labeling via Web Search-Augmented Agentic Generative AI Foundation Models",
+    "authors": [],
+    "abstract": "Generative AI foundation models offer transformative potential for processing structured biological data, particularly in single-cell RNA sequencing, where datasets are rapidly scaling toward billions of cells. We propose the use of agentic foundation models with real-time web search to automate the labeling of experimental data, achieving up to 82.5% accuracy. This addresses a key bottleneck in supervised learning for structured omics data by increasing annotation throughput without manual curation and human error. Our approach enables the development of virtual cell foundation models capable of downstream tasks such as cell-typing and perturbation prediction. As data volume grows, these models may surpass human performance in labeling, paving the way for reliable inference in large-scale perturbation screens. This application demonstrates domain-specific innovation in health monitoring and diagnostics, aligned with efforts like the Human Cell Atlas and Human Tumor Atlas Network.",
+    "topic": "Single cell; RNA sequencing; web search; agentic; generative AI; foundation models; structured data labeling",
+    "conference": "fm4ls",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/7a06fd3bf3a18169f64f91384cd3a2d590c2209e.pdf"
+  },
+  {
+    "id": "gr4vDC58Pd",
+    "title": "BioLangFusion: Multimodal Fusion of DNA, mRNA, and Protein Language Models",
+    "authors": [],
+    "abstract": "We present BioLangFusion, a simple approach for integrating pre-trained DNA, mRNA, and protein language models into unified molecular representations. Motivated by the central dogma of molecular biology (information flow from gene to transcript to protein), we align per-modality embeddings at the biologically meaningful codon level (three nucleotides encoding one amino acid) to ensure direct cross-modal correspondence. BioLangFusion studies three standard fusion techniques: (i) codon-level embedding concatenation, (ii) entropy-regularized attention pooling inspired by multiple-instance learning, and (iii) cross-modal multi-head attention—each technique providing a different inductive bias for combining modality-specific signals. These methods require no additional pre-training or modification of the base models, allowing straightforward integration with existing sequence based foundation models. Across five molecular property prediction tasks, BioLangFusion outperforms strong unimodal baselines, showing that even simple fusion of pre-trained models can capture complementary multi-omic information with minimal overhead.",
+    "topic": "Multimodal omics integration; pre-trained language  models; molecular property prediction; multi -model representation",
+    "conference": "fm4ls",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/5728519f6e9fde413d2d85ec8445bb4566fb612c.pdf"
+  },
+  {
+    "id": "FKON2dbdva",
+    "title": "AIDO.Tissue: Spatial Cell-Guided Pretraining for Scalable Spatial Transcriptomics Foundation Model",
+    "authors": [],
+    "abstract": "Single-cell spatial transcriptomics enables high-resolution insights into tissue organization and cell-cell interactions, yet poses significant computational and modeling challenges due to its scale and complexity. Here we introduce AIDO.Tissue, a spatially-informed pretraining framework. The design employs multiple cells as input and an asymmetric encoder-decoder architecture, making it effectively encodes cross-cell dependencies while scaling to large data. Systematic evaluation shows that our method scales with neighboring size and achieves state-of-the-art performance across diverse downstream tasks, including spatial cell type classification, cell niche type prediction and cell density estimation. These results highlight the importance of multi-scale spatial context in building general-purpose foundation models for tissue-level understanding.",
+    "topic": "LLM; Tissue; Cell",
+    "conference": "fm4ls",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/25166f5805dd5731737fb43559d16bd77ca0a5bc.pdf"
+  },
+  {
+    "id": "Nu8Yajb6sn",
+    "title": "Retrieval Augmented Protein Language Models for Protein Structure Prediction",
+    "authors": [],
+    "abstract": "The advent of advanced artificial intelligence technology has significantly accelerated progress in protein structure prediction, with AlphaFold2 setting a new benchmark for prediction accuracy by leveraging the Evoformer module to automatically extract co-evolutionary information from multiple sequence alignments (MSA). To address AlphaFold2’s dependence on MSA depth and quality, we propose two novel models: AIDO.RAGPLM and AIDO.RAGFold, pre-trained modules for Retrieval-AuGmented protein language model and structure prediction in an AI-driven Digital Organism. AIDO.RAGPLM integrates pre-trained protein language models with retrieved MSA, surpassing single-sequence protein language models in perplexity, contact prediction, and fitness prediction. When sufficient MSA is available, AIDO.RAGFold achieves TM-scores comparable to AlphaFold2 while operating up to eight times faster, and significantly outperforms AlphaFold2 when MSA is insufficient (∆TM-score=0.379, 0.116 and 0.059 for 0, 5 and 10 MSA sequences as input). Additionally, we developed an MSA retriever using hierarchical ID generation that is 45 to 90 times faster than traditional methods, expanding the MSA training set for AIDO.RAGPLM by 32%. Our findings suggest that AIDO.RAGPLM provides an efficient and accurate solution for protein structure prediction, particularly in scenarios with limited MSA data. The AIDO.RAGPLM model has been open-sourced and is available on https://huggingface.co/genbio-ai/AIDO.Protein-RAG-3B.",
+    "topic": "Protein Language Model; Retrieval-augmentation",
+    "conference": "fm4ls",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/7361227386a7a0073046418f3016850703af0435.pdf"
+  },
+  {
+    "id": "SpoTt62oLY",
+    "title": "TRIDENT: Tri-Modal Molecular Representation Learning with Taxonomic Annotations and Local Correspondence",
+    "authors": [],
+    "abstract": "Molecular property prediction aims to learn representations that map chemical structures to functional properties. While multimodal learning has emerged as a powerful paradigm to learn molecular representations, prior works have largely overlooked textual and taxonomic information of molecules for representation learning. We introduce TRIDENT, a novel framework that integrates molecular SMILES, textual descriptions, and taxonomic functional annotations to learn rich molecular representations. To achieve this, we curate a comprehensive dataset of molecule-text pairs with structured, multi-level functional annotations. Instead of relying on conventional contrastive loss, TRIDENT employs a volume-based alignment objective to jointly align tri-modal features at the global level, enabling soft, geometry-aware alignment across modalities. Additionally, TRIDENT introduces a novel local alignment objective that captures detailed relationships between molecular substructures and their corresponding sub-textual descriptions. A momentum-based mechanism dynamically balances global and local alignment, enabling the model to learn both broad functional semantics and fine-grained structure-function mappings. TRIDENT achieves state-of-the-art performance on 11 downstream tasks, demonstrating the value of combining SMILES, textual, and taxonomic functional annotations for molecular property prediction.",
+    "topic": "Molecular representation learning; Molecular property prediction; Multimodal learning",
+    "conference": "fm4ls",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/3f022e150660e8d294d9c817679d9951ef3edee2.pdf"
+  },
+  {
+    "id": "B22PKwX6Tl",
+    "title": "Learning Diffusion Models with Flexible Representation Guidance",
+    "authors": [],
+    "abstract": "Diffusion models can be improved with additional guidance towards more effective representations of input. Indeed, prior empirical work has already shown that aligning internal representations of the diffusion model with those of pre-trained models improves generation quality. In this paper, we present a systematic framework for incorporating representation guidance into diffusion models. We provide alternative decompositions of denoising models along with their associated training criteria, where the decompositions determine when and how the auxiliary representations are incorporated. Guided by our theoretical insights, we introduce two new strategies for enhancing representation alignment in diffusion models. First, we pair examples with target representations either derived from themselves or arisen from different synthetic modalities, and subsequently learn a joint model over the multimodal pairs. Second, we design an optimal training curriculum that balances representation learning and data generation. Our experiments across protein sequence and molecule generation tasks demonstrate superior performance as well as accelerated training. The code is available at https://github.com/ChenyuWang-Monica/REED.",
+    "topic": "Diffusion Models; Representation Learning; Biomolecule Generation",
+    "conference": "fm4ls",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/90638b916ac2bb8f775df676a05f64a4a20da1e7.pdf"
+  },
+  {
+    "id": "g2tJyDNwVZ",
+    "title": "A Foundation Model for Mass Spectrometry Proteomics",
+    "authors": [],
+    "abstract": "Mass spectrometry is the dominant technology in the field of proteomics, enabling high-throughput analysis of the protein content of complex biological samples. Due to the complexity of the instrumentation and resulting data, sophisticated computational methods are required for the processing and interpretation of acquired mass spectra. Machine learning has shown great promise to improve the analysis of mass spectrometry data, with numerous purpose-built methods for improving specific steps in the data acquisition and analysis pipeline reaching widespread adoption. Here, we propose unifying various spectrum prediction tasks under a single foundation model. To this end, we pre-train a spectrum encoder using de novo sequencing as a pre-training task. We then show that using these pre-trained spectrum embeddings improves our performance on the four downstream tasks of spectrum quality prediction, chimericity prediction, phosphorylation prediction, and glycosylation status prediction, demonstrating that our foundation model has learned generalizable representations of mass spectra.",
+    "topic": "proteomics; mass spectrometry; foundation model",
+    "conference": "fm4ls",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/333b289c079b97455c0b2268c424a246bb1ce9e0.pdf"
+  },
+  {
+    "id": "J5AkfIKTmE",
+    "title": "3D-SBDD meets LLM: Towards FDA-Level Drug Design",
+    "authors": [],
+    "abstract": "Structure-guided molecular generation plays a key role in early drug discovery by designing compounds for specific protein targets. While recent 3D generative models improve docking scores, they often generate chemically implausible structures outside drug-like space. To address this, we introduce the Molecule Reasonable Ratio (MRR), a new metric for assessing structural plausibility. We propose the Collaborative Intelligence Drug Design (CIDD) framework, combining 3D interaction modeling with large language models (LLMs) and Chain-of-Thought reasoning. CIDD generates spatially compatible, drug-like, and synthesizable molecules. On the CrossDocked2020 benchmark, it improves metrics like QED, SA, and MRR, and raises the success rate—from 15.72% to 34.59%—by balancing binding affinity and drug-likeness, showing the power of integrating geometry with symbolic reasoning.",
+    "topic": "Large Language Model; Structure Based Drug Design",
+    "conference": "fm4ls",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/072e628d91bec4256196f7a4eb1783da2d7fa9d9.pdf"
+  },
+  {
+    "id": "h2bMZzUsUr",
+    "title": "Multimillion cell self-supervised representation learning enables organ-scale tissue niche discovery",
+    "authors": [],
+    "abstract": "Spatial transcriptomics (ST) offers unique opportunities to define the spatial organization of tissues and organs, such as the mouse brain. We establish a workflow for self-supervised spatial domain detection that is scalable to multimillion-cell datasets and analysis of organ-scale ST datasets. This workflow uses a self-supervised framework for learning latent representations of tissue niches. We use a novel encoder-decoder architecture, which we named CellTransformer, to hierarchically learn higher-order tissue features from lower-level cellular and molecular statistical patterns. CellTransformer is effective at integrating cells across tissue sections, identifying domains highly similar to ones in existing ontologies such as Allen Mouse Brain Common Coordinate Framework (CCF) while allowing discovery of hundreds of uncataloged areas with minimal loss of domain spatial coherence. CellTransformer advances the state of the art for spatial transcriptomics by providing a performant solution for the detection of fine-grained tissue domains from spatial transcriptomics data.",
+    "topic": "Machine Learning; Neuroscience; Genomics; Self-supervised learning; Graph Transformer",
+    "conference": "fm4ls",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/546da7b4009facd767487cd4104dd9ab50df8c22.pdf"
+  },
+  {
+    "id": "wWp5tOLmEY",
+    "title": "PM1: A Foundation Model Fusing Genotype, Phenotype, and Image for Precision Medicine",
+    "authors": [],
+    "abstract": "The authors choose to opt out from making their submission publicly available.",
+    "topic": "foundation model; representation learning; self-supervised learning; multimodal; precision medicine",
+    "conference": "fm4ls",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/d7910d7144a9ae5b28744ebc574a5813920602b3.pdf"
+  },
+  {
+    "id": "gNJaJQdRGi",
+    "title": "ProteinGPT: Multimodal LLM for Protein Property Prediction and Structure Understanding",
+    "authors": [],
+    "abstract": "Understanding biological processes, drug development, and biotechnological advancements requires a thorough analysis of protein structures and functions, which is often complex and time-consuming in traditional research methods. To address this challenge, we present ProteinGPT, a cutting-edge multimodal large language model designed specifically for proteins. ProteinGPT enables users to upload protein sequences and/or structures for in-depth analysis and dynamic responses to inquiries. The model integrates protein sequence and structure encoders with linear projection layers to ensure accurate and adaptive representations. Using a large language model (LLM), it generates precise and contextually relevant answers. For training, we curated a large-scale dataset consisting of 132,092 proteins, each annotated with 20-30 property tags and 5-10 QA pairs, and optimized the instruction-tuning process using GPT-4o. Experiments show that ProteinGPT excels in generating informative and relevant responses to protein-related questions, outperforming baseline models and general-purpose LLMs in both semantic and lexical metrics. Our code and data are anonymously available at https://github.com/ProteinGPT/ProteinGPT.",
+    "topic": "Multi-modal LLM; Bioinformatics; Modality Alignment; AI for Science; Protein; Large Language Models; LLM",
+    "conference": "fm4ls",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/72d62a26996bae69bf14e60e0db93878be6f2513.pdf"
+  },
+  {
+    "id": "kdbd0XFHhn",
+    "title": "Temporal Representation Learning for Ultrasound Analysis using Masked Modeling",
+    "authors": [],
+    "abstract": "Ultrasound (US) imaging is a critical tool in medical diagnostics, offering real-time visualization of physiological processes. \nOne of its major advantages is its ability to capture temporal dynamics, which is essential for assessing motion patterns in applications such as cardiac monitoring, fetal development, and vascular imaging. \nDespite its importance, current deep learning models often overlook the temporal continuity of ultrasound sequences, analyzing frames independently and missing key temporal dependencies. \nTo address this gap, we propose a method for learning effective temporal representations from ultrasound videos, with a focus on echocardiography-based ejection fraction (EF) estimation. \nEF prediction serves as an ideal case study to demonstrate the necessity of temporal learning, as it requires capturing the rhythmic contraction and relaxation of the heart. \nOur approach leverages temporally consistent masking and contrastive learning to enforce temporal coherence across video frames, enhancing the model's ability to represent motion patterns. \nEvaluated on the EchoNet-Dynamic dataset, our method achieves a substantial improvement in EF prediction accuracy, highlighting the importance of temporally-aware representation learning for real-time ultrasound analysis.",
+    "topic": "mae; vit; ultrasound; echocardiogram; representation learning; self-supervised learning",
+    "conference": "fm4ls",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/06915f21ea5269888aef97fdb3374de1692d6690.pdf"
+  },
+  {
+    "id": "MeedL5LxSz",
+    "title": "Transfer Learning of Condition-Specific Perturbation in Gene Interactions: Towards Multi-modal Foundational Modeling of Drug Response",
+    "authors": [],
+    "abstract": "Effective modeling of drug response requires a multi-scale framework that bridges molecular perturbations with cellular viability. While emerging biological foundation models offer promise for cross-scale transfer, they are not explicitly designed to capture chemical-induced perturbations across omics and chemical modalities. In this work, we present Condition-Specific Gene-Gene Attention (CSG$^2$A), a multi-modal transfer learning framework that integrates transcriptomic profiles with compound structure and treatment conditions (e.g., dosage, time) to model drug responses at multiple scales.\nCSG$^2$A is first pretrained on large-scale drug-induced gene expression perturbation dataset to learn condition-aware gene interaction patterns through its gene-gene attention module, guided by interactome network priors. It is then transferred to cell viability dataset, achieving state-of-the-art performance in cell line drug response prediction. Case studies support the biological interpretability of the learned attention maps, aligning with known drug mechanisms. CSG$^2$A also generalizes to patient-level prediction on TCGA, demonstrating its potentials in cross-scale transfer and offering promising directions for developing multi-modal foundation models in drug response.",
+    "topic": "Transfer learning; Transcriptome; Drug response; Gene Attention",
+    "conference": "fm4ls",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/3e12d61f9bfb380ea5909430ef313cece7532042.pdf"
+  },
+  {
+    "id": "8wG3E8VS6B",
+    "title": "DisProtEdit: Exploring Disentangled Representations for Multi-Attribute Protein Editing",
+    "authors": [],
+    "abstract": "We introduce DisProtEdit, a controllable protein editing framework that learns disentangled structural and functional representations via dual-channel natural language supervision. Unlike prior models with joint holistic embeddings, DisProtEdit separates semantics for modular and interpretable control. We construct SwissProtDis, a large multimodal dataset with protein sequences paired with LLM-decomposed structural and functional descriptions. DisProtEdit aligns protein and text embeddings via alignment and uniformity objectives, with a disentanglement loss promoting semantic independence. Editing is performed by modifying one or both text inputs and decoding the updated latent representation. Experiments show that DisProtEdit matches prior methods in accuracy while offering greater interpretability and control. On a new multi-attribute editing benchmark, it achieves up to 61.7\\% both-hit success, validating its effectiveness in simultaneous structure-function editing.",
+    "topic": "protein editing; disentanglement",
+    "conference": "fm4ls",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/b14560332512b8c841cf1942b5daf62781a45334.pdf"
+  },
+  {
+    "id": "8u1zfhawmX",
+    "title": "Ibex: Pan-immunoglobulin structure prediction",
+    "authors": [],
+    "abstract": "We introduce Ibex, an immunoglobulin protein structure prediction model that achieves state-of-the-art accuracy in modeling the binding domains of antibodies, nanobodies and T-cell receptors. Ibex can model both bound and unbound conformations of the protein, having been trained on labeled apo and holo pairs. Using a private dataset of hundreds of antibody structures, we evaluate the out-of-distribution performance of common structure prediction tools, showing improved robustness of our ibex compared to existing specialized structure prediction models.",
+    "topic": "structure prediction; protein structure; antibody; drug discovery",
+    "conference": "fm4ls",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/6ca6a83b8804692488d43ffbb264c7268821d930.pdf"
+  },
+  {
+    "id": "iEjqO0Ik5v",
+    "title": "Promoter Sequence Generation using Homology Prompting",
+    "authors": [],
+    "abstract": "Promoters are critical regulatory elements that control gene expression and harbor disease-associated variants. We present PROSE (PROmoter SEt transformer), a generative model that learns from evolutionary relationships across mammalian species without requiring sequence alignments. PROSE adapts set transformer architecture to process families of homologous promoters, capturing patterns of conservation and variation that define functional regulatory elements. Trained on 13.6 million promoter sequences from 447 mammalian species, PROSE generates human promoters that accurately reproduce characteristic motifs while maintaining appropriate nucleotide distributions and achieving strong Sei regulatory activity scores. Unlike single-sequence baselines that overfit to repetitive patterns, PROSE produces diverse, biologically plausible sequences by leveraging evolutionary context. Our homology-based prompting approach outperforms single sequence models and demonstrates the value of incorporating cross-species information for genomic sequence design.",
+    "topic": "LLM; genetics; computational biology; generative model",
+    "conference": "fm4ls",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/afefb8aaa328da38636a3b760607492bb7153b18.pdf"
+  },
+  {
+    "id": "k69SBOYsqb",
+    "title": "Robust Multi-Omics Integration from Incomplete Modalities Significantly Improves Prediction of Alzheimer’s Disease",
+    "authors": [],
+    "abstract": "Multi-omics data capture complex biomolecular interactions and provide insights into metabolism and disease. However, missing modalities hinder integrative analysis across heterogeneous omics. To address this, we present MOIRA (Multi-Omics Integration with Robustness to Absent modalities), an early integration method enabling robust learning from incomplete omics data via representation alignment and adaptive aggregation. MOIRA leverages all samples, including those with missing modalities, by projecting each omics dataset onto a shared embedding space where a learnable weighting mechanism fuses them. Evaluated on the Religious Order Study and Memory and Aging Project (ROSMAP) dataset for Alzheimer’s Disease (AD), MOIRA outperformed existing approaches, and further ablation studies confirmed modality-wise contributions. Feature importance analysis revealed AD-related biomarkers consistent with prior literature, highlighting the biological relevance of our approach.",
+    "topic": "incomplete multi-modal learning; multi-omics; Alzheimer's disease; phenotype prediction; biomarker extraction",
+    "conference": "fm4ls",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/d6cce9cf2c1efffecb7f41e7ae12bd1fbec257ca.pdf"
+  },
+  {
+    "id": "U6kRvFGNf4",
+    "title": "Cell-Type-Aware Pooling for Robust Sample Classification in Single-Cell RNA-seq Data",
+    "authors": [],
+    "abstract": "Single-cell RNA sequencing (scRNA-seq) enables high-resolution profiling of cellular heterogeneity, offering a promising foundation for predicting phenotypes such as disease status. We propose a pooling strategy that utilizes cell type annotations by first aggregating cell representations within each cell type, followed by integration of cell type representations into a sample-level representation. Evaluated across three scRNA-seq datasets of varying sizes and biological contexts, our model consistently outperforms baseline models in phenotype classification. Our model is particularly effective in datasets with missing or sparsely represented cell types. These results underscore the importance of carefully incorporating cell type information for robust phenotype prediction from scRNA-seq data.",
+    "topic": "Multiple Instance Learning; Transcriptomics; scRNA-seq; snRNA-seq",
+    "conference": "fm4ls",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/a5621d551edeb164ca5182aec04a4c28153df940.pdf"
+  },
+  {
+    "id": "306xLFGLI3",
+    "title": "Benchmarking Vision-Language Contrastive Methods for Medical Representation Learning",
+    "authors": [],
+    "abstract": "We perform a comprehensive benchmarking of contrastive frameworks for learning multimodal representations in the medical domain. Through this study, we aim to answer the following research questions: (i) How transferable are general-domain representations to the medical domain? (ii) Is multimodal contrastive training sufficient, or does it benefit from unimodal training as well? (iii) What is the impact of feature granularity on the effectiveness of multimodal medical representation learning? To answer these questions, we investigate eight contrastive learning approaches under identical training setups, and train them on 2.8 million image-text pairs from four datasets, and evaluate them on 25 downstream tasks, including classification (zero-shot and linear probing), image-to-text and text-to-image retrieval, and visual question-answering. Our findings suggest a positive answer to the first question, a negative answer to the second question, and the benefit of learning fine-grained features.",
+    "topic": "Self-supervised learning; Representation learning; Vision-language model",
+    "conference": "fm4ls",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/c0e2ba21f1bdc23f1d6af7a376cdd569433450ab.pdf"
+  },
+  {
+    "id": "PCRfq6EYZI",
+    "title": "An Interventional Framework of Multimodal Epigenomic Regulation for Gene Expression Prediction",
+    "authors": [],
+    "abstract": "Gene expression prediction through DNA sequences and multimodal epigenomic signals integration presents significant challenges. Previous methods often focus on using epigenomic signals to locate distal enhancers and incorporate these enhancers into model development through long sequence modeling. Our experiments reveal that current long sequence modeling actually decreases performance, while proximal signals near target genes prove more essential. Furthermore, we find that different signals contribute varying degrees of performance gain. Simple use of all epigenomic signals may lead models to depend excessively on widespread background signals. These background signals act as confounders, causing the model to develop spurious dependencies. To overcome these issues, we propose InFER, which employs causal intervention through backdoor adjustment to eliminate model dependencies on potential confounding background epigenomic regulation. Our experimental results show that proper modeling of epigenomic regulation with short sequences alone can achieve state-of-the-art performance in gene expression prediction.",
+    "topic": "gene expression prediction; epigenomics; multimodal; causal learning",
+    "conference": "fm4ls",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/255a28489a2c3e47628043b9246ef07ae6931e8d.pdf"
+  },
+  {
+    "id": "eSupCoswPP",
+    "title": "Integrating Pathology Foundation Models and Spatial Transcriptomics for Cellular Decomposition from Histology Images",
+    "authors": [],
+    "abstract": "The rapid development of digital pathology and modern deep learning has facilitated the emergence of pathology foundation models that are expected to solve general pathology problems under various disease conditions in one unified model, with or without fine-tuning. In parallel, spatial transcriptomics has emerged as a transformative technology that enables the profiling of gene expression on hematoxylin and eosin (H&E) stained histology images. Spatial transcriptomics unlocks the unprecedented opportunity to dive into existing histology images at a more granular, cellular level. In this work, we propose a lightweight and training-efficient approach to predict cellular composition directly from H&E-stained histology images by leveraging information-enriched feature embeddings extracted from pre-trained pathology foundation models. By training a lightweight multi-layer perceptron (MLP) regressor on cell-type abundances derived via cell2location, our method efficiently distills knowledge from pathology foundation models and demonstrates the ability to accurately predict cell-type compositions from histology images, without physically performing the costly spatial transcriptomics. Our method demonstrates competitive performance compared to existing methods such as Hist2Cell, while significantly reducing computational complexity.",
+    "topic": "Pathology foundation models; Spatial transcriptomics; Cell-type composition prediction",
+    "conference": "fm4ls",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/0abc97926a16a256d60c8f3567e833a2e6d8f209.pdf"
+  },
+  {
+    "id": "3WELmRqA3Q",
+    "title": "KD-CPT: A Knowledge-Driven Cellular Phenotypic Transdifferentiation Model",
+    "authors": [],
+    "abstract": "Cell phenotype transition refers to the changes in the morphology, function, and surface markers of cells that occur under specific environmental conditions or physiological states, based on their genomic information and external signals. This process plays an\nimportant role in development, tissue repair, and responses to external stimuli such as infection or inflammation. Traditional bioinformatics methods for addressing cell type transition often rely on hypothesis-driven models, which may not fully capture the complexity and heterogeneity of the transition processes. In this paper, we introduce KD-CPT, a cell phenotype transition and differentiation model based on Markov processes. Specifically, the model consists of a classification branch and a transition branch. The transition branch identifies regulatory genes involved in cell phenotype transition and differentiation. In the classification branch, we evaluate the model’s overall performance on general cell type classification tasks using a comprehensive multi-metric evaluation framework; in the transition branch, we implement a token pruning-based approach for critical locus discovery and enhance information interaction between full-sequence contexts and prioritized regulatory sites via an improved multi-head attention mechanism. Cell phenotype transition tasks are further assessed by uncertainty quantification and confidence calibration. In particular, in gene knockout experiments, we found that knocking out important genes alters the probability of cell phenotype transition and differentiation, and knocking out a certain number of essential genes can terminate specific transition processes.",
+    "topic": "Single Cell; Cellular Phenotype Transition; Foundation Model; Multi- task Learning; Information Fusion",
+    "conference": "fm4ls",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/160835a31ef23e60e1a513c03f947d18c857e36e.pdf"
+  },
+  {
+    "id": "Zh2V4D4kQ4",
+    "title": "Describe Anything in Medical Images",
+    "authors": [],
+    "abstract": "Localized image captioning has made significant progress with models like the Describe Anything Model (DAM), which can generate detailed region-specific descriptions without explicit region-text supervision. \nHowever, such capabilities have yet to be widely applied to specialized domains like medical imaging, where diagnostic interpretation relies on subtle regional findings rather than global understanding. \nTo mitigate this gap, we propose \\textbf{MedDAM}, the first comprehensive framework leveraging large vision-language models for \\textit{region-specific captioning in medical images}. MedDAM employs medical expert-designed prompts tailored to specific imaging modalities and establishes a robust evaluation benchmark comprising a customized assessment protocol, data pre-processing pipeline, and specialized QA template library. This benchmark evaluates both MedDAM and other adaptable large vision-language models, focusing on clinical factuality through attribute-level verification tasks—elegantly circumventing the absence of ground-truth region-caption pairs in medical datasets. Extensive experiments on the VinDr-CXR, LIDC-IDRI, and SkinCon datasets demonstrate MedDAM's superiority over leading peers (including GPT-4o, Claude 3.7 Sonnet, LLaMA-3.2 Vision, Qwen2.5-VL, GPT-4Rol, and OMG-LLaVA) in the task, revealing the importance of region-level semantic alignment in medical image understanding and establishing MedDAM as a promising foundation for clinical vision-language integration.",
+    "topic": "Medical Image; AI4Science; Large Foundation Model",
+    "conference": "fm4ls",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/531f54480d9624bd76f584469e7d8b26c368e9ee.pdf"
+  },
+  {
+    "id": "6uTigj0bwJ",
+    "title": "From Vision to Graph Self-Supervised Learning in Digital Pathology",
+    "authors": [],
+    "abstract": "Although vision-based self-supervised learning is revolutionizing digital pathology, its domain-agnostic architectures may fail to adequately focus on the primary biological components in tissues, namely the cells and their complex interactions. We therefore propose to transform tissues into biologically informed cell graphs and investigate the effectiveness of graph SSL in encoding them. We demonstrate that pre-training on a large collection of patches using GraphMAE, with heterophilic graph neural networks, yields on par performances against popular vision-based SSL models, while using significantly fewer parameters. Finally, we show that the learned graph embeddings can effectively complement their vision-based counterparts by using a late multi-modal fusion strategy.",
+    "topic": "self-supervised learning; graph representation learning; computer vision; digital pathology; histopathology",
+    "conference": "fm4ls",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/1ed19ea62f4d0be9971f9e2ba75ca79039ff253a.pdf"
+  },
+  {
+    "id": "Uu8GXhtcHt",
+    "title": "Multi-Modal Interpretable Graph for Competing Risk Prediction with Electronic Health Records",
+    "authors": [],
+    "abstract": "Survival prediction from electronic health records (EHRs) is crucial for clinical decision-making but remains challenging due to data heterogeneity, irregular sampling, and the presence of competing risks. We propose a novel multi-modal graph neural network that dynamically constructs and integrates modality-specific graphs from time-series, demographics, diagnostic codes, and radiographic text. Our hierarchical attention mechanism fuses intra- and inter-modality interactions while providing interpretable, cause-specific risk predictions. Trained end-to-end with a combination of negative log-likelihood, ranking, and structural losses, our model significantly outperforms existing survival and graph-based baselines across five real-world EHR datasets. We further demonstrate improved calibration and interpretability, highlighting its potential for robust and transparent clinical risk stratification.",
+    "topic": "machine learning for healthcare; survival analysis; graph neural networks; multimodal learning; competing risks; interpretability",
+    "conference": "fm4ls",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/d373c5af3790d870a479ffb053cc78a85a8aeabd.pdf"
+  },
+  {
+    "id": "mZitkzP92N",
+    "title": "Multi-Objective-Guided Discrete Flow Matching for Controllable Biological Sequence Design",
+    "authors": [],
+    "abstract": "Designing biological sequences that satisfy multiple, often conflicting, functional and biophysical criteria remains a central challenge in biomolecule engineering. While discrete flow matching models have recently shown promise for efficient sampling in high‐dimensional sequence spaces, existing approaches address only single objectives or require continuous embeddings that can distort discrete distributions. We present Multi‐Objective‐Guided Discrete Flow Matching (MOG-DFM), a general framework to steer any pretrained discrete‐time flow matching generator toward Pareto‐efficient trade‐offs across multiple scalar objectives. At each sampling step, MOG-DFM computes a hybrid rank‐directional score for candidate transitions and applies an adaptive hypercone filter to enforce consistent multi‐objective progression. We also trained two unconditional discrete flow matching models, PepDFM for diverse peptide generation and EnhancerDFM for functional enhancer DNA generation, as base generation models for MOG-DFM. We demonstrate MOG‑DFM’s effectiveness in generating peptide binders optimized across five properties (hemolysis, non‑fouling, solubility, half‑life, and binding affinity), and in designing DNA sequences with specific enhancer classes and DNA shapes. In total, MOG-DFM proves to be a powerful tool for multi-property-guided biomolecule sequence design.",
+    "topic": "multi-objective optimization; discrete flow matching; generative modeling; controllable generation; biological sequence design; peptide design; DNA sequence generation; Pareto efficiency; CTMC; token-level guidance",
+    "conference": "fm4ls",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/a9ee206173df4c68e9c3b5594e8022642c0d52b8.pdf"
+  },
+  {
+    "id": "ps0fC2t3nH",
+    "title": "Towards foundation models that learn across biological scales",
+    "authors": [],
+    "abstract": "We have reached a point where many bio foundation models exist across 4 different scales, from molecules to molecular chains, cells, and tissues. However, while related in many ways, these models do not yet bridge these scales. We present a framework and architecture called Xpressor that enables cross-scale learning by (1) using a novel cross-attention mechanism to compress high-dimensional gene representations into lower-dimensional cell-state vectors, and (2) implementing a multi-scale fine-tuning approach that allows cell models to leverage and adapt protein-level representations. Using a cell Foundation Model as an example, we demonstrate that our architecture improves model performance across multiple tasks, including cell-type prediction (+12%) and embedding quality (+8%). Together, these advances represent first steps toward models that can understand and bridge different scales of biological organization.",
+    "topic": "machine learning; biology; scRNAseq; proteins; DNA; RNA; multi-scale; learning; representation; foundation; model; AI; life",
+    "conference": "fm4ls",
+    "year": 2025,
+    "paper_url": "https://openreview.net/pdf/0026f119e24f7ca6bec1a1b4722d584b4ea17b74.pdf"
+  }
+]

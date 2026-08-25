@@ -1,3 +1,4 @@
+import argparse
 import asyncio
 import json
 import httpx
@@ -256,6 +257,97 @@ async def _fetch_papers_from_acl_anthology(
     return []
 
 
+def _normalize_paper_from_europepmc(raw_paper: dict, conference: str, year: int) -> dict[str, Any]:
+    authors_list = [
+        author.get('fullName', '')
+        for author in raw_paper.get('authorList', {}).get('author', [])
+        if author.get('fullName')
+    ]
+    if not authors_list and raw_paper.get('authorString'):
+        authors_list = [
+            name.strip() for name in raw_paper['authorString'].rstrip('.').split(',')
+            if name.strip()
+        ]
+
+    doi = raw_paper.get('doi', '')
+    if doi:
+        paper_url = f"https://doi.org/{doi}"
+    elif raw_paper.get('id') and raw_paper.get('source'):
+        paper_url = f"https://europepmc.org/article/{raw_paper['source']}/{raw_paper['id']}"
+    else:
+        paper_url = ''
+
+    # Proceedings journals carry no topic taxonomy; author keywords are the
+    # closest thing, same as the OpenReview workshops.
+    keywords = raw_paper.get('keywordList', {}).get('keyword', [])
+    topic = '; '.join(str(k).strip() for k in keywords if k)
+
+    normalized_data = {
+        'id': doi or raw_paper.get('id', ''),
+        'title': raw_paper.get('title', '').rstrip('.'),
+        'authors': authors_list,
+        'abstract': raw_paper.get('abstractText', ''),
+        'topic': topic,
+        'conference': conference,
+        'year': year,
+        'paper_url': paper_url
+    }
+
+    return normalized_data
+
+
+async def _fetch_papers_from_europepmc(
+    client: httpx.AsyncClient, query: str
+) -> list[dict[str, Any]]:
+    """Fetch one proceedings issue (e.g. ISMB's Bioinformatics supplement, one
+    PSB year) from the Europe PMC REST API. `resultType=core` includes the
+    abstract and full author list; pagination uses cursorMark."""
+    url = "https://www.ebi.ac.uk/europepmc/webservices/rest/search"
+    logger.info(f"Fetching from Europe PMC: {query}...")
+
+    papers: list[dict[str, Any]] = []
+    cursor = "*"
+
+    try:
+        while True:
+            params = {
+                "query": query,
+                "format": "json",
+                "resultType": "core",
+                "pageSize": 1000,
+                "cursorMark": cursor,
+            }
+            response = await client.get(url, params=params, timeout=60)
+            response.raise_for_status()
+            data = response.json()
+
+            page = data.get("resultList", {}).get("result", [])
+            if not page:
+                break
+            papers.extend(page)
+
+            next_cursor = data.get("nextCursorMark")
+            if not next_cursor or next_cursor == cursor:
+                break
+            cursor = next_cursor
+
+    except httpx.RequestError as e:
+        logger.error(f"  -> Failed to fetch Europe PMC query {query!r}: {e}")
+        return []
+    except json.JSONDecodeError as e:
+        logger.error(f"  -> Failed to parse JSON for Europe PMC query {query!r}: {e}")
+        return []
+
+    # Proceedings issues also index front matter (prefaces, award profiles),
+    # which is exactly the set of records without an abstract.
+    articles = [p for p in papers if p.get('abstractText')]
+    if len(articles) < len(papers):
+        logger.info(f"  -> Dropped {len(papers) - len(articles)} abstract-less front-matter entries")
+
+    logger.info(f"  -> Found {len(articles)} papers")
+    return articles
+
+
 async def _fetch_papers_from_openreview(
     client: httpx.AsyncClient, venue_id: str, api_version: int = 2
 ) -> list[dict[str, Any]]:
@@ -370,6 +462,13 @@ def _save_json(data: list[dict[str, Any]], path: Path):
 
 
 async def main():
+    parser = argparse.ArgumentParser(description="Fetch conference paper metadata.")
+    parser.add_argument(
+        "--only",
+        help="Comma-separated conference names; skip all others (default: fetch everything)",
+    )
+    args = parser.parse_args()
+
     PROJECT_ROOT = Path(__file__).parent.parent
     BASE_DATA_DIR = PROJECT_ROOT / "data"
     CONFIG_FILE = PROJECT_ROOT / "scripts" / "configs" / "conferences.jsonc"
@@ -377,6 +476,14 @@ async def main():
     logger.info(f"Loading config from {CONFIG_FILE}...")
     with open(CONFIG_FILE, "r", encoding="utf-8") as f:
         conference_configs = json.load(f)
+
+    if args.only:
+        only_names = {name.strip() for name in args.only.split(",") if name.strip()}
+        unknown = only_names - {c["name"] for c in conference_configs}
+        if unknown:
+            raise SystemExit(f"--only names not in config: {sorted(unknown)}")
+        conference_configs = [c for c in conference_configs if c["name"] in only_names]
+        logger.info(f"Restricted to {sorted(only_names)}")
 
     async with httpx.AsyncClient() as client:
         tasks = []
@@ -428,6 +535,15 @@ async def main():
                     )
                     tasks.append((task, conf_name, year, "openreview"))
 
+            elif source_type == "europepmc":
+                queries = config.get("queries", {})
+                for year_str, query in queries.items():
+                    year = int(year_str)
+                    task = asyncio.create_task(
+                        _fetch_papers_from_europepmc(client, query)
+                    )
+                    tasks.append((task, conf_name, year, "europepmc"))
+
         logger.info(f"\nFetching data from {len(tasks)} conference-year combinations...")
         results = await asyncio.gather(*(task for task, _, _, _ in tasks))
 
@@ -459,6 +575,11 @@ async def main():
         elif source_type == "openreview":
             normalized_papers = [
                 _normalize_paper_from_openreview(p, conference=conf_name, year=year)
+                for p in raw_papers
+            ]
+        elif source_type == "europepmc":
+            normalized_papers = [
+                _normalize_paper_from_europepmc(p, conference=conf_name, year=year)
                 for p in raw_papers
             ]
 

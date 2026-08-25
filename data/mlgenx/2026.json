@@ -1,0 +1,1272 @@
+[
+  {
+    "id": "wOOD4W3wJk",
+    "title": "DELBERT: Fingerprint Language Modeling For Generalizable Hit Discovery in DNA-Encoded Libraries",
+    "authors": [
+      "Arman Seyed-Ahmadi",
+      "Bing Xu Hu",
+      "Armin Geraili",
+      "Anita Layton",
+      "Helen Hong Chen",
+      "Shana O. Kelley",
+      "BO WANG"
+    ],
+    "abstract": "DNA-Encoded Libraries (DEL) enable high-throughput exploration of vast chemical spaces for drug discovery, yet machine learning progress in this domain is limited by the scarcity of publicly available data. Initiatives such as AIRCHECK have begun releasing public DEL data as molecular fingerprints (FPs) only, preserving the confidentiality of proprietary chemical structures while enabling model development. However, current open-source FP-based approaches typically rely on supervised decision tree models that show limited generalization to out-of-distribution (OOD) chemical space. We introduce DELBERT, a transformer encoder that treats molecular FPs as a discrete token language, enabling self-supervised pretraining via masked language modeling without requiring access to underlying molecular structures. Under comprehensive library-based OOD evaluation across four protein targets (WDR91, LRRK2, SETDB1, DCAF7), DELBERT significantly outperforms baseline ensemble models on three of four targets, with 1.6-2.7$\\times$ improvements in key early-enrichment metrics. Our results demonstrate that self-supervised learning over FPs alone can substantially enhance generalization for hit identification, unlocking confidentiality-preserving collaboration for accelerated drug discovery in data-constrained settings.",
+    "topic": "",
+    "conference": "mlgenx",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/a76e7f192f7e7ca15d82ac468ab2559c98c2fc68.pdf"
+  },
+  {
+    "id": "euqNpvs4sb",
+    "title": "CAUSALPERT: GROUNDING LLM HYPOTHESES IN REGULATORY NETWORKS FOR GENE PERTURBATION PREDICTION",
+    "authors": [
+      "Marc Boubnovski Martell",
+      "Josefa Lia Stoisser",
+      "Lawrence Phillips",
+      "Aditya Misra",
+      "Robert Kitchen",
+      "Jesper Ferkinghoff-Borg",
+      "Jialin Yu",
+      "Philip Torr",
+      "Kaspar Märtens"
+    ],
+    "abstract": "Predicting transcriptional responses to unseen genetic perturbations is essential for understanding gene regulation and prioritizing large-scale perturbation experiments. Existing approaches either rely on static, potentially incomplete knowledge graphs, or prompt language models for functionally similar genes, retrieving associations shaped by symmetric co-occurrence in scientific text rather than directed regulatory logic. We introduce CausalPert, a lightweight framework that encourages LLM agents to generate directed regulatory hypotheses rather than relying solely on functional similarity. Multiple agents independently propose candidate regulators with associated confidence scores; these are aggregated through a consensus mechanism that filters spurious associations, producing weighted neighborhoods for downstream prediction. \n\nWe evaluate CausalPert on Perturb-seq benchmarks across four human cell lines. For perturbation prediction in low-data regimes ($N=50$ observed perturbations), CausalPert improves Pearson correlation by up to 10.5\\% over similarity-based baselines. For experimental design, CausalPert-selected anchor genes outperform standard network centrality heuristics by up to 46\\% in well-characterized cell lines.",
+    "topic": "",
+    "conference": "mlgenx",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/87da7591176933e0b4d2014a6c6cba9f736272b2.pdf"
+  },
+  {
+    "id": "LxDa8xN1lL",
+    "title": "PANGENSA: A graph-constrained machine learning framework for identifying antibiotic resistance determinants in bacterial pangenomes",
+    "authors": [
+      "Tamsin James",
+      "Jordan Meadows",
+      "Andreas Karwath",
+      "Nicole E Wheeler",
+      "Peter Tino"
+    ],
+    "abstract": "Antimicrobial resistance is a major global health threat, driving the need for genome-based diagnostics. While bacterial genome-wide association studies aim to identify causal resistance determinants, they are often impaired by the high multicollinearity and underdetermined regimes inherent in pangenomes. Standard machine learning approaches often fail to satisfy the requirement that fine-mapping should yield localised genomic loci rather than correlation-determined groupings.\n\nWe introduce PANGENSA, a graph-constrained machine learning framework that uses the topology of compacted de Bruijn graphs as a label-agnostic structural prior. \\pgs partitions the pangenome graph into discrete communities and trains independent models on each, ensuring that subproblems are not overparameterized and that results are spatially localised by construction.\n\nWe demonstrate that these communities exhibit high internal connectivity and low inter-community leakage. Top-ranking community-level classifiers achieved high AUROC ($\\geq 0.86$) across 14 antibiotic phenotypes. Notably, PANGENSA localised known resistance signals for 11 of 14 antibiotics and recovered low-prevalence mechanisms that global baseline methods failed to detect. This demonstrates that encoding genomic locality as a structural prior can effectively amplify under-represented causal signals while controlling for population structure.",
+    "topic": "",
+    "conference": "mlgenx",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/88f6eb350e1d2877c851adbefce2f41dc93acf33.pdf"
+  },
+  {
+    "id": "OuNFpb2ya7",
+    "title": "Uncertainty-Aware Biomarker Discovery for Alzheimer's Disease Reversal: Bridging Mouse Models and Human Translation with Conformal Prediction",
+    "authors": [
+      "David Scott Lewis",
+      "Enrique Zueco"
+    ],
+    "abstract": "Recent evidence that P7C3-A20 reverses advanced Alzheimer’s disease (AD) pathology in aged mice—normalizing 174 differentially expressed proteins and restoring cognition (Chaubey et al., 2026)—raises a critical translational question: which of these biomarker changes will replicate in human patients? We propose Uncertainty-Aware Biomarker Discovery (UABD), a methodological framework that applies conformal prediction to provide distribution-free coverage guarantees for cross-species biomarker prioritization under the covariate-shift assumption. UABD constructs prediction sets for human biomarker responses using mouse proteomics as source data, employing weighted conformal prediction to correct for covariate shift between species. In an illustrative analysis mapping mouse proteomic reversal signatures to published human AD cohort biomarker measurements, UABD achieves empirical marginal coverage (≥90%) while identifying a concordant subset of 8 out of 12 examined AD biomarkers whose disease-associated effect directions align across species with calibrated prediction intervals. We further show that plasma p-tau217—the leading translatable AD biomarker—falls within the conformal prediction set, consistent with its potential utility as a candidate pharmacodynamic endpoint for human trials of NAD+-enhancing therapies. No prospective human treatment-response data are used; the results illustrate the framework’s potential for hypothesis generation and endpoint prioritization.",
+    "topic": "",
+    "conference": "mlgenx",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/3dcb15f117ca5671b726cd554d49dc1ace97aa66.pdf"
+  },
+  {
+    "id": "d0aTjHRlL0",
+    "title": "Modern Gene Finders: ab initio gene discovery benchmark with DNA language models",
+    "authors": [
+      "Aleksei Shmelev",
+      "Artem Shadskiy",
+      "Yuri Kuratov",
+      "Mikhail Burtsev",
+      "Olga Kardymon",
+      "Veniamin Fishman"
+    ],
+    "abstract": "Detecting genes in DNA sequence is a fundamental step in enabling virtually any downstream analysis of the genome. A complete annotation pipeline must address two complementary tasks. One task is transcript position discovery, which determines where transcripts begin and end. The other task is transcript segmentation, which reconstructs exon intron structure within those intervals. In this work, we focus  on transcript bondary discovery and treat it as an independent benchmarking problem. We introduce a mammalian benchmark that evaluates strand-aware localization of transcript boundaries for complete mRNA and lncRNA genes, using biologically grounded metrics based on transcription start sites and transcript termination sites. In addition, we introduce our own approach, which uses a DNA language model \\texttt{ModernGENA} and a multi-stage pipeline to infer stranded transcript intervals and to recover multiple transcript boundary isoforms for the same gene.",
+    "topic": "",
+    "conference": "mlgenx",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/306ce416b0c77ee8af2642998371dd94eaefe564.pdf"
+  },
+  {
+    "id": "vMqbczUNvF",
+    "title": "Active Learning for Optimal Experimental Design in Alzheimer's Disease Drug Discovery: Prioritizing NAD+-Enhancing Therapeutic Analogs via Multi-Objective Bayesian Optimization",
+    "authors": [
+      "David Scott Lewis",
+      "Enrique Zueco"
+    ],
+    "abstract": "P7C3-A20, an aminopropyl carbazole that activates nicotinamide phosphoribosyltransferase (NAMPT), has demonstrated reversal of advanced Alzheimer’s disease (AD) pathology in aged, symptomatic mice—normalizing 174 differentially expressed proteins, restoring cognition, and repairing blood-brain barrier (BBB) integrity. However, translating this breakthrough requires navigating a vast chemical space to identify analogs with optimal efficacy, brain penetrance, metabolic stability, and safety. We propose Active Learning for NAD+ Therapeutics (ALNAT), a framework integrating multi-objective Bayesian optimization with hierarchical experimental feedback to accelerate P7C3-A20 analog discovery. ALNAT employs Gaussian process surrogates over six drug-relevant objectives and uses expected hypervolume improvement (EHVI) for batch compound selection across a six-tier multi-fidelity assay pipeline. Retrospective computational experiments on published P7C3 series data show that our GP-based active learning identifies the top 10% of compounds using only 23% of the experimental budget required by random sampling. We enumerate approximately 47,000 readily synthesizable analogs, of which 15% are predicted to lie on an extended Pareto front, representing promising candidates for prospective experimental validation.",
+    "topic": "",
+    "conference": "mlgenx",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/8e18eef1a2af641f1deee123e6c6d57a456bc15c.pdf"
+  },
+  {
+    "id": "rdLzuNp26V",
+    "title": "RAPTORGraph: Graph-Based Pathway Modeling for Causal Discovery in Single-Cell Perturbations",
+    "authors": [
+      "Yeremia Gunawan Adhisantoso",
+      "Stephanie Kristin Schröder",
+      "Maximilian Greß",
+      "Mikel Hernaez",
+      "Jan Voges"
+    ],
+    "abstract": "Experiments involving perturbation of single cells are central to understanding cellular mechanisms and accelerating therapeutic discovery, however the space of combinatorial perturbations is intractably large. Causal representation learning has shown great promise for predicting unseen combination of perturbations, but existing methods often suffer from mean collapse and intervention spillover, which violate the theoretical requirements for identifiability guarantees.\nWe introduce RAPTORGraph, an end-to-end VAE framework that addresses these issues through: i) a preconditioned GraphPathway encoder that enforces intervention-guided mappings to causal meta-pathways, enabling clean single latent-node interventions needed for causal identifiability, and ii) optimal-transport alignment that aligns control and perturbed populations to stabilize conditional generation. Empirical results on Perturb-seq datasets demonstrate that RAPTORGraph improves the trade-off between reconstruction fidelity and distributional matching, and yields improved performance on predicting non-additive combinatorial effects. Finally, we show that RAPTORGraph recovers biologically meaningful latent programs and a causal graph over meta-pathways, providing an interpretable bridge between generative quality and mechanistic insight.",
+    "topic": "",
+    "conference": "mlgenx",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/02621882a35ff9a61d36ffacdbb4f21148ad4377.pdf"
+  },
+  {
+    "id": "3SQ3KTfEI6",
+    "title": "Ancestry Inference with GNNs on IBD Graphs for Genetically Similar Populations",
+    "authors": [
+      "Aleksei Shmelev",
+      "Nikita Chervov",
+      "Dmitriy Glyzin",
+      "Valery Ilinsky",
+      "Alexander Rakitko",
+      "Vladimir Shchur"
+    ],
+    "abstract": "Graph Neural Networks (GNNs) have recently shown significant effectiveness in analyzing structured graph data across diverse domains. At the same time, accurate inference of ancestry from genetic data, especially among genetically similar populations, remains challenging due to internal complexity of the genetic relationships and high dimensionality of SNP data. To address these challenges, we propose a novel GNN-based method for inferring individual's ancestry from a graph that represents the genetic relatedness between individuals. Genetic relatedness between two individuals is measured according to shared identity-by-descent (IBD) segments, which are the segments of a genome inherited from a close common ancestor. In this context, the ancestry inference task is formalized as node classification on graphs. We present three key contributions. First, we advance the population genetics methodology with a unique GNN-based framework for ancestry inference for closely related populations. Second, we present a novel GNN architecture which improves training stability and predictive performance for ancestry inference on IBD graphs. Third, we demonstrate that augmenting the dataset with unlabeled vertices (individuals with unknown ancestry) significantly improves prediction scores, because message-passing in GNNs effectively propagates ancestry-related information throughout the network.",
+    "topic": "",
+    "conference": "mlgenx",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/835c10b89ddd60dfd91731e537628d4a3750df95.pdf"
+  },
+  {
+    "id": "ASATS5aV03",
+    "title": "ACTIVEGENE: REWARD-FREE, HOMEOSTASIS- ALIGNED CONTROL FOR CLOSED-LOOP GENE REGULATION VIA ACTIVE INFERENCE",
+    "authors": [
+      "mujtaba hasan"
+    ],
+    "abstract": "Reinforcement learning (RL) is increasingly used to frame closed-loop genomics as sequential decision-making, but its reliance on scalar rewards makes biological control brittle: minor specification errors can induce reward-hacking–like solu\u0002tions and require extensive, context-specific reward shaping (Amodei et al., 2016; Weng, 2024). We introduce ActiveGene, a conceptual framework and benchmark specification for reward-free gene regulation that replaces engineered utilities with prior preferences over future assay outcomes/states - a distributional definition of “healthy” aligned with biological homeostasis. ActiveGene selects intervention policies by minimizing Expected Free Energy (EFE), which trades off reaching preferred outcomes (risk/pragmatic value) with resolving uncertainty (epistemic value) under partial observability, avoiding ad-hoc exploration bonuses and hand\u0002tuned penalty terms. To make the proposal operational without wet-lab access, we propose ActiveGeneBench: a POMDP-style virtual-cell environment separating latent cellular state from noisy single-cell observations and supporting sequential perturbations (e.g., CRISPRi/a/KO, dosing). We outline method-agnostic evaluation metrics - target attainment, safety-violation probability, intervention cost, and sample efficiency—and argue that planning under interventions is a missing axis in current static perturbation-prediction evaluations (Wu et al., 2024).",
+    "topic": "",
+    "conference": "mlgenx",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/873ff613d2b171ab29a17d570fb117efa8a3fcb3.pdf"
+  },
+  {
+    "id": "4Lt49VMoUg",
+    "title": "REIGN: Robust Expected Information Gain for Navigating Adaptive Perturbation Screens",
+    "authors": [
+      "Noel Thomas"
+    ],
+    "abstract": "High-throughput perturbation screens span related experimental contexts, but each query costs reagents, instrument time, and analyst attention. Adaptive experiment selection can speed up hit discovery, yet standard Bayesian optimization treats each context in isolation, ignoring shared structure. We propose REIGN, which combines a conjugate hierarchical Gaussian surrogate with a cross-context information-gain acquisition function. The surrogate propagates posteriors from completed contexts to new ones via exponential moving average updates; the acquisition inflates within-context posterior variance by the estimated between-context variability, directing exploration toward actions whose effects are least stable across prior contexts. We evaluate on three cached-oracle benchmarks: SciPlex3 (99 compounds, 3 cell lines), Shifrut2018 (120 CRISPR targets, 4 donor$\\times$stimulation conditions), and Buchwald-Hartwig (264 reaction conditions, 15 substrate contexts). On Buchwald-Hartwig, REIGN reaches $\\mathrm{Hit@1} = 0.351$ (95\\% CI $[0.325, 0.375]$), tied with BO-UCB (0.352) and well above greedy transfer (0.252, $p < 0.001$, $n{=}50$ seeds), Thompson sampling (0.303), and max-value entropy search (0.304). Turning off cross-context transfer drops every method to random-level performance ($\\mathrm{Hit@1} = 0.197$, Cohen's $d{=}1.0$), confirming that the hierarchical surrogate, not the acquisition rule, drives the gains. On SciPlex3 and Shifrut2018 (3-4 contexts), all adaptive methods cluster together and greedy remains competitive, consistent with insufficient contexts for the hierarchical prior to mature. A controlled context-count sweep on Buchwald-Hartwig pins down this transition: exploration-based methods pull ahead of greedy only once roughly 15 contexts have been observed.",
+    "topic": "",
+    "conference": "mlgenx",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/9370256dd34efe519105fbb73593aba93cae5d23.pdf"
+  },
+  {
+    "id": "U98HvYaBDE",
+    "title": "Back to BERT in 2026: ModernGENA as a Strong, Efficient Baseline for DNA Foundation Models",
+    "authors": [
+      "Alena Aspidova",
+      "Yuri Kuratov",
+      "Artem Shadskiy",
+      "Mikhail Burtsev",
+      "Veniamin Fishman"
+    ],
+    "abstract": "Recent progress in DNA language models has been increasingly driven by large and complex systems, which can obscure the impact of improvements to standard NLP architectures. In this work, we study whether and how a modernized BERT-style backbone (ModernBERT) can be adapted to genomic sequence modeling to improve computational efficiency, training stability, and long-context handling. Under controlled experimental settings, we benchmark efficiency across a range of sequence lengths and evaluate downstream performance on the Nucleotide Transformer benchmark. The resulting model, ModernGENA, achieves a strong efficiency–quality trade-off and ranks among the top-performing models in our evaluation suite. To support reproducibility and to provide a solid default reference point for future architectural work in genomics, we release the full implementation and configuration of ModernGENA as an open, reusable baseline.",
+    "topic": "",
+    "conference": "mlgenx",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/5f9c6c2c672d7cd22096534642ed8033c655d913.pdf"
+  },
+  {
+    "id": "aNjDcSB8AF",
+    "title": "A CONVERSATIONAL MULTI-AGENT AI FRAMEWORK FOR INTEGRATED MULTI-OMICS ANALYSIS AND BIOMEDICAL DISCOVERY",
+    "authors": [
+      "Pankaj Rajdeo",
+      "Shunya Asanuma",
+      "Michal Kouril",
+      "Peixin Lu",
+      "Jichao Chen",
+      "Aman Chadha",
+      "Surya Prasath",
+      "Bruce J Aronow",
+      "Nathan Salomonis"
+    ],
+    "abstract": "Single-cell and spatial transcriptomics offer unprecedented opportunities to decipher the mechanisms of disease and tissue development, however, this process requires teams of experts, iterative trial-and-error and reasoning across modalities. Here we present a conversational agentic framework for integrated multi-omics reasoning and biomedical discovery. It is deployed as a hierarchical multi-agent architecture in which a stateful supervisor decomposes natural-language research questions into parallel, tool-grounded tasks executed by specialized agents for single-cell analysis, spatial transcriptomics, literature synthesis, drug repurposing, and functional enrichment. A virtual filesystem enables efficient inter-agent communication while preventing context degradation, and the framework maintains long-term memory for personalized analytical context across iterative sessions. For therapeutic hypothesis generation, the framework includes Direction-Aware Repurposing and Targeting (DART), a method that distinguishes perturbations that reverse disease transcriptional programs from those that reinforce or disrupt them, enabling cell-type–resolved therapeutic prioritization and safety profiling. Applied to 39 datasets, spanning fetal development, tissue homeostasis and 15 pathological conditions, the system generates publication-ready results with complete parameter provenance for reproducibility. We demonstrate autonomous discovery that identifies known IPF disease drivers, cell-communication networks, and validated FDA-approved drugs. Notably, DART predicts Saracatinib (SRC inhibitor) as a top therapeutic candidate, now in Phase 1b/2a trials while identifying cell-type-specific safety risks and enables efficacy and safety profiling at single-cell resolution. This architecture is tissue-agnostic, offering a blueprint for agentic AI systems that integrate foundation models with executable, verifiable scientific discovery. We instantiate this framework as LungChat, deployed for lung biology under the NHLBI LungMAP Consortium (https://chat.lungmap.net).",
+    "topic": "",
+    "conference": "mlgenx",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/70ffeda38b29e80f38dbc81669e3bc0d60c4c62d.pdf"
+  },
+  {
+    "id": "dkjdeNG1oh",
+    "title": "CELLTARNET: SINGLE-CELL PERTURBATION PREDICTION USING TRANSFORMER BASED NORMALIZING FLOW",
+    "authors": [
+      "Shiv Shankar"
+    ],
+    "abstract": "Predicting the transcriptional response to a genetic or chemical perturbation is a critical task for therapeutic design. However, building accurate models is challenged by the need to capture heterogeneous responses by a cell population to such perturbations. We propose a novel method that combines a transformer based generative model with a population-level contrastive objective to model the full distribution of perturbation effects. Furthermore, we integrate structured biological knowledge, to bias a transformer's self-attention mechanism. Initial experiments show that this enables robust, generalizable prediction of transcriptional responses.",
+    "topic": "",
+    "conference": "mlgenx",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/88978b3727dfaa73d3d969b31cc36e25ceb4a859.pdf"
+  },
+  {
+    "id": "fDLe47paJ1",
+    "title": "GenePT Revisited: Do Better Text Embeddings Make Better Gene Embeddings?",
+    "authors": [
+      "Jonathan G. Hedley",
+      "Philip Torr",
+      "Kaspar Märtens"
+    ],
+    "abstract": "GenePT introduced a simple recipe for gene representations: embed each gene’s natural-language description with a general-purpose text embedding model and reuse the resulting vectors across downstream tasks. Since GenePT’s release, embedding models have improved rapidly, with many strong open and commercial encoders benchmarked on suites such as the Massive Text Embedding Benchmark (MTEB). We present a controlled \"leaderboard\" study that keeps the GenePT pipeline fixed and varies only the embedding backbone. We benchmark contemporary encoders on four diverse gene embedding tasks: gene–gene interaction prediction, gene property classification, cell type classification, and prediction of transcriptomic responses to unseen genetic perturbations. Across these settings, newer backbones consistently outperform the original GenePT backbone (text-embedding-ada-002), achieving improvements of 1-17%, while enabling fully reproducible research by avoiding API dependencies.",
+    "topic": "",
+    "conference": "mlgenx",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/5b5b774ca8d6e22d899261b6019a805ec78cfa79.pdf"
+  },
+  {
+    "id": "SzVU5WHrIr",
+    "title": "Agentic Orchestration of Drug Discovery ML Tools Under Partial Observability",
+    "authors": [
+      "Sara Masarone",
+      "Katie Victoria Beckwith",
+      "Matthew Mason",
+      "Thomas Clelford",
+      "Arran Willmott",
+      "Layla Hosseini-Gerami"
+    ],
+    "abstract": "Over 90% of drugs fail in clinical trials, often due to unanticipated safety issues, resulting in substantial financial losses and missed therapeutic opportunities. We develop models that uncover mechanistic bases of observed safety liabilities and support rational drug modification, including an asset-sourcing agent, a cheminformatics module predicting off-target interactions, and a bioinformatics module linking off-targets to toxicity pathways.\n\nIndividually, these tools are performant but outputs are fragmented, and not all input data are always available, limiting rapid decision-making. To address this, we introduce an orchestrating agent that dynamically coordinates tool execution based on data availability, task context, and uncertainty. The agent selectively invokes, sequences, or defers modules to enable adaptive analysis under partial information. We present its architecture and early testing, illustrating a framework to unify a fragmented AI ecosystem into a coherent, agent-driven system.",
+    "topic": "",
+    "conference": "mlgenx",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/75dfa33a0df8acd0b09ff56ae9c28212a3ad15e3.pdf"
+  },
+  {
+    "id": "CWTyUgMF44",
+    "title": "Distilling Genomic Models for Efficient mRNA Representation Learning via Embedding Matching",
+    "authors": [
+      "Rasched Haidari",
+      "Sam Martin",
+      "Maxime Allard"
+    ],
+    "abstract": "Large Genomic Foundation Models have recently achieved remarkable results and in-vivo translation capabilities. However these models quickly grow to over a few Billion of parameters and are expensive to run when compute is limited. To overcome this challenge, we present a distillation framework for transferring mRNA representations from a state of the art genomic foundation model into a much smaller model specialized for mRNA sequences, reducing the size by 200-fold. Embedding-level distillation worked better than logit based methods, which we found unstable. Benchmarking on mRNA-bench demonstrates that the distilled model achieves state-of-the-art performance among models of comparable size and competes with larger architectures for mRNA-related tasks. Our results highlight embedding-based distillation of mRNA sequences as an effective training strategy for biological foundation models. This enables similar efficient and scalable sequence modelling in genomics, particularly when large models are computationally challenging or infeasible.",
+    "topic": "",
+    "conference": "mlgenx",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/a3e54cafe91701b0da3bbed70a8e8194254b9494.pdf"
+  },
+  {
+    "id": "9qrknz9TcG",
+    "title": "Predictive Performance is Often Insensitive to Feature Selection in High-Dimensional Biological Classification",
+    "authors": [
+      "Bhavesh Neekhra",
+      "Debayan Gupta",
+      "Partha Pratim Chakrabarti"
+    ],
+    "abstract": "Feature selection (FS) is commonly assumed to improve predictive performance and identify meaningful features in high-dimensional data. We systematically evaluated this assumption across $30$ classification benchmarks, primarily drawn from computational genomics, including microarray, bulk RNA-Seq, mass spectrometry, and imaging datasets. Across these datasets, we observe that small random subsets of features (0.02--1.0\\% of available features) frequently achieve predictive performance that is comparable to, and in some cases statistically indistinguishable from, models trained on full feature set. Notably, performance variability across random subsets of a given size is often low, suggesting substantial redundancy in the predictive signal. Together, these results suggest that, for many widely used high-dimensional biological benchmarks, predictive accuracy alone is not sufficient to justify claims about the importance of specific selected features. They also underscore the need for rigorous validation before interpreting selected features as biologically meaningful or actionable, particularly in computational genomics.",
+    "topic": "",
+    "conference": "mlgenx",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/141cd24655f6a5a3e8e710cf249143f677881baf.pdf"
+  },
+  {
+    "id": "Re1rA204zd",
+    "title": "Joint Variable Selection in Proteomics Survival Models",
+    "authors": [
+      "Jakub Bajzik",
+      "Al Depope",
+      "Yasaman Zolfimoselo",
+      "Alexander Sharipov",
+      "Holger Klein",
+      "Marco Mondelli",
+      "Matthew R Robinson"
+    ],
+    "abstract": "The incidence of the vast majority of neurodegeneration, cancer, and metabolic diseases generally increases exponentially with age. In large-scale biobanks, linking time-to-diagnosis information in electronic health records to multiple genomic (``multiomics'') measures has the potential to reveal the genes and biological pathways involved in the disease onset and progression. To date, association testing has commonly been conducted by testing one variable at a time using semiparametric Cox proportional hazards (CoxPH) models, which ignores correlation structure and increases the risk of false discoveries. To address these issues, we introduce a novel fully parametric computational method, vampW, based on the Bayesian Vector Approximate Message Passing framework applied to a Weibull model. vampW jointly models correlated features, while providing an interpretable hazard structure, producing a continuous survival curve, and incorporating prior knowledge. In an extensive simulation study, we demonstrate that joint modeling of proteomics data and time-to-event outcomes using vampW substantially reduces false discoveries in comparison to marginal testing and other forms of joint CoxPH models. The application of vampW to 2,924 proteins across 24 diseases in 53,018 individuals from the UK Biobank, identifies 219 protein associations, the majority of which are not among the top marginal discoveries. vampW also achieves a significant improvement in the prediction of disease onset times: across 14 medical outcomes, it reduces the root mean squared error by over 32% and 26%, when compared respectively to CoxPH variants and the deep learning approach DeepSurv. In addition, vampW outperforms deep learning methods in the data-scarce regime on common survival benchmarking datasets. In summary, vampW offers accurate and interpretable variable selection and out-of-sample prediction within a single computational framework, making it a powerful tool for dissecting the proteomic architecture of human health span.",
+    "topic": "",
+    "conference": "mlgenx",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/bf6c722d37ce980659977ea5f01b68e4138889f3.pdf"
+  },
+  {
+    "id": "DLDV6z0G63",
+    "title": "CONSTRAINED LANGUAGE-GUIDED REFINEMENT FOR ZERO-SHOT SPATIAL ANNOTATION",
+    "authors": [
+      "Sajib Acharjee Dip",
+      "Liqing Zhang"
+    ],
+    "abstract": "Spatial transcriptomics enables the analysis of cellular organization by measuring \ngene expression in situ, but assigning coherent spatial region labels remains\nchallenging across platforms due to heterogeneous resolution, incomplete marker\npanels, and ambiguous boundaries. Existing approaches typically rely on super--\nvised training, dataset-specific tuning, or deep graph models, which can oversmooth\nstructure, generalize poorly across technologies, and offer limited interpretability. We introduce NicheAgent, a training-free structured prediction framework that casts spatial annotation as a constrained decision problem with selective language-based\nverification. NicheAgent first performs deterministic prototype-based assignment\nusing curated region prototypes (“nichecards”) encoding canonical marker genes\nand expression centroids. Only for low-confidence cases, a lightweight large\nlanguage model (LLM) is invoked as a closed-world verifier, arbitrating among\na fixed set of candidate labels using marker semantics and local neighborhood\ncontext under a strict ontology. A single round of spatial smoothing enforces local\ncoherence without blurring anatomical boundaries. Across Visium, MERFISH, and STARmap datasets, NicheAgent consistently out-\nperforms supervised, graph-based, and prior LLM-driven methods on standard\nspatial annotation metrics, while remaining transparent and interpretable. More\nbroadly, our results highlight a general design pattern in which LLMs act as con-\nstrained adjudicators over symbolic hypotheses, improving structured prediction in\nhigh-ambiguity settings without end-to-end learning or loss of interpretability.",
+    "topic": "",
+    "conference": "mlgenx",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/5481cc2f8d2352d2bd1f5d94561c5a917d84a63c.pdf"
+  },
+  {
+    "id": "lMOn8Av46M",
+    "title": "Learning Adaptive Perturbation-Conditioned Contexts for Robust Transcriptional Response Prediction",
+    "authors": [
+      "Yinhua Piao",
+      "Hyomin Kim",
+      "Seonghwan Kim",
+      "Yunhak Oh",
+      "Junhyeok Jeon",
+      "Sang-Yeon Hwang",
+      "Jaechang Lim",
+      "Woo Youn Kim",
+      "Chanyoung Park",
+      "Sungsoo Ahn"
+    ],
+    "abstract": "Predicting high-dimensional transcriptional responses to genetic perturbations is challenging due to severe experimental noise and sparse gene-level effects. Existing methods often suffer from mean collapse, where high correlation is achieved by predicting global average expression rather than perturbation-specific responses, leading to many false positives and limited biological interpretability. Recent approaches incorporate biological knowledge graphs into perturbation models, but these graphs are typically treated as dense and static, which can propagate noise and overlook true perturbation signals. We propose AdaPert, a perturbation-conditioned framework that addresses mean collapse by explicitly modeling sparsity and biological structure. AdaPert learns perturbation-specific subgraphs from biological knowledge graphs and applies adaptive learning to separate true signals from noise. Across multiple genetic perturbation benchmarks, AdaPert consistently outperforms existing baselines and achieves substantial improvements on DEG-aware evaluation metrics, indicating more accurate recovery of perturbation-specific transcriptional changes.",
+    "topic": "",
+    "conference": "mlgenx",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/ad66ff154aabd770d9e78eabf176ad85242fb40a.pdf"
+  },
+  {
+    "id": "0WStQt1qw5",
+    "title": "VALIDATING INTERPRETABILITY IN SIRNA EFFICACY PREDICTION: A PERTURBATION-BASED, DATASET- AWARE PROTOCOL",
+    "authors": [
+      "Shadi Khodagholi",
+      "Niloofar Yousefi"
+    ],
+    "abstract": "Saliency maps are increasingly used as design guidance in siRNA efficacy prediction, yet attribution methods are rarely validated before motivating sequence edits. We introduce a pre-synthesis gate: a protocol for counterfactual sensitivity faithfulness that tests whether mutating high-saliency positions changes model output more than composition-matched controls. Cross-dataset transfer reveals two failure modes that would otherwise go undetected: faithful-but-wrong (saliency valid, predictions fail) and inverted saliency (top-saliency edits less impactful than random). Strikingly, models trained on mRNA-level assays collapse on a luciferase reporter dataset, demonstrating that protocol shifts can silently invalidate deployment. Across four benchmarks, 19/20 fold instances pass; the single failure shows inverted saliency. A biology-informed regularizer (BioPrior) strengthens saliency faithfulness with modest, dataset-dependent predictive trade-offs. Our results establish saliency validation as essential pre-deployment practice for explanation-guided therapeutic design. Code is available at https://github.com/shadi97kh/BioPrior.",
+    "topic": "",
+    "conference": "mlgenx",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/c747063cac1795e485eda9a812a8302703137a15.pdf"
+  },
+  {
+    "id": "yHfzh1pVm9",
+    "title": "SynthPert: Enhancing LLM Biological Reasoning via Synthetic Reasoning Traces for Cellular Perturbation Prediction",
+    "authors": [
+      "Lawrence Phillips",
+      "Marc Boubnovski Martell",
+      "Aditya Misra",
+      "Josefa Lia Stoisser",
+      "Cesar A. Prada-Medina",
+      "Rory Donovan-Maiye",
+      "Kaspar Märtens"
+    ],
+    "abstract": "Predicting cellular responses to genetic perturbations represents a fundamental challenge in systems biology, critical for advancing therapeutic discovery and virtual cell modeling. While large language models (LLMs) show promise for biological reasoning, their application to perturbation prediction remains underexplored due to challenges in adapting them to structured experimental data. We present SynthPert, a novel method that enhances LLM performance through supervised fine-tuning on synthetic reasoning traces generated by frontier models. Using the PerturbQA benchmark, we demonstrate that our approach not only achieves state-of-the-art performance but surpasses the capabilities of the frontier model that generated the training data. Our results reveal three key insights: (1) Synthetic reasoning traces effectively distill biological knowledge even when partially inaccurate, (2) This approach enables cross-cell-type generalization with 87\\% accuracy on unseen RPE1 cells, and (3) Performance gains persist despite using only 2\\% of quality-filtered training data. This work shows the effectiveness of synthetic reasoning distillation for enhancing domain-specific reasoning in LLMs.",
+    "topic": "",
+    "conference": "mlgenx",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/c3e42a675ed42087f083999b6e4a38d9570315ed.pdf"
+  },
+  {
+    "id": "R5X5Xr6Z5R",
+    "title": "Agentic Active Causal Discovery for Alzheimer's Disease Reversal: Closing the Genomic Experimental Loop",
+    "authors": [
+      "David Scott Lewis",
+      "Enrique Zueco"
+    ],
+    "abstract": "Designing robust interventions for complex genomic phenotypes like Alzheimer's Disease (AD) requires moving beyond static association to agentic systems capable of causal reasoning and experimental planning. We introduce an Agentic Active Causal Discovery (AACD) framework that “closes the loop” between in-silico hypothesis generation and wet-lab experimental design. By integrating a Multiscale Encoder with a Causal Graph of Thoughts (C-GoT) reasoning engine, our agent autonomously navigates the vast search space of metabolic pathways, iteratively refining its causal graph through “Specification-Gating”—a mechanism that rejects low-confidence interventions before they reach the validation stage. This approach directly addresses the challenge of translating high-dimensional genomic data into actionable, prioritized experimental protocols. To validate this agentic framework, we deploy it on the task of reversing AD pathology, specifically targeting the dysregulated kynurenine pathway. The agent successfully rediscovers critical therapeutic nodes, identifying IDO1 and TDO2 inhibition as high-value interventions for restoring metabolic homeostasis and reversing cognitive decline. We demonstrate that our Specification-Gated policy outperforms standard associative baselines, generating “Decision Cards” that serve as interpretable, biologically grounded blueprints for future in-vivo validation. These results establish AACD as a powerful paradigm for automating the discovery of mechanistic interventions in genomics, bridging the gap between computational reasoning and biological experimentation.",
+    "topic": "",
+    "conference": "mlgenx",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/61bcef1eaa287c4fe5b50c9d22cd1413702857c0.pdf"
+  },
+  {
+    "id": "EZ2KZwM1mR",
+    "title": "Rethinking Perturbation Prediction Baselines",
+    "authors": [
+      "Junwei Sun",
+      "Ouyang Zhu",
+      "Yiqun T. Chen"
+    ],
+    "abstract": "Predicting cellular responses to genetic perturbations is central to understanding biology and unlocking more efficient drug and genetic therapy discovery. Recent approaches leverage large language models and deep learning for this task, yet simple baselines for predicting categorical outcomes—such as whether a gene is differentially expressed or up- or down-regulated—remain underexplored. We evaluate two simple baselines on Perturb-seq screens from four cell lines: a gene-based majority vote and an embedding-based $k$-nearest neighbors classifier.  On curated benchmarks, majority vote alone achieves accuracies of 0.62--0.80, but collapses on full, unfiltered data, exposing how dataset curation can inflate model performance. On the same unfiltered data, a nearest-neighbor classifier matches LLM-based methods and remains competitive with state-of-the-art deep generative models in cross-cell-line transfer tasks. These results highlight the need for stronger baselines and for directly modeling categorical perturbation outcomes.",
+    "topic": "",
+    "conference": "mlgenx",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/9a07a5cd09bab97d920786472fbdb65d246af440.pdf"
+  },
+  {
+    "id": "pUWDIDwmr6",
+    "title": "Observation-Regime-Aware Bayesian Updates for Closed-Loop Scientific Agents",
+    "authors": [
+      "Manish Sai Kota"
+    ],
+    "abstract": "Closed-loop scientific agents that iteratively select experiments and update beliefs\nmust handle outcomes that are not always fully observed. Measurements may fall\nbelow instrument detection limits (censored), experiments may be infeasible, or\nexecution may fail. We formalize three observation regimes (full, censored, and\nabsent), each requiring a distinct Bayesian likelihood, connecting this taxonomy to\nRubin (1976)’s missing-data classification. In a controlled simulator with discrete\nhypotheses and Gaussian outcomes, we demonstrate that the most common real-\nworld practice of substituting constants for censored non-detects and applying a\nstandard density likelihood causes iterative Bayesian agents to converge to wrong\nhypotheses, not merely slower, regardless of experiment selection strategy. When\nthe true hypothesis produces 96% censored outcomes, a regime-aware agent using\nthe cumulative-distribution-function likelihood identifies it correctly in 96% of\ntrials, while substitution-based agents identify it in 0%, always converging to the\nhypothesis whose mean is closest to the substitution constant.",
+    "topic": "",
+    "conference": "mlgenx",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/d865766af94008c16333d6f9b1e911202caf3f3d.pdf"
+  },
+  {
+    "id": "PLC6IhxKgt",
+    "title": "From Edge Detection to Regulatory Logic Discovery: Residual Set Models for Exact Regulator Recovery in Gene Regulatory Networks",
+    "authors": [
+      "Siddhi Kanta Mishra",
+      "Maryam Rahimimovassagh",
+      "Niloofar Yousefi",
+      "Ivan Garibay"
+    ],
+    "abstract": "Single-cell gene regulatory network (GRN) inference is typically framed as pairwise link prediction, producing ranked regulator--target edges. However, transcriptional regulation is inherently combinatorial: targets are controlled by specific regulator teams, making edge-centric evaluation misaligned with biological mechanism.\nWe study GRN inference as Exact Regulator Set Recovery and introduce a two-stage Filter-and-Refine pipeline.\nStage-1 retrieves a high-recall candidate pool using a target-conditioned attention retriever, while Stage-2 selects the regulator team using Residual HOS2, which learns non-additive set interactions on top of a decomposable pairwise base.\n\nExperiments on SERGIO DS3 (de-noised; $G{=}1200$, $C{=}2700$) show that the attention retriever substantially improves Recall@80 over a dot-product baseline:\n$0.649 \\rightarrow 0.895$ ($R{=}2$),\n$0.718 \\rightarrow 0.872$ ($R{=}3$), and\n$0.842 \\rightarrow 1.000$ ($R{=}4$).\nWith exact subset decoding under tractable caps ($K{=}80$, $M_R{=}\\{80,80,55\\}$),\nResidual HOS2 improves unconditional exact recovery to\n$0.281 \\pm 0.061 / 0.342 \\pm 0.059 / 0.193 \\pm 0.110$ for $R{=}2/3/4$\n(mean$\\pm$std; 3 seeds),\noutperforming decomposable PairS2.\nGains persist when conditioned on coverage, indicating improvements beyond retrieval ceilings, and oracle injection stress tests isolate the necessity of residual high-order modeling under strong confounding.",
+    "topic": "",
+    "conference": "mlgenx",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/c957dc1a40bc1b4277fb1de8d0e2bd282570089b.pdf"
+  },
+  {
+    "id": "93lAqFHsk3",
+    "title": "Exploring Perturbation Effects on Transcriptional Dynamics with ContrastiveBiVI",
+    "authors": [
+      "Ashenafee Anteneh Mandefro",
+      "Ethan Weinberger",
+      "Addie Woicik",
+      "Tal Ashuach"
+    ],
+    "abstract": "CRISPR-Cas9-based genetic screens combined with single-cell transcriptomic profiling have emerged as a powerful tool for investigating the relationships between genotype and cellular phenotypes. However, most computational analyses of these screens solely focus on comparisons of observed measurements of mature mRNA abundance between groups of cells, and ignore the underlying biophysical phenomena (e.g., mRNA splicing dynamics) that lead to the observed data. Towards explicitly modelling such phenomena in single-cell RNA sequencing data, a recent line of work has proposed simultaneously considering nascent and mature mRNA count levels and relating the two via biophysically plausible models of transcription formalized by chemical master equations. Yet, applying these models directly to perturbation screening datasets is not straightforward, as perturbation-induced variations of interest are often confounded by uninteresting \"background\" variation shared with control cells. To remedy this issue, here we propose ContrastiveBiVI, a generative model that combines ideas from the biophysical modelling literature with so-called contrastive latent variable models, which explicitly disentangle perturbation-induced variations from non-perturbation-related variations into separate sets of latent factors. Applied to a publicly available CRISPR activation dataset, we find that our method successfully recovers perturbation-induced variations and facilitates the exploration of perturbation-induced changes in transcription and splicing kinetics. An open-source implementation of our model is available at https://github.com/insitro/contrastive_bivi.",
+    "topic": "",
+    "conference": "mlgenx",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/ed632dab0bce60e78ec8c7b92a702c5c10e3e4ae.pdf"
+  },
+  {
+    "id": "IxAnS2tuNt",
+    "title": "SCOPES: Measuring Accuracy–Portability Trade-offs Across Microarray and RNA-Seq",
+    "authors": [
+      "Abdullah Nayem Wasi Emran",
+      "Tanveer Rahman"
+    ],
+    "abstract": "Deep models often fail under distribution shift, yet the role of feature selection in amplifying or mitigating shift is underexplored. We study this in a stringent setting: transferring a tumour--vs--normal classifier across measurement platforms (Agilent microarray $\\rightarrow$ RNA--Seq) using the same patients and genes. We introduce SCOPES, a leak--free, multi--objective selection framework that optimizes three competing goals: (i) predictive performance (AUC) via patient--safe cross--validation, (ii) selection stability (Kuncheva), and (iii) cross--platform alignment (Maximum Mean Discrepancy, MMD). Viewed through a representation lens, SCOPES selects a compact gene subspace that is simultaneously discriminative and domain-aligned, explicitly exposing the accuracy--portability frontier under measurement shift. On matched TCGA--BRCA Agilent/RNA--Seq, a label--informed $F$--score slab produced an implausibly perfect source model ($\\mathrm{AUC} \\approx 1.0$) but lost $\\sim 0.30$ AUC after transfer, revealing selection leakage plus platform shift. Replacing the slab with an unsupervised MAD prefilter makes the trade--off explicit on the Pareto front: a one--gene, alignment--first solution achieves modest AUC with small transfer loss ($0.69 \\rightarrow 0.61$, $\\Delta \\mathrm{AUC} \\approx -0.08$), while a 30--gene, accuracy--first solution reaches near--perfect source AUC but transfers poorly ($\\Delta \\mathrm{AUC} \\approx -0.38$). SCOPES provides a simple protocol to measure and control this trade--off (report source/target AUC, $\\Delta$AUC, and MMD), encouraging selections near a Pareto ``knee'' for portability. Finally, in the reverse direction (RNA--Seq $\\rightarrow$ microarray),\na 37-gene SCOPES signature attains\n$AUC_{RNA} = 0.654 \\ ({\\rm CV})$\nand\n$AUC_{Agilent} = 0.890$\n($\\Delta {\\rm AUC} = +0.236$),\nindicating directional shift. We argue that treating selection as a multi--objective\ndesign problem is a useful lens for the science of deep learning under shift.",
+    "topic": "",
+    "conference": "mlgenx",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/f5af4a2586ba761c758230343844604de9e6b0f1.pdf"
+  },
+  {
+    "id": "NkROfzjt4g",
+    "title": "From k-mers to Genomic Foundation Models: Benchmarking COX1 Taxonomy under Extreme Class Imbalance",
+    "authors": [
+      "Luis Valenzuela",
+      "Sebastián Aguilera Madrid",
+      "Luis Martí",
+      "Nayat Sánchez Pi"
+    ],
+    "abstract": "Machine learning for genomics increasingly depends on pretrained genomic foundation models (gLMs) as reusable sequence encoders, yet adoption in biological discovery remains constrained by three linked challenges: tokenization mismatch with biological signal, domain shift between pretraining corpora and downstream assays, and extreme long-tail taxonomic labels that destabilize standard objectives. We study these issues in the ecologically central COI/COX1 gene through an alignment-free benchmark that converts nucleotide sequences into fixed-length embeddings (mean-pooled hidden states) and trains lightweight MLP classifiers for independent rank-wise prediction from Domain to Species. We evaluate two complementary regimes for scalable and interpretable genomic modeling: eKOI (15,947 sequences; protist-rich; 11,047 species) and MetaCOXI (5.6M metazoan sequences; 743,671 species). Across diverse gLM families (autoregressive decoders and masked-language encoders) and explicit compositional baselines (overlapping k-mer frequencies up to k=6), we find that effective motif length induced by tokenization is a dominant driver of fine-rank separability, while corpus alignment (eukaryote- vs. prokaryote-pretraining) materially affects transfer even under identical tokenization. Finally, imbalance-aware objectives (weighted cross-entropy and a hybrid weighted+contrastive loss) can stabilize rare-taxonomy performance but remain representation-dependent.",
+    "topic": "",
+    "conference": "mlgenx",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/7b97da4d4d83c6937717a681c0fad289205e8e99.pdf"
+  },
+  {
+    "id": "IrFOBw487r",
+    "title": "CP-BG-1M: A Controlled Multi-View Benchmark for Density and Background Shortcuts in Morphology Profiling",
+    "authors": [
+      "Tim Treis",
+      "Nikita Moshkov",
+      "Ghaith Mqawass",
+      "Fabian J Theis"
+    ],
+    "abstract": "We introduce CP-BG-1M, a diagnostic framework for detecting cell-density and background-mediated shortcut learning in representation models for high-throughput morphology profiling. The dataset contains ∼1 million quality-controlled single-cell tiles from JUMP-CP Target2 dataset imaged across multiple production sites. Each cell is provided in four synchronized views that preserve center-cell morphology while selectively exposing background context or an explicit, source-agnostic density signal. This controlled design enables shortcut testing: morphology-driven embeddings should remain stable across views, whereas shortcut-dependent models show performance drops when background is removed and partial recovery when density is reintroduced without altering morphology. Using a DINOv3 ViT-B baseline with LoRA trained under a chemical-similarity contrastive objective, we reveal strong metric dependence. Segmented representations outperform crops in compound retrieval (recall@10: 0.37–0.38 vs. 0.29–0.30) and phenotypic activity detection (98.67% vs. 67.44–78.41% significant replicate agreement), while also improving batch mixing. These findings show that metric choice can invert model rankings by rewarding shortcut signals, positioning CP-BG-1M as a practical tool to diagnose and mitigate cell-density confounder.",
+    "topic": "",
+    "conference": "mlgenx",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/081f4ef54e2fb3253fc7b56760526804b17a6dc0.pdf"
+  },
+  {
+    "id": "Q5z9IWwbap",
+    "title": "GREmLN: A Cellular Graph Structure Aware Transcriptomics Foundation Model",
+    "authors": [
+      "Mingxuan Zhang",
+      "Vinay S Swamy",
+      "Rowan Cassius",
+      "Léo Dupire",
+      "Charilaos I. Kanatsoulis",
+      "Evan Paull",
+      "Mohammed AlQuraishi",
+      "Theofanis Karaletsos",
+      "Andrea Califano"
+    ],
+    "abstract": "The ever-increasing availability of large-scale single-cell profiles presents an opportunity to develop foundation models to capture cell properties and behavior. However, standard language models such as transformers benefits from sequentially structured data with well defined absolute or relative positional relationships, while single cell RNA data have orderless gene features. Molecular-interaction graphs, such as gene regulatory networks (GRN) or protein-protein interaction (PPI) networks, offer graph structure-based models that effectively encode both non-local gene token dependencies, as well as potential causal relationships. We introduce GREmLN (\\textbf{G}ene \\textbf{R}egulatory \\textbf{Em}bedding-based \\textbf{L}arge \\textbf{N}eural model), a foundation model that leverages graph signal processing to embed gene token graph structure directly within its attention mechanism, producing biologically informed single cell specific gene embeddings. Our model faithfully captures transcriptomics landscapes and achieves superior performance relative to state-of-the-art baselines on cell type annotation, graph structure understanding, and fine-tuned reverse perturbation prediction tasks. It offers a unified and interpretable framework for learning high-capacity foundational representations that capture complex, long-range regulatory dependencies from high-dimensional single-cell transcriptomic data. Moreover, the incorporation of graph-structured inductive biases enables more parameter-efficient architectures and accelerates training convergence.",
+    "topic": "",
+    "conference": "mlgenx",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/d3b0144690cdc6efc172177c24cb291a82c3164d.pdf"
+  },
+  {
+    "id": "I1KgmYcXqz",
+    "title": "Multimodal Latent Causal VAE for Joint Inference of Gene Regulatory and Protein Interaction Networks",
+    "authors": [
+      "Shervin Goudarzi",
+      "Nuo Liu",
+      "Hani Goodarzi"
+    ],
+    "abstract": "Learning directed causal relationships between genes and proteins from observational single-cell data remains a fundamental challenge, as correlation-based methods cannot distinguish cause from effect. We introduce CrossModal-CausalVAE, a variational autoencoder that embeds a structural causal model (SCM) in the latent space, learning directed acyclic graphs (DAGs) within modalities and connected graphs across modalities, with linear decoders that enable interpretable projection of latent causal structure onto the observed gene and protein feature space. Trained on 809,130 PBMC cells from two CITE-seq cohorts spanning healthy and COVID-19 donors, the model learns four interpretable directed networks: intra-modal gene regulatory and protein interaction graphs, plus cross-modal translation and feedback matrices, constrained by biological priors from CollecTRI and OmniPath. In silico interventions confirm causal asymmetry in intra-modal and RNA ${\\to}$ Protein blocks, with the learned cross-modal edges recovering central dogma directionality and transcription factor ${\\to}$ target gene causal asymmetry. Critically, we zero-shot validate the learned causal structure against held-out Perturb-CITE-seq interventional data, achieving cross-modal RNA ${\\to}$ Protein perturbation AUROC of 0.739 and gene-level direction accuracy of 69\\%, predicting not only which genes are affected by knockouts but whether they are upregulated or downregulated without direct regularization. Cross-referencing top-ranked causal pathways with published literature further confirms recovery of established immunological mechanisms. Our work provides a proof of concept that latent causal modeling paired with linear decoding enables interpretable and efficient causal graph inference in a multimodal setting.",
+    "topic": "",
+    "conference": "mlgenx",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/0509f63a7bb5e16912d3ffff8a55a5fcf32171bb.pdf"
+  },
+  {
+    "id": "Uz1D0iK832",
+    "title": "Bayesian Rips Active Learning: Topology-Aware Acquisition for Rare Lineages",
+    "authors": [
+      "Weixiao Wang",
+      "Anibal M. Medina-Mardones"
+    ],
+    "abstract": "Rare cellular lineages form disconnected or weakly-connected components in gene-expression space, yet standard active learning (AL) acquisitions concentrate queries in dense regions and fail to sample across them.\nWe propose Bayesian Rips Active Learning (BRAL), which augments Gaussian process predictive entropy with a topological signal: each candidate is scored by how much it would change the Vietoris-Rips persistent $H_0$ of the currently labeled set, favoring selections that expand into disconnected regions.\nOn Paul15 hematopoietic data (${\\sim}2.5\\%$ rare Megakaryocytes), BRAL discovers $42$ of $68$ rare cells at a 5% budget---nearly twice the best baseline.\nOn PBMC~3k, BRAL achieves the highest rare-class F1 ($0.89$) with the lowest variance across seeds.",
+    "topic": "",
+    "conference": "mlgenx",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/190a56f4817ed44b707f7cc5a067fb137f7dbe51.pdf"
+  },
+  {
+    "id": "JCy56qdNZd",
+    "title": "Spatial Instrumental Variables for Causal Gene Regulatory Network Discovery from Spatial Transcriptomics",
+    "authors": [
+      "Ben Jenkins"
+    ],
+    "abstract": "Inferring causal gene regulatory networks (GRNs) from observational transcriptomic data remains fundamentally limited: without interventions, one can at best identify Markov equivalence classes, leaving edge orientations ambiguous. Interventional approaches such as Perturb-seq resolve directionality but destroy spatial tissue context. We introduce SpaCI (Spatial Causal Instruments), a framework that exploits naturally occurring morphogen gradients in spatial transcriptomics data as instrumental variables for causal GRN discovery. Our key insight is that spatially structured signaling molecules, such as Wnt, BMP, and Hedgehog ligands, induce continuous variation in downstream regulatory activity through known receptor-mediated pathways, satisfying the exclusion restriction required for instrumental variable identification. We formalize this as a nonparametric spatial IV framework, prove identifiability of causal edge directions under stated assumptions, and develop a scalable three-stage algorithm that combines spatial kernel regression with constraint-based DAG learning. Critically, SpaCI identifies causal directions, not just edges, enabling full directed acyclic graph (DAG) recovery. On synthetic spatial GRN benchmarks with known ground truth, SpaCI recovers causal edge orientations with significantly higher accuracy than existing methods (AUROC 0.87 vs. 0.71 for the best baseline). On Drosophila embryo spatial transcriptomics data, SpaCI recovers known anterior-posterior patterning regulatory relationships and identifies novel spatially mediated regulatory interactions supported by independent chromatin accessibility (ATAC-seq) data. Our results establish spatial tissue architecture as a previously unexploited source of causal identification for gene regulatory network inference.",
+    "topic": "",
+    "conference": "mlgenx",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/4e63f21436f11468519043b4e255ee993f2b1c88.pdf"
+  },
+  {
+    "id": "eqU8IH9kxf",
+    "title": "TRUST-REGION SALIENCY-GUIDED LOCAL SEARCH FOR INTERPRETABLE SEQUENCE DESIGN AT FIXED EDIT BUDGETS",
+    "authors": [
+      "Sara E. Pour"
+    ],
+    "abstract": "Discrete sequence design under a fixed edit budget can match target model out-puts, but often returns dispersed, multi-cluster edit sets that are hard to interpret. We present SAGE-TRSwap, a saliency-guided trust-region local search that optimizes the same prediction loss as a Ledidi-style relaxation+pruning baseline (Schreiber et al., 2021) while biasing proposals toward high-attribution regions and enabling budget-preserving SWAP refinements. Across 12 regulatory targets/tracks and 5 random starts per target (60 runs per budget), SAGE-TRSwap reduces edit span and cluster count at all budgets (e.g., mean span 852 → 100 and clusters 6.0 →1.2 at B = 40) while maintaining or improving absolute error under the budget constraint.",
+    "topic": "",
+    "conference": "mlgenx",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/d70ff1b1392959182ec2b14b0b302d66ca9fab43.pdf"
+  },
+  {
+    "id": "En4hAMxOHl",
+    "title": "LLM-Guided Retrieval for Prediction of Molecular Perturbation Responses",
+    "authors": [
+      "Betty Xiong",
+      "Jan-Christian Huetter",
+      "Gabriele Scalia",
+      "Tommaso Biancalani",
+      "Sepideh Maleki"
+    ],
+    "abstract": "Predicting transcriptional responses to small-molecule perturbations is one of the main challenges in drug discovery, yet exhaustive profiling of drugs across cell lines is infeasible. While there has been many attempts to frame this task as supervised prediction, recent works show that simple aggregation baselines remain surprisingly strong, highlighting the importance of generalization rather than model complexity.\n\nIn this work, we adopt a retrieval-based perspective on molecular perturbation prediction i.e. instead of directly predicting high-dimensional gene expression, we introduce LLM-Guided Retrieval (LGR), a framework in which a large language model acts as a selector to identify biologically relevant perturbations, whose observed transcriptional responses are then aggregated by a downstream predictor. This design leverages the biological reasoning capabilities of LLMs while avoiding their limitations in numerical generation.\n\nWe evaluate LGR on large-scale single-cell perturbation data under closed-world and open-world regimes, including challenging settings with unseen drugs and unseen cell types. LGR achieves the strongest performance in unseen cell-line generalization and remains competitive with strong cell-mean baselines in open-world scenarios. Notably, LGR substantially improves directional (sign) accuracy of gene regulation, indicating better recovery of biologically meaningful perturbation effects even when magnitude-based metrics are comparable.\nThese results demonstrates that LLM-guided retrieval as a simple and interpretable baseline for molecular perturbation prediction, particularly in settings characterized by unseen cellular contexts and limited training data.",
+    "topic": "",
+    "conference": "mlgenx",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/b0e556c12498be7430d3b1308caa005c43698acf.pdf"
+  },
+  {
+    "id": "l7deEOhSza",
+    "title": "Enigma: An Efficient Model for Deciphering Regulatory Genomics",
+    "authors": [
+      "Andrew J Jung",
+      "ALICE J. GAO",
+      "Vivian Chu",
+      "Leo J Lee",
+      "Brendan Frey"
+    ],
+    "abstract": "Genomic sequence-to-function models have emerged as powerful tools for deciphering cis-regulatory grammar to advance our understanding of disease biology and guide therapeutic development. Recent advances have been driven by multi-task training of large transformer-based models on thousands of genome tracks. However, these performance gains have come at significant computational cost for both training and inference, hindering large-scale applications and slowing future model development. Here, rather than continuing to scale model size and add more training tracks, we focus on architectural efficiency and train on a substantially smaller, curated set of genome tracks. Our model Enigma achieves competitive performance with current state-of-the-art models at single-base resolution while substantially reducing computational cost. On zero-shot variant effect prediction benchmarks, Enigma outperforms the leading open-source model, the Borzoi ensemble, while using 10.9% of its compute and improving resolution from 32 bases to a single base. Compared to AlphaGenome, Enigma achieves 90.4 - 97.3% of its performance using 7.5% of its estimated compute. These improvements in efficiency can facilitate further development of models for regulatory genomics. We demonstrate this by fine-tuning Enigma on predicting three new molecular phenotypes (ChIP-seq, RNA half-life, and translation efficiency) achieving or exceeding the performance of state-of-the-art task-specific models. We are providing Enigma for non-commercial use to benefit the broader research field.",
+    "topic": "",
+    "conference": "mlgenx",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/0d147041c6eebb734b910618bbd7a1e45939a740.pdf"
+  },
+  {
+    "id": "GMf6DikKOz",
+    "title": "LENS: LLM-based Enrichment of Nested Subclusters",
+    "authors": [
+      "Alisha Saboowala",
+      "Ping Wu",
+      "Yogesh Pandit",
+      "David Richmond",
+      "Jan-Christian Huetter",
+      "Avtar Singh",
+      "Vladimir Ermakov"
+    ],
+    "abstract": "Recent studies show that large language models (LLMs) can accurately annotate curated gene sets. However, real-world biological data are often noisy, complicating clustering and requiring manual curation. We evaluate the ability of LLMs to refine noisy, geometry-derived gene clusters into biologically meaningful components. We introduce LENS (LLM-based Enrichment of Nested Subclusters), a hybrid framework that combines geometric clustering with LLM-based reasoning to decompose gene clusters into interpretable, nested, and overlapping biological submodules. By leveraging biological information encoded in LLM training corpora, LENS provides a scalable complement to traditional enrichment approaches and improves biological specificity in complex, high-dimensional datasets.",
+    "topic": "",
+    "conference": "mlgenx",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/b52b9bb7557bbd7a158fa5b4f790dec0493c87ed.pdf"
+  },
+  {
+    "id": "LMHB2rsCw9",
+    "title": "BioCOMPASS: Integrating Biomarkers into Transformer-Based Immunotherapy Response Prediction",
+    "authors": [
+      "Sayed Hashim",
+      "Frank Soboczenski",
+      "Paul Cairns"
+    ],
+    "abstract": "Datasets used in immunotherapy response prediction are typically small in size, as well as diverse in cancer type, drug administered, and sequencer used. Models often drop in performance when tested on patient cohorts that are not included in the training process. Recent work has shown that transformer-based models along with self-supervised learning show better generalisation performance than threshold-based biomarkers, but is still suboptimal. We present BioCOMPASS, an extension of a transformer-based model called COMPASS, that integrates biomarkers and treatment information to further improve its generalisability. Instead of feeding biomarker data as input, we built loss components to align them with the model's intermediate representations. We found that components such as treatment gating and pathway consistency loss improved generalisability when evaluated with Leave-one-cohort-out, Leave-one-cancer-type-out and Leave-one-treatment-out strategies. Results show that building components that exploit biomarker and treatment information can help in generalisability of immunotherapy response prediction. Careful curation of additional components that leverage complementary clinical information and domain knowledge represents a promising direction for future research.",
+    "topic": "",
+    "conference": "mlgenx",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/68b85458fcda634530b19774a2e9b107a3db266c.pdf"
+  },
+  {
+    "id": "j0o93ydeGW",
+    "title": "Adversarial Genomic Sequences Could Evade Biosecurity Screening",
+    "authors": [
+      "Jeyashree Krishnan",
+      "Ajay Mandyam Rangarajan",
+      "Andrea Loehr",
+      "Jason Hoelscher-Obermaier"
+    ],
+    "abstract": "Recent biosecurity risk assessments identify biological foundation models as having high misuse potential over the coming decade that lower barriers to develop harmful biological agents, with many tools open source and readily accessible to potential threat actors (Nelson & Rose, 2023; Webster et al., 2025). At the same time, Genomic Foundation Models (GFMs) such as DNABERT-2 (Zhou et al.,2024) and Nucleotide Transformer v2 (Dalla-Torre et al., 2024) could help improve biosecurity defenses; yet their robustness under adversarial attacks remains\npoorly understood.\n\nTo address this gap, we evaluate the susceptibility of GFMs to adversarial mutations. Since genomic inputs are discrete and subject to biological constraints, standard adversarial perturbation models for continuous domains do not directly apply (Kuleshov et al., 2021). We study promoter classification as a representative task and analyze GFM robustness under black-box threat models with nucleotide level perturbations. Adversarial sequences are generated via genetic algorithms subject to explicit biological constraints, including GC-content bounds, mutation budget limits, and transitions (Ti)/transversions (Tv) bias.\n\nOur analysis reveals that GFMs are vulnerable to perturbation-efficient adversarial attacks requiring only a small number of nucleotide edits. These vulnerabilities are not random: effective adversarial substitutions favor transversions over transitions and concentrate in the 5’ regulatory region of promoter sequences. Iterative adversarial training reduces attack success rates from initial values of approximately 40–45%, but substantial attack success of about 20–30% persists after ten rounds of hardening. Our results establish adversarial evaluation of GFMs as a joint biological and machine learning challenge requiring domain-specific threat models and defenses.",
+    "topic": "",
+    "conference": "mlgenx",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/d633c65c5e9664ea9225ee46775ffbfe6aee7ce6.pdf"
+  },
+  {
+    "id": "fA0T9ujlQr",
+    "title": "Conditional Single-Cell RNA Generation: A Decoder Model and A Benchmark of Generative Models",
+    "authors": [
+      "Skander Karkar",
+      "Olav De Clerck"
+    ],
+    "abstract": "Generative models for single-cell RNA data have advanced rapidly, yet their relative strengths, limitations, and biological faithfulness remain poorly understood. In particular, recent generative diffusion and transformer models have not been systematically compared to each other, and standard generation metrics may fail to capture biologically relevant behavior. In this work, we present a benchmark of recent generative models for conditional scRNA-seq generation, including a diffusion model (scDiffusion), a transformer model (C2S-Scale), a variational autoencoder (SCVI which we adapt for conditional generation) and a decoder-only transformer model that we propose and that in contrast to C2S preserves exact count information. We evaluate the four models using a diverse set of distributional, discriminability, and gene-level metrics, and propose the recovery of differentially expressed genes as a biologically meaningful downstream task. While all models generate visually and distributionally realistic cells, the diffusion model being the weakest, we find that no method reliably preserves the log-fold changes required for standard DGE analysis, revealing a systematic attenuation of biological signal.",
+    "topic": "",
+    "conference": "mlgenx",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/2844b2e17baa1ff58129254649aa52dd949acd5d.pdf"
+  },
+  {
+    "id": "RcpM5BWnHd",
+    "title": "SplicedVAE: Learning Splicing Ratios from scRNA-seq to Enhance RNA Velocity and Cellular Trajectories",
+    "authors": [
+      "Sahil Gupta",
+      "Andrew Ni",
+      "Jiaqi Zhang"
+    ],
+    "abstract": "Single-cell RNA sequencing (scRNA-seq) provides high-resolution snapshots of cellular states, yet inferring temporal dynamics such as RNA velocity and differentiation trajectories remains challenging. To address this, we present SplicedVAE, a supervised generative framework that augments the scVI variational autoencoder with a dedicated decoder for predicting per-gene splicing ratios only from raw counts. SplicedVAE jointly optimizes gene expression reconstruction and splicing-ratio prediction, enabling biologically informed regularization. Our model achieves improved splicing-ratio prediction accuracy (RMSE 0.1271, Pearson r = 0.67), enhanced latent representations, and substantially more coherent velocity fields compared to standard scVI. When reconstructed S/U counts are passed into scVelo, SplicedVAE recapitulates developmental flow patterns and yields high cosine similarity to ground-truth velocities. These results demonstrate multi-task learning can improve velocity-based trajectory reconstruction and establishes a foundation for future models capable of generating cellular trajectories.",
+    "topic": "",
+    "conference": "mlgenx",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/e47484befb2356e9eac4274feb293b1d931898f1.pdf"
+  },
+  {
+    "id": "6B3zp01ubG",
+    "title": "Dissecting and Steering Cell Identity in a Single-Cell Foundation Model Using Sparse Autoencoders",
+    "authors": [
+      "Nicolas Yanovsky",
+      "Nicolas Yanovsky",
+      "Ariel Chernomoretz"
+    ],
+    "abstract": "Single-cell Foundation Models (scFMs) have demonstrated remarkable capability\nin learning cellular representations, yet their internal mechanisms remain largely\nopaque. In this work, we apply Sparse Autoencoders (SAEs) to the residual stream\nof AIDO.Cell, a transformer-based scFM, to decompose its latent space into interpretable biological features. We trained TopK SAEs on the 12th transformer\nlayer using the PBMC3K dataset as a proof of concept. Using Gene Ontology enrichment to interpret features, we find that ∼ 64% of trained SAE features achieve\nstatistically significant biological annotations, compared to ∼ 34% from the dense\nraw activations. Beyond interpretation, we demonstrate that these features can be\nused to functionally ”steer” cell identity: amplifying and suppressing individual\nfeatures (e.g., Viral Defense) drives symmetric changes in gene expression, with\nsteered cell states aligning with the expected biological programs. Furthermore,\nwe implement a contrastive steering method to automatically discover sparse feature combinations that drive CD4+ T cells towards a CD8+ T cell phenotype.\nInspection of the selected features revealed that the model learned biologically\nrelevant directions in latent space enabling cell-type steering. Our findings show\nthat a scFM can learn a decomposable and manipulable model of cell biology,\nenabling interpretable in silico experiments.",
+    "topic": "",
+    "conference": "mlgenx",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/c1159266d24370272e4b2ddd5e9f09f311bd6879.pdf"
+  },
+  {
+    "id": "KlDSNIvt9A",
+    "title": "Taking The Easy Way Out: When Single-Cell Foundation Models Learn Shortcuts Instead of Biology",
+    "authors": [
+      "Alon Hacohen",
+      "Joseph Charles Bingham",
+      "Binyamin Perets",
+      "Dvir Aran"
+    ],
+    "abstract": "Many single-cell foundation models (scFMs) learn representations of cellular identity through masked modeling of gene expression, yet standard random masking treats genes as independent tokens, a poor match for the modular, co-regulated structure of gene regulatory networks. We show that this mismatch lets models take the easy way out: reconstructing masked genes from locally correlated partners rather than learning the mechanistic cell-state features and capturing global cellular states. This shortcut learning disproportionately harms underrepresented cell types, rare and transitional populations relevant to disease biology and target identification, which lack the data redundancy to overcome correlation-driven gradients. We introduce CorrMask, a data-driven masking strategy that constructs a gene dependency graph from expression covariance and masks correlated gene groups jointly, forcing the model to rely on higher-order biological context. Evaluating on tissue-specific corpora, CorrMask substantially improves annotation of underrepresented cell populations, enhances gene-level generalization via dosage sensitivity prediction, and matches standard baselines with up to $3\\times$ less pre-training data. Our results demonstrate the advantages of pre-training objectives that respect internal structure in regards to yielding representations that capture biological mechanism rather than statistical artifact.",
+    "topic": "",
+    "conference": "mlgenx",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/bd86a511cf09638e8a89fcc75b946d66105f8410.pdf"
+  },
+  {
+    "id": "NUleWh1GFx",
+    "title": "Optimizing Genomic Language Models for Efficient Training, Fine-Tuning, and Inference",
+    "authors": [
+      "Ali Saadat",
+      "Jacques Fellay"
+    ],
+    "abstract": "Genomic language models are widely used as general-purpose encoders for sequences, enabling transfer to tasks such as regulatory-element prediction, variant scoring, and genome-wide annotation. In practice, however, both deployment and adaptation are frequently constrained by GPU memory and throughput, especially for long inputs, heterogeneous sequence lengths, and larger checkpoints. We present a unified, efficiency-oriented implementation for inference and fine-tuning of two encoder-only model families: GENA-LM (110M, 336M) and Nucleotide Transformer (500M, 2.5B). Our framework combines (i) IO-aware attention kernels (FlashAttention) that avoid materializing the full attention matrix, (ii) padding-free variable-length execution via sequence packing, (iii) token-budget batching to stabilize utilization under mixed lengths, and (iv) parameter-efficient adaptation using LoRA. We additionally support optional memory knobs, including activation checkpointing, ZeRO stage-2 CPU offload, and 4-bit/8-bit quantization. Across four model sizes, we validate numerical fidelity via pseudo-perplexity agreement with a reference implementation, characterize inference memory and throughput scaling with sequence length and batch size, and isolate training-time memory contributions in a progressive ablation. On downstream binary classification benchmarks (promoter and enhancer prediction), the efficient implementation yields considerable fine-tuning speedups and peak-memory reductions while maintaining broadly comparable task performance. Finally, we quantify quantization-induced drift by measuring embedding cosine similarity across model sizes, highlighting model-dependent trade-offs.",
+    "topic": "",
+    "conference": "mlgenx",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/47bc0349cb516157fbe66e575dc308255dc7b050.pdf"
+  },
+  {
+    "id": "TSrxbWcF7Q",
+    "title": "Beyond Mean Shifts: Predicting Distributional Responses to Unseen Genetic Perturbations",
+    "authors": [
+      "Kalyan Ramakrishnan",
+      "Jonathan G. Hedley",
+      "Sisi Qu",
+      "Puneet K. Dokania",
+      "Philip Torr",
+      "Cesar A. Prada-Medina",
+      "Julien Fauqueur",
+      "Kaspar Märtens"
+    ],
+    "abstract": "We introduce a simple, histogram-based approach for predicting distributional responses in gene expression following genetic perturbations. This is an essential task in early-stage drug discovery, where such responses can offer insights into gene function and inform target identification. Existing methods only optimize for changes in the mean expression, overlooking stochasticity inherent in single-cell data. We instead model per-gene expression distributions, predicting histograms conditioned on perturbations. This captures higher-order statistics (variance, skewness, kurtosis), where our method outperforms baselines at a fraction of the training cost. To generalize to unseen perturbations, we incorporate prior knowledge via gene embeddings from large language models (LLMs). While modeling a richer output space, the method remains competitive in predicting mean expression changes. This work demonstrates that explicitly modeling distributional responses yields richer biological insights while remaining practical and efficient.",
+    "topic": "",
+    "conference": "mlgenx",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/78f66001b7fea77d181cc8cb47e67fa697cf2830.pdf"
+  },
+  {
+    "id": "ZsDeYLnWnc",
+    "title": "PerturBERT: Learning Gene Co-Variation Embeddings from Perturbation Signatures",
+    "authors": [
+      "Artur Szałata",
+      "Russell Littman",
+      "Zoe Piran",
+      "Fabian J Theis",
+      "David Richmond",
+      "Jan-Christian Huetter",
+      "Alexander P Wu"
+    ],
+    "abstract": "Current foundation models for transcriptomic data are typically trained in a self-supervised manner to predict masked gene expression values within a sample given other genes, thereby learning gene co-variation patterns from observational data. However, many translational applications require understanding how gene expression changes in response to interventions. We introduce PerturBERT, an encoder-only transformer pre-trained with masked-gene modeling on ~1M perturbation signatures across 248 cell lines that learns perturbational co-variance patterns from gene perturbation responses. PerturBERT tokenizes each signature as a set of (downstream gene, response) pairs and produces gene embeddings contextualized by their response to interventions. PerturBERT gene embeddings achieve state-of-the-art results on a gene embedding benchmark and gene dependency prediction. To our knowledge, PerturBERT is the first transformer explicitly pre-trained on gene perturbation responses, providing complementary representations to models trained on observational gene expression profiles.",
+    "topic": "",
+    "conference": "mlgenx",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/0e43e692a54a94dbf7c122466bf345901f7fde3e.pdf"
+  },
+  {
+    "id": "wGZSvkoCPb",
+    "title": "CellxPert: Inference-Time MCMC Steering of a Multi-Omics Single-Cell Foundation Model for In-Silico Perturbation",
+    "authors": [
+      "Andac Demir",
+      "Erik W. Anderson",
+      "Jeremy L. Jenkins",
+      "Srayanta Mukherjee"
+    ],
+    "abstract": "In this work, we introduce CellxPert, a scalable multimodal foundation model that unifies single-cell and spatial multi-omics within a common representation space. CellxPert jointly encodes transcriptomic (scRNA-seq), chromatin-accessibility (ATAC-seq), and surface-proteomic (CITE-seq) measurements, while directly incorporating MERFISH and imaging mass-cytometry data as 2D or 3D spatial–visual layers. CellxPert facilitates four key downstream tasks out of the box: (i) cell‑type annotation across a broad ontology of 154 largely overlapping identities—the largest label space addressed to date and a stringent test of fine‑grained discrimination, (ii) efficient fine-tuning using Low Rank Adaptation (LoRA), (iii) genome-wide transcriptomic response prediction to in-silico perturbations (ISP), and (iv) seamless multi-omic integration across various assays and platforms. Unlike current single-cell foundation models, which approximate gene perturbations by deleting or reordering tokenized gene expression ranks, CellxPert employs a Metropolis–Hastings sampler whose proposal kernel uses the model’s masked conditional distributions to transition to new transcriptomic states conditioned on the perturbed genes. This Markov‑chain procedure mitigates out‑of‑distribution artifacts introduced by abrupt token manipulation and produces trajectories that are biologically interpretable. Evaluations on PBMC68K, Replogle Perturb-seq, Systema and BMMC benchmarks show that CellxPert surpasses classical and state-of-the-art baselines in cell type annotation, perturbation response prediction, and multi-omic integration.",
+    "topic": "",
+    "conference": "mlgenx",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/d61823b634fe662cdac2cb2b1fcd8077b344f1bc.pdf"
+  },
+  {
+    "id": "2J6mqsQkra",
+    "title": "Single-Cell Concept Bottleneck Generative Models for Interpretable and Controllable Cellular Editing",
+    "authors": [
+      "Alma Andersson",
+      "Aya Abdelsalam Ismail",
+      "Edward De Brouwer",
+      "Doron Haviv",
+      "Tommaso Biancalani",
+      "Kyunghyun Cho",
+      "Gabriele Scalia",
+      "Aicha BenTaieb",
+      "Hector Corrada Bravo"
+    ],
+    "abstract": "Understanding how any cellular phenotype changes in response to genetic and/or chemical interventions is fundamental to the understanding of cell biology and the design of effective and safe therapeutics. Single-cell RNA sequencing enables characterization at cellular resolution, yet the combinatorial space of possible interventions renders exhaustive experimental mapping infeasible. In-silico counterfactual generation is an attractive alternative but current scRNA-seq generative methods fall short: disentanglement models rarely support interventions, and most intervention-based approaches perform conditional generation that synthesizes new cells rather than editing existing ones. \n\nWe introduce Single-Cell Concept Bottleneck Generative Models (scCBGMs), unifying counterfactual reasoning and generative modeling, to overcome these limitations. \\method~adapts concept bottleneck architectures for single-cell data through decoder skip connections and a cross-covariance penalty that promotes disentanglement without dimensional constraints. Counterfactual edits are done via a principled abduction–action–prediction procedure that supports fine-grained per-cell perturbations and zero-shot generalization to novel concept combinations. Moreover, conditioning modern generative procedures, e.g., flow matching, on scCBGM embeddings combines state-of-the-art single cell data generation quality with precise controllability. \n\nAcross multiple real datasets, including a rigorous evaluation based on a newly developed synthetic benchmark with ground-truth counterfactuals,  scCBGM demonstrates superior accuracy in zero-shot generalization and cell-level counterfactual prediction compared to state-of-the-art methods, while providing interpretable control over biological concepts. We also show how counterfactual generation scCBM can be used in-silico to understand mechanism of action of cellular response to chemical perturbation by editing concepts capturing pathway activity scores that mediate response in real scRNA-seq data. scCBGM establishes a principled framework for high-fidelity in silico cellular experimentation and hypothesis testing in single-cell biology.",
+    "topic": "",
+    "conference": "mlgenx",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/a2a6210645edd950b72702de401e00b906d5a7f2.pdf"
+  },
+  {
+    "id": "R3W8AgdZnv",
+    "title": "BIO-Distiller: Boosting Supervised Baselines by Distilling Biological Foundation Models",
+    "authors": [
+      "Mohan Vamsi Nallapareddy",
+      "Maria Boulougouri",
+      "Pierre Vandergheynst",
+      "Francesco Craighero"
+    ],
+    "abstract": "The success of foundation models has driven their application to biological data, including RNA, DNA, and protein sequences. These are expected to adapt to new tasks, while also providing novel insights into molecular function and biological mechanisms underlying health and disease. Despite recent advances, benchmarks show that biological foundation models fail to consistently outperform simpler supervised approaches. Moreover, key challenges remain, such as the development of faithful interpretation methods and the integration of multiple modalities. Here, we propose BIO-Distiller, a framework to distill the rich information from biological foundation models into smaller models. In our benchmark on six RNA downstream tasks, we first show that well-tuned supervised baselines can still outperform foundation models. Furthermore, knowledge distillation consistently boosts the baselines’ performance by up to 10% across all tasks. Additionally, our framework is capable of integrating multiple foundation models, whether from the same modality by exploiting design and pre-training differences, or across different modalities. The results not only confirm the potential of BIO-Distiller but also provide guidelines for its application to new tasks and modalities, paving the way toward high-performing, efficient, and easily interpretable supervised models for biology.",
+    "topic": "",
+    "conference": "mlgenx",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/362309c3d528091a6a26b4abcb14cb33bea9fed8.pdf"
+  },
+  {
+    "id": "Mhcjk25ibY",
+    "title": "DNACHUNKER: Learnable Tokenization for DNA Language Models",
+    "authors": [
+      "Taewon Kim",
+      "Jihwan Shin",
+      "Hyomin Kim",
+      "Youngmok Jung",
+      "Jonghoon Lee",
+      "Won-Chul Lee",
+      "Sungsoo Ahn",
+      "Insu Han"
+    ],
+    "abstract": "DNA language models are increasingly used to represent genomic sequence, yet their effectiveness depends critically on how raw nucleotides are converted into model inputs. Unlike natural language, DNA offers no canonical “word” boundaries, making fixed tokenizations a brittle design choice under shifts, indels, and local repeats. We introduce DNAChunker, a masked DNA language model that incorporates a learnable adaptive segmentation module to produce context-dependent, variable-length units. Building on a dynamic segmentation procedure, DNAChunker learns to allocate finer granularity to functionally enriched regions while compressing repetitive or redundant sequence. We pre-train DNAChunker on the human reference genome (HG38) and evaluate it on the Nucleotide Transformer and Genomic Benchmarks, where it consistently improves over strong fixed-tokenization baselines. Further analyses and ablations indicate that the learned segmentation is structured rather than incidental: the model preferentially uses shorter units around promoters and exons, and longer units in repetitive regions, yielding representations that are both mutation-resilient and biologically-informed.",
+    "topic": "",
+    "conference": "mlgenx",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/6b8fa58c5d79da4154ce1ac5ab04d2224e16745e.pdf"
+  },
+  {
+    "id": "FIAgwjf3i1",
+    "title": "Beyond single-axis designs: multi-objective optimization for complex perturbation atlases",
+    "authors": [
+      "Zihe Zheng",
+      "Soroor Hediyeh-zadeh",
+      "Jenni Liu",
+      "Fabian J Theis"
+    ],
+    "abstract": "Single-cell perturbation screens enable detailed profiling of complex cellular responses but experiments remain costly in both time and resources. Bayesian optimization (BO) has been proven effective in data-limited and evaluation-expensive settings, including industrial and molecular design. Recent emergence of large-scale perturbation atlases have opened up the opportunity to inform and guide the design of future experiments. As the experimental design of perturbation atlases becomes more complex, there is a growing need for methods that can identify the most informative axes of variation from the design space of these atlases for the optimal design of experiments that are often inherently multi-objective. In this paper, we extend the existing work on single-axis design spaces to multi-axis complex design spaces, and construct a design space for the Human Cytokine Dictionary (HuCIRA). We introduce Derivative-based Global Sensitivity Measures (DGSM) for single-cell perturbation experimental design and demonstrate that DGSM is an effective strategy for querying the axes of variation relevant to an objective from the HuCIRA perturbation atlas. To demonstrate the practical effectiveness of our framework for representing multi-axis design spaces in large-scale perturbation atlases,  we emulate a multi-objective Bayesian optimization (MOBO) experiment using HuCIRA,\nshowing that the selected experimental designs jointly optimize perturbation objectives. We envision that our proposed framework can be used in the design and utilization of current and future perturbation experiments and atlases.",
+    "topic": "",
+    "conference": "mlgenx",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/b16b6eae7237923d23630b07290115f7b229b7a2.pdf"
+  },
+  {
+    "id": "4DyPOqo2hs",
+    "title": "Conditional Monte Carlo Tree Diffusion for Designing Cell-Type-Specific and Biologically Faithful Regulatory DNA",
+    "authors": [
+      "Animesh Awasthi",
+      "Raphael Bednarsky",
+      "Moritz Schaefer",
+      "Christoph Bock"
+    ],
+    "abstract": "Designing regulatory DNA elements with precise cell-type-specific activity is broadly relevant for cell engineering and gene therapy. Deep generative models can generate functional gene-regulatory elements, but existing methods struggle to achieve high specificity against undesired cell types while adhering to the genome's natural regulatory grammar. Here, we introduce DNA-CRAFT, a generative framework that integrates class-conditioned discrete diffusion with Monte Carlo tree search to design cell-type-specific and biologically faithful regulatory elements. We first train a discrete diffusion model on the ENCODE registry of 3.2 million candidate regulatory elements. Second, we condition the model to learn class-specific regulatory grammars of naturally occurring DNA sequences, including enhancers and promoters. Third, we employ conditional Monte Carlo tree guidance, an inference-time alignment algorithm designed to maximize the differential regulatory activity between desired and undesired cell types. By benchmarking DNA-CRAFT on regulatory sequence design tasks for human cell lines and immune cell types, we demonstrate that our model generates sequences with high predicted cell-type-specific activity and biological fidelity, achieving the best trade-offs compared to methods that use diffusion, autoregressive models, and gradient-based optimization.",
+    "topic": "",
+    "conference": "mlgenx",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/54f867dc1529aacbd8efd1248f7d706eec473991.pdf"
+  },
+  {
+    "id": "J2FJJ72Psj",
+    "title": "D3LM: A Discrete DNA Diffusion Language Model for Bidirectional DNA Understanding and Generation",
+    "authors": [
+      "Zhao Yang",
+      "Hengchang Liu",
+      "Chuan Cao",
+      "Bing Su"
+    ],
+    "abstract": "Early DNA foundation models adopted BERT-style training, achieving good performance on DNA understanding tasks but lacking generative capabilities. Recent autoregressive models enable DNA generation, but employ left-to-right causal modeling that is suboptimal for DNA where regulatory relationships are inherently bidirectional. We present D3LM (**D**iscrete **D**NA **D**iffusion **L**anguage **M**odel), which unifies bidirectional representation learning and DNA generation through masked diffusion. D3LM directly adopts the Nucleotide Transformer  (NT) v2 architecture but reformulates the training objective as masked diffusion in discrete DNA space, enabling both bidirectional understanding and generation capabilities within a single model. Compared to NT v2 of the same size, D3LM achieves improved performance on understanding tasks. Notably, on regulatory element generation, D3LM achieves an SFID of 10.92, closely approaching real DNA sequences (7.85) and substantially outperforming the previous best result of 29.16 from autoregressive models. Our work suggests diffusion language models as a promising paradigm for unified DNA foundation models. We further present the first systematic study of masked diffusion models in the DNA domain, investigating practical design choices such as tokenization schemes and sampling strategies, thereby providing empirical insights and a solid foundation for future research.",
+    "topic": "",
+    "conference": "mlgenx",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/7251da9c88559305deb35a38065dc5fd5961186d.pdf"
+  },
+  {
+    "id": "S4Ky5pbCWr",
+    "title": "Genomic Next-Token Predictors are In-Context Learners",
+    "authors": [
+      "Nathan Breslow",
+      "Aayush Mishra",
+      "Mahler Revsine",
+      "Michael Schatz",
+      "Anqi Liu",
+      "Daniel Khashabi"
+    ],
+    "abstract": "In-context learning (ICL) -- the capacity of a model to infer and apply abstract patterns from examples provided within its input -- has been extensively studied in large language models trained for next-token prediction on human text. \nIn fact, prior work often attributes this emergent behavior to distinctive statistical properties in *human* language. This raises a fundamental question: can ICL arise *organically* in other sequence domains purely through large-scale predictive training?\n\nTo explore this, we turn to genomic sequences, an alternative symbolic domain rich in statistical structure.\nSpecifically, we study the Evo2 genomic model, trained predominantly on next-nucleotide (A/T/C/G) prediction, at a scale comparable to mid-sized LLMs. We develop a controlled experimental framework comprising symbolic reasoning tasks instantiated in both linguistic and genomic forms,  enabling direct comparison of ICL across genomic and linguistic models.\nOur results show that genomic models, like their linguistic counterparts,\n exhibit log-linear gains in pattern induction as the number of in-context demonstrations increases. \nTo the best of our knowledge, this is the first evidence of organically emergent ICL in genomic sequences, supporting the hypothesis that ICL arises as a consequence of large-scale predictive modeling over rich data.\nThese findings extend emergent meta-learning beyond language, pointing toward a unified, modality-agnostic view of in-context learning.",
+    "topic": "",
+    "conference": "mlgenx",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/05b4deda6035d44daa86c9dca92ab643b340a1d8.pdf"
+  },
+  {
+    "id": "gghWruY1h0",
+    "title": "MapPFN: Learning Causal Perturbation Maps in Context",
+    "authors": [
+      "Marvin Sextro",
+      "Weronika Kłos",
+      "Gabriel Dernbach"
+    ],
+    "abstract": "Planning effective interventions in biological systems requires treatment-effect models that adapt to unseen biological contexts by identifying their specific underlying mechanisms. Yet single-cell perturbation datasets span only a handful of biological contexts, and existing methods cannot leverage new interventional evidence at inference time to adapt beyond their training data. To meta-learn a perturbation effect estimator, we present MapPFN, a prior-data fitted network (PFN) pretrained on synthetic data generated from a prior over causal perturbations. Given a set of experiments, MapPFN uses in-context learning to predict post-perturbation distributions, without gradient-based optimization. Despite being pretrained on *in silico* gene knockouts alone, MapPFN identifies differentially expressed genes, matching the performance of models trained on real single-cell data. Our code and data are available at https://github.com/marvinsxtr/MapPFN.",
+    "topic": "",
+    "conference": "mlgenx",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/7cecc2dee1e4c1ffd5c656b8893603d071dfc620.pdf"
+  },
+  {
+    "id": "u641jwyssF",
+    "title": "DREAM-DNA: Controlled Design via Reasoning and Matched-flows for DNA",
+    "authors": [
+      "Weimin Wu",
+      "Jiunhau Chen",
+      "Xuefeng Song",
+      "Jerry Yao-Chieh Hu",
+      "Han Liu"
+    ],
+    "abstract": "We introduce DREAM-DNA (controlled Design via REasoning And Matched-flows for DNA), a \nreinforcement learning–based generative framework for DNA sequence design.\nTraditional models in this domain use diffusion architecture and rely on stochastic, single-pass generation.\nThese limit their ability to correct early structural errors.\nDREAM-DNA overcomes these limitations by replacing stochasticity with Discrete Flow Matching.\nThis establishes a deterministic ''straight-line'' mapping from noise to data for superior trajectory control.\nOur framework further introduces an Iterative Rollout mechanism.\nSpecifically, we treat generation as a multi-round refinement process. \nBy iteratively masking and resampling subsets of nucleotides in the DNA sequence, the model ``critiques'' and revises its intermediate outputs based on the reward feedback. \nExperiments on human enhancer design show that DREAM-DNA outperforms state-of-the-art baselines.\nIt achieves a 13% boost in enhancer activity and an 8% increase in open chromatin match levels.",
+    "topic": "",
+    "conference": "mlgenx",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/64a278f4c691e5ea973cf3f6eea764fbbd223c50.pdf"
+  },
+  {
+    "id": "9DtBvahg9S",
+    "title": "Addressing Instrument-Outcome Confounding in Mendelian Randomization through Representation Learning",
+    "authors": [
+      "Shimeng Huang",
+      "Matthew R Robinson",
+      "Francesco Locatello"
+    ],
+    "abstract": "Mendelian Randomization (MR) is a prominent observational epidemiological research method, designed to address unobserved confounding when estimating causal effects. It is closely related to instrumental variable (IV) methods, where genetic variants serve as instruments to infer causal relationships from observational data. However, the core assumptions required for valid IV analysis---particularly the independence between instruments and unobserved confounders---are untestable and often violated in practice. In MR, such violations commonly arise when genetic variants are correlated with environmental factors (e.g., population stratification and assortive mating), leading to confounding between instruments and outcomes. At the same time, MR studies increasingly include data collected across multiple environments or populations, providing an opportunity to address these violations. Leveraging this setting, we propose a representation learning framework that exploits multi-environment data to recover latent exogenous components of genetic instruments suitable for causal inference. We provide theoretical insights into when and how the learned components can act as valid instruments, and we demonstrate the effectiveness of our approach through simulations and semi-synthetic experiments using genetic data from the All of Us Biobank.",
+    "topic": "",
+    "conference": "mlgenx",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/a13785a72efe60c4714136b1d254c6773b0203c2.pdf"
+  },
+  {
+    "id": "JF2xjoWwjp",
+    "title": "Generating and decoding methylated DNA with a Human Epigenetic Foundation Model",
+    "authors": [
+      "Pouya Niki",
+      "Christoforos Nalmpantis",
+      "Javkhlan-Ochir Ganbat",
+      "Donal Byrne",
+      "Husam Babikir",
+      "Anjeet Jhutty",
+      "Andrey Karailiev",
+      "Pooja Kathail",
+      "Luca Giacomoni",
+      "Francisco M Martín-Zamora",
+      "Netanel Loyfer",
+      "Khaled Kamal Saab",
+      "Hannah Madan",
+      "Jonathan C M Wan",
+      "Ravi Solanki"
+    ],
+    "abstract": "Gene expression in humans is regulated beyond the four-letter genetic code; cytosine methylation programs cell identity and regulates expression in response to environmental cues. We present Pleiades, a series of whole-epigenome foundation models (90M/600M/7B) trained on 1.9T tokens of methylated and unmethylated human DNA, establishing a new paradigm beyond the modeling of pure DNA sequences. Pleiades achieves state-of-the-art performance compared to leading DNA foundation models on human genomic annotation tasks, such as predicting histone modifications and gene regulatory elements; notably, we find that scaling model size yields consistent gains across all tasks, with the 7B model outperforming both smaller variants and DNA-only baselines. Finally, we show that Pleiades supports a number of cell-free DNA (cfDNA) tasks, opening the door to a new era of direct clinical application of biological foundation models via cfDNA.",
+    "topic": "",
+    "conference": "mlgenx",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/253231382762128dc988e3a1b52b34c8462015d1.pdf"
+  },
+  {
+    "id": "dLGpwxaXxO",
+    "title": "Hierarchical Multi-Omic CLIP for Missing-Modality Imputation & Transfer Learning in Blood Cancers",
+    "authors": [
+      "Leonardo P.A. Biral",
+      "Dennis Owusu",
+      "Sandeep Dave"
+    ],
+    "abstract": "Blood cancers are a major public health burden, affecting more than 10 million people worldwide. Genomic profiling has improved patient outcomes, but machine learning models still struggle to generalize because multi-omic cohorts are sparse, often lack entire modalities, and exhibit strong out-of-distribution (OOD) shifts across institutions and rare diagnoses. Here we introduce BLOOM-HiCLIP, the first hierarchical multi-omic CLIP framework for blood cancer, trained on the largest multi-omic blood cancer cohort to date of over 8,200 tumors spanning 165 diagnoses. BLOOM-HiCLIP leverages biological foundation models to learn taxonomy-consistent patient representations by mapping RNA and DNA-derived omics modalities to a shared latent space with high cosine similarity between imputed and true embeddings. The resulting joint embedding space supports strong cross-modal retrieval (94.8% Recall@5) and effectively captures blood cancer's hierarchical structure, outperforming a matched InfoNCE-trained ablation model. Notably, BLOOM-HiCLIP freezes all foundation encoders, training only lightweight projection heads and pooling parameters (39.5M total), achieving strong performance with 33.4x fewer parameters than costly end-to-end finetuning. When transferred to a hierarchical diagnostic model, these contrastive embeddings achieve strong discrimination across the blood cancer hierarchy (98.1% cell-of-origin micro-averaged AUROC) outperform baselines in fine-grained diagnosis across 29 subtypes on both in-distribution (34.8% top-1 accuracy) and OOD settings. These embeddings also effectively transfer to risk stratification, achieving an overall survival c-index of 0.788. BLOOM-HiCLIP demonstrates that hierarchical contrastive alignment can turn heterogeneous, incomplete multi-omic data into imputation-ready representations that reliably transfer to clinically relevant prediction tasks in blood cancer.",
+    "topic": "",
+    "conference": "mlgenx",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/d334e7c2f2544183ea7a8a9107fa140968f14d6e.pdf"
+  },
+  {
+    "id": "xZ814yNaUW",
+    "title": "ChatSpatial: Schema-Enforced Agentic Orchestration for Reproducible Spatial Transcriptomics Analysis",
+    "authors": [
+      "Chen Yang",
+      "Xianyang Zhang",
+      "Jun Chen"
+    ],
+    "abstract": "Spatial transcriptomics has transformed our ability to study tissue architecture at molecular resolution. Yet analyzing these data demands navigating 60+ computational methods across incompatible Python and R ecosystems, creating a widening gap between experimental capability and analytical accessibility. LLM-based agents offer a path forward through natural language interaction, but code-generating approaches introduce hallucinated functions, incorrect parameters, and non-reproducible outputs---undermining the reliability that scientific workflows require. We introduce *schema-enforced agentic orchestration*, a paradigm in which the LLM selects from pre-validated tool schemas rather than generating free-form code. Built on the Model Context Protocol (MCP), our approach embeds domain expertise directly into schema descriptions for context-aware parameter inference and seamlessly bridges Python and R through automated data conversion. We instantiate this paradigm in ChatSpatial, a platform orchestrating 60+ methods across 15 analytical categories for spatial transcriptomics. Through replication of two published studies---recovering key biological findings including tumor microenvironment organization and subclonal heterogeneity---and systematic validation across 28 test scenarios on four platforms, we demonstrate that schema-enforced orchestration enables reproducible, multi-step discovery through conversation, supporting iterative loops from reasoning to computational experimentation.",
+    "topic": "",
+    "conference": "mlgenx",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/6ce59e19d7af2a7daa531c6ac214caeac50c707f.pdf"
+  },
+  {
+    "id": "4mlIrlRteS",
+    "title": "Sparse Control of Disease-Aligned Gene Programs in Single-Cell Transcriptomics",
+    "authors": [
+      "Adithya Madduri",
+      "Chirag Patel"
+    ],
+    "abstract": "A central challenge in applying machine learning to biological discovery is not only prediction, but also control: identifying small, interpretable sets of molecular targets whose perturbation can drive cells along meaningful biological trajectories. We introduce Sparse Linear Manifold Control (SLMC), a disease-aligned framework that isolates donor-robust axes of variation in single-cell transcriptomic data and casts target selection as a sparse reconstruction problem. Across diverse human datasets, the resulting objective exhibits strong diminishing returns, enabling simple greedy algorithms to recover compact, disease-relevant gene sets that generalize across donors. By exposing algorithmic structure in disease manifolds, SLMC bridges representation learning and experiment-ready perturbation design for interpretable and actionable biological discovery.",
+    "topic": "",
+    "conference": "mlgenx",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/a9f634e7c9b20a5cc8d9bd05b3693c40e14040ce.pdf"
+  },
+  {
+    "id": "exRCSDdksX",
+    "title": "SIMULTANEOUS LEARNING FROM BULK AND SINGLE-CELL EXPRESSION DATA WITH PERCEIVER-BASED MODELS",
+    "authors": [
+      "Rafal Powalski",
+      "Albert Roethel",
+      "Joanna Krawczyk",
+      "Przemysław Pietrzak",
+      "Łukasz Smoliński",
+      "Maciej Sypetkowski",
+      "Paweł Biernat",
+      "Dariusz Plewczyński",
+      "Tomasz Jetka"
+    ],
+    "abstract": "In recent years, genomic experiments have generated vast amounts of expression\ndata, including bulk RNA-seq and single-cell RNA-seq datasets, spanning both\nobservational and perturbational studies. However, existing models have not fully\nleveraged this diverse data landscape, focusing on modeling either bulk or single-\ncell expression data. We present Funomics T0, the first foundation model that can\nsimultaneously learn from bulk RNA-seq and single-cell RNA-seq datasets from\nobservational and perturbational studies. The proposed Perceiver-based model\nproduces latent representations of the expression data that can be further used for\nvarious downstream tasks. We evaluate our model on perturbation prediction and\ntissue annotation tasks, using a comprehensive benchmark suite and demonstrating\nstrong performance across metrics, with Funomics T0 outperforming the State\nmodel on multiple perturbation metrics.",
+    "topic": "",
+    "conference": "mlgenx",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/8d2170bee28865e704fd939298ca31b4b6915f5a.pdf"
+  },
+  {
+    "id": "9U8Ad6xPFh",
+    "title": "Contrastive Alignment of Expression and Copy Number Highlights Dosage-Insensitive Genes in Cancer",
+    "authors": [
+      "Garv Goswami",
+      "David Xu",
+      "Hwi Joo Park"
+    ],
+    "abstract": "Copy number variations (CNVs) are a hallmark of cancer genomes, yet the relationship between CNV and gene expression is not strictly deterministic. Some genes maintain stable expression despite copy number changes through regulatory compensation. Identifying such dosage-insensitive genes is challenging, as it requires distinguishing true regulatory escape from technical noise in heterogeneous single-cell data. Here, we present a contrastive learning framework that aligns single-cell RNA-seq expression profiles with inferred CNV patterns in a shared latent space. Our key innovation is hard negative mining, which explicitly trains on cell pairs with similar CNV profiles but divergent expression patterns, representing potential dosage insensitivity. By combining an InfoNCE objective with a hard-negative triplet loss, the model learns embeddings in which expression–CNV distance quantifies regulatory concordance. We apply this framework to 10 lung adenocarcinoma patients (approximately 80,000 cells) from the GSE131907 atlas, classifying cancer cells as concordant (expression follows CNV) or discordant (expression escapes CNV). Differential expression analysis between these groups reveals two classes of dosage-insensitive genes: escape genes that are upregulated in discordant cells despite CNV status, and compensation genes that are downregulated. Pooled analysis across 40,775 cancer cells identifies immune- and macrophage-associated escape genes, including VSIG4, FCGR1A, TREM2, and MARCO, as well as cytotoxic lymphocyte-associated compensation genes such as MALAT1, CCL5, and CD8A. These results highlight recurrent CNV-independent transcriptional programs and demonstrate that contrastive alignment provides a general framework for discovering regulatory escape mechanisms in cancer using standard single-cell RNA-seq data.",
+    "topic": "",
+    "conference": "mlgenx",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/b032361039b349c67bbce7d201789f2c5fb1dcf0.pdf"
+  },
+  {
+    "id": "VWYNDvsWyp",
+    "title": "mRNABench: A curated benchmark for mature mRNA property and function prediction",
+    "authors": [
+      "Ruian Shi",
+      "Taykhoom Dalal",
+      "Philip Fradkin",
+      "Divya Koyyalagunta",
+      "Simran Chhabria",
+      "Andrew J Jung",
+      "Cyrus L. Tam",
+      "Defne Ceyhan",
+      "Jessica Lin",
+      "Kaitlin U Laverty",
+      "Ilyes Baali",
+      "BO WANG",
+      "Quaid Morris"
+    ],
+    "abstract": "Messenger RNA (mRNA) is central to gene expression, and its half-life, localization, and translation efficiency drive phenotypic diversity in eukaryotic cells. While supervised learning has been used to study the mRNA regulatory code, self-supervised foundation models support a wider range of transfer learning tasks. However, the dearth of standardized benchmarks limits efforts to pinpoint the strengths of various models. Here, we present mRNABench, a benchmarking suite for mature mRNA biology, focused on human transcripts, that evaluates the representational quality of mature mRNA embeddings from self-supervised nucleotide foundation models. We curate 11 datasets and 79 prediction tasks that broadly capture salient properties of mature mRNA, and assess the performance of 24 families of nucleotide foundation models for a total of 259k experiments. Using these experiments, we study parameter scaling, correlations between sequence compressibility and performance, and data-splitting strategies. We identify synergies between two self-supervised learning objectives, and pre-train a new Mamba-based model that achieves state-of-the-art performance using ~ 700 times fewer parameters. mRNABench can be found at: https://github.com/morrislab/mRNABench.",
+    "topic": "",
+    "conference": "mlgenx",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/c0b4c580f79e993a0dd048ed9b9af205514d4be0.pdf"
+  },
+  {
+    "id": "Jsn0fGm669",
+    "title": "VOUS: Variational Ornstein-Uhlenbeck Stochastics Linking Single-Cell Lineage Tracing with Dynamic Gene Expression",
+    "authors": [
+      "Jiawei Xing",
+      "Stephen Staklinski",
+      "Adam Siepel"
+    ],
+    "abstract": "Single-cell gene expression evolves dynamically along cell division histories. However, most existing single-cell methods treat cells as static snapshots, neglecting the rich information encoded in their underlying lineage structures. Recent advances in single-cell lineage tracing now enable the reconstruction of high-resolution lineage phylogenies, providing a natural framework pinpoint exactly when and where transcriptional changes occur. This capability is fundamental to decoding the dynamics of development, differentiation, and disease progression. To fully leverage this lineage information, we present VOUS (Variational Ornstein-Uhlenbeck Stochastics), a flexible probabilistic framework that models stochastic single-cell gene expression over inferred cell lineage trees. By grounding gene expression analysis in explicit cell lineage phylogenies with topology and branch lengths, VOUS enables the inference of continuous expression dynamics, despite the high sparsity and low coverage of sequencing data. We applied VOUS to scRNA-seq data from metastatic lung cancers, identifying gene programs associated with metastasis and potential therapeutic targets. By providing a rigorous foundation for modeling sparse count data on latent tree structures, VOUS establishes a generalizable framework that naturally extends to multi-gene programs, lineage uncertainty, and multi-modal integration, paving the way for a comprehensive atlas of single-cell stochastic dynamics.",
+    "topic": "",
+    "conference": "mlgenx",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/064143433736186fa44f0da696678bbd2c0653b8.pdf"
+  },
+  {
+    "id": "wI6bzqi3zP",
+    "title": "Event Embedding of Protein Networks : Compositional Learning of Biological Function",
+    "authors": [
+      "Antonin Sulc"
+    ],
+    "abstract": "In this work, we study whether enforcing strict compositional structure in sequence embeddings yields meaningful geometric organization when applied to protein-protein interaction networks.  Using Event2Vec, an additive sequence embedding model, we train 64-dimensional representations on random walks from the human STRING interactome, and compare against a DeepWalk baseline based on Word2Vec, trained on the same walks. We find that compositional structure substantially improves pathway coherence (30.2$\\times$ vs 2.9$\\times$ above random), functional analogy accuracy (mean similarity 0.966 vs 0.650), and hierarchical pathway organization, while geometric properties such as norm--degree anticorrelation are shared with or exceeded by the non-compositional baseline. These results indicate that enforced compositionality specifically benefits relational and compositional reasoning tasks in biological networks.",
+    "topic": "",
+    "conference": "mlgenx",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/5a2df98f8a6ab4495232ce662018425b801f8609.pdf"
+  },
+  {
+    "id": "9Urq3VymML",
+    "title": "Causal Field Theory: Mechanistic Interpretability for Spatio-Temporal Biological Systems",
+    "authors": [
+      "Arash Mehrjou",
+      "Bernhard Schölkopf"
+    ],
+    "abstract": "Understanding how biological interventions propagate through tissue and affect cellular organization is fundamental to drug discovery and therapeutic design. We present Causal Field Theory (CFT), a mathematical framework that extends causal inference to continuous biological fields by modeling causal influence as a propagating field. The framework introduces the response kernel, which quantifies the causal effect of localized interventions such as drug delivery and genetic perturbations, and the causal flux, which measures integrated influence between tissue regions. We demonstrate that tissue-scale interventions can generate greater causal flux than the sum of equivalent cell-level perturbations when aligned with coherent propagation modes. Through numerical experiments on reaction-diffusion systems modeling biological processes, we illustrate how CFT captures causal structure in continuous fields, enabling mechanistic interpretability and principled analysis of interventions in biological systems. This framework addresses a critical gap in current approaches by providing explicit causal semantics for spatio-temporal biological data, enabling lab-in-the-loop systems that reason about intervention effects and guide experimental design.",
+    "topic": "",
+    "conference": "mlgenx",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/74d2d068d266888c61a1ccc8d9687722ab200373.pdf"
+  },
+  {
+    "id": "Wyaae8g9QY",
+    "title": "Investigation of Scaling Laws for Encoder-Decoder Protein Language Models",
+    "authors": [
+      "Mufan Qiu",
+      "Sharmi Banerjee",
+      "Athanasios Nikolakopoulos",
+      "Gherman Uritskiy",
+      "HAMID MOHAMADI",
+      "Huda Khayrallah",
+      "Jonah Noh",
+      "Jiachen Li",
+      "Mostafa Karimi",
+      "Tianlong Chen",
+      "Bella Dubrov",
+      "Shang Shang"
+    ],
+    "abstract": "We explore the optimal scaling of encoder-decoder protein language models, a critical yet underexplored architecture for deciphering biological systems. While dense transformer models have achieved remarkable success, guidance on efficiently scaling sparse and asymmetric architectures in the protein domain remains limited. Our investigation is grounded in a systematic study covering over 90 model variants, spanning varying scales (100M to 5B total parameters) and compute budgets (8B to 64B tokens). We derive unified scaling laws for both dense and sparse Mixture-of-Experts (MoE) models, providing the first comprehensive roadmap for this design space. First, we demonstrate that MoE models consistently exhibit superior scaling efficiency compared to dense counterparts, offering a more favorable compute-performance frontier. Second, we dissect the behavior of asymmetric encoder-decoder configurations (e.g., 5-of-6 ratios). While these architectures can accelerate convergence, we uncover a critical stability-efficiency trade-off, identifying specific regimes where training instability may offset efficiency gains. Finally, we validate our scaling laws across eight diverse downstream tasks, confirming that our compute-optimal findings translate directly to biological predictive power. Our work provides empirical evidence and practical guidelines for developing next-generation, compute-efficient protein language models.",
+    "topic": "",
+    "conference": "mlgenx",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/17e13935d93ee565fd6a6651bcf52ba1772cb847.pdf"
+  },
+  {
+    "id": "GPR1YXdE4U",
+    "title": "Discrete Diffusion for Single-Cell Gene Expression Modeling",
+    "authors": [
+      "Sanjukta Bhattacharya",
+      "Christian Gensbigler",
+      "Shaamil Karim",
+      "Jon Lees"
+    ],
+    "abstract": "Current generative modeling of single-cell transcriptomics relies on continuous latent representations, transforming inherently discrete and sparse gene counts into continuous space. We propose Discrete Cell Models (DCM), a diffusion-based framework that learns cellular representations directly in the discrete domain. Our framework supports both unconditional and conditional generation, allowing for precise modeling of complex biological scenarios such as cell-type-specific transcriptional responses to genetic perturbations. We demonstrate that DCM scales effectively and achieves strong performance against current state-of-the-art methods, including scVI, CPA, STATE, scGPT, and scLDM. On the Dentate Gyrus benchmark, DCM achieves a 5-fold improvement in $MMD^2 RBF$ and a nearly 2-fold improvement in $W_2$ distance, over the leading continuous diffusion baseline (scLDM). On the conditional Replogle perturbation benchmark, DCM sets a new state of the art on $W_2$ distance while remaining competitive on $MMD^2 RBF$. These results establish discrete diffusion as a promising and principled paradigm for generative modeling of single-cell transcriptomics.",
+    "topic": "",
+    "conference": "mlgenx",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/e6bedabf2e46a1c11275b17846d00cca63d14ad8.pdf"
+  },
+  {
+    "id": "vFYAiuUqOr",
+    "title": "STAGE: A Foundation Model for Spatial Transcriptomics Analysis via Graph Embeddings with Hierarchical Prototypes",
+    "authors": [
+      "Zhengchao Luo",
+      "Peiting Shi",
+      "Qichen Sun",
+      "Li Yongge",
+      "Han Wen",
+      "Jinzhuo Wang"
+    ],
+    "abstract": "Spatial transcriptomics offers an unprecedented opportunity to elucidate the spatial organization of tissues by capturing gene expression profiles while preserving tissue architecture. This enables the identification of spatial niches and deepens our understanding of tissue function and disease-associated microenvironments. However, consistent identification of spatial domains across samples, tissues, and even technological platforms remains a formidable challenge, due to low-dimensional and heterogeneous gene panels across platforms, pronounced batch effects, and substantial biological variability between samples. To address these limitations, we propose STAGE, a generalizable foundation model for spatial transcriptomics via graph embeddings. At its core, STAGE introduces a hierarchical prototype mechanism to capture global semantic representations of spatial niches, alongside an efficient online expectation-maximization algorithm to enable scalable learning from large-scale heterogeneous data. Pretrained on a large dataset comprising 32 million cells from 18 tissue types, STAGE learns robust cell representations within their neighborhood graphs and supports niche inference for domain recognition. Comprehensive evaluations on multiple benchmark datasets demonstrate that STAGE substantially enhances domain consistency in cross-platform, cross-sample, and cross-tissue spatial domain identification tasks, outperforming existing state-of-the-art methods. Furthermore, STAGE supports critical downstream biological analyses, highlighting its strong potential as a powerful tool in biological research.",
+    "topic": "",
+    "conference": "mlgenx",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/d2e045475229c36031cbe8b39432cf2aed564d53.pdf"
+  },
+  {
+    "id": "m3spJY4TpC",
+    "title": "The Mechanistic Invariance Test: Genomic Language Models Fail To Learn Positional Regulatory Logic",
+    "authors": [
+      "Bryan Cheng",
+      "Jasper Zhang"
+    ],
+    "abstract": "Genomic language models (gLMs) have transformed computational biology, achieving state-of-the-art performance in variant effect prediction, gene expression modeling, and regulatory element discovery. Yet a fundamental question threatens the foundation of this success: do these models learn the mechanistic principles governing gene regulation, or do they merely exploit statistical shortcuts? We introduce the Mechanistic Invariance Test (MIT), a rigorous 650-sequence benchmark across 8 classes with scrambled controls that enables clean discrimination between compositional sensitivity and genuine positional understanding. We evaluate five gLMs spanning all major architectural paradigms (autoregressive, masked, and bidirectional state-space models) and uncover a universal failure mode. Through systematic mechanistic probing via AT titration, positional ablation, spacing perturbation, and strand orientation tests, we demonstrate that apparent compensation sensitivity is driven entirely by AT content correlation (r=0.78–0.96 across architectures), not positional regulatory logic. The failures are striking: Evo2-1B and Caduceus score regulatory elements at incorrect positions higher than correct positions, inverting biological reality. All models are strand-blind. Compositional effects dominate positional effects by 46-fold. Perhaps most revealing, a simple 100-parameter position-aware PWM achieves perfect performance (CSS=1.00, SCR=0.98), exposing that billion-parameter gLMs fail not from insufficient capacity but from fundamentally misaligned inductive biases. Larger models show stronger compositional bias, demonstrating that scale amplifies rather than corrects this limitation. These findings reveal that current gLMs capture surface statistics while missing the positional grammar essential for gene regulation, demanding architectural innovation before deployment in synthetic biology, gene therapy, and clinical variant interpretation.",
+    "topic": "",
+    "conference": "mlgenx",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/713e654b8399ae88de4e42f1fd77df9e729d6fdf.pdf"
+  },
+  {
+    "id": "Cpg9yYyEPi",
+    "title": "SQUINT: Spatial Quantization for Understanding and IN-painting Tissues",
+    "authors": [
+      "Arpit Merchant",
+      "Sebastian Birk",
+      "Amirhossein Vahidi",
+      "Daniyal Jafree",
+      "Lloyd Steele",
+      "April Rose Foster",
+      "Vijaya Baskar MS",
+      "Muzlifah Haniffa",
+      "Mohammad Lotfollahi"
+    ],
+    "abstract": "Generative modeling of spatially-resolved transcriptomics (SRT) at single-cell\nresolution is a key challenge in genomics towards profiling microenvironments\nin tissues with various biological and clinical applications. Typically, graph auto-\nencoders have been employed for learning continuous cell representations towards\ndownstream tasks such as niche identification. However, these provide limited\nutility for modeling SRT data at the tissue level. To address this challenge, we\npropose a novel method called SQUINT which uses vector quantization on latent\ncell embeddings obtained from graph neural networks. By masking gene expression\nfor a fraction of cells during training and conditioning on relative spatial distances,\nSQUINT learns a set of informative codes that can be used as cell tokens to\nmodel tissues as token sequences. During inference, SQUINT uses these codes\nto impute gene expression of unseen microenvironments at user-specified spatial\nlocations in a tissue section and outperforms a benchmark method for generating\ngene expression. We further showcase the translational relevance of these codes\ncapturing meaningful tissue structures beyond individual cells through downstream\ntasks such as 3D imputation, tumour stratification, and cell-type perturbation.",
+    "topic": "",
+    "conference": "mlgenx",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/e29cbabe0243b6d7d514bb067348b356f78c7ffe.pdf"
+  },
+  {
+    "id": "LXp6NcTVd2",
+    "title": "DC-W2S: Dual-Consensus Weak-to-Strong Training for Reliable Process Reward Modeling in Biological Reasoning",
+    "authors": [
+      "Chi-Min Chan",
+      "Ehsan Hajiramezanali",
+      "Xiner Li",
+      "Edward De Brouwer",
+      "Carl Edwards",
+      "Wei Xue",
+      "Sirui Han",
+      "Yike Guo",
+      "Gabriele Scalia"
+    ],
+    "abstract": "In scientific reasoning tasks, the veracity of the reasoning process is as critical as the final outcome. While Process Reward Models (PRMs) offer a solution to the coarse-grained supervision problems inherent in Outcome Reward Models (ORMs), their deployment is hindered by the prohibitive cost of obtaining expert-verified step-wise labels. This paper addresses the challenge of training reliable PRMs using abundant but noisy \"weak\" supervision. We argue that existing Weak-to-Strong Generalization (W2SG) theories lack prescriptive guidelines for selecting high-quality training signals from noisy data. To bridge this gap, we introduce the Dual-Consensus Weak-to-Strong (DC-W2S) framework. By intersecting Self-Consensus (SC) metrics among weak supervisors with Neighborhood-Consensus (NC) metrics in the embedding space, we stratify supervision signals into distinct reliability regimes. We then employ a curriculum of instance-level balanced sampling and label-level reliability-aware masking to guide the training process. We demonstrate that DC-W2S enables the training of robust PRMs for complex reasoning without exhaustive expert annotation, proving that strategic data curation is more effective than indiscriminate training on large-scale noisy datasets.",
+    "topic": "",
+    "conference": "mlgenx",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/de0f4bad52dde17cb87591b77410fcc038eb0562.pdf"
+  },
+  {
+    "id": "UbnYFmtN5w",
+    "title": "ECLIPSE: A Composable Pipeline for Predicting ecDNA Formation, Evolution, and Therapeutic Vulnerabilities in Cancer",
+    "authors": [
+      "Bryan Cheng",
+      "Jasper Zhang"
+    ],
+    "abstract": "Extrachromosomal DNA (ecDNA) represents one of the most pressing challenges in cancer biology: circular DNA structures that amplify oncogenes, evade targeted therapies, and drive tumor evolution in ∼30% of aggressive cancers. Despite its clinical importance, computational ecDNA research has been built on broken foundations. We discover that existing benchmarks suffer from circular reasoning—models trained on features that already require knowing ecDNA status—artificially inflating performance from AUROC 0.724 to 0.967. We introduce ECLIPSE, the first methodologically sound framework for ecDNA analysis, comprising three modules that transform how we predict, model, and target these structures. ECDNA-FORMER achieves AUROC 0.812 using only standard genomic features, demonstrating for the first time that ecDNA status is predictable without specialized sequencing, and that careful feature curation matters more than complex architectures. CIRCULARODE captures ecDNA's unique stochastic dynamics through physics-constrained neural SDEs, achieving r > 0.997 on experimental data via zero-shot transfer. VULNCAUSAL applies causal inference to identify therapeutic vulnerabilities, achieving 80× enrichment over chance (p < 10−5) and 3.7× higher validation than standard approaches by filtering spurious correlations. Together, these modules establish rigorous baselines for an emerging application area and reveal a broader lesson: in high-stakes biomedical ML, methodological rigor—eliminating leakage, encoding domain physics, addressing confounding—outweighs architectural innovation. ECLIPSE provides both the tools and the template for principled computational oncology.",
+    "topic": "",
+    "conference": "mlgenx",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/4f1e2697f8d4b462d870f79db9ab37f623bad3b7.pdf"
+  },
+  {
+    "id": "mpom2J8JFw",
+    "title": "Nexus: A Multi-Scale Simulator for Biological Control and Causal Discovery",
+    "authors": [
+      "Amogh Singh",
+      "Patrick Schwab",
+      "Kim Branson",
+      "Pietro Lio",
+      "Arash Mehrjou"
+    ],
+    "abstract": "Biological systems exhibit complex multi-scale dynamics spanning subcellular gene regulatory processes to tissue-level spatial organization. However, causal analysis and control of biological systems face fundamental challenges due to the predominantly static nature of experimental measurements and the difficulty of collecting large-scale interventional datasets. We present Nexus, a hierarchical biological simulator that addresses these limitations by generating realistic, multi-modal biological data across cellular and subcellular scales. Nexus integrates gene regulatory network dynamics for RNA and protein simulation with spatial models of cell movement, chemical diffusion, and reactions. Built on the JAX framework, Nexus leverages automatic vectorization and just-in-time compilation to achieve significant speedups over existing simulators, particularly for large cell populations. The simulator supports extensive customization, backpropagation for parameter learning, and generation of interventional data, enabling large-scale dataset creation for causal discovery and analysis. Critically, Nexus provides a testbed for advancing control strategies in biological systems, particularly hierarchical optimal control where interventions are applied simultaneously at multiple levels to steer the system towards desired states. We demonstrate Nexus's accuracy through validation against established simulators and real-world biological data, showing its potential to advance both causal reasoning and control strategies in biological systems.",
+    "topic": "",
+    "conference": "mlgenx",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/7c91307181c75d1d6fc0cc4f02853866a1f44f96.pdf"
+  },
+  {
+    "id": "VDyRpPMZyV",
+    "title": "LLM-BMC: Resolving Cell Type Ambiguity through Bayesian Integration of Biological Knowledge",
+    "authors": [
+      "Chenxi He"
+    ],
+    "abstract": "Distinguishing transcriptionally similar cell types remains a core challenge in single-cell RNA sequencing, as standard classifiers struggle when cell types share marker genes. We introduce LLM-Enhanced Bayesian Model Combination (LLM-BMC), a framework that uses large language models to generate structured biological arguments about marker specificity, pathway coherence, and literature support, then integrates these through Bayesian updates to refine classification probabilities. We quantify knowledge effectiveness using normalized information gain ($\\lambda$), which directly predicts error reduction: $P_e^{(\\text{after})} \\approx (1-\\lambda) \\cdot P_e^{(\\text{before})}$. On three scRNA-seq datasets, LLM-BMC improves F1-score by +0.030--0.037, with the largest gains on ambiguous cell types where base classifiers show high uncertainty.",
+    "topic": "",
+    "conference": "mlgenx",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/8e320a87bd9df17b1a503cead4cebb608f612604.pdf"
+  },
+  {
+    "id": "9oB8AK6vB7",
+    "title": "Structure-aware graph learning predicts RNA editability across tissues and species",
+    "authors": [
+      "Zohar Rosenwasser",
+      "Michael Levitt",
+      "Erez Levanon",
+      "Gal Oren"
+    ],
+    "abstract": "Programmable A-to-I RNA editing using endogenous ADAR enzymes is emerging as a therapeutic strategy, but editability remains difficult to predict because ADAR recognition depends on double-stranded RNA geometry and stability rather than sequence alone. We present ADAREDIT, a structure-explicit graph-attention framework that represents each dsRNA substrate as a nucleotide graph with backbone and base-pair edges and augments this representation with typed interactions and a motif-sensitive sequence branch. We trained and evaluated the model on high-confidence inverted Alu duplexes (n = 905) with secondary structures predicted by RNAfold and editing levels measured across 8,603 GTEx RNA-seq samples spanning 47 tissues. Across five tissue contexts and comprehensive cross-tissue transfer experiments, ADAREDIT consistently outperformed sequence-only CNN, transformer, and RNA language model baselines and achieved strong discrimination on combined tissue data (AUROC/AUPRC = 0.96; F1 ≈ 0.90). The same graph representation transferred to evolutionarily distant non-Alu species (sea urchin, acorn worm, and octopus), indicating conserved principles of ADAR substrate recognition. Finally, attention profiles and in silico mutagenesis recapitulated known biochemical constraints, including suppression by an upstream guanosine, and revealed longer-range asymmetric structural influences on editing.\nThe sources of this work are available at our repository: https://github.com/Scientific-Computing-Lab/AdarEdit",
+    "topic": "",
+    "conference": "mlgenx",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/e164f9290cabfb67b3b581ee24ed9cdab4fd801d.pdf"
+  },
+  {
+    "id": "WcWfmx0ILj",
+    "title": "Learning Perturbation Effects Through Contrastive Alignment of Transcriptomics and Textual Embeddings",
+    "authors": [
+      "Tianyu Liu",
+      "Artur Szałata",
+      "Wenxin Long",
+      "Fabian J Theis",
+      "Lingzhou Xue",
+      "Hongyu Zhao"
+    ],
+    "abstract": "Single-cell perturbation screens offer a scalable approach for characterizing the effects of genetic and chemical interventions on cellular state. However, most existing representation-learning methods are tailored to a single perturbation modality and fail to explicitly incorporate external semantic knowledge, which limits their ability to generalize across datasets and perturbation types. Here, we introduce PertOmni, a CLIP-style multimodal representation-learning framework that aligns transcriptomic perturbation signatures with text-derived embeddings of curated gene and compound descriptions. PertOmni jointly trains a shared transcriptomic encoder and dataset-specific text encoders using a masked contrastive objective that emphasizes within–cell-type discrimination while mitigating confounding effects arising from cell-type heterogeneity. We evaluate the produced joint embedding space on bi-directional retrieval, drug–gene interaction inference, and perturbation prediction across both small-molecule and CRISPRi perturbation datasets, and demonstrate consistent improvements over strong baseline methods.",
+    "topic": "",
+    "conference": "mlgenx",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/3cc6890456befcef22f567b2fb05b23cd17fc424.pdf"
+  },
+  {
+    "id": "kwQGXQ6XWD",
+    "title": "Attractome: From Theory to Generative Models for Cancer Dynamics and Control",
+    "authors": [
+      "Arash Mehrjou"
+    ],
+    "abstract": "Cancer progression couples intracellular gene-regulatory dynamics with eco-evolutionary selection, yet current approaches often model these axes separately. We introduce the Attractome, a unified framework that treats malignant phenotypes as attractors and their persistence via frequency-dependent selection. Effective barrier height between phenotypic basins links stochastic transition rates, mutational accessibility, and minimal control effort for reprogramming. We formalize a joint stability criterion: long-lived malignant phenotypes, including cancer stem cell states, must be both dynamically stable as attractors and evolutionarily stable under ecological feedback. We derive early-warning signatures of impending transitions, including critical slowing down, variance amplification, flickering, and spatial correlation, measurable in time-resolved single-cell and spatial genomic data. We outline a roadmap in which generative AI models learn quasi-potentials and barrier geometry from single-cell data for risk prediction and patient-adaptive intervention design.",
+    "topic": "",
+    "conference": "mlgenx",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/5194cd6fbed6d37ada07241c1a6c04ce8a0edaed.pdf"
+  },
+  {
+    "id": "LACRHLhPKH",
+    "title": "ELISA: An Interpretable Hybrid Agent for Expression-Grounded Discovery in Single-Cell Genomics",
+    "authors": [
+      "Omar Coser"
+    ],
+    "abstract": "We present ELISA, a retrieval-augmented AI agent for interpretable, hypothesis-\ndriven exploration of single-cell RNA sequencing (scRNA-seq) data. ELISA\nenables natural-language querying of cell populations through a query-\nconditioned retrieval framework that explicitly integrates semantic biological\npriors with expression-derived evidence. In semantic mode, cluster-level bi-\nological summaries are embedded using BioBERT to align user queries with\nontology-supported annotations. Hybrid mode extends this approach by con-\nstructing a query-adaptive expression representation from semantically relevant\nclusters and combining it with scGPT-derived transcriptional embeddings, prior-\nitizing cell populations that are both semantically relevant and transcriptionally\ncoherent with the query intent.scGPT mode relies exclusively on transcriptional\nstructure captured in the scGPT latent embedding space, emphasizing genes\nthat dominantly shape expression-derived representations of retrieved clusters,\nindependent of semantic annotations or curated biological knowledge. Finally,\ndiscovery mode contrasts dataset-specific expression signals with prior biological\nknowledge to surface context-shifted gene programs and generate cautious, data-\ngrounded hypotheses. By explicitly separating retrieval, expression evidence, and\nlanguage-model interpretation, ELISA prioritizes transparency and reproducibil-\nity over speculative inference. The system is designed as a human-in-the-loop\nanalytical tool that supports expert reasoning and hypothesis generation rather\nthan fully autonomous biological discovery.",
+    "topic": "",
+    "conference": "mlgenx",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/2b01bbb3e31758ee185b0e51aa0d19a4ba4e4c54.pdf"
+  },
+  {
+    "id": "nyucLMyAG3",
+    "title": "Interpretability Driven Evolutionary Approach for the Design of Biological Sequences",
+    "authors": [
+      "Akash Pandey",
+      "Wei Chen",
+      "Sinan Keten"
+    ],
+    "abstract": "Designing biological sequences such as proteins and DNA for desired properties is challenging due to vast search spaces and limited wet lab evaluation budgets. Current evolutionary approaches ignore sequential dependencies and rely on random mutations, which scale poorly for long sequences. In contrast, reinforcement learning (RL) and generative models that explicitly model sequence structure, require large datasets to guide generation toward the target properties. These limitations suggest the need for a method that combines the sample efficiency of evolutionary approaches with the ability to exploit sequential structure. In this work, we propose a novel evolutionary approach, IDEAS, in which mutations are guided by an explainable model. The model identifies critical motifs in high-fitness sequences and uses them to mutate non-critical positions. Across six continuous-property datasets, seven baselines, and three evaluation budgets, IDEAS achieves a 19% acceleration in design while maintaining a favorable position on the Pareto curve balancing acceleration, diversity, and novelty.",
+    "topic": "",
+    "conference": "mlgenx",
+    "year": 2026,
+    "paper_url": "https://openreview.net/pdf/23d2a983c37587bd43e8a9547d89f4343c345f16.pdf"
+  }
+]
