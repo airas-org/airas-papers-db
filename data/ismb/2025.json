@@ -364,142 +364,6 @@
     "paper_url": "https://doi.org/10.1093/bioinformatics/btaf198"
   },
   {
-    "id": "10.1093/bioinformatics/btaf232",
-    "title": "Leveraging large language models to predict antibiotic resistance in Mycobacterium tuberculosis",
-    "authors": [
-      "Testagrose C",
-      "Pandey S",
-      "Serajian M",
-      "Marini S",
-      "Prosperi M",
-      "Boucher C"
-    ],
-    "abstract": "<h4>Motivation</h4>Antibiotic resistance in Mycobacterium tuberculosis (MTB) poses a significant challenge to global public health. Rapid and accurate prediction of antibiotic resistance can inform treatment strategies and mitigate the spread of resistant strains. In this study, we present a novel approach leveraging large language models (LLMs) to predict antibiotic resistance in MTB (LLMTB). Our model is trained and evaluated on genomic data from 12 185 CRyPTIC isolates and their associated resistance profiles, utilizing natural language processing techniques to capture patterns and mutations linked to resistance. The model's architecture integrates state-of-the-art transformer-based LLMs, enabling the analysis of complex genomic sequences and the extraction of critical features relevant to antibiotic resistance.<h4>Results</h4>We evaluate our model's performance using a comprehensive dataset of MTB strains, demonstrating its ability to achieve high performance in predicting resistance to various antibiotics. Unlike traditional machine learning methods, fine-tuning or few-shot learning opens avenues for LLMs to adapt to new or emerging drugs, thereby reducing reliance on extensive data curation. Beyond predictive accuracy, LLMTB uncovers deeper biological insights, identifying critical genes, intergenic regions, and novel resistance mechanisms. This method marks a transformative shift in resistance prediction and offers significant potential for enhancing diagnostic capabilities and guiding personalized treatment plans, ultimately contributing to the global effort to combat tuberculosis and antibiotic resistance.<h4>Availability and implementation</h4>All source code is publicly available at https://github.com/ctestagrose/LLMTB.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2025,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btaf232"
-  },
-  {
-    "id": "10.1093/bioinformatics/btaf258",
-    "title": "DivPro: diverse protein sequence design with direct structure recovery guidance",
-    "authors": [
-      "Zhou X",
-      "Shen G",
-      "Chen Y",
-      "Chen G",
-      "Heng PA"
-    ],
-    "abstract": "<h4>Motivation</h4>Structure-based protein design is crucial for designing proteins with novel structures and functions, which aims to generate sequences that fold into desired structures. Current deep learning-based methods primarily focus on training and evaluating models using sequence recovery-based metrics. However, this approach overlooks the inherent ambiguity in the relationship between protein sequences and structures. Relying solely on sequence recovery as a training objective limits the models' ability to produce diverse sequences that maintain similar structures. These limitations become more pronounced when dealing with remote homologous proteins, which share functional and structural similarities despite low-sequence identity.<h4>Results</h4>Here, we present DivPro, a model that learns to design diverse sequences that can fold into similar structures. To improve sequence diversity, instead of learning a single fixed sequence representation for an input structure as in existing methods, DivPro learns a probabilistic sequence space from which diverse sequences could be sampled. We leverage the recent advancements in in silico protein structure prediction. By incorporating structure prediction results as training guidance, DivPro ensures that sequences sampled from this learned space reliably fold into the target structure. We conducted extensive experiments on three sequence design benchmarks and evaluated the structures of designed sequences using structure prediction models including AlphaFold2. Results show that DivPro can maintain high structure recovery while significantly improving the sequence diversity.<h4>Availability and implementation</h4>The source code and datasets are available at https://github.com/veghen/DivPro.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2025,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btaf258"
-  },
-  {
-    "id": "10.1093/bioinformatics/btaf191",
-    "title": "Accurate PROTAC-targeted degradation prediction with DegradeMaster",
-    "authors": [
-      "Liu J",
-      "Roy MJ",
-      "Isbel L",
-      "Li F"
-    ],
-    "abstract": "<h4>Motivation</h4>Proteolysis-targeting chimeras (PROTACs) are heterobifunctional molecules that can degrade \"undruggable\" protein of interest by recruiting E3 ligases and hijacking the ubiquitin-proteasome system. Some efforts have been made to develop deep learning-based approaches to predict the degradation ability of a given PROTAC. However, existing deep learning methods either simplify proteins and PROTACs as 2D graphs by disregarding crucial 3D spatial information or exclusively rely on limited labels for supervised learning without considering the abundant information from unlabeled data. Nevertheless, considering the potential to accelerate drug discovery, it is critical to develop more accurate computational methods for PROTAC-targeted protein degradation prediction.<h4>Results</h4>This study proposes DegradeMaster, a semisupervised E(3)-equivariant graph neural network-based predictor for targeted degradation prediction of PROTACs. DegradeMaster leverages an E(3)-equivariant graph encoder to incorporate 3D geometric constraints into the molecular representations and utilizes a memory-based pseudolabeling strategy to enrich annotated data during training. A mutual attention pooling module is also designed for interpretable graph representation. Experiments on both supervised and semisupervised PROTAC datasets demonstrate that DegradeMaster outperforms state-of-the-art baselines, with substantial improvement of AUROC by 10.5%. Case studies show DegradeMaster achieves 88.33% and 77.78% accuracy in predicting the degradability of VZ185 candidates on BRD9 and ACBI3 on KRAS mutants. Visualization of attention weights on 3D molecule graph demonstrates that DegradeMaster recognizes linking and binding regions of warhead and E3 ligands and emphasizes the importance of structural information in these areas for degradation prediction. Together, this shows the potential for cutting-edge tools to highlight functional PROTAC components, thereby accelerating novel compound generation.<h4>Availability and implementation</h4>The source code and datasets are available at https://github.com/ABILiLab/DegradeMaster and https://zenodo.org/records/14715718.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2025,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btaf191"
-  },
-  {
-    "id": "10.1093/bioinformatics/btaf231",
-    "title": "Soffritto: a deep learning model for predicting high-resolution replication timing",
-    "authors": [
-      "Bolzan D",
-      "Ay F"
-    ],
-    "abstract": "<h4>Motivation</h4>Replication timing (RT) refers to the order in which DNA loci are replicated during S phase. RT is cell-type specific and implicated in cellular processes including transcription, differentiation, and disease. RT is typically quantified genome-wide using two-fraction assays (e.g. Repli-Seq) which sort cells into early and late S phase fractions followed by DNA sequencing, yielding a ratio as the RT signal. While two-fraction RT data are widely available in multiple cell lines, it is limited in its ability to capture high-resolution RT features. To address this, high-resolution Repli-Seq, which quantifies RT across 16 fractions, was developed, but it is costly and technically challenging with very limited data generated to date.<h4>Results</h4>Here, we developed Soffritto, a deep learning model that predicts high-resolution RT data using two-fraction RT data, histone ChIP-seq data, GC content, and gene density as input. Soffritto is composed of a Long Short-Term Memory (LSTM) module and a prediction module. The LSTM module learns long- and short-range interactions between genomic bins, while the prediction module is composed of a fully connected layer that outputs a 16-fraction probability vector for each bin using the LSTM module's embeddings as input. By performing both within cell line and cross-cell line training and testing for five human and mouse cell lines, we show that Soffritto is able to capture experimental 16-fraction RT signals with high accuracy, and the predicted signals allow detection of high-resolution RT patterns.<h4>Availability and implementation</h4>Soffritto is available at https://github.com/ay-lab/Soffritto.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2025,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btaf231"
-  },
-  {
-    "id": "10.1093/bioinformatics/btaf268",
-    "title": "Spatial transcriptomics deconvolution methods generalize well to spatial chromatin accessibility data",
-    "authors": [
-      "Ouologuem S",
-      "Martens LD",
-      "Schaar AC",
-      "Shulman M",
-      "Gagneur J",
-      "Theis FJ"
-    ],
-    "abstract": "<h4>Motivation</h4>Spatially resolved chromatin accessibility profiling offers the potential to investigate gene regulatory processes within the spatial context of tissues. However, current methods typically work at spot resolution, aggregating measurements from multiple cells, thereby obscuring cell-type-specific spatial patterns of accessibility. Spot deconvolution methods have been developed and extensively benchmarked for spatial transcriptomics, yet no dedicated methods exist for spatial chromatin accessibility, and it is unclear if RNA-based approaches are applicable to that modality.<h4>Results</h4>Here, we demonstrate that these RNA-based approaches can be applied to spot-based chromatin accessibility data by a systematic evaluation of five top-performing spatial transcriptomics deconvolution methods. To assess performance, we developed a simulation framework that generates both transcriptomic and accessibility spot data from dissociated single-cell and targeted multiomic datasets, enabling direct comparisons across both data modalities. Our results show that Cell2location and RCTD, in contrast to other methods, exhibit robust performance on spatial chromatin accessibility data, achieving accuracy comparable to RNA-based deconvolution. Generally, we observed that RNA-based deconvolution exhibited slightly better performance compared to chromatin accessibility-based deconvolution, especially for resolving rare cell types, indicating room for future development of specialized methods. In conclusion, our findings demonstrate that existing deconvolution methods can be readily applied to chromatin accessibility-based spatial data. Our work provides a simulation framework and establishes a performance baseline to guide the development and evaluation of methods optimized for spatial epigenomics.<h4>Availability and implementation</h4>All methods, simulation frameworks, peak selection strategies, analysis notebooks and scripts are available at https://github.com/theislab/deconvATAC.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2025,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btaf268"
-  },
-  {
-    "id": "10.1093/bioinformatics/btaf215",
-    "title": "HIG-Syn: a hypergraph and interaction-aware multigranularity network for predicting synergistic drug combinations",
-    "authors": [
-      "Gu Y",
-      "Zu J",
-      "Sun Y",
-      "Zhang L"
-    ],
-    "abstract": "<h4>Motivation</h4>Drug combinations can not only enhance drug efficacy but also effectively reduce toxic side effects and mitigate drug resistance. With the advancement of drug combination screening technologies, large amounts of data have been generated. The availability of large data enables researchers to develop deep learning methods for predicting drug targets for synergistic combination. However, these methods still lack sufficient accuracy for practical use, and most overlook the biological significance of their models.<h4>Results</h4>We propose the HIG-Syn (hypergraph and interaction-aware multigranularity network for drug synergy prediction) model, which integrates a coarse-granularity module and a fine-granularity module to predict drug combination synergy. The former utilizes a hypergraph to capture global features, while the latter employs interaction-aware attention to simulate biological processes by modeling substructure-substructure and substructure-cell line interactions. HIG-Syn outperforms state-of-the-art machine learning models on our validation datasets extracted from the DrugComb and GDSC2 databases. Furthermore, the fact that five of the 12 novel synergistic drug combinations predicted by HIG-Syn are strongly supported by experimental evidence in the literature underscores its practical potential.<h4>Availability and implementation</h4>The source code is available at https://github.com/gracygyx/HIGSyn.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2025,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btaf215"
-  },
-  {
-    "id": "10.1093/bioinformatics/btaf243",
-    "title": "Detection of cell-type-specific differentially methylated regions in epigenome-wide association studies",
-    "authors": [
-      "Jia R",
-      "Wei Y"
-    ],
-    "abstract": "<h4>Motivation</h4>DNA methylation at cytosine-phosphate-guanine (CpG) sites is one of the most important epigenetic markers. Therefore, epidemiologists are interested in investigating DNA methylation in large cohorts through epigenome-wide association studies (EWAS). However, the observed EWAS data are bulk data with signals aggregated from distinct cell types. Deconvolution of cell-type-specific signals from EWAS data is challenging because phenotypes can affect both cell-type proportions and cell-type-specific methylation levels. Recently, there has been active research on detecting cell-type-specific risk CpG sites for EWAS data. However, existing methods all assume that the methylation levels of different CpG sites are independent and perform association detection for each CpG site separately. Although these methods significantly improve the detection at the aggregated-level-identifying a CpG site as a risk CpG site as long as it is associated with the phenotype in any cell type, they have low power in detecting cell-type-specific associations for EWAS with typical sample sizes.<h4>Results</h4>Here, we develop a new method, Fine-scale inference for Differentially Methylated Regions (FineDMR), to borrow strengths of nearby CpG sites to improve the cell-type-specific association detection. Via a Bayesian hierarchical model built upon Gaussian process functional regression, FineDMR takes advantage of the spatial dependencies between CpG sites. FineDMR can provide cell-type-specific association detection as well as output subject-specific and cell-type-specific methylation profiles for each subject. Simulation studies and real data analysis show that FineDMR substantially improves the power in detecting cell-type-specific associations for EWAS data.<h4>Availability and implementation</h4>FineDMR is freely available at https://github.com/JiaRuofan/Detection-of-Cell-type-specific-DMRs-in-EWAS.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2025,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btaf243"
-  },
-  {
-    "id": "10.1093/bioinformatics/btaf253",
-    "title": "Fast and scalable Wasserstein-1 neural optimal transport solver for single-cell perturbation prediction",
-    "authors": [
-      "Chen Y",
-      "Hu Z",
-      "Chen W",
-      "Huang H"
-    ],
-    "abstract": "<h4>Motivation</h4>Predicting single-cell perturbation responses requires mapping between two unpaired single-cell data distributions. Optimal transport (OT) theory provides a principled framework for constructing such mappings by minimizing transport cost. Recently, Wasserstein-2 (W2) neural optimal transport solvers (e.g. CellOT) have been used for this prediction task. However, W2 OT relies on the general Kantorovich dual formulation, which involves optimizing over two conjugate functions, leading to a complex min-max optimization problem that converges slowly.<h4>Results</h4>To address these challenges, we propose a novel solver based on the Wasserstein-1 (W1) dual formulation. Unlike W2, the W1 dual simplifies the optimization to a maximization problem over a single 1-Lipschitz function, thus eliminating the need for time-consuming min-max optimization. While solving the W1 dual only reveals the transport direction and does not directly provide a unique optimal transport map, we incorporate an additional step using adversarial training to determine an appropriate transport step size, effectively recovering the transport map. Our experiments demonstrate that the proposed W1 neural optimal transport solver can mimic the W2 OT solvers in finding a unique and \"monotonic\" map on 2D datasets. Moreover, the W1 OT solver achieves performance on par with or surpasses W2 OT solvers on real single-cell perturbation datasets. Furthermore, we show that W1 OT solver achieves 25∼45× speedup, scales better on high dimensional transportation task, and can be directly applied on single-cell RNA-seq dataset with highly variable genes.<h4>Availability and implementation</h4>Our implementation and experiments are open-sourced at https://github.com/poseidonchan/w1ot.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2025,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btaf253"
-  },
-  {
-    "id": "10.1093/bioinformatics/btaf254",
-    "title": "GASTON-Mix: a unified model of spatial gradients and domains using spatial mixture-of-experts",
-    "authors": [
-      "Chitra U",
-      "Dan S",
-      "Krienen F",
-      "Raphael BJ"
-    ],
-    "abstract": "<h4>Motivation</h4>Gene expression varies across a tissue due to both the organization of the tissue into spatial domains, i.e. discrete regions of a tissue with distinct cell type composition, and continuous spatial gradients of gene expression within different spatial domains. Spatially resolved transcriptomics (SRT) technologies provide high-throughput measurements of gene expression in a tissue slice, enabling the characterization of spatial gradients and domains. However, existing computational methods for quantifying spatial variation in gene expression either model only spatial domains-and do not account for continuous gradients of expression-or require restrictive geometric assumptions on the spatial domains and spatial gradients that do not hold for many complex tissues.<h4>Results</h4>We introduce GASTON-Mix, a machine learning algorithm to identify both spatial domains and spatial gradients within each domain from SRT data. GASTON-Mix extends the mixture-of-experts (MoE) deep learning framework to a spatial MoE model, combining the clustering component of the MoE model with a neural field model that learns a separate 1D coordinate (\"isodepth\") within each domain. The spatial MoE is capable of representing any geometric arrangement of spatial domains in a tissue, and the isodepth coordinates define continuous gradients of gene expression within each domain. We show using simulations and real data that GASTON-Mix identifies spatial domains and spatial gradients of gene expression more accurately than existing methods. GASTON-Mix reveals spatial gradients in the striatum and lateral septum that regulate complex social behavior, and GASTON-Mix reveals localized spatial gradients of hypoxia and TNF-α signaling in the tumor microenvironment.<h4>Availability and implementation</h4>GASTON-Mix is available at https://github.com/raphael-group/GASTON-Mix.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2025,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btaf254"
-  },
-  {
     "id": "10.1093/bioinformatics/btaf257",
     "title": "Trustworthy causal biomarker discovery: a multiomics brain imaging genetics-based approach",
     "authors": [
@@ -668,6 +532,142 @@
     "conference": "ismb",
     "year": 2025,
     "paper_url": "https://doi.org/10.1093/bioinformatics/btaf228"
+  },
+  {
+    "id": "10.1093/bioinformatics/btaf232",
+    "title": "Leveraging large language models to predict antibiotic resistance in Mycobacterium tuberculosis",
+    "authors": [
+      "Testagrose C",
+      "Pandey S",
+      "Serajian M",
+      "Marini S",
+      "Prosperi M",
+      "Boucher C"
+    ],
+    "abstract": "<h4>Motivation</h4>Antibiotic resistance in Mycobacterium tuberculosis (MTB) poses a significant challenge to global public health. Rapid and accurate prediction of antibiotic resistance can inform treatment strategies and mitigate the spread of resistant strains. In this study, we present a novel approach leveraging large language models (LLMs) to predict antibiotic resistance in MTB (LLMTB). Our model is trained and evaluated on genomic data from 12 185 CRyPTIC isolates and their associated resistance profiles, utilizing natural language processing techniques to capture patterns and mutations linked to resistance. The model's architecture integrates state-of-the-art transformer-based LLMs, enabling the analysis of complex genomic sequences and the extraction of critical features relevant to antibiotic resistance.<h4>Results</h4>We evaluate our model's performance using a comprehensive dataset of MTB strains, demonstrating its ability to achieve high performance in predicting resistance to various antibiotics. Unlike traditional machine learning methods, fine-tuning or few-shot learning opens avenues for LLMs to adapt to new or emerging drugs, thereby reducing reliance on extensive data curation. Beyond predictive accuracy, LLMTB uncovers deeper biological insights, identifying critical genes, intergenic regions, and novel resistance mechanisms. This method marks a transformative shift in resistance prediction and offers significant potential for enhancing diagnostic capabilities and guiding personalized treatment plans, ultimately contributing to the global effort to combat tuberculosis and antibiotic resistance.<h4>Availability and implementation</h4>All source code is publicly available at https://github.com/ctestagrose/LLMTB.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2025,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btaf232"
+  },
+  {
+    "id": "10.1093/bioinformatics/btaf258",
+    "title": "DivPro: diverse protein sequence design with direct structure recovery guidance",
+    "authors": [
+      "Zhou X",
+      "Shen G",
+      "Chen Y",
+      "Chen G",
+      "Heng PA"
+    ],
+    "abstract": "<h4>Motivation</h4>Structure-based protein design is crucial for designing proteins with novel structures and functions, which aims to generate sequences that fold into desired structures. Current deep learning-based methods primarily focus on training and evaluating models using sequence recovery-based metrics. However, this approach overlooks the inherent ambiguity in the relationship between protein sequences and structures. Relying solely on sequence recovery as a training objective limits the models' ability to produce diverse sequences that maintain similar structures. These limitations become more pronounced when dealing with remote homologous proteins, which share functional and structural similarities despite low-sequence identity.<h4>Results</h4>Here, we present DivPro, a model that learns to design diverse sequences that can fold into similar structures. To improve sequence diversity, instead of learning a single fixed sequence representation for an input structure as in existing methods, DivPro learns a probabilistic sequence space from which diverse sequences could be sampled. We leverage the recent advancements in in silico protein structure prediction. By incorporating structure prediction results as training guidance, DivPro ensures that sequences sampled from this learned space reliably fold into the target structure. We conducted extensive experiments on three sequence design benchmarks and evaluated the structures of designed sequences using structure prediction models including AlphaFold2. Results show that DivPro can maintain high structure recovery while significantly improving the sequence diversity.<h4>Availability and implementation</h4>The source code and datasets are available at https://github.com/veghen/DivPro.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2025,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btaf258"
+  },
+  {
+    "id": "10.1093/bioinformatics/btaf191",
+    "title": "Accurate PROTAC-targeted degradation prediction with DegradeMaster",
+    "authors": [
+      "Liu J",
+      "Roy MJ",
+      "Isbel L",
+      "Li F"
+    ],
+    "abstract": "<h4>Motivation</h4>Proteolysis-targeting chimeras (PROTACs) are heterobifunctional molecules that can degrade \"undruggable\" protein of interest by recruiting E3 ligases and hijacking the ubiquitin-proteasome system. Some efforts have been made to develop deep learning-based approaches to predict the degradation ability of a given PROTAC. However, existing deep learning methods either simplify proteins and PROTACs as 2D graphs by disregarding crucial 3D spatial information or exclusively rely on limited labels for supervised learning without considering the abundant information from unlabeled data. Nevertheless, considering the potential to accelerate drug discovery, it is critical to develop more accurate computational methods for PROTAC-targeted protein degradation prediction.<h4>Results</h4>This study proposes DegradeMaster, a semisupervised E(3)-equivariant graph neural network-based predictor for targeted degradation prediction of PROTACs. DegradeMaster leverages an E(3)-equivariant graph encoder to incorporate 3D geometric constraints into the molecular representations and utilizes a memory-based pseudolabeling strategy to enrich annotated data during training. A mutual attention pooling module is also designed for interpretable graph representation. Experiments on both supervised and semisupervised PROTAC datasets demonstrate that DegradeMaster outperforms state-of-the-art baselines, with substantial improvement of AUROC by 10.5%. Case studies show DegradeMaster achieves 88.33% and 77.78% accuracy in predicting the degradability of VZ185 candidates on BRD9 and ACBI3 on KRAS mutants. Visualization of attention weights on 3D molecule graph demonstrates that DegradeMaster recognizes linking and binding regions of warhead and E3 ligands and emphasizes the importance of structural information in these areas for degradation prediction. Together, this shows the potential for cutting-edge tools to highlight functional PROTAC components, thereby accelerating novel compound generation.<h4>Availability and implementation</h4>The source code and datasets are available at https://github.com/ABILiLab/DegradeMaster and https://zenodo.org/records/14715718.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2025,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btaf191"
+  },
+  {
+    "id": "10.1093/bioinformatics/btaf231",
+    "title": "Soffritto: a deep learning model for predicting high-resolution replication timing",
+    "authors": [
+      "Bolzan D",
+      "Ay F"
+    ],
+    "abstract": "<h4>Motivation</h4>Replication timing (RT) refers to the order in which DNA loci are replicated during S phase. RT is cell-type specific and implicated in cellular processes including transcription, differentiation, and disease. RT is typically quantified genome-wide using two-fraction assays (e.g. Repli-Seq) which sort cells into early and late S phase fractions followed by DNA sequencing, yielding a ratio as the RT signal. While two-fraction RT data are widely available in multiple cell lines, it is limited in its ability to capture high-resolution RT features. To address this, high-resolution Repli-Seq, which quantifies RT across 16 fractions, was developed, but it is costly and technically challenging with very limited data generated to date.<h4>Results</h4>Here, we developed Soffritto, a deep learning model that predicts high-resolution RT data using two-fraction RT data, histone ChIP-seq data, GC content, and gene density as input. Soffritto is composed of a Long Short-Term Memory (LSTM) module and a prediction module. The LSTM module learns long- and short-range interactions between genomic bins, while the prediction module is composed of a fully connected layer that outputs a 16-fraction probability vector for each bin using the LSTM module's embeddings as input. By performing both within cell line and cross-cell line training and testing for five human and mouse cell lines, we show that Soffritto is able to capture experimental 16-fraction RT signals with high accuracy, and the predicted signals allow detection of high-resolution RT patterns.<h4>Availability and implementation</h4>Soffritto is available at https://github.com/ay-lab/Soffritto.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2025,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btaf231"
+  },
+  {
+    "id": "10.1093/bioinformatics/btaf268",
+    "title": "Spatial transcriptomics deconvolution methods generalize well to spatial chromatin accessibility data",
+    "authors": [
+      "Ouologuem S",
+      "Martens LD",
+      "Schaar AC",
+      "Shulman M",
+      "Gagneur J",
+      "Theis FJ"
+    ],
+    "abstract": "<h4>Motivation</h4>Spatially resolved chromatin accessibility profiling offers the potential to investigate gene regulatory processes within the spatial context of tissues. However, current methods typically work at spot resolution, aggregating measurements from multiple cells, thereby obscuring cell-type-specific spatial patterns of accessibility. Spot deconvolution methods have been developed and extensively benchmarked for spatial transcriptomics, yet no dedicated methods exist for spatial chromatin accessibility, and it is unclear if RNA-based approaches are applicable to that modality.<h4>Results</h4>Here, we demonstrate that these RNA-based approaches can be applied to spot-based chromatin accessibility data by a systematic evaluation of five top-performing spatial transcriptomics deconvolution methods. To assess performance, we developed a simulation framework that generates both transcriptomic and accessibility spot data from dissociated single-cell and targeted multiomic datasets, enabling direct comparisons across both data modalities. Our results show that Cell2location and RCTD, in contrast to other methods, exhibit robust performance on spatial chromatin accessibility data, achieving accuracy comparable to RNA-based deconvolution. Generally, we observed that RNA-based deconvolution exhibited slightly better performance compared to chromatin accessibility-based deconvolution, especially for resolving rare cell types, indicating room for future development of specialized methods. In conclusion, our findings demonstrate that existing deconvolution methods can be readily applied to chromatin accessibility-based spatial data. Our work provides a simulation framework and establishes a performance baseline to guide the development and evaluation of methods optimized for spatial epigenomics.<h4>Availability and implementation</h4>All methods, simulation frameworks, peak selection strategies, analysis notebooks and scripts are available at https://github.com/theislab/deconvATAC.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2025,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btaf268"
+  },
+  {
+    "id": "10.1093/bioinformatics/btaf215",
+    "title": "HIG-Syn: a hypergraph and interaction-aware multigranularity network for predicting synergistic drug combinations",
+    "authors": [
+      "Gu Y",
+      "Zu J",
+      "Sun Y",
+      "Zhang L"
+    ],
+    "abstract": "<h4>Motivation</h4>Drug combinations can not only enhance drug efficacy but also effectively reduce toxic side effects and mitigate drug resistance. With the advancement of drug combination screening technologies, large amounts of data have been generated. The availability of large data enables researchers to develop deep learning methods for predicting drug targets for synergistic combination. However, these methods still lack sufficient accuracy for practical use, and most overlook the biological significance of their models.<h4>Results</h4>We propose the HIG-Syn (hypergraph and interaction-aware multigranularity network for drug synergy prediction) model, which integrates a coarse-granularity module and a fine-granularity module to predict drug combination synergy. The former utilizes a hypergraph to capture global features, while the latter employs interaction-aware attention to simulate biological processes by modeling substructure-substructure and substructure-cell line interactions. HIG-Syn outperforms state-of-the-art machine learning models on our validation datasets extracted from the DrugComb and GDSC2 databases. Furthermore, the fact that five of the 12 novel synergistic drug combinations predicted by HIG-Syn are strongly supported by experimental evidence in the literature underscores its practical potential.<h4>Availability and implementation</h4>The source code is available at https://github.com/gracygyx/HIGSyn.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2025,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btaf215"
+  },
+  {
+    "id": "10.1093/bioinformatics/btaf243",
+    "title": "Detection of cell-type-specific differentially methylated regions in epigenome-wide association studies",
+    "authors": [
+      "Jia R",
+      "Wei Y"
+    ],
+    "abstract": "<h4>Motivation</h4>DNA methylation at cytosine-phosphate-guanine (CpG) sites is one of the most important epigenetic markers. Therefore, epidemiologists are interested in investigating DNA methylation in large cohorts through epigenome-wide association studies (EWAS). However, the observed EWAS data are bulk data with signals aggregated from distinct cell types. Deconvolution of cell-type-specific signals from EWAS data is challenging because phenotypes can affect both cell-type proportions and cell-type-specific methylation levels. Recently, there has been active research on detecting cell-type-specific risk CpG sites for EWAS data. However, existing methods all assume that the methylation levels of different CpG sites are independent and perform association detection for each CpG site separately. Although these methods significantly improve the detection at the aggregated-level-identifying a CpG site as a risk CpG site as long as it is associated with the phenotype in any cell type, they have low power in detecting cell-type-specific associations for EWAS with typical sample sizes.<h4>Results</h4>Here, we develop a new method, Fine-scale inference for Differentially Methylated Regions (FineDMR), to borrow strengths of nearby CpG sites to improve the cell-type-specific association detection. Via a Bayesian hierarchical model built upon Gaussian process functional regression, FineDMR takes advantage of the spatial dependencies between CpG sites. FineDMR can provide cell-type-specific association detection as well as output subject-specific and cell-type-specific methylation profiles for each subject. Simulation studies and real data analysis show that FineDMR substantially improves the power in detecting cell-type-specific associations for EWAS data.<h4>Availability and implementation</h4>FineDMR is freely available at https://github.com/JiaRuofan/Detection-of-Cell-type-specific-DMRs-in-EWAS.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2025,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btaf243"
+  },
+  {
+    "id": "10.1093/bioinformatics/btaf253",
+    "title": "Fast and scalable Wasserstein-1 neural optimal transport solver for single-cell perturbation prediction",
+    "authors": [
+      "Chen Y",
+      "Hu Z",
+      "Chen W",
+      "Huang H"
+    ],
+    "abstract": "<h4>Motivation</h4>Predicting single-cell perturbation responses requires mapping between two unpaired single-cell data distributions. Optimal transport (OT) theory provides a principled framework for constructing such mappings by minimizing transport cost. Recently, Wasserstein-2 (W2) neural optimal transport solvers (e.g. CellOT) have been used for this prediction task. However, W2 OT relies on the general Kantorovich dual formulation, which involves optimizing over two conjugate functions, leading to a complex min-max optimization problem that converges slowly.<h4>Results</h4>To address these challenges, we propose a novel solver based on the Wasserstein-1 (W1) dual formulation. Unlike W2, the W1 dual simplifies the optimization to a maximization problem over a single 1-Lipschitz function, thus eliminating the need for time-consuming min-max optimization. While solving the W1 dual only reveals the transport direction and does not directly provide a unique optimal transport map, we incorporate an additional step using adversarial training to determine an appropriate transport step size, effectively recovering the transport map. Our experiments demonstrate that the proposed W1 neural optimal transport solver can mimic the W2 OT solvers in finding a unique and \"monotonic\" map on 2D datasets. Moreover, the W1 OT solver achieves performance on par with or surpasses W2 OT solvers on real single-cell perturbation datasets. Furthermore, we show that W1 OT solver achieves 25∼45× speedup, scales better on high dimensional transportation task, and can be directly applied on single-cell RNA-seq dataset with highly variable genes.<h4>Availability and implementation</h4>Our implementation and experiments are open-sourced at https://github.com/poseidonchan/w1ot.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2025,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btaf253"
+  },
+  {
+    "id": "10.1093/bioinformatics/btaf254",
+    "title": "GASTON-Mix: a unified model of spatial gradients and domains using spatial mixture-of-experts",
+    "authors": [
+      "Chitra U",
+      "Dan S",
+      "Krienen F",
+      "Raphael BJ"
+    ],
+    "abstract": "<h4>Motivation</h4>Gene expression varies across a tissue due to both the organization of the tissue into spatial domains, i.e. discrete regions of a tissue with distinct cell type composition, and continuous spatial gradients of gene expression within different spatial domains. Spatially resolved transcriptomics (SRT) technologies provide high-throughput measurements of gene expression in a tissue slice, enabling the characterization of spatial gradients and domains. However, existing computational methods for quantifying spatial variation in gene expression either model only spatial domains-and do not account for continuous gradients of expression-or require restrictive geometric assumptions on the spatial domains and spatial gradients that do not hold for many complex tissues.<h4>Results</h4>We introduce GASTON-Mix, a machine learning algorithm to identify both spatial domains and spatial gradients within each domain from SRT data. GASTON-Mix extends the mixture-of-experts (MoE) deep learning framework to a spatial MoE model, combining the clustering component of the MoE model with a neural field model that learns a separate 1D coordinate (\"isodepth\") within each domain. The spatial MoE is capable of representing any geometric arrangement of spatial domains in a tissue, and the isodepth coordinates define continuous gradients of gene expression within each domain. We show using simulations and real data that GASTON-Mix identifies spatial domains and spatial gradients of gene expression more accurately than existing methods. GASTON-Mix reveals spatial gradients in the striatum and lateral septum that regulate complex social behavior, and GASTON-Mix reveals localized spatial gradients of hypoxia and TNF-α signaling in the tumor microenvironment.<h4>Availability and implementation</h4>GASTON-Mix is available at https://github.com/raphael-group/GASTON-Mix.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2025,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btaf254"
   },
   {
     "id": "10.1093/bioinformatics/btaf238",

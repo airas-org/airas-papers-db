@@ -1,5 +1,148 @@
 [
   {
+    "id": "10.1093/bioinformatics/btae245",
+    "title": "Deciphering high-order structures in spatial transcriptomes with graph-guided Tucker decomposition",
+    "authors": [
+      "Broadbent C",
+      "Song T",
+      "Kuang R"
+    ],
+    "abstract": "Spatial transcripome (ST) profiling can reveal cells' structural organizations and functional roles in tissues. However, deciphering the spatial context of gene expressions in ST data is a challenge-the high-order structure hiding in whole transcriptome space over 2D/3D spatial coordinates requires modeling and detection of interpretable high-order elements and components for further functional analysis and interpretation. This paper presents a new method GraphTucker-graph-regularized Tucker tensor decomposition for learning high-order factorization in ST data. GraphTucker is based on a nonnegative Tucker decomposition algorithm regularized by a high-order graph that captures spatial relation among spots and functional relation among genes. In the experiments on several Visium and Stereo-seq datasets, the novelty and advantage of modeling multiway multilinear relationships among the components in Tucker decomposition are demonstrated as opposed to the Canonical Polyadic Decomposition and conventional matrix factorization models by evaluation of detecting spatial components of gene modules, clustering spatial coefficients for tissue segmentation and imputing complete spatial transcriptomes. The results of visualization show strong evidence that GraphTucker detect more interpretable spatial components in the context of the spatial domains in the tissues.<h4>Availability and implementation</h4>https://github.com/kuanglab/GraphTucker.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btae245"
+  },
+  {
+    "id": "10.1093/bioinformatics/btae259",
+    "title": "RiboDiffusion: tertiary structure-based RNA inverse folding with generative diffusion models",
+    "authors": [
+      "Huang H",
+      "Lin Z",
+      "He D",
+      "Hong L",
+      "Li Y"
+    ],
+    "abstract": "<h4>Motivation</h4>RNA design shows growing applications in synthetic biology and therapeutics, driven by the crucial role of RNA in various biological processes. A fundamental challenge is to find functional RNA sequences that satisfy given structural constraints, known as the inverse folding problem. Computational approaches have emerged to address this problem based on secondary structures. However, designing RNA sequences directly from 3D structures is still challenging, due to the scarcity of data, the nonunique structure-sequence mapping, and the flexibility of RNA conformation.<h4>Results</h4>In this study, we propose RiboDiffusion, a generative diffusion model for RNA inverse folding that can learn the conditional distribution of RNA sequences given 3D backbone structures. Our model consists of a graph neural network-based structure module and a Transformer-based sequence module, which iteratively transforms random sequences into desired sequences. By tuning the sampling weight, our model allows for a trade-off between sequence recovery and diversity to explore more candidates. We split test sets based on RNA clustering with different cut-offs for sequence or structure similarity. Our model outperforms baselines in sequence recovery, with an average relative improvement of 11% for sequence similarity splits and 16% for structure similarity splits. Moreover, RiboDiffusion performs consistently well across various RNA length categories and RNA types. We also apply in silico folding to validate whether the generated sequences can fold into the given 3D RNA backbones. Our method could be a powerful tool for RNA design that explores the vast sequence space and finds novel solutions to 3D structural constraints.<h4>Availability and implementation</h4>The source code is available at https://github.com/ml4bio/RiboDiffusion.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btae259"
+  },
+  {
+    "id": "10.1093/bioinformatics/btae262",
+    "title": "Unveil cis-acting combinatorial mRNA motifs by interpreting deep neural network",
+    "authors": [
+      "Zeng X",
+      "Wei Z",
+      "Du Q",
+      "Li J",
+      "Xie Z",
+      "Wang X"
+    ],
+    "abstract": "<h4>Summary</h4>Cis-acting mRNA elements play a key role in the regulation of mRNA stability and translation efficiency. Revealing the interactions of these elements and their impact plays a crucial role in understanding the regulation of the mRNA translation process, which supports the development of mRNA-based medicine or vaccines. Deep neural networks (DNN) can learn complex cis-regulatory codes from RNA sequences. However, extracting these cis-regulatory codes efficiently from DNN remains a significant challenge. Here, we propose a method based on our toolkit NeuronMotif and motif mutagenesis, which not only enables the discovery of diverse and high-quality motifs but also efficiently reveals motif interactions. By interpreting deep-learning models, we have discovered several crucial motifs that impact mRNA translation efficiency and stability, as well as some unknown motifs or motif syntax, offering novel insights for biologists. Furthermore, we note that it is challenging to enrich motif syntax in datasets composed of randomly generated sequences, and they may not contain sufficient biological signals.<h4>Availability and implementation</h4>The source code and data used to produce the results and analyses presented in this manuscript are available from GitHub (https://github.com/WangLabTHU/combmotif).",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btae262"
+  },
+  {
+    "id": "10.1093/bioinformatics/btae225",
+    "title": "Fast multiple sequence alignment via multi-armed bandits",
+    "authors": [
+      "Mazooji K",
+      "Shomorony I"
+    ],
+    "abstract": "<h4>Summary</h4>Multiple sequence alignment is an important problem in computational biology with applications that include phylogeny and the detection of remote homology between protein sequences. UPP is a popular software package that constructs accurate multiple sequence alignments for large datasets based on ensembles of hidden Markov models (HMMs). A computational bottleneck for this method is a sequence-to-HMM assignment step, which relies on the precise computation of probability scores on the HMMs. In this work, we show that we can speed up this assignment step significantly by replacing these HMM probability scores with alternative scores that can be efficiently estimated. Our proposed approach utilizes a multi-armed bandit algorithm to adaptively and efficiently compute estimates of these scores. This allows us to achieve similar alignment accuracy as UPP with a significant reduction in computation time, particularly for datasets with long sequences.<h4>Availability and implementation</h4>The code used to produce the results in this paper is available on GitHub at: https://github.com/ilanshom/adaptiveMSA.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btae225"
+  },
+  {
+    "id": "10.1093/bioinformatics/btae247",
+    "title": "Closing the computational biology 'knowledge gap': Spanish Wikipedia as a case study",
+    "authors": [
+      "Sélem-Mojica N",
+      "Karakulak T",
+      "Anjum A",
+      "Pashkov A",
+      "Pérez-Estrada R",
+      "Enriquez-Guillén K",
+      "DeBlasio D",
+      "Ferreira-Gonzalez S",
+      "Medina-Rivera A",
+      "Rodrigo-Torres D",
+      "Kilpatrick AM",
+      "Welch LR",
+      "Rahman F"
+    ],
+    "abstract": "<h4>Motivation</h4>Wikipedia is a vital open educational resource in computational biology. The quality of computational biology coverage in English-language Wikipedia has improved steadily in recent years. However, there is an increasingly large 'knowledge gap' between computational biology resources in English-language Wikipedia, and Wikipedias in non-English languages. Reducing this knowledge gap by providing educational resources in non-English languages would reduce language barriers which disadvantage non-native English speaking learners across multiple dimensions in computational biology.<h4>Results</h4>Here, we provide a comprehensive assessment of computational biology coverage in Spanish-language Wikipedia, the second most accessed Wikipedia worldwide. Using Spanish-language Wikipedia as a case study, we generate quantitative and qualitative data before and after a targeted educational event, specifically, a Spanish-focused student editing competition. Our data demonstrates how such events and activities can narrow the knowledge gap between English and non-English educational resources, by improving existing articles and creating new articles. Finally, based on our analysis, we suggest ways to prioritize future initiatives to improve open educational resources in other languages.<h4>Availability and implementation</h4>Scripts for data analysis are available at: https://github.com/ISCBWikiTeam/spanish.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btae247"
+  },
+  {
+    "id": "10.1093/bioinformatics/btae248",
+    "title": "Predicting single-cell cellular responses to perturbations using cycle consistency learning",
+    "authors": [
+      "Huang W",
+      "Liu H"
+    ],
+    "abstract": "<h4>Summary</h4>Phenotype-based drug screening emerges as a powerful approach for identifying compounds that actively interact with cells. Transcriptional and proteomic profiling of cell lines and individual cells provide insights into the cellular state alterations that occur at the molecular level in response to external perturbations, such as drugs or genetic manipulations. In this paper, we propose cycleCDR, a novel deep learning framework to predict cellular response to external perturbations. We leverage the autoencoder to map the unperturbed cellular states to a latent space, in which we postulate the effects of drug perturbations on cellular states follow a linear additive model. Next, we introduce the cycle consistency constraints to ensure that unperturbed cellular state subjected to drug perturbation in the latent space would produces the perturbed cellular state through the decoder. Conversely, removal of perturbations from the perturbed cellular states can restore the unperturbed cellular state. The cycle consistency constraints and linear modeling in the latent space enable to learn transferable representations of external perturbations, so that our model can generalize well to unseen drugs during training stage. We validate our model on four different types of datasets, including bulk transcriptional responses, bulk proteomic responses, and single-cell transcriptional responses to drug/gene perturbations. The experimental results demonstrate that our model consistently outperforms existing state-of-the-art methods, indicating our method is highly versatile and applicable to a wide range of scenarios.<h4>Availability and implementation</h4>The source code is available at: https://github.com/hliulab/cycleCDR.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btae248"
+  },
+  {
+    "id": "10.1093/bioinformatics/btae209",
+    "title": "Representing mutations for predicting cancer drug response",
+    "authors": [
+      "Wall P",
+      "Ideker T"
+    ],
+    "abstract": "<h4>Motivation</h4>Predicting cancer drug response requires a comprehensive assessment of many mutations present across a tumor genome. While current drug response models generally use a binary mutated/unmutated indicator for each gene, not all mutations in a gene are equivalent.<h4>Results</h4>Here, we construct and evaluate a series of predictive models based on leading methods for quantitative mutation scoring. Such methods include VEST4 and CADD, which score the impact of a mutation on gene function, and CHASMplus, which scores the likelihood a mutation drives cancer. The resulting predictive models capture cellular responses to dabrafenib, which targets BRAF-V600 mutations, whereas models based on binary mutation status do not. Performance improvements generalize to other drugs, extending genetic indications for PIK3CA, ERBB2, EGFR, PARP1, and ABL1 inhibitors. Introducing quantitative mutation features in drug response models increases performance and mechanistic understanding.<h4>Availability and implementation</h4>Code and example datasets are available at https://github.com/pgwall/qms.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btae209"
+  },
+  {
+    "id": "10.1093/bioinformatics/btae218",
+    "title": "A learned score function improves the power of mass spectrometry database search",
+    "authors": [
+      "Ananth V",
+      "Sanders J",
+      "Yilmaz M",
+      "Wen B",
+      "Oh S",
+      "Noble WS"
+    ],
+    "abstract": "<h4>Motivation</h4>One of the core problems in the analysis of protein tandem mass spectrometry data is the peptide assignment problem: determining, for each observed spectrum, the peptide sequence that was responsible for generating the spectrum. Two primary classes of methods are used to solve this problem: database search and de novo peptide sequencing. State-of-the-art methods for de novo sequencing use machine learning methods, whereas most database search engines use hand-designed score functions to evaluate the quality of a match between an observed spectrum and a candidate peptide from the database. We hypothesized that machine learning models for de novo sequencing implicitly learn a score function that captures the relationship between peptides and spectra, and thus may be re-purposed as a score function for database search. Because this score function is trained from massive amounts of mass spectrometry data, it could potentially outperform existing, hand-designed database search tools.<h4>Results</h4>To test this hypothesis, we re-engineered Casanovo, which has been shown to provide state-of-the-art de novo sequencing capabilities, to assign scores to given peptide-spectrum pairs. We then evaluated the statistical power of this Casanovo score function, Casanovo-DB, to detect peptides on a benchmark of three mass spectrometry runs from three different species. In addition, we show that re-scoring with the Percolator post-processor benefits Casanovo-DB more than other score functions, further increasing the number of detected peptides.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btae218"
+  },
+  {
+    "id": "10.1093/bioinformatics/btae207",
+    "title": "Forseti: a mechanistic and predictive model of the splicing status of scRNA-seq reads",
+    "authors": [
+      "He D",
+      "Gao Y",
+      "Chan SS",
+      "Quintana-Parrilla N",
+      "Patro R"
+    ],
+    "abstract": "<h4>Motivation</h4>Short-read single-cell RNA-sequencing (scRNA-seq) has been used to study cellular heterogeneity, cellular fate, and transcriptional dynamics. Modeling splicing dynamics in scRNA-seq data is challenging, with inherent difficulty in even the seemingly straightforward task of elucidating the splicing status of the molecules from which sequenced fragments are drawn. This difficulty arises, in part, from the limited read length and positional biases, which substantially reduce the specificity of the sequenced fragments. As a result, the splicing status of many reads in scRNA-seq is ambiguous because of a lack of definitive evidence. We are therefore in need of methods that can recover the splicing status of ambiguous reads which, in turn, can lead to more accuracy and confidence in downstream analyses.<h4>Results</h4>We develop Forseti, a predictive model to probabilistically assign a splicing status to scRNA-seq reads. Our model has two key components. First, we train a binding affinity model to assign a probability that a given transcriptomic site is used in fragment generation. Second, we fit a robust fragment length distribution model that generalizes well across datasets deriving from different species and tissue types. Forseti combines these two trained models to predict the splicing status of the molecule of origin of reads by scoring putative fragments that associate each alignment of sequenced reads with proximate potential priming sites. Using both simulated and experimental data, we show that our model can precisely predict the splicing status of many reads and identify the true gene origin of multi-gene mapped reads.<h4>Availability and implementation</h4>Forseti and the code used for producing the results are available at https://github.com/COMBINE-lab/forseti under a BSD 3-clause license.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btae207"
+  },
+  {
     "id": "10.1093/bioinformatics/btae264",
     "title": "TA-RNN: an attention-based time-aware recurrent neural network architecture for electronic health records",
     "authors": [
@@ -162,149 +305,6 @@
     "conference": "ismb",
     "year": 2024,
     "paper_url": "https://doi.org/10.1093/bioinformatics/btae257"
-  },
-  {
-    "id": "10.1093/bioinformatics/btae245",
-    "title": "Deciphering high-order structures in spatial transcriptomes with graph-guided Tucker decomposition",
-    "authors": [
-      "Broadbent C",
-      "Song T",
-      "Kuang R"
-    ],
-    "abstract": "Spatial transcripome (ST) profiling can reveal cells' structural organizations and functional roles in tissues. However, deciphering the spatial context of gene expressions in ST data is a challenge-the high-order structure hiding in whole transcriptome space over 2D/3D spatial coordinates requires modeling and detection of interpretable high-order elements and components for further functional analysis and interpretation. This paper presents a new method GraphTucker-graph-regularized Tucker tensor decomposition for learning high-order factorization in ST data. GraphTucker is based on a nonnegative Tucker decomposition algorithm regularized by a high-order graph that captures spatial relation among spots and functional relation among genes. In the experiments on several Visium and Stereo-seq datasets, the novelty and advantage of modeling multiway multilinear relationships among the components in Tucker decomposition are demonstrated as opposed to the Canonical Polyadic Decomposition and conventional matrix factorization models by evaluation of detecting spatial components of gene modules, clustering spatial coefficients for tissue segmentation and imputing complete spatial transcriptomes. The results of visualization show strong evidence that GraphTucker detect more interpretable spatial components in the context of the spatial domains in the tissues.<h4>Availability and implementation</h4>https://github.com/kuanglab/GraphTucker.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2024,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btae245"
-  },
-  {
-    "id": "10.1093/bioinformatics/btae259",
-    "title": "RiboDiffusion: tertiary structure-based RNA inverse folding with generative diffusion models",
-    "authors": [
-      "Huang H",
-      "Lin Z",
-      "He D",
-      "Hong L",
-      "Li Y"
-    ],
-    "abstract": "<h4>Motivation</h4>RNA design shows growing applications in synthetic biology and therapeutics, driven by the crucial role of RNA in various biological processes. A fundamental challenge is to find functional RNA sequences that satisfy given structural constraints, known as the inverse folding problem. Computational approaches have emerged to address this problem based on secondary structures. However, designing RNA sequences directly from 3D structures is still challenging, due to the scarcity of data, the nonunique structure-sequence mapping, and the flexibility of RNA conformation.<h4>Results</h4>In this study, we propose RiboDiffusion, a generative diffusion model for RNA inverse folding that can learn the conditional distribution of RNA sequences given 3D backbone structures. Our model consists of a graph neural network-based structure module and a Transformer-based sequence module, which iteratively transforms random sequences into desired sequences. By tuning the sampling weight, our model allows for a trade-off between sequence recovery and diversity to explore more candidates. We split test sets based on RNA clustering with different cut-offs for sequence or structure similarity. Our model outperforms baselines in sequence recovery, with an average relative improvement of 11% for sequence similarity splits and 16% for structure similarity splits. Moreover, RiboDiffusion performs consistently well across various RNA length categories and RNA types. We also apply in silico folding to validate whether the generated sequences can fold into the given 3D RNA backbones. Our method could be a powerful tool for RNA design that explores the vast sequence space and finds novel solutions to 3D structural constraints.<h4>Availability and implementation</h4>The source code is available at https://github.com/ml4bio/RiboDiffusion.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2024,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btae259"
-  },
-  {
-    "id": "10.1093/bioinformatics/btae262",
-    "title": "Unveil cis-acting combinatorial mRNA motifs by interpreting deep neural network",
-    "authors": [
-      "Zeng X",
-      "Wei Z",
-      "Du Q",
-      "Li J",
-      "Xie Z",
-      "Wang X"
-    ],
-    "abstract": "<h4>Summary</h4>Cis-acting mRNA elements play a key role in the regulation of mRNA stability and translation efficiency. Revealing the interactions of these elements and their impact plays a crucial role in understanding the regulation of the mRNA translation process, which supports the development of mRNA-based medicine or vaccines. Deep neural networks (DNN) can learn complex cis-regulatory codes from RNA sequences. However, extracting these cis-regulatory codes efficiently from DNN remains a significant challenge. Here, we propose a method based on our toolkit NeuronMotif and motif mutagenesis, which not only enables the discovery of diverse and high-quality motifs but also efficiently reveals motif interactions. By interpreting deep-learning models, we have discovered several crucial motifs that impact mRNA translation efficiency and stability, as well as some unknown motifs or motif syntax, offering novel insights for biologists. Furthermore, we note that it is challenging to enrich motif syntax in datasets composed of randomly generated sequences, and they may not contain sufficient biological signals.<h4>Availability and implementation</h4>The source code and data used to produce the results and analyses presented in this manuscript are available from GitHub (https://github.com/WangLabTHU/combmotif).",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2024,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btae262"
-  },
-  {
-    "id": "10.1093/bioinformatics/btae225",
-    "title": "Fast multiple sequence alignment via multi-armed bandits",
-    "authors": [
-      "Mazooji K",
-      "Shomorony I"
-    ],
-    "abstract": "<h4>Summary</h4>Multiple sequence alignment is an important problem in computational biology with applications that include phylogeny and the detection of remote homology between protein sequences. UPP is a popular software package that constructs accurate multiple sequence alignments for large datasets based on ensembles of hidden Markov models (HMMs). A computational bottleneck for this method is a sequence-to-HMM assignment step, which relies on the precise computation of probability scores on the HMMs. In this work, we show that we can speed up this assignment step significantly by replacing these HMM probability scores with alternative scores that can be efficiently estimated. Our proposed approach utilizes a multi-armed bandit algorithm to adaptively and efficiently compute estimates of these scores. This allows us to achieve similar alignment accuracy as UPP with a significant reduction in computation time, particularly for datasets with long sequences.<h4>Availability and implementation</h4>The code used to produce the results in this paper is available on GitHub at: https://github.com/ilanshom/adaptiveMSA.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2024,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btae225"
-  },
-  {
-    "id": "10.1093/bioinformatics/btae247",
-    "title": "Closing the computational biology 'knowledge gap': Spanish Wikipedia as a case study",
-    "authors": [
-      "Sélem-Mojica N",
-      "Karakulak T",
-      "Anjum A",
-      "Pashkov A",
-      "Pérez-Estrada R",
-      "Enriquez-Guillén K",
-      "DeBlasio D",
-      "Ferreira-Gonzalez S",
-      "Medina-Rivera A",
-      "Rodrigo-Torres D",
-      "Kilpatrick AM",
-      "Welch LR",
-      "Rahman F"
-    ],
-    "abstract": "<h4>Motivation</h4>Wikipedia is a vital open educational resource in computational biology. The quality of computational biology coverage in English-language Wikipedia has improved steadily in recent years. However, there is an increasingly large 'knowledge gap' between computational biology resources in English-language Wikipedia, and Wikipedias in non-English languages. Reducing this knowledge gap by providing educational resources in non-English languages would reduce language barriers which disadvantage non-native English speaking learners across multiple dimensions in computational biology.<h4>Results</h4>Here, we provide a comprehensive assessment of computational biology coverage in Spanish-language Wikipedia, the second most accessed Wikipedia worldwide. Using Spanish-language Wikipedia as a case study, we generate quantitative and qualitative data before and after a targeted educational event, specifically, a Spanish-focused student editing competition. Our data demonstrates how such events and activities can narrow the knowledge gap between English and non-English educational resources, by improving existing articles and creating new articles. Finally, based on our analysis, we suggest ways to prioritize future initiatives to improve open educational resources in other languages.<h4>Availability and implementation</h4>Scripts for data analysis are available at: https://github.com/ISCBWikiTeam/spanish.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2024,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btae247"
-  },
-  {
-    "id": "10.1093/bioinformatics/btae248",
-    "title": "Predicting single-cell cellular responses to perturbations using cycle consistency learning",
-    "authors": [
-      "Huang W",
-      "Liu H"
-    ],
-    "abstract": "<h4>Summary</h4>Phenotype-based drug screening emerges as a powerful approach for identifying compounds that actively interact with cells. Transcriptional and proteomic profiling of cell lines and individual cells provide insights into the cellular state alterations that occur at the molecular level in response to external perturbations, such as drugs or genetic manipulations. In this paper, we propose cycleCDR, a novel deep learning framework to predict cellular response to external perturbations. We leverage the autoencoder to map the unperturbed cellular states to a latent space, in which we postulate the effects of drug perturbations on cellular states follow a linear additive model. Next, we introduce the cycle consistency constraints to ensure that unperturbed cellular state subjected to drug perturbation in the latent space would produces the perturbed cellular state through the decoder. Conversely, removal of perturbations from the perturbed cellular states can restore the unperturbed cellular state. The cycle consistency constraints and linear modeling in the latent space enable to learn transferable representations of external perturbations, so that our model can generalize well to unseen drugs during training stage. We validate our model on four different types of datasets, including bulk transcriptional responses, bulk proteomic responses, and single-cell transcriptional responses to drug/gene perturbations. The experimental results demonstrate that our model consistently outperforms existing state-of-the-art methods, indicating our method is highly versatile and applicable to a wide range of scenarios.<h4>Availability and implementation</h4>The source code is available at: https://github.com/hliulab/cycleCDR.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2024,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btae248"
-  },
-  {
-    "id": "10.1093/bioinformatics/btae209",
-    "title": "Representing mutations for predicting cancer drug response",
-    "authors": [
-      "Wall P",
-      "Ideker T"
-    ],
-    "abstract": "<h4>Motivation</h4>Predicting cancer drug response requires a comprehensive assessment of many mutations present across a tumor genome. While current drug response models generally use a binary mutated/unmutated indicator for each gene, not all mutations in a gene are equivalent.<h4>Results</h4>Here, we construct and evaluate a series of predictive models based on leading methods for quantitative mutation scoring. Such methods include VEST4 and CADD, which score the impact of a mutation on gene function, and CHASMplus, which scores the likelihood a mutation drives cancer. The resulting predictive models capture cellular responses to dabrafenib, which targets BRAF-V600 mutations, whereas models based on binary mutation status do not. Performance improvements generalize to other drugs, extending genetic indications for PIK3CA, ERBB2, EGFR, PARP1, and ABL1 inhibitors. Introducing quantitative mutation features in drug response models increases performance and mechanistic understanding.<h4>Availability and implementation</h4>Code and example datasets are available at https://github.com/pgwall/qms.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2024,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btae209"
-  },
-  {
-    "id": "10.1093/bioinformatics/btae218",
-    "title": "A learned score function improves the power of mass spectrometry database search",
-    "authors": [
-      "Ananth V",
-      "Sanders J",
-      "Yilmaz M",
-      "Wen B",
-      "Oh S",
-      "Noble WS"
-    ],
-    "abstract": "<h4>Motivation</h4>One of the core problems in the analysis of protein tandem mass spectrometry data is the peptide assignment problem: determining, for each observed spectrum, the peptide sequence that was responsible for generating the spectrum. Two primary classes of methods are used to solve this problem: database search and de novo peptide sequencing. State-of-the-art methods for de novo sequencing use machine learning methods, whereas most database search engines use hand-designed score functions to evaluate the quality of a match between an observed spectrum and a candidate peptide from the database. We hypothesized that machine learning models for de novo sequencing implicitly learn a score function that captures the relationship between peptides and spectra, and thus may be re-purposed as a score function for database search. Because this score function is trained from massive amounts of mass spectrometry data, it could potentially outperform existing, hand-designed database search tools.<h4>Results</h4>To test this hypothesis, we re-engineered Casanovo, which has been shown to provide state-of-the-art de novo sequencing capabilities, to assign scores to given peptide-spectrum pairs. We then evaluated the statistical power of this Casanovo score function, Casanovo-DB, to detect peptides on a benchmark of three mass spectrometry runs from three different species. In addition, we show that re-scoring with the Percolator post-processor benefits Casanovo-DB more than other score functions, further increasing the number of detected peptides.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2024,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btae218"
-  },
-  {
-    "id": "10.1093/bioinformatics/btae207",
-    "title": "Forseti: a mechanistic and predictive model of the splicing status of scRNA-seq reads",
-    "authors": [
-      "He D",
-      "Gao Y",
-      "Chan SS",
-      "Quintana-Parrilla N",
-      "Patro R"
-    ],
-    "abstract": "<h4>Motivation</h4>Short-read single-cell RNA-sequencing (scRNA-seq) has been used to study cellular heterogeneity, cellular fate, and transcriptional dynamics. Modeling splicing dynamics in scRNA-seq data is challenging, with inherent difficulty in even the seemingly straightforward task of elucidating the splicing status of the molecules from which sequenced fragments are drawn. This difficulty arises, in part, from the limited read length and positional biases, which substantially reduce the specificity of the sequenced fragments. As a result, the splicing status of many reads in scRNA-seq is ambiguous because of a lack of definitive evidence. We are therefore in need of methods that can recover the splicing status of ambiguous reads which, in turn, can lead to more accuracy and confidence in downstream analyses.<h4>Results</h4>We develop Forseti, a predictive model to probabilistically assign a splicing status to scRNA-seq reads. Our model has two key components. First, we train a binding affinity model to assign a probability that a given transcriptomic site is used in fragment generation. Second, we fit a robust fragment length distribution model that generalizes well across datasets deriving from different species and tissue types. Forseti combines these two trained models to predict the splicing status of the molecule of origin of reads by scoring putative fragments that associate each alignment of sequenced reads with proximate potential priming sites. Using both simulated and experimental data, we show that our model can precisely predict the splicing status of many reads and identify the true gene origin of multi-gene mapped reads.<h4>Availability and implementation</h4>Forseti and the code used for producing the results are available at https://github.com/COMBINE-lab/forseti under a BSD 3-clause license.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2024,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btae207"
   },
   {
     "id": "10.1093/bioinformatics/btae252",

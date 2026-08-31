@@ -167,147 +167,6 @@
     "paper_url": "https://doi.org/10.1093/bioinformatics/btab328"
   },
   {
-    "id": "10.1093/bioinformatics/btab306",
-    "title": "Long reads capture simultaneous enhancer-promoter methylation status for cell-type deconvolution",
-    "authors": [
-      "Margalit S",
-      "Abramson Y",
-      "Sharim H",
-      "Manber Z",
-      "Bhattacharya S",
-      "Chen YW",
-      "Vilain E",
-      "Barseghyan H",
-      "Elkon R",
-      "Sharan R",
-      "Ebenstein Y"
-    ],
-    "abstract": "<h4>Motivation</h4>While promoter methylation is associated with reinforcing fundamental tissue identities, the methylation status of distant enhancers was shown by genome-wide association studies to be a powerful determinant of cell-state and cancer. With recent availability of long reads that report on the methylation status of enhancer-promoter pairs on the same molecule, we hypothesized that probing these pairs on the single-molecule level may serve the basis for detection of rare cancerous transformations in a given cell population. We explore various analysis approaches for deconvolving cell-type mixtures based on their genome-wide enhancer-promoter methylation profiles.<h4>Results</h4>To evaluate our hypothesis we examine long-read optical methylome data for the GM12878 cell line and myoblast cell lines from two donors. We identified over 100 000 enhancer-promoter pairs that co-exist on at least 30 individual DNA molecules. We developed a detailed methodology for mixture deconvolution and applied it to estimate the proportional cell compositions in synthetic mixtures. Analysis of promoter methylation, as well as enhancer-promoter pairwise methylation, resulted in very accurate estimates. In addition, we show that pairwise methylation analysis can be generalized from deconvolving different cell types to subtle scenarios where one wishes to resolve different cell populations of the same cell-type.<h4>Availability and implementation</h4>The code used in this work to analyze single-molecule Bionano Genomics optical maps is available via the GitHub repository https://github.com/ebensteinLab/Single_molecule_methylation_in_EP.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2021,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btab306"
-  },
-  {
-    "id": "10.1093/bioinformatics/btab272",
-    "title": "EnHiC: learning fine-resolution Hi-C contact maps using a generative adversarial framework",
-    "authors": [
-      "Hu Y",
-      "Ma W"
-    ],
-    "abstract": "<h4>Motivation</h4>The high-throughput chromosome conformation capture (Hi-C) technique has enabled genome-wide mapping of chromatin interactions. However, high-resolution Hi-C data requires costly, deep sequencing; therefore, it has only been achieved for a limited number of cell types. Machine learning models based on neural networks have been developed as a remedy to this problem.<h4>Results</h4>In this work, we propose a novel method, EnHiC, for predicting high-resolution Hi-C matrices from low-resolution input data based on a generative adversarial network (GAN) framework. Inspired by non-negative matrix factorization, our model fully exploits the unique properties of Hi-C matrices and extracts rank-1 features from multi-scale low-resolution matrices to enhance the resolution. Using three human Hi-C datasets, we demonstrated that EnHiC accurately and reliably enhanced the resolution of Hi-C matrices and outperformed other GAN-based models. Moreover, EnHiC-predicted high-resolution matrices facilitated the accurate detection of topologically associated domains and fine-scale chromatin interactions.<h4>Availability and implementation</h4>EnHiC is publicly available at https://github.com/wmalab/EnHiC.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2021,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btab272"
-  },
-  {
-    "id": "10.1093/bioinformatics/btab283",
-    "title": "DECODE: a Deep-learning framework for Condensing enhancers and refining boundaries with large-scale functional assays",
-    "authors": [
-      "Chen Z",
-      "Zhang J",
-      "Liu J",
-      "Dai Y",
-      "Lee D",
-      "Min MR",
-      "Xu M",
-      "Gerstein M"
-    ],
-    "abstract": "<h4>Motivation</h4>Mapping distal regulatory elements, such as enhancers, is a cornerstone for elucidating how genetic variations may influence diseases. Previous enhancer-prediction methods have used either unsupervised approaches or supervised methods with limited training data. Moreover, past approaches have implemented enhancer discovery as a binary classification problem without accurate boundary detection, producing low-resolution annotations with superfluous regions and reducing the statistical power for downstream analyses (e.g. causal variant mapping and functional validations). Here, we addressed these challenges via a two-step model called Deep-learning framework for Condensing enhancers and refining boundaries with large-scale functional assays (DECODE). First, we employed direct enhancer-activity readouts from novel functional characterization assays, such as STARR-seq, to train a deep neural network for accurate cell-type-specific enhancer prediction. Second, to improve the annotation resolution, we implemented a weakly supervised object detection framework for enhancer localization with precise boundary detection (to a 10 bp resolution) using Gradient-weighted Class Activation Mapping.<h4>Results</h4>Our DECODE binary classifier outperformed a state-of-the-art enhancer prediction method by 24% in transgenic mouse validation. Furthermore, the object detection framework can condense enhancer annotations to only 13% of their original size, and these compact annotations have significantly higher conservation scores and genome-wide association study variant enrichments than the original predictions. Overall, DECODE is an effective tool for enhancer classification and precise localization.<h4>Availability and implementation</h4>DECODE source code and pre-processing scripts are available at decode.gersteinlab.org.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2021,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btab283"
-  },
-  {
-    "id": "10.1093/bioinformatics/btab287",
-    "title": "Umibato: estimation of time-varying microbial interaction using continuous-time regression hidden Markov model",
-    "authors": [
-      "Hosoda S",
-      "Fukunaga T",
-      "Hamada M"
-    ],
-    "abstract": "<h4>Motivation</h4>Accumulating evidence has highlighted the importance of microbial interaction networks. Methods have been developed for estimating microbial interaction networks, of which the generalized Lotka-Volterra equation (gLVE)-based method can estimate a directed interaction network. The previous gLVE-based method for estimating microbial interaction networks did not consider time-varying interactions.<h4>Results</h4>In this study, we developed unsupervised learning-based microbial interaction inference method using Bayesian estimation (Umibato), a method for estimating time-varying microbial interactions. The Umibato algorithm comprises Gaussian process regression (GPR) and a new Bayesian probabilistic model, the continuous-time regression hidden Markov model (CTRHMM). Growth rates are estimated by GPR, and interaction networks are estimated by CTRHMM. CTRHMM can estimate time-varying interaction networks using interaction states, which are defined as hidden variables. Umibato outperformed the existing methods on synthetic datasets. In addition, it yielded reasonable estimations in experiments on a mouse gut microbiota dataset, thus providing novel insights into the relationship between consumed diets and the gut microbiota.<h4>Availability and implementation</h4>The C++ and python source codes of the Umibato software are available at https://github.com/shion-h/Umibato.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2021,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btab287"
-  },
-  {
-    "id": "10.1093/bioinformatics/btab279",
-    "title": "MS2Planner: improved fragmentation spectra coverage in untargeted mass spectrometry by iterative optimized data acquisition",
-    "authors": [
-      "Zuo Z",
-      "Cao L",
-      "Nothia LF",
-      "Mohimani H"
-    ],
-    "abstract": "<h4>Motivation</h4>Untargeted mass spectrometry experiments enable the profiling of metabolites in complex biological samples. The collected fragmentation spectra are the metabolite's fingerprints that are used for molecule identification and discovery. Two main mass spectrometry strategies exist for the collection of fragmentation spectra: data-dependent acquisition (DDA) and data-independent acquisition (DIA). In the DIA strategy, all the metabolites ions in predefined mass-to-charge ratio ranges are co-isolated and co-fragmented, resulting in multiplexed fragmentation spectra that are challenging to annotate. In contrast, in the DDA strategy, fragmentation spectra are dynamically and specifically collected for the most abundant ions observed, causing redundancy and sub-optimal fragmentation spectra collection. Yet, DDA results in less multiplexed fragmentation spectra that can be readily annotated.<h4>Results</h4>We introduce the MS2Planner workflow, an Iterative Optimized Data Acquisition strategy that optimizes the number of high-quality fragmentation spectra over multiple experimental acquisitions using topological sorting. Our results showed that MS2Planner increases the annotation rate by 38.6% and is 62.5% more sensitive and 9.4% more specific compared to DDA.<h4>Availability and implementation</h4>MS2Planner code is available at https://github.com/mohimanilab/MS2Planner. The generation of the inclusion list from MS2Planner was performed with python scripts available at https://github.com/lfnothias/IODA_MS.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2021,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btab279"
-  },
-  {
-    "id": "10.1093/bioinformatics/btab288",
-    "title": "JEDI: circular RNA prediction based on junction encoders and deep interaction among splice sites",
-    "authors": [
-      "Jiang JY",
-      "Ju CJ",
-      "Hao J",
-      "Chen M",
-      "Wang W"
-    ],
-    "abstract": "<h4>Motivation</h4>Circular RNA (circRNA) is a novel class of long non-coding RNAs that have been broadly discovered in the eukaryotic transcriptome. The circular structure arises from a non-canonical splicing process, where the donor site backspliced to an upstream acceptor site. These circRNA sequences are conserved across species. More importantly, rising evidence suggests their vital roles in gene regulation and association with diseases. As the fundamental effort toward elucidating their functions and mechanisms, several computational methods have been proposed to predict the circular structure from the primary sequence. Recently, advanced computational methods leverage deep learning to capture the relevant patterns from RNA sequences and model their interactions to facilitate the prediction. However, these methods fail to fully explore positional information of splice junctions and their deep interaction.<h4>Results</h4>We present a robust end-to-end framework, Junction Encoder with Deep Interaction (JEDI), for circRNA prediction using only nucleotide sequences. JEDI first leverages the attention mechanism to encode each junction site based on deep bidirectional recurrent neural networks and then presents the novel cross-attention layer to model deep interaction among these sites for backsplicing. Finally, JEDI can not only predict circRNAs but also interpret relationships among splice sites to discover backsplicing hotspots within a gene region. Experiments demonstrate JEDI significantly outperforms state-of-the-art approaches in circRNA prediction on both isoform level and gene level. Moreover, JEDI also shows promising results on zero-shot backsplicing discovery, where none of the existing approaches can achieve.<h4>Availability and implementation</h4>The implementation of our framework is available at https://github.com/hallogameboy/JEDI.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2021,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btab288"
-  },
-  {
-    "id": "10.1093/bioinformatics/btab286",
-    "title": "CALLR: a semi-supervised cell-type annotation method for single-cell RNA sequencing data",
-    "authors": [
-      "Wei Z",
-      "Zhang S"
-    ],
-    "abstract": "<h4>Motivation</h4>Single-cell RNA sequencing (scRNA-seq) technology has been widely applied to capture the heterogeneity of different cell types within complex tissues. An essential step in scRNA-seq data analysis is the annotation of cell types. Traditional cell-type annotation is mainly clustering the cells first, and then using the aggregated cluster-level expression profiles and the marker genes to label each cluster. Such methods are greatly dependent on the clustering results, which are insufficient for accurate annotation.<h4>Results</h4>In this article, we propose a semi-supervised learning method for cell-type annotation called CALLR. It combines unsupervised learning represented by the graph Laplacian matrix constructed from all the cells and supervised learning using sparse logistic regression. By alternately updating the cell clusters and annotation labels, high annotation accuracy can be achieved. The model is formulated as an optimization problem, and a computationally efficient algorithm is developed to solve it. Experiments on 10 real datasets show that CALLR outperforms the compared (semi-)supervised learning methods, and the popular clustering methods.<h4>Availability and implementation</h4>The implementation of CALLR is available at https://github.com/MathSZhang/CALLR.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2021,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btab286"
-  },
-  {
-    "id": "10.1093/bioinformatics/btab274",
-    "title": "Resolving diverse protein-DNA footprints from exonuclease-based ChIP experiments",
-    "authors": [
-      "Biswas A",
-      "Narlikar L"
-    ],
-    "abstract": "<h4>Motivation</h4>High-throughput chromatin immunoprecipitation (ChIP) sequencing-based assays capture genomic regions associated with the profiled transcription factor (TF). ChIP-exo is a modified protocol, which uses lambda exonuclease to digest DNA close to the TF-DNA complex, in order to improve on the positional resolution of the TF-DNA contact. Because the digestion occurs in the 5'-3' orientation, the protocol produces directional footprints close to the complex, on both sides of the double stranded DNA. Like all ChIP-based methods, ChIP-exo reports a mixture of different regions associated with the TF: those bound directly to the TF as well as via intermediaries. However, the distribution of footprints are likely to be indicative of the complex forming at the DNA.<h4>Results</h4>We present ExoDiversity, which uses a model-based framework to learn a joint distribution over footprints and motifs, thus resolving the mixture of ChIP-exo footprints into diverse binding modes. It uses no prior motif or TF information and automatically learns the number of different modes from the data. We show its application on a wide range of TFs and organisms/cell-types. Because its goal is to explain the complete set of reported regions, it is able to identify co-factor TF motifs that appear in a small fraction of the dataset. Further, ExoDiversity discovers small nucleotide variations within and outside canonical motifs, which co-occur with variations in footprints, suggesting that the TF-DNA structural configuration at those regions is likely to be different. Finally, we show that detected modes have specific DNA shape features and conservation signals, giving insights into the structure and function of the putative TF-DNA complexes.<h4>Availability and implementation</h4>The code for ExoDiversity is available on https://github.com/NarlikarLab/exoDIVERSITY.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2021,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btab274"
-  },
-  {
-    "id": "10.1093/bioinformatics/btab284",
-    "title": "DIAmeter: matching peptides to data-independent acquisition mass spectrometry data",
-    "authors": [
-      "Lu YY",
-      "Bilmes J",
-      "Rodriguez-Mias RA",
-      "Villén J",
-      "Noble WS"
-    ],
-    "abstract": "<h4>Motivation</h4>Tandem mass spectrometry data acquired using data independent acquisition (DIA) is challenging to interpret because the data exhibits complex structure along both the mass-to-charge (m/z) and time axes. The most common approach to analyzing this type of data makes use of a library of previously observed DIA data patterns (a 'spectral library'), but this approach is expensive because the libraries do not typically generalize well across laboratories.<h4>Results</h4>Here, we propose DIAmeter, a search engine that detects peptides in DIA data using only a peptide sequence database. Although some existing library-free DIA analysis methods (i) support data generated using both wide and narrow isolation windows, (ii) detect peptides containing post-translational modifications, (iii) analyze data from a variety of instrument platforms and (iv) are capable of detecting peptides even in the absence of detectable signal in the survey (MS1) scan, DIAmeter is the only method that offers all four capabilities in a single tool.<h4>Availability and implementation</h4>The open source, Apache licensed source code is available as part of the Crux mass spectrometry analysis toolkit (http://crux.ms).<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2021,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btab284"
-  },
-  {
     "id": "10.1093/bioinformatics/btab305",
     "title": "Haplotype-based membership inference from summary genomic data",
     "authors": [
@@ -453,6 +312,147 @@
     "conference": "ismb",
     "year": 2021,
     "paper_url": "https://doi.org/10.1093/bioinformatics/btab329"
+  },
+  {
+    "id": "10.1093/bioinformatics/btab306",
+    "title": "Long reads capture simultaneous enhancer-promoter methylation status for cell-type deconvolution",
+    "authors": [
+      "Margalit S",
+      "Abramson Y",
+      "Sharim H",
+      "Manber Z",
+      "Bhattacharya S",
+      "Chen YW",
+      "Vilain E",
+      "Barseghyan H",
+      "Elkon R",
+      "Sharan R",
+      "Ebenstein Y"
+    ],
+    "abstract": "<h4>Motivation</h4>While promoter methylation is associated with reinforcing fundamental tissue identities, the methylation status of distant enhancers was shown by genome-wide association studies to be a powerful determinant of cell-state and cancer. With recent availability of long reads that report on the methylation status of enhancer-promoter pairs on the same molecule, we hypothesized that probing these pairs on the single-molecule level may serve the basis for detection of rare cancerous transformations in a given cell population. We explore various analysis approaches for deconvolving cell-type mixtures based on their genome-wide enhancer-promoter methylation profiles.<h4>Results</h4>To evaluate our hypothesis we examine long-read optical methylome data for the GM12878 cell line and myoblast cell lines from two donors. We identified over 100 000 enhancer-promoter pairs that co-exist on at least 30 individual DNA molecules. We developed a detailed methodology for mixture deconvolution and applied it to estimate the proportional cell compositions in synthetic mixtures. Analysis of promoter methylation, as well as enhancer-promoter pairwise methylation, resulted in very accurate estimates. In addition, we show that pairwise methylation analysis can be generalized from deconvolving different cell types to subtle scenarios where one wishes to resolve different cell populations of the same cell-type.<h4>Availability and implementation</h4>The code used in this work to analyze single-molecule Bionano Genomics optical maps is available via the GitHub repository https://github.com/ebensteinLab/Single_molecule_methylation_in_EP.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2021,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btab306"
+  },
+  {
+    "id": "10.1093/bioinformatics/btab272",
+    "title": "EnHiC: learning fine-resolution Hi-C contact maps using a generative adversarial framework",
+    "authors": [
+      "Hu Y",
+      "Ma W"
+    ],
+    "abstract": "<h4>Motivation</h4>The high-throughput chromosome conformation capture (Hi-C) technique has enabled genome-wide mapping of chromatin interactions. However, high-resolution Hi-C data requires costly, deep sequencing; therefore, it has only been achieved for a limited number of cell types. Machine learning models based on neural networks have been developed as a remedy to this problem.<h4>Results</h4>In this work, we propose a novel method, EnHiC, for predicting high-resolution Hi-C matrices from low-resolution input data based on a generative adversarial network (GAN) framework. Inspired by non-negative matrix factorization, our model fully exploits the unique properties of Hi-C matrices and extracts rank-1 features from multi-scale low-resolution matrices to enhance the resolution. Using three human Hi-C datasets, we demonstrated that EnHiC accurately and reliably enhanced the resolution of Hi-C matrices and outperformed other GAN-based models. Moreover, EnHiC-predicted high-resolution matrices facilitated the accurate detection of topologically associated domains and fine-scale chromatin interactions.<h4>Availability and implementation</h4>EnHiC is publicly available at https://github.com/wmalab/EnHiC.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2021,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btab272"
+  },
+  {
+    "id": "10.1093/bioinformatics/btab283",
+    "title": "DECODE: a Deep-learning framework for Condensing enhancers and refining boundaries with large-scale functional assays",
+    "authors": [
+      "Chen Z",
+      "Zhang J",
+      "Liu J",
+      "Dai Y",
+      "Lee D",
+      "Min MR",
+      "Xu M",
+      "Gerstein M"
+    ],
+    "abstract": "<h4>Motivation</h4>Mapping distal regulatory elements, such as enhancers, is a cornerstone for elucidating how genetic variations may influence diseases. Previous enhancer-prediction methods have used either unsupervised approaches or supervised methods with limited training data. Moreover, past approaches have implemented enhancer discovery as a binary classification problem without accurate boundary detection, producing low-resolution annotations with superfluous regions and reducing the statistical power for downstream analyses (e.g. causal variant mapping and functional validations). Here, we addressed these challenges via a two-step model called Deep-learning framework for Condensing enhancers and refining boundaries with large-scale functional assays (DECODE). First, we employed direct enhancer-activity readouts from novel functional characterization assays, such as STARR-seq, to train a deep neural network for accurate cell-type-specific enhancer prediction. Second, to improve the annotation resolution, we implemented a weakly supervised object detection framework for enhancer localization with precise boundary detection (to a 10 bp resolution) using Gradient-weighted Class Activation Mapping.<h4>Results</h4>Our DECODE binary classifier outperformed a state-of-the-art enhancer prediction method by 24% in transgenic mouse validation. Furthermore, the object detection framework can condense enhancer annotations to only 13% of their original size, and these compact annotations have significantly higher conservation scores and genome-wide association study variant enrichments than the original predictions. Overall, DECODE is an effective tool for enhancer classification and precise localization.<h4>Availability and implementation</h4>DECODE source code and pre-processing scripts are available at decode.gersteinlab.org.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2021,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btab283"
+  },
+  {
+    "id": "10.1093/bioinformatics/btab287",
+    "title": "Umibato: estimation of time-varying microbial interaction using continuous-time regression hidden Markov model",
+    "authors": [
+      "Hosoda S",
+      "Fukunaga T",
+      "Hamada M"
+    ],
+    "abstract": "<h4>Motivation</h4>Accumulating evidence has highlighted the importance of microbial interaction networks. Methods have been developed for estimating microbial interaction networks, of which the generalized Lotka-Volterra equation (gLVE)-based method can estimate a directed interaction network. The previous gLVE-based method for estimating microbial interaction networks did not consider time-varying interactions.<h4>Results</h4>In this study, we developed unsupervised learning-based microbial interaction inference method using Bayesian estimation (Umibato), a method for estimating time-varying microbial interactions. The Umibato algorithm comprises Gaussian process regression (GPR) and a new Bayesian probabilistic model, the continuous-time regression hidden Markov model (CTRHMM). Growth rates are estimated by GPR, and interaction networks are estimated by CTRHMM. CTRHMM can estimate time-varying interaction networks using interaction states, which are defined as hidden variables. Umibato outperformed the existing methods on synthetic datasets. In addition, it yielded reasonable estimations in experiments on a mouse gut microbiota dataset, thus providing novel insights into the relationship between consumed diets and the gut microbiota.<h4>Availability and implementation</h4>The C++ and python source codes of the Umibato software are available at https://github.com/shion-h/Umibato.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2021,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btab287"
+  },
+  {
+    "id": "10.1093/bioinformatics/btab279",
+    "title": "MS2Planner: improved fragmentation spectra coverage in untargeted mass spectrometry by iterative optimized data acquisition",
+    "authors": [
+      "Zuo Z",
+      "Cao L",
+      "Nothia LF",
+      "Mohimani H"
+    ],
+    "abstract": "<h4>Motivation</h4>Untargeted mass spectrometry experiments enable the profiling of metabolites in complex biological samples. The collected fragmentation spectra are the metabolite's fingerprints that are used for molecule identification and discovery. Two main mass spectrometry strategies exist for the collection of fragmentation spectra: data-dependent acquisition (DDA) and data-independent acquisition (DIA). In the DIA strategy, all the metabolites ions in predefined mass-to-charge ratio ranges are co-isolated and co-fragmented, resulting in multiplexed fragmentation spectra that are challenging to annotate. In contrast, in the DDA strategy, fragmentation spectra are dynamically and specifically collected for the most abundant ions observed, causing redundancy and sub-optimal fragmentation spectra collection. Yet, DDA results in less multiplexed fragmentation spectra that can be readily annotated.<h4>Results</h4>We introduce the MS2Planner workflow, an Iterative Optimized Data Acquisition strategy that optimizes the number of high-quality fragmentation spectra over multiple experimental acquisitions using topological sorting. Our results showed that MS2Planner increases the annotation rate by 38.6% and is 62.5% more sensitive and 9.4% more specific compared to DDA.<h4>Availability and implementation</h4>MS2Planner code is available at https://github.com/mohimanilab/MS2Planner. The generation of the inclusion list from MS2Planner was performed with python scripts available at https://github.com/lfnothias/IODA_MS.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2021,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btab279"
+  },
+  {
+    "id": "10.1093/bioinformatics/btab288",
+    "title": "JEDI: circular RNA prediction based on junction encoders and deep interaction among splice sites",
+    "authors": [
+      "Jiang JY",
+      "Ju CJ",
+      "Hao J",
+      "Chen M",
+      "Wang W"
+    ],
+    "abstract": "<h4>Motivation</h4>Circular RNA (circRNA) is a novel class of long non-coding RNAs that have been broadly discovered in the eukaryotic transcriptome. The circular structure arises from a non-canonical splicing process, where the donor site backspliced to an upstream acceptor site. These circRNA sequences are conserved across species. More importantly, rising evidence suggests their vital roles in gene regulation and association with diseases. As the fundamental effort toward elucidating their functions and mechanisms, several computational methods have been proposed to predict the circular structure from the primary sequence. Recently, advanced computational methods leverage deep learning to capture the relevant patterns from RNA sequences and model their interactions to facilitate the prediction. However, these methods fail to fully explore positional information of splice junctions and their deep interaction.<h4>Results</h4>We present a robust end-to-end framework, Junction Encoder with Deep Interaction (JEDI), for circRNA prediction using only nucleotide sequences. JEDI first leverages the attention mechanism to encode each junction site based on deep bidirectional recurrent neural networks and then presents the novel cross-attention layer to model deep interaction among these sites for backsplicing. Finally, JEDI can not only predict circRNAs but also interpret relationships among splice sites to discover backsplicing hotspots within a gene region. Experiments demonstrate JEDI significantly outperforms state-of-the-art approaches in circRNA prediction on both isoform level and gene level. Moreover, JEDI also shows promising results on zero-shot backsplicing discovery, where none of the existing approaches can achieve.<h4>Availability and implementation</h4>The implementation of our framework is available at https://github.com/hallogameboy/JEDI.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2021,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btab288"
+  },
+  {
+    "id": "10.1093/bioinformatics/btab286",
+    "title": "CALLR: a semi-supervised cell-type annotation method for single-cell RNA sequencing data",
+    "authors": [
+      "Wei Z",
+      "Zhang S"
+    ],
+    "abstract": "<h4>Motivation</h4>Single-cell RNA sequencing (scRNA-seq) technology has been widely applied to capture the heterogeneity of different cell types within complex tissues. An essential step in scRNA-seq data analysis is the annotation of cell types. Traditional cell-type annotation is mainly clustering the cells first, and then using the aggregated cluster-level expression profiles and the marker genes to label each cluster. Such methods are greatly dependent on the clustering results, which are insufficient for accurate annotation.<h4>Results</h4>In this article, we propose a semi-supervised learning method for cell-type annotation called CALLR. It combines unsupervised learning represented by the graph Laplacian matrix constructed from all the cells and supervised learning using sparse logistic regression. By alternately updating the cell clusters and annotation labels, high annotation accuracy can be achieved. The model is formulated as an optimization problem, and a computationally efficient algorithm is developed to solve it. Experiments on 10 real datasets show that CALLR outperforms the compared (semi-)supervised learning methods, and the popular clustering methods.<h4>Availability and implementation</h4>The implementation of CALLR is available at https://github.com/MathSZhang/CALLR.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2021,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btab286"
+  },
+  {
+    "id": "10.1093/bioinformatics/btab274",
+    "title": "Resolving diverse protein-DNA footprints from exonuclease-based ChIP experiments",
+    "authors": [
+      "Biswas A",
+      "Narlikar L"
+    ],
+    "abstract": "<h4>Motivation</h4>High-throughput chromatin immunoprecipitation (ChIP) sequencing-based assays capture genomic regions associated with the profiled transcription factor (TF). ChIP-exo is a modified protocol, which uses lambda exonuclease to digest DNA close to the TF-DNA complex, in order to improve on the positional resolution of the TF-DNA contact. Because the digestion occurs in the 5'-3' orientation, the protocol produces directional footprints close to the complex, on both sides of the double stranded DNA. Like all ChIP-based methods, ChIP-exo reports a mixture of different regions associated with the TF: those bound directly to the TF as well as via intermediaries. However, the distribution of footprints are likely to be indicative of the complex forming at the DNA.<h4>Results</h4>We present ExoDiversity, which uses a model-based framework to learn a joint distribution over footprints and motifs, thus resolving the mixture of ChIP-exo footprints into diverse binding modes. It uses no prior motif or TF information and automatically learns the number of different modes from the data. We show its application on a wide range of TFs and organisms/cell-types. Because its goal is to explain the complete set of reported regions, it is able to identify co-factor TF motifs that appear in a small fraction of the dataset. Further, ExoDiversity discovers small nucleotide variations within and outside canonical motifs, which co-occur with variations in footprints, suggesting that the TF-DNA structural configuration at those regions is likely to be different. Finally, we show that detected modes have specific DNA shape features and conservation signals, giving insights into the structure and function of the putative TF-DNA complexes.<h4>Availability and implementation</h4>The code for ExoDiversity is available on https://github.com/NarlikarLab/exoDIVERSITY.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2021,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btab274"
+  },
+  {
+    "id": "10.1093/bioinformatics/btab284",
+    "title": "DIAmeter: matching peptides to data-independent acquisition mass spectrometry data",
+    "authors": [
+      "Lu YY",
+      "Bilmes J",
+      "Rodriguez-Mias RA",
+      "Villén J",
+      "Noble WS"
+    ],
+    "abstract": "<h4>Motivation</h4>Tandem mass spectrometry data acquired using data independent acquisition (DIA) is challenging to interpret because the data exhibits complex structure along both the mass-to-charge (m/z) and time axes. The most common approach to analyzing this type of data makes use of a library of previously observed DIA data patterns (a 'spectral library'), but this approach is expensive because the libraries do not typically generalize well across laboratories.<h4>Results</h4>Here, we propose DIAmeter, a search engine that detects peptides in DIA data using only a peptide sequence database. Although some existing library-free DIA analysis methods (i) support data generated using both wide and narrow isolation windows, (ii) detect peptides containing post-translational modifications, (iii) analyze data from a variety of instrument platforms and (iv) are capable of detecting peptides even in the absence of detectable signal in the survey (MS1) scan, DIAmeter is the only method that offers all four capabilities in a single tool.<h4>Availability and implementation</h4>The open source, Apache licensed source code is available as part of the Crux mass spectrometry analysis toolkit (http://crux.ms).<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2021,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btab284"
   },
   {
     "id": "10.1093/bioinformatics/btab300",
