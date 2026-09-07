@@ -340,179 +340,6 @@
     "paper_url": "https://doi.org/10.1093/bioinformatics/btag223"
   },
   {
-    "id": "10.1093/bioinformatics/btag278",
-    "title": "Quantifying domain-specific relevance of computational biology Wikipedia articles using TF-IDF and cosine similarity",
-    "authors": [
-      "Pradeep Menon A",
-      "Davis T",
-      "Hegde M",
-      "Näpflin NC",
-      "Anjum A",
-      "Barman S",
-      "DeBlasio D",
-      "Eranti P",
-      "Nebel JC",
-      "Sélem-Mojica N",
-      "Shome S",
-      "Welch LR",
-      "Kilpatrick AM",
-      "Rahman F"
-    ],
-    "abstract": "<h4>Motivation</h4>Wikipedia is one of the world's most visited websites and serves as the principal open educational resource for computational biology. However, identifying which articles are most relevant to distinct sub-disciplines of computational biology remains largely subjective.<h4>Results</h4>This study collected short descriptions for 22 Communities of Special Interest (COSI) groups maintained by the International Society for Computational Biology and downloaded 1536 computational biology articles from English Wikipedia. Following standard text preprocessing, COSI descriptions and Wikipedia articles were embedded in a common TF-IDF vector space. Semantic relatedness was quantified using cosine similarity, yielding a real-valued relevance matrix that maps each COSI to the most pertinent computational biology articles. The resulting scores, typically low in absolute value, captured nuanced differences: general-interest pages such as 'Computational biology' and 'Bioinformatics' ranked highest, whereas niche pages showed high relevance only for specific COSIs. Unsupervised analysis using principal component analysis, k-nearest neighbours, and Leiden community detection revealed clusters of articles corresponding to the particular COSIs and highlighted inter-COSI relationships. This automated pipeline reduces bias compared with manual tagging and enables more precise curation of domain-specific educational resources.<h4>Availability and implementation</h4>The relevance matrix developed in this study is available in the Zenodo repository (doi: 10.5281/zenodo.18311878).",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2026,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btag278"
-  },
-  {
-    "id": "10.1093/bioinformatics/btag232",
-    "title": "NPBIP: predicting binding preferences of uncharacterized nucleic-acid-binding proteins",
-    "authors": [
-      "Shimshoviz N",
-      "Butto S",
-      "Orenstein Y"
-    ],
-    "abstract": "<h4>Motivation</h4>Nucleic-acid-binding proteins (NBPs) are crucial regulators of gene expression, recognizing specific RNA or DNA binding sites. While high-throughput experiments have generated vast amounts of binding data, a significant challenge remains in predicting binding affinities of a novel query NBP to any nucleic-acid sequence. Current computational methods often require prior experimental data for the query NBP or are limited to predictions over predefined short RNA or DNA sequences.<h4>Results</h4>We present New Protein Binding Intensity Predictor (NPBIP), a new method to predict the binding of a query NBP to any RNA or DNA sequence by integrating two complementary components: (i) a similarity-based method that computes a weighted mean of binding predictions over the training NBPs; and (ii) a deep-learning model that combines a large protein language model with a hybrid convolutional-transformer network to predict binding directly. We trained and evaluated NPBIP on 420 RNA-binding protein (RBP) experiments and 464 DNA-binding protein (DBP) experiments. NPBIP significantly outperformed each of its components and all competing baselines, achieving a mean Pearson correlation of 0.414±0.20 and 0.581±0.22 over the RNA- and DNA-binding experiments, respectively. This prediction performance was statistically comparable to an experimental k-mer upper bound over RBPs and statistically superior to an upper bound over DBPs. Furthermore, our interpretability analysis demonstrates that NPBIP recovers canonical binding motifs for both RBPs and DBPs, providing biological validation for the model's predictions.<h4>Availability and implementation</h4>Source code and datasets are publicly available at https://github.com/OrensteinLab/NPBIP.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2026,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btag232"
-  },
-  {
-    "id": "10.1093/bioinformatics/btag279",
-    "title": "ISMB 2026 Proceedings",
-    "authors": [
-      "Ma J",
-      "Borgwardt K"
-    ],
-    "abstract": "This editorial describes the review and selection process of full-length, original research papers submitted to the Proceedings track of the ISMB 2026 conference.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2026,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btag279"
-  },
-  {
-    "id": "10.1093/bioinformatics/btag258",
-    "title": "OrgNet+: towards robust protein stability prediction with convolutional neural networks",
-    "authors": [
-      "Sarycheva A",
-      "Shumilov A",
-      "Popov P"
-    ],
-    "abstract": "<h4>Motivation</h4>Predicting the effect of single-point mutations on protein stability is a central problem in molecular biology and protein engineering. Recent structure-based deep learning methods, particularly 3D convolutional neural networks (3D CNNs), have achieved strong predictive performance by leveraging high-resolution protein structures. However, proteins exist as heterogeneous conformational ensembles rather than single static structures, and the impact of conformational flexibility on structure-based ΔΔG predictors remains poorly characterized. Consequently, current models may yield unstable or even contradictory predictions when evaluated across alternative, yet equally plausible, conformations of the same protein.<h4>Results</h4>We introduce OrgNet+, a conformational ensemble-aware and orientation-gnostic framework that explicitly incorporates protein structure flexibility during training. OrgNet+ is trained on augmented datasets comprising diverse conformational ensembles generated using a comprehensive set of molecular modelling methods: normal mode analysis, molecular dynamics, Monte-Carlo simulations, and a generative deep learning model. Across all ensemble types, OrgNet+ substantially reduces intra-ensemble prediction variance while simultaneously improving predictive accuracy. The improved performance extends to standard single-reference-structure benchmarks, even though OrgNet+ was trained exclusively on conformational ensembles and never exposed to the reference experimental structures.<h4>Availability and implementation</h4>OrgNet+ is available at https://github.com/i-Molecule/OrgNet.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2026,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btag258"
-  },
-  {
-    "id": "10.1093/bioinformatics/btag220",
-    "title": "Riemannian metric learning for alignment of spatial multiomics",
-    "authors": [
-      "Halmos P",
-      "Xia Y",
-      "Raphael BJ"
-    ],
-    "abstract": "<h4>Motivation</h4>Recent spatial technologies measure the transcriptome, epigenome, proteome, metabolome, and other modalities from thousands of cells across a tissue. Most assays typically profile only one modality from a tissue slice, raising the question of how to align spatial data from heterogeneous feature spaces. While multiple approaches have been developed for multi-modal integration of single-cell datasets, few existing techniques perform spatial alignment across arbitrary modalities incorporating both spatial and feature information.<h4>Results</h4>We introduce Manifold Gromov-Wasserstein (MGW), a metric-learning framework that exploits the product structure of spatial multiomics to infer modality-specific Riemannian pull-back metrics with neural fields. MGW aligns Riemannian distances induced by these metrics via Gromov-Wasserstein optimal transport, yielding a hyperparameter-free cost across arbitrary modalities sharing a spatial base. The formulation enjoys theoretical invariances-including orthogonal transformations of the spatial and feature domains as well as global feature scalings. We demonstrate the advantages of MGW on multiple alignment tasks, including Stereo-Seq spatiotemporal transcriptomics of mouse embryo, Xenium and Visium spatial transcriptomics of colorectal cancer, and spatial metabolomics-transcriptomics from human striatum and kidney cancer. MGW recovers biologically meaningful correspondences and spatially coherent tissue structures, outperforming existing OT and non-OT based multi-modal baselines.<h4>Availability and implementation</h4>Software is available at https://github.com/raphael-group/MGW.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2026,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btag220"
-  },
-  {
-    "id": "10.1093/bioinformatics/btag210",
-    "title": "CROP: a feature-independent context-aware method for CRISPR-Cas9 frameshift prediction",
-    "authors": [
-      "Tziony I",
-      "Orenstein Y"
-    ],
-    "abstract": "<h4>Motivation</h4>The CRISPR-Cas9 complex has revolutionized genome-editing technologies. By designing a 20 nt-long guide RNA, a Cas9 nuclease can be guided to cleave almost any genomic target site (followed by NGG). The cleavage induces double-stranded DNA breaks, which are then repaired by cellular pathways. Accurate CRISPR-Cas9 repair-outcome prediction is essential for designing guide RNAs with desired genomic effects, such as gene knockout. A central challenge is quantifying the rate of frameshifts, i.e. repair-outcomes that lead to a change in the local length that is not a multiple of three. Previous methods for frameshift-rate prediction were trained on only a few experimental or cellular contexts, mostly relied on manually defined microhomology features, and were limited by sparse features and class labels.<h4>Results</h4>We developed CROP, a feature-independent context-aware repair-outcome prediction method. By aggregating specific repair outcomes as Δlength classes, CROP overcomes class sparsity. We designed CROP to work with variable input sequence lengths and output classes to utilize multiple datasets simultaneously. We benchmarked CROP against state-of-the-art repair-outcome prediction methods over 18 datasets, which we curated and standardized from various studies. Across all datasets, CROP outperformed all competing methods in frameshift-rate prediction. We performed cross-experiment and cross-cellular frameshift-rate predictions to investigate the generalizability of repair mechanisms. Finally, we show that CROP learned microhomology principles from raw sequences without explicit feature engineering, establishing an end-to-end architecture for CRISPR-Cas9 repair-outcome prediction that learns from multiple datasets.<h4>Availability and implementation</h4>CROP is available at https://github.com/OrensteinLab/CROP.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2026,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btag210"
-  },
-  {
-    "id": "10.1093/bioinformatics/btag245",
-    "title": "CAMUS: scalable phylogenetic network estimation",
-    "authors": [
-      "Willson J",
-      "Warnow T"
-    ],
-    "abstract": "<h4>Motivation</h4>Phylogenetic networks are models of evolution that go beyond trees, and so represent reticulate events such as horizontal gene transfer or hybridization, which are frequently found in many taxa. Yet, the estimation of phylogenetic networks is extremely computationally challenging, and nearly all methods are limited to very small datasets with perhaps 10-15 species (some limited to even smaller numbers).<h4>Results</h4>We introduce Constrained Algorithm Maximizing qUartetS (CAMUS), a scalable method for phylogenetic network estimation. CAMUS takes an input rooted constraint tree T as well as a set Q of unrooted quartet trees and returns a level-1 phylogenetic network N that is built upon T through the addition of edges, in order to maximize the number of quartet trees in Q that are induced in N. We perform a simulation study under the Network Multi-Species Coalescent and show that a simple pipeline using CAMUS provides high accuracy and outstanding speed and scalability, in comparison to two leading methods, PhyloNet-MPL used with a fixed tree and SNaQ. CAMUS is slightly less accurate than PhyloNet-MPL used without a fixed tree, but is much faster (minutes instead of hours) and can complete on inputs with 201 species while PhyloNet-MPL fails to complete on the inputs with more than 51 species.<h4>Availability and implementation</h4>The source code is available at https://github.com/jsdoublel/camus.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2026,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btag245"
-  },
-  {
-    "id": "10.1093/bioinformatics/btag242",
-    "title": "Bridging the phenotype-target gap for molecular generation via multi-objective reinforcement learning",
-    "authors": [
-      "Guo H",
-      "Liu H"
-    ],
-    "abstract": "<h4>Motivation</h4>The generation of high-quality candidate molecules remains a central challenge in AI-driven drug design. Current phenotype-based and target-based strategies each suffer limitations, either incurring high experimental costs or overlooking system-level cellular responses. To bridge this gap, we propose XMolRL, a novel generative framework that synergistically integrates phenotypic and target-specific cues for de novo molecular generation.<h4>Results</h4>The phenotype-guided generator is first pretrained on expansive drug-induced transcriptional profiles and subsequently fine-tuned via multi-objective reinforcement learning (RL). Crucially, the reward function fuses docking affinity and drug-likeness scores, augmented with ranking loss, prior-likelihood regularization, and entropy maximization. The multi-objective RL steers the model toward chemotypes that are simultaneously potent, diverse, and aligned with the specified phenotypic effects. Extensive experiments demonstrate XMolRL's superior performance over state-of-the-art phenotype-based and target-based models across multiple well-characterized targets. Our generated molecules exhibit favorable drug-like properties, high target affinity, and inhibitory potency (IC50) against cancer cells. This unified framework showcases the synergistic potential of combining phenotype-guided and target-aware strategies, offering a more effective solution for de novo drug discovery.<h4>Availability and implementation</h4>The source code and datasets are available at: https://github.com/hliulab/XMolRL. The archived version of the source code and test data can be found at: https://doi.org/10.5281/zenodo.19607680.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2026,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btag242"
-  },
-  {
-    "id": "10.1093/bioinformatics/btag225",
-    "title": "Detecting and reconstructing breakage-fusion-bridge cycles from long-read sequencing using BFBArchitect",
-    "authors": [
-      "Li C",
-      "Raeisi Dehkordi S",
-      "Muliaditan D",
-      "DasGupta R",
-      "Luebeck J",
-      "Zhu K",
-      "Bafna V"
-    ],
-    "abstract": "<h4>Motivation</h4>Focal oncogene amplification is a key driver of tumor progression. Remarkably, the increased pathology depends on the context-whether the amplification is extrachromosomal (ecDNA) or intrachromosomal. EcDNA amplifications promote heterogeneity, therapy resistance, and poor prognosis. Focal intrachromosomal amplifications often arise through breakage-fusion-bridge (BFB) cycles, which produce highly rearranged but stable chromosomes. Distinguishing BFB from ecDNA remains challenging due to overlapping genomic signatures. To address this, we present BFBArchitect, a computational method leveraging long-read Oxford Nanopore data to identify BFB sequences consistent with both copy number and structural variations.<h4>Results</h4>We provide a novel combinatorial characterization of BFB, which naturally leads to an integer linear programming (ILP) optimization. The ILP optimization generates a BFB sequence that best explains experimentally observed copy numbers and foldback structural variants. We implement this idea in a tool called BFBArchitect, which achieves near-perfect accuracy in distinguishing BFB from non-BFB structures in extensive simulations as well as on 18 validated tumor samples. Moreover, it generates sequence-level BFB reconstructions that provide mechanistic insights into BFB formation, including repair mechanisms with template switching and other structural variants, and recapture of telomere for stabilization.<h4>Availability and implementation</h4>BFBArchitect is available at https://github.com/AmpliconSuite/BFBArchitect.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2026,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btag225"
-  },
-  {
-    "id": "10.1093/bioinformatics/btag291",
-    "title": "A novel transformer model of protein domains for viral taxonomy classification",
-    "authors": [
-      "Shin J",
-      "Xiao Q",
-      "Ye Y"
-    ],
-    "abstract": "<h4>Motivation</h4>Viruses with carefully curated taxonomic assignments (such as those in the ICTV taxonomy) still represent only a small fraction of viruses identified through sequencing data from virome or microbiome projects. It is therefore critical to develop methods that can assign viruses at multiple taxonomic ranks, so that a virus deemed novel at a given rank may still be placed into a higher-level taxon. Sequence-similarity-based approaches can classify viruses that share substantial genomic similarity with known viruses (e.g. those belonging to the same species or genus); however, their performance drops significantly when applied to more divergent viruses. Recent deep learning models, such as ViTax, which utilize DNA language models, aim to address these limitations, but their performance also degrades when applied to novel viruses lacking genus-level similarity to known references. Proteins are more conserved than genomic sequences, and the multiple proteins encoded by a virus can be leveraged to reveal evolutionary relationships among viruses.<h4>Results</h4>We propose a new tool, D2T (Domain-to-Taxonomy), that leverages recent advances in protein language models to improve viral taxonomic assignment. D2T represents a virus as a sequence of protein domain tokens and learns a transformer-based model for taxonomic classification. Experiments on multiple closed-set and open-set datasets show that D2T excels at assigning higher-level taxonomic labels (family and above). Furthermore, by combining D2T with Kraken2, which performs well at the genus level, the hybrid method (K+D2T) achieves accurate viral taxonomic classification across multiple taxonomic ranks.<h4>Availability and implementation</h4>D2T is available as a GitHub repository at https://github.com/mgtools/D2T.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2026,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btag291"
-  },
-  {
-    "id": "10.1093/bioinformatics/btag250",
-    "title": "Agentomics: an agentic system that autonomously develops novel state-of-the-art solutions for biomedical machine learning tasks",
-    "authors": [
-      "Martinek V",
-      "Gariboldi A",
-      "Tzimotoudis D",
-      "Galea M",
-      "Zacharopoulou E",
-      "Escudero AA",
-      "Blake E",
-      "Čechák D",
-      "Cassar L",
-      "Balestrucci A",
-      "Alexiou P"
-    ],
-    "abstract": "<h4>Motivation</h4>Extracting knowledge from biomedical data is crucial for advancing our understanding of biological systems and developing novel therapeutics. The quantity, quality, and resolution of biomedical data constantly evolves, requiring the automation of biomedical machine learning (ML). Existing Automated ML tools lack flexibility, while large language models (LLMs) struggle to consistently deliver reproducible machine learning codebases, and existing LLM Agent-powered solutions lag behind human-engineered ML models.<h4>Results</h4>Here, we introduce Agentomics, an autonomous LLM-powered agentic system for end-to-end ML experimentation. Given a biomedical dataset, Agentomics implements various ML modeling strategies, and produces a ready-to-use ML model. Agentomics introduces strict validation checkpoints for standard ML development steps, allowing gradual development on top of working code with defined interfaces and validated artifacts. Further, it offers native support for biomedical foundation models that can be leveraged during experimentation. The generic nature of Agentomics allows the user to create ML solutions for a large variety of datasets and use various LLMs. We evaluate Agentomics across 20 datasets from the domains of Protein Engineering, Drug Discovery, and Regulatory Genomics. When benchmarked against other agentic systems, Agentomics outperformed them in all tested domains. When benchmarked against human expert solutions, Agentomics generated novel state-of-the-art models for 11/20 established benchmark datasets.<h4>Availability and implementation</h4>Agentomics is implemented in Python. Source code and documentation are freely available at: https://github.com/BioGeMT/Agentomics-ML.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2026,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btag250"
-  },
-  {
     "id": "10.1093/bioinformatics/btag233",
     "title": "GATSBI: improving context-aware protein embeddings through biologically motivated data splits",
     "authors": [
@@ -688,6 +515,179 @@
     "conference": "ismb",
     "year": 2026,
     "paper_url": "https://doi.org/10.1093/bioinformatics/btag274"
+  },
+  {
+    "id": "10.1093/bioinformatics/btag278",
+    "title": "Quantifying domain-specific relevance of computational biology Wikipedia articles using TF-IDF and cosine similarity",
+    "authors": [
+      "Pradeep Menon A",
+      "Davis T",
+      "Hegde M",
+      "Näpflin NC",
+      "Anjum A",
+      "Barman S",
+      "DeBlasio D",
+      "Eranti P",
+      "Nebel JC",
+      "Sélem-Mojica N",
+      "Shome S",
+      "Welch LR",
+      "Kilpatrick AM",
+      "Rahman F"
+    ],
+    "abstract": "<h4>Motivation</h4>Wikipedia is one of the world's most visited websites and serves as the principal open educational resource for computational biology. However, identifying which articles are most relevant to distinct sub-disciplines of computational biology remains largely subjective.<h4>Results</h4>This study collected short descriptions for 22 Communities of Special Interest (COSI) groups maintained by the International Society for Computational Biology and downloaded 1536 computational biology articles from English Wikipedia. Following standard text preprocessing, COSI descriptions and Wikipedia articles were embedded in a common TF-IDF vector space. Semantic relatedness was quantified using cosine similarity, yielding a real-valued relevance matrix that maps each COSI to the most pertinent computational biology articles. The resulting scores, typically low in absolute value, captured nuanced differences: general-interest pages such as 'Computational biology' and 'Bioinformatics' ranked highest, whereas niche pages showed high relevance only for specific COSIs. Unsupervised analysis using principal component analysis, k-nearest neighbours, and Leiden community detection revealed clusters of articles corresponding to the particular COSIs and highlighted inter-COSI relationships. This automated pipeline reduces bias compared with manual tagging and enables more precise curation of domain-specific educational resources.<h4>Availability and implementation</h4>The relevance matrix developed in this study is available in the Zenodo repository (doi: 10.5281/zenodo.18311878).",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btag278"
+  },
+  {
+    "id": "10.1093/bioinformatics/btag232",
+    "title": "NPBIP: predicting binding preferences of uncharacterized nucleic-acid-binding proteins",
+    "authors": [
+      "Shimshoviz N",
+      "Butto S",
+      "Orenstein Y"
+    ],
+    "abstract": "<h4>Motivation</h4>Nucleic-acid-binding proteins (NBPs) are crucial regulators of gene expression, recognizing specific RNA or DNA binding sites. While high-throughput experiments have generated vast amounts of binding data, a significant challenge remains in predicting binding affinities of a novel query NBP to any nucleic-acid sequence. Current computational methods often require prior experimental data for the query NBP or are limited to predictions over predefined short RNA or DNA sequences.<h4>Results</h4>We present New Protein Binding Intensity Predictor (NPBIP), a new method to predict the binding of a query NBP to any RNA or DNA sequence by integrating two complementary components: (i) a similarity-based method that computes a weighted mean of binding predictions over the training NBPs; and (ii) a deep-learning model that combines a large protein language model with a hybrid convolutional-transformer network to predict binding directly. We trained and evaluated NPBIP on 420 RNA-binding protein (RBP) experiments and 464 DNA-binding protein (DBP) experiments. NPBIP significantly outperformed each of its components and all competing baselines, achieving a mean Pearson correlation of 0.414±0.20 and 0.581±0.22 over the RNA- and DNA-binding experiments, respectively. This prediction performance was statistically comparable to an experimental k-mer upper bound over RBPs and statistically superior to an upper bound over DBPs. Furthermore, our interpretability analysis demonstrates that NPBIP recovers canonical binding motifs for both RBPs and DBPs, providing biological validation for the model's predictions.<h4>Availability and implementation</h4>Source code and datasets are publicly available at https://github.com/OrensteinLab/NPBIP.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btag232"
+  },
+  {
+    "id": "10.1093/bioinformatics/btag279",
+    "title": "ISMB 2026 Proceedings",
+    "authors": [
+      "Ma J",
+      "Borgwardt K"
+    ],
+    "abstract": "This editorial describes the review and selection process of full-length, original research papers submitted to the Proceedings track of the ISMB 2026 conference.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btag279"
+  },
+  {
+    "id": "10.1093/bioinformatics/btag258",
+    "title": "OrgNet+: towards robust protein stability prediction with convolutional neural networks",
+    "authors": [
+      "Sarycheva A",
+      "Shumilov A",
+      "Popov P"
+    ],
+    "abstract": "<h4>Motivation</h4>Predicting the effect of single-point mutations on protein stability is a central problem in molecular biology and protein engineering. Recent structure-based deep learning methods, particularly 3D convolutional neural networks (3D CNNs), have achieved strong predictive performance by leveraging high-resolution protein structures. However, proteins exist as heterogeneous conformational ensembles rather than single static structures, and the impact of conformational flexibility on structure-based ΔΔG predictors remains poorly characterized. Consequently, current models may yield unstable or even contradictory predictions when evaluated across alternative, yet equally plausible, conformations of the same protein.<h4>Results</h4>We introduce OrgNet+, a conformational ensemble-aware and orientation-gnostic framework that explicitly incorporates protein structure flexibility during training. OrgNet+ is trained on augmented datasets comprising diverse conformational ensembles generated using a comprehensive set of molecular modelling methods: normal mode analysis, molecular dynamics, Monte-Carlo simulations, and a generative deep learning model. Across all ensemble types, OrgNet+ substantially reduces intra-ensemble prediction variance while simultaneously improving predictive accuracy. The improved performance extends to standard single-reference-structure benchmarks, even though OrgNet+ was trained exclusively on conformational ensembles and never exposed to the reference experimental structures.<h4>Availability and implementation</h4>OrgNet+ is available at https://github.com/i-Molecule/OrgNet.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btag258"
+  },
+  {
+    "id": "10.1093/bioinformatics/btag220",
+    "title": "Riemannian metric learning for alignment of spatial multiomics",
+    "authors": [
+      "Halmos P",
+      "Xia Y",
+      "Raphael BJ"
+    ],
+    "abstract": "<h4>Motivation</h4>Recent spatial technologies measure the transcriptome, epigenome, proteome, metabolome, and other modalities from thousands of cells across a tissue. Most assays typically profile only one modality from a tissue slice, raising the question of how to align spatial data from heterogeneous feature spaces. While multiple approaches have been developed for multi-modal integration of single-cell datasets, few existing techniques perform spatial alignment across arbitrary modalities incorporating both spatial and feature information.<h4>Results</h4>We introduce Manifold Gromov-Wasserstein (MGW), a metric-learning framework that exploits the product structure of spatial multiomics to infer modality-specific Riemannian pull-back metrics with neural fields. MGW aligns Riemannian distances induced by these metrics via Gromov-Wasserstein optimal transport, yielding a hyperparameter-free cost across arbitrary modalities sharing a spatial base. The formulation enjoys theoretical invariances-including orthogonal transformations of the spatial and feature domains as well as global feature scalings. We demonstrate the advantages of MGW on multiple alignment tasks, including Stereo-Seq spatiotemporal transcriptomics of mouse embryo, Xenium and Visium spatial transcriptomics of colorectal cancer, and spatial metabolomics-transcriptomics from human striatum and kidney cancer. MGW recovers biologically meaningful correspondences and spatially coherent tissue structures, outperforming existing OT and non-OT based multi-modal baselines.<h4>Availability and implementation</h4>Software is available at https://github.com/raphael-group/MGW.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btag220"
+  },
+  {
+    "id": "10.1093/bioinformatics/btag210",
+    "title": "CROP: a feature-independent context-aware method for CRISPR-Cas9 frameshift prediction",
+    "authors": [
+      "Tziony I",
+      "Orenstein Y"
+    ],
+    "abstract": "<h4>Motivation</h4>The CRISPR-Cas9 complex has revolutionized genome-editing technologies. By designing a 20 nt-long guide RNA, a Cas9 nuclease can be guided to cleave almost any genomic target site (followed by NGG). The cleavage induces double-stranded DNA breaks, which are then repaired by cellular pathways. Accurate CRISPR-Cas9 repair-outcome prediction is essential for designing guide RNAs with desired genomic effects, such as gene knockout. A central challenge is quantifying the rate of frameshifts, i.e. repair-outcomes that lead to a change in the local length that is not a multiple of three. Previous methods for frameshift-rate prediction were trained on only a few experimental or cellular contexts, mostly relied on manually defined microhomology features, and were limited by sparse features and class labels.<h4>Results</h4>We developed CROP, a feature-independent context-aware repair-outcome prediction method. By aggregating specific repair outcomes as Δlength classes, CROP overcomes class sparsity. We designed CROP to work with variable input sequence lengths and output classes to utilize multiple datasets simultaneously. We benchmarked CROP against state-of-the-art repair-outcome prediction methods over 18 datasets, which we curated and standardized from various studies. Across all datasets, CROP outperformed all competing methods in frameshift-rate prediction. We performed cross-experiment and cross-cellular frameshift-rate predictions to investigate the generalizability of repair mechanisms. Finally, we show that CROP learned microhomology principles from raw sequences without explicit feature engineering, establishing an end-to-end architecture for CRISPR-Cas9 repair-outcome prediction that learns from multiple datasets.<h4>Availability and implementation</h4>CROP is available at https://github.com/OrensteinLab/CROP.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btag210"
+  },
+  {
+    "id": "10.1093/bioinformatics/btag245",
+    "title": "CAMUS: scalable phylogenetic network estimation",
+    "authors": [
+      "Willson J",
+      "Warnow T"
+    ],
+    "abstract": "<h4>Motivation</h4>Phylogenetic networks are models of evolution that go beyond trees, and so represent reticulate events such as horizontal gene transfer or hybridization, which are frequently found in many taxa. Yet, the estimation of phylogenetic networks is extremely computationally challenging, and nearly all methods are limited to very small datasets with perhaps 10-15 species (some limited to even smaller numbers).<h4>Results</h4>We introduce Constrained Algorithm Maximizing qUartetS (CAMUS), a scalable method for phylogenetic network estimation. CAMUS takes an input rooted constraint tree T as well as a set Q of unrooted quartet trees and returns a level-1 phylogenetic network N that is built upon T through the addition of edges, in order to maximize the number of quartet trees in Q that are induced in N. We perform a simulation study under the Network Multi-Species Coalescent and show that a simple pipeline using CAMUS provides high accuracy and outstanding speed and scalability, in comparison to two leading methods, PhyloNet-MPL used with a fixed tree and SNaQ. CAMUS is slightly less accurate than PhyloNet-MPL used without a fixed tree, but is much faster (minutes instead of hours) and can complete on inputs with 201 species while PhyloNet-MPL fails to complete on the inputs with more than 51 species.<h4>Availability and implementation</h4>The source code is available at https://github.com/jsdoublel/camus.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btag245"
+  },
+  {
+    "id": "10.1093/bioinformatics/btag242",
+    "title": "Bridging the phenotype-target gap for molecular generation via multi-objective reinforcement learning",
+    "authors": [
+      "Guo H",
+      "Liu H"
+    ],
+    "abstract": "<h4>Motivation</h4>The generation of high-quality candidate molecules remains a central challenge in AI-driven drug design. Current phenotype-based and target-based strategies each suffer limitations, either incurring high experimental costs or overlooking system-level cellular responses. To bridge this gap, we propose XMolRL, a novel generative framework that synergistically integrates phenotypic and target-specific cues for de novo molecular generation.<h4>Results</h4>The phenotype-guided generator is first pretrained on expansive drug-induced transcriptional profiles and subsequently fine-tuned via multi-objective reinforcement learning (RL). Crucially, the reward function fuses docking affinity and drug-likeness scores, augmented with ranking loss, prior-likelihood regularization, and entropy maximization. The multi-objective RL steers the model toward chemotypes that are simultaneously potent, diverse, and aligned with the specified phenotypic effects. Extensive experiments demonstrate XMolRL's superior performance over state-of-the-art phenotype-based and target-based models across multiple well-characterized targets. Our generated molecules exhibit favorable drug-like properties, high target affinity, and inhibitory potency (IC50) against cancer cells. This unified framework showcases the synergistic potential of combining phenotype-guided and target-aware strategies, offering a more effective solution for de novo drug discovery.<h4>Availability and implementation</h4>The source code and datasets are available at: https://github.com/hliulab/XMolRL. The archived version of the source code and test data can be found at: https://doi.org/10.5281/zenodo.19607680.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btag242"
+  },
+  {
+    "id": "10.1093/bioinformatics/btag225",
+    "title": "Detecting and reconstructing breakage-fusion-bridge cycles from long-read sequencing using BFBArchitect",
+    "authors": [
+      "Li C",
+      "Raeisi Dehkordi S",
+      "Muliaditan D",
+      "DasGupta R",
+      "Luebeck J",
+      "Zhu K",
+      "Bafna V"
+    ],
+    "abstract": "<h4>Motivation</h4>Focal oncogene amplification is a key driver of tumor progression. Remarkably, the increased pathology depends on the context-whether the amplification is extrachromosomal (ecDNA) or intrachromosomal. EcDNA amplifications promote heterogeneity, therapy resistance, and poor prognosis. Focal intrachromosomal amplifications often arise through breakage-fusion-bridge (BFB) cycles, which produce highly rearranged but stable chromosomes. Distinguishing BFB from ecDNA remains challenging due to overlapping genomic signatures. To address this, we present BFBArchitect, a computational method leveraging long-read Oxford Nanopore data to identify BFB sequences consistent with both copy number and structural variations.<h4>Results</h4>We provide a novel combinatorial characterization of BFB, which naturally leads to an integer linear programming (ILP) optimization. The ILP optimization generates a BFB sequence that best explains experimentally observed copy numbers and foldback structural variants. We implement this idea in a tool called BFBArchitect, which achieves near-perfect accuracy in distinguishing BFB from non-BFB structures in extensive simulations as well as on 18 validated tumor samples. Moreover, it generates sequence-level BFB reconstructions that provide mechanistic insights into BFB formation, including repair mechanisms with template switching and other structural variants, and recapture of telomere for stabilization.<h4>Availability and implementation</h4>BFBArchitect is available at https://github.com/AmpliconSuite/BFBArchitect.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btag225"
+  },
+  {
+    "id": "10.1093/bioinformatics/btag291",
+    "title": "A novel transformer model of protein domains for viral taxonomy classification",
+    "authors": [
+      "Shin J",
+      "Xiao Q",
+      "Ye Y"
+    ],
+    "abstract": "<h4>Motivation</h4>Viruses with carefully curated taxonomic assignments (such as those in the ICTV taxonomy) still represent only a small fraction of viruses identified through sequencing data from virome or microbiome projects. It is therefore critical to develop methods that can assign viruses at multiple taxonomic ranks, so that a virus deemed novel at a given rank may still be placed into a higher-level taxon. Sequence-similarity-based approaches can classify viruses that share substantial genomic similarity with known viruses (e.g. those belonging to the same species or genus); however, their performance drops significantly when applied to more divergent viruses. Recent deep learning models, such as ViTax, which utilize DNA language models, aim to address these limitations, but their performance also degrades when applied to novel viruses lacking genus-level similarity to known references. Proteins are more conserved than genomic sequences, and the multiple proteins encoded by a virus can be leveraged to reveal evolutionary relationships among viruses.<h4>Results</h4>We propose a new tool, D2T (Domain-to-Taxonomy), that leverages recent advances in protein language models to improve viral taxonomic assignment. D2T represents a virus as a sequence of protein domain tokens and learns a transformer-based model for taxonomic classification. Experiments on multiple closed-set and open-set datasets show that D2T excels at assigning higher-level taxonomic labels (family and above). Furthermore, by combining D2T with Kraken2, which performs well at the genus level, the hybrid method (K+D2T) achieves accurate viral taxonomic classification across multiple taxonomic ranks.<h4>Availability and implementation</h4>D2T is available as a GitHub repository at https://github.com/mgtools/D2T.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btag291"
+  },
+  {
+    "id": "10.1093/bioinformatics/btag250",
+    "title": "Agentomics: an agentic system that autonomously develops novel state-of-the-art solutions for biomedical machine learning tasks",
+    "authors": [
+      "Martinek V",
+      "Gariboldi A",
+      "Tzimotoudis D",
+      "Galea M",
+      "Zacharopoulou E",
+      "Escudero AA",
+      "Blake E",
+      "Čechák D",
+      "Cassar L",
+      "Balestrucci A",
+      "Alexiou P"
+    ],
+    "abstract": "<h4>Motivation</h4>Extracting knowledge from biomedical data is crucial for advancing our understanding of biological systems and developing novel therapeutics. The quantity, quality, and resolution of biomedical data constantly evolves, requiring the automation of biomedical machine learning (ML). Existing Automated ML tools lack flexibility, while large language models (LLMs) struggle to consistently deliver reproducible machine learning codebases, and existing LLM Agent-powered solutions lag behind human-engineered ML models.<h4>Results</h4>Here, we introduce Agentomics, an autonomous LLM-powered agentic system for end-to-end ML experimentation. Given a biomedical dataset, Agentomics implements various ML modeling strategies, and produces a ready-to-use ML model. Agentomics introduces strict validation checkpoints for standard ML development steps, allowing gradual development on top of working code with defined interfaces and validated artifacts. Further, it offers native support for biomedical foundation models that can be leveraged during experimentation. The generic nature of Agentomics allows the user to create ML solutions for a large variety of datasets and use various LLMs. We evaluate Agentomics across 20 datasets from the domains of Protein Engineering, Drug Discovery, and Regulatory Genomics. When benchmarked against other agentic systems, Agentomics outperformed them in all tested domains. When benchmarked against human expert solutions, Agentomics generated novel state-of-the-art models for 11/20 established benchmark datasets.<h4>Availability and implementation</h4>Agentomics is implemented in Python. Source code and documentation are freely available at: https://github.com/BioGeMT/Agentomics-ML.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btag250"
   },
   {
     "id": "10.1093/bioinformatics/btag246",

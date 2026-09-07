@@ -1,108 +1,5 @@
 [
   {
-    "id": "10.1093/bioinformatics/btac257",
-    "title": "DECODE: a computational pipeline to discover T cell receptor binding rules",
-    "authors": [
-      "Papadopoulou I",
-      "Nguyen AP",
-      "Weber A",
-      "Martínez MR"
-    ],
-    "abstract": "<h4>Motivation</h4>Understanding the mechanisms underlying T cell receptor (TCR) binding is of fundamental importance to understanding adaptive immune responses. A better understanding of the biochemical rules governing TCR binding can be used, e.g. to guide the design of more powerful and safer T cell-based therapies. Advances in repertoire sequencing technologies have made available millions of TCR sequences. Data abundance has, in turn, fueled the development of many computational models to predict the binding properties of TCRs from their sequences. Unfortunately, while many of these works have made great strides toward predicting TCR specificity using machine learning, the black-box nature of these models has resulted in a limited understanding of the rules that govern the binding of a TCR and an epitope.<h4>Results</h4>We present an easy-to-use and customizable computational pipeline, DECODE, to extract the binding rules from any black-box model designed to predict the TCR-epitope binding. DECODE offers a range of analytical and visualization tools to guide the user in the extraction of such rules. We demonstrate our pipeline on a recently published TCR-binding prediction model, TITAN, and show how to use the provided metrics to assess the quality of the computed rules. In conclusion, DECODE can lead to a better understanding of the sequence motifs that underlie TCR binding. Our pipeline can facilitate the investigation of current immunotherapeutic challenges, such as cross-reactive events due to off-target TCR binding.<h4>Availability and implementation</h4>Code is available publicly at https://github.com/phineasng/DECODE.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2022,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btac257"
-  },
-  {
-    "id": "10.1093/bioinformatics/btac218",
-    "title": "DeepCRISTL: deep transfer learning to predict CRISPR/Cas9 functional and endogenous on-target editing efficiency",
-    "authors": [
-      "Elkayam S",
-      "Orenstein Y"
-    ],
-    "abstract": "<h4>Motivation</h4>CRISPR/Cas9 technology has been revolutionizing the field of gene editing in recent years. Guide RNAs (gRNAs) enable Cas9 proteins to target specific genomic loci for editing. However, editing efficiency varies between gRNAs. Thus, computational methods were developed to predict editing efficiency for any gRNA of interest. High-throughput datasets of Cas9 editing efficiencies were produced to train machine-learning models to predict editing efficiency. However, these high-throughput datasets have low correlation with functional and endogenous editing. Another difficulty arises from the fact that functional and endogenous editing efficiency is more difficult to measure, and as a result, functional and endogenous datasets are too small to train accurate machine-learning models on.<h4>Results</h4>We developed DeepCRISTL, a deep-learning model to predict the on-target efficiency given a gRNA sequence. DeepCRISTL takes advantage of high-throughput datasets to learn general patterns of gRNA on-target editing efficiency, and then uses transfer learning (TL) to fine-tune the model and fit it to the functional and endogenous prediction task. We pre-trained the DeepCRISTL model on more than 150 000 gRNAs, produced through the DeepHF study as a high-throughput dataset of three Cas9 enzymes. We improved the DeepHF model by multi-task and ensemble techniques and achieved state-of-the-art results over each of the three enzymes: up to 0.89 in Spearman correlation between predicted and measured on-target efficiencies. To fine-tune model weights to predict on-target efficiency of functional or endogenous datasets, we tested several TL approaches, with gradual learning being the overall best performer, both when pre-trained on DeepHF and when pre-trained on CRISPROn, another high-throughput dataset. DeepCRISTL outperformed state-of-the-art methods on all functional and endogenous datasets. Using saliency maps, we identified and compared the important features learned by the model in each dataset. We believe DeepCRISTL will improve prediction performance in many other CRISPR/Cas9 editing contexts by leveraging TL to utilize both high-throughput datasets, and smaller and more biologically relevant datasets, such as functional and endogenous datasets.<h4>Availability and implementation</h4>DeepCRISTL is available via github.com/OrensteinLab/DeepCRISTL.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2022,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btac218"
-  },
-  {
-    "id": "10.1093/bioinformatics/btac246",
-    "title": "Bridging the gaps in statistical models of protein alignment",
-    "authors": [
-      "Sumanaweera D",
-      "Allison L",
-      "Konagurthu AS"
-    ],
-    "abstract": "<h4>Summary</h4>Sequences of proteins evolve by accumulating substitutions together with insertions and deletions (indels) of amino acids. However, it remains a common practice to disconnect substitutions and indels, and infer approximate models for each of them separately, to quantify sequence relationships. Although this approach brings with it computational convenience (which remains its primary motivation), there is a dearth of attempts to unify and model them systematically and together. To overcome this gap, this article demonstrates how a complete statistical model quantifying the evolution of pairs of aligned proteins can be constructed using a time-parameterized substitution matrix and a time-parameterized alignment state machine. Methods to derive all parameters of such a model from any benchmark collection of aligned protein sequences are described here. This has not only allowed us to generate a unified statistical model for each of the nine widely used substitution matrices (PAM, JTT, BLOSUM, JO, WAG, VTML, LG, MIQS and PFASUM), but also resulted in a new unified model, MMLSUM. Our underlying methodology measures the Shannon information content using each model to explain losslessly any given collection of alignments, which has allowed us to quantify the performance of all the above models on six comprehensive alignment benchmarks. Our results show that MMLSUM results in a new and clear overall best performance, followed by PFASUM, VTML, BLOSUM and MIQS, respectively, amongst the top five. We further analyze the statistical properties of MMLSUM model and contrast it with others.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2022,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btac246"
-  },
-  {
-    "id": "10.1093/bioinformatics/btac250",
-    "title": "SPARSE: a sparse hypergraph neural network for learning multiple types of latent combinations to accurately predict drug-drug interactions",
-    "authors": [
-      "Nguyen DA",
-      "Nguyen CH",
-      "Petschner P",
-      "Mamitsuka H"
-    ],
-    "abstract": "<h4>Motivation</h4>Predicting side effects of drug-drug interactions (DDIs) is an important task in pharmacology. The state-of-the-art methods for DDI prediction use hypergraph neural networks to learn latent representations of drugs and side effects to express high-order relationships among two interacting drugs and a side effect. The idea of these methods is that each side effect is caused by a unique combination of latent features of the corresponding interacting drugs. However, in reality, a side effect might have multiple, different mechanisms that cannot be represented by a single combination of latent features of drugs. Moreover, DDI data are sparse, suggesting that using a sparsity regularization would help to learn better latent representations to improve prediction performances.<h4>Results</h4>We propose SPARSE, which encodes the DDI hypergraph and drug features to latent spaces to learn multiple types of combinations of latent features of drugs and side effects, controlling the model sparsity by a sparse prior. Our extensive experiments using both synthetic and three real-world DDI datasets showed the clear predictive performance advantage of SPARSE over cutting-edge competing methods. Also, latent feature analysis over unknown top predictions by SPARSE demonstrated the interpretability advantage contributed by the model sparsity.<h4>Availability and implementation</h4>Code and data can be accessed at https://github.com/anhnda/SPARSE.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2022,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btac250"
-  },
-  {
-    "id": "10.1093/bioinformatics/btac233",
-    "title": "An approachable, flexible and practical machine learning workshop for biologists",
-    "authors": [
-      "Magnano CS",
-      "Mu F",
-      "Russ RS",
-      "Cvetkovic M",
-      "Treu D",
-      "Gitter A"
-    ],
-    "abstract": "<h4>Summary</h4>The increasing prevalence and importance of machine learning in biological research have created a need for machine learning training resources tailored towards biological researchers. However, existing resources are often inaccessible, infeasible or inappropriate for biologists because they require significant computational and mathematical knowledge, demand an unrealistic time-investment or teach skills primarily for computational researchers. We created the Machine Learning for Biologists (ML4Bio) workshop, a short, intensive workshop that empowers biological researchers to comprehend machine learning applications and pursue machine learning collaborations in their own research. The ML4Bio workshop focuses on classification and was designed around three principles: (i) emphasizing preparedness over fluency or expertise, (ii) necessitating minimal coding and mathematical background and (iii) requiring low time investment. It incorporates active learning methods and custom open-source software that allows participants to explore machine learning workflows. After multiple sessions to improve workshop design, we performed a study on three workshop sessions. Despite some confusion around identifying subtle methodological flaws in machine learning workflows, participants generally reported that the workshop met their goals, provided them with valuable skills and knowledge and greatly increased their beliefs that they could engage in research that uses machine learning. ML4Bio is an educational tool for biological researchers, and its creation and evaluation provide valuable insight into tailoring educational resources for active researchers in different domains.<h4>Availability and implementation</h4>Workshop materials are available at https://github.com/carpentries-incubator/ml4bio-workshop and the ml4bio software is available at https://github.com/gitter-lab/ml4bio.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2022,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btac233"
-  },
-  {
-    "id": "10.1093/bioinformatics/btac240",
-    "title": "From drug repositioning to target repositioning: prediction of therapeutic targets using genetically perturbed transcriptomic signatures",
-    "authors": [
-      "Namba S",
-      "Iwata M",
-      "Yamanishi Y"
-    ],
-    "abstract": "<h4>Motivation</h4>A critical element of drug development is the identification of therapeutic targets for diseases. However, the depletion of therapeutic targets is a serious problem.<h4>Results</h4>In this study, we propose the novel concept of target repositioning, an extension of the concept of drug repositioning, to predict new therapeutic targets for various diseases. Predictions were performed by a trans-disease analysis which integrated genetically perturbed transcriptomic signatures (knockdown of 4345 genes and overexpression of 3114 genes) and disease-specific gene transcriptomic signatures of 79 diseases. The trans-disease method, which takes into account similarities among diseases, enabled us to distinguish the inhibitory from activatory targets and to predict the therapeutic targetability of not only proteins with known target-disease associations but also orphan proteins without known associations. Our proposed method is expected to be useful for understanding the commonality of mechanisms among diseases and for therapeutic target identification in drug discovery.<h4>Availability and implementation</h4>Supplemental information and software are available at the following website [http://labo.bio.kyutech.ac.jp/~yamani/target_repositioning/].<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2022,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btac240"
-  },
-  {
-    "id": "10.1093/bioinformatics/btac228",
-    "title": "PolarMorphism enables discovery of shared genetic variants across multiple traits from GWAS summary statistics",
-    "authors": [
-      "von Berg J",
-      "Ten Dam M",
-      "van der Laan SW",
-      "de Ridder J"
-    ],
-    "abstract": "<h4>Motivation</h4>Pleiotropic SNPs are associated with multiple traits. Such SNPs can help pinpoint biological processes with an effect on multiple traits or point to a shared etiology between traits. We present PolarMorphism, a new method for the identification of pleiotropic SNPs from genome-wide association studies (GWAS) summary statistics. PolarMorphism can be readily applied to more than two traits or whole trait domains. PolarMorphism makes use of the fact that trait-specific SNP effect sizes can be seen as Cartesian coordinates and can thus be converted to polar coordinates r (distance from the origin) and theta (angle with the Cartesian x-axis, in the case of two traits). r describes the overall effect of a SNP, while theta describes the extent to which a SNP is shared. r and theta are used to determine the significance of SNP sharedness, resulting in a P-value per SNP that can be used for further analysis.<h4>Results</h4>We apply PolarMorphism to a large collection of publicly available GWAS summary statistics enabling the construction of a pleiotropy network that shows the extent to which traits share SNPs. We show how PolarMorphism can be used to gain insight into relationships between traits and trait domains and contrast it with genetic correlation. Furthermore, pathway analysis of the newly discovered pleiotropic SNPs demonstrates that analysis of more than two traits simultaneously yields more biologically relevant results than the combined results of pairwise analysis of the same traits. Finally, we show that PolarMorphism is more efficient and more powerful than previously published methods.<h4>Availability and implementation</h4>code: https://github.com/UMCUGenetics/PolarMorphism, results: 10.5281/zenodo.5844193.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2022,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btac228"
-  },
-  {
     "id": "10.1093/bioinformatics/btac265",
     "title": "QuCo: quartet-based co-estimation of species trees and gene trees",
     "authors": [
@@ -241,6 +138,109 @@
     "paper_url": "https://doi.org/10.1093/bioinformatics/btac255"
   },
   {
+    "id": "10.1093/bioinformatics/btac257",
+    "title": "DECODE: a computational pipeline to discover T cell receptor binding rules",
+    "authors": [
+      "Papadopoulou I",
+      "Nguyen AP",
+      "Weber A",
+      "Martínez MR"
+    ],
+    "abstract": "<h4>Motivation</h4>Understanding the mechanisms underlying T cell receptor (TCR) binding is of fundamental importance to understanding adaptive immune responses. A better understanding of the biochemical rules governing TCR binding can be used, e.g. to guide the design of more powerful and safer T cell-based therapies. Advances in repertoire sequencing technologies have made available millions of TCR sequences. Data abundance has, in turn, fueled the development of many computational models to predict the binding properties of TCRs from their sequences. Unfortunately, while many of these works have made great strides toward predicting TCR specificity using machine learning, the black-box nature of these models has resulted in a limited understanding of the rules that govern the binding of a TCR and an epitope.<h4>Results</h4>We present an easy-to-use and customizable computational pipeline, DECODE, to extract the binding rules from any black-box model designed to predict the TCR-epitope binding. DECODE offers a range of analytical and visualization tools to guide the user in the extraction of such rules. We demonstrate our pipeline on a recently published TCR-binding prediction model, TITAN, and show how to use the provided metrics to assess the quality of the computed rules. In conclusion, DECODE can lead to a better understanding of the sequence motifs that underlie TCR binding. Our pipeline can facilitate the investigation of current immunotherapeutic challenges, such as cross-reactive events due to off-target TCR binding.<h4>Availability and implementation</h4>Code is available publicly at https://github.com/phineasng/DECODE.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac257"
+  },
+  {
+    "id": "10.1093/bioinformatics/btac218",
+    "title": "DeepCRISTL: deep transfer learning to predict CRISPR/Cas9 functional and endogenous on-target editing efficiency",
+    "authors": [
+      "Elkayam S",
+      "Orenstein Y"
+    ],
+    "abstract": "<h4>Motivation</h4>CRISPR/Cas9 technology has been revolutionizing the field of gene editing in recent years. Guide RNAs (gRNAs) enable Cas9 proteins to target specific genomic loci for editing. However, editing efficiency varies between gRNAs. Thus, computational methods were developed to predict editing efficiency for any gRNA of interest. High-throughput datasets of Cas9 editing efficiencies were produced to train machine-learning models to predict editing efficiency. However, these high-throughput datasets have low correlation with functional and endogenous editing. Another difficulty arises from the fact that functional and endogenous editing efficiency is more difficult to measure, and as a result, functional and endogenous datasets are too small to train accurate machine-learning models on.<h4>Results</h4>We developed DeepCRISTL, a deep-learning model to predict the on-target efficiency given a gRNA sequence. DeepCRISTL takes advantage of high-throughput datasets to learn general patterns of gRNA on-target editing efficiency, and then uses transfer learning (TL) to fine-tune the model and fit it to the functional and endogenous prediction task. We pre-trained the DeepCRISTL model on more than 150 000 gRNAs, produced through the DeepHF study as a high-throughput dataset of three Cas9 enzymes. We improved the DeepHF model by multi-task and ensemble techniques and achieved state-of-the-art results over each of the three enzymes: up to 0.89 in Spearman correlation between predicted and measured on-target efficiencies. To fine-tune model weights to predict on-target efficiency of functional or endogenous datasets, we tested several TL approaches, with gradual learning being the overall best performer, both when pre-trained on DeepHF and when pre-trained on CRISPROn, another high-throughput dataset. DeepCRISTL outperformed state-of-the-art methods on all functional and endogenous datasets. Using saliency maps, we identified and compared the important features learned by the model in each dataset. We believe DeepCRISTL will improve prediction performance in many other CRISPR/Cas9 editing contexts by leveraging TL to utilize both high-throughput datasets, and smaller and more biologically relevant datasets, such as functional and endogenous datasets.<h4>Availability and implementation</h4>DeepCRISTL is available via github.com/OrensteinLab/DeepCRISTL.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac218"
+  },
+  {
+    "id": "10.1093/bioinformatics/btac246",
+    "title": "Bridging the gaps in statistical models of protein alignment",
+    "authors": [
+      "Sumanaweera D",
+      "Allison L",
+      "Konagurthu AS"
+    ],
+    "abstract": "<h4>Summary</h4>Sequences of proteins evolve by accumulating substitutions together with insertions and deletions (indels) of amino acids. However, it remains a common practice to disconnect substitutions and indels, and infer approximate models for each of them separately, to quantify sequence relationships. Although this approach brings with it computational convenience (which remains its primary motivation), there is a dearth of attempts to unify and model them systematically and together. To overcome this gap, this article demonstrates how a complete statistical model quantifying the evolution of pairs of aligned proteins can be constructed using a time-parameterized substitution matrix and a time-parameterized alignment state machine. Methods to derive all parameters of such a model from any benchmark collection of aligned protein sequences are described here. This has not only allowed us to generate a unified statistical model for each of the nine widely used substitution matrices (PAM, JTT, BLOSUM, JO, WAG, VTML, LG, MIQS and PFASUM), but also resulted in a new unified model, MMLSUM. Our underlying methodology measures the Shannon information content using each model to explain losslessly any given collection of alignments, which has allowed us to quantify the performance of all the above models on six comprehensive alignment benchmarks. Our results show that MMLSUM results in a new and clear overall best performance, followed by PFASUM, VTML, BLOSUM and MIQS, respectively, amongst the top five. We further analyze the statistical properties of MMLSUM model and contrast it with others.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac246"
+  },
+  {
+    "id": "10.1093/bioinformatics/btac250",
+    "title": "SPARSE: a sparse hypergraph neural network for learning multiple types of latent combinations to accurately predict drug-drug interactions",
+    "authors": [
+      "Nguyen DA",
+      "Nguyen CH",
+      "Petschner P",
+      "Mamitsuka H"
+    ],
+    "abstract": "<h4>Motivation</h4>Predicting side effects of drug-drug interactions (DDIs) is an important task in pharmacology. The state-of-the-art methods for DDI prediction use hypergraph neural networks to learn latent representations of drugs and side effects to express high-order relationships among two interacting drugs and a side effect. The idea of these methods is that each side effect is caused by a unique combination of latent features of the corresponding interacting drugs. However, in reality, a side effect might have multiple, different mechanisms that cannot be represented by a single combination of latent features of drugs. Moreover, DDI data are sparse, suggesting that using a sparsity regularization would help to learn better latent representations to improve prediction performances.<h4>Results</h4>We propose SPARSE, which encodes the DDI hypergraph and drug features to latent spaces to learn multiple types of combinations of latent features of drugs and side effects, controlling the model sparsity by a sparse prior. Our extensive experiments using both synthetic and three real-world DDI datasets showed the clear predictive performance advantage of SPARSE over cutting-edge competing methods. Also, latent feature analysis over unknown top predictions by SPARSE demonstrated the interpretability advantage contributed by the model sparsity.<h4>Availability and implementation</h4>Code and data can be accessed at https://github.com/anhnda/SPARSE.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac250"
+  },
+  {
+    "id": "10.1093/bioinformatics/btac233",
+    "title": "An approachable, flexible and practical machine learning workshop for biologists",
+    "authors": [
+      "Magnano CS",
+      "Mu F",
+      "Russ RS",
+      "Cvetkovic M",
+      "Treu D",
+      "Gitter A"
+    ],
+    "abstract": "<h4>Summary</h4>The increasing prevalence and importance of machine learning in biological research have created a need for machine learning training resources tailored towards biological researchers. However, existing resources are often inaccessible, infeasible or inappropriate for biologists because they require significant computational and mathematical knowledge, demand an unrealistic time-investment or teach skills primarily for computational researchers. We created the Machine Learning for Biologists (ML4Bio) workshop, a short, intensive workshop that empowers biological researchers to comprehend machine learning applications and pursue machine learning collaborations in their own research. The ML4Bio workshop focuses on classification and was designed around three principles: (i) emphasizing preparedness over fluency or expertise, (ii) necessitating minimal coding and mathematical background and (iii) requiring low time investment. It incorporates active learning methods and custom open-source software that allows participants to explore machine learning workflows. After multiple sessions to improve workshop design, we performed a study on three workshop sessions. Despite some confusion around identifying subtle methodological flaws in machine learning workflows, participants generally reported that the workshop met their goals, provided them with valuable skills and knowledge and greatly increased their beliefs that they could engage in research that uses machine learning. ML4Bio is an educational tool for biological researchers, and its creation and evaluation provide valuable insight into tailoring educational resources for active researchers in different domains.<h4>Availability and implementation</h4>Workshop materials are available at https://github.com/carpentries-incubator/ml4bio-workshop and the ml4bio software is available at https://github.com/gitter-lab/ml4bio.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac233"
+  },
+  {
+    "id": "10.1093/bioinformatics/btac240",
+    "title": "From drug repositioning to target repositioning: prediction of therapeutic targets using genetically perturbed transcriptomic signatures",
+    "authors": [
+      "Namba S",
+      "Iwata M",
+      "Yamanishi Y"
+    ],
+    "abstract": "<h4>Motivation</h4>A critical element of drug development is the identification of therapeutic targets for diseases. However, the depletion of therapeutic targets is a serious problem.<h4>Results</h4>In this study, we propose the novel concept of target repositioning, an extension of the concept of drug repositioning, to predict new therapeutic targets for various diseases. Predictions were performed by a trans-disease analysis which integrated genetically perturbed transcriptomic signatures (knockdown of 4345 genes and overexpression of 3114 genes) and disease-specific gene transcriptomic signatures of 79 diseases. The trans-disease method, which takes into account similarities among diseases, enabled us to distinguish the inhibitory from activatory targets and to predict the therapeutic targetability of not only proteins with known target-disease associations but also orphan proteins without known associations. Our proposed method is expected to be useful for understanding the commonality of mechanisms among diseases and for therapeutic target identification in drug discovery.<h4>Availability and implementation</h4>Supplemental information and software are available at the following website [http://labo.bio.kyutech.ac.jp/~yamani/target_repositioning/].<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac240"
+  },
+  {
+    "id": "10.1093/bioinformatics/btac228",
+    "title": "PolarMorphism enables discovery of shared genetic variants across multiple traits from GWAS summary statistics",
+    "authors": [
+      "von Berg J",
+      "Ten Dam M",
+      "van der Laan SW",
+      "de Ridder J"
+    ],
+    "abstract": "<h4>Motivation</h4>Pleiotropic SNPs are associated with multiple traits. Such SNPs can help pinpoint biological processes with an effect on multiple traits or point to a shared etiology between traits. We present PolarMorphism, a new method for the identification of pleiotropic SNPs from genome-wide association studies (GWAS) summary statistics. PolarMorphism can be readily applied to more than two traits or whole trait domains. PolarMorphism makes use of the fact that trait-specific SNP effect sizes can be seen as Cartesian coordinates and can thus be converted to polar coordinates r (distance from the origin) and theta (angle with the Cartesian x-axis, in the case of two traits). r describes the overall effect of a SNP, while theta describes the extent to which a SNP is shared. r and theta are used to determine the significance of SNP sharedness, resulting in a P-value per SNP that can be used for further analysis.<h4>Results</h4>We apply PolarMorphism to a large collection of publicly available GWAS summary statistics enabling the construction of a pleiotropy network that shows the extent to which traits share SNPs. We show how PolarMorphism can be used to gain insight into relationships between traits and trait domains and contrast it with genetic correlation. Furthermore, pathway analysis of the newly discovered pleiotropic SNPs demonstrates that analysis of more than two traits simultaneously yields more biologically relevant results than the combined results of pairwise analysis of the same traits. Finally, we show that PolarMorphism is more efficient and more powerful than previously published methods.<h4>Availability and implementation</h4>code: https://github.com/UMCUGenetics/PolarMorphism, results: 10.5281/zenodo.5844193.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac228"
+  },
+  {
     "id": "10.1093/bioinformatics/btac264",
     "title": "The effect of genome graph expressiveness on the discrepancy between genome graph distance and string set distance",
     "authors": [
@@ -366,6 +366,150 @@
     "conference": "ismb",
     "year": 2022,
     "paper_url": "https://doi.org/10.1093/bioinformatics/btac254"
+  },
+  {
+    "id": "10.1093/bioinformatics/btac262",
+    "title": "Semi-deconvolution of bulk and single-cell RNA-seq data with application to metastatic progression in breast cancer",
+    "authors": [
+      "Lei H",
+      "Guo XA",
+      "Tao Y",
+      "Ding K",
+      "Fu X",
+      "Oesterreich S",
+      "Lee AV",
+      "Schwartz R"
+    ],
+    "abstract": "<h4>Motivation</h4>Identifying cell types and their abundances and how these evolve during tumor progression is critical to understanding the mechanisms of metastasis and identifying predictors of metastatic potential that can guide the development of new diagnostics or therapeutics. Single-cell RNA sequencing (scRNA-seq) has been especially promising in resolving heterogeneity of expression programs at the single-cell level, but is not always feasible, e.g. for large cohort studies or longitudinal analysis of archived samples. In such cases, clonal subpopulations may still be inferred via genomic deconvolution, but deconvolution methods have limited ability to resolve fine clonal structure and may require reference cell type profiles that are missing or imprecise. Prior methods can eliminate the need for reference profiles but show unstable performance when few bulk samples are available.<h4>Results</h4>In this work, we develop a new method using reference scRNA-seq to interpret sample collections for which only bulk RNA-seq is available for some samples, e.g. clonally resolving archived primary tissues using scRNA-seq from metastases. By integrating such information in a Quadratic Programming framework, our method can recover more accurate cell types and corresponding cell type abundances in bulk samples. Application to a breast tumor bone metastases dataset confirms the power of scRNA-seq data to improve cell type inference and quantification in same-patient bulk samples.<h4>Availability and implementation</h4>Source code is available on Github at https://github.com/CMUSchwartzLab/RADs.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac262"
+  },
+  {
+    "id": "10.1093/bioinformatics/btac261",
+    "title": "DEMA: a distance-bounded energy-field minimization algorithm to model and layout biomolecular networks with quantitative features",
+    "authors": [
+      "Weng Z",
+      "Yue Z",
+      "Zhu Y",
+      "Chen JY"
+    ],
+    "abstract": "<h4>Summary</h4>In biology, graph layout algorithms can reveal comprehensive biological contexts by visually positioning graph nodes in their relevant neighborhoods. A layout software algorithm/engine commonly takes a set of nodes and edges and produces layout coordinates of nodes according to edge constraints. However, current layout engines normally do not consider node, edge or node-set properties during layout and only curate these properties after the layout is created. Here, we propose a new layout algorithm, distance-bounded energy-field minimization algorithm (DEMA), to natively consider various biological factors, i.e., the strength of gene-to-gene association, the gene's relative contribution weight and the functional groups of genes, to enhance the interpretation of complex network graphs. In DEMA, we introduce a parameterized energy model where nodes are repelled by the network topology and attracted by a few biological factors, i.e., interaction coefficient, effect coefficient and fold change of gene expression. We generalize these factors as gene weights, protein-protein interaction weights, gene-to-gene correlations and the gene set annotations-four parameterized functional properties used in DEMA. Moreover, DEMA considers further attraction/repulsion/grouping coefficient to enable different preferences in generating network views. Applying DEMA, we performed two case studies using genetic data in autism spectrum disorder and Alzheimer's disease, respectively, for gene candidate discovery. Furthermore, we implement our algorithm as a plugin to Cytoscape, an open-source software platform for visualizing networks; hence, it is convenient. Our software and demo can be freely accessed at http://discovery.informatics.uab.edu/dema.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac261"
+  },
+  {
+    "id": "10.1093/bioinformatics/btac241",
+    "title": "Fast and interpretable genomic data analysis using multiple approximate kernel learning",
+    "authors": [
+      "Bektaş AB",
+      "Ak Ç",
+      "Gönen M"
+    ],
+    "abstract": "<h4>Motivation</h4>Dataset sizes in computational biology have been increased drastically with the help of improved data collection tools and increasing size of patient cohorts. Previous kernel-based machine learning algorithms proposed for increased interpretability started to fail with large sample sizes, owing to their lack of scalability. To overcome this problem, we proposed a fast and efficient multiple kernel learning (MKL) algorithm to be particularly used with large-scale data that integrates kernel approximation and group Lasso formulations into a conjoint model. Our method extracts significant and meaningful information from the genomic data while conjointly learning a model for out-of-sample prediction. It is scalable with increasing sample size by approximating instead of calculating distinct kernel matrices.<h4>Results</h4>To test our computational framework, namely, Multiple Approximate Kernel Learning (MAKL), we demonstrated our experiments on three cancer datasets and showed that MAKL is capable to outperform the baseline algorithm while using only a small fraction of the input features. We also reported selection frequencies of approximated kernel matrices associated with feature subsets (i.e. gene sets/pathways), which helps to see their relevance for the given classification task. Our fast and interpretable MKL algorithm producing sparse solutions is promising for computational biology applications considering its scalability and highly correlated structure of genomic datasets, and it can be used to discover new biomarkers and new therapeutic guidelines.<h4>Availability and implementation</h4>MAKL is available at https://github.com/begumbektas/makl together with the scripts that replicate the reported experiments. MAKL is also available as an R package at https://cran.r-project.org/web/packages/MAKL.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac241"
+  },
+  {
+    "id": "10.1093/bioinformatics/btac238",
+    "title": "CALDERA: finding all significant de Bruijn subgraphs for bacterial GWAS",
+    "authors": [
+      "Roux de Bézieux H",
+      "Lima L",
+      "Perraudeau F",
+      "Mary A",
+      "Dudoit S",
+      "Jacob L"
+    ],
+    "abstract": "<h4>Motivation</h4>Genome-wide association studies (GWAS), aiming to find genetic variants associated with a trait, have widely been used on bacteria to identify genetic determinants of drug resistance or hypervirulence. Recent bacterial GWAS methods usually rely on k-mers, whose presence in a genome can denote variants ranging from single-nucleotide polymorphisms to mobile genetic elements. This approach does not require a reference genome, making it easier to account for accessory genes. However, a same gene can exist in slightly different versions across different strains, leading to diluted effects.<h4>Results</h4>Here, we overcome this issue by testing covariates built from closed connected subgraphs (CCSs) of the de Bruijn graph defined over genomic k-mers. These covariates capture polymorphic genes as a single entity, improving k-mer-based GWAS both in terms of power and interpretability. However, a method naively testing all possible subgraphs would be powerless due to multiple testing corrections, and the mere exploration of these subgraphs would quickly become computationally intractable. The concept of testable hypothesis has successfully been used to address both problems in similar contexts. We leverage this concept to test all CCSs by proposing a novel enumeration scheme for these objects which fully exploits the pruning opportunity offered by testability, resulting in drastic improvements in computational efficiency. Our method integrates with existing visual tools to facilitate interpretation.<h4>Availability and implementation</h4>We provide an implementation of our method, as well as code to reproduce all results at https://github.com/HectorRDB/Caldera_ISMB.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac238"
+  },
+  {
+    "id": "10.1093/bioinformatics/btac219",
+    "title": "Synthetic-to-real: instance segmentation of clinical cluster cells with unlabeled synthetic training",
+    "authors": [
+      "Zhao M",
+      "Wang S",
+      "Shi F",
+      "Jia C",
+      "Sun X",
+      "Chen S"
+    ],
+    "abstract": "<h4>Motivation</h4>The presence of tumor cell clusters in pleural effusion may be a signal of cancer metastasis. The instance segmentation of single cell from cell clusters plays a pivotal role in cluster cell analysis. However, current cell segmentation methods perform poorly for cluster cells due to the overlapping/touching characters of clusters, multiple instance properties of cells, and the poor generalization ability of the models.<h4>Results</h4>In this article, we propose a contour constraint instance segmentation framework (CC framework) for cluster cells based on a cluster cell combination enhancement module. The framework can accurately locate each instance from cluster cells and realize high-precision contour segmentation under a few samples. Specifically, we propose the contour attention constraint module to alleviate over- and under-segmentation among individual cell-instance boundaries. In addition, to evaluate the framework, we construct a pleural effusion cluster cell dataset including 197 high-quality samples. The quantitative results show that the numeric result of APmask is > 90%, a more than 10% increase compared with state-of-the-art semantic segmentation algorithms. From the qualitative results, we can observe that our method rarely has segmentation errors.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac219"
+  },
+  {
+    "id": "10.1093/bioinformatics/btac259",
+    "title": "PhyloPGM: boosting regulatory function prediction accuracy using evolutionary information",
+    "authors": [
+      "Ahsan F",
+      "Yan Z",
+      "Precup D",
+      "Blanchette M"
+    ],
+    "abstract": "<h4>Motivation</h4>The computational prediction of regulatory function associated with a genomic sequence is of utter importance in -omics study, which facilitates our understanding of the underlying mechanisms underpinning the vast gene regulatory network. Prominent examples in this area include the binding prediction of transcription factors in DNA regulatory regions, and predicting RNA-protein interaction in the context of post-transcriptional gene expression. However, existing computational methods have suffered from high false-positive rates and have seldom used any evolutionary information, despite the vast amount of available orthologous data across multitudes of extant and ancestral genomes, which readily present an opportunity to improve the accuracy of existing computational methods.<h4>Results</h4>In this study, we present a novel probabilistic approach called PhyloPGM that leverages previously trained TFBS or RNA-RBP binding predictors by aggregating their predictions from various orthologous regions, in order to boost the overall prediction accuracy on human sequences. Throughout our experiments, PhyloPGM has shown significant improvement over baselines such as the sequence-based RNA-RBP binding predictor RNATracker and the sequence-based TFBS predictor that is known as FactorNet. PhyloPGM is simple in principle, easy to implement and yet, yields impressive results.<h4>Availability and implementation</h4>The PhyloPGM package is available at https://github.com/BlanchetteLab/PhyloPGM.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac259"
+  },
+  {
+    "id": "10.1093/bioinformatics/btac244",
+    "title": "The minimizer Jaccard estimator is biased and inconsistent",
+    "authors": [
+      "Belbasi M",
+      "Blanca A",
+      "Harris RS",
+      "Koslicki D",
+      "Medvedev P"
+    ],
+    "abstract": "<h4>Motivation</h4>Sketching is now widely used in bioinformatics to reduce data size and increase data processing speed. Sketching approaches entice with improved scalability but also carry the danger of decreased accuracy and added bias. In this article, we investigate the minimizer sketch and its use to estimate the Jaccard similarity between two sequences.<h4>Results</h4>We show that the minimizer Jaccard estimator is biased and inconsistent, which means that the expected difference (i.e. the bias) between the estimator and the true value is not zero, even in the limit as the lengths of the sequences grow. We derive an analytical formula for the bias as a function of how the shared k-mers are laid out along the sequences. We show both theoretically and empirically that there are families of sequences where the bias can be substantial (e.g. the true Jaccard can be more than double the estimate). Finally, we demonstrate that this bias affects the accuracy of the widely used mashmap read mapping tool.<h4>Availability and implementation</h4>Scripts to reproduce our experiments are available at https://github.com/medvedevgroup/minimizer-jaccard-estimator/tree/main/reproduce.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac244"
+  },
+  {
+    "id": "10.1093/bioinformatics/btac230",
+    "title": "Exploring automatic inconsistency detection for literature-based gene ontology annotation",
+    "authors": [
+      "Chen J",
+      "Goudey B",
+      "Zobel J",
+      "Geard N",
+      "Verspoor K"
+    ],
+    "abstract": "<h4>Motivation</h4>Literature-based gene ontology annotations (GOA) are biological database records that use controlled vocabulary to uniformly represent gene function information that is described in the primary literature. Assurance of the quality of GOA is crucial for supporting biological research. However, a range of different kinds of inconsistencies in between literature as evidence and annotated GO terms can be identified; these have not been systematically studied at record level. The existing manual-curation approach to GOA consistency assurance is inefficient and is unable to keep pace with the rate of updates to gene function knowledge. Automatic tools are therefore needed to assist with GOA consistency assurance. This article presents an exploration of different GOA inconsistencies and an early feasibility study of automatic inconsistency detection.<h4>Results</h4>We have created a reliable synthetic dataset to simulate four realistic types of GOA inconsistency in biological databases. Three automatic approaches are proposed. They provide reasonable performance on the task of distinguishing the four types of inconsistency and are directly applicable to detect inconsistencies in real-world GOA database records. Major challenges resulting from such inconsistencies in the context of several specific application settings are reported. This is the first study to introduce automatic approaches that are designed to address the challenges in current GOA quality assurance workflows. The data underlying this article are available in Github at https://github.com/jiyuc/AutoGOAConsistency.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac230"
+  },
+  {
+    "id": "10.1093/bioinformatics/btac223",
+    "title": "ReadBouncer: precise and scalable adaptive sampling for nanopore sequencing",
+    "authors": [
+      "Ulrich JU",
+      "Lutfi A",
+      "Rutzen K",
+      "Renard BY"
+    ],
+    "abstract": "<h4>Motivation</h4>Nanopore sequencers allow targeted sequencing of interesting nucleotide sequences by rejecting other sequences from individual pores. This feature facilitates the enrichment of low-abundant sequences by depleting overrepresented ones in-silico. Existing tools for adaptive sampling either apply signal alignment, which cannot handle human-sized reference sequences, or apply read mapping in sequence space relying on fast graphical processing units (GPU) base callers for real-time read rejection. Using nanopore long-read mapping tools is also not optimal when mapping shorter reads as usually analyzed in adaptive sampling applications.<h4>Results</h4>Here, we present a new approach for nanopore adaptive sampling that combines fast CPU and GPU base calling with read classification based on Interleaved Bloom Filters. ReadBouncer improves the potential enrichment of low abundance sequences by its high read classification sensitivity and specificity, outperforming existing tools in the field. It robustly removes even reads belonging to large reference sequences while running on commodity hardware without GPUs, making adaptive sampling accessible for in-field researchers. Readbouncer also provides a user-friendly interface and installer files for end-users without a bioinformatics background.<h4>Availability and implementation</h4>The C++ source code is available at https://gitlab.com/dacs-hpi/readbouncer.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac223"
   },
   {
     "id": "10.1093/bioinformatics/btac248",
@@ -627,149 +771,5 @@
     "conference": "ismb",
     "year": 2022,
     "paper_url": "https://doi.org/10.1093/bioinformatics/btac229"
-  },
-  {
-    "id": "10.1093/bioinformatics/btac262",
-    "title": "Semi-deconvolution of bulk and single-cell RNA-seq data with application to metastatic progression in breast cancer",
-    "authors": [
-      "Lei H",
-      "Guo XA",
-      "Tao Y",
-      "Ding K",
-      "Fu X",
-      "Oesterreich S",
-      "Lee AV",
-      "Schwartz R"
-    ],
-    "abstract": "<h4>Motivation</h4>Identifying cell types and their abundances and how these evolve during tumor progression is critical to understanding the mechanisms of metastasis and identifying predictors of metastatic potential that can guide the development of new diagnostics or therapeutics. Single-cell RNA sequencing (scRNA-seq) has been especially promising in resolving heterogeneity of expression programs at the single-cell level, but is not always feasible, e.g. for large cohort studies or longitudinal analysis of archived samples. In such cases, clonal subpopulations may still be inferred via genomic deconvolution, but deconvolution methods have limited ability to resolve fine clonal structure and may require reference cell type profiles that are missing or imprecise. Prior methods can eliminate the need for reference profiles but show unstable performance when few bulk samples are available.<h4>Results</h4>In this work, we develop a new method using reference scRNA-seq to interpret sample collections for which only bulk RNA-seq is available for some samples, e.g. clonally resolving archived primary tissues using scRNA-seq from metastases. By integrating such information in a Quadratic Programming framework, our method can recover more accurate cell types and corresponding cell type abundances in bulk samples. Application to a breast tumor bone metastases dataset confirms the power of scRNA-seq data to improve cell type inference and quantification in same-patient bulk samples.<h4>Availability and implementation</h4>Source code is available on Github at https://github.com/CMUSchwartzLab/RADs.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2022,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btac262"
-  },
-  {
-    "id": "10.1093/bioinformatics/btac261",
-    "title": "DEMA: a distance-bounded energy-field minimization algorithm to model and layout biomolecular networks with quantitative features",
-    "authors": [
-      "Weng Z",
-      "Yue Z",
-      "Zhu Y",
-      "Chen JY"
-    ],
-    "abstract": "<h4>Summary</h4>In biology, graph layout algorithms can reveal comprehensive biological contexts by visually positioning graph nodes in their relevant neighborhoods. A layout software algorithm/engine commonly takes a set of nodes and edges and produces layout coordinates of nodes according to edge constraints. However, current layout engines normally do not consider node, edge or node-set properties during layout and only curate these properties after the layout is created. Here, we propose a new layout algorithm, distance-bounded energy-field minimization algorithm (DEMA), to natively consider various biological factors, i.e., the strength of gene-to-gene association, the gene's relative contribution weight and the functional groups of genes, to enhance the interpretation of complex network graphs. In DEMA, we introduce a parameterized energy model where nodes are repelled by the network topology and attracted by a few biological factors, i.e., interaction coefficient, effect coefficient and fold change of gene expression. We generalize these factors as gene weights, protein-protein interaction weights, gene-to-gene correlations and the gene set annotations-four parameterized functional properties used in DEMA. Moreover, DEMA considers further attraction/repulsion/grouping coefficient to enable different preferences in generating network views. Applying DEMA, we performed two case studies using genetic data in autism spectrum disorder and Alzheimer's disease, respectively, for gene candidate discovery. Furthermore, we implement our algorithm as a plugin to Cytoscape, an open-source software platform for visualizing networks; hence, it is convenient. Our software and demo can be freely accessed at http://discovery.informatics.uab.edu/dema.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2022,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btac261"
-  },
-  {
-    "id": "10.1093/bioinformatics/btac241",
-    "title": "Fast and interpretable genomic data analysis using multiple approximate kernel learning",
-    "authors": [
-      "Bektaş AB",
-      "Ak Ç",
-      "Gönen M"
-    ],
-    "abstract": "<h4>Motivation</h4>Dataset sizes in computational biology have been increased drastically with the help of improved data collection tools and increasing size of patient cohorts. Previous kernel-based machine learning algorithms proposed for increased interpretability started to fail with large sample sizes, owing to their lack of scalability. To overcome this problem, we proposed a fast and efficient multiple kernel learning (MKL) algorithm to be particularly used with large-scale data that integrates kernel approximation and group Lasso formulations into a conjoint model. Our method extracts significant and meaningful information from the genomic data while conjointly learning a model for out-of-sample prediction. It is scalable with increasing sample size by approximating instead of calculating distinct kernel matrices.<h4>Results</h4>To test our computational framework, namely, Multiple Approximate Kernel Learning (MAKL), we demonstrated our experiments on three cancer datasets and showed that MAKL is capable to outperform the baseline algorithm while using only a small fraction of the input features. We also reported selection frequencies of approximated kernel matrices associated with feature subsets (i.e. gene sets/pathways), which helps to see their relevance for the given classification task. Our fast and interpretable MKL algorithm producing sparse solutions is promising for computational biology applications considering its scalability and highly correlated structure of genomic datasets, and it can be used to discover new biomarkers and new therapeutic guidelines.<h4>Availability and implementation</h4>MAKL is available at https://github.com/begumbektas/makl together with the scripts that replicate the reported experiments. MAKL is also available as an R package at https://cran.r-project.org/web/packages/MAKL.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2022,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btac241"
-  },
-  {
-    "id": "10.1093/bioinformatics/btac238",
-    "title": "CALDERA: finding all significant de Bruijn subgraphs for bacterial GWAS",
-    "authors": [
-      "Roux de Bézieux H",
-      "Lima L",
-      "Perraudeau F",
-      "Mary A",
-      "Dudoit S",
-      "Jacob L"
-    ],
-    "abstract": "<h4>Motivation</h4>Genome-wide association studies (GWAS), aiming to find genetic variants associated with a trait, have widely been used on bacteria to identify genetic determinants of drug resistance or hypervirulence. Recent bacterial GWAS methods usually rely on k-mers, whose presence in a genome can denote variants ranging from single-nucleotide polymorphisms to mobile genetic elements. This approach does not require a reference genome, making it easier to account for accessory genes. However, a same gene can exist in slightly different versions across different strains, leading to diluted effects.<h4>Results</h4>Here, we overcome this issue by testing covariates built from closed connected subgraphs (CCSs) of the de Bruijn graph defined over genomic k-mers. These covariates capture polymorphic genes as a single entity, improving k-mer-based GWAS both in terms of power and interpretability. However, a method naively testing all possible subgraphs would be powerless due to multiple testing corrections, and the mere exploration of these subgraphs would quickly become computationally intractable. The concept of testable hypothesis has successfully been used to address both problems in similar contexts. We leverage this concept to test all CCSs by proposing a novel enumeration scheme for these objects which fully exploits the pruning opportunity offered by testability, resulting in drastic improvements in computational efficiency. Our method integrates with existing visual tools to facilitate interpretation.<h4>Availability and implementation</h4>We provide an implementation of our method, as well as code to reproduce all results at https://github.com/HectorRDB/Caldera_ISMB.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2022,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btac238"
-  },
-  {
-    "id": "10.1093/bioinformatics/btac219",
-    "title": "Synthetic-to-real: instance segmentation of clinical cluster cells with unlabeled synthetic training",
-    "authors": [
-      "Zhao M",
-      "Wang S",
-      "Shi F",
-      "Jia C",
-      "Sun X",
-      "Chen S"
-    ],
-    "abstract": "<h4>Motivation</h4>The presence of tumor cell clusters in pleural effusion may be a signal of cancer metastasis. The instance segmentation of single cell from cell clusters plays a pivotal role in cluster cell analysis. However, current cell segmentation methods perform poorly for cluster cells due to the overlapping/touching characters of clusters, multiple instance properties of cells, and the poor generalization ability of the models.<h4>Results</h4>In this article, we propose a contour constraint instance segmentation framework (CC framework) for cluster cells based on a cluster cell combination enhancement module. The framework can accurately locate each instance from cluster cells and realize high-precision contour segmentation under a few samples. Specifically, we propose the contour attention constraint module to alleviate over- and under-segmentation among individual cell-instance boundaries. In addition, to evaluate the framework, we construct a pleural effusion cluster cell dataset including 197 high-quality samples. The quantitative results show that the numeric result of APmask is > 90%, a more than 10% increase compared with state-of-the-art semantic segmentation algorithms. From the qualitative results, we can observe that our method rarely has segmentation errors.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2022,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btac219"
-  },
-  {
-    "id": "10.1093/bioinformatics/btac259",
-    "title": "PhyloPGM: boosting regulatory function prediction accuracy using evolutionary information",
-    "authors": [
-      "Ahsan F",
-      "Yan Z",
-      "Precup D",
-      "Blanchette M"
-    ],
-    "abstract": "<h4>Motivation</h4>The computational prediction of regulatory function associated with a genomic sequence is of utter importance in -omics study, which facilitates our understanding of the underlying mechanisms underpinning the vast gene regulatory network. Prominent examples in this area include the binding prediction of transcription factors in DNA regulatory regions, and predicting RNA-protein interaction in the context of post-transcriptional gene expression. However, existing computational methods have suffered from high false-positive rates and have seldom used any evolutionary information, despite the vast amount of available orthologous data across multitudes of extant and ancestral genomes, which readily present an opportunity to improve the accuracy of existing computational methods.<h4>Results</h4>In this study, we present a novel probabilistic approach called PhyloPGM that leverages previously trained TFBS or RNA-RBP binding predictors by aggregating their predictions from various orthologous regions, in order to boost the overall prediction accuracy on human sequences. Throughout our experiments, PhyloPGM has shown significant improvement over baselines such as the sequence-based RNA-RBP binding predictor RNATracker and the sequence-based TFBS predictor that is known as FactorNet. PhyloPGM is simple in principle, easy to implement and yet, yields impressive results.<h4>Availability and implementation</h4>The PhyloPGM package is available at https://github.com/BlanchetteLab/PhyloPGM.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2022,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btac259"
-  },
-  {
-    "id": "10.1093/bioinformatics/btac244",
-    "title": "The minimizer Jaccard estimator is biased and inconsistent",
-    "authors": [
-      "Belbasi M",
-      "Blanca A",
-      "Harris RS",
-      "Koslicki D",
-      "Medvedev P"
-    ],
-    "abstract": "<h4>Motivation</h4>Sketching is now widely used in bioinformatics to reduce data size and increase data processing speed. Sketching approaches entice with improved scalability but also carry the danger of decreased accuracy and added bias. In this article, we investigate the minimizer sketch and its use to estimate the Jaccard similarity between two sequences.<h4>Results</h4>We show that the minimizer Jaccard estimator is biased and inconsistent, which means that the expected difference (i.e. the bias) between the estimator and the true value is not zero, even in the limit as the lengths of the sequences grow. We derive an analytical formula for the bias as a function of how the shared k-mers are laid out along the sequences. We show both theoretically and empirically that there are families of sequences where the bias can be substantial (e.g. the true Jaccard can be more than double the estimate). Finally, we demonstrate that this bias affects the accuracy of the widely used mashmap read mapping tool.<h4>Availability and implementation</h4>Scripts to reproduce our experiments are available at https://github.com/medvedevgroup/minimizer-jaccard-estimator/tree/main/reproduce.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2022,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btac244"
-  },
-  {
-    "id": "10.1093/bioinformatics/btac230",
-    "title": "Exploring automatic inconsistency detection for literature-based gene ontology annotation",
-    "authors": [
-      "Chen J",
-      "Goudey B",
-      "Zobel J",
-      "Geard N",
-      "Verspoor K"
-    ],
-    "abstract": "<h4>Motivation</h4>Literature-based gene ontology annotations (GOA) are biological database records that use controlled vocabulary to uniformly represent gene function information that is described in the primary literature. Assurance of the quality of GOA is crucial for supporting biological research. However, a range of different kinds of inconsistencies in between literature as evidence and annotated GO terms can be identified; these have not been systematically studied at record level. The existing manual-curation approach to GOA consistency assurance is inefficient and is unable to keep pace with the rate of updates to gene function knowledge. Automatic tools are therefore needed to assist with GOA consistency assurance. This article presents an exploration of different GOA inconsistencies and an early feasibility study of automatic inconsistency detection.<h4>Results</h4>We have created a reliable synthetic dataset to simulate four realistic types of GOA inconsistency in biological databases. Three automatic approaches are proposed. They provide reasonable performance on the task of distinguishing the four types of inconsistency and are directly applicable to detect inconsistencies in real-world GOA database records. Major challenges resulting from such inconsistencies in the context of several specific application settings are reported. This is the first study to introduce automatic approaches that are designed to address the challenges in current GOA quality assurance workflows. The data underlying this article are available in Github at https://github.com/jiyuc/AutoGOAConsistency.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2022,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btac230"
-  },
-  {
-    "id": "10.1093/bioinformatics/btac223",
-    "title": "ReadBouncer: precise and scalable adaptive sampling for nanopore sequencing",
-    "authors": [
-      "Ulrich JU",
-      "Lutfi A",
-      "Rutzen K",
-      "Renard BY"
-    ],
-    "abstract": "<h4>Motivation</h4>Nanopore sequencers allow targeted sequencing of interesting nucleotide sequences by rejecting other sequences from individual pores. This feature facilitates the enrichment of low-abundant sequences by depleting overrepresented ones in-silico. Existing tools for adaptive sampling either apply signal alignment, which cannot handle human-sized reference sequences, or apply read mapping in sequence space relying on fast graphical processing units (GPU) base callers for real-time read rejection. Using nanopore long-read mapping tools is also not optimal when mapping shorter reads as usually analyzed in adaptive sampling applications.<h4>Results</h4>Here, we present a new approach for nanopore adaptive sampling that combines fast CPU and GPU base calling with read classification based on Interleaved Bloom Filters. ReadBouncer improves the potential enrichment of low abundance sequences by its high read classification sensitivity and specificity, outperforming existing tools in the field. It robustly removes even reads belonging to large reference sequences while running on commodity hardware without GPUs, making adaptive sampling accessible for in-field researchers. Readbouncer also provides a user-friendly interface and installer files for end-users without a bioinformatics background.<h4>Availability and implementation</h4>The C++ source code is available at https://gitlab.com/dacs-hpi/readbouncer.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2022,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btac223"
   }
 ]

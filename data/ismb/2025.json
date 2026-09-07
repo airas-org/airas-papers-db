@@ -670,177 +670,6 @@
     "paper_url": "https://doi.org/10.1093/bioinformatics/btaf254"
   },
   {
-    "id": "10.1093/bioinformatics/btaf238",
-    "title": "MixingDTA: improved drug-target affinity prediction by extending mixup with guilt-by-association",
-    "authors": [
-      "Kim Y",
-      "Bang D",
-      "Koo B",
-      "Yi J",
-      "Cho C",
-      "Choi J",
-      "Kim S"
-    ],
-    "abstract": "<h4>Summary</h4>Drug-target affinity (DTA) prediction is an important regression task for drug discovery, which can provide richer information than traditional drug-target interaction prediction as a binary prediction task. To achieve accurate DTA prediction, quite large amount of data are required for each drug, which is not available as of now. Thus, data scarcity and sparsity is a major challenge. Another important task is \"cold-start\" DTA prediction for unseen drug or protein. In this work, we introduce MixingDTA, a novel framework to tackle data scarcity by incorporating domain-specific pretrained language models for molecules and proteins with our MEETA (MolFormer and ESM-based Efficient aggregation Transformer for Affinity) model. We further address the label sparsity and cold-start challenges through a novel data augmentation strategy named GBA-Mixup, which interpolates embeddings of neighboring entities based on the guilt-by-association (GBA) principle, to improve prediction accuracy even in sparse regions of DTA space. Our experiments on benchmark datasets demonstrate that the MEETA backbone alone provides up to a 19% improvement of mean squared error over current state-of-the-art baseline, and the addition of GBA-Mixup contributes a further 8.4% improvement. Importantly, GBA-Mixup is model-agnostic, delivering performance gains across all tested backbone models of up to 16.9%. Case studies shows how MixingDTA interpolates between drugs and targets in the embedding space, demonstrating generalizability for unseen drug-target pairs while effectively focusing on functionally critical residues. These results highlight MixingDTA's potential to accelerate drug discovery by offering accurate, scalable, and biologically informed DTA predictions.<h4>Availability and implementation</h4>The code for MixingDTA is available at https://github.com/rokieplayer20/MixingDTA.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2025,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btaf238"
-  },
-  {
-    "id": "10.1093/bioinformatics/btaf251",
-    "title": "GreedyMini: generating low-density DNA minimizers",
-    "authors": [
-      "Golan S",
-      "Tziony I",
-      "Kraus M",
-      "Orenstein Y",
-      "Shur A"
-    ],
-    "abstract": "<h4>Motivation</h4>Minimizers are the most popular k-mer selection scheme in algorithms and data structures analyzing high-throughput sequencing (HTS) data. In a minimizer scheme, the smallest k-mer by some predefined order is selected as the representative of a sequence window containing w consecutive k-mers, which results in overlapping windows often selecting the same k-mer. Minimizers that achieve the lowest frequency of selected k-mers over a random DNA sequence, termed the expected density, are desired for improved performance of HTS analyses. Yet, no method to date exists to generate minimizers that achieve minimum expected density. Moreover, for k and w values used by common HTS algorithms and data structures, there is a gap between densities achieved by existing selection schemes and the theoretical lower bound.<h4>Results</h4>We developed GreedyMini, a toolkit of methods to generate minimizers with low expected or particular density, to improve minimizers, to extend minimizers to larger alphabets, k, and w, and to measure the expected density of a given minimizer efficiently. We demonstrate over various combinations of k and w values, including those of popular HTS methods, that GreedyMini can generate DNA minimizers that achieve expected densities very close to the lower bound, and both expected and particular densities much lower compared to existing selection schemes. Moreover, we show that GreedyMini's k-mer rank-retrieval time is comparable to common k-mer hash functions. We expect GreedyMini to improve the performance of many HTS algorithms and data structures and advance the research of k-mer selection schemes.<h4>Availability and implementation</h4>The toolkit, its source code, and precomputed minimizers for a variety of (k,w) pairs are available via https://github.com/OrensteinLab/GreedyMini.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2025,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btaf251"
-  },
-  {
-    "id": "10.1093/bioinformatics/btaf259",
-    "title": "ADME-drug-likeness: enriching molecular foundation models via pharmacokinetics-guided multi-task learning for drug-likeness prediction",
-    "authors": [
-      "Bang D",
-      "Kim J",
-      "Song H",
-      "Kim S"
-    ],
-    "abstract": "<h4>Summary</h4>Recent breakthroughs in AI-driven generative models enable the rapid design of extensive molecular libraries, creating an urgent need for fast and accurate drug-likeness evaluation. Traditional approaches, however, rely heavily on structural descriptors and overlook pharmacokinetic (PK) factors such as absorption, distribution, metabolism, and excretion (ADME). Furthermore, existing deep-learning models neglect the complex interdependencies among ADME tasks, which play a pivotal role in determining clinical viability. We introduce ADME-DL (drug likeness), a novel two-step pipeline that first enhances diverse range of molecular foundation models (MFMs) via sequential ADME multi-task learning. By enforcing an A→D→M→E flow-grounded in a data-driven task dependency analysis that aligns with established PK principles-our method more accurately encodes PK information into the learned embedding space. In Step 2, the resulting ADME-informed embeddings are leveraged for drug-likeness classification, distinguishing approved drugs from negative sets drawn from chemical libraries. Through comprehensive experiments, our sequential ADME multi-task learning achieves up to +2.4% improvement over state-of-the-art baselines, and enhancing performance across tested MFMs by up to +18.2%. Case studies with clinically annotated drugs validate that respecting the PK hierarchy produces more relevant predictions, reflecting drug discovery phases. These findings underscore the potential of ADME-DL to significantly enhance the early-stage filtering of candidate molecules, bridging the gap between purely structural screening methods and PK-aware modeling.<h4>Availability and implementation</h4>The source code for ADME-DL is available at https://github.com/eugenebang/ADME-DL.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2025,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btaf259"
-  },
-  {
-    "id": "10.1093/bioinformatics/btaf225",
-    "title": "Exploiting uniqueness: seed-chain-extend alignment on elastic founder graphs",
-    "authors": [
-      "Rizzo N",
-      "Cáceres M",
-      "Mäkinen V"
-    ],
-    "abstract": "<h4>Summary</h4>Sequence-to-graph alignment is a central challenge of computational pangenomics. To overcome the theoretical hardness of the problem, state-of-the-art tools use seed-and-extend or seed-chain-extend heuristics to alignment. We implement a complete seed-chain-extend alignment workflow based on indexable elastic founder graphs (iEFGs) that support linear-time exact searches unlike general graphs. We show how to construct iEFGs, find high-quality seeds, chain, and extend them at the scale of a telomere-to-telomere assembled human chromosome.<h4>Availability and implementation</h4>Our sequence-to-graph alignment tool and the scripts to replicate our experiments are available in https://github.com/algbio/SRFAligner.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2025,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btaf225"
-  },
-  {
-    "id": "10.1093/bioinformatics/btaf180",
-    "title": "RVINN: a flexible modeling for inferring dynamic transcriptional and post-transcriptional regulation using physics-informed neural networks",
-    "authors": [
-      "Muto O",
-      "Guo Z",
-      "Yamaguchi R"
-    ],
-    "abstract": "<h4>Summary</h4>Dynamic gene expression is controlled by transcriptional and post-transcriptional regulation. Recent studies on transcriptional bursting and buffering have increasingly highlighted the dynamic gene regulatory mechanisms. However, direct measurement techniques still face various constraints and require complementary methodologies, which are both comprehensive and versatile. To address this issue, inference approaches based on transcriptome data and differential equation models representing the messenger RNA lifecycle have been proposed. However, the inference of complex dynamics under diverse experimental conditions and biological scenarios remains challenging. In this study, we developed a flexible modeling using physics-informed neural networks and demonstrated its performance using simulation and experimental data. Our model has the ability to computationally revalidate and visualize dynamic biological phenomena, such as transcriptional ripple, co-bursting, and buffering in a breast cancer cell line. Furthermore, our results suggest putative molecular mechanisms underlying these phenomena. We propose a novel approach for inferring transcriptional and post-transcriptional regulation and expect to offer valuable insights for experimental and systems biology.<h4>Availability and implementation</h4>https://github.com/omuto/RVINN.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2025,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btaf180"
-  },
-  {
-    "id": "10.1093/bioinformatics/btaf234",
-    "title": "Alevin-fry-atac enables rapid and memory frugal mapping of single-cell ATAC-seq data using virtual colors for accurate genomic pseudoalignment",
-    "authors": [
-      "Singh NP",
-      "Khan J",
-      "Patro R"
-    ],
-    "abstract": "<h4>Summary</h4>Ultrafast mapping of short reads via lightweight mapping techniques such as pseudoalignment has significantly accelerated transcriptomic and metagenomic analyses with minimal accuracy loss compared to alignment-based methods. However, applying pseudoalignment to large genomic references, like chromosomes, is challenging due to their size and repetitive sequences. We introduce a new and modified pseudoalignment scheme that partitions each reference into \"virtual colors.\" These are essentially overlapping bins of fixed maximal extent on the reference sequences that are treated as distinct \"colors\" from the perspective of the pseudoalignment algorithm. We apply this modified pseudoalignment procedure to process and map single-cell ATAC-seq data in our new tool alevin-fry-atac. We compare alevin-fry-atac to both Chromap and Cell Ranger ATAC. Alevin-fry-atac is highly scalable and, when using 32 threads, is 2.8 times faster than Chromap (the second fastest approach) while using only 33% of the memory required by Chromap. The resulting peaks and clusters generated from alevin-fry-atac show high concordance with those obtained from both Chromap and the Cell Ranger ATAC pipeline, demonstrating that virtual color-enhanced pseudoalignment directly to the genome provides a fast, memory-frugal, and accurate alternative to existing approaches for single-cell ATAC-seq processing. The development of alevin-fry-atac brings single-cell ATAC-seq processing into a unified ecosystem with single-cell RNA-seq processing (via alevin-fry) to work toward providing a truly open alternative to many of the varied capabilities of CellRanger.<h4>Availability and implementation</h4>Alevin-fry-atac is written in Rust and C++17, and is freely-available under a BSD 3-clause license. It is integrated into piscem (https://github.com/COMBINE-lab/piscem) and alevin-fry (https://github.com/COMBINE-lab/alevin-fry), and is also supported directly as part of simpleaf (https://github.com/COMBINE-lab/simpleaf).",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2025,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btaf234"
-  },
-  {
-    "id": "10.1093/bioinformatics/btaf199",
-    "title": "GOAnnotator: accurate protein function annotation using automatically retrieved literature",
-    "authors": [
-      "Yan H",
-      "Liu H",
-      "Wang S",
-      "Zhu S"
-    ],
-    "abstract": "<h4>Summary</h4>Automated protein function prediction/annotation (AFP) is vital for understanding biological processes and advancing biomedical research. Existing text-based AFP methods including the state-of-the-art method, GORetriever, rely on expert-curated relevant literature, which is costly and time-consuming, and cover only a small portion of the proteins in UniProt. To overcome this limitation, we propose GOAnnotator, a novel framework for automated protein function annotation. It consists of two key modules: PubRetriever, a hybrid system for retrieving and re-ranking relevant literature, and GORetriever+, an enhanced module for identifying Gene Ontology (GO) terms from the retrieved texts. Extensive experiments over three benchmark datasets demonstrate that GOAnnotator delivers high-quality functional annotations, surpassing GORetriever in realistic situations by uncovering unique literature and predicting additional functions. These results highlight its great potential to streamline and enhance annotation of protein functions without relying on manual curation.<h4>Availability and implementation</h4>The code and data are available at https://github.com/ZhuLab-Fudan/GOAnnotator.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2025,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btaf199"
-  },
-  {
-    "id": "10.1093/bioinformatics/btaf226",
-    "title": "Enhancing biomedical relation extraction with directionality",
-    "authors": [
-      "Lai PT",
-      "Wei CH",
-      "Tian S",
-      "Leaman R",
-      "Lu Z"
-    ],
-    "abstract": "<h4>Summary</h4>Biological relation networks contain rich information for understanding the biological mechanisms behind the relationship of entities such as genes, proteins, diseases, and chemicals. The vast growth of biomedical literature poses significant challenges in updating the network knowledge. The recent Biomedical Relation Extraction Dataset (BioRED) provides valuable manual annotations, facilitating the development of machine learning and pre-trained language model approaches for automatically identifying novel document-level (inter-sentence context) relationships. Nonetheless, its annotations lack directionality (subject/object) for the entity roles, which is essential for studying complex biological networks. Herein, we annotate the entity roles of the relationships in the BioRED corpus and subsequently propose a novel multi-task language model with soft-prompt learning to jointly identify the relationship, novel findings, and entity roles. Our results include an enriched BioRED corpus with 10 864 directionality annotations. Moreover, our proposed method outperforms existing large language models, such as the state-of-the-art GPT-4 and Llama-3, on two benchmarking tasks.<h4>Availability and implementation</h4>Our source code and dataset are available at https://github.com/ncbi-nlp/BioREDirect.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2025,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btaf226"
-  },
-  {
-    "id": "10.1093/bioinformatics/btaf255",
-    "title": "Understanding the sources of performance in deep drug response models reveals insights and improvements",
-    "authors": [
-      "Branson N",
-      "Cutillas PR",
-      "Bessant C"
-    ],
-    "abstract": "<h4>Motivation</h4>Anti-cancer drug response prediction (DRP) using cancer cell lines (CLs) is crucial in stratified medicine and drug discovery. Recently, new deep learning models for DRP have improved performance over their predecessors. However, different models use different input data types and architectures making it hard to find the source of these improvements. Here we consider published DRP models that report state-of-the-art performance predicting continuous response values. These models take chemical structures of drugs and omics profiles of CLs as input.<h4>Results</h4>By experimenting with these models and comparing with our simple baselines, we show that no performance comes from drug features, instead, performance is due to the transcriptomics CL profiles. Furthermore, we show that, depending on the testing type, much of the current reported performance is a property of the training target values. We address these limitations by creating BinaryET and BinaryCB that predict binary drug response values, guided by the hypothesis that this reduces the noise in the drug efficacy data. Thus, better aligning them with biochemistry that can be learnt from the input data. BinaryCB leverages a chemical foundation model, while BinaryET is trained from scratch using a transformer-type architecture. We show that these models learn useful chemical drug features, which is the first time this has been demonstrated for multiple testing types to our knowledge. We further show binarizing the drug response values causes the models to learn useful chemical drug features. We also show that BinaryET improves performance over BinaryCB, and the published models that report state-of-the-art performance.<h4>Availability and implementation</h4>Code is available from https://github.com/Nik-BB/Understanding_DRP_models.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2025,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btaf255"
-  },
-  {
-    "id": "10.1093/bioinformatics/btaf186",
-    "title": "Leveraging transcription factor physical proximity for enhancing gene regulation inference",
-    "authors": [
-      "Huang X",
-      "Hullur AR",
-      "Jafari E",
-      "Shridhar K",
-      "Zhou M",
-      "Mackie K",
-      "Huang K",
-      "Wang Y"
-    ],
-    "abstract": "<h4>Motivation</h4>Gene regulation inference, a key challenge in systems biology, is crucial for understanding cell function, as it governs processes such as differentiation, cell state maintenance, signal transduction, and stress response. Leading methods utilize gene expression, chromatin accessibility, transcription factor (TF) DNA binding motifs, and prior knowledge. However, they overlook the fact that TFs must be in physical proximity to facilitate transcriptional gene regulation.<h4>Results</h4>To fill the gap, we develop GRIP-Gene Regulation Inference by considering TF Proximity-a gene regulation inference method that directly considers the physical proximity between regulating TFs. Specifically, we use the distance in a protein-protein interaction (PPI) network to estimate the physical proximity between TFs. We design a novel Boolean convex program, which can identify TFs that not only can explain the gene expression of target genes (TGs) but also stay close in the PPI network. We propose an efficient algorithm to solve the Boolean relaxation of the proposed model with a theoretical tightness guarantee. We compare our GRIP with state-of-the-art methods (SCENIC+, DirectNet, Pando, and CellOracle) on inferring cell-type-specific (CD4, CD8, and CD 14) gene regulation using the PBMC 3k scMultiome-seq data and demonstrate its out-performance in terms of the predictive power of the inferred TFs, the physical distance between the inferred TFs, and the agreement between the inferred gene regulation and PCHiC data.<h4>Availability and implementation</h4>https://github.com/EJIUB/GRIP.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2025,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btaf186"
-  },
-  {
-    "id": "10.1093/bioinformatics/btaf195",
-    "title": "ScGOclust: leveraging gene ontology to find functionally analogous cell types between distant species",
-    "authors": [
-      "Song Y",
-      "Hu Y",
-      "Dow J",
-      "Perrimon N",
-      "Papatheodorou I"
-    ],
-    "abstract": "<h4>Motivation</h4>Basic biological processes are shared across animal species, yet their cellular mechanisms are profoundly diverse. Comparing cell-type gene expression between species reveals conserved and divergent cellular functions. However, as phylogenetic distance increases, gene-based comparisons become less informative. The gene ontology (GO) knowledgebase offers a solution by serving as the most comprehensive resource of gene functions across a vast diversity of species, providing a bridge for distant species comparisons.<h4>Results</h4>Here, we present scGOclust, a computational tool that constructs de novo cellular functional profiles using GO terms, facilitating systematic and robust comparisons within and across species. We applied scGOclust to analyse and compare the heart, gut, and kidney between mouse and fly, and whole-body data from Caenorhabditis elegans and Hydra vulgaris. We show that scGOclust effectively recapitulates the function spectrum of different cell types, characterizes functional similarities between homologous cell types, and reveals functional convergence between unrelated cell types. Additionally, we identified subpopulations within the fly crop that show circadian rhythm-regulated secretory properties and hypothesize an analogy between fly principal cells from different segments and distinct mouse kidney tubules. We envision scGOclust as an effective tool for uncovering functionally analogous cell types or organs across distant species, offering fresh perspectives on evolutionary and functional biology.<h4>Availability and implementation</h4>ScGOclust is publicly available on CRAN: https://cran.r-project.org/web/packages/scGOclust/index.html and development versions are available on GitHub: github.com/Papatheodorou-Group/scGOclust/.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2025,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btaf195"
-  },
-  {
     "id": "10.1093/bioinformatics/btaf237",
     "title": "Fair molecular feature selection unveils universally tumor lineage-informative methylation sites in colorectal cancer",
     "authors": [
@@ -1019,5 +848,176 @@
     "conference": "ismb",
     "year": 2025,
     "paper_url": "https://doi.org/10.1093/bioinformatics/btaf211"
+  },
+  {
+    "id": "10.1093/bioinformatics/btaf238",
+    "title": "MixingDTA: improved drug-target affinity prediction by extending mixup with guilt-by-association",
+    "authors": [
+      "Kim Y",
+      "Bang D",
+      "Koo B",
+      "Yi J",
+      "Cho C",
+      "Choi J",
+      "Kim S"
+    ],
+    "abstract": "<h4>Summary</h4>Drug-target affinity (DTA) prediction is an important regression task for drug discovery, which can provide richer information than traditional drug-target interaction prediction as a binary prediction task. To achieve accurate DTA prediction, quite large amount of data are required for each drug, which is not available as of now. Thus, data scarcity and sparsity is a major challenge. Another important task is \"cold-start\" DTA prediction for unseen drug or protein. In this work, we introduce MixingDTA, a novel framework to tackle data scarcity by incorporating domain-specific pretrained language models for molecules and proteins with our MEETA (MolFormer and ESM-based Efficient aggregation Transformer for Affinity) model. We further address the label sparsity and cold-start challenges through a novel data augmentation strategy named GBA-Mixup, which interpolates embeddings of neighboring entities based on the guilt-by-association (GBA) principle, to improve prediction accuracy even in sparse regions of DTA space. Our experiments on benchmark datasets demonstrate that the MEETA backbone alone provides up to a 19% improvement of mean squared error over current state-of-the-art baseline, and the addition of GBA-Mixup contributes a further 8.4% improvement. Importantly, GBA-Mixup is model-agnostic, delivering performance gains across all tested backbone models of up to 16.9%. Case studies shows how MixingDTA interpolates between drugs and targets in the embedding space, demonstrating generalizability for unseen drug-target pairs while effectively focusing on functionally critical residues. These results highlight MixingDTA's potential to accelerate drug discovery by offering accurate, scalable, and biologically informed DTA predictions.<h4>Availability and implementation</h4>The code for MixingDTA is available at https://github.com/rokieplayer20/MixingDTA.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2025,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btaf238"
+  },
+  {
+    "id": "10.1093/bioinformatics/btaf251",
+    "title": "GreedyMini: generating low-density DNA minimizers",
+    "authors": [
+      "Golan S",
+      "Tziony I",
+      "Kraus M",
+      "Orenstein Y",
+      "Shur A"
+    ],
+    "abstract": "<h4>Motivation</h4>Minimizers are the most popular k-mer selection scheme in algorithms and data structures analyzing high-throughput sequencing (HTS) data. In a minimizer scheme, the smallest k-mer by some predefined order is selected as the representative of a sequence window containing w consecutive k-mers, which results in overlapping windows often selecting the same k-mer. Minimizers that achieve the lowest frequency of selected k-mers over a random DNA sequence, termed the expected density, are desired for improved performance of HTS analyses. Yet, no method to date exists to generate minimizers that achieve minimum expected density. Moreover, for k and w values used by common HTS algorithms and data structures, there is a gap between densities achieved by existing selection schemes and the theoretical lower bound.<h4>Results</h4>We developed GreedyMini, a toolkit of methods to generate minimizers with low expected or particular density, to improve minimizers, to extend minimizers to larger alphabets, k, and w, and to measure the expected density of a given minimizer efficiently. We demonstrate over various combinations of k and w values, including those of popular HTS methods, that GreedyMini can generate DNA minimizers that achieve expected densities very close to the lower bound, and both expected and particular densities much lower compared to existing selection schemes. Moreover, we show that GreedyMini's k-mer rank-retrieval time is comparable to common k-mer hash functions. We expect GreedyMini to improve the performance of many HTS algorithms and data structures and advance the research of k-mer selection schemes.<h4>Availability and implementation</h4>The toolkit, its source code, and precomputed minimizers for a variety of (k,w) pairs are available via https://github.com/OrensteinLab/GreedyMini.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2025,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btaf251"
+  },
+  {
+    "id": "10.1093/bioinformatics/btaf259",
+    "title": "ADME-drug-likeness: enriching molecular foundation models via pharmacokinetics-guided multi-task learning for drug-likeness prediction",
+    "authors": [
+      "Bang D",
+      "Kim J",
+      "Song H",
+      "Kim S"
+    ],
+    "abstract": "<h4>Summary</h4>Recent breakthroughs in AI-driven generative models enable the rapid design of extensive molecular libraries, creating an urgent need for fast and accurate drug-likeness evaluation. Traditional approaches, however, rely heavily on structural descriptors and overlook pharmacokinetic (PK) factors such as absorption, distribution, metabolism, and excretion (ADME). Furthermore, existing deep-learning models neglect the complex interdependencies among ADME tasks, which play a pivotal role in determining clinical viability. We introduce ADME-DL (drug likeness), a novel two-step pipeline that first enhances diverse range of molecular foundation models (MFMs) via sequential ADME multi-task learning. By enforcing an A→D→M→E flow-grounded in a data-driven task dependency analysis that aligns with established PK principles-our method more accurately encodes PK information into the learned embedding space. In Step 2, the resulting ADME-informed embeddings are leveraged for drug-likeness classification, distinguishing approved drugs from negative sets drawn from chemical libraries. Through comprehensive experiments, our sequential ADME multi-task learning achieves up to +2.4% improvement over state-of-the-art baselines, and enhancing performance across tested MFMs by up to +18.2%. Case studies with clinically annotated drugs validate that respecting the PK hierarchy produces more relevant predictions, reflecting drug discovery phases. These findings underscore the potential of ADME-DL to significantly enhance the early-stage filtering of candidate molecules, bridging the gap between purely structural screening methods and PK-aware modeling.<h4>Availability and implementation</h4>The source code for ADME-DL is available at https://github.com/eugenebang/ADME-DL.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2025,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btaf259"
+  },
+  {
+    "id": "10.1093/bioinformatics/btaf225",
+    "title": "Exploiting uniqueness: seed-chain-extend alignment on elastic founder graphs",
+    "authors": [
+      "Rizzo N",
+      "Cáceres M",
+      "Mäkinen V"
+    ],
+    "abstract": "<h4>Summary</h4>Sequence-to-graph alignment is a central challenge of computational pangenomics. To overcome the theoretical hardness of the problem, state-of-the-art tools use seed-and-extend or seed-chain-extend heuristics to alignment. We implement a complete seed-chain-extend alignment workflow based on indexable elastic founder graphs (iEFGs) that support linear-time exact searches unlike general graphs. We show how to construct iEFGs, find high-quality seeds, chain, and extend them at the scale of a telomere-to-telomere assembled human chromosome.<h4>Availability and implementation</h4>Our sequence-to-graph alignment tool and the scripts to replicate our experiments are available in https://github.com/algbio/SRFAligner.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2025,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btaf225"
+  },
+  {
+    "id": "10.1093/bioinformatics/btaf180",
+    "title": "RVINN: a flexible modeling for inferring dynamic transcriptional and post-transcriptional regulation using physics-informed neural networks",
+    "authors": [
+      "Muto O",
+      "Guo Z",
+      "Yamaguchi R"
+    ],
+    "abstract": "<h4>Summary</h4>Dynamic gene expression is controlled by transcriptional and post-transcriptional regulation. Recent studies on transcriptional bursting and buffering have increasingly highlighted the dynamic gene regulatory mechanisms. However, direct measurement techniques still face various constraints and require complementary methodologies, which are both comprehensive and versatile. To address this issue, inference approaches based on transcriptome data and differential equation models representing the messenger RNA lifecycle have been proposed. However, the inference of complex dynamics under diverse experimental conditions and biological scenarios remains challenging. In this study, we developed a flexible modeling using physics-informed neural networks and demonstrated its performance using simulation and experimental data. Our model has the ability to computationally revalidate and visualize dynamic biological phenomena, such as transcriptional ripple, co-bursting, and buffering in a breast cancer cell line. Furthermore, our results suggest putative molecular mechanisms underlying these phenomena. We propose a novel approach for inferring transcriptional and post-transcriptional regulation and expect to offer valuable insights for experimental and systems biology.<h4>Availability and implementation</h4>https://github.com/omuto/RVINN.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2025,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btaf180"
+  },
+  {
+    "id": "10.1093/bioinformatics/btaf234",
+    "title": "Alevin-fry-atac enables rapid and memory frugal mapping of single-cell ATAC-seq data using virtual colors for accurate genomic pseudoalignment",
+    "authors": [
+      "Singh NP",
+      "Khan J",
+      "Patro R"
+    ],
+    "abstract": "<h4>Summary</h4>Ultrafast mapping of short reads via lightweight mapping techniques such as pseudoalignment has significantly accelerated transcriptomic and metagenomic analyses with minimal accuracy loss compared to alignment-based methods. However, applying pseudoalignment to large genomic references, like chromosomes, is challenging due to their size and repetitive sequences. We introduce a new and modified pseudoalignment scheme that partitions each reference into \"virtual colors.\" These are essentially overlapping bins of fixed maximal extent on the reference sequences that are treated as distinct \"colors\" from the perspective of the pseudoalignment algorithm. We apply this modified pseudoalignment procedure to process and map single-cell ATAC-seq data in our new tool alevin-fry-atac. We compare alevin-fry-atac to both Chromap and Cell Ranger ATAC. Alevin-fry-atac is highly scalable and, when using 32 threads, is 2.8 times faster than Chromap (the second fastest approach) while using only 33% of the memory required by Chromap. The resulting peaks and clusters generated from alevin-fry-atac show high concordance with those obtained from both Chromap and the Cell Ranger ATAC pipeline, demonstrating that virtual color-enhanced pseudoalignment directly to the genome provides a fast, memory-frugal, and accurate alternative to existing approaches for single-cell ATAC-seq processing. The development of alevin-fry-atac brings single-cell ATAC-seq processing into a unified ecosystem with single-cell RNA-seq processing (via alevin-fry) to work toward providing a truly open alternative to many of the varied capabilities of CellRanger.<h4>Availability and implementation</h4>Alevin-fry-atac is written in Rust and C++17, and is freely-available under a BSD 3-clause license. It is integrated into piscem (https://github.com/COMBINE-lab/piscem) and alevin-fry (https://github.com/COMBINE-lab/alevin-fry), and is also supported directly as part of simpleaf (https://github.com/COMBINE-lab/simpleaf).",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2025,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btaf234"
+  },
+  {
+    "id": "10.1093/bioinformatics/btaf199",
+    "title": "GOAnnotator: accurate protein function annotation using automatically retrieved literature",
+    "authors": [
+      "Yan H",
+      "Liu H",
+      "Wang S",
+      "Zhu S"
+    ],
+    "abstract": "<h4>Summary</h4>Automated protein function prediction/annotation (AFP) is vital for understanding biological processes and advancing biomedical research. Existing text-based AFP methods including the state-of-the-art method, GORetriever, rely on expert-curated relevant literature, which is costly and time-consuming, and cover only a small portion of the proteins in UniProt. To overcome this limitation, we propose GOAnnotator, a novel framework for automated protein function annotation. It consists of two key modules: PubRetriever, a hybrid system for retrieving and re-ranking relevant literature, and GORetriever+, an enhanced module for identifying Gene Ontology (GO) terms from the retrieved texts. Extensive experiments over three benchmark datasets demonstrate that GOAnnotator delivers high-quality functional annotations, surpassing GORetriever in realistic situations by uncovering unique literature and predicting additional functions. These results highlight its great potential to streamline and enhance annotation of protein functions without relying on manual curation.<h4>Availability and implementation</h4>The code and data are available at https://github.com/ZhuLab-Fudan/GOAnnotator.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2025,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btaf199"
+  },
+  {
+    "id": "10.1093/bioinformatics/btaf226",
+    "title": "Enhancing biomedical relation extraction with directionality",
+    "authors": [
+      "Lai PT",
+      "Wei CH",
+      "Tian S",
+      "Leaman R",
+      "Lu Z"
+    ],
+    "abstract": "<h4>Summary</h4>Biological relation networks contain rich information for understanding the biological mechanisms behind the relationship of entities such as genes, proteins, diseases, and chemicals. The vast growth of biomedical literature poses significant challenges in updating the network knowledge. The recent Biomedical Relation Extraction Dataset (BioRED) provides valuable manual annotations, facilitating the development of machine learning and pre-trained language model approaches for automatically identifying novel document-level (inter-sentence context) relationships. Nonetheless, its annotations lack directionality (subject/object) for the entity roles, which is essential for studying complex biological networks. Herein, we annotate the entity roles of the relationships in the BioRED corpus and subsequently propose a novel multi-task language model with soft-prompt learning to jointly identify the relationship, novel findings, and entity roles. Our results include an enriched BioRED corpus with 10 864 directionality annotations. Moreover, our proposed method outperforms existing large language models, such as the state-of-the-art GPT-4 and Llama-3, on two benchmarking tasks.<h4>Availability and implementation</h4>Our source code and dataset are available at https://github.com/ncbi-nlp/BioREDirect.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2025,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btaf226"
+  },
+  {
+    "id": "10.1093/bioinformatics/btaf255",
+    "title": "Understanding the sources of performance in deep drug response models reveals insights and improvements",
+    "authors": [
+      "Branson N",
+      "Cutillas PR",
+      "Bessant C"
+    ],
+    "abstract": "<h4>Motivation</h4>Anti-cancer drug response prediction (DRP) using cancer cell lines (CLs) is crucial in stratified medicine and drug discovery. Recently, new deep learning models for DRP have improved performance over their predecessors. However, different models use different input data types and architectures making it hard to find the source of these improvements. Here we consider published DRP models that report state-of-the-art performance predicting continuous response values. These models take chemical structures of drugs and omics profiles of CLs as input.<h4>Results</h4>By experimenting with these models and comparing with our simple baselines, we show that no performance comes from drug features, instead, performance is due to the transcriptomics CL profiles. Furthermore, we show that, depending on the testing type, much of the current reported performance is a property of the training target values. We address these limitations by creating BinaryET and BinaryCB that predict binary drug response values, guided by the hypothesis that this reduces the noise in the drug efficacy data. Thus, better aligning them with biochemistry that can be learnt from the input data. BinaryCB leverages a chemical foundation model, while BinaryET is trained from scratch using a transformer-type architecture. We show that these models learn useful chemical drug features, which is the first time this has been demonstrated for multiple testing types to our knowledge. We further show binarizing the drug response values causes the models to learn useful chemical drug features. We also show that BinaryET improves performance over BinaryCB, and the published models that report state-of-the-art performance.<h4>Availability and implementation</h4>Code is available from https://github.com/Nik-BB/Understanding_DRP_models.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2025,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btaf255"
+  },
+  {
+    "id": "10.1093/bioinformatics/btaf186",
+    "title": "Leveraging transcription factor physical proximity for enhancing gene regulation inference",
+    "authors": [
+      "Huang X",
+      "Hullur AR",
+      "Jafari E",
+      "Shridhar K",
+      "Zhou M",
+      "Mackie K",
+      "Huang K",
+      "Wang Y"
+    ],
+    "abstract": "<h4>Motivation</h4>Gene regulation inference, a key challenge in systems biology, is crucial for understanding cell function, as it governs processes such as differentiation, cell state maintenance, signal transduction, and stress response. Leading methods utilize gene expression, chromatin accessibility, transcription factor (TF) DNA binding motifs, and prior knowledge. However, they overlook the fact that TFs must be in physical proximity to facilitate transcriptional gene regulation.<h4>Results</h4>To fill the gap, we develop GRIP-Gene Regulation Inference by considering TF Proximity-a gene regulation inference method that directly considers the physical proximity between regulating TFs. Specifically, we use the distance in a protein-protein interaction (PPI) network to estimate the physical proximity between TFs. We design a novel Boolean convex program, which can identify TFs that not only can explain the gene expression of target genes (TGs) but also stay close in the PPI network. We propose an efficient algorithm to solve the Boolean relaxation of the proposed model with a theoretical tightness guarantee. We compare our GRIP with state-of-the-art methods (SCENIC+, DirectNet, Pando, and CellOracle) on inferring cell-type-specific (CD4, CD8, and CD 14) gene regulation using the PBMC 3k scMultiome-seq data and demonstrate its out-performance in terms of the predictive power of the inferred TFs, the physical distance between the inferred TFs, and the agreement between the inferred gene regulation and PCHiC data.<h4>Availability and implementation</h4>https://github.com/EJIUB/GRIP.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2025,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btaf186"
+  },
+  {
+    "id": "10.1093/bioinformatics/btaf195",
+    "title": "ScGOclust: leveraging gene ontology to find functionally analogous cell types between distant species",
+    "authors": [
+      "Song Y",
+      "Hu Y",
+      "Dow J",
+      "Perrimon N",
+      "Papatheodorou I"
+    ],
+    "abstract": "<h4>Motivation</h4>Basic biological processes are shared across animal species, yet their cellular mechanisms are profoundly diverse. Comparing cell-type gene expression between species reveals conserved and divergent cellular functions. However, as phylogenetic distance increases, gene-based comparisons become less informative. The gene ontology (GO) knowledgebase offers a solution by serving as the most comprehensive resource of gene functions across a vast diversity of species, providing a bridge for distant species comparisons.<h4>Results</h4>Here, we present scGOclust, a computational tool that constructs de novo cellular functional profiles using GO terms, facilitating systematic and robust comparisons within and across species. We applied scGOclust to analyse and compare the heart, gut, and kidney between mouse and fly, and whole-body data from Caenorhabditis elegans and Hydra vulgaris. We show that scGOclust effectively recapitulates the function spectrum of different cell types, characterizes functional similarities between homologous cell types, and reveals functional convergence between unrelated cell types. Additionally, we identified subpopulations within the fly crop that show circadian rhythm-regulated secretory properties and hypothesize an analogy between fly principal cells from different segments and distinct mouse kidney tubules. We envision scGOclust as an effective tool for uncovering functionally analogous cell types or organs across distant species, offering fresh perspectives on evolutionary and functional biology.<h4>Availability and implementation</h4>ScGOclust is publicly available on CRAN: https://cran.r-project.org/web/packages/scGOclust/index.html and development versions are available on GitHub: github.com/Papatheodorou-Group/scGOclust/.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2025,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btaf195"
   }
 ]

@@ -122,177 +122,6 @@
     "paper_url": "https://doi.org/10.1093/bioinformatics/btad206"
   },
   {
-    "id": "10.1093/bioinformatics/btad251",
-    "title": "Getting 'ϕψχal' with proteins: minimum message length inference of joint distributions of backbone and sidechain dihedral angles",
-    "authors": [
-      "Amarasinghe PR",
-      "Allison L",
-      "Stuckey PJ",
-      "Garcia de la Banda M",
-      "Lesk AM",
-      "Konagurthu AS"
-    ],
-    "abstract": "The tendency of an amino acid to adopt certain configurations in folded proteins is treated here as a statistical estimation problem. We model the joint distribution of the observed mainchain and sidechain dihedral angles (〈ϕ,ψ,χ1,χ2,…〉) of any amino acid by a mixture of a product of von Mises probability distributions. This mixture model maps any vector of dihedral angles to a point on a multi-dimensional torus. The continuous space it uses to specify the dihedral angles provides an alternative to the commonly used rotamer libraries. These rotamer libraries discretize the space of dihedral angles into coarse angular bins, and cluster combinations of sidechain dihedral angles (〈χ1,χ2,…〉) as a function of backbone 〈ϕ,ψ〉 conformations. A 'good' model is one that is both concise and explains (compresses) observed data. Competing models can be compared directly and in particular our model is shown to outperform the Dunbrack rotamer library in terms of model complexity (by three orders of magnitude) and its fidelity (on average 20% more compression) when losslessly explaining the observed dihedral angle data across experimental resolutions of structures. Our method is unsupervised (with parameters estimated automatically) and uses information theory to determine the optimal complexity of the statistical model, thus avoiding under/over-fitting, a common pitfall in model selection problems. Our models are computationally inexpensive to sample from and are geared to support a number of downstream studies, ranging from experimental structure refinement, de novo protein design, and protein structure prediction. We call our collection of mixture models as PhiSiCal (ϕψχal).<h4>Availability and implementation</h4>PhiSiCal mixture models and programs to sample from them are available for download at http://lcb.infotech.monash.edu.au/phisical.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btad251"
-  },
-  {
-    "id": "10.1093/bioinformatics/btad245",
-    "title": "Deriving spatial features from in situ proteomics imaging to enhance cancer survival analysis",
-    "authors": [
-      "Dayao MT",
-      "Trevino A",
-      "Kim H",
-      "Ruffalo M",
-      "D'Angio HB",
-      "Preska R",
-      "Duvvuri U",
-      "Mayer AT",
-      "Bar-Joseph Z"
-    ],
-    "abstract": "<h4>Motivation</h4>Spatial proteomics data have been used to map cell states and improve our understanding of tissue organization. More recently, these methods have been extended to study the impact of such organization on disease progression and patient survival. However, to date, the majority of supervised learning methods utilizing these data types did not take full advantage of the spatial information, impacting their performance and utilization.<h4>Results</h4>Taking inspiration from ecology and epidemiology, we developed novel spatial feature extraction methods for use with spatial proteomics data. We used these features to learn prediction models for cancer patient survival. As we show, using the spatial features led to consistent improvement over prior methods that used the spatial proteomics data for the same task. In addition, feature importance analysis revealed new insights about the cell interactions that contribute to patient survival.<h4>Availability and implementation</h4>The code for this work can be found at gitlab.com/enable-medicine-public/spatsurv.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btad245"
-  },
-  {
-    "id": "10.1093/bioinformatics/btad237",
-    "title": "SVJedi-graph: improving the genotyping of close and overlapping structural variants with long reads using a variation graph",
-    "authors": [
-      "Romain S",
-      "Lemaitre C"
-    ],
-    "abstract": "<h4>Motivation</h4>Structural variation (SV) is a class of genetic diversity whose importance is increasingly revealed by genome resequencing, especially with long-read technologies. One crucial problem when analyzing and comparing SVs in several individuals is their accurate genotyping, that is determining whether a described SV is present or absent in one sequenced individual, and if present, in how many copies. There are only a few methods dedicated to SV genotyping with long-read data, and all either suffer of a bias toward the reference allele by not representing equally all alleles, or have difficulties genotyping close or overlapping SVs due to a linear representation of the alleles.<h4>Results</h4>We present SVJedi-graph, a novel method for SV genotyping that relies on a variation graph to represent in a single data structure all alleles of a set of SVs. The long reads are mapped on the variation graph and the resulting alignments that cover allele-specific edges in the graph are used to estimate the most likely genotype for each SV. Running SVJedi-graph on simulated sets of close and overlapping deletions showed that this graph model prevents the bias toward the reference alleles and allows maintaining high genotyping accuracy whatever the SV proximity, contrary to other state of the art genotypers. On the human gold standard HG002 dataset, SVJedi-graph obtained the best performances, genotyping 99.5% of the high confidence SV callset with an accuracy of 95% in less than 30 min.<h4>Availability and implementation</h4>SVJedi-graph is distributed under an AGPL license and available on GitHub at https://github.com/SandraLouise/SVJedi-graph and as a BioConda package.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btad237"
-  },
-  {
-    "id": "10.1093/bioinformatics/btad246",
-    "title": "UNADON: transformer-based model to predict genome-wide chromosome spatial position",
-    "authors": [
-      "Yang M",
-      "Ma J"
-    ],
-    "abstract": "<h4>Motivation</h4>The spatial positioning of chromosomes relative to functional nuclear bodies is intertwined with genome functions such as transcription. However, the sequence patterns and epigenomic features that collectively influence chromatin spatial positioning in a genome-wide manner are not well understood.<h4>Results</h4>Here, we develop a new transformer-based deep learning model called UNADON, which predicts the genome-wide cytological distance to a specific type of nuclear body, as measured by TSA-seq, using both sequence features and epigenomic signals. Evaluations of UNADON in four cell lines (K562, H1, HFFc6, HCT116) show high accuracy in predicting chromatin spatial positioning to nuclear bodies when trained on a single cell line. UNADON also performed well in an unseen cell type. Importantly, we reveal potential sequence and epigenomic factors that affect large-scale chromatin compartmentalization in nuclear bodies. Together, UNADON provides new insights into the principles between sequence features and large-scale chromatin spatial localization, which has important implications for understanding nuclear structure and function.<h4>Availability and implementation</h4>The source code of UNADON can be found at https://github.com/ma-compbio/UNADON.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btad246"
-  },
-  {
-    "id": "10.1093/bioinformatics/btad241",
-    "title": "Supervised biological network alignment with graph neural networks",
-    "authors": [
-      "Ding K",
-      "Wang S",
-      "Luo Y"
-    ],
-    "abstract": "<h4>Motivation</h4>Despite the advances in sequencing technology, massive proteins with known sequences remain functionally unannotated. Biological network alignment (NA), which aims to find the node correspondence between species' protein-protein interaction (PPI) networks, has been a popular strategy to uncover missing annotations by transferring functional knowledge across species. Traditional NA methods assumed that topologically similar proteins in PPIs are functionally similar. However, it was recently reported that functionally unrelated proteins can be as topologically similar as functionally related pairs, and a new data-driven or supervised NA paradigm has been proposed, which uses protein function data to discern which topological features correspond to functional relatedness.<h4>Results</h4>Here, we propose GraNA, a deep learning framework for the supervised NA paradigm for the pairwise NA problem. Employing graph neural networks, GraNA utilizes within-network interactions and across-network anchor links for learning protein representations and predicting functional correspondence between across-species proteins. A major strength of GraNA is its flexibility to integrate multi-faceted non-functional relationship data, such as sequence similarity and ortholog relationships, as anchor links to guide the mapping of functionally related proteins across species. Evaluating GraNA on a benchmark dataset composed of several NA tasks between different pairs of species, we observed that GraNA accurately predicted the functional relatedness of proteins and robustly transferred functional annotations across species, outperforming a number of existing NA methods. When applied to a case study on a humanized yeast network, GraNA also successfully discovered functionally replaceable human-yeast protein pairs that were documented in previous studies.<h4>Availability and implementation</h4>The code of GraNA is available at https://github.com/luo-group/GraNA.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btad241"
-  },
-  {
-    "id": "10.1093/bioinformatics/btad262",
-    "title": "Trap spaces of multi-valued networks: definition, computation, and applications",
-    "authors": [
-      "Trinh VG",
-      "Benhamou B",
-      "Henzinger T",
-      "Pastva S"
-    ],
-    "abstract": "<h4>Motivation</h4>Boolean networks are simple but efficient mathematical formalism for modelling complex biological systems. However, having only two levels of activation is sometimes not enough to fully capture the dynamics of real-world biological systems. Hence, the need for multi-valued networks (MVNs), a generalization of Boolean networks. Despite the importance of MVNs for modelling biological systems, only limited progress has been made on developing theories, analysis methods, and tools that can support them. In particular, the recent use of trap spaces in Boolean networks made a great impact on the field of systems biology, but there has been no similar concept defined and studied for MVNs to date.<h4>Results</h4>In this work, we generalize the concept of trap spaces in Boolean networks to that in MVNs. We then develop the theory and the analysis methods for trap spaces in MVNs. In particular, we implement all proposed methods in a Python package called trapmvn. Not only showing the applicability of our approach via a realistic case study, we also evaluate the time efficiency of the method on a large collection of real-world models. The experimental results confirm the time efficiency, which we believe enables more accurate analysis on larger and more complex multi-valued models.<h4>Availability and implementation</h4>Source code and data are freely available at https://github.com/giang-trinh/trap-mvn.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btad262"
-  },
-  {
-    "id": "10.1093/bioinformatics/btad222",
-    "title": "CProMG: controllable protein-oriented molecule generation with desired binding affinity and drug-like properties",
-    "authors": [
-      "Li JN",
-      "Yang G",
-      "Zhao PC",
-      "Wei XX",
-      "Shi JY"
-    ],
-    "abstract": "<h4>Motivation</h4>Deep learning-based molecule generation becomes a new paradigm of de novo molecule design since it enables fast and directional exploration in the vast chemical space. However, it is still an open issue to generate molecules, which bind to specific proteins with high-binding affinities while owning desired drug-like physicochemical properties.<h4>Results</h4>To address these issues, we elaborate a novel framework for controllable protein-oriented molecule generation, named CProMG, which contains a 3D protein embedding module, a dual-view protein encoder, a molecule embedding module, and a novel drug-like molecule decoder. Based on fusing the hierarchical views of proteins, it enhances the representation of protein binding pockets significantly by associating amino acid residues with their comprising atoms. Through jointly embedding molecule sequences, their drug-like properties, and binding affinities w.r.t. proteins, it autoregressively generates novel molecules having specific properties in a controllable manner by measuring the proximity of molecule tokens to protein residues and atoms. The comparison with state-of-the-art deep generative methods demonstrates the superiority of our CProMG. Furthermore, the progressive control of properties demonstrates the effectiveness of CProMG when controlling binding affinity and drug-like properties. After that, the ablation studies reveal how its crucial components contribute to the model respectively, including hierarchical protein views, Laplacian position encoding as well as property control. Last, a case study w.r.t. protein illustrates the novelty of CProMG and the ability to capture crucial interactions between protein pockets and molecules. It's anticipated that this work can boost de novo molecule design.<h4>Availability and implementation</h4>The code and data underlying this article are freely available at https://github.com/lijianing0902/CProMG.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btad222"
-  },
-  {
-    "id": "10.1093/bioinformatics/btad268",
-    "title": "A multilocus approach for accurate variant calling in low-copy repeats using whole-genome sequencing",
-    "authors": [
-      "Prodanov T",
-      "Bansal V",
-      "Bansal V"
-    ],
-    "abstract": "<h4>Motivation</h4>Low-copy repeats (LCRs) or segmental duplications are long segments of duplicated DNA that cover > 5% of the human genome. Existing tools for variant calling using short reads exhibit low accuracy in LCRs due to ambiguity in read mapping and extensive copy number variation. Variants in more than 150 genes overlapping LCRs are associated with risk for human diseases.<h4>Methods</h4>We describe a short-read variant calling method, ParascopyVC, that performs variant calling jointly across all repeat copies and utilizes reads independent of mapping quality in LCRs. To identify candidate variants, ParascopyVC aggregates reads mapped to different repeat copies and performs polyploid variant calling. Subsequently, paralogous sequence variants that can differentiate repeat copies are identified using population data and used for estimating the genotype of variants for each repeat copy.<h4>Results</h4>On simulated whole-genome sequence data, ParascopyVC achieved higher precision (0.997) and recall (0.807) than three state-of-the-art variant callers (best precision = 0.956 for DeepVariant and best recall = 0.738 for GATK) in 167 LCR regions. Benchmarking of ParascopyVC using the genome-in-a-bottle high-confidence variant calls for HG002 genome showed that it achieved a very high precision of 0.991 and a high recall of 0.909 across LCR regions, significantly better than FreeBayes (precision = 0.954 and recall = 0.822), GATK (precision = 0.888 and recall = 0.873) and DeepVariant (precision = 0.983 and recall = 0.861). ParascopyVC demonstrated a consistently higher accuracy (mean F1 = 0.947) than other callers (best F1 = 0.908) across seven human genomes.<h4>Availability and implementation</h4>ParascopyVC is implemented in Python and is freely available at https://github.com/tprodanov/ParascopyVC.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btad268"
-  },
-  {
-    "id": "10.1093/bioinformatics/btad220",
-    "title": "Deep statistical modelling of nanopore sequencing translocation times reveals latent non-B DNA structures",
-    "authors": [
-      "Hosseini M",
-      "Palmer A",
-      "Manka W",
-      "Grady PGS",
-      "Patchigolla V",
-      "Bi J",
-      "O'Neill RJ",
-      "Chi Z",
-      "Aguiar D"
-    ],
-    "abstract": "<h4>Motivation</h4>Non-canonical (or non-B) DNA are genomic regions whose three-dimensional conformation deviates from the canonical double helix. Non-B DNA play an important role in basic cellular processes and are associated with genomic instability, gene regulation, and oncogenesis. Experimental methods are low-throughput and can detect only a limited set of non-B DNA structures, while computational methods rely on non-B DNA base motifs, which are necessary but not sufficient indicators of non-B structures. Oxford Nanopore sequencing is an efficient and low-cost platform, but it is currently unknown whether nanopore reads can be used for identifying non-B structures.<h4>Results</h4>We build the first computational pipeline to predict non-B DNA structures from nanopore sequencing. We formalize non-B detection as a novelty detection problem and develop the GoFAE-DND, an autoencoder that uses goodness-of-fit (GoF) tests as a regularizer. A discriminative loss encourages non-B DNA to be poorly reconstructed and optimizing Gaussian GoF tests allows for the computation of P-values that indicate non-B structures. Based on whole genome nanopore sequencing of NA12878, we show that there exist significant differences between the timing of DNA translocation for non-B DNA bases compared with B-DNA. We demonstrate the efficacy of our approach through comparisons with novelty detection methods using experimental data and data synthesized from a new translocation time simulator. Experimental validations suggest that reliable detection of non-B DNA from nanopore sequencing is achievable.<h4>Availability and implementation</h4>Source code is available at https://github.com/bayesomicslab/ONT-nonb-GoFAE-DND.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btad220"
-  },
-  {
-    "id": "10.1093/bioinformatics/btad202",
-    "title": "Effects of spaced k-mers on alignment-free genotyping",
-    "authors": [
-      "Häntze H",
-      "Horton P"
-    ],
-    "abstract": "<h4>Motivation</h4>Alignment-free, k-mer based genotyping methods are a fast alternative to alignment-based methods and are particularly well suited for genotyping larger cohorts. The sensitivity of algorithms, that work with k-mers, can be increased by using spaced seeds, however, the application of spaced seeds in k-mer based genotyping methods has not been researched yet.<h4>Results</h4>We add a spaced seeds functionality to the genotyping software PanGenie and use it to calculate genotypes. This significantly improves sensitivity and F-score when genotyping SNPs, indels, and structural variants on reads with low (5×) and high (30×) coverage. Improvements are greater than what could be achieved by just increasing the length of contiguous k-mers. Effect sizes are particularly large for low coverage data. If applications implement effective algorithms for hashing of spaced k-mers, spaced k-mers have the potential to become an useful technique in k-mer based genotyping.<h4>Availability and implementation</h4>The source code of our proposed tool MaskedPanGenie is openly available on https://github.com/hhaentze/MaskedPangenie.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btad202"
-  },
-  {
-    "id": "10.1093/bioinformatics/btad250",
-    "title": "PlasBin-flow: a flow-based MILP algorithm for plasmid contigs binning",
-    "authors": [
-      "Mane A",
-      "Faizrahnemoon M",
-      "Vinař T",
-      "Brejová B",
-      "Chauve C"
-    ],
-    "abstract": "<h4>Motivation</h4>The analysis of bacterial isolates to detect plasmids is important due to their role in the propagation of antimicrobial resistance. In short-read sequence assemblies, both plasmids and bacterial chromosomes are typically split into several contigs of various lengths, making identification of plasmids a challenging problem. In plasmid contig binning, the goal is to distinguish short-read assembly contigs based on their origin into plasmid and chromosomal contigs and subsequently sort plasmid contigs into bins, each bin corresponding to a single plasmid. Previous works on this problem consist of de novo approaches and reference-based approaches. De novo methods rely on contig features such as length, circularity, read coverage, or GC content. Reference-based approaches compare contigs to databases of known plasmids or plasmid markers from finished bacterial genomes.<h4>Results</h4>Recent developments suggest that leveraging information contained in the assembly graph improves the accuracy of plasmid binning. We present PlasBin-flow, a hybrid method that defines contig bins as subgraphs of the assembly graph. PlasBin-flow identifies such plasmid subgraphs through a mixed integer linear programming model that relies on the concept of network flow to account for sequencing coverage, while also accounting for the presence of plasmid genes and the GC content that often distinguishes plasmids from chromosomes. We demonstrate the performance of PlasBin-flow on a real dataset of bacterial samples.<h4>Availability and implementation</h4>https://github.com/cchauve/PlasBin-flow.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btad250"
-  },
-  {
     "id": "10.1093/bioinformatics/btad252",
     "title": "RNA design via structure-aware multifrontier ensemble optimization",
     "authors": [
@@ -467,6 +296,177 @@
     "conference": "ismb",
     "year": 2023,
     "paper_url": "https://doi.org/10.1093/bioinformatics/btad266"
+  },
+  {
+    "id": "10.1093/bioinformatics/btad251",
+    "title": "Getting 'ϕψχal' with proteins: minimum message length inference of joint distributions of backbone and sidechain dihedral angles",
+    "authors": [
+      "Amarasinghe PR",
+      "Allison L",
+      "Stuckey PJ",
+      "Garcia de la Banda M",
+      "Lesk AM",
+      "Konagurthu AS"
+    ],
+    "abstract": "The tendency of an amino acid to adopt certain configurations in folded proteins is treated here as a statistical estimation problem. We model the joint distribution of the observed mainchain and sidechain dihedral angles (〈ϕ,ψ,χ1,χ2,…〉) of any amino acid by a mixture of a product of von Mises probability distributions. This mixture model maps any vector of dihedral angles to a point on a multi-dimensional torus. The continuous space it uses to specify the dihedral angles provides an alternative to the commonly used rotamer libraries. These rotamer libraries discretize the space of dihedral angles into coarse angular bins, and cluster combinations of sidechain dihedral angles (〈χ1,χ2,…〉) as a function of backbone 〈ϕ,ψ〉 conformations. A 'good' model is one that is both concise and explains (compresses) observed data. Competing models can be compared directly and in particular our model is shown to outperform the Dunbrack rotamer library in terms of model complexity (by three orders of magnitude) and its fidelity (on average 20% more compression) when losslessly explaining the observed dihedral angle data across experimental resolutions of structures. Our method is unsupervised (with parameters estimated automatically) and uses information theory to determine the optimal complexity of the statistical model, thus avoiding under/over-fitting, a common pitfall in model selection problems. Our models are computationally inexpensive to sample from and are geared to support a number of downstream studies, ranging from experimental structure refinement, de novo protein design, and protein structure prediction. We call our collection of mixture models as PhiSiCal (ϕψχal).<h4>Availability and implementation</h4>PhiSiCal mixture models and programs to sample from them are available for download at http://lcb.infotech.monash.edu.au/phisical.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btad251"
+  },
+  {
+    "id": "10.1093/bioinformatics/btad245",
+    "title": "Deriving spatial features from in situ proteomics imaging to enhance cancer survival analysis",
+    "authors": [
+      "Dayao MT",
+      "Trevino A",
+      "Kim H",
+      "Ruffalo M",
+      "D'Angio HB",
+      "Preska R",
+      "Duvvuri U",
+      "Mayer AT",
+      "Bar-Joseph Z"
+    ],
+    "abstract": "<h4>Motivation</h4>Spatial proteomics data have been used to map cell states and improve our understanding of tissue organization. More recently, these methods have been extended to study the impact of such organization on disease progression and patient survival. However, to date, the majority of supervised learning methods utilizing these data types did not take full advantage of the spatial information, impacting their performance and utilization.<h4>Results</h4>Taking inspiration from ecology and epidemiology, we developed novel spatial feature extraction methods for use with spatial proteomics data. We used these features to learn prediction models for cancer patient survival. As we show, using the spatial features led to consistent improvement over prior methods that used the spatial proteomics data for the same task. In addition, feature importance analysis revealed new insights about the cell interactions that contribute to patient survival.<h4>Availability and implementation</h4>The code for this work can be found at gitlab.com/enable-medicine-public/spatsurv.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btad245"
+  },
+  {
+    "id": "10.1093/bioinformatics/btad237",
+    "title": "SVJedi-graph: improving the genotyping of close and overlapping structural variants with long reads using a variation graph",
+    "authors": [
+      "Romain S",
+      "Lemaitre C"
+    ],
+    "abstract": "<h4>Motivation</h4>Structural variation (SV) is a class of genetic diversity whose importance is increasingly revealed by genome resequencing, especially with long-read technologies. One crucial problem when analyzing and comparing SVs in several individuals is their accurate genotyping, that is determining whether a described SV is present or absent in one sequenced individual, and if present, in how many copies. There are only a few methods dedicated to SV genotyping with long-read data, and all either suffer of a bias toward the reference allele by not representing equally all alleles, or have difficulties genotyping close or overlapping SVs due to a linear representation of the alleles.<h4>Results</h4>We present SVJedi-graph, a novel method for SV genotyping that relies on a variation graph to represent in a single data structure all alleles of a set of SVs. The long reads are mapped on the variation graph and the resulting alignments that cover allele-specific edges in the graph are used to estimate the most likely genotype for each SV. Running SVJedi-graph on simulated sets of close and overlapping deletions showed that this graph model prevents the bias toward the reference alleles and allows maintaining high genotyping accuracy whatever the SV proximity, contrary to other state of the art genotypers. On the human gold standard HG002 dataset, SVJedi-graph obtained the best performances, genotyping 99.5% of the high confidence SV callset with an accuracy of 95% in less than 30 min.<h4>Availability and implementation</h4>SVJedi-graph is distributed under an AGPL license and available on GitHub at https://github.com/SandraLouise/SVJedi-graph and as a BioConda package.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btad237"
+  },
+  {
+    "id": "10.1093/bioinformatics/btad246",
+    "title": "UNADON: transformer-based model to predict genome-wide chromosome spatial position",
+    "authors": [
+      "Yang M",
+      "Ma J"
+    ],
+    "abstract": "<h4>Motivation</h4>The spatial positioning of chromosomes relative to functional nuclear bodies is intertwined with genome functions such as transcription. However, the sequence patterns and epigenomic features that collectively influence chromatin spatial positioning in a genome-wide manner are not well understood.<h4>Results</h4>Here, we develop a new transformer-based deep learning model called UNADON, which predicts the genome-wide cytological distance to a specific type of nuclear body, as measured by TSA-seq, using both sequence features and epigenomic signals. Evaluations of UNADON in four cell lines (K562, H1, HFFc6, HCT116) show high accuracy in predicting chromatin spatial positioning to nuclear bodies when trained on a single cell line. UNADON also performed well in an unseen cell type. Importantly, we reveal potential sequence and epigenomic factors that affect large-scale chromatin compartmentalization in nuclear bodies. Together, UNADON provides new insights into the principles between sequence features and large-scale chromatin spatial localization, which has important implications for understanding nuclear structure and function.<h4>Availability and implementation</h4>The source code of UNADON can be found at https://github.com/ma-compbio/UNADON.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btad246"
+  },
+  {
+    "id": "10.1093/bioinformatics/btad241",
+    "title": "Supervised biological network alignment with graph neural networks",
+    "authors": [
+      "Ding K",
+      "Wang S",
+      "Luo Y"
+    ],
+    "abstract": "<h4>Motivation</h4>Despite the advances in sequencing technology, massive proteins with known sequences remain functionally unannotated. Biological network alignment (NA), which aims to find the node correspondence between species' protein-protein interaction (PPI) networks, has been a popular strategy to uncover missing annotations by transferring functional knowledge across species. Traditional NA methods assumed that topologically similar proteins in PPIs are functionally similar. However, it was recently reported that functionally unrelated proteins can be as topologically similar as functionally related pairs, and a new data-driven or supervised NA paradigm has been proposed, which uses protein function data to discern which topological features correspond to functional relatedness.<h4>Results</h4>Here, we propose GraNA, a deep learning framework for the supervised NA paradigm for the pairwise NA problem. Employing graph neural networks, GraNA utilizes within-network interactions and across-network anchor links for learning protein representations and predicting functional correspondence between across-species proteins. A major strength of GraNA is its flexibility to integrate multi-faceted non-functional relationship data, such as sequence similarity and ortholog relationships, as anchor links to guide the mapping of functionally related proteins across species. Evaluating GraNA on a benchmark dataset composed of several NA tasks between different pairs of species, we observed that GraNA accurately predicted the functional relatedness of proteins and robustly transferred functional annotations across species, outperforming a number of existing NA methods. When applied to a case study on a humanized yeast network, GraNA also successfully discovered functionally replaceable human-yeast protein pairs that were documented in previous studies.<h4>Availability and implementation</h4>The code of GraNA is available at https://github.com/luo-group/GraNA.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btad241"
+  },
+  {
+    "id": "10.1093/bioinformatics/btad262",
+    "title": "Trap spaces of multi-valued networks: definition, computation, and applications",
+    "authors": [
+      "Trinh VG",
+      "Benhamou B",
+      "Henzinger T",
+      "Pastva S"
+    ],
+    "abstract": "<h4>Motivation</h4>Boolean networks are simple but efficient mathematical formalism for modelling complex biological systems. However, having only two levels of activation is sometimes not enough to fully capture the dynamics of real-world biological systems. Hence, the need for multi-valued networks (MVNs), a generalization of Boolean networks. Despite the importance of MVNs for modelling biological systems, only limited progress has been made on developing theories, analysis methods, and tools that can support them. In particular, the recent use of trap spaces in Boolean networks made a great impact on the field of systems biology, but there has been no similar concept defined and studied for MVNs to date.<h4>Results</h4>In this work, we generalize the concept of trap spaces in Boolean networks to that in MVNs. We then develop the theory and the analysis methods for trap spaces in MVNs. In particular, we implement all proposed methods in a Python package called trapmvn. Not only showing the applicability of our approach via a realistic case study, we also evaluate the time efficiency of the method on a large collection of real-world models. The experimental results confirm the time efficiency, which we believe enables more accurate analysis on larger and more complex multi-valued models.<h4>Availability and implementation</h4>Source code and data are freely available at https://github.com/giang-trinh/trap-mvn.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btad262"
+  },
+  {
+    "id": "10.1093/bioinformatics/btad222",
+    "title": "CProMG: controllable protein-oriented molecule generation with desired binding affinity and drug-like properties",
+    "authors": [
+      "Li JN",
+      "Yang G",
+      "Zhao PC",
+      "Wei XX",
+      "Shi JY"
+    ],
+    "abstract": "<h4>Motivation</h4>Deep learning-based molecule generation becomes a new paradigm of de novo molecule design since it enables fast and directional exploration in the vast chemical space. However, it is still an open issue to generate molecules, which bind to specific proteins with high-binding affinities while owning desired drug-like physicochemical properties.<h4>Results</h4>To address these issues, we elaborate a novel framework for controllable protein-oriented molecule generation, named CProMG, which contains a 3D protein embedding module, a dual-view protein encoder, a molecule embedding module, and a novel drug-like molecule decoder. Based on fusing the hierarchical views of proteins, it enhances the representation of protein binding pockets significantly by associating amino acid residues with their comprising atoms. Through jointly embedding molecule sequences, their drug-like properties, and binding affinities w.r.t. proteins, it autoregressively generates novel molecules having specific properties in a controllable manner by measuring the proximity of molecule tokens to protein residues and atoms. The comparison with state-of-the-art deep generative methods demonstrates the superiority of our CProMG. Furthermore, the progressive control of properties demonstrates the effectiveness of CProMG when controlling binding affinity and drug-like properties. After that, the ablation studies reveal how its crucial components contribute to the model respectively, including hierarchical protein views, Laplacian position encoding as well as property control. Last, a case study w.r.t. protein illustrates the novelty of CProMG and the ability to capture crucial interactions between protein pockets and molecules. It's anticipated that this work can boost de novo molecule design.<h4>Availability and implementation</h4>The code and data underlying this article are freely available at https://github.com/lijianing0902/CProMG.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btad222"
+  },
+  {
+    "id": "10.1093/bioinformatics/btad268",
+    "title": "A multilocus approach for accurate variant calling in low-copy repeats using whole-genome sequencing",
+    "authors": [
+      "Prodanov T",
+      "Bansal V",
+      "Bansal V"
+    ],
+    "abstract": "<h4>Motivation</h4>Low-copy repeats (LCRs) or segmental duplications are long segments of duplicated DNA that cover > 5% of the human genome. Existing tools for variant calling using short reads exhibit low accuracy in LCRs due to ambiguity in read mapping and extensive copy number variation. Variants in more than 150 genes overlapping LCRs are associated with risk for human diseases.<h4>Methods</h4>We describe a short-read variant calling method, ParascopyVC, that performs variant calling jointly across all repeat copies and utilizes reads independent of mapping quality in LCRs. To identify candidate variants, ParascopyVC aggregates reads mapped to different repeat copies and performs polyploid variant calling. Subsequently, paralogous sequence variants that can differentiate repeat copies are identified using population data and used for estimating the genotype of variants for each repeat copy.<h4>Results</h4>On simulated whole-genome sequence data, ParascopyVC achieved higher precision (0.997) and recall (0.807) than three state-of-the-art variant callers (best precision = 0.956 for DeepVariant and best recall = 0.738 for GATK) in 167 LCR regions. Benchmarking of ParascopyVC using the genome-in-a-bottle high-confidence variant calls for HG002 genome showed that it achieved a very high precision of 0.991 and a high recall of 0.909 across LCR regions, significantly better than FreeBayes (precision = 0.954 and recall = 0.822), GATK (precision = 0.888 and recall = 0.873) and DeepVariant (precision = 0.983 and recall = 0.861). ParascopyVC demonstrated a consistently higher accuracy (mean F1 = 0.947) than other callers (best F1 = 0.908) across seven human genomes.<h4>Availability and implementation</h4>ParascopyVC is implemented in Python and is freely available at https://github.com/tprodanov/ParascopyVC.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btad268"
+  },
+  {
+    "id": "10.1093/bioinformatics/btad220",
+    "title": "Deep statistical modelling of nanopore sequencing translocation times reveals latent non-B DNA structures",
+    "authors": [
+      "Hosseini M",
+      "Palmer A",
+      "Manka W",
+      "Grady PGS",
+      "Patchigolla V",
+      "Bi J",
+      "O'Neill RJ",
+      "Chi Z",
+      "Aguiar D"
+    ],
+    "abstract": "<h4>Motivation</h4>Non-canonical (or non-B) DNA are genomic regions whose three-dimensional conformation deviates from the canonical double helix. Non-B DNA play an important role in basic cellular processes and are associated with genomic instability, gene regulation, and oncogenesis. Experimental methods are low-throughput and can detect only a limited set of non-B DNA structures, while computational methods rely on non-B DNA base motifs, which are necessary but not sufficient indicators of non-B structures. Oxford Nanopore sequencing is an efficient and low-cost platform, but it is currently unknown whether nanopore reads can be used for identifying non-B structures.<h4>Results</h4>We build the first computational pipeline to predict non-B DNA structures from nanopore sequencing. We formalize non-B detection as a novelty detection problem and develop the GoFAE-DND, an autoencoder that uses goodness-of-fit (GoF) tests as a regularizer. A discriminative loss encourages non-B DNA to be poorly reconstructed and optimizing Gaussian GoF tests allows for the computation of P-values that indicate non-B structures. Based on whole genome nanopore sequencing of NA12878, we show that there exist significant differences between the timing of DNA translocation for non-B DNA bases compared with B-DNA. We demonstrate the efficacy of our approach through comparisons with novelty detection methods using experimental data and data synthesized from a new translocation time simulator. Experimental validations suggest that reliable detection of non-B DNA from nanopore sequencing is achievable.<h4>Availability and implementation</h4>Source code is available at https://github.com/bayesomicslab/ONT-nonb-GoFAE-DND.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btad220"
+  },
+  {
+    "id": "10.1093/bioinformatics/btad202",
+    "title": "Effects of spaced k-mers on alignment-free genotyping",
+    "authors": [
+      "Häntze H",
+      "Horton P"
+    ],
+    "abstract": "<h4>Motivation</h4>Alignment-free, k-mer based genotyping methods are a fast alternative to alignment-based methods and are particularly well suited for genotyping larger cohorts. The sensitivity of algorithms, that work with k-mers, can be increased by using spaced seeds, however, the application of spaced seeds in k-mer based genotyping methods has not been researched yet.<h4>Results</h4>We add a spaced seeds functionality to the genotyping software PanGenie and use it to calculate genotypes. This significantly improves sensitivity and F-score when genotyping SNPs, indels, and structural variants on reads with low (5×) and high (30×) coverage. Improvements are greater than what could be achieved by just increasing the length of contiguous k-mers. Effect sizes are particularly large for low coverage data. If applications implement effective algorithms for hashing of spaced k-mers, spaced k-mers have the potential to become an useful technique in k-mer based genotyping.<h4>Availability and implementation</h4>The source code of our proposed tool MaskedPanGenie is openly available on https://github.com/hhaentze/MaskedPangenie.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btad202"
+  },
+  {
+    "id": "10.1093/bioinformatics/btad250",
+    "title": "PlasBin-flow: a flow-based MILP algorithm for plasmid contigs binning",
+    "authors": [
+      "Mane A",
+      "Faizrahnemoon M",
+      "Vinař T",
+      "Brejová B",
+      "Chauve C"
+    ],
+    "abstract": "<h4>Motivation</h4>The analysis of bacterial isolates to detect plasmids is important due to their role in the propagation of antimicrobial resistance. In short-read sequence assemblies, both plasmids and bacterial chromosomes are typically split into several contigs of various lengths, making identification of plasmids a challenging problem. In plasmid contig binning, the goal is to distinguish short-read assembly contigs based on their origin into plasmid and chromosomal contigs and subsequently sort plasmid contigs into bins, each bin corresponding to a single plasmid. Previous works on this problem consist of de novo approaches and reference-based approaches. De novo methods rely on contig features such as length, circularity, read coverage, or GC content. Reference-based approaches compare contigs to databases of known plasmids or plasmid markers from finished bacterial genomes.<h4>Results</h4>Recent developments suggest that leveraging information contained in the assembly graph improves the accuracy of plasmid binning. We present PlasBin-flow, a hybrid method that defines contig bins as subgraphs of the assembly graph. PlasBin-flow identifies such plasmid subgraphs through a mixed integer linear programming model that relies on the concept of network flow to account for sequencing coverage, while also accounting for the presence of plasmid genes and the GC content that often distinguishes plasmids from chromosomes. We demonstrate the performance of PlasBin-flow on a real dataset of bacterial samples.<h4>Availability and implementation</h4>https://github.com/cchauve/PlasBin-flow.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btad250"
   },
   {
     "id": "10.1093/bioinformatics/btad230",
