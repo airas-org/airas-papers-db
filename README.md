@@ -55,7 +55,7 @@ Papers are collected from several source types, configured in `scripts/configs/c
 | `acl_anthology` | ACL Anthology XML | ACL, EMNLP, NAACL |
 | `openreview` | OpenReview search API (`/notes/search`) | ML4LMS, GEM, LMRL, GenBio |
 | `europepmc` | Europe PMC REST API | ISMB, PSB |
-| `drops` | DROPS / LIPIcs volume pages (Schloss Dagstuhl) | ITP |
+| `drops` | DROPS / LIPIcs volume XML export (Schloss Dagstuhl) | ITP |
 | `crossref` | Crossref REST API (+ Semantic Scholar for missing abstracts) | CAV, TACAS, CADE, IJCAR, CPP, LICS, POPL |
 
 NeurIPS' virtual-site JSON also carries the **Datasets & Benchmarks** and **Position
@@ -96,11 +96,15 @@ papers are in `data/ijcar/2020.json`.
 
 #### DROPS (LIPIcs)
 
-Each LIPIcs volume page on `drops.dagstuhl.de` embeds a schema.org JSON-LD
-`PublicationVolume` listing every article with title, authors, abstract and
-keywords, so one request covers a whole proceedings. The config maps a year to
-its LIPIcs volume number. Front matter (article `.0`) and the complete-volume
-PDF are dropped.
+Each LIPIcs volume on `drops.dagstuhl.de` has an official XML export
+(`/entities/volume/LIPIcs-volume-<n>/metadata/xml`, dagpub schema) listing every
+document with title, authors, abstract, keywords, DOI and paper category, so one
+request covers a whole proceedings. The config maps a year to its LIPIcs volume
+number. Front matter (article `.0`) and the complete-volume PDF are dropped.
+
+DROPS also exposes OAI-PMH, but it is not kept up to date (a handful of records
+for all of 2025) and has no per-volume sets. LIPIcs DOIs are registered with
+DataCite, not Crossref, so the `crossref` source cannot cover them either.
 
 #### Crossref
 

@@ -458,43 +458,26 @@ async def _openreview_get(
 
 # --- DROPS (LIPIcs) -----------------------------------------------------------
 
-def _drops_author_name(author: dict) -> str:
-    given = (author.get('givenName') or '').strip()
-    family = (author.get('familyName') or '').strip()
-    if given or family:
-        return f"{given} {family}".strip()
-    # DROPS writes bare names as "Family, Given".
-    name = (author.get('name') or '').strip()
-    if ',' in name:
-        family, given = [part.strip() for part in name.split(',', 1)]
-        return f"{given} {family}".strip()
-    return name
+DROPS_NS = {'d': 'https://drops.dagstuhl.de/storage/schema/dagstuhl/dagpub.xsd'}
+
+
+def _drops_text(element: ET.Element | None) -> str:
+    return (element.text or '').strip() if element is not None else ''
 
 
 def _normalize_paper_from_drops(raw_paper: dict, conference: str, year: int) -> dict[str, Any]:
-    authors = raw_paper.get('author', [])
-    if isinstance(authors, dict):
-        authors = [authors]
-    authors_list = [name for name in (_drops_author_name(a) for a in authors) if name]
-
-    identifier = raw_paper.get('identifier', '') or ''
-    doi = identifier.replace('https://doi.org/', '')
-
-    keywords = raw_paper.get('keywords', []) or []
-    if isinstance(keywords, str):
-        keywords = [keywords]
-    topic = '; '.join(str(k).strip() for k in keywords if k)
+    doi = raw_paper.get('doi', '')
 
     normalized_data = {
         'id': doi,
-        'title': (raw_paper.get('headline') or raw_paper.get('name') or '').strip(),
-        'authors': authors_list,
+        'title': raw_paper.get('title', ''),
+        'authors': raw_paper.get('authors', []),
         # DROPS keeps the authors' hard line breaks (CRLF); normalize them.
-        'abstract': re.sub(r'\r\n?', '\n', raw_paper.get('abstract') or '').strip(),
-        'topic': topic,
+        'abstract': re.sub(r'\r\n?', '\n', raw_paper.get('abstract', '')).strip(),
+        'topic': '; '.join(raw_paper.get('keywords', [])),
         'conference': conference,
         'year': year,
-        'paper_url': raw_paper.get('url') or (f"https://doi.org/{doi}" if doi else '')
+        'paper_url': f"https://doi.org/{doi}" if doi else ''
     }
 
     return normalized_data
@@ -505,12 +488,13 @@ async def _fetch_papers_from_drops(
 ) -> list[dict[str, Any]]:
     """Fetch one LIPIcs volume from DROPS (Schloss Dagstuhl's open-access server).
 
-    The volume page embeds a schema.org JSON-LD `PublicationVolume` whose
-    `hasPart` lists every article with title, authors, abstract and keywords,
-    so a single request covers the whole proceedings. (DROPS also has an
-    OAI-PMH endpoint, but it cannot be scoped to one volume.)
+    Every volume has an official XML export (`/metadata/xml`, dagpub schema)
+    listing each document with title, authors, abstract, keywords, DOI and
+    paper category, so a single request covers the whole proceedings. (DROPS
+    also has an OAI-PMH endpoint, but it is not kept up to date and cannot be
+    scoped to one volume.)
     """
-    url = f"https://drops.dagstuhl.de/entities/volume/LIPIcs-volume-{volume}"
+    url = f"https://drops.dagstuhl.de/entities/volume/LIPIcs-volume-{volume}/metadata/xml"
     logger.info(f"Fetching from {url}...")
 
     try:
@@ -519,47 +503,57 @@ async def _fetch_papers_from_drops(
             headers={"User-Agent": BROWSER_USER_AGENT},
         )
         response.raise_for_status()
+        root = ET.fromstring(response.content)
     except httpx.RequestError as e:
         logger.error(f"  -> Failed to fetch {url}: {e}")
         return []
     except httpx.HTTPStatusError as e:
         logger.error(f"  -> Failed to fetch {url}: {e}")
         return []
-
-    match = re.search(
-        r'<script type="application/ld\+json">(.*?)</script>', response.text, re.S
-    )
-    if not match:
-        logger.error(f"  -> No JSON-LD block found in {url}")
+    except ET.ParseError as e:
+        logger.error(f"  -> Failed to parse XML from {url}: {e}")
         return []
 
-    try:
-        data = json.loads(match.group(1))
-    except json.JSONDecodeError as e:
-        logger.error(f"  -> Failed to parse JSON-LD from {url}: {e}")
-        return []
-
-    volume_entity = data.get('mainEntity', data)
-    parts = volume_entity.get('hasPart', [])
-    volume_name = volume_entity.get('name', '')
+    volume_title = _drops_text(root.find('d:volume/d:title', DROPS_NS))
 
     papers = []
-    for part in parts:
-        if part.get('@type') != 'ScholarlyArticle':
-            continue
-        doi = (part.get('identifier') or '').replace('https://doi.org/', '')
+    skipped_front_matter = 0
+    for document in root.findall('d:article', DROPS_NS):
+        doi = _drops_text(document.find('d:doi', DROPS_NS))
         # Article DOIs end in ".<n>"; ".0" is the front matter and the DOI
         # without a suffix is the complete-volume PDF.
         suffix = doi.rsplit('.', 1)[-1] if '.' in doi else ''
         if not suffix.isdigit() or int(suffix) == 0:
+            skipped_front_matter += 1
             continue
-        papers.append(part)
+
+        authors = []
+        for author in document.findall('d:author', DROPS_NS):
+            first = _drops_text(author.find('d:firstName', DROPS_NS))
+            last = _drops_text(author.find('d:lastName', DROPS_NS))
+            name = f"{first} {last}".strip() or _drops_text(author.find('d:name', DROPS_NS))
+            if name:
+                authors.append(name)
+
+        papers.append({
+            'doi': doi,
+            'title': _drops_text(document.find('d:title', DROPS_NS)),
+            'authors': authors,
+            'abstract': _drops_text(document.find('d:abstract', DROPS_NS)),
+            'keywords': [
+                k for k in (_drops_text(e) for e in document.findall('d:keyword', DROPS_NS)) if k
+            ],
+            'category': _drops_text(document.find('d:category', DROPS_NS)),
+        })
 
     if not papers:
         logger.warning(f"  -> No papers found in {url}")
         return []
 
-    logger.info(f"  -> Found {len(papers)} papers in {volume_name or url}")
+    logger.info(
+        f"  -> Found {len(papers)} papers in {volume_title or url}"
+        + (f" (skipped {skipped_front_matter} front-matter entries)" if skipped_front_matter else "")
+    )
     return papers
 
 
