@@ -1,0 +1,565 @@
+[
+  {
+    "id": "10.4230/LIPIcs.ITP.2024.1",
+    "title": "Alpha-Beta Pruning Verified (Invited Talk)",
+    "authors": [
+      "Tobias Nipkow"
+    ],
+    "abstract": "Alpha-beta pruning is an efficient search strategy for two-player game trees. It was invented in the late 1950s and is at the heart of most implementations of combinatorial game playing programs. We have formalized and verified a number of variations of alpha-beta pruning, in particular fail-hard and fail-soft, and valuations into linear orders, distributive lattices and domains with negative values.",
+    "topic": "Verification; Algorithmic Game Theory; Isabelle",
+    "conference": "itp",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.4230/LIPIcs.ITP.2024.1"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2024.2",
+    "title": "Translating Libraries of Definitions and Theorems Between Proof Systems (Invited Talk)",
+    "authors": [
+      "Frédéric Blanqui"
+    ],
+    "abstract": "There exist many proof systems, interactive or automated. However, most of them are not interoperable, which leads to an important work duplication. This is unfortunate as it slows down the formalization of more advanced mathematical results, and the democratization of proof systems in education, industry and research. This state of affairs is not just a matter of file formats. Each proof system has its own axioms and deduction rules, and those axioms and deduction rules can sometimes be incompatible. To translate a proof from one system to the other, and be able to handle so many different systems, it is important to find out a logical framework in which a logical feature used in two different systems is represented by the same construction.\nResearch on proof system interoperability started about 30 years ago, and received some increased attention with the formalization of Hales proof of Kepler conjecture in the years 2000, because parts of this proof were initially formalized in different systems. Then, it received some new interest in the years 2010 with the increasing use of automated theorem provers in proof assistants. At about the same time appeared a new logical framework, Dedukti, which extends Edinburgh’s logical framework LF by allowing the identification of types modulo some equational theory. It has been shown that various proof systems can be nicely encoded in Dedukti, and various tools have been developed to actually represent the proofs of those systems and translate them to other systems.\nIn this talk, I will review some of these works and tools, and present recent efforts to translate entire libraries of definitions and theorems.",
+    "topic": "Logical frameworks; proof systems interoperability; type theory",
+    "conference": "itp",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.4230/LIPIcs.ITP.2024.2"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2024.3",
+    "title": "A Formal Analysis of Capacity Scaling Algorithms for Minimum Cost Flows",
+    "authors": [
+      "Mohammad Abdulaziz",
+      "Thomas Ammer"
+    ],
+    "abstract": "We present a formalisation of the correctness of algorithms to solve minimum-cost flow problems, in Isabelle/HOL. Two of the algorithms are based on the technique of scaling, most notably Orlin’s algorithm, which has the fastest running time for the problem of minimum-cost flow. Our work uncovered a number of complications in the proofs of the results we formalised, the resolution of which required significant effort. Our work is also the first to formally consider the problem of minimum-cost flows and, more generally, scaling algorithms.",
+    "topic": "Network Flows; Formal Verification; Combinatorial Optimisation",
+    "conference": "itp",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.4230/LIPIcs.ITP.2024.3"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2024.4",
+    "title": "Taming Differentiable Logics with Coq Formalisation",
+    "authors": [
+      "Reynald Affeldt",
+      "Alessandro Bruni",
+      "Ekaterina Komendantskaya",
+      "Natalia Ślusarz",
+      "Kathrin Stark"
+    ],
+    "abstract": "For performance and verification in machine learning, new methods have recently been proposed that optimise learning systems to satisfy formally expressed logical properties. Among these methods, differentiable logics (DLs) are used to translate propositional or first-order formulae into loss functions deployed for optimisation in machine learning. At the same time, recent attempts to give programming language support for verification of neural networks showed that DLs can be used to compile verification properties to machine-learning backends. This situation is calling for stronger guarantees about the soundness of such compilers, the soundness and compositionality of DLs, and the differentiability and performance of the resulting loss functions. In this paper, we propose an approach to formalise existing DLs using the Mathematical Components library in the Coq proof assistant. Thanks to this formalisation, we are able to give uniform semantics to otherwise disparate DLs, give formal proofs to existing informal arguments, find errors in previous work, and provide formal proofs to missing conjectured properties. This work is meant as a stepping stone for the development of programming language support for verification of machine learning.",
+    "topic": "Machine Learning; Loss Functions; Differentiable Logics; Logic and Semantics; Interactive Theorem Proving",
+    "conference": "itp",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.4230/LIPIcs.ITP.2024.4"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2024.5",
+    "title": "A Comprehensive Overview of the Lebesgue Differentiation Theorem in Coq",
+    "authors": [
+      "Reynald Affeldt",
+      "Zachary Stone"
+    ],
+    "abstract": "Formalization of real analysis offers a chance to rebuild traditional proofs of important theorems as unambiguous theories that can be interactively explored. This paper provides a comprehensive overview of the Lebesgue Differentiation Theorem formalized in the Coq proof assistant, from which the first Fundamental Theorem of Calculus (FTC) for the Lebesgue integral is obtained as a corollary. Proving the first FTC in this way has the advantage of decomposing into loosely-coupled theories of moderate size and of independent interest that lend themselves well to incremental and collaborative development. We explain how we formalize all the topological constructs and all the standard lemmas needed to eventually relate the definitions of derivability and of Lebesgue integration of MathComp-Analysis, a formalization of analysis developed on top of the Mathematical Components library. In the course of this experiment, we substantially enrich MathComp-Analysis and even devise a new proof for Urysohn’s lemma.",
+    "topic": "Coq proof assistant; Mathematical Components library; Lebesgue integral; fundamental theorem of calculus",
+    "conference": "itp",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.4230/LIPIcs.ITP.2024.5"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2024.6",
+    "title": "Towards Solid Abelian Groups: A Formal Proof of Nöbeling’s Theorem",
+    "authors": [
+      "Dagur Asgeirsson"
+    ],
+    "abstract": "Condensed mathematics, developed by Clausen and Scholze over the last few years, is a new way of studying the interplay between algebra and geometry. It replaces the concept of a topological space by a more sophisticated but better-behaved idea, namely that of a condensed set. Central to the theory are solid abelian groups and liquid vector spaces, analogues of complete topological groups.\nNöbeling’s theorem, a surprising result from the 1960s about the structure of the abelian group of continuous maps from a profinite space to the integers, is a crucial ingredient in the theory of solid abelian groups; without it one cannot give any nonzero examples of solid abelian groups. We discuss a recently completed formalisation of this result in the Lean theorem prover, and give a more detailed proof than those previously available in the literature. The proof is somewhat unusual in that it requires induction over ordinals - a technique which has not previously been used to a great extent in formalised mathematics.",
+    "topic": "Condensed mathematics; Nöbeling’s theorem; Lean; Mathlib; Interactive theorem proving",
+    "conference": "itp",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.4230/LIPIcs.ITP.2024.6"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2024.7",
+    "title": "An Operational Semantics in Isabelle/HOL-CSP",
+    "authors": [
+      "Benoît Ballenghien",
+      "Burkhart Wolff"
+    ],
+    "abstract": "The theory of Communicating Sequential Processes going back to Hoare and Roscoe is still today a reference model for concurrency. In the fairly rich literature, several versions of operational semantics have been discussed, which should be consistent with the denotational one.\nThis work is based on Isabelle/HOL-CSP 2.0, a shallow embedding of the failure-divergence model of denotational semantics proposed by Hoare, Roscoe and Brookes in the eighties. In several ways, HOL-CSP is actually an extension of the original setting in the sense that it admits higher-order processes and infinite alphabets. \nIn this paper, we present a construction and formal equivalence proofs between operational CSP semantics and the underlying denotational failure-divergence semantics. The construction is based on a definition of the operational transition operator P ⇝e P’ basically via the After operator and the classical failure-divergence refinement. \nSeveral choices are discussed to formally derive the operational semantics leading to subtle differences. The derived operational semantics for symbolic Labelled Transition Systems (LTSs) can be potentially used for certifications of model-checker logs as well as combined proof techniques.",
+    "topic": "Process-Algebra; Semantics; Concurrency; Computational Models; Theorem Proving; Isabelle/HOL",
+    "conference": "itp",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.4230/LIPIcs.ITP.2024.7"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2024.8",
+    "title": "The Directed Van Kampen Theorem in Lean",
+    "authors": [
+      "Henning Basold",
+      "Peter Bruin",
+      "Dominique Lawson"
+    ],
+    "abstract": "Directed topology augments the concept of a topological space with a notion of directed paths. This leads to a category of directed spaces, in which the morphisms are continuous maps respecting directed paths. Directed topology thereby enables an accurate representation of computation paths in concurrent systems that usually cannot be reversed.\nEven though ideas from algebraic topology have analogues in directed topology, the directedness drastically changes how spaces can be characterised. For instance, while an important homotopy invariant of a topological space is its fundamental groupoid, for directed spaces this has to be replaced by the fundamental category because directed paths are not necessarily reversible.\nIn this paper, we present a Lean 4 formalisation of directed spaces and of a Van Kampen theorem for them, which allows the fundamental category of a directed space to be computed in terms of the fundamental categories of subspaces. Part of this formalisation is also a significant theory of directed spaces, directed homotopy theory and path coverings, which can serve as basis for future formalisations of directed topology. The formalisation in Lean can also be used in computer-assisted reasoning about the behaviour of concurrent systems that have been represented as directed spaces.",
+    "topic": "Lean; Directed Topology; Van Kampen Theorem; Directed Homotopy Theory; Formalised Mathematics",
+    "conference": "itp",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.4230/LIPIcs.ITP.2024.8"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2024.9",
+    "title": "Verifying Peephole Rewriting in SSA Compiler IRs",
+    "authors": [
+      "Siddharth Bhat",
+      "Alex Keizer",
+      "Chris Hughes",
+      "Andrés Goens",
+      "Tobias Grosser"
+    ],
+    "abstract": "There is an increasing need for domain-specific reasoning in modern compilers. This has fueled the use of tailored intermediate representations (IRs) based on static single assignment (SSA), like in the MLIR compiler framework. Interactive theorem provers (ITPs) provide strong guarantees for the end-to-end verification of compilers (e.g., CompCert). However, modern compilers and their IRs evolve at a rate that makes proof engineering alongside them prohibitively expensive. Nevertheless, well-scoped push-button automated verification tools such as the Alive peephole verifier for LLVM-IR gained recognition in domains where SMT solvers offer efficient (semi) decision procedures. In this paper, we aim to combine the convenience of automation with the versatility of ITPs for verifying peephole rewrites across domain-specific IRs. We formalize a core calculus for SSA-based IRs that is generic over the IR and covers so-called regions (nested scoping used by many domain-specific IRs in the MLIR ecosystem). Our mechanization in the Lean proof assistant provides a user-friendly frontend for translating MLIR syntax into our calculus. We provide scaffolding for defining and verifying peephole rewrites, offering tactics to eliminate the abstraction overhead of our SSA calculus. We prove correctness theorems about peephole rewriting, as well as two classical program transformations. To evaluate our framework, we consider three use cases from the MLIR ecosystem that cover different levels of abstractions: (1) bitvector rewrites from LLVM, (2) structured control flow, and (3) fully homomorphic encryption. We envision that our mechanization provides a foundation for formally verified rewrites on new domain-specific IRs.",
+    "topic": "compilers; semantics; mechanization; MLIR; SSA; regions; peephole rewrites",
+    "conference": "itp",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.4230/LIPIcs.ITP.2024.9"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2024.10",
+    "title": "Duper: A Proof-Producing Superposition Theorem Prover for Dependent Type Theory",
+    "authors": [
+      "Joshua Clune",
+      "Yicheng Qian",
+      "Alexander Bentkamp",
+      "Jeremy Avigad"
+    ],
+    "abstract": "We present Duper, a proof-producing theorem prover for Lean based on the superposition calculus. Duper can be called directly as a terminal tactic in interactive Lean proofs, but is also designed with proof reconstruction for a future Lean hammer in mind. In this paper, we describe Duper’s underlying approach to proof search and proof reconstruction with a particular emphasis on the challenges of working in a dependent type theory. We also compare Duper’s performance to Metis' on pre-existing benchmarks to give evidence that Duper is performant enough to be useful for proof reconstruction in a hammer.",
+    "topic": "proof search; automatic theorem proving; interactive theorem proving; Lean; dependent type theory",
+    "conference": "itp",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.4230/LIPIcs.ITP.2024.10"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2024.11",
+    "title": "A Formalization of the General Theory of Quaternions",
+    "authors": [
+      "Thaynara Arielly de Lima",
+      "André Luiz Galdino",
+      "Bruno Berto de Oliveira Ribeiro",
+      "Mauricio Ayala-Rincón"
+    ],
+    "abstract": "This paper discusses the formalization of the theory of quaternions in the Prototype Verification System (PVS). The general approach in this mechanization relies on specifying quaternion structures using any arbitrary field as a parameter. The approach allows the inheritance of formalized properties on quaternions when the parameters of the general theory are instantiated with specific fields such as reals or rationals. The theory includes characterizing algebraic properties that lead to constructing quaternions as division rings. In particular, we illustrate how the general theory is applied to formalize Hamilton’s quaternions using the field of reals as a parameter, for which we also mechanized theorems that show the completeness of three-dimensional rotations, proving that Hamilton’s quaternions mimic any 3D rotation.",
+    "topic": "Theory of quaternions; Hamilton’s quaternions; Algebraic formalizations; PVS",
+    "conference": "itp",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.4230/LIPIcs.ITP.2024.11"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2024.12",
+    "title": "A Modular Formalization of Superposition in Isabelle/HOL",
+    "authors": [
+      "Martin Desharnais",
+      "Balazs Toth",
+      "Uwe Waldmann",
+      "Jasmin Blanchette",
+      "Sophie Tourret"
+    ],
+    "abstract": "Superposition is an efficient proof calculus for reasoning about first-order logic with equality that is implemented in many automatic theorem provers. It works by saturating the given set of clauses and is refutationally complete, meaning that if the set is inconsistent, the saturation will contain a contradiction. In this work, we restructured the completeness proof to cleanly separate the ground (i.e., variable-free) and nonground aspects, and we formalized the result in Isabelle/HOL. We relied on the IsaFoR library for first-order terms and on the Isabelle saturation framework.",
+    "topic": "Superposition; verification; first-order logic; higher-order logic",
+    "conference": "itp",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.4230/LIPIcs.ITP.2024.12"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2024.13",
+    "title": "Completeness of Asynchronous Session Tree Subtyping in Coq",
+    "authors": [
+      "Burak Ekici",
+      "Nobuko Yoshida"
+    ],
+    "abstract": "Multiparty session types (MPST) serve as a foundational framework for formally specifying and verifying message passing protocols. Asynchronous subtyping in MPST allows for typing optimised programs preserving type safety and deadlock freedom under asynchronous interactions where the message order is preserved and sending is non-blocking. The optimisation is obtained by message reordering, which allows for sending messages earlier or receiving them later. Sound subtyping algorithms have been extensively studied and implemented as part of various programming languages and tools including C, Rust and C-MPI. However, formalising all such permutations under sequencing, selection, branching and recursion in session types is an intricate task. Additionally, checking asynchronous subtyping has been proven to be undecidable.\nThis paper introduces the first formalisation of asynchronous subtyping in MPST within the Coq proof assistant. We first decompose session types into session trees that do not involve branching and selection, and then establish a coinductive refinement relation over them to govern subtyping. To showcase our formalisation, we prove example subtyping schemas that appear in the literature, all of which cannot be verified, at the same time, by any of the existing decidable sound algorithms.\nAdditionally, we take the (inductive) negation of the refinement relation from a prior work by Ghilezan et al. [Ghilezan et al., 2023] and re-implement it, significantly reducing the number of rules (from eighteen to eight). We establish the completeness of subtyping with respect to its negation in Coq, addressing the issues concerning the negation rules outlined in the previous work [Ghilezan et al., 2023].\nIn the formalisation, we use the greatest fixed point of the least fixed point technique, facilitated by the paco library, to define coinductive predicates. We employ parametrised coinduction to prove their properties. The formalisation consists of roughly 10K lines of Coq code, accessible at: https://github.com/ekiciburak/sessionTreeST/tree/itp2024.",
+    "topic": "asynchronous multiparty session types; session trees; subtyping; Coq",
+    "conference": "itp",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.4230/LIPIcs.ITP.2024.13"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2024.14",
+    "title": "End-To-End Formal Verification of a Fast and Accurate Floating-Point Approximation",
+    "authors": [
+      "Florian Faissole",
+      "Paul Geneau de Lamarlière",
+      "Guillaume Melquiond"
+    ],
+    "abstract": "Designing an efficient yet accurate floating-point approximation of a mathematical function is an intricate and error-prone process. This warrants the use of formal methods, especially formal proof, to achieve some degree of confidence in the implementation. Unfortunately, the lack of automation or its poor interplay with the more manual parts of the proof makes it way too costly in practice. This article revisits the issue by proposing a methodology and some dedicated automation, and applies them to the use case of a faithful binary64 approximation of exponential. The peculiarity of this use case is that the target of the formal verification is not a simple modeling of an external code; it is an actual floating-point function defined in the logic of the Coq proof assistant, which is thus usable inside proofs once its correctness has been fully verified. This function presents all the attributes of a state-of-the-art implementation: bit-level manipulations, large tables of constants, obscure floating-point transformations, exceptional values, etc. This function has been integrated into the proof strategies of the CoqInterval library, bringing a 20× speedup with respect to the previous implementation.",
+    "topic": "Program verification; floating-point arithmetic; formal proof; automated reasoning; mathematical library",
+    "conference": "itp",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.4230/LIPIcs.ITP.2024.14"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2024.15",
+    "title": "Typed Compositional Quantum Computation with Lenses",
+    "authors": [
+      "Jacques Garrigue",
+      "Takafumi Saikawa"
+    ],
+    "abstract": "We propose a type-theoretic framework for describing and proving properties of quantum computations, in particular those presented as quantum circuits. Our proposal is based on an observation that, in the polymorphic type system of Coq, currying on quantum states allows one to apply quantum gates directly inside a complex circuit. By introducing a discrete notion of lens to control this currying, we are further able to separate the combinatorics of the circuit structure from the computational content of gates. We apply our development to define quantum circuits recursively from the bottom up, and prove their correctness compositionally.",
+    "topic": "quantum programming; semantics; lens; currying; Coq; MathComp",
+    "conference": "itp",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.4230/LIPIcs.ITP.2024.15"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2024.16",
+    "title": "A Formal Proof of R(4,5)=25",
+    "authors": [
+      "Thibault Gauthier",
+      "Chad E. Brown"
+    ],
+    "abstract": "In 1995, McKay and Radziszowski proved that the Ramsey number R(4,5) is equal to 25. Their proof relies on a combination of high-level arguments and computational steps. The authors have performed the computational parts of the proof with different implementations in order to reduce the possibility of an error in their programs. In this work, we prove this theorem in the interactive theorem prover HOL4 limiting the uncertainty to the small HOL4 kernel. Instead of verifying their algorithms directly, we rely on the HOL4 interface to MiniSat to prove gluing lemmas. To reduce the number of such lemmas and thus make the computational part of the proof feasible, we implement a generalization algorithm. We verify that its output covers all the possible cases by implementing a custom SAT-solver extended with a graph isomorphism checker.",
+    "topic": "Ramsey numbers; SAT solvers; symmetry breaking; generalization; HOL4",
+    "conference": "itp",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.4230/LIPIcs.ITP.2024.16"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2024.17",
+    "title": "Verifying Software Emulation of an Unsupported Hardware Instruction",
+    "authors": [
+      "Samuel Gruetter",
+      "Thomas Bourgeat",
+      "Adam Chlipala"
+    ],
+    "abstract": "Some processors, especially embedded ones, do not implement all instructions in hardware. Instead, if the processor encounters an unimplemented instruction, an unsupported-instruction exception is raised, and an exception handler is run that implements the missing instruction in software. Getting such a system to work correctly is tricky: The exception-handler code must not destroy any state of the user program and must use the control and status registers (CSRs) of the processor correctly. Moreover, parts of the handler are typically implemented in assembly, while other parts are implemented in a language like C, and one must make sure that when jumping from the user program into the handler assembly, from the handler assembly into C, back to assembly and finally back to the user program, all the assumptions made by the different pieces of code, hardware, and the compiler are satisfied.\nDespite all these tricky details, there is a concise and intuitive way of stating the correctness of such a system: User programs running on a system where some instructions are implemented in software behave the same as if they were running on a system where all instructions are implemented in hardware.\nWe formalize and prove such a statement in the Coq proof assistant, for the case of a simple exception handler implementing the multiplication instruction on a RISC-V processor.",
+    "topic": "Software verification; Software-hardware boundary; Coq",
+    "conference": "itp",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.4230/LIPIcs.ITP.2024.17"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2024.18",
+    "title": "Mechanized HOL Reasoning in Set Theory",
+    "authors": [
+      "Simon Guilloud",
+      "Sankalp Gambhir",
+      "Andrea Gilot",
+      "Viktor Kunčak"
+    ],
+    "abstract": "We present a mechanized embedding of higher-order logic (HOL) and algebraic data types (ADTs) into first-order logic with ZFC axioms. Our approach interprets types as sets, with function (arrow) types coinciding with set-theoretic function spaces. We assume traditional FOL syntax without notation for term-level binders. To embed λ-terms, we define a notion of context, defining the closure of all abstractions occuring inside a term. We implement the embedding in the Lisa proof assistant for schematic first-order logic and its library based on axiomatic set theory (presented at ITP 2023). We show how to implement type checking and the proof steps of HOL Light as proof-producing tactics in Lisa. The embedded HOL theorems and proofs are interoperable with the existing Lisa library. This yields a form of soft type system supporting top-level polymorphism and ADTs within set theory. The approach offers tools for Lisa users to carry HOL-style proofs within set theory. It also enables the import of HOL Light theorem statements into Lisa, as well as the replay of small HOL Light kernel proofs.",
+    "topic": "Proof assistant; First Order Logic; Set Theory; Higher Order Logic",
+    "conference": "itp",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.4230/LIPIcs.ITP.2024.18"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2024.19",
+    "title": "Modular Verification of Intrusive List and Tree Data Structures in Separation Logic",
+    "authors": [
+      "Marc Hermes",
+      "Robbert Krebbers"
+    ],
+    "abstract": "Intrusive linked data structures are commonly used in low-level programming languages such as C for efficiency and to enable a form of generic types. Notably, intrusive versions of linked lists and search trees are used in the Linux kernel and the Boost C++ library. These data structures differ from ordinary data structures in the way that nodes contain only the meta data (i.e. pointers to other nodes), but not the data itself. Instead the programmer needs to embed nodes into the data, thereby avoiding pointer indirections, and allowing data to be part of several data structures.\nIn this paper we address the challenge of specifying and verifying intrusive data structures using separation logic. We aim for modular verification, where we first specify and verify the operations on the nodes (without the data) and then use these specifications to verify clients that attach data. We achieve this by employing a representation predicate that separates the data structure’s node structure from the data that is attached to it. We apply our methodology to singly-linked lists - from which we build cyclic and doubly-linked lists - and binary trees - from which we build binary search trees. All verifications are conducted using the Coq proof assistant, making use of the Iris framework for separation logic.",
+    "topic": "Separation Logic; Program Verification; Data Structures; Iris; Coq",
+    "conference": "itp",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.4230/LIPIcs.ITP.2024.19"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2024.20",
+    "title": "Formalizing the Algebraic Small Object Argument in UniMath",
+    "authors": [
+      "Dennis Hilhorst",
+      "Paige Randall North"
+    ],
+    "abstract": "Quillen model category theory forms the cornerstone of modern homotopy theory, and thus the semantics of (and justification for the name of) homotopy type theory / univalent foundations (HoTT/UF). One of the main tools of Quillen model category theory is the small object argument. Indeed, the particular model categories that can interpret HoTT/UF are usually constructed using the small object argument.\nIn this article, we formalize the algebraic small object argument, a modern categorical version of the small object argument originally due to Garner, in the Coq UniMath library. This constitutes a first step in building up the tools required to formalize - in a system based on HoTT/UF - the semantics of HoTT/UF in particular model categories: for instance, Voevodsky’s original interpretation into simplicial sets.\nMore specifically, in this work, we rephrase and formalize Garner’s original formulation of the algebraic small object argument. We fill in details of Garner’s construction and redefine parts of the construction to be more direct and fit for formalization. We rephrase the theory in more modern language, using constructions like displayed categories and a modern, less strict notion of monoidal categories. We point out the interaction between the theory and the foundations, and motivate the use of the algebraic small object argument in lieu of Quillen’s original small object argument from a constructivist standpoint.",
+    "topic": "formalization of mathematics; univalent foundations; model category theory; algebraic small object argument; coq; unimath",
+    "conference": "itp",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.4230/LIPIcs.ITP.2024.20"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2024.21",
+    "title": "A Formalization of the Lévy-Prokhorov Metric in Isabelle/HOL",
+    "authors": [
+      "Michikazu Hirata"
+    ],
+    "abstract": "The Lévy-Prokhorov metric is a metric between finite measures on a metric space. The metric was introduced to analyze weak convergence of measures. We formalize the Lévy-Prokhorov metric and prove Prokhorov’s theorem in Isabelle/HOL. Prokhorov’s theorem provides a condition for the relative compactness of sets of finite measures and plays essential roles in proofs of the central limit theorem, Sanov’s theorem in large deviation theory, and the existence of optimal coupling in transportation theory. Our formalization includes important results in mathematics such as the Riesz representation theorem, which is a theorem in functional analysis and used to prove Prokhorov’s theorem. We also apply the Lévy-Prokhorov metric to show that the measurable space of finite measures on a standard Borel space is again a standard Borel space.",
+    "topic": "formalization of mathematics; measure theory; metric spaces; topology; Lévy-Prokhorov metric; Prokhorov’s theorem; Isabelle/HOL",
+    "conference": "itp",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.4230/LIPIcs.ITP.2024.21"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2024.22",
+    "title": "Distributed Parallel Build for the Isabelle Archive of Formal Proofs",
+    "authors": [
+      "Fabian Huch",
+      "Makarius Wenzel"
+    ],
+    "abstract": "Motivated by the continuously growing performance demands for the Isabelle Archive of Formal Proofs (AFP), we introduce distributed cluster computing to the Isabelle platform. Parallel build time on a single node has approached 4h-8h in recent years: by supporting multiple nodes, without shared memory nor shared file-systems, we target at a substantial speedup factor to get below the critical limit of 45min total elapsed time. Our distributed build tool is part of the regular Isabelle distribution, but specifically adapted to cope with the structure of projects seen in the AFP.\nIn this work, we address two main challenges: (1) the distributed system architecture that has been implemented in Isabelle/Scala, and (2) the build schedule optimization problem for multi-threaded tasks on multiple compute nodes. We introduce a heuristic tuned to the typical AFP session structure, which can generate good schedules in a few seconds. We reached a total speedup factor of over 100, which is a milestone never before reached. Using this approach, we could build the Isabelle distribution in 8min 10s elapsed time, and the AFP in 35min 40s, or 1h 59min 13s including very slow sessions.",
+    "topic": "Interactive theorem proving; Isabelle; Archive of Formal Proofs; Theorem prover technology; Distributed computing; Schedule optimization",
+    "conference": "itp",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.4230/LIPIcs.ITP.2024.22"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2024.23",
+    "title": "A Generalised Union of Rely-Guarantee and Separation Logic Using Permission Algebras",
+    "authors": [
+      "Vincent Jackson",
+      "Toby Murray",
+      "Christine Rizkallah"
+    ],
+    "abstract": "This paper describes GenRGSep, an Isabelle/HOL library for the development of RGSep logics using a general algebraic state model. In particular, we develop an algebraic state models based on resource algebras that assume neither the presence of unit resources or the cancellativity law. If a new resource model is required, its components need only be proven an instance of a permission algebra, and then they can be composed together using tuples and functions.\nThe proof of soundness is performed by Vafeiadis' operational soundness method. This method was originally formulated with respect to a concrete heap model. This paper adapts it to account for the absence of both units as well as the cancellativity law.",
+    "topic": "verification; concurrency; rely-guarantee; separation logic; resource algebras",
+    "conference": "itp",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.4230/LIPIcs.ITP.2024.23"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2024.24",
+    "title": "An Isabelle/HOL Formalization of Narrowing and Multiset Narrowing for E-Unifiability, Reachability and Infeasibility",
+    "authors": [
+      "Dohan Kim"
+    ],
+    "abstract": "We present an Isabelle/HOL formalization of narrowing for E-unifiability, reachability, and infeasibility. Given a semi-complete rewrite system ℛ and two terms s and t, we show a formalized proof that if narrowing terminates, then it provides a decision procedure for ℛ-unifiability for s and t, where ℛ is viewed as a set of equations. Furthermore, we present multiset narrowing and its formalization for multiset reachability and reachability analysis, providing decision procedures using certain restricted conditions on multiset reachability and reachability problems. Our multiset narrowing also provides a complete method for E-unifiability problems consisting of multiple goals if E can be represented by a complete rewrite system.",
+    "topic": "Narrowing; Multiset Narrowing; Unifiability; Reachability",
+    "conference": "itp",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.4230/LIPIcs.ITP.2024.24"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2024.25",
+    "title": "Formalizing the Cholesky Factorization Theorem",
+    "authors": [
+      "Carl Kwan",
+      "Warren A. Hunt Jr."
+    ],
+    "abstract": "We present a formal proof of the Cholesky Factorization Theorem, a fundamental result in numerical linear algebra, by verifying formally a Cholesky decomposition algorithm in ACL2. Our mechanical proof of correctness is largely automatic for two main reasons: (1) we employ a derivation which involves partitioning the matrix to obtain the desired result; and (2) we provide an inductive invariant for the Cholesky decomposition algorithm. To formalize (1), we build support for reasoning about partitioned matrices. This is a departure from how typical numerical linear algebra algorithms are presented, i.e. via excessive indexing. To enable (2), we build a new recursive recognizer for a matrix to be Cholesky decomposable and mathematically prove that the recognizer is indeed necessary and sufficient. Guided by the recognizer, ACL2 automatically inducts and verifies the Cholesky decomposition algorithm. We also present our ACL2-based formalization of the decomposition algorithm itself, and discuss how to bridge the gap between verifying a decomposition algorithm and proving the Cholesky Factorization Theorem. To our knowledge, this is the first formalization of the Cholesky Factorization Theorem.",
+    "topic": "Numerical linear algebra; Cholesky factorization theorem; Matrix decomposition; Automated reasoning; ACL2",
+    "conference": "itp",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.4230/LIPIcs.ITP.2024.25"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2024.26",
+    "title": "The Rewster: Type Preserving Rewrite Rules for the Coq Proof Assistant",
+    "authors": [
+      "Yann Leray",
+      "Gaëtan Gilbert",
+      "Nicolas Tabareau",
+      "Théo Winterhalter"
+    ],
+    "abstract": "In dependently typed proof assistants, users can declare axioms to extend the ambient logic locally with new principles and propositional equalities governing them. Additionally, rewrite rules have recently been proposed to allow users to extend the logic with new definitional equalities, enabling them to handle new principles with a computational behaviour. While axioms can only break consistency, the addition of arbitrary rewrite rules can break other important metatheoretical properties such as type preservation. In this paper, we present an implementation of rewrite rules on top of the Coq proof assistant, together with a modular criterion to ensure that the added rewrite rules preserve typing. This criterion, based on bidirectional type checking, is formally expressed in PCUIC - the type theory of Coq recently developed in the MetaCoq project.",
+    "topic": "type theory; dependent types; rewrite rules; type preservation; Coq",
+    "conference": "itp",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.4230/LIPIcs.ITP.2024.26"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2024.27",
+    "title": "Teaching Mathematics Using Lean and Controlled Natural Language",
+    "authors": [
+      "Patrick Massot"
+    ],
+    "abstract": "We present Verbose Lean, a library using the flexibility of the Lean programming language and proof assistant to teach undergrad mathematics students how to read and write traditional paper proofs. After explaining our main pedagogical goals, we explain how students use the library with varying levels of assistance to write proofs that are easy to transfer to paper because they look like natural language. We then describe how teachers can customize the student experience based on their specific pedagogical goals and constraints. Finally we describe some aspects of the implementation of the library, emphasizing how new aspects of the very recently released version 4 of Lean allow a lot of flexibility that could benefit many new creative uses of a proof assistant.",
+    "topic": "mathematics teaching; proof assistant; controlled natural language",
+    "conference": "itp",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.4230/LIPIcs.ITP.2024.27"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2024.28",
+    "title": "Lean Formalization of Completeness Proof for Coalition Logic with Common Knowledge",
+    "authors": [
+      "Kai Obendrauf",
+      "Anne Baanen",
+      "Patrick Koopmann",
+      "Vera Stebletsova"
+    ],
+    "abstract": "Coalition Logic (CL) is a well-known formalism for reasoning about the strategic abilities of groups of agents in multi-agent systems. Coalition Logic with Common Knowledge (CLC) extends CL with operators from epistic logics, and thus with the ability to model the individual and common knowledge of agents. We have formalized the syntax and semantics of both logics in the interactive theorem prover Lean 4, and used it to prove soundness and completeness of its axiomatization. Our formalization uses the type class system to generalize over different aspects of CLC, thus allowing us to reuse some of to prove properties in related logics such as CL and CLK (CL with individual knowledge).",
+    "topic": "Multi-agent systems; Coalition Logic; Epistemic Logic; common knowledge; completeness; formal methods; Lean prover",
+    "conference": "itp",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.4230/LIPIcs.ITP.2024.28"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2024.29",
+    "title": "Conway Normal Form: Bridging Approaches for Comprehensive Formalization of Surreal Numbers",
+    "authors": [
+      "Karol Pąk",
+      "Cezary Kaliszyk"
+    ],
+    "abstract": "The proper class of Conway’s surreal numbers forms a rich totally ordered algebraically closed field with many arithmetic and algebraic properties close to those of real numbers, the ordinals, and infinitesimal numbers. In this paper, we formalize the construction of Conway’s numbers in Mizar using two approaches and propose a bridge between them, aiming to combine their advantages for efficient formalization. By replacing transfinite induction-recursion with transfinite induction, we streamline their construction. Additionally, we introduce a method to merge proofs from both approaches using global choice, facilitating formal proof. We demonstrate that surreal numbers form a field, including the square root, and that they encompass subsets such as reals, ordinals, and powers of ω. We combined Conway’s work with Ehrlich’s generalization to formally prove Conway’s Normal Form, paving the way for many formal developments in surreal number theory.",
+    "topic": "Surreal numbers; Conway normal form; Mizar",
+    "conference": "itp",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.4230/LIPIcs.ITP.2024.29"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2024.30",
+    "title": "A Coq Formalization of Taylor Models and Power Series for Solving Ordinary Differential Equations",
+    "authors": [
+      "Sewon Park",
+      "Holger Thies"
+    ],
+    "abstract": "In exact real computation real numbers are manipulated exactly without round-off errors, making it well-suited for high precision verified computation. In recent work we propose an axiomatic formalization of exact real computation in the Coq theorem prover. The formalization admits an extended extraction mechanism that lets us extract computational content from constructive parts of proofs to efficient programs built on top of AERN, a Haskell library for exact real computation. \nMany processes in science and engineering are modeled by ordinary differential equations (ODEs), and often safety-critical applications depend on computing their solutions correctly. The primary goal of the current work is to extend our framework to spaces of functions and to support computation of solutions to ODEs and other essential operators.\nIn numerical mathematics, the most common way to represent continuous functions is to use polynomial approximations. This can be modeled by so-called Taylor models, that encode a function as a polynomial and a rigorous error-bound over some domain. We define types of classical functions that do not hold any computational content and formalize Taylor models to computationally approximate those classical functions. Classical functions are defined in a way to admit classical principles in their constructions and verification. We define various basic operations on Taylor models and verify their correctness based on the classical functions that they approximate. We then shift our interest to analytic functions as a generalization of Taylor models where polynomials are replaced by infinite power series. We use the formalization to develop a theory of non-linear polynomial ODEs. From the proofs we can extract certified exact real computation programs that compute solutions of ODEs on some time interval up to any precision.",
+    "topic": "Exact real computation; Taylor models; Analytic functions; Computable analysis; Program extraction",
+    "conference": "itp",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.4230/LIPIcs.ITP.2024.30"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2024.31",
+    "title": "A Verified Earley Parser",
+    "authors": [
+      "Martin Rau",
+      "Tobias Nipkow"
+    ],
+    "abstract": "An Earley parser is a top-down parsing technique that is capable of parsing arbitrary context-free grammars. We present a functional implementation of an Earley parser verified using the interactive theorem prover Isabelle/HOL. Our formalization builds upon Cliff Jones' extensive, refinement-based paper proof. We implement and prove soundness and completeness of a functional recognizer modeling Jay Earley’s original imperative implementation and extend it with the necessary data structures to enable the construction of parse trees following the work of Elizabeth Scott. Building upon this foundation, we develop a functional parser and prove its soundness. We round off the paper by providing an informal argument and empirical data regarding the running time and space complexity of our implementation.",
+    "topic": "Verification; Parsers; Earley; Isabelle",
+    "conference": "itp",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.4230/LIPIcs.ITP.2024.31"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2024.32",
+    "title": "Abstractions for Multi-Sorted Substitutions",
+    "authors": [
+      "Hannes Saffrich"
+    ],
+    "abstract": "Formalizing a typed programming language in a proof assistant requires to choose representations for variables and typing. Variables are often represented as de Bruijn indices, where substitution is usually defined in terms of renamings to allow for proofs by structural induction. Typing can be represented extrinsically by defining untyped terms and a typing relation, or intrinsically by combining syntax and typing into a single definition of well-typed terms. For extrinsic typing, there is again a choice between extrinsic scoping, where terms and the notion of free variables are defined separately, and intrinsic scoping, where terms are indexed by their free variables.\nThis paper describes an Agda framework for formalizing programming languages with extrinsic typing, intrinsic scoping, and de Bruijn Indices for variables. The framework supports object languages with arbitrary many variable sorts and dependencies, making it suitable for polymorphic languages and dependent types. Given an Agda definition of syntax and typing, the framework derives substitution operations and lemmas for untyped terms, and provides an abstraction to prove type preservation of these operations with just a single lemma. The key insights behind the framework are the use of multi-sorted syntax definitions, which enable parallel substitutions that replace all variables of all sorts simultaneously, and abstractions that unify the definitions, compositions, typings, and type preservation lemmas of multi-sorted renamings and substitutions. Case studies have been conducted to prove subject reduction for System F with subtyping, dependently typed lambda calculus, and lambda calculus with pattern matching.",
+    "topic": "Agda; Metatheory; Framework",
+    "conference": "itp",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.4230/LIPIcs.ITP.2024.32"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2024.33",
+    "title": "Correctly Compiling Proofs About Programs Without Proving Compilers Correct",
+    "authors": [
+      "Audrey Seo",
+      "Christopher Lam",
+      "Dan Grossman",
+      "Talia Ringer"
+    ],
+    "abstract": "Guaranteeing correct compilation is nearly synonymous with compiler verification. However, the correctness guarantees for certified compilers and translation validation can be stronger than we need. While many compilers do have incorrect behavior, even when a compiler bug occurs it may not change the program’s behavior meaningfully with respect to its specification. Many real-world specifications are necessarily partial in that they do not completely specify all of a program’s behavior. While compiler verification and formal methods have had great success for safety-critical systems, there are magnitudes more code, such as math libraries, compiled with incorrect compilers, that would benefit from a guarantee of its partial specification.\nThis paper explores a technique to get guarantees about compiled programs even in the presence of an unverified, or even incorrect, compiler. Our workflow compiles programs, specifications, and proof objects, from an embedded source language and logic to an embedded target language and logic. We implement two simple imperative languages, each with its own Hoare-style program logic, and a system for instantiating proof compilers out of compilers between these two languages that fulfill certain equational conditions in Coq. We instantiate our system on four compilers: one that is incomplete, two that are incorrect, and one that is correct but unverified. We use these instances to compile Hoare proofs for several programs, and we are able to leverage compiled proofs to assist in proofs of larger programs. Our proof compiler system is formally proven sound in Coq. We demonstrate how our approach enables strong target program guarantees even in the presence of incorrect compilation, opening up new options for which proof burdens one might shoulder instead of, or in addition to, compiler correctness.",
+    "topic": "proof transformations; compiler validation; program logics; proof engineering",
+    "conference": "itp",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.4230/LIPIcs.ITP.2024.33"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2024.34",
+    "title": "Redex2Coq: Towards a Theory of Decidability of Redex’s Reduction Semantics",
+    "authors": [
+      "Mallku Soldevila",
+      "Rodrigo Ribeiro",
+      "Beta Ziliani"
+    ],
+    "abstract": "We propose the first step in the development of a tool to automate the translation of Redex models into a semantically equivalent model in Coq, and to provide tactics to help in the certification of fundamental properties of such models.\nThe work is based on a model of Redex’s semantics developed by Klein et al. In this iteration, we were able to code in Coq a primitive recursive definition of the matching algorithm of Redex, and prove its correctness with respect to the original specification. The main challenge was to find the right generalization of the original algorithm (and its specification), and to find the proper well-founded relation to prove its termination.\nAdditionally, we also adequate some parts of our mechanization to prepare it for the future inclusion of Redex features absent in Klein et al., such as the Kleene’s closure operator.",
+    "topic": "Coq; PLT Redex; Reduction semantics",
+    "conference": "itp",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.4230/LIPIcs.ITP.2024.34"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2024.35",
+    "title": "Formal Verification of the Empty Hexagon Number",
+    "authors": [
+      "Bernardo Subercaseaux",
+      "Wojciech Nawrocki",
+      "James Gallicchio",
+      "Cayden Codel",
+      "Mario Carneiro",
+      "Marijn J. H. Heule"
+    ],
+    "abstract": "A recent breakthrough in computer-assisted mathematics showed that every set of 30 points in the plane in general position (i.e., no three points on a common line) contains an empty convex hexagon. Heule and Scheucher solved this problem with a combination of geometric insights and automated reasoning techniques by constructing CNF formulas ϕ_n, with O(n⁴) clauses, such that if ϕ_n is unsatisfiable then every set of n points in general position must contain an empty convex hexagon. An unsatisfiability proof for n = 30 was then found with a SAT solver using 17 300 CPU hours of parallel computation. In this paper, we formalize and verify this result in the Lean theorem prover. Our formalization covers ideas in discrete computational geometry and SAT encoding techniques by introducing a framework that connects geometric objects to propositional assignments. We see this as a key step towards the formal verification of other SAT-based results in geometry, since the abstractions we use have been successfully applied to similar problems. Overall, we hope that our work sets a new standard for the verification of geometry problems relying on extensive computation, and that it increases the trust the mathematical community places in computer-assisted proofs.",
+    "topic": "Empty Hexagon Number; Discrete Computational Geometry; Erdős-Szekeres",
+    "conference": "itp",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.4230/LIPIcs.ITP.2024.35"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2024.36",
+    "title": "Defining and Preserving More C Behaviors: Verified Compilation Using a Concrete Memory Model",
+    "authors": [
+      "Andrew Tolmach",
+      "Chris Chhak",
+      "Sean Anderson"
+    ],
+    "abstract": "We propose a concrete (\"pointer as integer\") memory semantics for C that supports verified compilation to a target environment having simple \"public vs. private\" data protection based on tagging or sandboxing (such as the WebAssembly virtual machine). Our semantics gives definition to a range of legacy programming idioms that cause undefined behavior in standard C, and are not covered by existing verified compilers, but that often work in practice. Compiler correctness in this context implies that target programs are secure against all control-flow attacks (although not against data-only attacks). To avoid tying our semantics too closely to particular compiler implementation choices, it is parameterized by a novel form of oracle that non-deterministically chooses the addresses of stack and heap allocations. As a proof-of-concept, we formalize a small RTL-like language and verify two-way refinement for a compiler from this language to a low-level machine and runtime system with hardware tagging. Our Coq formalization and proofs are provided as supplementary material.",
+    "topic": "Compiler verification; C language semantics; Coq proof assistant",
+    "conference": "itp",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.4230/LIPIcs.ITP.2024.36"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2024.37",
+    "title": "Integrals Within Integrals: A Formalization of the Gagliardo-Nirenberg-Sobolev Inequality",
+    "authors": [
+      "Floris van Doorn",
+      "Heather Macbeth"
+    ],
+    "abstract": "We introduce an abstraction which allows arguments involving iterated integrals to be formalized conveniently in type-theory-based proof assistants. We call this abstraction the marginal construction, since it is connected to the marginal distribution in probability theory. The marginal construction gracefully handles permutations to the order of integration (Tonelli’s theorem in several variables), as well as arguments involving an induction over dimension.\nWe implement the marginal construction and several applications in the language Lean. The most difficult of these applications, the Gagliardo-Nirenberg-Sobolev inequality, is a foundational result in the theory of elliptic partial differential equations and has not previously been formalized.",
+    "topic": "Sobolev inequality; measure theory; Lean; formalized mathematics",
+    "conference": "itp",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.4230/LIPIcs.ITP.2024.37"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2024.38",
+    "title": "The Functor of Points Approach to Schemes in Cubical Agda",
+    "authors": [
+      "Max Zeuner",
+      "Matthias Hutzler"
+    ],
+    "abstract": "We present a formalization of quasi-compact and quasi-separated schemes (qcqs-schemes) in the Cubical Agda proof assistant. We follow Grothendieck’s functor of points approach, which defines schemes, the quintessential notion of modern algebraic geometry, as certain well-behaved functors from commutative rings to sets. This approach is often regarded as conceptually simpler than the standard approach of defining schemes as locally ringed spaces, but to our knowledge it has not yet been adopted in formalizations of algebraic geometry. We build upon a previous formalization of the so-called Zariski lattice associated to a commutative ring in order to define the notion of compact open subfunctor. This allows for a concise definition of qcqs-schemes, streamlining the usual presentation as e.g. given in the standard textbook of Demazure and Gabriel. It also lets us obtain a fully constructive proof that compact open subfunctors of affine schemes are qcqs-schemes.",
+    "topic": "Schemes; Algebraic Geometry; Category Theory; Cubical Agda; Homotopy Type Theory and Univalent Foundations; Constructive Mathematics",
+    "conference": "itp",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.4230/LIPIcs.ITP.2024.38"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2024.39",
+    "title": "Robust Mean Estimation by All Means (Short Paper)",
+    "authors": [
+      "Reynald Affeldt",
+      "Clark Barrett",
+      "Alessandro Bruni",
+      "Ieva Daukantas",
+      "Harun Khan",
+      "Takafumi Saikawa",
+      "Carsten Schürmann"
+    ],
+    "abstract": "We report the results of a verification experiment on an algorithm for robust mean estimation, i.e., an algorithm that computes a mean in the presence of outliers. We formalize the algorithm in the Coq proof assistant and devise a pragmatic approach for identifying and solving issues related to the choice of bounds. To keep our formalization succinct and generic, we recast the original argument using an existing library for finite probabilities that we extend with reusable lemmas. To formalize the original algorithm, which relies on a subtle convergence argument, we observe that by adding suitable termination checks, we can turn it into a well-founded recursion without losing its original properties. We also exploit a tactic for solving real-valued inequalities by approximation to heuristically fix inaccurate constant values in the original proof.",
+    "topic": "robust statistics; probability theory; formal verification",
+    "conference": "itp",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.4230/LIPIcs.ITP.2024.39"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2024.40",
+    "title": "Formalising Half of a Graduate Textbook on Number Theory (Short Paper)",
+    "authors": [
+      "Manuel Eberl",
+      "Anthony Bordg",
+      "Lawrence C. Paulson",
+      "Wenda Li"
+    ],
+    "abstract": "Apostol’s Modular Functions and Dirichlet Series in Number Theory [Tom M. Apostol, 1990] is a graduate text covering topics such as elliptic functions, modular functions, approximation theorems and general Dirichlet series. It relies on complex analysis, winding numbers, the Riemann ζ function and Laurent series. We have formalised several chapters and can comment on the sort of gaps found in pedagogical mathematics. Proofs are available from https://github.com/Wenda302/Number_Theory_ITP2024.",
+    "topic": "Isabelle/HOL; number theory; complex analysis; formalisation of mathematics",
+    "conference": "itp",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.4230/LIPIcs.ITP.2024.40"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2024.41",
+    "title": "Graphical Rewriting for Diagrammatic Reasoning in Monoidal Categories in Lean4 (Short Paper)",
+    "authors": [
+      "Sam Ezeh"
+    ],
+    "abstract": "We present Untangle, a Lean4 extension for Visual Studio Code that displays string diagrams for morphisms inside monoidal categories, allowing users to rewrite expressions by clicking on natural transformations and morphisms in the string diagram. When the the user manipulates the string diagram by clicking on natural transformations in the Graphical User Interface, it attempts to generate relevant tactics to apply which it then inserts into the editor, allowing the user to prove equalities visually by diagram rewriting.",
+    "topic": "Interactive theorem proving; Lean4; Graphical User Interface",
+    "conference": "itp",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.4230/LIPIcs.ITP.2024.41"
+  }
+]

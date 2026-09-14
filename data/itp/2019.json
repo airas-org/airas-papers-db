@@ -1,0 +1,485 @@
+[
+  {
+    "id": "10.4230/LIPIcs.ITP.2019.1",
+    "title": "A Million Lines of Proof About a Moving Target (Invited Talk)",
+    "authors": [
+      "June Andronick"
+    ],
+    "abstract": "In the last ten years, we have been porting, maintaining, and evolving the world’s largest proof base, the formal proof in Isabelle/HOL of the seL4 microkernel. But actually, there is no such thing as \"the seL4 proof\"; there are a number of proofs (functional correctness, binary translation validation, integrity and confidentiality proofs, etc) about a number of instances of seL4 (depending on the hardware platform it runs on, the features it includes, the extensions it supports). We will give an overview of the current state of these proofs, and, importantly, the challenges we face in keeping to maintain, evolve and extend them, and the processes we have put in place to manage their dependence on the evolving implementation.",
+    "topic": "Proof maintentance; proof evolution; seL4; Isabelle/HOL",
+    "conference": "itp",
+    "year": 2019,
+    "paper_url": "https://doi.org/10.4230/LIPIcs.ITP.2019.1"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2019.2",
+    "title": "What Makes a Mathematician Tick? (Invited Talk)",
+    "authors": [
+      "Kevin Buzzard"
+    ],
+    "abstract": "Formalised mathematics has a serious image problem in mathematics departments. Mathematicians working in \"mainstream\" areas such as modern algebra, analysis, geometry etc have absolutely no desire to work formally, it slows them down and they cannot see the point. The mathematical community has its own methods for deciding whether a proof (in pdf format) is correct or not; these methods rely on the views of a cabal of experts - our high priests. Our proof of the odd order theorem is \"John Thompson got a Fields Medal for the work\". This proof is of a rather different nature to the formalised proof of Gonthier et al. Our methods are arcane and mysterious; there is also ample evidence that they are, in general, extremely accurate when it comes to the important stuff.\nI will talk about my attempts, as a \"mainstream mathematician\", to introduce formalised mathematics to my community.",
+    "topic": "Formalization of mathematics",
+    "conference": "itp",
+    "year": 2019,
+    "paper_url": "https://doi.org/10.4230/LIPIcs.ITP.2019.2"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2019.3",
+    "title": "An Increasing Need for Formality (Invited Talk)",
+    "authors": [
+      "Martin Dixon"
+    ],
+    "abstract": "The talk will touch on a number of practical opportunities for formal modeling and methods that Intel sees in HW security research including: instruction sets; the proliferation of programmable agents within SoC’s; and negative space testing.",
+    "topic": "Hardware security; formal modeling; instruction sets; SoC’s; negative space testing",
+    "conference": "itp",
+    "year": 2019,
+    "paper_url": "https://doi.org/10.4230/LIPIcs.ITP.2019.3"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2019.4",
+    "title": "A Verified Compositional Algorithm for AI Planning",
+    "authors": [
+      "Mohammad Abdulaziz",
+      "Charles Gretton",
+      "Michael Norrish"
+    ],
+    "abstract": "We report on our HOL4 verification of an AI planning algorithm. The algorithm is compositional in the following sense: a planning problem is divided into multiple smaller abstractions, then each of the abstractions is solved, and finally the abstractions' solutions are composed into a solution for the given problem. Formalising the algorithm, which was already quite well understood, revealed nuances in its operation which could lead to computing buggy plans. The formalisation also revealed that the algorithm can be presented more generally, and can be applied to systems with infinite states and actions, instead of only finite ones.\nOur formalisation extends an earlier model for slightly simpler transition systems, and demonstrates another step towards formal treatments of more and more of the algorithms and reasoning used in AI planning, as well as model checking.",
+    "topic": "AI Planning; Compositional Algorithms; Algorithm Verification; Transition Systems",
+    "conference": "itp",
+    "year": 2019,
+    "paper_url": "https://doi.org/10.4230/LIPIcs.ITP.2019.4"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2019.5",
+    "title": "Proving Tree Algorithms for Succinct Data Structures",
+    "authors": [
+      "Reynald Affeldt",
+      "Jacques Garrigue",
+      "Xuanrui Qi",
+      "Kazunari Tanaka"
+    ],
+    "abstract": "Succinct data structures give space-efficient representations of large amounts of data without sacrificing performance. They rely on cleverly designed data representations and algorithms. We present here the formalization in Coq/SSReflect of two different tree-based succinct representations and their accompanying algorithms. One is the Level-Order Unary Degree Sequence, which encodes the structure of a tree in breadth-first order as a sequence of bits, where access operations can be defined in terms of Rank and Select, which work in constant time for static bit sequences. The other represents dynamic bit sequences as binary balanced trees, where Rank and Select present a low logarithmic overhead compared to their static versions, and with efficient insertion and deletion. The two can be stacked to provide a dynamic representation of dictionaries for instance. While both representations are well-known, we believe this to be their first formalization and a needed step towards provably-safe implementations of big data.",
+    "topic": "Coq; small-scale reflection; succinct data structures; LOUDS; bit vectors; self balancing trees",
+    "conference": "itp",
+    "year": 2019,
+    "paper_url": "https://doi.org/10.4230/LIPIcs.ITP.2019.5"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2019.6",
+    "title": "Data Types as Quotients of Polynomial Functors",
+    "authors": [
+      "Jeremy Avigad",
+      "Mario Carneiro",
+      "Simon Hudon"
+    ],
+    "abstract": "A broad class of data types, including arbitrary nestings of inductive types, coinductive types, and quotients, can be represented as quotients of polynomial functors. This provides perspicuous ways of constructing them and reasoning about them in an interactive theorem prover.",
+    "topic": "data types; polynomial functors; inductive types; coinductive types",
+    "conference": "itp",
+    "year": 2019,
+    "paper_url": "https://doi.org/10.4230/LIPIcs.ITP.2019.6"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2019.7",
+    "title": "Primitive Floats in Coq",
+    "authors": [
+      "Guillaume Bertholon",
+      "Érik Martin-Dorel",
+      "Pierre Roux"
+    ],
+    "abstract": "Some mathematical proofs involve intensive computations, for instance: the four-color theorem, Hales' theorem on sphere packing (formerly known as the Kepler conjecture) or interval arithmetic. For numerical computations, floating-point arithmetic enjoys widespread usage thanks to its efficiency, despite the introduction of rounding errors.\nFormal guarantees can be obtained on floating-point algorithms based on the IEEE 754 standard, which precisely specifies floating-point arithmetic and its rounding modes, and a proof assistant such as Coq, that enjoys efficient computation capabilities. Coq offers machine integers, however floating-point arithmetic still needed to be emulated using these integers.\nA modified version of Coq is presented that enables using the machine floating-point operators. The main obstacles to such an implementation and its soundness are discussed. Benchmarks show potential performance gains of two orders of magnitude.",
+    "topic": "Coq formal proofs; floating-point arithmetic; reflexive tactics; Cholesky decomposition",
+    "conference": "itp",
+    "year": 2019,
+    "paper_url": "https://doi.org/10.4230/LIPIcs.ITP.2019.7"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2019.8",
+    "title": "A Certificate-Based Approach to Formally Verified Approximations",
+    "authors": [
+      "Florent Bréhard",
+      "Assia Mahboubi",
+      "Damien Pous"
+    ],
+    "abstract": "We present a library to verify rigorous approximations of univariate functions on real numbers, with the Coq proof assistant. Based on interval arithmetic, this library also implements a technique of validation a posteriori based on the Banach fixed-point theorem. We illustrate this technique on the case of operations of division and square root. This library features a collection of abstract structures that organise the specfication of rigorous approximations, and modularise the related proofs. Finally, we provide an implementation of verified Chebyshev approximations, and we discuss a few examples of computations.",
+    "topic": "approximation theory; Chebyshev polynomials; Banach fixed-point theorem; interval arithmetic; Coq",
+    "conference": "itp",
+    "year": 2019,
+    "paper_url": "https://doi.org/10.4230/LIPIcs.ITP.2019.8"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2019.9",
+    "title": "Higher-Order Tarski Grothendieck as a Foundation for Formal Proof",
+    "authors": [
+      "Chad E. Brown",
+      "Cezary Kaliszyk",
+      "Karol Pąk"
+    ],
+    "abstract": "We formally introduce a foundation for computer verified proofs based on higher-order Tarski-Grothendieck set theory. We show that this theory has a model if a 2-inaccessible cardinal exists. This assumption is the same as the one needed for a model of plain Tarski-Grothendieck set theory. The foundation allows the co-existence of proofs based on two major competing foundations for formal proofs: higher-order logic and TG set theory. We align two co-existing Isabelle libraries, Isabelle/HOL and Isabelle/Mizar, in a single foundation in the Isabelle logical framework. We do this by defining isomorphisms between the basic concepts, including integers, functions, lists, and algebraic structures that preserve the important operations. With this we can transfer theorems proved in higher-order logic to TG set theory and vice versa. We practically show this by formally transferring Lagrange’s four-square theorem, Fermat 3-4, and other theorems between the foundations in the Isabelle framework.",
+    "topic": "model; higher-order; Tarski Grothendieck; proof foundation",
+    "conference": "itp",
+    "year": 2019,
+    "paper_url": "https://doi.org/10.4230/LIPIcs.ITP.2019.9"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2019.10",
+    "title": "Generic Authenticated Data Structures, Formally",
+    "authors": [
+      "Matthias Brun",
+      "Dmitriy Traytel"
+    ],
+    "abstract": "Authenticated data structures are a technique for outsourcing data storage and maintenance to an untrusted server. The server is required to produce an efficiently checkable and cryptographically secure proof that it carried out precisely the requested computation. Recently, Miller et al. [https://doi.org/10.1145/2535838.2535851] demonstrated how to support a wide range of such data structures by integrating an authentication construct as a first class citizen in a functional programming language. In this paper, we put this work to the test of formalization in the Isabelle proof assistant. With Isabelle’s help, we uncover and repair several mistakes and modify the small-step semantics to perform call-by-value evaluation rather than requiring terms to be in administrative normal form.",
+    "topic": "Authenticated Data Structures; Verifiable Computation; Isabelle/HOL; Nominal Isabelle",
+    "conference": "itp",
+    "year": 2019,
+    "paper_url": "https://doi.org/10.4230/LIPIcs.ITP.2019.10"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2019.11",
+    "title": "A Verified and Compositional Translation of LTL to Deterministic Rabin Automata",
+    "authors": [
+      "Julian Brunner",
+      "Benedikt Seidl",
+      "Salomon Sickert"
+    ],
+    "abstract": "We present a formalisation of the unified translation approach from linear temporal logic (LTL) to omega-automata from [Javier Esparza et al., 2018]. This approach decomposes LTL formulas into \"simple\" languages and allows a clear separation of concerns: first, we formalise the purely logical result yielding this decomposition; second, we develop a generic, executable, and expressive automata library providing necessary operations on automata to re-combine the \"simple\" languages; third, we instantiate this generic theory to obtain a construction for deterministic Rabin automata (DRA). We extract from this particular instantiation an executable tool translating LTL to DRAs. To the best of our knowledge this is the first verified translation of LTL to DRAs that is proven to be double-exponential in the worst case which asymptotically matches the known lower bound.",
+    "topic": "Automata Theory; Automata over Infinite Words; Deterministic Automata; Linear Temporal Logic; Model Checking; Verified Algorithms",
+    "conference": "itp",
+    "year": 2019,
+    "paper_url": "https://doi.org/10.4230/LIPIcs.ITP.2019.11"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2019.12",
+    "title": "Formalizing Computability Theory via Partial Recursive Functions",
+    "authors": [
+      "Mario Carneiro"
+    ],
+    "abstract": "We present an extension to the mathlib library of the Lean theorem prover formalizing the foundations of computability theory. We use primitive recursive functions and partial recursive functions as the main objects of study, and we use a constructive encoding of partial functions such that they are executable when the programs in question provably halt. Main theorems include the construction of a universal partial recursive function and a proof of the undecidability of the halting problem. Type class inference provides a transparent way to supply Gödel numberings where needed and encapsulate the encoding details.",
+    "topic": "Lean; computability; halting problem; primitive recursion",
+    "conference": "itp",
+    "year": 2019,
+    "paper_url": "https://doi.org/10.4230/LIPIcs.ITP.2019.12"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2019.13",
+    "title": "Formal Proofs of Tarjan’s Strongly Connected Components Algorithm in Why3, Coq and Isabelle",
+    "authors": [
+      "Ran Chen",
+      "Cyril Cohen",
+      "Jean-Jacques Lévy",
+      "Stephan Merz",
+      "Laurent Théry"
+    ],
+    "abstract": "Comparing provers on a formalization of the same problem is always a valuable exercise. In this paper, we present the formal proof of correctness of a non-trivial algorithm from graph theory that was carried out in three proof assistants: Why3, Coq, and Isabelle.",
+    "topic": "Mathematical logic; Formal proof; Graph algorithm; Program verification",
+    "conference": "itp",
+    "year": 2019,
+    "paper_url": "https://doi.org/10.4230/LIPIcs.ITP.2019.13"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2019.14",
+    "title": "First-Order Guarded Coinduction in Coq",
+    "authors": [
+      "Łukasz Czajka"
+    ],
+    "abstract": "We introduce two coinduction principles and two proof translations which, under certain conditions, map coinductive proofs that use our principles to guarded Coq proofs. The first principle provides an \"operational\" description of a proof by coinduction, which is easy to reason with informally. The second principle extends the first one to allow for direct proofs by coinduction of statements with existential quantifiers and multiple coinductive predicates in the conclusion. The principles automatically enforce the correct use of the coinductive hypothesis. We implemented the principles and the proof translations in a Coq plugin.",
+    "topic": "coinduction; Coq; guardedness; corecursion",
+    "conference": "itp",
+    "year": 2019,
+    "paper_url": "https://doi.org/10.4230/LIPIcs.ITP.2019.14"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2019.15",
+    "title": "Formalizing the Solution to the Cap Set Problem",
+    "authors": [
+      "Sander R. Dahmen",
+      "Johannes Hölzl",
+      "Robert Y. Lewis"
+    ],
+    "abstract": "In 2016, Ellenberg and Gijswijt established a new upper bound on the size of subsets of F^n_q with no three-term arithmetic progression. This problem has received much mathematical attention, particularly in the case q = 3, where it is commonly known as the cap set problem. Ellenberg and Gijswijt’s proof was published in the Annals of Mathematics and is noteworthy for its clever use of elementary methods. This paper describes a formalization of this proof in the Lean proof assistant, including both the general result in F^n_q and concrete values for the case q = 3. We faithfully follow the pen and paper argument to construct the bound. Our work shows that (some) modern mathematics is within the range of proof assistants.",
+    "topic": "formal proof; combinatorics; cap set problem; Lean",
+    "conference": "itp",
+    "year": 2019,
+    "paper_url": "https://doi.org/10.4230/LIPIcs.ITP.2019.15"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2019.16",
+    "title": "Nine Chapters of Analytic Number Theory in Isabelle/HOL",
+    "authors": [
+      "Manuel Eberl"
+    ],
+    "abstract": "In this paper, I present a formalisation of a large portion of Apostol’s Introduction to Analytic Number Theory in Isabelle/HOL. Of the 14 chapters in the book, the content of 9 has been mostly formalised, while the content of 3 others was already mostly available in Isabelle before.\nThe most interesting results that were formalised are: \n- The Riemann and Hurwitz zeta functions and the Dirichlet L functions \n- Dirichlet’s theorem on primes in arithmetic progressions \n- An analytic proof of the Prime Number Theorem \n- The asymptotics of arithmetical functions such as the prime omega function, the divisor count sigma_0(n), and Euler’s totient function phi(n)",
+    "topic": "Isabelle; theorem proving; analytic number theory; number theory; arithmetical function; Dirichlet series; prime number theorem; Dirichlet’s theorem; zeta function; L functions",
+    "conference": "itp",
+    "year": 2019,
+    "paper_url": "https://doi.org/10.4230/LIPIcs.ITP.2019.16"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2019.17",
+    "title": "A Certifying Extraction with Time Bounds from Coq to Call-By-Value Lambda Calculus",
+    "authors": [
+      "Yannick Forster",
+      "Fabian Kunze"
+    ],
+    "abstract": "We provide a plugin extracting Coq functions of simple polymorphic types to the (untyped) call-by-value lambda calculus L. The plugin is implemented in the MetaCoq framework and entirely written in Coq. We provide Ltac tactics to automatically verify the extracted terms w.r.t a logical relation connecting Coq functions with correct extractions and time bounds, essentially performing a certifying translation and running time validation. We provide three case studies: A universal L-term obtained as extraction from the Coq definition of a step-indexed self-interpreter for L, a many-reduction from solvability of Diophantine equations to the halting problem of L, and a polynomial-time simulation of Turing machines in L.",
+    "topic": "call-by-value; lambda calculus; Coq; constructive type theory; extraction; computability",
+    "conference": "itp",
+    "year": 2019,
+    "paper_url": "https://doi.org/10.4230/LIPIcs.ITP.2019.17"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2019.18",
+    "title": "Formal Proof and Analysis of an Incremental Cycle Detection Algorithm",
+    "authors": [
+      "Armaël Guéneau",
+      "Jacques-Henri Jourdan",
+      "Arthur Charguéraud",
+      "François Pottier"
+    ],
+    "abstract": "We study a state-of-the-art incremental cycle detection algorithm due to Bender, Fineman, Gilbert, and Tarjan. We propose a simple change that allows the algorithm to be regarded as genuinely online. Then, we exploit Separation Logic with Time Credits to simultaneously verify the correctness and the worst-case amortized asymptotic complexity of the modified algorithm.",
+    "topic": "interactive deductive program verification; complexity analysis",
+    "conference": "itp",
+    "year": 2019,
+    "paper_url": "https://doi.org/10.4230/LIPIcs.ITP.2019.18"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2019.19",
+    "title": "A Formalization of Forcing and the Unprovability of the Continuum Hypothesis",
+    "authors": [
+      "Jesse Michael Han",
+      "Floris van Doorn"
+    ],
+    "abstract": "We describe a formalization of forcing using Boolean-valued models in the Lean 3 theorem prover, including the fundamental theorem of forcing and a deep embedding of first-order logic with a Boolean-valued soundness theorem. As an application of our framework, we specialize our construction to the Boolean algebra of regular opens of the Cantor space 2^{omega_2 x omega} and formally verify the failure of the continuum hypothesis in the resulting model.",
+    "topic": "Interactive theorem proving; formal verification; set theory; forcing; independence proofs; continuum hypothesis; Boolean-valued models; Lean",
+    "conference": "itp",
+    "year": 2019,
+    "paper_url": "https://doi.org/10.4230/LIPIcs.ITP.2019.19"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2019.20",
+    "title": "Refinement with Time - Refining the Run-Time of Algorithms in Isabelle/HOL",
+    "authors": [
+      "Maximilian P. L. Haslbeck",
+      "Peter Lammich"
+    ],
+    "abstract": "Separation Logic with Time Credits is a well established method to formally verify the correctness and run-time of algorithms, which has been applied to various medium-sized use-cases. Refinement is a technique in program verification that makes software projects of larger scale manageable.\nCombining these two techniques for the first time, we present a methodology for verifying the functional correctness and the run-time analysis of algorithms in a modular way. We use it to verify Kruskal’s minimum spanning tree algorithm and the Edmonds - Karp algorithm for network flow. \nAn adaptation of the Isabelle Refinement Framework [Lammich and Tuerk, 2012] enables us to specify the functional result and the run-time behaviour of abstract algorithms which can be refined to more concrete algorithms. From these, executable imperative code can be synthesized by an extension of the Sepref tool [Lammich, 2015], preserving correctness and the run-time bounds of the abstract algorithm.",
+    "topic": "Isabelle; Time Complexity Analysis; Separation Logic; Program Verification; Refinement; Run Time; Algorithms",
+    "conference": "itp",
+    "year": 2019,
+    "paper_url": "https://doi.org/10.4230/LIPIcs.ITP.2019.20"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2019.21",
+    "title": "Virtualization of HOL4 in Isabelle",
+    "authors": [
+      "Fabian Immler",
+      "Jonas Rädle",
+      "Makarius Wenzel"
+    ],
+    "abstract": "We present a novel approach to combine the HOL4 and Isabelle theorem provers: both are implemented in SML and based on distinctive variants of HOL. The design of HOL4 allows to replace its inference kernel modules, and the system infrastructure of Isabelle allows to embed other applications of SML. That is the starting point to provide a virtual instance of HOL4 in the same run-time environment as Isabelle. Moreover, with an implementation of a virtual HOL4 kernel that operates on Isabelle/HOL terms and theorems, we can load substantial HOL4 libraries to make them Isabelle theories, but still disconnected from existing Isabelle content. Finally, we introduce a methodology based on the transfer package of Isabelle to connect the imported HOL4 material to that of Isabelle/HOL.",
+    "topic": "Virtualization; HOL4; Isabelle; Isabelle/HOL; Isabelle/ML",
+    "conference": "itp",
+    "year": 2019,
+    "paper_url": "https://doi.org/10.4230/LIPIcs.ITP.2019.21"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2019.22",
+    "title": "Generating Verified LLVM from Isabelle/HOL",
+    "authors": [
+      "Peter Lammich"
+    ],
+    "abstract": "We present a framework to generate verified LLVM programs from Isabelle/HOL. It is based on a code generator that generates LLVM text from a simplified fragment of LLVM, shallowly embedded into Isabelle/HOL. On top, we have developed a separation logic, a verification condition generator, and an LLVM backend to the Isabelle Refinement Framework.\nAs case studies, we have produced verified LLVM implementations of binary search and the Knuth-Morris-Pratt string search algorithm. These are one order of magnitude faster than the Standard-ML implementations produced with the original Refinement Framework, and on par with unverified C implementations. Adoption of the original correctness proofs to the new LLVM backend was straightforward.\nThe trusted code base of our approach is the shallow embedding of the LLVM fragment and the code generator, which is a pretty printer combined with some straightforward compilation steps.",
+    "topic": "Isabelle/HOL; LLVM; Separation Logic; Verification Condition Generator; Code Generation",
+    "conference": "itp",
+    "year": 2019,
+    "paper_url": "https://doi.org/10.4230/LIPIcs.ITP.2019.22"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2019.23",
+    "title": "Proof Pearl: Purely Functional, Simple and Efficient Priority Search Trees and Applications to Prim and Dijkstra",
+    "authors": [
+      "Peter Lammich",
+      "Tobias Nipkow"
+    ],
+    "abstract": "The starting point of this paper is a new, purely functional, simple and efficient data structure combining a search tree and a priority queue, which we call a priority search tree. The salient feature of priority search trees is that they offer a decrease-key operation, something that is missing from other simple, purely functional priority queue implementations. As two applications of this data structure we verify purely functional, simple and efficient implementations of Prim’s and Dijkstra’s algorithms. This constitutes the first verification of an executable and even efficient version of Prim’s algorithm.",
+    "topic": "Priority queue; Dijkstra’s algorithm; Prim’s algorithm; verification; Isabelle",
+    "conference": "itp",
+    "year": 2019,
+    "paper_url": "https://doi.org/10.4230/LIPIcs.ITP.2019.23"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2019.24",
+    "title": "A Verified LL(1) Parser Generator",
+    "authors": [
+      "Sam Lasser",
+      "Chris Casinghino",
+      "Kathleen Fisher",
+      "Cody Roux"
+    ],
+    "abstract": "An LL(1) parser is a recursive descent algorithm that uses a single token of lookahead to build a grammatical derivation for an input sequence. We present an LL(1) parser generator that, when applied to grammar G, produces an LL(1) parser for G if such a parser exists. We use the Coq Proof Assistant to verify that the generator and the parsers that it produces are sound and complete, and that they terminate on all inputs without using fuel parameters. As a case study, we extract the tool’s source code and use it to generate a JSON parser. The generated parser runs in linear time; it is two to four times slower than an unverified parser for the same grammar.",
+    "topic": "interactive theorem proving; top-down parsing",
+    "conference": "itp",
+    "year": 2019,
+    "paper_url": "https://doi.org/10.4230/LIPIcs.ITP.2019.24"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2019.25",
+    "title": "Binary-Compatible Verification of Filesystems with ACL2",
+    "authors": [
+      "Mihir Parang Mehta",
+      "William R. Cook"
+    ],
+    "abstract": "Filesystems are an essential component of most computer systems. Work on the verification of filesystem functionality has been focused on constructing new filesystems in a manner which simplifies the process of verifying them against specifications. This leaves open the question of whether filesystems already in use are correct at the binary level.\nThis paper introduces LoFAT, a model of the FAT32 filesystem which efficiently implements a subset of the POSIX filesystem operations, and HiFAT, a more abstract model of FAT32 which is simpler to reason about. LoFAT is proved to be correct in terms of refinement of HiFAT, and made executable by enabling the state of the model to be written to and read from FAT32 disk images. EqFAT, an equivalence relation for disk images, considers whether two disk images contain the same directory tree modulo reordering of files and implementation-level details regarding cluster allocation. A suite of co-simulation tests uses EqFAT to compare the operation of existing FAT32 implementations to LoFAT and check the correctness of existing implementations of FAT32 such as the mtools suite of programs and the Linux FAT32 implementation. All models and proofs are formalized and mechanically verified in ACL2.",
+    "topic": "interactive theorem proving; filesystems",
+    "conference": "itp",
+    "year": 2019,
+    "paper_url": "https://doi.org/10.4230/LIPIcs.ITP.2019.25"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2019.26",
+    "title": "Ornaments for Proof Reuse in Coq",
+    "authors": [
+      "Talia Ringer",
+      "Nathaniel Yazdani",
+      "John Leo",
+      "Dan Grossman"
+    ],
+    "abstract": "Ornaments express relations between inductive types with the same inductive structure. We implement fully automatic proof reuse for a particular class of ornaments in a Coq plugin, and show how such a tool can give programmers the rewards of using indexed inductive types while automating away many of the costs. The plugin works directly on Coq code; it is the first ornamentation tool for a non-embedded dependently typed language. It is also the first tool to automatically identify ornaments: To lift a function or proof, the user must provide only the source type, the destination type, and the source function or proof. In taking advantage of the mathematical properties of ornaments, our approach produces faster functions and smaller terms than a more general approach to proof reuse in Coq.",
+    "topic": "ornaments; proof reuse; proof automation",
+    "conference": "itp",
+    "year": 2019,
+    "paper_url": "https://doi.org/10.4230/LIPIcs.ITP.2019.26"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2019.27",
+    "title": "Verifying That a Compiler Preserves Concurrent Value-Dependent Information-Flow Security",
+    "authors": [
+      "Robert Sison",
+      "Toby Murray"
+    ],
+    "abstract": "It is common to prove by reasoning over source code that programs do not leak sensitive data. But doing so leaves a gap between reasoning and reality that can only be filled by accounting for the behaviour of the compiler. This task is complicated when programs enforce value-dependent information-flow security properties (in which classification of locations can vary depending on values in other locations) and complicated further when programs exploit shared-variable concurrency.\nPrior work has formally defined a notion of concurrency-aware refinement for preserving value-dependent security properties. However, that notion is considerably more complex than standard refinement definitions typically applied in the verification of semantics preservation by compilers. To date it remains unclear whether it can be applied to a realistic compiler, because there exist no general decomposition principles for separating it into smaller, more familiar, proof obligations.\nIn this work, we provide such a decomposition principle, which we show can almost halve the complexity of proving secure refinement. Further, we demonstrate its applicability to secure compilation, by proving in Isabelle/HOL the preservation of value-dependent security by a proof-of-concept compiler from an imperative While language to a generic RISC-style assembly language, for programs with shared-memory concurrency mediated by locking primitives. Finally, we execute our compiler in Isabelle on a While language model of the Cross Domain Desktop Compositor, demonstrating to our knowledge the first use of a compiler verification result to carry an information-flow security property down to the assembly-level model of a non-trivial concurrent program.",
+    "topic": "Secure compilation; Information flow security; Concurrency; Verification",
+    "conference": "itp",
+    "year": 2019,
+    "paper_url": "https://doi.org/10.4230/LIPIcs.ITP.2019.27"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2019.28",
+    "title": "Quantitative Continuity and Computable Analysis in Coq",
+    "authors": [
+      "Florian Steinberg",
+      "Laurent Théry",
+      "Holger Thies"
+    ],
+    "abstract": "We give a number of formal proofs of theorems from the field of computable analysis. Many of our results specify executable algorithms that work on infinite inputs by means of operating on finite approximations and are proven correct in the sense of computable analysis. The development is done in the proof assistant Coq and heavily relies on the Incone library for information theoretic continuity. This library is developed by one of the authors and the results of this paper extend the library. While full executability in a formal development of mathematical statements about real numbers and the like is not a feature that is unique to the Incone library, its original contribution is to adhere to the conventions of computable analysis to provide a general purpose interface for algorithmic reasoning on continuous structures. The paper includes a brief description of the most important concepts of Incone and its sub libraries mf and Metric.\nThe results that provide complete computational content include that the algebraic operations and the efficient limit operator on the reals are computable, that the countably infinite product of a space with itself is isomorphic to a space of functions, compatibility of the enumeration representation of subsets of natural numbers with the abstract definition of the space of open subsets of the natural numbers, and that continuous realizability implies sequential continuity. We also describe many non-computational results that support the correctness of definitions from the library. These include that the information theoretic notion of continuity used in the library is equivalent to the metric notion of continuity on Baire space, a complete comparison of the different concepts of continuity that arise from metric and represented space structures and the discontinuity of the unrestricted limit operator on the real numbers and the task of selecting an element of a closed subset of the natural numbers.",
+    "topic": "computable analysis; Coq; contionuous functionals; discontinuity; closed choice on the naturals",
+    "conference": "itp",
+    "year": 2019,
+    "paper_url": "https://doi.org/10.4230/LIPIcs.ITP.2019.28"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2019.29",
+    "title": "Deriving Proved Equality Tests in Coq-Elpi: Stronger Induction Principles for Containers in Coq",
+    "authors": [
+      "Enrico Tassi"
+    ],
+    "abstract": "We describe a procedure to derive equality tests and their correctness proofs from inductive type declarations in Coq. Programs and proofs are derived compositionally, reusing code and proofs derived previously. \nThe key steps are two. First, we design appropriate induction principles for data types defined using parametric containers. Second, we develop a technique to work around the modularity limitations imposed by the purely syntactic termination check Coq performs on recursive proofs. The unary parametricity translation of inductive data types turns out to be the key to both steps.\nLast but not least, we provide an implementation of the procedure for the Coq proof assistant based on the Elpi [Dunchev et al., 2015] extension language.",
+    "topic": "Coq; Containers; Induction; Equality test; Parametricity translation",
+    "conference": "itp",
+    "year": 2019,
+    "paper_url": "https://doi.org/10.4230/LIPIcs.ITP.2019.29"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2019.30",
+    "title": "Complete Non-Orders and Fixed Points",
+    "authors": [
+      "Akihisa Yamada",
+      "Jérémy Dubut"
+    ],
+    "abstract": "In this paper, we develop an Isabelle/HOL library of order-theoretic concepts, such as various completeness conditions and fixed-point theorems. We keep our formalization as general as possible: we reprove several well-known results about complete orders, often without any property of ordering, thus complete non-orders. In particular, we generalize the Knaster - Tarski theorem so that we ensure the existence of a quasi-fixed point of monotone maps over complete non-orders, and show that the set of quasi-fixed points is complete under a mild condition - attractivity - which is implied by either antisymmetry or transitivity. This result generalizes and strengthens a result by Stauti and Maaden. Finally, we recover Kleene’s fixed-point theorem for omega-complete non-orders, again using attractivity to prove that Kleene’s fixed points are least quasi-fixed points.",
+    "topic": "Order Theory; Lattice Theory; Fixed-Points; Isabelle/HOL",
+    "conference": "itp",
+    "year": 2019,
+    "paper_url": "https://doi.org/10.4230/LIPIcs.ITP.2019.30"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2019.31",
+    "title": "Verified Decision Procedures for Modal Logics",
+    "authors": [
+      "Minchao Wu",
+      "Rajeev Goré"
+    ],
+    "abstract": "We describe a formalization of modal tableaux with histories for the modal logics K, KT and S4 in Lean. We describe how we formalized the static and transitional rules, the non-trivial termination and the correctness of loop-checks. The formalized tableaux are essentially executable decision procedures with soundness and completeness proved. Termination is also proved in order to define them as functions in Lean. All of these decision procedures return a concrete Kripke model in cases where the input set of formulas is satisfiable, and a proof constructed via the tableau rules witnessing unsatisfiability otherwise. We also describe an extensible formalization of backjumping and its verified implementation for the modal logic K. As far as we know, these are the first verified decision procedures for these modal logics.",
+    "topic": "Formal Methods; Interactive Theorem Proving; Modal Logic; Lean",
+    "conference": "itp",
+    "year": 2019,
+    "paper_url": "https://doi.org/10.4230/LIPIcs.ITP.2019.31"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2019.32",
+    "title": "Characteristic Formulae for Liveness Properties of Non-Terminating CakeML Programs",
+    "authors": [
+      "Johannes Åman Pohjola",
+      "Henrik Rostedt",
+      "Magnus O. Myreen"
+    ],
+    "abstract": "There are useful programs that do not terminate, and yet standard Hoare logics are not able to prove liveness properties about non-terminating programs. This paper shows how a Hoare-like programming logic framework (characteristic formulae) can be extended to enable reasoning about the I/O behaviour of programs that do not terminate. The approach is inspired by transfinite induction rather than coinduction, and does not require non-terminating loops to be productive. This work has been developed in the HOL4 theorem prover and has been integrated into the ecosystem of proof tools surrounding the CakeML programming language.",
+    "topic": "Program verification; non-termination; liveness; Hoare logic",
+    "conference": "itp",
+    "year": 2019,
+    "paper_url": "https://doi.org/10.4230/LIPIcs.ITP.2019.32"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2019.33",
+    "title": "The DPRM Theorem in Isabelle (Short Paper)",
+    "authors": [
+      "Jonas Bayer",
+      "Marco David",
+      "Abhik Pal",
+      "Benedikt Stock",
+      "Dierk Schleicher"
+    ],
+    "abstract": "Hilbert’s 10th problem asks for an algorithm to tell whether or not a given diophantine equation has a solution over the integers. The non-existence of such an algorithm was shown in 1970 by Yuri Matiyasevich. The key step is known as the DPRM theorem: every recursively enumerable set of natural numbers is Diophantine. We present the formalization of Matiyasevich’s proof of the DPRM theorem in Isabelle. To represent recursively enumerable sets in equations, we implement and arithmetize register machines. Using several number-theoretic lemmas, we prove that exponentiation has a diophantine representation. Further, we contribute a small library of number-theoretic implementations of binary digit-wise relations. Finally, we discuss and contribute an is_diophantine predicate. We expect the complete formalization of the DPRM theorem in the near future; at present it is complete except for a minor gap in the arithmetization proofs of register machines and extending the is_diophantine predicate by two binary digit-wise relations.",
+    "topic": "DPRM theorem; Hilbert’s tenth problem; Diophantine predicates; Register machines; Recursively enumerable sets; Isabelle; Formal verification",
+    "conference": "itp",
+    "year": 2019,
+    "paper_url": "https://doi.org/10.4230/LIPIcs.ITP.2019.33"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2019.34",
+    "title": "Hammering Mizar by Learning Clause Guidance (Short Paper)",
+    "authors": [
+      "Jan Jakubův",
+      "Josef Urban"
+    ],
+    "abstract": "We describe a very large improvement of existing hammer-style proof automation over large ITP libraries by combining learning and theorem proving. In particular, we have integrated state-of-the-art machine learners into the E automated theorem prover, and developed methods that allow learning and efficient internal guidance of E over the whole Mizar library. The resulting trained system improves the real-time performance of E on the Mizar library by 70% in a single-strategy setting.",
+    "topic": "Proof automation; ITP hammers; Automated theorem proving; Machine learning",
+    "conference": "itp",
+    "year": 2019,
+    "paper_url": "https://doi.org/10.4230/LIPIcs.ITP.2019.34"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2019.35",
+    "title": "Declarative Proof Translation (Short Paper)",
+    "authors": [
+      "Cezary Kaliszyk",
+      "Karol Pąk"
+    ],
+    "abstract": "Declarative proof styles of different proof assistants include a number of incompatible features. In this paper we discuss and classify the differences between them and propose efficient algorithms for declarative proof outline translation. We demonstrate the practicality of our algorithms by automatically translating the proof outlines in 200 articles from the Mizar Mathematical Library to the Isabelle/Isar proof style. This generates the corresponding theories with 15301 proof outlines accepted by the Isabelle proof checker. The goal of our translation is to produce a declarative proof in the target system that is both accepted and short and therefore readable. For this three kinds of adaptations are required. First, the proof structure often needs to be rebuilt to capture the extensions of the natural deduction rules supported by the systems. Second, the references to previous items and their labels need to be matched and aligned. Finally, adaptations in the annotations of individual proof step may be necessary.",
+    "topic": "Declarative Proof; Translation; Isabelle/Isar; Mizar",
+    "conference": "itp",
+    "year": 2019,
+    "paper_url": "https://doi.org/10.4230/LIPIcs.ITP.2019.35"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2019.36",
+    "title": "Formalization of the Domination Chain with Weighted Parameters (Short Paper)",
+    "authors": [
+      "Daniel E. Severín"
+    ],
+    "abstract": "The Cockayne-Hedetniemi Domination Chain is a chain of inequalities between classic parameters of graph theory: for a given graph G, ir(G) <= gamma(G) <= iota(G) <= alpha(G) <= Gamma(G) <= IR(G). These parameters return the maximum/minimum cardinality of a set satisfying some property. However, they can be generalized for graphs with weighted vertices where the objective is to maximize/minimize the sum of weights of a set satisfying the same property, and the domination chain still holds for them. In this work, the definition of these parameters as well as the chain is formalized in Coq/Ssreflect.",
+    "topic": "Domination Chain; Coq; Formalization of Mathematics",
+    "conference": "itp",
+    "year": 2019,
+    "paper_url": "https://doi.org/10.4230/LIPIcs.ITP.2019.36"
+  }
+]

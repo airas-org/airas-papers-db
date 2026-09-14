@@ -1,0 +1,384 @@
+[
+  {
+    "id": "10.1145/3573105.3579108",
+    "title": "Improved Assistance for Interactive Proof (Keynote)",
+    "authors": [
+      "Cezary Kaliszyk"
+    ],
+    "abstract": "Machine learning techniques have been included in various theorem proving tools for approximately two decades. Some of the learning tasks are well understood and tools actually help practitioners, while other tasks are still in their early developmental stages. In this talk I will try to classify the various learning tasks and discuss the learning techniques and tools that are aimed at enhancing the efficiency of interactive theorem provers. I will discuss the most successful techniques aimed at improving the power of automation, that use Monte-Carlo simulations guided by reinforcement learning from previous proof attempts. I will also consider the present and the future challenges including more efficient interaction with interactive theorem provers.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1145/3573105.3579108"
+  },
+  {
+    "id": "10.1145/3573105.3575689",
+    "title": "Formalising Sharkovsky’s Theorem (Proof Pearl)",
+    "authors": [
+      "Bhavik Mehta"
+    ],
+    "abstract": "Sharkovsky's theorem is a celebrated result by Ukrainian mathematician Oleksandr Sharkovsky in the theory of discrete dynamical systems, including the fact that if a continuous function of reals has a point of period 3, it must have points of any period. We formalise the proof in the Lean theorem prover, giving a characterisation of the possible sets of periods a continuous function on the real numbers may have. We further include the converse of the theorem, showing that the aforementioned sets are achievable under mild conditions.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1145/3573105.3575689"
+  },
+  {
+    "id": "10.1145/3573105.3575671",
+    "title": "Aesop: White-Box Best-First Proof Search for Lean",
+    "authors": [
+      "Jannis Limperg",
+      "Asta Halkjær From"
+    ],
+    "abstract": "We present Aesop, a proof search tactic for the Lean 4 interactive theorem prover. Aesop performs a tree-based search over a user-specified set of proof rules. It supports safe and unsafe rules and uses a best-first search strategy with customisable prioritisation. Aesop also allows users to register custom normalisation rules and integrates Lean's simplifier to support equational reasoning. Many details of Aesop's search procedure are designed to make it a white-box proof automation tactic, meaning that users should be able to easily predict how their rules will be applied, and thus how powerful and fast their Aesop invocations will be. Since we use a best-first search strategy, it is not obvious how to handle metavariables which appear in multiple goals. The most common strategy for dealing with metavariables relies on backtracking and is therefore not suitable for best-first search. We give an algorithm which addresses this issue. The algorithm works with any search strategy, is independent of the underlying logic and makes few assumptions about how rules interact with metavariables. We conjecture that with a fair search strategy, the algorithm is as complete as the given set of rules allows.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1145/3573105.3575671"
+  },
+  {
+    "id": "10.1145/3573105.3575672",
+    "title": "A First Complete Algorithm for Real Quantifier Elimination in Isabelle/HOL",
+    "authors": [
+      "Katherine Kosaian",
+      "Yong Kiam Tan",
+      "André Platzer"
+    ],
+    "abstract": "We formalize a multivariate quantifier elimination (QE) algorithm in the theorem prover Isabelle/HOL. Our algorithm is complete, in that it is able to reduce any quantified formula in the first-order logic of real arithmetic to a logically equivalent quantifier-free formula. The algorithm we formalize is a hybrid mixture of Tarski’s original QE algorithm and the Ben-Or, Kozen, and Reif algorithm, and it is the first complete multivariate QE algorithm formalized in Isabelle/HOL.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1145/3573105.3575672"
+  },
+  {
+    "id": "10.1145/3573105.3575683",
+    "title": "Practical and Sound Equality Tests, Automatically: Deriving eqType Instances for Jasmin’s Data Types with Coq-Elpi",
+    "authors": [
+      "Benjamin Grégoire",
+      "Jean-Christophe Léchenet",
+      "Enrico Tassi"
+    ],
+    "abstract": "In this paper we describe the design and implementation of feqb, a tool that synthesizes sound equality tests for inductive data types in the dependent type theory of the Coq system. Our procedure scales to large inductive data types, as in hundreds of constructors, since the terms and proofs it synthesizes are linear in the size of the inductive type. Moreover it supports some forms of dependently typed arguments and sigma types pairing data with proofs of decidable properties. Finally feqb handles deeply nested containers without requiring any human intervention.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1145/3573105.3575683"
+  },
+  {
+    "id": "10.1145/3573105.3575685",
+    "title": "Formalising Decentralised Exchanges in Coq",
+    "authors": [
+      "Eske Hoy Nielsen",
+      "Danil Annenkov",
+      "Bas Spitters"
+    ],
+    "abstract": "The number of attacks and accidents leading to significant losses of crypto-assets is growing. According to Chainalysis, in 2021, approx. $14 billion has been lost due to various incidents, and this number is dominated by Decentralized Finance (DeFi) applications. To address these issues, one can use a collection of tools ranging from auditing to formal methods. We use formal verification and provide the first formalisation of a DeFi contract in a foundational proof assistant capturing contract interactions. We focus on Dexter2, a decentralized, non-custodial exchange for the Tezos network similar to Uniswap on Ethereum. The Dexter implementation consists of several smart contracts. This poses unique challenges for formalisation due to the complex contract interactions. Our formalisation includes proofs of functional correctness with respect to an informal specification for the contracts involved in Dexter’s implementation. Moreover, our formalisation is the first to feature proofs of safety properties of the interacting smart contracts of a decentralized exchange. We have extracted our contract from Coq into CameLIGO code, so it can be deployed on the Tezos blockchain. Uniswap and Dexter are paradigmatic for a collection of similar contracts. Our methodology thus allows us to implement and verify DeFi applications featuring similar interaction patterns.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1145/3573105.3575685"
+  },
+  {
+    "id": "10.1145/3573105.3575682",
+    "title": "Formalized Class Group Computations and Integral Points on Mordell Elliptic Curves",
+    "authors": [
+      "Anne Baanen",
+      "Alex J. Best",
+      "Nirvana Coppola",
+      "Sander R. Dahmen"
+    ],
+    "abstract": "Diophantine equations are a popular and active area of research in number theory. In this paper we consider Mordell equations, which are of the form y2=x3+d, where d is a (given) nonzero integer number and all solutions in integers x and y have to be determined. One non-elementary approach for this problem is the resolution via descent and class groups. Along these lines we formalized in Lean 3 the resolution of Mordell equations for several instances of d<0. In order to achieve this, we needed to formalize several other theories from number theory that are interesting on their own as well, such as ideal norms, quadratic fields and rings, and explicit computations of the class number. Moreover, we introduced new computational tactics in order to carry out efficiently computations in quadratic rings and beyond.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1145/3573105.3575682"
+  },
+  {
+    "id": "10.1145/3573105.3575678",
+    "title": "A Formal Disproof of Hirsch Conjecture",
+    "authors": [
+      "Xavier Allamigeon",
+      "Quentin Canu",
+      "Pierre-Yves Strub"
+    ],
+    "abstract": "The purpose of this paper is the formal verification of a counterexample of Santos et al. to the so-called Hirsch Conjecture on the diameter of polytopes (bounded convex polyhedra). In contrast with the pen-and-paper proof, our approach is entirely computational: we have implemented in Coq and proved correct an algorithm that explicitly computes, within the proof assistant, vertex-edge graphs of polytopes as well as their diameter. The originality of this certificate-based algorithm is to achieve a tradeoff between simplicity and efficiency. Simplicity is crucial in obtaining the proof of correctness of the algorithm. This proof splits into the correctness of an abstract algorithm stated over proof-oriented data types and the correspondence with a low-level implementation over computation-oriented data types. A special effort has been made to reduce the algorithm to a small sequence of elementary operations (e.g. matrix multiplications, basic routines on graphs), in order to make the derivation of the correctness of the low-level implementation more transparent. Efficiency allows us to scale up to polytopes with a challenging combinatorics. For instance, we formally check the two counterexamples to Hirsch conjecture due to Matschke, Santos and Weibel, respectively 20- and 23-dimensional polytopes with 36425 and 73224 vertices involving rational coefficients with up to 20 digits. We also illustrate the performance of the method by computing the list of vertices or the diameter of well-known classes of polytopes, such as (polars of) cyclic polytopes involved in McMullen's Upper Bound Theorem.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1145/3573105.3575678"
+  },
+  {
+    "id": "10.1145/3573105.3579107",
+    "title": "CompCert: A Journey through the Landscape of Mechanized Semantics for Verified Compilation (Keynote)",
+    "authors": [
+      "Sandrine Blazy"
+    ],
+    "abstract": "A formally verified compiler ensures that compilation does not introduce any bugs in programs. In the CompCert C compiler, this correctness property requires reasoning about realistic languages by using a semantic framework. This invited talk explains how this framework has been effectively used to turn CompCert from a prototype in a lab into a real-world compiler.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1145/3573105.3579107"
+  },
+  {
+    "id": "10.1145/3573105.3575688",
+    "title": "Formalising the h-Principle and Sphere Eversion",
+    "authors": [
+      "Floris van Doorn",
+      "Patrick Massot",
+      "Oliver Nash"
+    ],
+    "abstract": "In differential topology and geometry, the h-principle is a property enjoyed by certain construction problems. Roughly speaking, it states that the only obstructions to the existence of a solution come from algebraic topology. We describe a formalisation in Lean of the local h-principle for first-order open and ample partial differential relations. This is a significant result in differential topology, originally proven by Gromov in 1973 as part of his sweeping effort which greatly generalised many previous flexibility results in geometry. In particular it reproves Smale’s celebrated sphere eversion theorem, a visually striking and counter-intuitive construction. Our formalisation uses Theillière’s implementation of convex integration from 2018. This paper reports on the first part of the sphere eversion project formalising the global version of the h-principle for open and ample first order differential relations, for maps between smooth manifolds. The local version for vector spaces described in this paper is the main ingredient of this proof, and is sufficient to prove the titular corollary of the project. From a broader perspective, the goal of this project is to show that one can formalise advanced mathematics with a strongly geometric flavour and not only algebraically-flavoured mathematics.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1145/3573105.3575688"
+  },
+  {
+    "id": "10.1145/3573105.3575674",
+    "title": "Compiling Higher-Order Specifications to SMT Solvers: How to Deal with Rejection Constructively",
+    "authors": [
+      "Matthew L. Daggitt",
+      "Robert Atkey",
+      "Wen Kokke",
+      "Ekaterina Komendantskaya",
+      "Luca Arnaboldi"
+    ],
+    "abstract": "Modern verification tools frequently rely on compiling high-level specifications to SMT queries. However, the high-level specification language is usually more expressive than the available solvers and therefore some syntactically valid specifications must be rejected by the tool. In such cases, the challenge is to provide a comprehensible error message to the user that relates the original syntactic form of the specification to the semantic reason it has been rejected. In this paper we demonstrate how this analysis may be performed by combining a standard unification-based type-checker with type classes and automatic generalisation. Concretely, type-checking is used as a constructive procedure for under-approximating whether a given specification lies in the subset of problems supported by the solver. Any resulting proof of rejection can be transformed into a detailed explanation to the user. The approach is compositional and does not require the user to add extra typing annotations to their program. We subsequently describe how the type system may be leveraged to provide a sound and complete compilation procedure from suitably typed expressions to SMT queries, which we have verified in Agda.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1145/3573105.3575674"
+  },
+  {
+    "id": "10.1145/3573105.3575681",
+    "title": "Mechanised Semantics for Gated Static Single Assignment",
+    "authors": [
+      "Yann Herklotz",
+      "Delphine Demange",
+      "Sandrine Blazy"
+    ],
+    "abstract": "The Gated Static Single Assignment (GSA) form was proposed by Ottenstein et al. in 1990, as an intermediate representation for implementing advanced static analyses and optimisation passes in compilers. Compared to SSA, GSA records additional data dependencies and provides more context, making optimisations more effective and allowing one to reason about programs as data-flow graphs. Many practical implementations have been proposed that follow, more or less faithfully, Ottenstein et al.'s seminal paper. But many discrepancies remain between these, depending on the kind of dependencies they are supposed to track and to leverage in analyses and code optimisations. In this paper, we present a formal semantics for GSA, mechanised in Coq. In particular, we clarify the nature and the purpose of gates in GSA, and define control-flow insensitive semantics for them. We provide a specification that can be used as a reference description for GSA. We also specify a translation from SSA to GSA and prove that this specification is semantics-preserving. We demonstrate that the approach is practical by implementing the specification as a validated translation within the CompCertSSA verified compiler.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1145/3573105.3575681"
+  },
+  {
+    "id": "10.1145/3573105.3575675",
+    "title": "A Formalization of Doob’s Martingale Convergence Theorems in mathlib",
+    "authors": [
+      "Kexing Ying",
+      "Rémy Degenne"
+    ],
+    "abstract": "We present the formalization of Doob’s martingale convergence theorems in the mathlib library for the Lean theorem prover. These theorems give conditions under which (sub)martingales converge, almost everywhere or in L1. In order to formalize those results, we build a definition of the conditional expectation in Banach spaces and develop the theory of stochastic processes, stopping times and martingales. As an application of the convergence theorems, we also present the formalization of Lévy’s generalized Borel-Cantelli lemma. This work on martingale theory is one of the first developments of probability theory in mathlib, and it builds upon diverse parts of that library such as topology, analysis and most importantly measure theory.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1145/3573105.3575675"
+  },
+  {
+    "id": "10.1145/3573105.3575668",
+    "title": "Formalizing and Computing Propositional Quantifiers",
+    "authors": [
+      "Hugo Férée",
+      "Sam van Gool"
+    ],
+    "abstract": "A surprising result of Pitts (1992) says that propositional quantifiers are definable internally in intuitionistic propositional logic (IPC). The main contribution of this paper is to provide a formalization of Pitts’ result in the Coq proof assistant, and thus a verified implementation of Pitts’ construction. We in addition provide an OCaml program, extracted from the Coq formalization, which computes propositional formulas that realize intuitionistic versions of ∃ p φ and ∀ p φ from p and φ.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1145/3573105.3575668"
+  },
+  {
+    "id": "10.1145/3573105.3575676",
+    "title": "Compositional Pre-processing for Automated Reasoning in Dependent Type Theory",
+    "authors": [
+      "Valentin Blot",
+      "Denis Cousineau",
+      "Enzo Crance",
+      "Louise Dubois de Prisque",
+      "Chantal Keller",
+      "Assia Mahboubi",
+      "Pierre Vial"
+    ],
+    "abstract": "In the context of interactive theorem provers based on a dependent type theory, automation tactics (dedicated decision procedures, call of automated solvers, ...) are often limited to goals which are exactly in some expected logical fragment. This very often prevents users from applying these tactics in other contexts, even similar ones. This paper discusses the design and the implementation of pre-processing operations for automating formal proofs in the Coq proof assistant. It presents the implementation of a wide variety of predictible, atomic goal transformations, which can be composed in various ways to target different backends. A gallery of examples illustrates how it helps to expand significantly the power of automation engines.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1145/3573105.3575676"
+  },
+  {
+    "id": "10.1145/3573105.3575687",
+    "title": "FastVer2: A Provably Correct Monitor for Concurrent, Key-Value Stores",
+    "authors": [
+      "Arvind Arasu",
+      "Tahina Ramananandro",
+      "Aseem Rastogi",
+      "Nikhil Swamy",
+      "Aymeric Fromherz",
+      "Kesha Hietala",
+      "Bryan Parno",
+      "Ravi Ramamurthy"
+    ],
+    "abstract": "FastVer is a protocol that uses a variety of memory-checking techniques to monitor the integrity of key-value stores with only a modest runtime cost. Arasu et al. formalize the high-level design of FastVer in the F* proof assistant and prove it correct. However, their formalization did not yield a provably correct implementation---FastVer is implemented in unverified C++ code. In this work, we present FastVer2, a low-level, concurrent implementation of FastVer in Steel, an F* DSL based on concurrent separation logic that produces C code, and prove it correct with respect to FastVer's high-level specification. Our proof is the first end-to-end system proven using Steel, and in doing so we contribute new ghost-state constructions for reasoning about monotonic state. Our proof also uncovered a few bugs in the implementation of FastVer. We evaluate FastVer2 by comparing it against FastVer. Although our verified monitor is slower in absolute terms than the unverified code, its performance also scales linearly with the number of cores, yielding a throughput of more that 10M op/sec. We identify several opportunities for performance improvement, and expect to address these in the future.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1145/3573105.3575687"
+  },
+  {
+    "id": "10.1145/3573105.3575667",
+    "title": "A Formalization of the Development Closedness Criterion for Left-Linear Term Rewrite Systems",
+    "authors": [
+      "Christina Kohl",
+      "Aart Middeldorp"
+    ],
+    "abstract": "Several critical pair criteria are known that guarantee confluence of left-linear term rewrite systems. The correctness of most of these have been formalized in a proof assistant. An important exception has been the development closedness criterion of van Oostrom. Its proof requires a high level of understanding about overlapping redexes and descendants as well as several intermediate results related to these concepts. We present a formalization in the proof assistant Isabelle/HOL. The result has been integrated into the certifier CeTA.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1145/3573105.3575667"
+  },
+  {
+    "id": "10.1145/3573105.3575669",
+    "title": "A Formalized Reduction of Keller’s Conjecture",
+    "authors": [
+      "Joshua Clune"
+    ],
+    "abstract": "Keller’s conjecture in d dimensions states that there are no faceshare-free tilings of d-dimensional space by translates of a d-dimensional cube. In 2020, Brakensiek et al. resolved this 90-year-old conjecture by proving that the largest number of dimensions for which no faceshare-free tilings exist is 7. This result, as well as many others pertaining to Keller’s conjecture, critically relies on a reduction from Keller’s original conjecture to a statement about cliques in generalized Keller graphs. In this paper, we present a formalization of this reduction in the Lean 3 theorem prover. Additionally, we combine this formalized reduction with the verification of a large clique in the Keller graph G8 to obtain the first verified end-to-end proof that Keller’s conjecture is false in 8 dimensions.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1145/3573105.3575669"
+  },
+  {
+    "id": "10.1145/3573105.3575684",
+    "title": "ASN1*: Provably Correct, Non-malleable Parsing for ASN.1 DER",
+    "authors": [
+      "Haobin Ni",
+      "Antoine Delignat-Lavaud",
+      "Cédric Fournet",
+      "Tahina Ramananandro",
+      "Nikhil Swamy"
+    ],
+    "abstract": "Abstract Syntax Notation One (ASN.1) is a language for structured data exchange between computers, standardized by both ITU-T and ISO/IEC since 1984. The Distinguished Encoding Rules (DER) specify its non-malleable binary format: for a given ASN.1 data type, every value has a distinct, unique binary representation. ASN.1 DER is used in many security-critical interfaces for telecommunications and networking, such as the X.509 public key infrastructure, where non-malleability is essential. However, due to the expressiveness and flexibility of the general-purpose ASN.1 language, correctly parsing ASN.1 DER data formats is still considered a serious security challenge in practice. We present ASN1*, the first formalization of ASN.1 DER with a mechanized proof of non-malleability. Our development provides a shallow embedding of ASN.1 in the F* proof assistant and formalizes its DER semantics within the EverParse parser generator framework. It guarantees that any ASN.1 data encoded using our DER semantics is non-malleable. It yields verified code that parses valid binary representations into values of the corresponding ASN.1 data type while rejecting invalid ones. We empirically confirm that our semantics models ASN.1 DER usage in practice by evaluating ASN1* parsers extracted to OCaml on both positive and negative test cases involving X.509 certificates and Certificate Revocation Lists (CRLs).",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1145/3573105.3575684"
+  },
+  {
+    "id": "10.1145/3573105.3575670",
+    "title": "P4Cub: A Little Language for Big Routers",
+    "authors": [
+      "Rudy Peterson",
+      "Eric Hayden Campbell",
+      "John Chen",
+      "Natalie Isak",
+      "Calvin Shyu",
+      "Ryan Doenges",
+      "Parisa Ataei",
+      "Nate Foster"
+    ],
+    "abstract": "P4Cub is a new intermediate representation (IR) for the P4 programming language. It has been designed with the goal of facilitating development of certified tools. To achieve this, P4Cub is organized around a small set of core constructs and avoids side effects in expressions, which avoids mutual recursion between the semantics of expressions and statements. Still, it retains the essential domain-specific features of P4 itself. P4Cub has a front-end based on Petr4, and has been fully mechanized in Coq including big-step and small-step semantics and a type system. As case studies, we have engineered several certified tools with P4Cub including proofs of type soundness, a verified compilation pass, and an automated verification tool.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1145/3573105.3575670"
+  },
+  {
+    "id": "10.1145/3573105.3575690",
+    "title": "A Computational Cantor-Bernstein and Myhill’s Isomorphism Theorem in Constructive Type Theory (Proof Pearl)",
+    "authors": [
+      "Yannick Forster",
+      "Felix Jahn",
+      "Gert Smolka"
+    ],
+    "abstract": "The Cantor-Bernstein theorem (CB) from set theory, stating that two sets which can be injectively embedded into each other are in bijection, is inherently classical in its full generality, i.e. implies the law of excluded middle, a result due to Pradic and Brown. Recently, Escardó has provided a proof of CB in univalent type theory, assuming the law of excluded middle. It is a natural question to ask which restrictions of CB can be proved without axiomatic assumptions. We give a partial answer to this question contributing an assumption-free proof of CB restricted to enumerable discrete types, i.e. types which can be computationally treated. In fact, we construct several bijections from injections: The first is by translating a proof of the Myhill isomorphism theorem from computability theory – stating that 1-equivalent predicates are recursively isomorphic – to constructive type theory, where the bijection is constructed in stages and an algorithm with an intricate termination argument is used to extend the bijection in every step. The second is also constructed in stages, but with a simpler extension algorithm sufficient for CB. The third is constructed directly in such a way that it only relies on the given enumerations of the types, not on the given injections. We aim at keeping the explanations simple, accessible, and concise in the style of a “proof pearl”. All proofs are machine-checked in Coq but should transport to other foundations – they do not rely on impredicativity, on choice principles, or on large eliminations.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1145/3573105.3575690"
+  },
+  {
+    "id": "10.1145/3573105.3575677",
+    "title": "Computing Cohomology Rings in Cubical Agda",
+    "authors": [
+      "Thomas Lamiaux",
+      "Axel Ljungström",
+      "Anders Mörtberg"
+    ],
+    "abstract": "In Homotopy Type Theory, cohomology theories are studied synthetically using higher inductive types and univalence. This paper extends previous developments by providing the first fully mechanized definition of cohomology rings. These rings may be defined as direct sums of cohomology groups together with a multiplication induced by the cup product, and can in many cases be characterized as quotients of multivariate polynomial rings. To this end, we introduce appropriate definitions of direct sums and graded rings, which we then use to define both cohomology rings and multivariate polynomial rings. Using this, we compute the cohomology rings of some classical spaces, such as the spheres and the Klein bottle. The formalization is constructive so that it can be used to do concrete computations, and it relies on the Cubical Agda system which natively supports higher inductive types and computational univalence.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1145/3573105.3575677"
+  },
+  {
+    "id": "10.1145/3573105.3575679",
+    "title": "Encoding Dependently-Typed Constructions into Simple Type Theory",
+    "authors": [
+      "Anthony Bordg",
+      "Adrián Doña Mateo"
+    ],
+    "abstract": "In this article, we show how one can formalise in type theory mathematical objects, for which dependent types are usually deemed unavoidable, using only simple types. We outline a method to encode most of the terms of Lean's dependent type theory into the simple type theory of Isabelle/HOL. Taking advantage of Isabelle's automation, we illustrate our method with the formalisation in Isabelle/HOL of a mathematical notion developed in the 1980s: strict omega-categories.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1145/3573105.3575679"
+  },
+  {
+    "id": "10.1145/3573105.3575673",
+    "title": "Verifying Term Graph Optimizations using Isabelle/HOL",
+    "authors": [
+      "Brae J. Webb",
+      "Ian J. Hayes",
+      "Mark Utting"
+    ],
+    "abstract": "Our objective is to formally verify the correctness of the hundreds of expression optimization rules used within the GraalVM compiler. When defining the semantics of a programming language, expressions naturally form abstract syntax trees, or, terms. However, in order to facilitate sharing of common subexpressions, modern compilers represent expressions as term graphs. Defining the semantics of term graphs is more complicated than defining the semantics of their equivalent term representations. More significantly, defining optimizations directly on term graphs and proving semantics preservation is considerably more complicated than on the equivalent term representations. On terms, optimizations can be expressed as conditional term rewriting rules, and proofs that the rewrites are semantics preserving are relatively straightforward. In this paper, we explore an approach to using term rewrites to verify term graph transformations of optimizations within the GraalVM compiler. This approach significantly reduces the overall verification effort and allows for simpler encoding of optimization rules.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1145/3573105.3575673"
+  },
+  {
+    "id": "10.1145/3573105.3575680",
+    "title": "A Formalisation of the Balog–Szemerédi–Gowers Theorem in Isabelle/HOL",
+    "authors": [
+      "Angeliki Koutsoukou-Argyraki",
+      "Mantas Bakšys",
+      "Chelsea Edmonds"
+    ],
+    "abstract": "We describe our formalisation in the interactive theorem prover Isabelle/HOL of the Balog–Szemerédi–Gowers Theorem, a profound result in additive combinatorics which played a central role in Gowers’s proof deriving the first effective bounds for Szemerédi’s Theorem. The proof is of great mathematical interest given that it involves an interplay between different mathematical areas, namely applications of graph theory and probability theory to additive combinatorics involving algebraic objects. This interplay is what made the process of the formalisation, for which we had to develop formalisations of new background material in the aforementioned areas, more rich and technically challenging. We demonstrate how locales, Isabelle’s module system, can be employed to handle such interplays in mathematical formalisations. To treat the graph-theoretic aspects of the proof, we make use of a new, more general undirected graph theory library developed by Edmonds, which is both flexible and extensible. In addition to the main theorem, which, following our source, is formulated for difference sets, we also give an alternative version for sumsets which required a formalisation of an auxiliary triangle inequality. We moreover formalise a few additional results in additive combinatorics that are not used in the proof of the main theorem. This is the first formalisation of the Balog–Szemerédi–Gowers Theorem in any proof assistant to our knowledge.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1145/3573105.3575680"
+  },
+  {
+    "id": "10.1145/3573105.3575691",
+    "title": "Semantics of Probabilistic Programs using s-Finite Kernels in Coq",
+    "authors": [
+      "Reynald Affeldt",
+      "Cyril Cohen",
+      "Ayumu Saito"
+    ],
+    "abstract": "Probabilistic programming languages are used to write probabilistic models to make probabilistic inferences. A number of rigorous semantics have recently been proposed that are now available to carry out formal verification of probabilistic programs. In this paper, we extend an existing formalization of measure and integration theory with s-finite kernels, a mathematical structure to interpret typing judgments in the semantics of a probabilistic programming language. The resulting library makes it possible to reason formally about transformations of probabilistic programs and their execution.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1145/3573105.3575691"
+  },
+  {
+    "id": "10.1145/3573105.3575686",
+    "title": "Terms for Efficient Proof Checking and Parsing",
+    "authors": [
+      "Michael Färber"
+    ],
+    "abstract": "Proofs automatically generated by interactive or automated theorem provers are often several orders of magnitude larger than proofs written by hand. This implies significant challenges for processing such proofs efficiently. It turns out that the data structures used to encode terms have a high impact on performance. This article proposes several term data structures; in particular, heterogeneous terms for proof checking that distinguish long- and short-lived terms, and abstract terms for proof parsing. Both term data structures are implemented in the proof checker Kontroli, enabling it to parse and check proofs both sequentially and concurrently without overhead. The evaluation on three datasets exported from interactive theorem provers shows that the new term data structures significantly improve proof checking performance.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1145/3573105.3575686"
+  }
+]

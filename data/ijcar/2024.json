@@ -1,0 +1,673 @@
+[
+  {
+    "id": "10.1007/978-3-031-63498-7_1",
+    "title": "Automated Reasoning for Mathematics",
+    "authors": [
+      "Jeremy Avigad"
+    ],
+    "abstract": "Throughout the history of automated reasoning, mathematics has been viewed as a prototypical domain of application. It is therefore surprising that the technology has had almost no impact on mathematics to date and plays almost no role in the subject today. This article presents an optimistic view that the situation is about to change. It describes some recent developments in the Lean programming language and proof assistant that support this optimism, and it reflects on the role that automated reasoning can and should play in mathematics in the years to come.",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-63498-7_1"
+  },
+  {
+    "id": "10.1007/978-3-031-63498-7_10",
+    "title": "Synthesis of Recursive Programs in Saturation",
+    "authors": [
+      "Petra Hozzová",
+      "Daneshvar Amrollahi",
+      "Márton Hajdu",
+      "Laura Kovács",
+      "Andrei Voronkov",
+      "Eva Maria Wagner"
+    ],
+    "abstract": "We turn saturation-based theorem proving into an automated framework for recursive program synthesis. We introduce magic axioms as valid induction axioms and use them together with answer literals in saturation. We introduce new inference rules for induction in saturation and use answer literals to synthesize recursive functions from these proof steps. Our proof-of-concept implementation in the Vampire theorem prover constructs recursive functions over algebraic data types, while proving inductive properties over these types.",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-63498-7_10"
+  },
+  {
+    "id": "10.1007/978-3-031-63498-7_11",
+    "title": "Synthesizing Strongly Equivalent Logic Programs: Beth Definability for Answer Set Programs via Craig Interpolation in First-Order Logic",
+    "authors": [
+      "Jan Heuer",
+      "Christoph Wernhard"
+    ],
+    "abstract": "We show a projective Beth definability theorem for logic programs under the stable model semantics: For given programs P and Q and vocabulary V (set of predicates) the existence of a program R in V such that $$P \\cup R$$ and $$P \\cup Q$$ are strongly equivalent can be expressed as a first-order entailment. Moreover, our result is effective: A program R can be constructed from a Craig interpolant for this entailment, using a known first-order encoding for testing strong equivalence, which we apply in reverse to extract programs from formulas. As a further perspective, this allows transforming logic programs via transforming their first-order encodings. In a prototypical implementation, the Craig interpolation is performed by first-order provers based on clausal tableaux or resolution calculi. Our work shows how definability and interpolation, which underlie modern logic-based approaches to advanced tasks in knowledge representation, transfer to answer set programming.",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-63498-7_11"
+  },
+  {
+    "id": "10.1007/978-3-031-63498-7_12",
+    "title": "Regularization in Spider-Style Strategy Discovery and Schedule Construction",
+    "authors": [
+      "Filip Bártek",
+      "Karel Chvalovský",
+      "Martin Suda"
+    ],
+    "abstract": "To achieve the best performance, automatic theorem provers often rely on schedules of diverse proving strategies to be tried out (either sequentially or in parallel) on a given problem. In this paper, we report on a large-scale experiment with discovering strategies for the Vampire prover, targeting the FOF fragment of the TPTP library and constructing a schedule for it, based on the ideas of Andrei Voronkov’s system Spider. We examine the process from various angles, discuss the difficulty (or ease) of obtaining a strong Vampire schedule for the CASC competition, and establish how well a schedule can be expected to generalize to unseen problems and what factors influence this property.",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-63498-7_12"
+  },
+  {
+    "id": "10.1007/978-3-031-63498-7_13",
+    "title": "Lemma Discovery and Strategies for Automated Induction",
+    "authors": [
+      "Sólrún Halla Einarsdóttir",
+      "Márton Hajdu",
+      "Moa Johansson",
+      "Nicholas Smallbone",
+      "Martin Suda"
+    ],
+    "abstract": "We investigate how the automated inductive proof capabilities of the first-order prover Vampire can be improved by adding lemmas conjectured by the QuickSpec theory exploration system and by training strategy schedules specialized for inductive proofs. We find that adding lemmas improves performance (measured in number of proofs found for benchmark problems) by $$40\\%$$ compared to Vampire’s plain structural induction as baseline. Strategy training alone increases the number of proofs found by $$130\\%$$ , and the two methods in combination provide an increase of $$183\\%$$ . By combining strategy training and lemma discovery we can prove more inductive benchmarks than previous state-of-the-art inductive proof systems (HipSpec and CVC4).",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-63498-7_13"
+  },
+  {
+    "id": "10.1007/978-3-031-63498-7_14",
+    "title": "Control-Flow Refinement for Complexity Analysis of Probabilistic Programs in KoAT (Short Paper)",
+    "authors": [
+      "Nils Lommen",
+      "Éléanore Meyer",
+      "Jürgen Giesl"
+    ],
+    "abstract": "Recently, we showed how to use control-flow refinement (CFR) to improve automatic complexity analysis of integer programs. While up to now CFR was limited to classical programs, in this paper we extend CFR to probabilistic programs and show its soundness for complexity analysis. To demonstrate its benefits, we implemented our new CFR technique in our complexity analysis tool .",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-63498-7_14"
+  },
+  {
+    "id": "10.1007/978-3-031-63498-7_15",
+    "title": "On the (In-)Completeness of Destructive Equality Resolution in the Superposition Calculus",
+    "authors": [
+      "Uwe Waldmann"
+    ],
+    "abstract": "Bachmair’s and Ganzinger’s abstract redundancy concept for the Superposition Calculus justifies almost all operations that are used in superposition provers to delete or simplify clauses, and thus to keep the clause set manageable. Typical examples are tautology deletion, subsumption deletion, and demodulation, and with a more refined definition of redundancy joinability and connectedness can be covered as well. The notable exception is Destructive Equality Resolution , that is, the replacement of a clause $$x \\not \\approx t \\vee C$$ with $$x \\notin \\textrm{vars}(t)$$ by $$C\\{x \\mapsto t\\}$$ . This operation is implemented in state-of-the-art provers, and it is clearly useful in practice, but little is known about how it affects refutational completeness. We demonstrate on the one hand that the naive addition of Destructive Equality Resolution to the standard abstract redundancy concept renders the calculus refutationally incomplete. On the other hand, we present several restricted variants of the Superposition Calculus that are refutationally complete even with Destructive Equality Resolution .",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-63498-7_15"
+  },
+  {
+    "id": "10.1007/978-3-031-63498-7_16",
+    "title": "Model Completeness for Rational Trees",
+    "authors": [
+      "Silvio Ghilardi",
+      "Lia M. Poidomani"
+    ],
+    "abstract": "We analyze the theory of rational trees with finitely many constructors, infinitely many atoms and an atomicity predicate. We design a new decision procedure, proving in addition that this theory is model-complete. We also show that the enrichment of the language with selectors and simultaneous parametric fixpoints enjoys quantifier elimination.",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-63498-7_16"
+  },
+  {
+    "id": "10.1007/978-3-031-63498-7_17",
+    "title": "Certifying Phase Abstraction",
+    "authors": [
+      "Nils Froleyks",
+      "Emily Yu",
+      "Armin Biere",
+      "Keijo Heljanko"
+    ],
+    "abstract": "Certification helps to increase trust in formal verification of safety-critical systems which require assurance on their correctness. In hardware model checking, a widely used formal verification technique, phase abstraction is considered one of the most commonly used preprocessing techniques. We present an approach to certify an extended form of phase abstraction using a generic certificate format. As in earlier works our approach involves constructing a witness circuit with an inductive invariant property that certifies the correctness of the entire model checking process, which is then validated by an independent certificate checker. We have implemented and evaluated the proposed approach including certification for various preprocessing configurations on hardware model checking competition benchmarks. As an improvement on previous work in this area, the proposed method is able to efficiently complete certification with an overhead of a fraction of model checking time.",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-63498-7_17"
+  },
+  {
+    "id": "10.1007/978-3-031-63498-7_18",
+    "title": "Verifying a Realistic Mutable Hash Table",
+    "authors": [
+      "Samuel Chassot",
+      "Viktor Kunčak"
+    ],
+    "abstract": "In this work, we verify, using the Stainless program verifier, the mutable from the Scala standard library, a hash table using open addressing within a single array. As an executable specification, we write an immutable map based on a list of tuples and verify it against the mathematical definition of a map. We then show that ’s operations correspond to operations of this association list. To express the resizing of the hash table array, we introduce a new reference-swapping construct in Stainless. This allows us to apply the decorator design pattern without introducing aliasing. Our verification effort led us to find and fix a bug in the original implementation that manifests for large hash tables. Our performance analysis shows the verified version to be within a 1.5 factor of the original data structure.",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-63498-7_18"
+  },
+  {
+    "id": "10.1007/978-3-031-63498-7_19",
+    "title": "Booleguru, the Propositional Polyglot (Short Paper)",
+    "authors": [
+      "Maximilian Heisinger",
+      "Simone Heisinger",
+      "Martina Seidl"
+    ],
+    "abstract": "Recent approaches on verification and reasoning solve SAT and QBF encodings using state-of-the-art SMT solvers, as it “makes implementation much easier”. The ease-of-use of these solvers make SAT and QBF solvers less visible to users of solvers—who are maybe from different research communities—potentially not exploiting the power of state-of-the-art tools. In this work, we motivate the need to build bridges over the widening solver-gap and introduce Booleguru , a tool to convert between formats for logic formulas. It makes SAT and QBF solvers more accessible by using techniques known from SMT solvers, such as advanced Python interfaces like Z3Py and easily generatable languages like SMT-LIB, integrating them to our conversion tool. We then introduce a language to manipulate and combine multiple formulas, optionally applying transformations for quickly prototyping encodings. Booleguru ’s advanced scripting capabilities form a programming environment specialized for Boolean logic, offering a more efficient way to develop novel problem encodings.",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-63498-7_19"
+  },
+  {
+    "id": "10.1007/978-3-031-63498-7_2",
+    "title": "Induction in Saturation",
+    "authors": [
+      "Laura Kovács",
+      "Petra Hozzová",
+      "Márton Hajdu",
+      "Andrei Voronkov"
+    ],
+    "abstract": "Proof by induction is commonplace in modern mathematics and computational logic. This paper overviews and discusses our recent results in turning saturation-based first-order theorem proving into a powerful framework for automating inductive reasoning. We formalize applications of induction as new inference rules of the saturation process, add instances of appropriate induction schemata to the search space, and use these rules and instances immediately upon their addition for the purpose of guiding induction. Our results show, for example, that many problems from formal verification and mathematical theories can now be solved completely automatically using a first-order theorem prover.",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-63498-7_2"
+  },
+  {
+    "id": "10.1007/978-3-031-63498-7_20",
+    "title": "Quantifier Shifting for Quantified Boolean Formulas Revisited",
+    "authors": [
+      "Simone Heisinger",
+      "Maximilian Heisinger",
+      "Adrian Rebola-Pardo",
+      "Martina Seidl"
+    ],
+    "abstract": "Modern solvers for quantified Boolean formulas (QBFs) process formulas in prenex form, which divides each QBF into two parts: the quantifier prefix and the propositional matrix. While this representation does not cover the full language of QBF, every non-prenex formula can be transformed to an equivalent formula in prenex form. This transformation offers several degrees of freedom and blurs structural information that might be useful for the solvers. In a case study conducted 20 years back, it has been shown that the applied transformation strategy heavily impacts solving time. We revisit this work and investigate how sensitive recent QBF solvers perform w.r.t. various prenexing strategies.",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-63498-7_20"
+  },
+  {
+    "id": "10.1007/978-3-031-63498-7_21",
+    "title": "Satisfiability Modulo Exponential Integer Arithmetic",
+    "authors": [
+      "Florian Frohn",
+      "Jürgen Giesl"
+    ],
+    "abstract": "SMT solvers use sophisticated techniques for polynomial (linear or non-linear) integer arithmetic. In contrast, non-polynomial integer arithmetic has mostly been neglected so far. However, in the context of program verification, polynomials are often insufficient to capture the behavior of the analyzed system without resorting to approximations. In the last years, incremental linearization has been applied successfully to satisfiability modulo real arithmetic with transcendental functions. We adapt this approach to an extension of polynomial integer arithmetic with exponential functions. Here, the key challenge is to compute suitable lemmas that eliminate the current model from the search space if it violates the semantics of exponentiation. An empirical evaluation of our implementation shows that our approach is highly effective in practice.",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-63498-7_21"
+  },
+  {
+    "id": "10.1007/978-3-031-63498-7_22",
+    "title": "SAT-Based Learning of Computation Tree Logic",
+    "authors": [
+      "Adrien Pommellet",
+      "Daniel Stan",
+      "Simon Scatton"
+    ],
+    "abstract": "The learning problem consists in finding for a given sample of positive and negative Kripke structures a distinguishing formula that is verified by the former but not by the latter. Further constraints may bound the size and shape of the desired formula or even ask for its minimality in terms of syntactic size. This synthesis problem is motivated by explanation generation for dissimilar models, e.g. comparing a faulty implementation with the original protocol. We devise a -based encoding for a fixed size formula, then provide an incremental approach that guarantees minimality. We further report on a prototype implementation whose contribution is twofold: first, it allows us to assess the efficiency of various output fragments and optimizations. Secondly, we can experimentally evaluate this tool by randomly mutating Kripke structures or syntactically introducing errors in higher-level models, then learning distinguishing formulas.",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-63498-7_22"
+  },
+  {
+    "id": "10.1007/978-3-031-63498-7_23",
+    "title": "MCSat-Based Finite Field Reasoning in the Yices2 SMT Solver (Short Paper)",
+    "authors": [
+      "Thomas Hader",
+      "Daniela Kaufmann",
+      "Ahmed Irfan",
+      "Stéphane Graham-Lengrand",
+      "Laura Kovács"
+    ],
+    "abstract": "This system description introduces an enhancement to the Yices2 SMT solver, enabling it to reason over non-linear polynomial systems over finite fields. Our reasoning approach fits into the model-constructing satisfiability (MCSat) framework and is based on zero decomposition techniques, which find finite basis explanations for theory conflicts over finite fields. As the MCSat solver within Yices2 can support (and combine) several theories via theory plugins, we implemented our reasoning approach as a new plugin for finite fields and extended Yices2 ’s frontend to parse finite field problems, making our implementation the first MCSat-based reasoning engine for finite fields. We present its evaluation on finite field benchmarks, comparing it against cvc5 . Additionally, our work leverages the modular architecture of the MCSat solver in Yices2 to provide a foundation for the rapid implementation of further reasoning techniques for this theory.",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-63498-7_23"
+  },
+  {
+    "id": "10.1007/978-3-031-63498-7_24",
+    "title": "Certified MaxSAT Preprocessing",
+    "authors": [
+      "Hannes Ihalainen",
+      "Andy Oertel",
+      "Yong Kiam Tan",
+      "Jeremias Berg",
+      "Matti Järvisalo",
+      "Magnus O. Myreen",
+      "Jakob Nordström"
+    ],
+    "abstract": "Building on the progress in Boolean satisfiability (SAT) solving over the last decades, maximum satisfiability (MaxSAT) has become a viable approach for solving -hard optimization problems. However, ensuring correctness of MaxSAT solvers has remained a considerable concern. For SAT, this is largely a solved problem thanks to the use of proof logging, meaning that solvers emit machine-verifiable proofs to certify correctness. However, for MaxSAT, proof logging solvers have started being developed only very recently. Moreover, these nascent efforts have only targeted the core solving process, ignoring the preprocessing phase where input problem instances can be substantially reformulated before being passed on to the solver proper.\nIn this work, we demonstrate how pseudo-Boolean proof logging can be used to certify the correctness of a wide range of modern MaxSAT preprocessing techniques. By combining and extending the VeriPB and CakePB tools, we provide formally verified end-to-end proof checking that the input and preprocessed output MaxSAT problem instances have the same optimal value. An extensive evaluation on applied MaxSAT benchmarks shows that our approach is feasible in practice.",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-63498-7_24"
+  },
+  {
+    "id": "10.1007/978-3-031-63498-7_25",
+    "title": "A Formal Model to Prove Instantiation Termination for E-matching-Based Axiomatisations",
+    "authors": [
+      "Rui Ge",
+      "Ronald Garcia",
+      "Alexander J. Summers"
+    ],
+    "abstract": "SMT-based program analysis and verification often involve reasoning about program features that have been specified using quantifiers; incorporating quantifiers into SMT-based reasoning is, however, known to be challenging. If quantifier instantiation is not carefully controlled, then runtime and outcomes can be brittle and hard to predict. In particular, uncontrolled quantifier instantiation can lead to unexpected incompleteness and even non-termination. E-matching is the most widely-used approach for controlling quantifier instantiation, but when axiomatisations are complex, even experts cannot tell whether or not their use of E-matching guarantees completeness or termination.\nThis paper presents a new formal model that facilitates the proof, once and for all, that giving a complex E-matching-based axiomatisation to an SMT solver such as Z3 or cvc5, cannot cause non-termination. Key to our technique is an operational semantics for solver behaviour that models how the E-matching rules common to most solvers are used to determine when quantifier instantiations are enabled, but abstracts over irrelevant details of individual solvers. We demonstrate the effectiveness of our technique by presenting a termination proof for a set theory axiomatisation adapted from those used in the Dafny and Viper verifiers.",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-63498-7_25"
+  },
+  {
+    "id": "10.1007/978-3-031-63498-7_26",
+    "title": "Fast and Verified UNSAT Certificate Checking",
+    "authors": [
+      "Peter Lammich"
+    ],
+    "abstract": "We describe a formally verified checker for unsatisfiability certificates in the LRAT format, which can be run in parallel with the SAT solver, processing the certificate while it is being produced. It is implemented time and memory efficiently, thus increasing the trust in the SAT solver at low additional cost.\nThe verification is done w.r.t. a grammar of the DIMACS format and a semantics of CNF formulas, down to the LLVM code of the checker. In this paper, we report on the checker and its design process using the Isabelle-LLVM stepwise refinement approach.",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-63498-7_26"
+  },
+  {
+    "id": "10.1007/978-3-031-63498-7_27",
+    "title": "Generalized Optimization Modulo Theories",
+    "authors": [
+      "Nestan Tsiskaridze",
+      "Clark Barrett",
+      "Cesare Tinelli"
+    ],
+    "abstract": "Optimization Modulo Theories (OMT) has emerged as an important extension of the highly successful Satisfiability Modulo Theories (SMT) paradigm. The OMT problem requires solving an SMT problem with the restriction that the solution must be optimal with respect to a given objective function. We introduce a generalization of the OMT problem where, in particular, objective functions can range over partially ordered sets. We provide a formalization of and an abstract calculus for the Generalized OMT problem and prove their key correctness properties. Generalized OMT extends previous work on OMT in several ways. First, in contrast to many current OMT solvers, our calculus is theory-agnostic, enabling the optimization of queries over any theories or combinations thereof. Second, our formalization unifies both single- and multi-objective optimization problems, allowing us to study them both in a single framework and facilitating the use of objective functions that are not supported by existing OMT approaches. Finally, our calculus is sufficiently general to fully capture a wide variety of current OMT approaches (each of which can be realized as a specific strategy for rule application in the calculus) and to support the exploration of new search strategies. Much like the original abstract DPLL(T) calculus for SMT, our Generalized OMT calculus is designed to establish a theoretical foundation for understanding and research and to serve as a framework for studying variations of and extensions to existing OMT methodologies.",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-63498-7_27"
+  },
+  {
+    "id": "10.1007/978-3-031-63498-7_3",
+    "title": "Stepping Stones in the TPTP World",
+    "authors": [
+      "Geoff Sutcliffe"
+    ],
+    "abstract": "The TPTP World is a well established infrastructure that supports research, development, and deployment of Automated Theorem Proving (ATP) systems. There are key components that help make the TPTP World a success: the TPTP problem library was first released in 1993, the CADE ATP System Competition (CASC) was conceived after CADE-12 in 1994, problem difficulty ratings were added in 1997, the current TPTP language was adopted in 2003, the SZS ontologies were specified in 2004, the TSTP solution library was built starting around 2005, the Specialist Problem Classes (SPCs) have been used to classify problems since 2010, the SystemOnTPTP service has been offered from 2011, the StarExec service was started in 2013, and a world of TPTP users have helped all along. This paper reviews these stepping stones in the development of the TPTP World.",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-63498-7_3"
+  },
+  {
+    "id": "10.1007/978-3-031-63498-7_4",
+    "title": "An Empirical Assessment of Progress in Automated Theorem Proving",
+    "authors": [
+      "Geoff Sutcliffe",
+      "Christian Suttner",
+      "Lars Kotthoff",
+      "C. Raymond Perrault",
+      "Zain Khalid"
+    ],
+    "abstract": "The TPTP World is a well established infrastructure that supports research, development, and deployment of Automated Theorem Proving (ATP) systems. This work uses data in the TPTP World to assess progress in ATP from 2015 to 2023.",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-63498-7_4"
+  },
+  {
+    "id": "10.1007/978-3-031-63498-7_5",
+    "title": "A Higher-Order Vampire (Short Paper)",
+    "authors": [
+      "Ahmed Bhayat",
+      "Martin Suda"
+    ],
+    "abstract": "The support for higher-order reasoning in the Vampire theorem prover has recently been completely reworked. This rework consists of new theoretical ideas, a new implementation, and a dedicated strategy schedule. The theoretical ideas are still under development, so we discuss them at a high level in this paper. We also describe the implementation of the calculus in the Vampire theorem prover, the strategy schedule construction and several empirical performance statistics.",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-63498-7_5"
+  },
+  {
+    "id": "10.1007/978-3-031-63498-7_6",
+    "title": "Tableaux for Automated Reasoning in Dependently-Typed Higher-Order Logic",
+    "authors": [
+      "Johannes Niederhauser",
+      "Chad E. Brown",
+      "Cezary Kaliszyk"
+    ],
+    "abstract": "Dependent type theory gives an expressive type system facilitating succinct formalizations of mathematical concepts. In practice, it is mainly used for interactive theorem proving with intensional type theories, with PVS being a notable exception. In this paper, we present native rules for automated reasoning in a dependently-typed version (DHOL) of classical higher-order logic (HOL). DHOL has an extensional type theory with an undecidable type checking problem which contains theorem proving. We implemented the inference rules as well as an automatic type checking mode in Lash, a fork of Satallax, the leading tableaux-based prover for HOL. Our method is sound and complete with respect to provability in DHOL. Completeness is guaranteed by the incorporation of a sound and complete translation from DHOL to HOL recently proposed by Rothgang et al. While this translation can already be used as a preprocessing step to any HOL prover, to achieve better performance, our system directly works in DHOL. Moreover, experimental results show that the DHOL version of Lash can outperform all major HOL provers executed on the translation.",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-63498-7_6"
+  },
+  {
+    "id": "10.1007/978-3-031-63498-7_7",
+    "title": "The Naproche-ZF Theorem Prover (Short Paper)",
+    "authors": [
+      "Adrian De Lon"
+    ],
+    "abstract": "Naproche-ZF is a new experimental open-source natural theorem prover based on set theory; formalizations in Naproche-ZF are written in a controlled natural language embedded into \"Image missing\" and proof gaps are filled in with automated theorem provers. Naproche-ZF aims to scale natural theorem proving beyond chapter-sized formalizations. In contrast to the $$\\mathbb {N}$$ aproche system, the new system uses an extensible grammar-based approach, has more efficient proof automation, and enables larger interconnected formalizations based on a standard library.",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-63498-7_7"
+  },
+  {
+    "id": "10.1007/978-3-031-63498-7_8",
+    "title": "Reducibility Constraints in Superposition",
+    "authors": [
+      "Márton Hajdu",
+      "Laura Kovács",
+      "Michael Rawson",
+      "Andrei Voronkov"
+    ],
+    "abstract": "Modern superposition inference systems aim at reducing the search space by introducing redundancy criteria on clauses and inferences. This paper focuses on reducing the number of superposition inferences with a single clause by blocking inferences into some terms, provided there were previously made inferences of a certain form performed with predecessors of this clause. Other calculi based on blocking inferences, for example basic superposition, rely on variable abstraction or equality constraints to express irreducibility of terms, resulting however in blocking inferences with all subterms of the respective terms. Here we introduce reducibility constraints in superposition to enable a more expressive blocking mechanism for inferences. We show that our calculus remains (refutationally) complete and present redundancy notions. Our implementation in the theorem prover Vampire demonstrates a considerable reduction in the size of the search space when using our new calculus.",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-63498-7_8"
+  },
+  {
+    "id": "10.1007/978-3-031-63498-7_9",
+    "title": "First-Order Automatic Literal Model Generation",
+    "authors": [
+      "Martin Bromberger",
+      "Florent Krasnopol",
+      "Sibylle Möhle",
+      "Christoph Weidenbach"
+    ],
+    "abstract": "Given a finite consistent set of ground literals, we present an algorithm that generates a complete first-order logic interpretation, i.e., an interpretation for all ground literals over the signature and not just those in the input set, that is also a model for the input set. The interpretation is represented by first-order linear literals. It can be effectively used to evaluate clauses. A particular application are SCL stuck states. The SCL (Simple Clause Learning) calculus always computes with respect to a finite number of ground literals. It then finds either a contradiction or a stuck state being a model with respect to the considered ground literals. Our algorithm builds a complete literal interpretation out of such a stuck state model that can then be used to evaluate the clause set. If all clauses are satisfied an overall model has been found. If it does not satisfy some clause, this information can be effectively explored to extend the scope of ground literals considered by SCL.",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-63498-7_9"
+  },
+  {
+    "id": "10.1007/978-3-031-63501-4_1",
+    "title": "Model Construction for Modal Clauses",
+    "authors": [
+      "Ullrich Hustadt",
+      "Fabio Papacchini",
+      "Cláudia Nalon",
+      "Clare Dixon"
+    ],
+    "abstract": "We present deterministic model construction algorithms for sets of modal clauses saturated with respect to three refinements of the modal-layered resolution calculus implemented in the prover \"Image missing\". The model construction algorithms are inspired by the Bachmair-Ganzinger method for constructing a model for a set of ground first-order clauses saturated with respect to ordered resolution with selection. The challenge is that the inference rules of the modal-layered resolution calculus for modal operators are more restrictive than an adaptation of ordered resolution with selection for these would be. While these model construction algorithms provide an alternative means to proving completeness of the calculus, our main interest is the provision of a ‘certificate’ for satisfiable modal formulae that can be independently checked to assure a user that the result of \"Image missing\" is correct. This complements the existing provision of proofs for unsatisfiable modal formulae.",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-63501-4_1"
+  },
+  {
+    "id": "10.1007/978-3-031-63501-4_10",
+    "title": "Sequents vs Hypersequents for Åqvist Systems",
+    "authors": [
+      "Agata Ciabattoni",
+      "Matteo Tesi"
+    ],
+    "abstract": "Enhancing cut-free expressiveness through minimal structural additions to sequent calculus is a natural step. We focus on Åqvist’s system $$\\textbf{F}$$ with cautious monotonicity ( CM ), a deontic logic extension of $$\\textbf{S5}$$ , for which we define a sequent calculus employing (semi) analytic cuts.The transition to hypersequents is key to develop modular and cut-free calculi for $$\\mathbf{F + (CM)}$$ and $$\\textbf{G}$$ , also supporting countermodel construction.",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-63501-4_10"
+  },
+  {
+    "id": "10.1007/978-3-031-63501-4_11",
+    "title": "Uniform Substitution for Differential Refinement Logic",
+    "authors": [
+      "Enguerrand Prebet",
+      "André Platzer"
+    ],
+    "abstract": "This paper introduces a uniform substitution calculus for differential refinement logic . The logic extends the differential dynamic logic such that one can simultaneously reason about properties of and relations between hybrid systems. Refinements are useful e.g. for simplifying proofs by relating a concrete hybrid system to an abstract one from which the property can be proved more easily. Uniform substitution is the key to parsimonious prover microkernels. It enables the verbatim use of single axiom formulas instead of axiom schemata with soundness-critical side conditions scattered across the proof calculus. The uniform substitution rule can then be used to instantiate all axioms soundly. Access to differential variables in enables more control over the notion of refinement, which is shown to be decidable on a fragment of hybrid programs.",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-63501-4_11"
+  },
+  {
+    "id": "10.1007/978-3-031-63501-4_12",
+    "title": "Sequent Systems on Undirected Graphs",
+    "authors": [
+      "Matteo Acclavio"
+    ],
+    "abstract": "In this paper we explore the design of sequent calculi operating on graphs. For this purpose, we introduce logical connectives allowing us to extend the well-known correspondence between classical propositional formulas and cographs. We define sequent systems operating on formulas containing such connectives, and we prove, using an analyticity argument based on cut-elimination, that our systems provide conservative extensions of multiplicative linear logic (without and with mix) and classical propositional logic. We conclude by showing that one of our systems captures graph isomorphism as logical equivalence and that it is sound and complete for the graphical logic $$\\textsf{GS}$$ .",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-63501-4_12"
+  },
+  {
+    "id": "10.1007/978-3-031-63501-4_13",
+    "title": "A Proof Theory of ($$\\omega $$-)Context-Free Languages, via Non-wellfounded Proofs",
+    "authors": [
+      "Anupam Das",
+      "Abhishek De"
+    ],
+    "abstract": "We investigate the proof theory of regular expressions with fixed points, construed as a notation for ( $$\\omega $$ -)context-free grammars. Starting with a hypersequential system for regular expressions due to Das and Pous [15], we define its extension by least fixed points and prove the soundness and completeness of its non-wellfounded proofs for the standard language model. From here we apply proof-theoretic techniques to recover an infinitary axiomatisation of the resulting equational theory, complete for inclusions of context-free languages. Finally, we extend our syntax by greatest fixed points, now computing $$\\omega $$ -context-free languages. We show the soundness and completeness of the corresponding system using a mixture of proof-theoretic and game-theoretic techniques.",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-63501-4_13"
+  },
+  {
+    "id": "10.1007/978-3-031-63501-4_14",
+    "title": "A Cyclic Proof System for Guarded Kleene Algebra with Tests",
+    "authors": [
+      "Jan Rooduijn",
+      "Dexter Kozen",
+      "Alexandra Silva"
+    ],
+    "abstract": "Guarded Kleene Algebra with Tests ( $$\\texttt{GKAT}$$ for short) is an efficient fragment of Kleene Algebra with Tests, suitable for reasoning about simple imperative while-programs. Following earlier work by Das and Pous on Kleene Algebra, we study $$\\texttt{GKAT}$$ from a proof-theoretical perspective. The deterministic nature of $$\\texttt{GKAT}$$ allows for a non-well-founded sequent system whose set of regular proofs is complete with respect to the guarded language model. This is unlike the situation with Kleene Algebra, where hypersequents are required. Moreover, the decision procedure induced by proof search runs in $$\\textsf{NLOGSPACE}$$ , whereas that of Kleene Algebra is in $$\\textsf{PSPACE}$$ .",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-63501-4_14"
+  },
+  {
+    "id": "10.1007/978-3-031-63501-4_15",
+    "title": "Unification in the Description Logic $$\\mathcal {ELH}_{\\mathcal {R}^+}$$ Without the Top Concept Modulo Cycle-Restricted Ontologies",
+    "authors": [
+      "Franz Baader",
+      "Oliver Fernández Gil"
+    ],
+    "abstract": "Unification has been introduced in Description Logic (DL) as a means to detect redundancies in ontologies. In particular, it was shown that testing unifiability in the DL $$\\mathcal{E}\\mathcal{L}$$ is an NP-complete problem, and this result has been extended in several directions. Surprisingly, it turned out that the complexity increases to PSpace if one disallows the use of the top concept in concept descriptions. Motivated by features of the medical ontology SNOMED CT, we extend this result to a setting where the top concept is disallowed, but there is a background ontology consisting of restricted forms of concept and role inclusion axioms. We are able to show that the presence of such axioms does not increase the complexity of unification without top, i.e., testing for unifiability remains a PSpace-complete problem.",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-63501-4_15"
+  },
+  {
+    "id": "10.1007/978-3-031-63501-4_16",
+    "title": "Confluence of Logically Constrained Rewrite Systems Revisited",
+    "authors": [
+      "Jonas Schöpf",
+      "Fabian Mitterwallner",
+      "Aart Middeldorp"
+    ],
+    "abstract": "We show that (local) confluence of terminating logically constrained rewrite systems is undecidable, even when the underlying theory is decidable. Several confluence criteria for logically constrained rewrite systems are known. These were obtained by replaying existing proofs for plain term rewrite systems in a constrained setting, involving a non-trivial effort. We present a simple transformation from logically constrained rewrite systems to term rewrite systems such that critical pairs of the latter correspond to constrained critical pairs of the former. The usefulness of the transformation is illustrated by lifting the advanced confluence results based on (almost) development closed critical pairs as well as on parallel critical pairs to the constrained setting.",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-63501-4_16"
+  },
+  {
+    "id": "10.1007/978-3-031-63501-4_17",
+    "title": "Equational Anti-unification over Absorption Theories",
+    "authors": [
+      "Mauricio Ayala-Rincón",
+      "David M. Cerna",
+      "Andrés Felipe González Barragán",
+      "Temur Kutsia"
+    ],
+    "abstract": "Interest in anti-unification, the dual problem of unification, is rising due to various new applications. For example, anti-unification-based techniques have been used recently in software analysis and related areas such as clone detection and automatic program repair. While syntactic forms of anti-unification have found many interesting uses, some aspects of modern applications are more appropriately modeled by reasoning modulo an equational theory. Thus, extending existing anti-unification methods to deal with important equational theories is the natural step forward. This paper considers anti-unification modulo pure absorption theories, i.e., where some function symbols are associated with a special constant satisfying the axiom $$f(x,\\varepsilon _{f}) \\,\\approx \\, f(\\varepsilon _{f},x) \\,\\approx \\, \\varepsilon _{f}$$ . We provide a sound and complete rule-based algorithm for such theories. Furthermore, we show that anti-unification modulo absorption is infinitary. Despite this, our algorithm terminates and produces a finitary algorithmic representation of the minimal complete set of solutions.",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-63501-4_17"
+  },
+  {
+    "id": "10.1007/978-3-031-63501-4_18",
+    "title": "The Benefits of Diligence",
+    "authors": [
+      "Victor Arrial",
+      "Giulio Guerrieri",
+      "Delia Kesner"
+    ],
+    "abstract": "This paper studies the strength of embedding Call-by-Name () and Call-by-Value () into a unifying framework called the Bang Calculus (). These embeddings enable establishing (static and dynamic) properties of and through their respective counterparts in $$\\texttt {dBANG} $$ . While some specific static properties have been already successfully studied in the literature, the dynamic ones are more challenging and have been left unexplored. We accomplish that by using a standard embedding for the (easy) case, while a novel one must be introduced for the (difficult) case. Moreover, a key point of our approach is the identification of diligent reduction sequences, which eases the preservation of dynamic properties from $$\\texttt {dBANG} $$ to $$\\texttt {dCBN}/\\texttt {dCBV} $$ . We illustrate our methodology through two concrete applications: confluence/factorization for both and are respectively derived from confluence/factorization for .",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-63501-4_18"
+  },
+  {
+    "id": "10.1007/978-3-031-63501-4_19",
+    "title": "A Dependency Pair Framework for Relative Termination of Term Rewriting",
+    "authors": [
+      "Jan-Christoph Kassing",
+      "Grigory Vartanyan",
+      "Jürgen Giesl"
+    ],
+    "abstract": "Dependency pairs are one of the most powerful techniques for proving termination of term rewrite systems (TRSs), and they are used in almost all tools for termination analysis of TRSs. Problem #106 of the RTA List of Open Problems asks for an adaption of dependency pairs for relative termination . Here, infinite rewrite sequences are allowed, but one wants to prove that a certain subset of the rewrite rules cannot be used infinitely often. Dependency pairs were recently adapted to annotated dependency pairs (ADPs) to prove almost-sure termination of probabilistic TRSs. In this paper, we develop a novel adaption of ADPs for relative termination. We implemented our new ADP framework in our tool and evaluate it in comparison to state-of-the-art tools for relative termination of TRSs.",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-63501-4_19"
+  },
+  {
+    "id": "10.1007/978-3-031-63501-4_2",
+    "title": "A Terminating Sequent Calculus for Intuitionistic Strong Löb Logic with the Subformula Property",
+    "authors": [
+      "Camillo Fiorentini",
+      "Mauro Ferrari"
+    ],
+    "abstract": "Intuitionistic Strong Löb logic $$\\textsf{iSL}$$ is an intuitionistic modal logic with a provability interpretation. We introduce $$\\textsf{GbuSL}_{\\Box } $$ , a terminating sequent calculus for $$\\textsf{iSL}$$ with the subformula property. $$\\textsf{GbuSL}_{\\Box } $$ modifies the sequent calculus $$\\textsf{G3iSL}_{\\Box } $$ for $$\\textsf{iSL}$$ based on $$\\textsf{G3i} $$ , by annotating the sequents to distinguish rule applications into an unblocked phase, where any rule can be backward applied, and a blocked phase where only right rules can be used. We prove that, if proof search for a sequent $$\\sigma $$ in $$\\textsf{GbuSL}_{\\Box } $$ fails, then a Kripke countermodel for $$\\sigma $$ can be constructed.",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-63501-4_2"
+  },
+  {
+    "id": "10.1007/978-3-031-63501-4_20",
+    "title": "Solving Quantitative Equations",
+    "authors": [
+      "Georg Ehling",
+      "Temur Kutsia"
+    ],
+    "abstract": "Quantitative equational reasoning provides a framework that extends equality to an abstract notion of proximity by endowing equations with an element of a quantale. In this paper, we discuss the unification problem for a special class of shallow subterm-collapse-free quantitative equational theories. We outline rule-based algorithms for solving such equational unification problems over generic as well as idempotent Lawvereian quantales and study their properties.",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-63501-4_20"
+  },
+  {
+    "id": "10.1007/978-3-031-63501-4_21",
+    "title": "Equivalence Checking of Quantum Circuits by Model Counting",
+    "authors": [
+      "Jingyi Mei",
+      "Tim Coopmans",
+      "Marcello Bonsangue",
+      "Alfons Laarman"
+    ],
+    "abstract": "Verifying equivalence between two quantum circuits is a hard problem, that is nonetheless crucial in compiling and optimizing quantum algorithms for real-world devices. This paper gives a Turing reduction of the (universal) quantum circuits equivalence problem to weighted model counting (WMC). Our starting point is a folklore theorem showing that equivalence checking of quantum circuits can be done in the so-called Pauli-basis. We combine this insight with a WMC encoding of quantum circuit simulation, which we extend with support for the Toffoli gate. Finally, we prove that the weights computed by the model counter indeed realize the reduction. With an open-source implementation, we demonstrate that this novel approach can outperform a state-of-the-art equivalence-checking tool based on ZX calculus and decision diagrams.",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-63501-4_21"
+  },
+  {
+    "id": "10.1007/978-3-031-63501-4_3",
+    "title": "Mechanised Uniform Interpolation for Modal Logics K, GL, and iSL",
+    "authors": [
+      "Hugo Férée",
+      "Iris van der Giessen",
+      "Sam van Gool",
+      "Ian Shillito"
+    ],
+    "abstract": "The uniform interpolation property in a given logic can be understood as the definability of propositional quantifiers. We mechanise the computation of these quantifiers and prove correctness in the Coq proof assistant for three modal logics, namely: (1) the modal logic K, for which a pen-and-paper proof exists; (2) Gödel-Löb logic GL, for which our formalisation clarifies an important point in an existing, but incomplete, sequent-style proof; and (3) intuitionistic strong Löb logic iSL, for which this is the first proof-theoretic construction of uniform interpolants. Our work also yields verified programs that allow one to compute the propositional quantifiers on any formula in this logic.",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-63501-4_3"
+  },
+  {
+    "id": "10.1007/978-3-031-63501-4_4",
+    "title": "Skolemisation for Intuitionistic Linear Logic",
+    "authors": [
+      "Alessandro Bruni",
+      "Eike Ritter",
+      "Carsten Schürmann"
+    ],
+    "abstract": "Focusing is a known technique for reducing the number of proofs while preserving derivability. Skolemisation is another technique designed to improve proof search, which reduces the number of back-tracking steps by representing dependencies on the term level and instantiate witness terms during unification at the axioms or fail with an occurs-check otherwise. Skolemisation for classical logic is well understood, but a practical skolemisation procedure for focused intuitionistic linear logic has been elusive so far. In this paper we present a focused variant of first-order intuitionistic linear logic together with a sound and complete skolemisation procedure.",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-63501-4_4"
+  },
+  {
+    "id": "10.1007/978-3-031-63501-4_5",
+    "title": "Local Intuitionistic Modal Logics and Their Calculi",
+    "authors": [
+      "Philippe Balbiani",
+      "Han Gao",
+      "Çiğdem Gencer",
+      "Nicola Olivetti"
+    ],
+    "abstract": "We investigate intuitionistic modal logics with locally interpreted $$\\square $$ and $$\\lozenge $$ . The basic logic LIK is stronger than constructive modal logic WK and incomparable with intuitionistic modal logic IK . We propose an axiomatization of LIK and some of its extensions. Additionally, we present bi-nested calculi for LIK and these extensions, providing both a decision procedure and a procedure of finite countermodel extraction.",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-63501-4_5"
+  },
+  {
+    "id": "10.1007/978-3-031-63501-4_6",
+    "title": "Non-iterative Modal Resolution Calculi",
+    "authors": [
+      "Dirk Pattinson",
+      "Cláudia Nalon"
+    ],
+    "abstract": "Non-monotonic modal logics are typically interpreted over neighbourhood frames. For unary operators, this is just a set of worlds, together with an endofunction on predicates (subsets of worlds). It is known that all systems of not necessarily monotonic modal logics that are axiomatised by formulae of modal rank at most one (non-iterative modal logics) are Kripke-complete over neighbourhood semantics. In this paper, we give a uniform construction to obtain complete resolution calculi for all non-iterative logics. We show completeness for generative calculi (where new clauses with new literals are added to the clause set) by means of a canonical model construction. We then define absorptive calculi (where new clauses are generated by generalised resolution rules) and establish completeness by translating between generative and absorptive calculi. Instances of our construction re-prove completeness for already known calculi, but also give rise to a number of previously unknown complete calculi.",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-63501-4_6"
+  },
+  {
+    "id": "10.1007/978-3-031-63501-4_7",
+    "title": "A Logic for Repair and State Recovery in Byzantine Fault-Tolerant Multi-agent Systems",
+    "authors": [
+      "Hans van Ditmarsch",
+      "Krisztina Fruzsa",
+      "Roman Kuznets",
+      "Ulrich Schmid"
+    ],
+    "abstract": "We provide novel epistemic logical language and semantics for modeling and analysis of byzantine fault-tolerant multi-agent systems, with the intent of not only facilitating reasoning about the agents’ fault status but also supporting model updates for repair and state recovery. Besides the standard knowledge modalities, our logic provides additional agent-specific hope modalities capable of expressing that an agent is not faulty, and also dynamic modalities enabling change to the agents’ correctness status. These dynamic modalities are interpreted as model updates that come in three flavors: fully public, more private, and/or involving factual change. Tailored examples demonstrate the utility and flexibility of our logic for modeling a wide range of fault-detection, isolation, and recovery (FDIR) approaches in mission-critical distributed systems. By providing complete axiomatizations for all variants of our logic, we also create a foundation for building future verification tools for this important class of fault-tolerant applications.",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-63501-4_7"
+  },
+  {
+    "id": "10.1007/978-3-031-63501-4_8",
+    "title": "A Decision Method for First-Order Stream Logic",
+    "authors": [
+      "Harald Ruess"
+    ],
+    "abstract": "Our main result is a doubly exponential decision procedure for the first-order equality theory of streams with addition, convolution, and control-oriented stream operations. This stream logic is shown to be expressive for solving basic problems in stream calculus.",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-63501-4_8"
+  },
+  {
+    "id": "10.1007/978-3-031-63501-4_9",
+    "title": "What Is Decidable in Separation Logic Beyond Progress, Connectivity and Establishment?",
+    "authors": [
+      "Tanguy Bozec",
+      "Nicolas Peltier",
+      "Quentin Petitjean",
+      "Mihaela Sighireanu"
+    ],
+    "abstract": "The predicate definitions in Separation Logic (SL) play an important role: they capture a large spectrum of unbounded heap shapes due to their inductiveness. This expressiveness power comes with a limitation: the entailment problem is undecidable if predicates have general inductive definitions (ID). Iosif et al. [8] proposed syntactic and semantic conditions, called PCE, on the ID of predicates to ensure the decidability of the entailment problem. We provide a (possibly nonterminating) algorithm to transform arbitrary ID into equivalent PCE definitions when possible. We show that the existence of an equivalent PCE definition for a given ID is undecidable, but we identify necessary conditions that are decidable. The algorithm has been implemented, and experimental results are reported on a benchmark, including significant examples from .",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-63501-4_9"
+  }
+]

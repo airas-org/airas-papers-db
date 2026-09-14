@@ -1,0 +1,527 @@
+[
+  {
+    "id": "10.1007/978-3-031-99984-0_21",
+    "title": "A Fresh Inductive Approach to Useful Call-by-Value",
+    "authors": [
+      "Pablo Barenbaum",
+      "Delia Kesner",
+      "Mariana Milicich"
+    ],
+    "abstract": "Useful evaluation is an optimised evaluation mechanism for functional programming languages, introduced by Accattoli and Dal Lago. The key to useful evaluation is to represent programs with sharing and to implement substitution of terms only when this contributes to the progress of the computation. Initially defined in the framework of call-by-name, useful evaluation has since been extended to call-by-value. The definitions of usefulness in the literature are complex and lack inductive structure, which makes it challenging to (formally) reason about them.\nIn this work, we define useful call-by-value evaluation inductively, proceeding in two stages. First, we refine the well-known Value Substitution Calculus , so the substitution operation becomes linear , yielding the $$\\textsc {lcbv} $$ calculus. The two calculi are observationally equivalent. We then further refine $$\\textsc {lcbv} $$ by restricting linear substitution only when it contributes to the progress of the computation, yielding the $$\\textsc {ucbv} $$ strategy. This new substitution notion is sensitive to the surrounding evaluation context, so it is non-trivial to capture it inductively. Moreover, we formally show that the resulting $$\\textsc {ucbv} $$ is a sound and complete implementation of $$\\textsc {lcbv} $$ , optimised to implement useful evaluation.\nAs a further contribution, we show that the $$\\textsc {ucbv} $$ strategy can be implemented by an existing lower-level abstract machine called GLAMoUr with polynomial overhead in time. This entails, as a corollary, that $$\\textsc {ucbv} $$ is time-invariant , i.e. , that the number of reduction steps to normal form in $$\\textsc {ucbv} $$ can be used as a measure of time complexity.\nOur $$\\textsc {ucbv} $$ strategy is part of the preliminary work required to develop semantic interpretations of useful evaluation, for which its inductive formulation is more suitable than the (non-inductive) existing ones.",
+    "topic": "",
+    "conference": "cade",
+    "year": 2025,
+    "paper_url": "https://doi.org/10.1007/978-3-031-99984-0_21"
+  },
+  {
+    "id": "10.1007/978-3-031-99984-0_13",
+    "title": "Sort-Based Confluence Criteria for Non-Left-Linear Higher-Order Rewriting",
+    "authors": [
+      "Thiago Felicissimo",
+      "Jean-Pierre Jouannaud"
+    ],
+    "abstract": "Powerful confluence criteria for higher-order rewriting exist for left-linear systems, even in the presence of critical pairs and non-termination. On the other hand, confluence criteria that allow for mixing non-termination and non-left-linearity are either extremely limited or hardly usable in practice. In this paper, we study confluence criteria which explore sort information to make proving higher-order confluence possible, even in the presence of non-termination and non-left-linearity. We give many interesting examples of systems covered by our results, including a (confluent) variant of Klop’s counterexample, and a calculus issuing from a dependent type theory with cumulative universes.",
+    "topic": "",
+    "conference": "cade",
+    "year": 2025,
+    "paper_url": "https://doi.org/10.1007/978-3-031-99984-0_13"
+  },
+  {
+    "id": "10.1007/978-3-031-99984-0_20",
+    "title": "From Modal Sequent Calculi to Modal Resolution",
+    "authors": [
+      "Dirk Pattinson",
+      "Cláudia Nalon",
+      "Sourabh Peruri"
+    ],
+    "abstract": "We establish a systematic correspondence between sequent and resolution calculi for a broad class of modal logics. Our main result is that soundness and completeness transfer from sequent to resolution calculi as long as cut and weakening are admissible. We first construct generative calculi that essentially import modal rules to a resolution setting, and then show how soundness and completeness transfer to absorptive calculi, where modal rules are translated into generalised resolution rules. We discuss resolution calculi that establish validity, and then introduce local clauses to generate calculi for inconsistency. Finally, for modal rules of a certain shape, we show how to construct layered resolution calculi, a technique that has so far only been established for the modal logic K. Our work directly yields new sound and complete resolution calculi, and layered resolution calculi, for a large number of modal logics.",
+    "topic": "",
+    "conference": "cade",
+    "year": 2025,
+    "paper_url": "https://doi.org/10.1007/978-3-031-99984-0_20"
+  },
+  {
+    "id": "10.1007/978-3-031-99984-0_23",
+    "title": "Learning Conjecturing from Scratch",
+    "authors": [
+      "Thibault Gauthier",
+      "Josef Urban"
+    ],
+    "abstract": "We develop a self-learning approach for conjecturing of induction predicates on a dataset of 14,005 problems derived from the OEIS. These problems are hard for today’s SMT and ATP systems because they require a combination of inductive and arithmetical reasoning.\nStarting from scratch, our approach consists of a feedback loop that iterates between (i) training a neural translator to learn the correspondence between the problems solved so far and the induction predicates useful for them, (ii) using the trained neural system to generate many new induction predicates for the problems, (iii) fast runs of the Z3 prover attempting to prove the problems using the generated predicates, (iv) using heuristics such as predicate size and solution speed on the proved problems to choose the best predicates for the next iteration of training. The algorithm discovers on its own many interesting induction predicates, ultimately solving 3,590 problems, compared to 835 problems solved by CVC5, Vampire or Z3 in 60 s.",
+    "topic": "",
+    "conference": "cade",
+    "year": 2025,
+    "paper_url": "https://doi.org/10.1007/978-3-031-99984-0_23"
+  },
+  {
+    "id": "10.1007/978-3-031-99984-0_5",
+    "title": "Cazamariposas: Automated Instability Debugging in SMT-Based Program Verification",
+    "authors": [
+      "Yi Zhou",
+      "Amar Shah",
+      "Zhengyao Lin",
+      "Marijn J. H. Heule",
+      "Bryan Parno"
+    ],
+    "abstract": "Program verification languages such as Dafny and F $$ ^\\star $$ often rely heavily on Satisfiability Modulo Theories (SMT) solvers for proof automation. However, SMT-based verification suffers from instability, where semantically irrelevant changes in the source program can cause spurious proof failures. While existing mitigation techniques emphasize preemptive measures, we propose a complementary approach that focuses on diagnosing and repairing specific instances of instability-induced failures. Our key technique is a novel differential analysis to pinpoint problematic quantified formulas in an unstable query. We implement this technique in Cazamariposas, a tool that automatically identifies such quantified formulas and suggests fixes. We evaluate Cazamariposas on multiple large-scale systems verification projects written in three different program verification languages. Our results demonstrate Cazamariposas ’ effectiveness as an instability debugger. In the majority of cases, Cazamariposas successfully isolates the issue to a single problematic quantifier, while providing a stabilizing fix.",
+    "topic": "",
+    "conference": "cade",
+    "year": 2025,
+    "paper_url": "https://doi.org/10.1007/978-3-031-99984-0_5"
+  },
+  {
+    "id": "10.1007/978-3-031-99984-0_12",
+    "title": "The Computability Path Order for Beta-Eta-Normal Higher-Order Rewriting",
+    "authors": [
+      "Johannes Niederhauser",
+      "Aart Middeldorp"
+    ],
+    "abstract": "We lift the computability path order and its extensions from plain higher-order rewriting to higher-order rewriting on $$\\beta \\eta $$ -normal forms where matching modulo $$\\beta \\eta $$ is employed. The resulting order NCPO is shown to be useful on practical examples. In particular, it can handle systems where its cousin NHORPO fails even when it is used together with the powerful transformation technique of neutralization. We also argue that automating NCPO efficiently is straightforward using SAT/SMT solvers whereas this cannot be said about the transformation technique of neutralization. Our prototype implementation supports automatic termination proof search for NCPO and is also the first one to automate NHORPO with neutralization.",
+    "topic": "",
+    "conference": "cade",
+    "year": 2025,
+    "paper_url": "https://doi.org/10.1007/978-3-031-99984-0_12"
+  },
+  {
+    "id": "10.1007/978-3-031-99984-0_14",
+    "title": "Verified Path Indexing",
+    "authors": [
+      "Mohamed Chaabani",
+      "Simon Robillard"
+    ],
+    "abstract": "The indexing of syntactic terms is a key component for the efficient implementation of automated theorem provers. This paper presents the first verified implementation of a term indexing data structure, namely a formalization of path indexing in the proof assistant Isabelle/HOL. We define the data structure, maintenance operations, and retrieval operations, including retrieval of unifiable terms, instances, generalizations and variants. We prove that maintenance operations preserve the invariants of the structure, and that retrieval operations are sound and complete.",
+    "topic": "",
+    "conference": "cade",
+    "year": 2025,
+    "paper_url": "https://doi.org/10.1007/978-3-031-99984-0_14"
+  },
+  {
+    "id": "10.1007/978-3-031-99984-0_17",
+    "title": "A Stepwise Refinement Proof that SCL(FOL) Simulates Ground Ordered Resolution",
+    "authors": [
+      "Martin Bromberger",
+      "Martin Desharnais",
+      "Christoph Weidenbach"
+    ],
+    "abstract": "Recently, it has been demonstrated that SCL(FOL) can simulate ground ordered resolution [6]. We revisit this result and provide a new formal proof in Isabelle/HOL. The existing pen-and-paper proof is monolithic and challenging to comprehend. In order to improve clarity, we develop an alternative proof structured as eleven (bi)simulation steps between the two calculi, transitioning from ordered resolution to SCL(FOL). A key simulation lemma ensures that, under certain conditions, one simulation direction can be automatically lifted to the other. Consequently, for each of the eleven steps, it suffices to establish only one direction of simulation. The complete proof is included in the \"Image missing\" .",
+    "topic": "",
+    "conference": "cade",
+    "year": 2025,
+    "paper_url": "https://doi.org/10.1007/978-3-031-99984-0_17"
+  },
+  {
+    "id": "10.1007/978-3-031-99984-0_7",
+    "title": "More is Less: Adding Polynomials for Faster Explanations in NLSAT",
+    "authors": [
+      "Valentin Promies",
+      "Jasper Nalbach",
+      "Erika Ábrahám",
+      "Paul Wagner"
+    ],
+    "abstract": "To check the satisfiability of (non-linear) real arithmetic formulas, modern satisfiability modulo theories (SMT) solving algorithms like NLSAT depend heavily on single cell construction , the task of generalizing a sample point to a connected subset (cell) of $$\\mathbb {R}^n$$ , that contains the sample and over which a given set of polynomials is sign-invariant.\nIn this paper, we propose to speed up the computation and simplify the representation of the resulting cell by dynamically extending the considered set of polynomials with further linear polynomials. While this increases the total number of (smaller) cells generated throughout the algorithm, our experiments show that it can pay off when using suitable heuristics due to the interaction with Boolean reasoning.",
+    "topic": "",
+    "conference": "cade",
+    "year": 2025,
+    "paper_url": "https://doi.org/10.1007/978-3-031-99984-0_7"
+  },
+  {
+    "id": "10.1007/978-3-031-99984-0_18",
+    "title": "Interoperability of Proof Systems with SC-TPTP",
+    "authors": [
+      "Simon Guilloud",
+      "Julie Cailler",
+      "Sankalp Gambhir",
+      "Auguste Poiroux",
+      "Yann Herklotz",
+      "Thomas Bourgeat",
+      "Viktor Kunčak"
+    ],
+    "abstract": "We introduce SC-TPTP, an extension of the TPTP derivation format that supports sequent formalism, enabling seamless proof exchange between interactive theorem provers and first-order automated theorem provers. We provide a way to represent non-deductive steps—Skolemization, clausification, and Tseitin normal form—as deductive steps within the format. Building upon the existing support in the Lisa proof assistant and the Goéland theorem prover, SC-TPTP ecosystem is further enhanced with proof output interfaces for Egg and Prover9, as well as proof reconstruction support for HOL Light, Lean, and Rocq.",
+    "topic": "",
+    "conference": "cade",
+    "year": 2025,
+    "paper_url": "https://doi.org/10.1007/978-3-031-99984-0_18"
+  },
+  {
+    "id": "10.1007/978-3-031-99984-0_10",
+    "title": "Lexicographic Combination of Reduction Pairs",
+    "authors": [
+      "Teppei Saito",
+      "Nao Hirokawa"
+    ],
+    "abstract": "We present a simple criterion for combining reduction pairs lexicographically. The criterion is applicable to arbitrary classes of reduction pairs, such as the polynomial interpretation, the matrix interpretation, and the Knuth–Bendix order. In addition, we investigate a variant of the matrix interpretation where the lexicographic order is employed instead of the usual component-wise order. Effectiveness is demonstrated by experiments and examples, including Touzet’s Hydra Battle.",
+    "topic": "",
+    "conference": "cade",
+    "year": 2025,
+    "paper_url": "https://doi.org/10.1007/978-3-031-99984-0_10"
+  },
+  {
+    "id": "10.1007/978-3-031-99984-0_4",
+    "title": "What’s Decidable About Arrays With Sums?",
+    "authors": [
+      "Roland Herrmann",
+      "Philipp Rümmer"
+    ],
+    "abstract": "The theory of arrays, supported by virtually all SMT solvers, is one of the most important theories in program verification. The standard theory of arrays, which provides read and write operations, has been extended in various different ways in past research, among others, by adding extensionality, constant arrays, function mapping (resulting in combinatorial array logic), counting, and projections. This paper studies array theories extended with sum constraints, which capture properties of the sum of all elements of an integer array. The paper shows that the theory of extensional arrays extended with constant arrays and sum constraints can be decided in non-deterministic polynomial time. The decision procedure works both for finite and infinite index sorts, as long as the cardinality is fixed a priori. In contrast, adding sum constraints to combinatorial array logic gives rise to an undecidable theory. The paper concludes by studying several fragments in between standard arrays with sums and combinatorial arrays with sums, aiming at providing a complete characterization of decidable and undecidable fragments.",
+    "topic": "",
+    "conference": "cade",
+    "year": 2025,
+    "paper_url": "https://doi.org/10.1007/978-3-031-99984-0_4"
+  },
+  {
+    "id": "10.1007/978-3-031-99984-0_30",
+    "title": "Exploiting Instantiations from Paramodulation Proofs in Isabelle/HOL",
+    "authors": [
+      "Lukas Bartl",
+      "Jasmin Blanchette",
+      "Tobias Nipkow"
+    ],
+    "abstract": "Metis is an ordered paramodulation prover built into the Isabelle/HOL proof assistant. It attempts to close the current goal using a given list of lemmas. Typically these lemmas are found by Sledgehammer, a tool that integrates external automatic provers. We present a new tool that analyzes successful Metis proofs to derive variable instantiations. These increase Sledgehammer’s success rate, improve the speed of Sledgehammer-generated proofs, and help users understand why a goal follows from the lemmas.",
+    "topic": "",
+    "conference": "cade",
+    "year": 2025,
+    "paper_url": "https://doi.org/10.1007/978-3-031-99984-0_30"
+  },
+  {
+    "id": "10.1007/978-3-031-99984-0_1",
+    "title": "Choose Your Proofs: Commutativity and Symmetry for Smarter Reasoning",
+    "authors": [
+      "Azadeh Farzan"
+    ],
+    "abstract": "This paper is a very short overview of a few advancements in automated verification of concurrent programs over the years, with a focus on the role of commutativity and symmetry in proofs. The aim of this line of work is to use commutativity and symmetry to lower the burden of logical reasoning for the backend theorem provers used in automated verification. The paper is not written to list formal results but rather to provide a high-level intuition about how certain contributions fit together in unexpected ways to advance program verification techniques. An interested reader is encouraged to dig deeper into the formal results in the cited papers.\nThe presented ideas go beyond concurrent programs, but a little bit of focus is helpful in telling a coherent story. Techniques discussed here in part have been used in many other interesting program verification problems including hypersafety verification [2, 17], verification of probabilistic programs [29], counting proofs for the verification of parameterized programs [10], verification of recursive programs [2, 19], verification of sequential programs [18], termination proofs of sequential [20], concurrent [16], and parameterized programs [20], and general LTL properties [4].\nWe start with an informal overview of an operational style of reasoning about programs that is uniquely suitable for incorporating and exploiting these ideas. Then, we discuss how symmetry and commutativity reasoning fit within the framework.",
+    "topic": "",
+    "conference": "cade",
+    "year": 2025,
+    "paper_url": "https://doi.org/10.1007/978-3-031-99984-0_1"
+  },
+  {
+    "id": "10.1007/978-3-031-99984-0_16",
+    "title": "Faithful Logic Embeddings in HOL— Deep and Shallow",
+    "authors": [
+      "Christoph Benzmüller"
+    ],
+    "abstract": "Deep and shallow embeddings of non-classical logics in classical higher-order logic have been explored, implemented, and used in various reasoning tools in recent years. This paper presents a method for the simultaneous deployment of deep and shallow embeddings of various degrees in classical higher-order logic. This enables flexible, interactive and automated theorem proving and counterexample finding at meta and object level, as well as automated faithfulness proofs between these logic embeddings. The method is beneficial for logic education, research and application and is illustrated here using a simple propositional modal logic. However, this approach is conceptual in nature and not limited to this simple logic context.",
+    "topic": "",
+    "conference": "cade",
+    "year": 2025,
+    "paper_url": "https://doi.org/10.1007/978-3-031-99984-0_16"
+  },
+  {
+    "id": "10.1007/978-3-031-99984-0_19",
+    "title": "Cut Elimination for Negative Free Logics with Definite Descriptions",
+    "authors": [
+      "Andrzej Indrzejczak"
+    ],
+    "abstract": "We present a sequent calculus GNFL for negative free logic with definite descriptions in the classical and intuitionistic versions, with empty and nonempty domains. It is shown constructively that GNFL satisfies the cut elimination theorem and its cut-free version satisfies the subformula property.",
+    "topic": "",
+    "conference": "cade",
+    "year": 2025,
+    "paper_url": "https://doi.org/10.1007/978-3-031-99984-0_19"
+  },
+  {
+    "id": "10.1007/978-3-031-99984-0_6",
+    "title": "Boosting MCSat Modulo Nonlinear Integer Arithmetic via Local Search",
+    "authors": [
+      "Enrico Lipparini",
+      "Thomas Hader",
+      "Ahmed Irfan",
+      "Stéphane Graham-Lengrand"
+    ],
+    "abstract": "The Model Constructing Satisfiability (MCSat) approach to the SMT problem extends the ideas of CDCL from the SAT level to the theory level. Like SAT, its search is driven by incrementally constructing a model by assigning concrete values to theory variables and performing theory-level reasoning to learn lemmas when conflicts arise. Therefore, the selection of values can significantly impact the search process and the solver’s performance. In this work, we propose guiding the MCSat search by utilizing assignment values discovered through local search. First, we present a theory-agnostic framework to seamlessly integrate local search techniques within the MCSat framework. Then, we highlight how to use the framework to design a search procedure for (quantifier-free) Nonlinear Integer Arithmetic ( $$\\mathcal {NIA}$$ ), utilizing accelerated hill-climbing and a new operation called feasible-sets jumping . We implement the proposed approach in the MCSat engine of the Yices2 solver, and empirically evaluate its performance over the $$\\mathcal {NIA}$$ benchmarks of SMT-LIB.",
+    "topic": "",
+    "conference": "cade",
+    "year": 2025,
+    "paper_url": "https://doi.org/10.1007/978-3-031-99984-0_6"
+  },
+  {
+    "id": "10.1007/978-3-031-99984-0_8",
+    "title": "Ground Truth: Checking Vampire Proofs via Satisfiability Modulo Theories",
+    "authors": [
+      "Michael Rawson",
+      "Andrei Voronkov",
+      "Johannes Schoisswohl",
+      "Anja Petković Komel"
+    ],
+    "abstract": "The Vampire automated theorem prover is extended to output proofs in such a way that each inference is represented by a quantifier-free SMT instance. If every instance is unsatisfiable, the proof can be considered verified by an external SMT solver. This pragmatic form of proof checking places only a very light burden on the SMT solver, and can easily handle inferences that other systems may find difficult, such as theory inferences or extensive ground reasoning. The method is considerably easier to implement than proof formats based on small kernels and covers a greater variety of modern-day inferences.",
+    "topic": "",
+    "conference": "cade",
+    "year": 2025,
+    "paper_url": "https://doi.org/10.1007/978-3-031-99984-0_8"
+  },
+  {
+    "id": "10.1007/978-3-031-99984-0_2",
+    "title": "Being Polite Is Not Enough (and Other Limits of Theory Combination)",
+    "authors": [
+      "Guilherme V. Toledo",
+      "Benjamin Przybocki",
+      "Yoni Zohar"
+    ],
+    "abstract": "In the Nelson–Oppen combination method for satisfiability modulo theories, the combined theories must be stably infinite; in gentle combination, one theory has to be gentle, and the other has to satisfy a similar yet weaker property; in shiny combination, only one has to be shiny (smooth, with a computable minimal model function and the finite model property); and for polite combination, only one has to be strongly polite (smooth and strongly finitely witnessable). For each combination method, we prove that if any of its assumptions are removed, then there is no general method to combine an arbitrary pair of theories satisfying the remaining assumptions. We also prove new theory combination results that weaken the assumptions of gentle and shiny combination.",
+    "topic": "",
+    "conference": "cade",
+    "year": 2025,
+    "paper_url": "https://doi.org/10.1007/978-3-031-99984-0_2"
+  },
+  {
+    "id": "10.1007/978-3-031-99984-0_24",
+    "title": "A Theorem Prover Based Approach for SAT-Based Model Checking Certification",
+    "authors": [
+      "Giulia Sindoni",
+      "Paolo Pasini",
+      "Gianpiero Cabodi",
+      "Paolo E. Camurati",
+      "Alberto Griggio",
+      "Marco Palena",
+      "Marco Roveri",
+      "Stefano Tonetta"
+    ],
+    "abstract": "In the field of formal verification, certifying proofs serve as compelling evidence to demonstrate the correctness of a model within a deductive system. These proofs can be automatically generated as a by-product of the verification process and are key artifacts for high-assurance systems. Their significance lies in their ability to be independently verified by proof checkers, which provides a more convenient approach than certifying the tools that generate them. Modern model checking algorithms adopt deductive methods and usually generate proofs in terms of inductive invariants, assuming that these apply to the original system under verification. Model checkers, though, often make use of a range of complex pre-processing simplifications and transformations to ease the verification process, which add another layer of complexity to the generation of proofs. In this paper, we present a novel approach for certifying model checking results exploiting a theorem prover and a theory of temporal deductive rules that can support various kinds of transformations and simplification of the original circuit. We implemented and experimentally evaluated our contribution on invariants generated using two state-of-the-art model checkers, nuXmv and PdTRAV, and by defining a set of rules within a theorem prover, to validate each certificate.",
+    "topic": "",
+    "conference": "cade",
+    "year": 2025,
+    "paper_url": "https://doi.org/10.1007/978-3-031-99984-0_24"
+  },
+  {
+    "id": "10.1007/978-3-031-99984-0_27",
+    "title": "Computing Witnesses Using the SCAN Algorithm",
+    "authors": [
+      "Fabian Achammer",
+      "Stefan Hetzl",
+      "Renate A. Schmidt"
+    ],
+    "abstract": "Second-order quantifier-elimination is the problem of finding, given a formula with second-order quantifiers, a logically equivalent first-order formula. While such formulas are not computable in general, there are practical algorithms and subclasses with applications throughout computational logic. One of the most prominent algorithms for second-order quantifier elimination is the SCAN algorithm which is based on saturation theorem proving. In this paper we show how the SCAN algorithm on clause sets can be extended to solve a more general problem: namely, finding an instance of the second-order quantifiers that results in a logically equivalent first-order formula. In addition we provide a prototype implementation of the proposed method. This work paves the way for applying the SCAN algorithm to new problems in application domains such as modal correspondence theory, knowledge representation, and verification.",
+    "topic": "",
+    "conference": "cade",
+    "year": 2025,
+    "paper_url": "https://doi.org/10.1007/978-3-031-99984-0_27"
+  },
+  {
+    "id": "10.1007/978-3-031-99984-0_9",
+    "title": "SMT and Functional Equation Solving over the Reals: Challenges from the IMO",
+    "authors": [
+      "Chad E. Brown",
+      "Karel Chvalovský",
+      "Mikoláš Janota",
+      "Mirek Olšák",
+      "Stefan Ratschan"
+    ],
+    "abstract": "We use SMT technology to address a class of problems involving uninterpreted functions and nonlinear real arithmetic. In particular, we focus on problems commonly found in mathematical competitions, such as the International Mathematical Olympiad (IMO), where the task is to determine all solutions to constraints on an uninterpreted function. Although these problems require only high-school-level mathematics, state-of-the-art SMT solvers often struggle with them. We propose several techniques to improve SMT performance in this setting.",
+    "topic": "",
+    "conference": "cade",
+    "year": 2025,
+    "paper_url": "https://doi.org/10.1007/978-3-031-99984-0_9"
+  },
+  {
+    "id": "10.1007/978-3-031-99984-0_25",
+    "title": "Infinite State Model Checking by Learning Transitive Relations",
+    "authors": [
+      "Florian Frohn",
+      "Jürgen Giesl"
+    ],
+    "abstract": "We propose a new approach for proving safety of infinite state systems. It extends the analyzed system by transitive relations until its diameter D becomes finite, i.e., until constantly many steps suffice to cover all reachable states, irrespective of the initial state. Then we can prove safety by checking that no error state is reachable in D steps. To deduce transitive relations, we use recurrence analysis . While recurrence analyses can usually find conjunctive relations only, our approach also discovers disjunctive relations by combining recurrence analysis with projections . An empirical evaluation of the implementation of our approach in our tool shows that it is highly competitive with the state of the art.",
+    "topic": "",
+    "conference": "cade",
+    "year": 2025,
+    "paper_url": "https://doi.org/10.1007/978-3-031-99984-0_25"
+  },
+  {
+    "id": "10.1007/978-3-031-99984-0_3",
+    "title": "On Symbol Elimination and Uniform Interpolation in Theory Extensions",
+    "authors": [
+      "Viorica Sofronie-Stokkermans"
+    ],
+    "abstract": "We define a notion of general uniform interpolant, generalizing the notions of cover and of uniform interpolant and identify situations in which symbol elimination can be used for computing general uniform interpolants. We investigate the limitations of the method we propose, and identify theory extensions for which the computation of general uniform interpolants can be reduced to symbol elimination followed by the computation of uniform quantifier-free interpolants in extensions with uninterpreted function symbols of theories allowing uniform quantifier-free interpolation.",
+    "topic": "",
+    "conference": "cade",
+    "year": 2025,
+    "paper_url": "https://doi.org/10.1007/978-3-031-99984-0_3"
+  },
+  {
+    "id": "10.1007/978-3-031-99984-0_22",
+    "title": "Efficient Neural Clause-Selection Reinforcement",
+    "authors": [
+      "Martin Suda"
+    ],
+    "abstract": "Clause selection is arguably the most important choice point in saturation-based theorem proving. Framing it as a reinforcement learning (RL) task is a way to challenge the human-designed heuristics of state-of-the-art provers and to instead automatically evolve—just from prover experiences—their potentially optimal replacement.\nIn this work, we present a neural network architecture for scoring clauses for clause selection that is powerful yet efficient to evaluate. Following RL principles to make design decisions, we integrate the network into the Vampire theorem prover and train it from successful proof attempts. An experiment on the diverse TPTP benchmark finds the neurally guided prover improves over a baseline strategy, from which it initially learns—in terms of the number of in-training-unseen problems solved under a practically relevant, short CPU instruction limit—by 20%.",
+    "topic": "",
+    "conference": "cade",
+    "year": 2025,
+    "paper_url": "https://doi.org/10.1007/978-3-031-99984-0_22"
+  },
+  {
+    "id": "10.1007/978-3-031-99984-0_26",
+    "title": "Relatively Complete and Efficient Partial Quantifier Elimination",
+    "authors": [
+      "Estifanos Getachew",
+      "Arie Gurfinkel",
+      "Richard Trefler"
+    ],
+    "abstract": "Quantifier elimination is used in various automated reasoning tasks, including quantified SMT solving, exists/forall solving, program synthesis, model checking, and constrained Horn clause (CHC) solving. Complete quantifier elimination, however, is computationally intractable for many theories. The recent algorithm QEL shows a promising approach to approximate quantifier elimination, which has resulted in improvements in solver performance. QEL performs partial quantifier elimination with a completeness guarantee that depends on a certain semantic property of the given formula. Considerably generalizing the previous approach, we identify a subclass of local theories in which partial quantifier elimination can be performed efficiently. We present $$\\mathcal {T}$$ -QEL a parametrized polynomial time algorithm that is a sound extension of QEL and is relatively complete for this class of theories. The algorithm utilizes the proof theoretic characterization of the theories, which is based on restricted derivations . Finally, we prove for $$\\mathcal {T}$$ -QEL, soundness in general, and relative completeness with respect to the identified class of theories.",
+    "topic": "",
+    "conference": "cade",
+    "year": 2025,
+    "paper_url": "https://doi.org/10.1007/978-3-031-99984-0_26"
+  },
+  {
+    "id": "10.1007/978-3-031-99984-0_29",
+    "title": "Term Ordering Diagrams",
+    "authors": [
+      "Márton Hajdu",
+      "Robin Coutelier",
+      "Laura Kovács",
+      "Andrei Voronkov"
+    ],
+    "abstract": "The superposition calculus for reasoning in first-order logic with equality relies on simplification orderings on terms. Modern saturation provers use the Knuth-Bendix order (KBO) and the lexicographic path order (LPO) for discovering redundant clauses and inferences. Implementing term orderings is, however, challenging. While KBO comparisons can be performed in linear time and LPO checks in quadratic time, using the best-known algorithms for these orders is not enough. Indeed, our experiments show that for some examples, term ordering checks may use about 98% of the overall proving time. The reason for this is that some equalities that cannot be ordered can become ordered after applying a substitution (post-ordered), and we have to check for post-ordering repeatedly for the same equalities. In this paper, we show how to improve post-ordering checks by introducing a new data structure called term ordering diagrams , in short TODs, which creates an index for these checks. We achieve efficiency by lazy modifications of the index and by storing and reusing information from previously performed checks to speed up subsequent checks. Our experiments demonstrate the efficiency of TODs.",
+    "topic": "",
+    "conference": "cade",
+    "year": 2025,
+    "paper_url": "https://doi.org/10.1007/978-3-031-99984-0_29"
+  },
+  {
+    "id": "10.1007/978-3-031-99984-0_15",
+    "title": "Simplified and Verified: A Second Look at a Proof-Producing Union-Find Algorithm",
+    "authors": [
+      "Lukas Stevens",
+      "Rebecca Ghidini"
+    ],
+    "abstract": "Using Isabelle/HOL, we verify a union-find data structure with an explain operation due to Nieuwenhuis and Oliveras. We devise a simpler, more naive version of the explain operation whose soundness and completeness is easy to verify. Then, we prove the original formulation of the explain operation to be equal to our version. Finally, we refine this data structure to Imperative HOL, enabling us to export efficient imperative code. The formalisation provides a stepping stone towards the verification of proof-producing congruence closure algorithms which are a core ingredient of Satisfiability Modulo Theories (SMT) solvers.",
+    "topic": "",
+    "conference": "cade",
+    "year": 2025,
+    "paper_url": "https://doi.org/10.1007/978-3-031-99984-0_15"
+  },
+  {
+    "id": "10.1007/978-3-031-99984-0_11",
+    "title": "Confluence of Almost Parallel-Closed Generalized Term Rewriting Systems",
+    "authors": [
+      "Salvador Lucas"
+    ],
+    "abstract": "Generalized Term Rewriting Systems (GTRSs) extend Conditional Term Rewriting Systems by (i) selecting the arguments of function symbols on which rewritings are allowed and (ii) allowing for more general conditions in rules, namely, atoms defined by a set of Horn clauses. They are useful to model and analyze properties of computations with sophisticated languages like . Toyama proved that left-linear and almost parallel-closed Term Rewriting Systems (TRSs) are confluent. In this paper, we generalize and extend his result to GTRSs without requiring left-linearity . This improves Toyama’s result, as we show with some examples. Also, Toyama’s result entails confluence of weakly orthogonal TRSs, thus providing a syntactic criterion for proving confluence without requiring termination . We similarly introduce weakly V-orthogonal GTRSs, which are confluent. Weak V-orthogonality checking is implemented in the confluence tool , to improve its ability to deal with context-sensitive and conditional term rewriting systems.",
+    "topic": "",
+    "conference": "cade",
+    "year": 2025,
+    "paper_url": "https://doi.org/10.1007/978-3-031-99984-0_11"
+  },
+  {
+    "id": "10.1007/978-3-031-99984-0_28",
+    "title": "Partial Redundancy in Saturation",
+    "authors": [
+      "Márton Hajdu",
+      "Laura Kovács",
+      "Andrei Voronkov"
+    ],
+    "abstract": "Redundancy elimination is one of the crucial ingredients of efficient saturation-based proof search. We strengthen redundancy elimination by introducing a new notion of redundancy, based on partial clauses and redundancy formulas . The new notion allows us to recognize redundant clauses and inferences that cannot be recognized by standard redundancy elimination criteria. In a way, our notion blurs the distinction between redundancy at the level of inferences and redundancy at the level of clauses. We present a superposition calculus PaRC on partial clauses and prove that it is refutationally complete. We discuss the implementation of the calculus in the theorem prover Vampire . Our experiments show the power of the new approach: we were able to solve 24 TPTP problems not previously solved by any prover, including previous versions of Vampire .",
+    "topic": "",
+    "conference": "cade",
+    "year": 2025,
+    "paper_url": "https://doi.org/10.1007/978-3-031-99984-0_28"
+  },
+  {
+    "id": "10.1007/978-3-031-99984-0_34",
+    "title": "Uniform Interpolation and Forgetting for Large-Scale Ontologies with Application to Semantic Difference in SNOMED CT",
+    "authors": [
+      "Yizheng Zhao",
+      "Junyi Zhang",
+      "Renate A. Schmidt"
+    ],
+    "abstract": "In this paper, we present a practical method for computing uniform interpolation and forgetting in $$\\mathcal {ELIH}$$ -ontologies, addressing fundamental operations critical for detecting semantic differences in ontology evolution. Our method extends previous work to accommodate inverse roles while maintaining soundness and termination guarantees. Empirical evaluation across industry benchmarks from Oxford ISG and NCBO BioPortal demonstrates 100% success rates with notable improvements in computational efficiency compared to state-of-the-art systems. The practical impact of our method has been validated through application to SNOMED CT, the world’s largest clinical terminology supporting healthcare information systems globally. This enables terminologists and developers to systematically track semantic differences, detect unintended consequences, and validate change safety across SNOMED CT releases.",
+    "topic": "",
+    "conference": "cade",
+    "year": 2025,
+    "paper_url": "https://doi.org/10.1007/978-3-031-99984-0_34"
+  },
+  {
+    "id": "10.1007/978-3-031-99984-0_36",
+    "title": "A Real-Analytic Approach to Differential-Algebraic Dynamic Logic",
+    "authors": [
+      "Jonathan Hellwig",
+      "André Platzer"
+    ],
+    "abstract": "This paper introduces a novel axiomatic proof calculus for differential-algebraic dynamic logic (). The calculus enables deductive verification and sound transformation of differential-algebraic programs (DAPs), which generalize differential-algebraic equations, while remaining compatible with differential dynamic logic () for hybrid programs. One central contribution is the ghost switching axiom which establishes precise conditions to decompose multi-modal DAPs into equivalent hybrid systems with ordinary differential equations. The applicability of the calculus is demonstrated through a formal equivalence proof, showing the reduction of the Euclidean pendulum from a differential-algebraic formulation to an equivalent system of ordinary differential equations.",
+    "topic": "",
+    "conference": "cade",
+    "year": 2025,
+    "paper_url": "https://doi.org/10.1007/978-3-031-99984-0_36"
+  },
+  {
+    "id": "10.1007/978-3-031-99984-0_38",
+    "title": "Unfolding Boxes with Local Constraints",
+    "authors": [
+      "Long Qian",
+      "Eric Wang",
+      "Bernardo Subercaseaux",
+      "Marijn J. H. Heule"
+    ],
+    "abstract": "We consider the problem of finding and enumerating polyominos that can be folded into multiple non-isomorphic boxes. While several computational approaches have been proposed, including SAT, randomized algorithms, and decision diagrams, none has been able to perform at scale. We argue that existing SAT encodings are hindered by the presence of global constraints (e.g., graph connectivity or acyclicity), which are generally hard to encode effectively and hard for solvers to reason about. In this work, we propose a new SAT-based approach that replaces these global constraints with simple local constraints that have substantially better propagation properties. Our approach dramatically improves the scalability of both computing and enumerating common box unfoldings: (i) while previous approaches could only find common unfoldings of two boxes up to area 88, ours easily scales beyond 150, and (ii) while previous approaches were only able to enumerate common unfoldings up to area 30, ours scales up to 60. This allows us to rule out 46, 54, and 58 as the smallest areas allowing a common unfolding of three boxes, thereby refuting a conjecture of Xu et al. (2017).",
+    "topic": "",
+    "conference": "cade",
+    "year": 2025,
+    "paper_url": "https://doi.org/10.1007/978-3-031-99984-0_38"
+  },
+  {
+    "id": "10.1007/978-3-031-99984-0_31",
+    "title": "Computing Ground Congruence Classes",
+    "authors": [
+      "Hendrik Leidinger",
+      "Christoph Weidenbach"
+    ],
+    "abstract": "Congruence closure on ground equations is a well-established and efficient algorithm for deciding ground equalities. It constructs an explicit representation of ground equivalence classes based on a given set of input equations, allowing ground equalities to be decided by membership. In many applications, these ground equations originate from grounding non-ground equations.\nWe propose an algorithm that directly computes a non-ground representation of ground congruence classes for non-ground equations. Our approach is sound and complete with respect to the corresponding ground congruence classes. Experimental results demonstrate that computing non-ground congruence classes often outperforms the classical ground congruence closure algorithm in efficiency.",
+    "topic": "",
+    "conference": "cade",
+    "year": 2025,
+    "paper_url": "https://doi.org/10.1007/978-3-031-99984-0_31"
+  },
+  {
+    "id": "10.1007/978-3-031-99984-0_35",
+    "title": "Concrete Domains Meet Expressive Cardinality Restrictions in Description Logics",
+    "authors": [
+      "Franz Baader",
+      "Stefan Borgwardt",
+      "Filippo De Bortoli",
+      "Patrick Koopmann"
+    ],
+    "abstract": "Standard Description Logics (DLs) can encode quantitative aspects of an application domain through either number restrictions , which constrain the number of individuals that are in a certain relationship with an individual, or concrete domains , which can be used to assign concrete values to individuals using so-called features. These two mechanisms have been extended towards very expressive DLs, for which reasoning nevertheless remains decidable. Number restrictions have been generalized to more powerful comparisons of sets of role successors in $$\\mathcal {ALCSCC}$$ , while the comparison of feature values of different individuals in $$\\mathcal {ALC} (\\mathfrak {D})$$ has been studied in the context of $$\\omega $$ -admissible concrete domains $$\\mathfrak {D}$$ . In this paper, we combine both formalisms and investigate the complexity of reasoning in the thus obtained DL $$\\mathcal {ALCOSCC}(\\mathfrak {D})$$ , which additionally includes the ability to refer to specific individuals by name. We show that, in spite of its high expressivity, the consistency problem for this DL is ExpTime -complete, assuming that the constraint satisfaction problem of $$\\mathfrak {D}$$ is also decidable in exponential time. It is thus not higher than the complexity of the basic DL $$\\mathcal {ALC}$$ . At the same time, we show that many natural extensions to this DL, including a tighter integration of the concrete domain and number restrictions, lead to undecidability.",
+    "topic": "",
+    "conference": "cade",
+    "year": 2025,
+    "paper_url": "https://doi.org/10.1007/978-3-031-99984-0_35"
+  },
+  {
+    "id": "10.1007/978-3-031-99984-0_32",
+    "title": "Anti-pattern Templates",
+    "authors": [
+      "Jan Otop"
+    ],
+    "abstract": "We introduce anti-pattern templates, which extend both anti-pattern matching by abstracting ground terms to variables, and unification by negative constraints. For anti-pattern templates, we study the satisfiability problem, which asks whether a given template can be instantiated to a valid anti-pattern matching instance. We show that the satisfiability problem for anti-pattern templates is NP-complete, but it becomes tractable if the number of negation symbols is bounded. Next, we consider anti-pattern templates modulo an equational theory and discuss its relations with other variants of equational frameworks with negative constraints. In particular, we conclude that the satisfiability problem for anti-pattern templates considered modulo associativity becomes undecidable, while it is decidable modulo associativity and commutativity.",
+    "topic": "",
+    "conference": "cade",
+    "year": 2025,
+    "paper_url": "https://doi.org/10.1007/978-3-031-99984-0_32"
+  },
+  {
+    "id": "10.1007/978-3-031-99984-0_33",
+    "title": "Equational Reasoning Modulo Commutativity in Languages with Binders",
+    "authors": [
+      "Ali K. Caires-Santos",
+      "Maribel Fernández",
+      "Daniele Nantes-Sobrinho"
+    ],
+    "abstract": "Many formal languages include binders as well as operators that satisfy equational axioms, such as commutativity. Here we consider the nominal language, a general formal framework which provides support for the representation of binders, freshness conditions and $$\\alpha $$ -renaming. Rather than relying on the usual freshness constraints, we introduce a nominal algebra which employs permutation fixed-point constraints in $$\\alpha $$ -equivalence judgements, seamlessly integrating commutativity into the reasoning process. We establish its proof-theoretical properties and provide a sound and complete semantics in the setting of nominal sets. Additionally, we propose a novel algorithm for nominal unification modulo commutativity, which we prove terminating and correct. By leveraging fixed-point constraints, our approach ensures a finitary unification theory, unlike standard methods relying on freshness constraints. This framework offers a robust foundation for structural induction and recursion over syntax with binders and commutative operators, enabling reasoning in settings such as first-order logic and the $$\\pi $$ -calculus.",
+    "topic": "",
+    "conference": "cade",
+    "year": 2025,
+    "paper_url": "https://doi.org/10.1007/978-3-031-99984-0_33"
+  },
+  {
+    "id": "10.1007/978-3-031-99984-0_37",
+    "title": "Entailment vs. Verification for Partial-Assignment Satisfiability and Enumeration",
+    "authors": [
+      "Roberto Sebastiani"
+    ],
+    "abstract": "Many procedures for SAT-related problems, in particular for those requiring the complete enumeration of satisfying truth assignments, rely their efficiency and effectiveness on the detection of (possibly small) partial assignments satisfying an input formula. Surprisingly, there seems to be no unique universally-agreed definition of formula satisfaction by a partial assignment in the literature. In this paper, we analyze in depth the issue of satisfaction by partial assignments, raising a flag about some ambiguities and subtleties of this concept, and investigating their practical consequences. We identify two alternative notions that are implicitly used in the literature, namely verification and entailment , which coincide if applied to (tautology-free) CNF formulas, but differ and present complementary properties if applied to non-CNF or to existentially-quantified formulas. We show that, although the former is easier to check and as such is implicitly used by most current search procedures, the latter has better theoretical properties, and can improve the efficiency and effectiveness of enumeration procedures.",
+    "topic": "",
+    "conference": "cade",
+    "year": 2025,
+    "paper_url": "https://doi.org/10.1007/978-3-031-99984-0_37"
+  }
+]

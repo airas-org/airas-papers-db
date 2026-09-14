@@ -1,0 +1,875 @@
+[
+  {
+    "id": "10.1007/978-3-030-45190-5_16",
+    "title": "Scenario-Based Verification of Uncertain MDPs",
+    "authors": [
+      "Murat Cubuktepe",
+      "Nils Jansen",
+      "Sebastian Junges",
+      "Joost-Pieter Katoen",
+      "Ufuk Topcu"
+    ],
+    "abstract": "We consider Markov decision processes (MDPs) in which the transition probabilities and rewards belong to an uncertainty set parametrized by a collection of random variables. The probability distributions for these random parameters are unknown. The problem is to compute the probability to satisfy a temporal logic specification within any MDP that corresponds to a sample from these unknown distributions. In general, this problem is undecidable, and we resort to techniques from so-called scenario optimization. Based on a finite number of samples of the uncertain parameters, each of which induces an MDP, the proposed method estimates the probability of satisfying the specification by solving a finite-dimensional convex optimization problem. The number of samples required to obtain a high confidence on this estimate is independent from the number of states and the number of random parameters. Experiments on a large set of benchmarks show that a few thousand samples suffice to obtain high-quality confidence bounds with a high probability.",
+    "topic": "",
+    "conference": "tacas",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1007/978-3-030-45190-5_16"
+  },
+  {
+    "id": "10.1007/978-3-030-45190-5_4",
+    "title": "A Calculus for Modular Loop Acceleration",
+    "authors": [
+      "Florian Frohn"
+    ],
+    "abstract": "Loop acceleration can be used to prove safety, reachability, runtime bounds, and (non-)termination of programs operating on integers. To this end, a variety of acceleration techniques has been proposed. However, all of them are monolithic: Either they accelerate a loop successfully or they fail completely. In contrast, we present a calculus that allows for combining acceleration techniques in a modular way and we show how to integrate many existing acceleration techniques into our calculus. Moreover, we propose two novel acceleration techniques that can be incorporated into our calculus seamlessly. An empirical evaluation demonstrates the applicability of our approach.",
+    "topic": "",
+    "conference": "tacas",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1007/978-3-030-45190-5_4"
+  },
+  {
+    "id": "10.1007/978-3-030-45237-7_5",
+    "title": "How Many Bits Does it Take to Quantize Your Neural Network?",
+    "authors": [
+      "Mirco Giacobbe",
+      "Thomas A. Henzinger",
+      "Mathias Lechner"
+    ],
+    "abstract": "Quantization converts neural networks into low-bit fixed-point computations which can be carried out by efficient integer-only hardware, and is standard practice for the deployment of neural networks on real-time embedded devices. However, like their real-numbered counterpart, quantized networks are not immune to malicious misclassification caused by adversarial attacks. We investigate how quantization affects a network’s robustness to adversarial attacks, which is a formal verification question. We show that neither robustness nor non-robustness are monotonic with changing the number of bits for the representation and, also, neither are preserved by quantization from a real-numbered network. For this reason, we introduce a verification method for quantized neural networks which, using SMT solving over bit-vectors, accounts for their exact, bit-precise semantics. We built a tool and analyzed the effect of quantization on a classifier for the MNIST dataset. We demonstrate that, compared to our method, existing methods for the analysis of real-numbered networks often derive false conclusions about their quantizations, both when determining robustness and when detecting attacks, and that existing methods for quantized networks often miss attacks. Furthermore, we applied our method beyond robustness, showing how the number of bits in quantization enlarges the gender bias of a predictor for students’ grades.",
+    "topic": "",
+    "conference": "tacas",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1007/978-3-030-45237-7_5"
+  },
+  {
+    "id": "10.1007/978-3-030-45237-7_7",
+    "title": "GASOL: Gas Analysis and Optimization for Ethereum Smart Contracts",
+    "authors": [
+      "Elvira Albert",
+      "Jesús Correas",
+      "Pablo Gordillo",
+      "Guillermo Román-Díez",
+      "Albert Rubio"
+    ],
+    "abstract": "We present the main concepts, components, and usage of G asol , a Gas AnalysiS and Optimization tooL for Ethereum smart contracts. G asol offers a wide variety of cost models that allow inferring the gas consumption associated to selected types of EVM instructions and/or inferring the number of times that such types of bytecode instructions are executed. Among others, we have cost models to measure only storage opcodes, to measure a selected family of gas-consumption opcodes following the Ethereum’s classification, to estimate the cost of a selected program line, etc. After choosing the desired cost model and the function of interest, G asol returns to the user an upper bound of the cost for this function. As the gas consumption is often dominated by the instructions that access the storage, G asol uses the gas analysis to detect under-optimized storage patterns, and includes an (optional) automatic optimization of the selected function. Our tool can be used within an Eclipse plugin for which displays the gas and instructions bounds and, when applicable, the gas-optimized function.",
+    "topic": "",
+    "conference": "tacas",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1007/978-3-030-45237-7_7"
+  },
+  {
+    "id": "10.1007/978-3-030-45190-5_1",
+    "title": "Software Verification with PDR: An Implementation of the State of the Art",
+    "authors": [
+      "Dirk Beyer",
+      "Matthias Dangl"
+    ],
+    "abstract": "Property-directed reachability (PDR) is a SAT/SMT-based reachability algorithm that incrementally constructs inductive invariants. After it was successfully applied to hardware model checking, several adaptations to software model checking have been proposed. We contribute a replicable and thorough comparative evaluation of the state of the art: We (1) implemented a standalone PDR algorithm and, as improvement, a PDR-based auxiliary-invariant generator for k-induction, and (2) performed an experimental study on the largest publicly available benchmark set of C verification tasks, in which we explore the effectiveness and efficiency of software verification with PDR. The main contribution of our work is to establish a reproducible baseline for ongoing research in the area by providing a well-engineered reference implementation and an experimental evaluation of the existing techniques.",
+    "topic": "",
+    "conference": "tacas",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1007/978-3-030-45190-5_1"
+  },
+  {
+    "id": "10.1007/978-3-030-45190-5_10",
+    "title": "Multi-agent Safety Verification Using Symmetry Transformations",
+    "authors": [
+      "Hussein Sibai",
+      "Navid Mokhlesi",
+      "Chuchu Fan",
+      "Sayan Mitra"
+    ],
+    "abstract": "We show that symmetry transformations and caching can enable scalable, and possibly unbounded, verification of multi-agent systems. Symmetry transformations map any solution of the system to another solution. We show that this property can be used to transform cached reachsets to compute new reachsets, for hybrid and multi-agent models. We develop a notion of a virtual system which defines symmetry transformations for a broad class of agent models that visit waypoint sequences. Using this notion of a virtual system, we present a prototype tool CacheReach that builds a cache of reachsets, in a way that is agnostic of the representation of the reachsets and the reachability analysis method used. Our experimental evaluation of CacheReach shows up to 64% savings in safety verification computation time on multi-agent systems with 3-dimensional linear and 4-dimensional nonlinear fixed-wing aircraft models following sequences of waypoints. These savings and our theoretical results illustrate the potential benefits of using symmetry-based caching in the safety verification of multi-agent systems.",
+    "topic": "",
+    "conference": "tacas",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1007/978-3-030-45190-5_10"
+  },
+  {
+    "id": "10.1007/978-3-030-45190-5_11",
+    "title": "Relational Differential Dynamic Logic",
+    "authors": [
+      "Juraj Kolčák",
+      "Jérémy Dubut",
+      "Ichiro Hasuo",
+      "Shin-ya Katsumata",
+      "David Sprunger",
+      "Akihisa Yamada"
+    ],
+    "abstract": "Hybrid Systems and their Verification. With the ever increasing degree of digitalisation and automation, cyber-physical systems (CPS) are becoming exceedingly common in industry. This trend is accompanied by a similar increase in the research efforts directed towards CPS. The biggest concern is sparked by many safety-critical applications involving CPS, such as automated driving. The quality assurance of CPS thus poses a pressing socio-economical challenge.",
+    "topic": "",
+    "conference": "tacas",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1007/978-3-030-45190-5_11"
+  },
+  {
+    "id": "10.1007/978-3-030-45190-5_12",
+    "title": "Assume, Guarantee or Repair",
+    "authors": [
+      "Hadar Frenkel",
+      "Orna Grumberg",
+      "Corina Pasareanu",
+      "Sarai Sheinvald"
+    ],
+    "abstract": "We present Assume-Guarantee-Repair (AGR) – a novel framework which not only verifies that a program satisfies a set of properties, but also repairs the program in case the verification fails. We consider communicating programs – these are simple C-like programs, extended with synchronous communication actions over communication channels. Our method, which consists of a learning-based approach to assume-guarantee reasoning, performs verification and repair simultaneously: in every iteration, AGR either makes another step towards proving that the (current) system satisfies the specification, or alters the system in a way that brings it closer to satisfying the specification. We manage handling infinite-state systems by using a finite abstract representation, and reduce the semantic problems in hand – satisfying complex specifications that also contain first-order constraints – to syntactic ones, namely membership and equivalence queries for regular languages. We implemented our algorithm and evaluated it on various examples. Our experiments present compact proofs of correctness and quick repairs.",
+    "topic": "",
+    "conference": "tacas",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1007/978-3-030-45190-5_12"
+  },
+  {
+    "id": "10.1007/978-3-030-45190-5_13",
+    "title": "Structural Invariants for the Verification of Systems with Parameterized Architectures",
+    "authors": [
+      "Marius Bozga",
+      "Javier Esparza",
+      "Radu Iosif",
+      "Joseph Sifakis",
+      "Christoph Welzel"
+    ],
+    "abstract": "We consider parameterized concurrent systems consisting of a finite but unknown number of components, obtained by replicating a given set of finite state automata.",
+    "topic": "",
+    "conference": "tacas",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1007/978-3-030-45190-5_13"
+  },
+  {
+    "id": "10.1007/978-3-030-45190-5_14",
+    "title": "Automated Verification of Parallel Nested DFS",
+    "authors": [
+      "Wytse Oortwijn",
+      "Marieke Huisman",
+      "Sebastiaan J. C. Joosten",
+      "Jaco van de Pol"
+    ],
+    "abstract": "Model checking algorithms are typically complex graph algorithms, whose correctness is crucial for the usability of a model checker. However, establishing the correctness of such algorithms can be challenging and is often done manually. Mechanising the verification process is crucially important, because model checking algorithms are often parallelised for efficiency reasons, which makes them even more error-prone. This paper shows how the VerCors concurrency verifier is used to mechanically verify the parallel nested depth-first search (NDFS) graph algorithm of Laarman et al. [25]. We also demonstrate how having a mechanised proof supports the easy verification of various optimisations of parallel NDFS. As far as we are aware, this is the first automated deductive verification of a multi-core model checking algorithm.",
+    "topic": "",
+    "conference": "tacas",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1007/978-3-030-45190-5_14"
+  },
+  {
+    "id": "10.1007/978-3-030-45190-5_15",
+    "title": "Discourje: Runtime Verification of Communication Protocols in Clojure",
+    "authors": [
+      "Ruben Hamers",
+      "Sung-Shik Jongmans"
+    ],
+    "abstract": "This paper presents Discourje: a runtime verification framework for communication protocols in Clojure. Discourje guarantees safety of protocol implementations relative to specifications, based on an expressive new version of multiparty session types. The framework has a formal foundation and is itself implemented in Clojure to offer a seamless specification–implementation experience. Benchmarks show Discourje’s overhead can be less than 5% for real/existing concurrent programs.",
+    "topic": "",
+    "conference": "tacas",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1007/978-3-030-45190-5_15"
+  },
+  {
+    "id": "10.1007/978-3-030-45190-5_17",
+    "title": "Good-for-MDPs Automata for Probabilistic Analysis and Reinforcement Learning",
+    "authors": [
+      "Ernst Moritz Hahn",
+      "Mateo Perez",
+      "Sven Schewe",
+      "Fabio Somenzi",
+      "Ashutosh Trivedi",
+      "Dominik Wojtczak"
+    ],
+    "abstract": "We characterize the class of nondeterministic \\documentclass[12pt]{minimal} \\usepackage{amsmath} \\usepackage{wasysym} \\usepackage{amsfonts} \\usepackage{amssymb} \\usepackage{amsbsy} \\usepackage{mathrsfs} \\usepackage{upgreek} \\setlength{\\oddsidemargin}{-69pt} \\begin{document}$$\\omega $$\\end{document}-automata that can be used for the analysis of finite Markov decision processes (MDPs). We call these automata ‘good-for-MDPs’ (GFM). We show that GFM automata are closed under classic simulation as well as under more powerful simulation relations that leverage properties of optimal control strategies for MDPs. This closure enables us to exploit state-space reduction techniques, such as those based on direct and delayed simulation, that guarantee simulation equivalence. We demonstrate the promise of GFM automata by defining a new class of automata with favorable properties—they are Büchi automata with low branching degree obtained through a simple construction—and show that going beyond limit-deterministic automata may significantly benefit reinforcement learning.",
+    "topic": "",
+    "conference": "tacas",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1007/978-3-030-45190-5_17"
+  },
+  {
+    "id": "10.1007/978-3-030-45190-5_18",
+    "title": "Farkas Certificates and Minimal Witnesses for Probabilistic Reachability Constraints",
+    "authors": [
+      "Florian Funke",
+      "Simon Jantsch",
+      "Christel Baier"
+    ],
+    "abstract": "This paper introduces Farkas certificates for lower and upper bounds on minimal and maximal reachability probabilities in Markov decision processes (MDP), which we derive using an MDP-variant of Farkas’ Lemma. The set of all such certificates is shown to form a polytope whose points correspond to witnessing subsystems of the model and the property. Using this correspondence we can translate the problem of finding minimal witnesses to the problem of finding vertices with a maximal number of zeros. While computing such vertices is computationally hard in general, we derive new heuristics from our formulations that exhibit competitive performance compared to state-of-the-art techniques. As an argument that asymptotically better algorithms cannot be hoped for, we show that the decision version of finding minimal witnesses is \\documentclass[12pt]{minimal} \\usepackage{amsmath} \\usepackage{wasysym} \\usepackage{amsfonts} \\usepackage{amssymb} \\usepackage{amsbsy} \\usepackage{mathrsfs} \\usepackage{upgreek} \\setlength{\\oddsidemargin}{-69pt} \\begin{document}$${\\text {NP}}$$\\end{document}-complete even for acyclic Markov chains.",
+    "topic": "",
+    "conference": "tacas",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1007/978-3-030-45190-5_18"
+  },
+  {
+    "id": "10.1007/978-3-030-45190-5_19",
+    "title": "Simple Strategies in Multi-Objective MDPs",
+    "authors": [
+      "Florent Delgrange",
+      "Joost-Pieter Katoen",
+      "Tim Quatmann",
+      "Mickael Randour"
+    ],
+    "abstract": "We consider the verification of multiple expected reward objectives at once on Markov decision processes (MDPs). This enables a trade-off analysis among multiple objectives by obtaining a Pareto front. We focus on strategies that are easy to employ and implement. That is, strategies that are pure (no randomization) and have bounded memory. We show that checking whether a point is achievable by a pure stationary strategy is NP-complete, even for two objectives, and we provide an MILP encoding to solve the corresponding problem. The bounded memory case is treated by a product construction. Experimental results using Storm and Gurobi show the feasibility of our algorithms.",
+    "topic": "",
+    "conference": "tacas",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1007/978-3-030-45190-5_19"
+  },
+  {
+    "id": "10.1007/978-3-030-45190-5_2",
+    "title": "Verifying Array Manipulating Programs with Full-Program Induction",
+    "authors": [
+      "Supratik Chakraborty",
+      "Ashutosh Gupta",
+      "Divyesh Unadkat"
+    ],
+    "abstract": "We present a full-program induction technique for proving (a sub-class of) quantified as well as quantifier-free properties of programs manipulating arrays of parametric size N. Instead of inducting over individual loops, our technique inducts over the entire program (possibly containing multiple loops) directly via the program parameter N. Significantly, this does not require generation or use of loop-specific invariants. We have developed a prototype tool Vajra to assess the efficacy of our technique. We demonstrate the performance of Vajra vis-a-vis several state-of-the-art tools on a set of array manipulating benchmarks.",
+    "topic": "",
+    "conference": "tacas",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1007/978-3-030-45190-5_2"
+  },
+  {
+    "id": "10.1007/978-3-030-45190-5_20",
+    "title": "Partial Order Reduction for Deep Bug Finding in Synchronous Hardware",
+    "authors": [
+      "Makai Mann",
+      "Clark Barrett"
+    ],
+    "abstract": "Symbolic model checking has become an important part of the verification flow in industrial hardware design. However, its use is still limited due to scaling issues. One way to address this is to exploit the large amounts of symmetry present in many real world designs. In this paper, we adapt partial order reduction for bounded model checking of synchronous hardware and introduce a novel technique that makes partial order reduction practical in this new domain. These approaches are largely automatic, requiring only minimal manual effort. We evaluate our technique on open-source and commercial packet mover circuits – designs containing FIFOs and arbiters.",
+    "topic": "",
+    "conference": "tacas",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1007/978-3-030-45190-5_20"
+  },
+  {
+    "id": "10.1007/978-3-030-45190-5_21",
+    "title": "Revisiting Underapproximate Reachability for Multipushdown Systems",
+    "authors": [
+      "S. Akshay",
+      "Paul Gastin",
+      "S Krishna",
+      "Sparsa Roychowdhury"
+    ],
+    "abstract": "Boolean programs with multiple recursive threads can be captured as pushdown automata with multiple stacks. This model is Turing complete, and hence, one is often interested in analyzing a restricted class which still captures useful behaviors. In this paper, we propose a new class of bounded underapproximations for multi-pushdown systems, which subsumes most existing classes. We develop an efficient algorithm for solving the under-approximate reachability problem, which is based on efficient fix-point computations. We implement it in our tool BHIM and illustrate its applicability by generating a set of relevant benchmarks and examining its performance. As an additional takeaway BHIM solves the binary reachability problem in pushdown automata. To show the versatility of our approach, we then extend our algorithm to the timed setting and provide the first implementation that can handle timed multi-pushdown automata with closed guards.",
+    "topic": "",
+    "conference": "tacas",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1007/978-3-030-45190-5_21"
+  },
+  {
+    "id": "10.1007/978-3-030-45190-5_22",
+    "title": "KReach: A Tool for Reachability in Petri Nets",
+    "authors": [
+      "Alex Dixon",
+      "Ranko Lazić"
+    ],
+    "abstract": "We present KReach, a tool for deciding reachability in general Petri nets. The tool is a full implementation of Kosaraju’s original 1982 decision procedure for reachability in VASS. We believe this to be the first implementation of its kind. We include a comprehensive suite of libraries for development with Vector Addition Systems (with States) in the Haskell programming language. KReach serves as a practical tool, and acts as an effective teaching aid for the theory behind the algorithm. Preliminary tests suggest that there are some classes of Petri nets for which we can quickly show unreachability. In particular, using KReach for coverability problems, by reduction to reachability, is competitive even against state-of-the-art coverability checkers.",
+    "topic": "",
+    "conference": "tacas",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1007/978-3-030-45190-5_22"
+  },
+  {
+    "id": "10.1007/978-3-030-45190-5_23",
+    "title": "AVR: Abstractly Verifying Reachability",
+    "authors": [
+      "Aman Goel",
+      "Karem Sakallah"
+    ],
+    "abstract": "We present AVR, a push-button model checker for verifying state transition systems directly at the source-code level. AVR uses information embedded in the word-level syntax of the design representation to automatically perform scalable model checking by combining a novel syntax-guided abstraction-refinement technique with a word-level implementation of the IC3 algorithm. AVR provides independently-verifiable certificates that offer provable assurance and are easy to relate to the word-level system. Moreover, proof certificates can be further used in innovative ways to extract key design information and are useful in a growing number of applications.",
+    "topic": "",
+    "conference": "tacas",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1007/978-3-030-45190-5_23"
+  },
+  {
+    "id": "10.1007/978-3-030-45190-5_24",
+    "title": "Verified Certification of Reachability Checking for Timed Automata",
+    "authors": [
+      "Simon Wimmer",
+      "Joshua von Mutius"
+    ],
+    "abstract": "Prior research has shown how to construct a mechanically verified model checker for timed automata, a popular formalism for modeling real-time systems. In this paper, we shift the focus from verified model checking to certifying unreachability. This allows us to benefit from better approximation operations for symbolic states, and reduces execution time by exploring fewer states and by exploiting parallelism. Moreover, this gives us the ability to audit results of unverified model checkers that implement a range of further optimizations, including certificate compression. The resulting tool is evaluated on a set of standard benchmarks to demonstrate its practicality, using a new unverified model checker implementation in Standard ML to construct the certificates.",
+    "topic": "",
+    "conference": "tacas",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1007/978-3-030-45190-5_24"
+  },
+  {
+    "id": "10.1007/978-3-030-45190-5_25",
+    "title": "Learning One-Clock Timed Automata",
+    "authors": [
+      "Jie An",
+      "Mingshuai Chen",
+      "Bohua Zhan",
+      "Naijun Zhan",
+      "Miaomiao Zhang"
+    ],
+    "abstract": "We present an algorithm for active learning of deterministic timed automata with a single clock. The algorithm is within the framework of Angluin’s \\documentclass[12pt]{minimal} \\usepackage{amsmath} \\usepackage{wasysym} \\usepackage{amsfonts} \\usepackage{amssymb} \\usepackage{amsbsy} \\usepackage{mathrsfs} \\usepackage{upgreek} \\setlength{\\oddsidemargin}{-69pt} \\begin{document}$$L^*$$\\end{document} algorithm and inspired by existing work on the active learning of symbolic automata. Due to the need of guessing for each transition whether it resets the clock, the algorithm is of exponential complexity in the size of the learned automata. Before presenting this algorithm, we propose a simpler version where the teacher is assumed to be smart in the sense of being able to provide the reset information. We show that this simpler setting yields a polynomial complexity of the learning process. Both of the algorithms are implemented and evaluated on a collection of randomly generated examples. We furthermore demonstrate the simpler algorithm on the functional specification of the TCP protocol.",
+    "topic": "",
+    "conference": "tacas",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1007/978-3-030-45190-5_25"
+  },
+  {
+    "id": "10.1007/978-3-030-45190-5_26",
+    "title": "Rare Event Simulation for Non-Markovian Repairable Fault Trees",
+    "authors": [
+      "Carlos E. Budde",
+      "Marco Biagi",
+      "Raúl E. Monti",
+      "Pedro R. D’Argenio",
+      "Mariëlle Stoelinga"
+    ],
+    "abstract": "Dynamic fault trees (DFT) are widely adopted in industry to assess the dependability of safety-critical equipment. Since many systems are too large to be studied numerically, DFTs dependability is often analysed using Monte Carlo simulation. A bottleneck here is that many simulation samples are required in the case of rare events, e.g. in highly reliable systems where components fail seldomly. Rare event simulation (RES) provides techniques to reduce the number of samples in the case of rare events. We present a RES technique based on importance splitting, to study failures in highly reliable DFTs. Whereas RES usually requires meta-information from an expert, our method is fully automatic: By cleverly exploiting the fault tree structure we extract the so-called importance function. We handle DFTs with Markovian and non-Markovian failure and repair distributions—for which no numerical methods exist—and show the efficiency of our approach on several case studies.",
+    "topic": "",
+    "conference": "tacas",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1007/978-3-030-45190-5_26"
+  },
+  {
+    "id": "10.1007/978-3-030-45190-5_27",
+    "title": "FIG: The Finite Improbability Generator",
+    "authors": [
+      "Carlos E. Budde"
+    ],
+    "abstract": "This paper introduces the statistical model checker FIGV, that estimates transient and steady-state reachability properties in stochastic automata. This software tool specialises in Rare Event Simulation via importance splitting, and implements the algorithms RESTART and Fixed Effort. FIG is push-button automatic since the user need not define an importance function: this function is derived from the model specification plus the property query. The tool operates with Input/Output Stochastic Automata with Urgency, aka IOSA models, described either in the native syntax or in the JANI exchange format. The theory backing FIG has demonstrated good efficiency, comparable to optimal importance splitting implemented ad hoc for specific models. Written in C++, FIG can outperform other state-of-the-art tools for Rare Event Simulation.",
+    "topic": "",
+    "conference": "tacas",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1007/978-3-030-45190-5_27"
+  },
+  {
+    "id": "10.1007/978-3-030-45190-5_28",
+    "title": "Mora - Automatic Generation of Moment-Based Invariants",
+    "authors": [
+      "Ezio Bartocci",
+      "Laura Kovács",
+      "Miroslav Stankovič"
+    ],
+    "abstract": "We introduce Mora, an automated tool for generating invariants of probabilistic programs. Inputs to Mora are so-called Prob-solvable loops, that is probabilistic programs with polynomial assignments over random variables and parametrized distributions. Combining methods from symbolic computation and statistics, Mora computes invariant properties over higher-order moments of loop variables, expressing, for example, statistical properties, such as expected values and variances, over the value distribution of loop variables.",
+    "topic": "",
+    "conference": "tacas",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1007/978-3-030-45190-5_28"
+  },
+  {
+    "id": "10.1007/978-3-030-45190-5_3",
+    "title": "Interpretation-Based Violation Witness Validation for C: NITWIT",
+    "authors": [
+      "Jan Švejda",
+      "Philipp Berger",
+      "Joost-Pieter Katoen"
+    ],
+    "abstract": "As software verification is gaining traction in academia and industry the number and complexity of verification tools is growing constantly. This initiated research and interest into exchangeable verification witnesses as well as tools for automated witness validation. Initial witness validators used model checkers that were amended to benefit from guidance information provided by the witness. This approach comes with substantial overhead. Second-generation execution-based validators traded speed for reduced strength in case of incomplete and non-exact witnesses. This was done by extracting test harnesses and compiling them with the original program. We present the nitwit tool, a new interpretation-based violation witness validator for C programs that is trimmed to be fast and memory efficient. It verifies a record number of witnesses of SV-COMP’20 in the ReachSafety category. Our novel tool exchanges initial compilation overhead and optimized execution for rapid startup performance. nitwit borrows C semantics from the compiler used for compilation. This offloads this hard-to-get-right task and enables using several compilers in parallel to inspect possible semantic differences.",
+    "topic": "",
+    "conference": "tacas",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1007/978-3-030-45190-5_3"
+  },
+  {
+    "id": "10.1007/978-3-030-45190-5_5",
+    "title": "Mind the Gap: Bit-vector Interpolation recast over Linear Integer Arithmetic",
+    "authors": [
+      "Takamasa Okudono",
+      "Andy King"
+    ],
+    "abstract": "Much of an interpolation engine for bit-vector (BV) arithmetic can be constructed by observing that BV arithmetic can be modeled with linear integer arithmetic (LIA). Two BV formulae can thus be translated into two LIA formulae and then an interpolation engine for LIA used to derive an interpolant, albeit one expressed in LIA. The construction is completed by back-translating the LIA interpolant into a BV formula whose models coincide with those of the LIA interpolant. This paper develops a back-translation algorithm showing, for the first time, how back-translation can be universally applied, whatever the LIA interpolant. This avoids the need for deriving a BV interpolant by bit-blasting the BV formulae, as a backup process when back-translation fails. The new back-translation process relies on a novel geometric technique, called gapping, the correctness and practicality of which are demonstrated.",
+    "topic": "",
+    "conference": "tacas",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1007/978-3-030-45190-5_5"
+  },
+  {
+    "id": "10.1007/978-3-030-45190-5_6",
+    "title": "Automated and Sound Synthesis of Lyapunov Functions with SMT Solvers",
+    "authors": [
+      "Daniele Ahmed",
+      "Andrea Peruffo",
+      "Alessandro Abate"
+    ],
+    "abstract": "In this paper we employ SMT solvers to soundly synthesise Lyapunov functions that assert the stability of a given dynamical model. The search for a Lyapunov function is framed as the satisfiability of a second-order logical formula, asking whether there exists a function satisfying a desired specification (stability) for all possible initial conditions of the model. We synthesise Lyapunov functions for linear, non-linear (polynomial), and for parametric models. For non-linear models, the algorithm also determines a region of validity for the Lyapunov function. We exploit an inductive framework to synthesise Lyapunov functions, starting from parametric templates. The inductive framework comprises two elements: a learner proposes a Lyapunov function, and a verifier checks its validity - its lack is expressed via a counterexample (a point over the state space), for further use by the learner. Whilst the verifier uses the SMT solver Z3, thus ensuring the overall soundness of the procedure, we examine two alternatives for the learner: a numerical approach based on the optimisation tool Gurobi, and a sound approach based again on Z3. The overall technique is evaluated over a broad set of benchmarks, which shows that this methodology not only scales to 10-dimensional models within reasonable computational time, but also offers a novel soundness proof for the generated Lyapunov functions and their domains of validity.",
+    "topic": "",
+    "conference": "tacas",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1007/978-3-030-45190-5_6"
+  },
+  {
+    "id": "10.1007/978-3-030-45190-5_7",
+    "title": "A Study of Symmetry Breaking Predicates and Model Counting",
+    "authors": [
+      "Wenxi Wang",
+      "Muhammad Usman",
+      "Alyas Almaawi",
+      "Kaiyuan Wang",
+      "Kuldeep S. Meel",
+      "Sarfraz Khurshid"
+    ],
+    "abstract": "Propositional model counting is a classic problem that has recently witnessed many technical advances and novel applications. While the basic model counting problem requires computing the number of all solutions to the given formula, in some important application scenarios, the desired count is not of all solutions, but instead, of all unique solutions up to isomorphism. In such a scenario, the user herself must try to either use the full count that the model counter returns to compute the count up to isomorphism, or ensure that the input formula to the model counter adequately captures the symmetry breaking predicates so it can directly report the count she desires. We study the use of CNF-level and domain-level symmetry breaking predicates in the context of the state-of-the-art in model counting, specifically the leading approximate model counter ApproxMC and the recently introduced exact model counter ProjMC. As benchmarks, we use a range of problems, including structurally complex specifications of software systems and constraint satisfaction problems. The results show that while it is sometimes feasible to compute the model counts up to isomorphism using the full counts that are computed by the model counters, doing so suffers from poor scalability. The addition of symmetry breaking predicates substantially assists model counters. Domain-specific predicates are particularly useful, and in many cases can provide full symmetry breaking to enable highly efficient model counting up to isomorphism. We hope our study motivates new research on designing model counters that directly account for symmetries to facilitate further applications of model counting.",
+    "topic": "",
+    "conference": "tacas",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1007/978-3-030-45190-5_7"
+  },
+  {
+    "id": "10.1007/978-3-030-45190-5_8",
+    "title": "MUST: Minimal Unsatisfiable Subsets Enumeration Tool",
+    "authors": [
+      "Jaroslav Bendík",
+      "Ivana Černá"
+    ],
+    "abstract": "In many areas of computer science, we are given an unsatisfiable set of constraints with the goal to provide an insight into the unsatisfiability. One of common approaches is to identify minimal unsatisfiable subsets (MUSes) of the constraint set. The more MUSes are identified, the better insight is obtained. However, since there can be up to exponentially many MUSes, their complete enumeration might be intractable. Therefore, we focus on algorithms that enumerate MUSes online, i.e. one by one, and thus can find at least some MUSes even in the intractable cases. Since MUSes find applications in different constraint domains and new applications still arise, there have been proposed several domain agnostic algorithms. Such algorithms can be applied in any constraint domain and thus theoretically serve as ready-to-use solutions for all the emerging applications. However, there are almost no domain agnostic tools, i.e. tools that both implement domain agnostic algorithms and can be easily extended to support any constraint domain. In this work, we close this gap by introducing a domain agnostic tool called MUST. Our tool outperforms other existing domain agnostic tools and moreover, it is even competitive to fully domain specific solutions.",
+    "topic": "",
+    "conference": "tacas",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1007/978-3-030-45190-5_8"
+  },
+  {
+    "id": "10.1007/978-3-030-45190-5_9",
+    "title": "Safe Decomposition of Startup Requirements: Verification and Synthesis",
+    "authors": [
+      "Alessandro Cimatti",
+      "Luca Geatti",
+      "Alberto Griggio",
+      "Greg Kimberly",
+      "Stefano Tonetta"
+    ],
+    "abstract": "The initialization of complex cyber-physical systems often requires the interaction of various components that must start up with strict timing requirements on the provision of signals (power, refrigeration, light, etc.). In order to safely allow an independent development of components, it is necessary to ensure a safe decomposition, i.e. the specification of local timing requirements that prevent later integration errors due to the dependencies. We propose a high-level formalism to model local timing requirements and dependencies. We consider the problem of checking the consistency (existence of an execution satisfying the requirements) and compatibility (absence of an execution that reaches an integration error) of the local requirements, and the problem of synthesizing a region of timing constraints that represents all possible correct refinements of the original specification. We show how the problems can be naturally translated into a model checking and synthesis problem for timed automata with shared variables. Exploiting the linear structure of the requirements, we propose an encoding of the problem into SMT. We evaluate the SMT-based approach using MathSAT and show how it scales better than the automata-based approach using Uppaal and nuXmv.",
+    "topic": "",
+    "conference": "tacas",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1007/978-3-030-45190-5_9"
+  },
+  {
+    "id": "10.1007/978-3-030-45237-7_1",
+    "title": "An O(m log n) algorithm for branching bisimilarity on labelled transition systems",
+    "authors": [
+      "David N. Jansen",
+      "Jan Friso Groote",
+      "Jeroen J. A. Keiren",
+      "Anton Wijs"
+    ],
+    "abstract": "Branching bisimilarity is a behavioural equivalence relation on labelled transition systems (LTSs) that takes internal actions into account. It has the traditional advantage that algorithms for branching bisimilarity are more efficient than ones for other weak behavioural equivalences, especially weak bisimilarity. With m the number of transitions and n the number of states, the classic $${O\\left( {m n}\\right) }$$ algorithm was recently replaced by an $$O({m (\\log \\left| { Act }\\right| + \\log n)})$$ algorithm [9], which is unfortunately rather complex. This paper combines its ideas with the ideas from Valmari [20], resulting in a simpler $$O({m \\log n})$$ algorithm. Benchmarks show that in practice this algorithm is also faster and often far more memory efficient than its predecessors, making it the best option for branching bisimulation minimisation and preprocessing for calculating other weak equivalences on LTSs.",
+    "topic": "",
+    "conference": "tacas",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1007/978-3-030-45237-7_1"
+  },
+  {
+    "id": "10.1007/978-3-030-45237-7_10",
+    "title": "What’s Decidable About Program Verification Modulo Axioms?",
+    "authors": [
+      "Umang Mathur",
+      "P. Madhusudan",
+      "Mahesh Viswanathan"
+    ],
+    "abstract": "We consider the decidability of the verification problem of programs modulo axioms — automatically verifying whether programs satisfy their assertions, when the function and relation symbols are interpreted as arbitrary functions and relations that satisfy a set of first-order axioms. Though verification of uninterpreted programs (with no axioms) is already undecidable, a recent work introduced a subclass of coherent uninterpreted programs, and showed that they admit decidable verification [26]. We undertake a systematic study of various natural axioms for relations and functions, and study the decidability of the coherent verification problem. Axioms include relations being reflexive, symmetric, transitive, or total order relations, functions restricted to being associative, idempotent or commutative, and combinations of such axioms as well. Our comprehensive results unearth a rich landscape that shows that though several axiom classes admit decidability for coherent programs, coherence is not a panacea as several others continue to be undecidable.",
+    "topic": "",
+    "conference": "tacas",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1007/978-3-030-45237-7_10"
+  },
+  {
+    "id": "10.1007/978-3-030-45237-7_11",
+    "title": "Formalized Proofs of the Infinity and Normal Form Predicates in the First-Order Theory of Rewriting",
+    "authors": [
+      "Alexander Lochmann",
+      "Aart Middeldorp"
+    ],
+    "abstract": "We present a formalized proof of the regularity of the infinity predicate on ground terms. This predicate plays an important role in the first-order theory of rewriting because it allows to express the termination property. The paper also contains a formalized proof of a direct tree automaton construction of the normal form predicate, due to Comon.",
+    "topic": "",
+    "conference": "tacas",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1007/978-3-030-45237-7_11"
+  },
+  {
+    "id": "10.1007/978-3-030-45237-7_12",
+    "title": "Fold/Unfold Transformations for Fixpoint Logic",
+    "authors": [
+      "Naoki Kobayashi",
+      "Grigory Fedyukovich",
+      "Aarti Gupta"
+    ],
+    "abstract": "Fixpoint logics have recently been drawing attention as common foundations for automated program verification. We formalize fold/unfold transformations for fixpoint logic formulas and show how they can be used to enhance a recent fixpoint-logic approach to automated program verification, including automated verification of relational and temporal properties. We have implemented the transformations in a tool and confirmed its effectiveness through experiments.",
+    "topic": "",
+    "conference": "tacas",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1007/978-3-030-45237-7_12"
+  },
+  {
+    "id": "10.1007/978-3-030-45237-7_13",
+    "title": "Verifying OpenJDK’s LinkedList using KeY",
+    "authors": [
+      "Hans-Dieter A. Hiep",
+      "Olaf Maathuis",
+      "Jinting Bian",
+      "Frank S. de Boer",
+      "Marko van Eekelen",
+      "Stijn de Gouw"
+    ],
+    "abstract": "As a particular case study of the formal verification of state-of-the-art, real software, we discuss the specification and verification of a corrected version of the implementation of a linked list as provided by the Java Collection framework.",
+    "topic": "",
+    "conference": "tacas",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1007/978-3-030-45237-7_13"
+  },
+  {
+    "id": "10.1007/978-3-030-45237-7_14",
+    "title": "Analysing installation scenarios of Debian packages",
+    "authors": [
+      "Benedikt Becker",
+      "Nicolas Jeannerod",
+      "Claude Marché",
+      "Yann Régis-Gianas",
+      "Mihaela Sighireanu",
+      "Ralf Treinen"
+    ],
+    "abstract": "The Debian distribution includes more than 28 thousand maintainer scripts, almost all of them are written in P osix shell. These scripts are executed with root privileges at installation, update, and removal of a package, which make them critical for system maintenance. While Debian policy provides guidance for package maintainers producing the scripts, few tools exist to check the compliance of a script to it. We report on the application of a formal verification approach based on symbolic execution to find violations of some non-trivial properties required by Debian policy in maintainer scripts. We present our methodology and give an overview of our toolchain. We obtained promising results: our toolchain is effective in analysing a large set of Debian maintainer scripts and it pointed out over 150 policy violations that lead to reports (more than half already fixed) on the Debian Bug Tracking system.",
+    "topic": "",
+    "conference": "tacas",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1007/978-3-030-45237-7_14"
+  },
+  {
+    "id": "10.1007/978-3-030-45237-7_15",
+    "title": "Endicheck: Dynamic Analysis for Detecting Endianness Bugs",
+    "authors": [
+      "Roman Kápl",
+      "Pavel Parízek"
+    ],
+    "abstract": "Computers store numbers in two mutually incompatible ways: little-endian or big-endian. They differ in the order of bytes within representation of numbers. This ordering is called endianness. When two computer systems, programs or devices communicate, they must agree on which endianness to use, in order to avoid misinterpretation of numeric data values.\nWe present Endicheck, a dynamic analysis tool for detecting endianness bugs, which is based on the popular Valgrind framework. It helps developers to find those code locations in their program where they forgot to swap bytes properly. Endicheck requires less source code annotations than existing tools, such as Sparse used by Linux kernel developers, and it can also detect potential bugs that would only manifest if the given program was run on computer with an opposite endianness. Our approach has been evaluated and validated on the Radeon SI Linux OpenGL driver, which is known to contain endianness-related bugs, and on several open-source programs. Results of experiments show that Endicheck can successfully identify many endianness-related bugs and provide useful diagnostic messages together with the source code locations of respective bugs.",
+    "topic": "",
+    "conference": "tacas",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1007/978-3-030-45237-7_15"
+  },
+  {
+    "id": "10.1007/978-3-030-45237-7_16",
+    "title": "Describing and Simulating Concurrent Quantum Systems",
+    "authors": [
+      "Richard Bornat",
+      "Jaap Boender",
+      "Florian Kammueller",
+      "Guillaume Poly",
+      "Rajagopal Nagarajan"
+    ],
+    "abstract": "We present a programming language for describing and analysing concurrent quantum systems. We have an interpreter for programs in the language, using a symbolic rather than a numeric calculator, and we give its performance on examples from quantum communication and cryptography.",
+    "topic": "",
+    "conference": "tacas",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1007/978-3-030-45237-7_16"
+  },
+  {
+    "id": "10.1007/978-3-030-45237-7_17",
+    "title": "EMTST: Engineering the Meta-theory of Session Types",
+    "authors": [
+      "David Castro",
+      "Francisco Ferreira",
+      "Nobuko Yoshida"
+    ],
+    "abstract": "Session types provide a principled programming discipline for structured interactions. They represent a wide spectrum of type-systems for concurrency. Their type safety is thus extremely important. EMTST is a tool to aid in representing and validating theorems about session types in the Coq proof assistant. On paper, these proofs are often tricky, and error prone. In proof assistants, they are typically long and difficult to prove. In this work, we propose a library that helps validate the theory of session types calculi in proof assistants. As a case study, we study two of the most used binary session types systems: we show the impossibility of representing the first system in $$\\alpha $$ -equivalent representations, and we prove type preservation for the revisited system. We develop our tool in the Coq proof assistant, using locally nameless for binders and small scale reflection to simplify the handling of linear typing environments.",
+    "topic": "",
+    "conference": "tacas",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1007/978-3-030-45237-7_17"
+  },
+  {
+    "id": "10.1007/978-3-030-45237-7_18",
+    "title": "Solving Mean-Payoff Games via Quasi Dominions",
+    "authors": [
+      "Massimo Benerecetti",
+      "Daniele Dell’Erba",
+      "Fabio Mogavero"
+    ],
+    "abstract": "We propose a novel algorithm for the solution of mean-payoff games that merges together two seemingly unrelated concepts introduced in the context of parity games, small progress measures and quasi dominions . We show that the integration of the two notions can be highly beneficial and significantly speeds up convergence to the problem solution. Experiments show that the resulting algorithm performs orders of magnitude better than the asymptotically-best solution algorithm currently known, without sacrificing on the worst-case complexity.",
+    "topic": "",
+    "conference": "tacas",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1007/978-3-030-45237-7_18"
+  },
+  {
+    "id": "10.1007/978-3-030-45237-7_19",
+    "title": "Partial-Order Reduction for Parity Games with an Application on Parameterised Boolean Equation Systems",
+    "authors": [
+      "Thomas Neele",
+      "Tim A. C. Willemse",
+      "Wieger Wesselink"
+    ],
+    "abstract": "Partial-order reduction (POR) is a well-established technique to combat the problem of state-space explosion. We propose POR techniques that are sound for parity games, a well-established formalism for solving a variety of decision problems. As a consequence, we obtain the first POR method that is sound for model checking for the full modal $$\\mu $$ -calculus. Our technique is applied to, and implemented for the fixed point logic called parameterised Boolean equation systems , which provides a high-level representation of parity games. Experiments indicate that substantial reductions can be achieved.",
+    "topic": "",
+    "conference": "tacas",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1007/978-3-030-45237-7_19"
+  },
+  {
+    "id": "10.1007/978-3-030-45237-7_2",
+    "title": "Verifying Quantum Communication Protocols with Ground Bisimulation",
+    "authors": [
+      "Xudong Qin",
+      "Yuxin Deng",
+      "Wenjie Du"
+    ],
+    "abstract": "One important application of quantum process algebras is to formally verify quantum communication protocols. With a suitable notion of behavioural equivalence and a decision method, one can determine if an implementation of a protocol is consistent with its specification. Ground bisimulation is a convenient behavioural equivalence for quantum processes because of its associated coinduction proof technique. We exploit this technique to design and implement two on-the-fly algorithms for the strong and weak versions of ground bisimulation to check if two given processes in quantum CCS are equivalent. We then develop a tool that can verify interesting quantum protocols such as the BB84 quantum key distribution scheme.",
+    "topic": "",
+    "conference": "tacas",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1007/978-3-030-45237-7_2"
+  },
+  {
+    "id": "10.1007/978-3-030-45237-7_20",
+    "title": "Polynomial Identification of $$\\omega $$-Automata",
+    "authors": [
+      "Dana Angluin",
+      "Dana Fisman",
+      "Yaara Shoval"
+    ],
+    "abstract": "We study identification in the limit using polynomial time and data for models of $$\\omega $$ -automata. On the negative side we show that non-deterministic $$\\omega $$ -automata (of types Büchi, coBüchi, Parity or Muller) can not be polynomially learned in the limit. On the positive side we show that the $$\\omega $$ -language classes $$\\mathbb {IB}$$ , $$\\mathbb {IC}$$ , $$\\mathbb {IP}$$ , and $$\\mathbb {IM}$$ that are defined by deterministic Büchi, coBüchi, parity, and Muller acceptors that are isomorphic to their right-congruence automata (that is, the right congruences of languages in these classes are fully informative) are identifiable in the limit using polynomial time and data. We further show that for these classes a characteristic sample can be constructed in polynomial time.",
+    "topic": "",
+    "conference": "tacas",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1007/978-3-030-45237-7_20"
+  },
+  {
+    "id": "10.1007/978-3-030-45237-7_21",
+    "title": "Advances in Automatic Software Verification: SV-COMP 2020",
+    "authors": [
+      "Dirk Beyer"
+    ],
+    "abstract": "This report describes the 2020 Competition on Software Verification (SV-COMP), the 9 $$^{\\text {th}}$$ edition of a series of comparative evaluations of fully automatic software verifiers for C and Java programs. The competition provides a snapshot of the current state of the art in the area, and has a strong focus on replicability of its results. The competition was based on 11 052 verification tasks for C programs and 416 verification tasks for Java programs. Each verification task consisted of a program and a property (reachability, memory safety, overflows, termination). SV-COMP 2020 had 28 participating verification systems from 11 countries.",
+    "topic": "",
+    "conference": "tacas",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1007/978-3-030-45237-7_21"
+  },
+  {
+    "id": "10.1007/978-3-030-45237-7_22",
+    "title": "2LS: Heap Analysis and Memory Safety",
+    "authors": [
+      "Viktor Malík",
+      "Peter Schrammel",
+      "Tomáš Vojnar"
+    ],
+    "abstract": "2LS is a framework for analysis of sequential C programs based on the CPROVER infrastructure and template-based synthesis techniques for checking both safety and termination. The paper presents the main improvements done in 2LS since 2018, which concern mainly the way 2LS handles dynamically allocated objects and structures as well as combinations of abstract domains.",
+    "topic": "",
+    "conference": "tacas",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1007/978-3-030-45237-7_22"
+  },
+  {
+    "id": "10.1007/978-3-030-45237-7_23",
+    "title": "COASTAL: Combining Concolic and Fuzzing for Java (Competition Contribution)",
+    "authors": [
+      "Willem Visser",
+      "Jaco Geldenhuys"
+    ],
+    "abstract": "COASTAL is a program analysis tool for Java programs. It combines concolic execution and fuzz testing in a framework with built-in concurrency, allowing the two approaches to cooperate naturally.",
+    "topic": "",
+    "conference": "tacas",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1007/978-3-030-45237-7_23"
+  },
+  {
+    "id": "10.1007/978-3-030-45237-7_24",
+    "title": "Dartagnan: Bounded Model Checking for Weak Memory Models (Competition Contribution)",
+    "authors": [
+      "Hernán Ponce-de-León",
+      "Florian Furbach",
+      "Keijo Heljanko",
+      "Roland Meyer"
+    ],
+    "abstract": "Dartagnan is a bounded model checker for concurrent programs under weak memory models. What makes it different from other tools is that the memory model is not hard-coded inside Dartagnan but taken as part of the input. For SV-COMP ’20, we take as input sequential consistency (i.e. the standard interleaving memory model) extended by support for atomic blocks. Our point is to demonstrate that a universal tool can be competitive and perform well in SV-COMP . Being a bounded model checker, Dartagnan ’s focus is on disproving safety properties by finding counterexample executions. For programs with bounded loops, Dartagnan performs an iterative unwinding that results in a complete analysis. The SV-COMP ’20 version of Dartagnan works on Boogie code. The C programs of the competition are translated internally to Boogie using SMACK .",
+    "topic": "",
+    "conference": "tacas",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1007/978-3-030-45237-7_24"
+  },
+  {
+    "id": "10.1007/978-3-030-45237-7_25",
+    "title": "VeriAbs : Verification by Abstraction and Test Generation (Competition Contribution)",
+    "authors": [
+      "Mohammad Afzal",
+      "Supratik Chakraborty",
+      "Avriti Chauhan",
+      "Bharti Chimdyalwar",
+      "Priyanka Darke",
+      "Ashutosh Gupta",
+      "Shrawan Kumar",
+      "Charles Babu M",
+      "Divyesh Unadkat",
+      "R Venkatesh"
+    ],
+    "abstract": "VeriAbs is a strategy selection based reachability verifier for C code. It analyzes the structure of loops, and intervals of inputs to choose one of the four verification strategies implemented in VeriAbs. In this paper, we present VeriAbs version 1.4 with updates in three strategies. We add an array verification technique called full-program induction , and enhance the existing techniques of loop pruning, k -path interval analysis, and disjunctive loop summarization. These changes have improved the verification of programs with arrays, and unstructured loops and unstructured control flows.",
+    "topic": "",
+    "conference": "tacas",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1007/978-3-030-45237-7_25"
+  },
+  {
+    "id": "10.1007/978-3-030-45237-7_26",
+    "title": "GACAL: Conjecture-Based Verification",
+    "authors": [
+      "Benjamin Quiring",
+      "Panagiotis Manolios"
+    ],
+    "abstract": "GACAL verifies C programs by searching over the space of possible invariants, using traces of the input program to identify potential invariants. GACAL uses the ACL2s theorem prover to verify these potential invariants, using an interface provided by ACL2s for connecting with external tools. GACAL iteratively searches for and proves invariants of increasing complexity until the program is verified.",
+    "topic": "",
+    "conference": "tacas",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1007/978-3-030-45237-7_26"
+  },
+  {
+    "id": "10.1007/978-3-030-45237-7_27",
+    "title": "Java Ranger at SV-COMP 2020 (Competition Contribution)",
+    "authors": [
+      "Vaibhav Sharma",
+      "Soha Hussein",
+      "Michael W. Whalen",
+      "Stephen McCamant",
+      "Willem Visser"
+    ],
+    "abstract": "Path-merging is a known technique for accelerating symbolic execution. One technique, named “veritesting” by Avgerinos et al. uses summaries of bounded control-flow regions and has been shown to accelerate symbolic execution of binary code. But, when applied to symbolic execution of Java code, veritesting needs to be extended to summarize dynamically dispatched methods and exceptional control-flow. Such an extension of veritesting has been implemented in Java Ranger by implementing as an extension of Symbolic PathFinder, a symbolic executor for Java bytecode. In this paper, we briefly describe the architecture of Java Ranger and describe its setup for SV-COMP 2020.",
+    "topic": "",
+    "conference": "tacas",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1007/978-3-030-45237-7_27"
+  },
+  {
+    "id": "10.1007/978-3-030-45237-7_28",
+    "title": "JDart: Dynamic Symbolic Execution for Java Bytecode (Competition Contribution)",
+    "authors": [
+      "Malte Mues",
+      "Falk Howar"
+    ],
+    "abstract": "JD art performs dynamic symbolic execution of J ava programs: it executes programs with concrete inputs while recording symbolic constraints on executed program paths. A constraint solver is then used for generating new concrete values from recorded constraints that drive execution along previously unexplored paths. JD art is built on top of the Java PathFinder software model checker and uses the JC onstraints library for the integration of constraint solvers.",
+    "topic": "",
+    "conference": "tacas",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1007/978-3-030-45237-7_28"
+  },
+  {
+    "id": "10.1007/978-3-030-45237-7_29",
+    "title": "Map2Check: Using Symbolic Execution and Fuzzing",
+    "authors": [
+      "Herbert Rocha",
+      "Rafael Menezes",
+      "Lucas C. Cordeiro",
+      "Raimundo Barreto"
+    ],
+    "abstract": "Map2Check is a software verification tool that combines fuzzing, symbolic execution, and inductive invariants. It automatically checks safety properties in C programs by adopting source code instrumentation to monitor data (e.g., memory pointers) from the program’s executions using LLVM compiler infrastructure. For SV-COMP 2020, we extended Map2Check to exploit an iterative deepening approach using LibFuzzer and Klee to check for safety properties. We also use Crab-LLVM to infer program invariants based on reachability analysis. Experimental results show that Map2Check can handle a wide variety of safety properties in several intricate verification tasks from SV-COMP 2020.",
+    "topic": "",
+    "conference": "tacas",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1007/978-3-030-45237-7_29"
+  },
+  {
+    "id": "10.1007/978-3-030-45237-7_3",
+    "title": "Deciding the Bisimilarity of Context-Free Session Types",
+    "authors": [
+      "Bernardo Almeida",
+      "Andreia Mordido",
+      "Vasco T. Vasconcelos"
+    ],
+    "abstract": "We present an algorithm to decide the equivalence of context-free session types, practical to the point of being incorporated in a compiler. We prove its soundness and completeness. We further evaluate its behaviour in practice. In the process, we introduce an algorithm to decide the bisimilarity of simple grammars.",
+    "topic": "",
+    "conference": "tacas",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1007/978-3-030-45237-7_3"
+  },
+  {
+    "id": "10.1007/978-3-030-45237-7_30",
+    "title": "PredatorHP Revamped (Not Only) for Interval-Sized Memory Regions and Memory Reallocation (Competition Contribution)",
+    "authors": [
+      "Petr Peringer",
+      "Veronika Šoková",
+      "Tomáš Vojnar"
+    ],
+    "abstract": "This paper concentrates on improvements of the PredatorHP shape analyzer in the past two years, including, e.g., improved handling of interval-sized memory regions or new support of memory reallocation. The paper characterizes PredatorHP’s participation in SV-COMP 2020, pointing out its strengths and weakness and the way they were influenced by the latest changes in the tool.",
+    "topic": "",
+    "conference": "tacas",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1007/978-3-030-45237-7_30"
+  },
+  {
+    "id": "10.1007/978-3-030-45237-7_31",
+    "title": "Symbiotic 7: Integration of Predator and More",
+    "authors": [
+      "Marek Chalupa",
+      "Tomáš Jašek",
+      "Lukáš Tomovič",
+      "Martin Hruška",
+      "Veronika Šoková",
+      "Paulína Ayaziová",
+      "Jan Strejček",
+      "Tomáš Vojnar"
+    ],
+    "abstract": "Symbiotic 7 brings improvements in all parts of the tool. In particular, we integrated the advanced shape analysis implemented in Predator to our instrumentation process for memory safety checking. Further, we extended our slicer to correctly handle non-terminating programs. This new slicing is applied in termination analysis, where we also added instrumentation for detection of simple cycles in the program state space. The witness generation process changed as well.",
+    "topic": "",
+    "conference": "tacas",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1007/978-3-030-45237-7_31"
+  },
+  {
+    "id": "10.1007/978-3-030-45237-7_32",
+    "title": "Ultimate Taipan with Symbolic Interpretation and Fluid Abstractions",
+    "authors": [
+      "Daniel Dietsch",
+      "Matthias Heizmann",
+      "Alexander Nutz",
+      "Claus Schätzle",
+      "Frank Schüssele"
+    ],
+    "abstract": "Ultimate Taipan is a software model checker that combines trace abstraction with abstract interpretation on path programs. In this year’s version, we replaced our abstract interpretation engine and now use a combination of multiple abstraction functions, fixpoint computation, algebraic program analysis, and SMT solving. Our new approach will allow us to integrate new techniques more easily.",
+    "topic": "",
+    "conference": "tacas",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1007/978-3-030-45237-7_32"
+  },
+  {
+    "id": "10.1007/978-3-030-45237-7_4",
+    "title": "Sharp Congruences Adequate with Temporal Logics Combining Weak and Strong Modalities",
+    "authors": [
+      "Frédéric Lang",
+      "Radu Mateescu",
+      "Franco Mazzanti"
+    ],
+    "abstract": "We showed in a recent paper that, when verifying a modal $$\\mu $$ -calculus formula, the actions of the system under verification can be partitioned into sets of so-called weak and strong actions, depending on the combination of weak and strong modalities occurring in the formula. In a compositional verification setting, where the system consists of processes executing in parallel, this partition allows us to decide whether each individual process can be minimized for either divergence-preserving branching (if the process contains only weak actions) or strong (otherwise) bisimilarity, while preserving the truth value of the formula. In this paper, we refine this idea by devising a family of bisimilarity relations, named sharp bisimilarities, parameterized by the set of strong actions. We show that these relations have all the nice properties necessary to be used for compositional verification, in particular congruence and adequacy with the logic. We also illustrate their practical utility on several examples and case-studies, and report about our success in the RERS 2019 model checking challenge.",
+    "topic": "",
+    "conference": "tacas",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1007/978-3-030-45237-7_4"
+  },
+  {
+    "id": "10.1007/978-3-030-45237-7_6",
+    "title": "Highly Automated Formal Proofs over Memory Usage of Assembly Code",
+    "authors": [
+      "Freek Verbeek",
+      "Joshua A. Bockenek",
+      "Binoy Ravindran"
+    ],
+    "abstract": "We present a methodology for generating a characterization of the memory used by an assembly program, as well as a formal proof that the assembly is bounded to the generated memory regions. A formal proof of memory usage is required for compositional reasoning over assembly programs. Moreover, it can be used to prove low-level security properties, such as integrity of the return address of a function. Our verification method is based on interactive theorem proving, but provides automation by generating pre- and postconditions, invariants, control-flow, and assumptions on memory layout. As a case study, three binaries of the Xen hypervisor are disassembled. These binaries are the result of a complex build-chain compiling production code, and contain various complex and nested loops, large and compound data structures, and functions with over 100 basic blocks. The methodology has been successfully applied to 251 functions, covering 12,252 assembly instructions.",
+    "topic": "",
+    "conference": "tacas",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1007/978-3-030-45237-7_6"
+  },
+  {
+    "id": "10.1007/978-3-030-45237-7_8",
+    "title": "CPU Energy Meter: A Tool for Energy-Aware Algorithms Engineering",
+    "authors": [
+      "Dirk Beyer",
+      "Philipp Wendler"
+    ],
+    "abstract": "Verification algorithms are among the most resource-intensive computation tasks. Saving energy is important for our living environment and to save cost in data centers. Yet, researchers compare the efficiency of algorithms still in terms of consumption of CPU time (or even wall time). Perhaps one reason for this is that measuring energy consumption of computational processes is not as convenient as measuring the consumed time and there is no sufficient tool support. To close this gap, we contribute CPU Energy Meter , a small tool that takes care of reading the energy values that Intel CPUs track inside the chip. In order to make energy measurements as easy as possible, we integrated CPU Energy Meter into BenchExec , a benchmarking tool that is already used by many researchers and competitions in the domain of formal methods. As evidence for usefulness, we explored the energy consumption of some state-of-the-art verifiers and report some interesting insights, for example, that energy consumption is not necessarily correlated with CPU time.",
+    "topic": "",
+    "conference": "tacas",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1007/978-3-030-45237-7_8"
+  },
+  {
+    "id": "10.1007/978-3-030-45237-7_9",
+    "title": "Practical Machine-Checked Formalization of Change Impact Analysis",
+    "authors": [
+      "Karl Palmskog",
+      "Ahmet Celik",
+      "Milos Gligoric"
+    ],
+    "abstract": "Change impact analysis techniques determine the components affected by a change to a software system, and are used as part of many program analysis techniques and tools, e.g., in regression test selection, build systems, and compilers. The correctness of such analyses usually depends both on domain-specific properties and change impact analysis, and is rarely established formally, which is detrimental to trustworthiness. We present a formalization of change impact analysis with machine-checked proofs of correctness in the Coq proof assistant. Our formal model factors out domain-specific concerns and captures system components and their interrelations in terms of dependency graphs. Using compositionality, we also capture hierarchical impact analysis formally for the first time, which, e.g., can capture when impacted files are used to locate impacted tests inside those files. We refined our verified impact analysis for performance, extracted it to efficient executable OCaml code, and integrated it with a regression test selection tool, one regression proof selection tool, and one build system, replacing their existing impact analyses. We then evaluated the resulting toolchains on several open source projects, and our results show that the toolchains run with only small differences compared to the original running time. We believe our formalization can provide a basis for formally proving domain-specific techniques using change impact analysis correct, and our verified code can be integrated with additional tools to increase their reliability.",
+    "topic": "",
+    "conference": "tacas",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1007/978-3-030-45237-7_9"
+  }
+]
