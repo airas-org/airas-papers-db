@@ -492,6 +492,124 @@
     "paper_url": "https://doi.org/10.1093/bioinformatics/btae231"
   },
   {
+    "id": "10.1093/bioinformatics/btae244",
+    "title": "AttentionPert: accurately modeling multiplexed genetic perturbations with multi-scale effects",
+    "authors": [
+      "Bai D",
+      "Ellington CN",
+      "Mo S",
+      "Song L",
+      "Xing EP"
+    ],
+    "abstract": "<h4>Motivation</h4>Genetic perturbations (e.g. knockouts, variants) have laid the foundation for our understanding of many diseases, implicating pathogenic mechanisms and indicating therapeutic targets. However, experimental assays are fundamentally limited by the number of measurable perturbations. Computational methods can fill this gap by predicting perturbation effects under novel conditions, but accurately predicting the transcriptional responses of cells to unseen perturbations remains a significant challenge.<h4>Results</h4>We address this by developing a novel attention-based neural network, AttentionPert, which accurately predicts gene expression under multiplexed perturbations and generalizes to unseen conditions. AttentionPert integrates global and local effects in a multi-scale model, representing both the nonuniform system-wide impact of the genetic perturbation and the localized disturbance in a network of gene-gene similarities, enhancing its ability to predict nuanced transcriptional responses to both single and multi-gene perturbations. In comprehensive experiments, AttentionPert demonstrates superior performance across multiple datasets outperforming the state-of-the-art method in predicting differential gene expressions and revealing novel gene regulations. AttentionPert marks a significant improvement over current methods, particularly in handling the diversity of gene perturbations and in predicting out-of-distribution scenarios.<h4>Availability and implementation</h4>Code is available at https://github.com/BaiDing1234/AttentionPert.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btae244"
+  },
+  {
+    "id": "10.1093/bioinformatics/btae238",
+    "title": "Improving medical reasoning through retrieval and self-reflection with retrieval-augmented large language models",
+    "authors": [
+      "Jeong M",
+      "Sohn J",
+      "Sung M",
+      "Kang J"
+    ],
+    "abstract": "<h4>Summary</h4>Recent proprietary large language models (LLMs), such as GPT-4, have achieved a milestone in tackling diverse challenges in the biomedical domain, ranging from multiple-choice questions to long-form generations. To address challenges that still cannot be handled with the encoded knowledge of LLMs, various retrieval-augmented generation (RAG) methods have been developed by searching documents from the knowledge corpus and appending them unconditionally or selectively to the input of LLMs for generation. However, when applying existing methods to different domain-specific problems, poor generalization becomes apparent, leading to fetching incorrect documents or making inaccurate judgments. In this paper, we introduce Self-BioRAG, a framework reliable for biomedical text that specializes in generating explanations, retrieving domain-specific documents, and self-reflecting generated responses. We utilize 84k filtered biomedical instruction sets to train Self-BioRAG that can assess its generated explanations with customized reflective tokens. Our work proves that domain-specific components, such as a retriever, domain-related document corpus, and instruction sets are necessary for adhering to domain-related instructions. Using three major medical question-answering benchmark datasets, experimental results of Self-BioRAG demonstrate significant performance gains by achieving a 7.2% absolute improvement on average over the state-of-the-art open-foundation model with a parameter size of 7B or less. Similarly, Self-BioRAG outperforms RAG by 8% Rouge-1 score in generating more proficient answers on two long-form question-answering benchmarks on average. Overall, we analyze that Self-BioRAG finds the clues in the question, retrieves relevant documents if needed, and understands how to answer with information from retrieved documents and encoded knowledge as a medical expert does. We release our data and code for training our framework components and model weights (7B and 13B) to enhance capabilities in biomedical and clinical domains.<h4>Availability and implementation</h4>Self-BioRAG is available at https://github.com/dmis-lab/self-biorag.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btae238"
+  },
+  {
+    "id": "10.1093/bioinformatics/btae255",
+    "title": "A machine-learning-based alternative to phylogenetic bootstrap",
+    "authors": [
+      "Ecker N",
+      "Huchon D",
+      "Mansour Y",
+      "Mayrose I",
+      "Pupko T"
+    ],
+    "abstract": "<h4>Motivation</h4>Currently used methods for estimating branch support in phylogenetic analyses often rely on the classic Felsenstein's bootstrap, parametric tests, or their approximations. As these branch support scores are widely used in phylogenetic analyses, having accurate, fast, and interpretable scores is of high importance.<h4>Results</h4>Here, we employed a data-driven approach to estimate branch support values with a probabilistic interpretation. To this end, we simulated thousands of realistic phylogenetic trees and the corresponding multiple sequence alignments. Each of the obtained alignments was used to infer the phylogeny using state-of-the-art phylogenetic inference software, which was then compared to the true tree. Using these extensive data, we trained machine-learning algorithms to estimate branch support values for each bipartition within the maximum-likelihood trees obtained by each software. Our results demonstrate that our model provides fast and more accurate probability-based branch support values than commonly used procedures. We demonstrate the applicability of our approach on empirical datasets.<h4>Availability and implementation</h4>The data supporting this work are available in the Figshare repository at https://doi.org/10.6084/m9.figshare.25050554.v1, and the underlying code is accessible via GitHub at https://github.com/noaeker/bootstrap_repo.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btae255"
+  },
+  {
+    "id": "10.1093/bioinformatics/btae210",
+    "title": "Efficient parameter estimation for ODE models of cellular processes using semi-quantitative data",
+    "authors": [
+      "Dorešić D",
+      "Grein S",
+      "Hasenauer J"
+    ],
+    "abstract": "<h4>Motivation</h4>Quantitative dynamical models facilitate the understanding of biological processes and the prediction of their dynamics. The parameters of these models are commonly estimated from experimental data. Yet, experimental data generated from different techniques do not provide direct information about the state of the system but a nonlinear (monotonic) transformation of it. For such semi-quantitative data, when this transformation is unknown, it is not apparent how the model simulations and the experimental data can be compared.<h4>Results</h4>We propose a versatile spline-based approach for the integration of a broad spectrum of semi-quantitative data into parameter estimation. We derive analytical formulas for the gradients of the hierarchical objective function and show that this substantially increases the estimation efficiency. Subsequently, we demonstrate that the method allows for the reliable discovery of unknown measurement transformations. Furthermore, we show that this approach can significantly improve the parameter inference based on semi-quantitative data in comparison to available methods.<h4>Availability and implementation</h4>Modelers can easily apply our method by using our implementation in the open-source Python Parameter EStimation TOolbox (pyPESTO) available at https://github.com/ICB-DCM/pyPESTO.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btae210"
+  },
+  {
+    "id": "10.1093/bioinformatics/btae208",
+    "title": "Teaching bioinformatics through the analysis of SARS-CoV-2: project-based training for computer science students",
+    "authors": [
+      "Poličar PG",
+      "Špendl M",
+      "Curk T",
+      "Zupan B"
+    ],
+    "abstract": "<h4>Motivation</h4>We learn more effectively through experience and reflection than through passive reception of information. Bioinformatics offers an excellent opportunity for project-based learning. Molecular data are abundant and accessible in open repositories, and important concepts in biology can be rediscovered by reanalyzing the data.<h4>Results</h4>In the manuscript, we report on five hands-on assignments we designed for master's computer science students to train them in bioinformatics for genomics. These assignments are the cornerstones of our introductory bioinformatics course and are centered around the study of the severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2). They assume no prior knowledge of molecular biology but do require programming skills. Through these assignments, students learn about genomes and genes, discover their composition and function, relate SARS-CoV-2 to other viruses, and learn about the body's response to infection. Student evaluation of the assignments confirms their usefulness and value, their appropriate mastery-level difficulty, and their interesting and motivating storyline.<h4>Availability and implementation</h4>The course materials are freely available on GitHub at https://github.com/IB-ULFRI.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btae208"
+  },
+  {
+    "id": "10.1093/bioinformatics/btae211",
+    "title": "Enhancing Hi-C contact matrices for loop detection with Capricorn: a multiview diffusion model",
+    "authors": [
+      "Fang T",
+      "Liu Y",
+      "Woicik A",
+      "Lu M",
+      "Jha A",
+      "Wang X",
+      "Li G",
+      "Hristov B",
+      "Liu Z",
+      "Xu H",
+      "Noble WS",
+      "Wang S"
+    ],
+    "abstract": "<h4>Motivation</h4>High-resolution Hi-C contact matrices reveal the detailed three-dimensional architecture of the genome, but high-coverage experimental Hi-C data are expensive to generate. Simultaneously, chromatin structure analyses struggle with extremely sparse contact matrices. To address this problem, computational methods to enhance low-coverage contact matrices have been developed, but existing methods are largely based on resolution enhancement methods for natural images and hence often employ models that do not distinguish between biologically meaningful contacts, such as loops and other stochastic contacts.<h4>Results</h4>We present Capricorn, a machine learning model for Hi-C resolution enhancement that incorporates small-scale chromatin features as additional views of the input Hi-C contact matrix and leverages a diffusion probability model backbone to generate a high-coverage matrix. We show that Capricorn outperforms the state of the art in a cross-cell-line setting, improving on existing methods by 17% in mean squared error and 26% in F1 score for chromatin loop identification from the generated high-coverage data. We also demonstrate that Capricorn performs well in the cross-chromosome setting and cross-chromosome, cross-cell-line setting, improving the downstream loop F1 score by 14% relative to existing methods. We further show that our multiview idea can also be used to improve several existing methods, HiCARN and HiCNN, indicating the wide applicability of this approach. Finally, we use DNA sequence to validate discovered loops and find that the fraction of CTCF-supported loops from Capricorn is similar to those identified from the high-coverage data. Capricorn is a powerful Hi-C resolution enhancement method that enables scientists to find chromatin features that cannot be identified in the low-coverage contact matrix.<h4>Availability and implementation</h4>Implementation of Capricorn and source code for reproducing all figures in this paper are available at https://github.com/CHNFTQ/Capricorn.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btae211"
+  },
+  {
+    "id": "10.1093/bioinformatics/btae256",
+    "title": "MolPLA: a molecular pretraining framework for learning cores, R-groups and their linker joints",
+    "authors": [
+      "Gim M",
+      "Park J",
+      "Park S",
+      "Lee S",
+      "Baek S",
+      "Lee J",
+      "Nguyen NQ",
+      "Kang J"
+    ],
+    "abstract": "<h4>Motivation</h4>Molecular core structures and R-groups are essential concepts in drug development. Integration of these concepts with conventional graph pre-training approaches can promote deeper understanding in molecules. We propose MolPLA, a novel pre-training framework that employs masked graph contrastive learning in understanding the underlying decomposable parts in molecules that implicate their core structure and peripheral R-groups. Furthermore, we formulate an additional framework that grants MolPLA the ability to help chemists find replaceable R-groups in lead optimization scenarios.<h4>Results</h4>Experimental results on molecular property prediction show that MolPLA exhibits predictability comparable to current state-of-the-art models. Qualitative analysis implicate that MolPLA is capable of distinguishing core and R-group sub-structures, identifying decomposable regions in molecules and contributing to lead optimization scenarios by rationally suggesting R-group replacements given various query core templates.<h4>Availability and implementation</h4>The code implementation for MolPLA and its pre-trained model checkpoint is available at https://github.com/dmis-lab/MolPLA.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btae256"
+  },
+  {
     "id": "10.1093/bioinformatics/btae263",
     "title": "Adaptive digital tissue deconvolution",
     "authors": [
@@ -660,124 +778,6 @@
     "conference": "ismb",
     "year": 2024,
     "paper_url": "https://doi.org/10.1093/bioinformatics/btae217"
-  },
-  {
-    "id": "10.1093/bioinformatics/btae244",
-    "title": "AttentionPert: accurately modeling multiplexed genetic perturbations with multi-scale effects",
-    "authors": [
-      "Bai D",
-      "Ellington CN",
-      "Mo S",
-      "Song L",
-      "Xing EP"
-    ],
-    "abstract": "<h4>Motivation</h4>Genetic perturbations (e.g. knockouts, variants) have laid the foundation for our understanding of many diseases, implicating pathogenic mechanisms and indicating therapeutic targets. However, experimental assays are fundamentally limited by the number of measurable perturbations. Computational methods can fill this gap by predicting perturbation effects under novel conditions, but accurately predicting the transcriptional responses of cells to unseen perturbations remains a significant challenge.<h4>Results</h4>We address this by developing a novel attention-based neural network, AttentionPert, which accurately predicts gene expression under multiplexed perturbations and generalizes to unseen conditions. AttentionPert integrates global and local effects in a multi-scale model, representing both the nonuniform system-wide impact of the genetic perturbation and the localized disturbance in a network of gene-gene similarities, enhancing its ability to predict nuanced transcriptional responses to both single and multi-gene perturbations. In comprehensive experiments, AttentionPert demonstrates superior performance across multiple datasets outperforming the state-of-the-art method in predicting differential gene expressions and revealing novel gene regulations. AttentionPert marks a significant improvement over current methods, particularly in handling the diversity of gene perturbations and in predicting out-of-distribution scenarios.<h4>Availability and implementation</h4>Code is available at https://github.com/BaiDing1234/AttentionPert.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2024,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btae244"
-  },
-  {
-    "id": "10.1093/bioinformatics/btae238",
-    "title": "Improving medical reasoning through retrieval and self-reflection with retrieval-augmented large language models",
-    "authors": [
-      "Jeong M",
-      "Sohn J",
-      "Sung M",
-      "Kang J"
-    ],
-    "abstract": "<h4>Summary</h4>Recent proprietary large language models (LLMs), such as GPT-4, have achieved a milestone in tackling diverse challenges in the biomedical domain, ranging from multiple-choice questions to long-form generations. To address challenges that still cannot be handled with the encoded knowledge of LLMs, various retrieval-augmented generation (RAG) methods have been developed by searching documents from the knowledge corpus and appending them unconditionally or selectively to the input of LLMs for generation. However, when applying existing methods to different domain-specific problems, poor generalization becomes apparent, leading to fetching incorrect documents or making inaccurate judgments. In this paper, we introduce Self-BioRAG, a framework reliable for biomedical text that specializes in generating explanations, retrieving domain-specific documents, and self-reflecting generated responses. We utilize 84k filtered biomedical instruction sets to train Self-BioRAG that can assess its generated explanations with customized reflective tokens. Our work proves that domain-specific components, such as a retriever, domain-related document corpus, and instruction sets are necessary for adhering to domain-related instructions. Using three major medical question-answering benchmark datasets, experimental results of Self-BioRAG demonstrate significant performance gains by achieving a 7.2% absolute improvement on average over the state-of-the-art open-foundation model with a parameter size of 7B or less. Similarly, Self-BioRAG outperforms RAG by 8% Rouge-1 score in generating more proficient answers on two long-form question-answering benchmarks on average. Overall, we analyze that Self-BioRAG finds the clues in the question, retrieves relevant documents if needed, and understands how to answer with information from retrieved documents and encoded knowledge as a medical expert does. We release our data and code for training our framework components and model weights (7B and 13B) to enhance capabilities in biomedical and clinical domains.<h4>Availability and implementation</h4>Self-BioRAG is available at https://github.com/dmis-lab/self-biorag.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2024,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btae238"
-  },
-  {
-    "id": "10.1093/bioinformatics/btae255",
-    "title": "A machine-learning-based alternative to phylogenetic bootstrap",
-    "authors": [
-      "Ecker N",
-      "Huchon D",
-      "Mansour Y",
-      "Mayrose I",
-      "Pupko T"
-    ],
-    "abstract": "<h4>Motivation</h4>Currently used methods for estimating branch support in phylogenetic analyses often rely on the classic Felsenstein's bootstrap, parametric tests, or their approximations. As these branch support scores are widely used in phylogenetic analyses, having accurate, fast, and interpretable scores is of high importance.<h4>Results</h4>Here, we employed a data-driven approach to estimate branch support values with a probabilistic interpretation. To this end, we simulated thousands of realistic phylogenetic trees and the corresponding multiple sequence alignments. Each of the obtained alignments was used to infer the phylogeny using state-of-the-art phylogenetic inference software, which was then compared to the true tree. Using these extensive data, we trained machine-learning algorithms to estimate branch support values for each bipartition within the maximum-likelihood trees obtained by each software. Our results demonstrate that our model provides fast and more accurate probability-based branch support values than commonly used procedures. We demonstrate the applicability of our approach on empirical datasets.<h4>Availability and implementation</h4>The data supporting this work are available in the Figshare repository at https://doi.org/10.6084/m9.figshare.25050554.v1, and the underlying code is accessible via GitHub at https://github.com/noaeker/bootstrap_repo.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2024,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btae255"
-  },
-  {
-    "id": "10.1093/bioinformatics/btae210",
-    "title": "Efficient parameter estimation for ODE models of cellular processes using semi-quantitative data",
-    "authors": [
-      "Dorešić D",
-      "Grein S",
-      "Hasenauer J"
-    ],
-    "abstract": "<h4>Motivation</h4>Quantitative dynamical models facilitate the understanding of biological processes and the prediction of their dynamics. The parameters of these models are commonly estimated from experimental data. Yet, experimental data generated from different techniques do not provide direct information about the state of the system but a nonlinear (monotonic) transformation of it. For such semi-quantitative data, when this transformation is unknown, it is not apparent how the model simulations and the experimental data can be compared.<h4>Results</h4>We propose a versatile spline-based approach for the integration of a broad spectrum of semi-quantitative data into parameter estimation. We derive analytical formulas for the gradients of the hierarchical objective function and show that this substantially increases the estimation efficiency. Subsequently, we demonstrate that the method allows for the reliable discovery of unknown measurement transformations. Furthermore, we show that this approach can significantly improve the parameter inference based on semi-quantitative data in comparison to available methods.<h4>Availability and implementation</h4>Modelers can easily apply our method by using our implementation in the open-source Python Parameter EStimation TOolbox (pyPESTO) available at https://github.com/ICB-DCM/pyPESTO.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2024,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btae210"
-  },
-  {
-    "id": "10.1093/bioinformatics/btae208",
-    "title": "Teaching bioinformatics through the analysis of SARS-CoV-2: project-based training for computer science students",
-    "authors": [
-      "Poličar PG",
-      "Špendl M",
-      "Curk T",
-      "Zupan B"
-    ],
-    "abstract": "<h4>Motivation</h4>We learn more effectively through experience and reflection than through passive reception of information. Bioinformatics offers an excellent opportunity for project-based learning. Molecular data are abundant and accessible in open repositories, and important concepts in biology can be rediscovered by reanalyzing the data.<h4>Results</h4>In the manuscript, we report on five hands-on assignments we designed for master's computer science students to train them in bioinformatics for genomics. These assignments are the cornerstones of our introductory bioinformatics course and are centered around the study of the severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2). They assume no prior knowledge of molecular biology but do require programming skills. Through these assignments, students learn about genomes and genes, discover their composition and function, relate SARS-CoV-2 to other viruses, and learn about the body's response to infection. Student evaluation of the assignments confirms their usefulness and value, their appropriate mastery-level difficulty, and their interesting and motivating storyline.<h4>Availability and implementation</h4>The course materials are freely available on GitHub at https://github.com/IB-ULFRI.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2024,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btae208"
-  },
-  {
-    "id": "10.1093/bioinformatics/btae211",
-    "title": "Enhancing Hi-C contact matrices for loop detection with Capricorn: a multiview diffusion model",
-    "authors": [
-      "Fang T",
-      "Liu Y",
-      "Woicik A",
-      "Lu M",
-      "Jha A",
-      "Wang X",
-      "Li G",
-      "Hristov B",
-      "Liu Z",
-      "Xu H",
-      "Noble WS",
-      "Wang S"
-    ],
-    "abstract": "<h4>Motivation</h4>High-resolution Hi-C contact matrices reveal the detailed three-dimensional architecture of the genome, but high-coverage experimental Hi-C data are expensive to generate. Simultaneously, chromatin structure analyses struggle with extremely sparse contact matrices. To address this problem, computational methods to enhance low-coverage contact matrices have been developed, but existing methods are largely based on resolution enhancement methods for natural images and hence often employ models that do not distinguish between biologically meaningful contacts, such as loops and other stochastic contacts.<h4>Results</h4>We present Capricorn, a machine learning model for Hi-C resolution enhancement that incorporates small-scale chromatin features as additional views of the input Hi-C contact matrix and leverages a diffusion probability model backbone to generate a high-coverage matrix. We show that Capricorn outperforms the state of the art in a cross-cell-line setting, improving on existing methods by 17% in mean squared error and 26% in F1 score for chromatin loop identification from the generated high-coverage data. We also demonstrate that Capricorn performs well in the cross-chromosome setting and cross-chromosome, cross-cell-line setting, improving the downstream loop F1 score by 14% relative to existing methods. We further show that our multiview idea can also be used to improve several existing methods, HiCARN and HiCNN, indicating the wide applicability of this approach. Finally, we use DNA sequence to validate discovered loops and find that the fraction of CTCF-supported loops from Capricorn is similar to those identified from the high-coverage data. Capricorn is a powerful Hi-C resolution enhancement method that enables scientists to find chromatin features that cannot be identified in the low-coverage contact matrix.<h4>Availability and implementation</h4>Implementation of Capricorn and source code for reproducing all figures in this paper are available at https://github.com/CHNFTQ/Capricorn.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2024,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btae211"
-  },
-  {
-    "id": "10.1093/bioinformatics/btae256",
-    "title": "MolPLA: a molecular pretraining framework for learning cores, R-groups and their linker joints",
-    "authors": [
-      "Gim M",
-      "Park J",
-      "Park S",
-      "Lee S",
-      "Baek S",
-      "Lee J",
-      "Nguyen NQ",
-      "Kang J"
-    ],
-    "abstract": "<h4>Motivation</h4>Molecular core structures and R-groups are essential concepts in drug development. Integration of these concepts with conventional graph pre-training approaches can promote deeper understanding in molecules. We propose MolPLA, a novel pre-training framework that employs masked graph contrastive learning in understanding the underlying decomposable parts in molecules that implicate their core structure and peripheral R-groups. Furthermore, we formulate an additional framework that grants MolPLA the ability to help chemists find replaceable R-groups in lead optimization scenarios.<h4>Results</h4>Experimental results on molecular property prediction show that MolPLA exhibits predictability comparable to current state-of-the-art models. Qualitative analysis implicate that MolPLA is capable of distinguishing core and R-group sub-structures, identifying decomposable regions in molecules and contributing to lead optimization scenarios by rationally suggesting R-group replacements given various query core templates.<h4>Availability and implementation</h4>The code implementation for MolPLA and its pre-trained model checkpoint is available at https://github.com/dmis-lab/MolPLA.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2024,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btae256"
   },
   {
     "id": "10.1093/bioinformatics/btae246",

@@ -455,6 +455,133 @@
     "paper_url": "https://doi.org/10.1093/bioinformatics/btab329"
   },
   {
+    "id": "10.1093/bioinformatics/btab285",
+    "title": "PathCNN: interpretable convolutional neural networks for survival prediction and pathway analysis applied to glioblastoma",
+    "authors": [
+      "Oh JH",
+      "Choi W",
+      "Ko E",
+      "Kang M",
+      "Tannenbaum A",
+      "Deasy JO"
+    ],
+    "abstract": "<h4>Motivation</h4>Convolutional neural networks (CNNs) have achieved great success in the areas of image processing and computer vision, handling grid-structured inputs and efficiently capturing local dependencies through multiple levels of abstraction. However, a lack of interpretability remains a key barrier to the adoption of deep neural networks, particularly in predictive modeling of disease outcomes. Moreover, because biological array data are generally represented in a non-grid structured format, CNNs cannot be applied directly.<h4>Results</h4>To address these issues, we propose a novel method, called PathCNN, that constructs an interpretable CNN model on integrated multi-omics data using a newly defined pathway image. PathCNN showed promising predictive performance in differentiating between long-term survival (LTS) and non-LTS when applied to glioblastoma multiforme (GBM). The adoption of a visualization tool coupled with statistical analysis enabled the identification of plausible pathways associated with survival in GBM. In summary, PathCNN demonstrates that CNNs can be effectively applied to multi-omics data in an interpretable manner, resulting in promising predictive power while identifying key biological correlates of disease.<h4>Availability and implementation</h4>The source code is freely available at: https://github.com/mskspi/PathCNN.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2021,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btab285"
+  },
+  {
+    "id": "10.1093/bioinformatics/btab309",
+    "title": "Cuttlefish: fast, parallel and low-memory compaction of de Bruijn graphs from large-scale genome collections",
+    "authors": [
+      "Khan J",
+      "Patro R"
+    ],
+    "abstract": "<h4>Motivation</h4>The construction of the compacted de Bruijn graph from collections of reference genomes is a task of increasing interest in genomic analyses. These graphs are increasingly used as sequence indices for short- and long-read alignment. Also, as we sequence and assemble a greater diversity of genomes, the colored compacted de Bruijn graph is being used more and more as the basis for efficient methods to perform comparative genomic analyses on these genomes. Therefore, time- and memory-efficient construction of the graph from reference sequences is an important problem.<h4>Results</h4>We introduce a new algorithm, implemented in the tool Cuttlefish, to construct the (colored) compacted de Bruijn graph from a collection of one or more genome references. Cuttlefish introduces a novel approach of modeling de Bruijn graph vertices as finite-state automata, and constrains these automata's state-space to enable tracking their transitioning states with very low memory usage. Cuttlefish is also fast and highly parallelizable. Experimental results demonstrate that it scales much better than existing approaches, especially as the number and the scale of the input references grow. On a typical shared-memory machine, Cuttlefish constructed the graph for 100 human genomes in under 9 h, using ∼29 GB of memory. On 11 diverse conifer plant genomes, the compacted graph was constructed by Cuttlefish in under 9 h, using ∼84 GB of memory. The only other tool completing these tasks on the hardware took over 23 h using ∼126 GB of memory, and over 16 h using ∼289 GB of memory, respectively.<h4>Availability and implementation</h4>Cuttlefish is implemented in C++14, and is available under an open source license at https://github.com/COMBINE-lab/cuttlefish.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2021,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btab309"
+  },
+  {
+    "id": "10.1093/bioinformatics/btab308",
+    "title": "Modeling drug combination effects via latent tensor reconstruction",
+    "authors": [
+      "Wang T",
+      "Szedmak S",
+      "Wang H",
+      "Aittokallio T",
+      "Pahikkala T",
+      "Cichonska A",
+      "Rousu J"
+    ],
+    "abstract": "<h4>Motivation</h4>Combination therapies have emerged as a powerful treatment modality to overcome drug resistance and improve treatment efficacy. However, the number of possible drug combinations increases very rapidly with the number of individual drugs in consideration, which makes the comprehensive experimental screening infeasible in practice. Machine-learning models offer time- and cost-efficient means to aid this process by prioritizing the most effective drug combinations for further pre-clinical and clinical validation. However, the complexity of the underlying interaction patterns across multiple drug doses and in different cellular contexts poses challenges to the predictive modeling of drug combination effects.<h4>Results</h4>We introduce comboLTR, highly time-efficient method for learning complex, non-linear target functions for describing the responses of therapeutic agent combinations in various doses and cancer cell-contexts. The method is based on a polynomial regression via powerful latent tensor reconstruction. It uses a combination of recommender system-style features indexing the data tensor of response values in different contexts, and chemical and multi-omics features as inputs. We demonstrate that comboLTR outperforms state-of-the-art methods in terms of predictive performance and running time, and produces highly accurate results even in the challenging and practical inference scenario where full dose-response matrices are predicted for completely new drug combinations with no available combination and monotherapy response measurements in any training cell line.<h4>Availability and implementation</h4>comboLTR code is available at https://github.com/aalto-ics-kepaco/ComboLTR.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2021,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btab308"
+  },
+  {
+    "id": "10.1093/bioinformatics/btab301",
+    "title": "Optimizing blood-brain barrier permeation through deep reinforcement learning for de novo drug design",
+    "authors": [
+      "Pereira T",
+      "Abbasi M",
+      "Oliveira JL",
+      "Ribeiro B",
+      "Arrais J"
+    ],
+    "abstract": "<h4>Motivation</h4>The process of placing new drugs into the market is time-consuming, expensive and complex. The application of computational methods for designing molecules with bespoke properties can contribute to saving resources throughout this process. However, the fundamental properties to be optimized are often not considered or conflicting with each other. In this work, we propose a novel approach to consider both the biological property and the bioavailability of compounds through a deep reinforcement learning framework for the targeted generation of compounds. We aim to obtain a promising set of selective compounds for the adenosine A2A receptor and, simultaneously, that have the necessary properties in terms of solubility and permeability across the blood-brain barrier to reach the site of action. The cornerstone of the framework is based on a recurrent neural network architecture, the Generator. It seeks to learn the building rules of valid molecules to sample new compounds further. Also, two Predictors are trained to estimate the properties of interest of the new molecules. Finally, the fine-tuning of the Generator was performed with reinforcement learning, integrated with multi-objective optimization and exploratory techniques to ensure that the Generator is adequately biased.<h4>Results</h4>The biased Generator can generate an interesting set of molecules, with approximately 85% having the two fundamental properties biased as desired. Thus, this approach has transformed a general molecule generator into a model focused on optimizing specific objectives. Furthermore, the molecules' synthesizability and drug-likeness demonstrate the potential applicability of the de novo drug design in medicinal chemistry.<h4>Availability and implementation</h4>All code is publicly available in the https://github.com/larngroup/De-Novo-Drug-Design.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2021,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btab301"
+  },
+  {
+    "id": "10.1093/bioinformatics/btab330",
+    "title": "Topology-based sparsification of graph annotations",
+    "authors": [
+      "Danciu D",
+      "Karasikov M",
+      "Mustafa H",
+      "Kahles A",
+      "Rätsch G"
+    ],
+    "abstract": "<h4>Motivation</h4>Since the amount of published biological sequencing data is growing exponentially, efficient methods for storing and indexing this data are more needed than ever to truly benefit from this invaluable resource for biomedical research. Labeled de Bruijn graphs are a frequently-used approach for representing large sets of sequencing data. While significant progress has been made to succinctly represent the graph itself, efficient methods for storing labels on such graphs are still rapidly evolving.<h4>Results</h4>In this article, we present RowDiff, a new technique for compacting graph labels by leveraging expected similarities in annotations of vertices adjacent in the graph. RowDiff can be constructed in linear time relative to the number of vertices and labels in the graph, and in space proportional to the graph size. In addition, construction can be efficiently parallelized and distributed, making the technique applicable to graphs with trillions of nodes. RowDiff can be viewed as an intermediary sparsification step of the original annotation matrix and can thus naturally be combined with existing generic schemes for compressed binary matrices. Experiments on 10 000 RNA-seq datasets show that RowDiff combined with multi-BRWT results in a 30% reduction in annotation footprint over Mantis-MST, the previously known most compact annotation representation. Experiments on the sparser Fungi subset of the RefSeq collection show that applying RowDiff sparsification reduces the size of individual annotation columns stored as compressed bit vectors by an average factor of 42. When combining RowDiff with a multi-BRWT representation, the resulting annotation is 26 times smaller than Mantis-MST.<h4>Availability and implementation</h4>RowDiff is implemented in C++ within the MetaGraph framework. The source code and the data used in the experiments are publicly available at https://github.com/ratschlab/row_diff.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2021,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btab330"
+  },
+  {
+    "id": "10.1093/bioinformatics/btab289",
+    "title": "OncoThreads: visualization of large-scale longitudinal cancer molecular data",
+    "authors": [
+      "Harbig TA",
+      "Nusrat S",
+      "Mazor T",
+      "Wang Q",
+      "Thomson A",
+      "Bitter H",
+      "Cerami E",
+      "Gehlenborg N"
+    ],
+    "abstract": "<h4>Motivation</h4>Molecular profiling of patient tumors and liquid biopsies over time with next-generation sequencing technologies and new immuno-profile assays are becoming part of standard research and clinical practice. With the wealth of new longitudinal data, there is a critical need for visualizations for cancer researchers to explore and interpret temporal patterns not just in a single patient but across cohorts.<h4>Results</h4>To address this need we developed OncoThreads, a tool for the visualization of longitudinal clinical and cancer genomics and other molecular data in patient cohorts. The tool visualizes patient cohorts as temporal heatmaps and Sankey diagrams that support the interactive exploration and ranking of a wide range of clinical and molecular features. This allows analysts to discover temporal patterns in longitudinal data, such as the impact of mutations on response to a treatment, for example, emergence of resistant clones. We demonstrate the functionality of OncoThreads using a cohort of 23 glioma patients sampled at 2-4 timepoints.<h4>Availability and implementation</h4>Freely available at http://oncothreads.gehlenborglab.org. Implemented in Java Script using the cBioPortal web API as a backend.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2021,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btab289"
+  },
+  {
+    "id": "10.1093/bioinformatics/btab313",
+    "title": "Sequence-specific minimizers via polar sets",
+    "authors": [
+      "Zheng H",
+      "Kingsford C",
+      "Marçais G"
+    ],
+    "abstract": "<h4>Motivation</h4>Minimizers are efficient methods to sample k-mers from genomic sequences that unconditionally preserve sufficiently long matches between sequences. Well-established methods to construct efficient minimizers focus on sampling fewer k-mers on a random sequence and use universal hitting sets (sets of k-mers that appear frequently enough) to upper bound the sketch size. In contrast, the problem of sequence-specific minimizers, which is to construct efficient minimizers to sample fewer k-mers on a specific sequence such as the reference genome, is less studied. Currently, the theoretical understanding of this problem is lacking, and existing methods do not specialize well to sketch specific sequences.<h4>Results</h4>We propose the concept of polar sets, complementary to the existing idea of universal hitting sets. Polar sets are k-mer sets that are spread out enough on the reference, and provably specialize well to specific sequences. Link energy measures how well spread out a polar set is, and with it, the sketch size can be bounded from above and below in a theoretically sound way. This allows for direct optimization of sketch size. We propose efficient heuristics to construct polar sets, and via experiments on the human reference genome, show their practical superiority in designing efficient sequence-specific minimizers.<h4>Availability and implementation</h4>A reference implementation and code for analyses under an open-source license are at https://github.com/kingsford-group/polarset.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2021,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btab313"
+  },
+  {
+    "id": "10.1093/bioinformatics/btab294",
+    "title": "TITAN: T-cell receptor specificity prediction with bimodal attention networks",
+    "authors": [
+      "Weber A",
+      "Born J",
+      "Rodriguez Martínez M"
+    ],
+    "abstract": "<h4>Motivation</h4>The activity of the adaptive immune system is governed by T-cells and their specific T-cell receptors (TCR), which selectively recognize foreign antigens. Recent advances in experimental techniques have enabled sequencing of TCRs and their antigenic targets (epitopes), allowing to research the missing link between TCR sequence and epitope binding specificity. Scarcity of data and a large sequence space make this task challenging, and to date only models limited to a small set of epitopes have achieved good performance. Here, we establish a k-nearest-neighbor (K-NN) classifier as a strong baseline and then propose Tcr epITope bimodal Attention Networks (TITAN), a bimodal neural network that explicitly encodes both TCR sequences and epitopes to enable the independent study of generalization capabilities to unseen TCRs and/or epitopes.<h4>Results</h4>By encoding epitopes at the atomic level with SMILES sequences, we leverage transfer learning and data augmentation to enrich the input data space and boost performance. TITAN achieves high performance in the prediction of specificity of unseen TCRs (ROC-AUC 0.87 in 10-fold CV) and surpasses the results of the current state-of-the-art (ImRex) by a large margin. Notably, our Levenshtein-based K-NN classifier also exhibits competitive performance on unseen TCRs. While the generalization to unseen epitopes remains challenging, we report two major breakthroughs. First, by dissecting the attention heatmaps, we demonstrate that the sparsity of available epitope data favors an implicit treatment of epitopes as classes. This may be a general problem that limits unseen epitope performance for sufficiently complex models. Second, we show that TITAN nevertheless exhibits significantly improved performance on unseen epitopes and is capable of focusing attention on chemically meaningful molecular structures.<h4>Availability and implementation</h4>The code as well as the dataset used in this study is publicly available at https://github.com/PaccMann/TITAN.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2021,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btab294"
+  },
+  {
     "id": "10.1093/bioinformatics/btab300",
     "title": "Thermodynamic modeling reveals widespread multivalent binding by RNA-binding proteins",
     "authors": [
@@ -595,133 +722,6 @@
     "conference": "ismb",
     "year": 2021,
     "paper_url": "https://doi.org/10.1093/bioinformatics/btab270"
-  },
-  {
-    "id": "10.1093/bioinformatics/btab285",
-    "title": "PathCNN: interpretable convolutional neural networks for survival prediction and pathway analysis applied to glioblastoma",
-    "authors": [
-      "Oh JH",
-      "Choi W",
-      "Ko E",
-      "Kang M",
-      "Tannenbaum A",
-      "Deasy JO"
-    ],
-    "abstract": "<h4>Motivation</h4>Convolutional neural networks (CNNs) have achieved great success in the areas of image processing and computer vision, handling grid-structured inputs and efficiently capturing local dependencies through multiple levels of abstraction. However, a lack of interpretability remains a key barrier to the adoption of deep neural networks, particularly in predictive modeling of disease outcomes. Moreover, because biological array data are generally represented in a non-grid structured format, CNNs cannot be applied directly.<h4>Results</h4>To address these issues, we propose a novel method, called PathCNN, that constructs an interpretable CNN model on integrated multi-omics data using a newly defined pathway image. PathCNN showed promising predictive performance in differentiating between long-term survival (LTS) and non-LTS when applied to glioblastoma multiforme (GBM). The adoption of a visualization tool coupled with statistical analysis enabled the identification of plausible pathways associated with survival in GBM. In summary, PathCNN demonstrates that CNNs can be effectively applied to multi-omics data in an interpretable manner, resulting in promising predictive power while identifying key biological correlates of disease.<h4>Availability and implementation</h4>The source code is freely available at: https://github.com/mskspi/PathCNN.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2021,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btab285"
-  },
-  {
-    "id": "10.1093/bioinformatics/btab309",
-    "title": "Cuttlefish: fast, parallel and low-memory compaction of de Bruijn graphs from large-scale genome collections",
-    "authors": [
-      "Khan J",
-      "Patro R"
-    ],
-    "abstract": "<h4>Motivation</h4>The construction of the compacted de Bruijn graph from collections of reference genomes is a task of increasing interest in genomic analyses. These graphs are increasingly used as sequence indices for short- and long-read alignment. Also, as we sequence and assemble a greater diversity of genomes, the colored compacted de Bruijn graph is being used more and more as the basis for efficient methods to perform comparative genomic analyses on these genomes. Therefore, time- and memory-efficient construction of the graph from reference sequences is an important problem.<h4>Results</h4>We introduce a new algorithm, implemented in the tool Cuttlefish, to construct the (colored) compacted de Bruijn graph from a collection of one or more genome references. Cuttlefish introduces a novel approach of modeling de Bruijn graph vertices as finite-state automata, and constrains these automata's state-space to enable tracking their transitioning states with very low memory usage. Cuttlefish is also fast and highly parallelizable. Experimental results demonstrate that it scales much better than existing approaches, especially as the number and the scale of the input references grow. On a typical shared-memory machine, Cuttlefish constructed the graph for 100 human genomes in under 9 h, using ∼29 GB of memory. On 11 diverse conifer plant genomes, the compacted graph was constructed by Cuttlefish in under 9 h, using ∼84 GB of memory. The only other tool completing these tasks on the hardware took over 23 h using ∼126 GB of memory, and over 16 h using ∼289 GB of memory, respectively.<h4>Availability and implementation</h4>Cuttlefish is implemented in C++14, and is available under an open source license at https://github.com/COMBINE-lab/cuttlefish.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2021,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btab309"
-  },
-  {
-    "id": "10.1093/bioinformatics/btab308",
-    "title": "Modeling drug combination effects via latent tensor reconstruction",
-    "authors": [
-      "Wang T",
-      "Szedmak S",
-      "Wang H",
-      "Aittokallio T",
-      "Pahikkala T",
-      "Cichonska A",
-      "Rousu J"
-    ],
-    "abstract": "<h4>Motivation</h4>Combination therapies have emerged as a powerful treatment modality to overcome drug resistance and improve treatment efficacy. However, the number of possible drug combinations increases very rapidly with the number of individual drugs in consideration, which makes the comprehensive experimental screening infeasible in practice. Machine-learning models offer time- and cost-efficient means to aid this process by prioritizing the most effective drug combinations for further pre-clinical and clinical validation. However, the complexity of the underlying interaction patterns across multiple drug doses and in different cellular contexts poses challenges to the predictive modeling of drug combination effects.<h4>Results</h4>We introduce comboLTR, highly time-efficient method for learning complex, non-linear target functions for describing the responses of therapeutic agent combinations in various doses and cancer cell-contexts. The method is based on a polynomial regression via powerful latent tensor reconstruction. It uses a combination of recommender system-style features indexing the data tensor of response values in different contexts, and chemical and multi-omics features as inputs. We demonstrate that comboLTR outperforms state-of-the-art methods in terms of predictive performance and running time, and produces highly accurate results even in the challenging and practical inference scenario where full dose-response matrices are predicted for completely new drug combinations with no available combination and monotherapy response measurements in any training cell line.<h4>Availability and implementation</h4>comboLTR code is available at https://github.com/aalto-ics-kepaco/ComboLTR.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2021,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btab308"
-  },
-  {
-    "id": "10.1093/bioinformatics/btab301",
-    "title": "Optimizing blood-brain barrier permeation through deep reinforcement learning for de novo drug design",
-    "authors": [
-      "Pereira T",
-      "Abbasi M",
-      "Oliveira JL",
-      "Ribeiro B",
-      "Arrais J"
-    ],
-    "abstract": "<h4>Motivation</h4>The process of placing new drugs into the market is time-consuming, expensive and complex. The application of computational methods for designing molecules with bespoke properties can contribute to saving resources throughout this process. However, the fundamental properties to be optimized are often not considered or conflicting with each other. In this work, we propose a novel approach to consider both the biological property and the bioavailability of compounds through a deep reinforcement learning framework for the targeted generation of compounds. We aim to obtain a promising set of selective compounds for the adenosine A2A receptor and, simultaneously, that have the necessary properties in terms of solubility and permeability across the blood-brain barrier to reach the site of action. The cornerstone of the framework is based on a recurrent neural network architecture, the Generator. It seeks to learn the building rules of valid molecules to sample new compounds further. Also, two Predictors are trained to estimate the properties of interest of the new molecules. Finally, the fine-tuning of the Generator was performed with reinforcement learning, integrated with multi-objective optimization and exploratory techniques to ensure that the Generator is adequately biased.<h4>Results</h4>The biased Generator can generate an interesting set of molecules, with approximately 85% having the two fundamental properties biased as desired. Thus, this approach has transformed a general molecule generator into a model focused on optimizing specific objectives. Furthermore, the molecules' synthesizability and drug-likeness demonstrate the potential applicability of the de novo drug design in medicinal chemistry.<h4>Availability and implementation</h4>All code is publicly available in the https://github.com/larngroup/De-Novo-Drug-Design.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2021,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btab301"
-  },
-  {
-    "id": "10.1093/bioinformatics/btab330",
-    "title": "Topology-based sparsification of graph annotations",
-    "authors": [
-      "Danciu D",
-      "Karasikov M",
-      "Mustafa H",
-      "Kahles A",
-      "Rätsch G"
-    ],
-    "abstract": "<h4>Motivation</h4>Since the amount of published biological sequencing data is growing exponentially, efficient methods for storing and indexing this data are more needed than ever to truly benefit from this invaluable resource for biomedical research. Labeled de Bruijn graphs are a frequently-used approach for representing large sets of sequencing data. While significant progress has been made to succinctly represent the graph itself, efficient methods for storing labels on such graphs are still rapidly evolving.<h4>Results</h4>In this article, we present RowDiff, a new technique for compacting graph labels by leveraging expected similarities in annotations of vertices adjacent in the graph. RowDiff can be constructed in linear time relative to the number of vertices and labels in the graph, and in space proportional to the graph size. In addition, construction can be efficiently parallelized and distributed, making the technique applicable to graphs with trillions of nodes. RowDiff can be viewed as an intermediary sparsification step of the original annotation matrix and can thus naturally be combined with existing generic schemes for compressed binary matrices. Experiments on 10 000 RNA-seq datasets show that RowDiff combined with multi-BRWT results in a 30% reduction in annotation footprint over Mantis-MST, the previously known most compact annotation representation. Experiments on the sparser Fungi subset of the RefSeq collection show that applying RowDiff sparsification reduces the size of individual annotation columns stored as compressed bit vectors by an average factor of 42. When combining RowDiff with a multi-BRWT representation, the resulting annotation is 26 times smaller than Mantis-MST.<h4>Availability and implementation</h4>RowDiff is implemented in C++ within the MetaGraph framework. The source code and the data used in the experiments are publicly available at https://github.com/ratschlab/row_diff.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2021,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btab330"
-  },
-  {
-    "id": "10.1093/bioinformatics/btab289",
-    "title": "OncoThreads: visualization of large-scale longitudinal cancer molecular data",
-    "authors": [
-      "Harbig TA",
-      "Nusrat S",
-      "Mazor T",
-      "Wang Q",
-      "Thomson A",
-      "Bitter H",
-      "Cerami E",
-      "Gehlenborg N"
-    ],
-    "abstract": "<h4>Motivation</h4>Molecular profiling of patient tumors and liquid biopsies over time with next-generation sequencing technologies and new immuno-profile assays are becoming part of standard research and clinical practice. With the wealth of new longitudinal data, there is a critical need for visualizations for cancer researchers to explore and interpret temporal patterns not just in a single patient but across cohorts.<h4>Results</h4>To address this need we developed OncoThreads, a tool for the visualization of longitudinal clinical and cancer genomics and other molecular data in patient cohorts. The tool visualizes patient cohorts as temporal heatmaps and Sankey diagrams that support the interactive exploration and ranking of a wide range of clinical and molecular features. This allows analysts to discover temporal patterns in longitudinal data, such as the impact of mutations on response to a treatment, for example, emergence of resistant clones. We demonstrate the functionality of OncoThreads using a cohort of 23 glioma patients sampled at 2-4 timepoints.<h4>Availability and implementation</h4>Freely available at http://oncothreads.gehlenborglab.org. Implemented in Java Script using the cBioPortal web API as a backend.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2021,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btab289"
-  },
-  {
-    "id": "10.1093/bioinformatics/btab313",
-    "title": "Sequence-specific minimizers via polar sets",
-    "authors": [
-      "Zheng H",
-      "Kingsford C",
-      "Marçais G"
-    ],
-    "abstract": "<h4>Motivation</h4>Minimizers are efficient methods to sample k-mers from genomic sequences that unconditionally preserve sufficiently long matches between sequences. Well-established methods to construct efficient minimizers focus on sampling fewer k-mers on a random sequence and use universal hitting sets (sets of k-mers that appear frequently enough) to upper bound the sketch size. In contrast, the problem of sequence-specific minimizers, which is to construct efficient minimizers to sample fewer k-mers on a specific sequence such as the reference genome, is less studied. Currently, the theoretical understanding of this problem is lacking, and existing methods do not specialize well to sketch specific sequences.<h4>Results</h4>We propose the concept of polar sets, complementary to the existing idea of universal hitting sets. Polar sets are k-mer sets that are spread out enough on the reference, and provably specialize well to specific sequences. Link energy measures how well spread out a polar set is, and with it, the sketch size can be bounded from above and below in a theoretically sound way. This allows for direct optimization of sketch size. We propose efficient heuristics to construct polar sets, and via experiments on the human reference genome, show their practical superiority in designing efficient sequence-specific minimizers.<h4>Availability and implementation</h4>A reference implementation and code for analyses under an open-source license are at https://github.com/kingsford-group/polarset.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2021,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btab313"
-  },
-  {
-    "id": "10.1093/bioinformatics/btab294",
-    "title": "TITAN: T-cell receptor specificity prediction with bimodal attention networks",
-    "authors": [
-      "Weber A",
-      "Born J",
-      "Rodriguez Martínez M"
-    ],
-    "abstract": "<h4>Motivation</h4>The activity of the adaptive immune system is governed by T-cells and their specific T-cell receptors (TCR), which selectively recognize foreign antigens. Recent advances in experimental techniques have enabled sequencing of TCRs and their antigenic targets (epitopes), allowing to research the missing link between TCR sequence and epitope binding specificity. Scarcity of data and a large sequence space make this task challenging, and to date only models limited to a small set of epitopes have achieved good performance. Here, we establish a k-nearest-neighbor (K-NN) classifier as a strong baseline and then propose Tcr epITope bimodal Attention Networks (TITAN), a bimodal neural network that explicitly encodes both TCR sequences and epitopes to enable the independent study of generalization capabilities to unseen TCRs and/or epitopes.<h4>Results</h4>By encoding epitopes at the atomic level with SMILES sequences, we leverage transfer learning and data augmentation to enrich the input data space and boost performance. TITAN achieves high performance in the prediction of specificity of unseen TCRs (ROC-AUC 0.87 in 10-fold CV) and surpasses the results of the current state-of-the-art (ImRex) by a large margin. Notably, our Levenshtein-based K-NN classifier also exhibits competitive performance on unseen TCRs. While the generalization to unseen epitopes remains challenging, we report two major breakthroughs. First, by dissecting the attention heatmaps, we demonstrate that the sparsity of available epitope data favors an implicit treatment of epitopes as classes. This may be a general problem that limits unseen epitope performance for sufficiently complex models. Second, we show that TITAN nevertheless exhibits significantly improved performance on unseen epitopes and is capable of focusing attention on chemically meaningful molecular structures.<h4>Availability and implementation</h4>The code as well as the dataset used in this study is publicly available at https://github.com/PaccMann/TITAN.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2021,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btab294"
   },
   {
     "id": "10.1093/bioinformatics/btab336",
