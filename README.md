@@ -54,6 +54,9 @@ Papers are collected from several source types, configured in `scripts/configs/c
 | `pmlr` | Proceedings of Machine Learning Research (`proceedings.mlr.press`) | AISTATS, UAI, COLT, AABI, PGM, MLCB |
 | `acl_anthology` | ACL Anthology XML | ACL, EMNLP, NAACL |
 | `openreview` | OpenReview search API (`/notes/search`) | ML4LMS, GEM, LMRL, GenBio |
+| `europepmc` | Europe PMC REST API | ISMB, PSB |
+| `drops` | DROPS / LIPIcs volume pages (Schloss Dagstuhl) | ITP |
+| `crossref` | Crossref REST API (+ Semantic Scholar for missing abstracts) | CAV, TACAS, CADE, IJCAR, CPP, LICS, POPL |
 
 NeurIPS' virtual-site JSON also carries the **Datasets & Benchmarks** and **Position
 Paper** tracks (504 and 43 papers in 2025), so those need no separate configuration.
@@ -70,6 +73,76 @@ These cover the protein-ligand structure and biomolecular design literature:
 | **GenBio** | Generative AI and Biology (NeurIPS/ICML) | 2023, 2025, 2026 |
 | **MLCB** | ML in Computational Biology (archival, PMLR) | 2021–2025 |
 
+### Formal methods & theorem-proving venues
+
+These cover interactive/automated theorem proving (Lean, Isabelle, Rocq/Coq),
+logic, and verification. They are deliberately the human-authored formalization
+and verification venues; the "AI does the proving" workshops (MATH-AI, AI4MATH)
+are not included. CORE ranks are ICORE2026.
+
+| Venue | Scope | CORE | Source | Editions |
+|-------|-------|------|--------|----------|
+| **ITP** | Interactive Theorem Proving — the home venue of Lean/Isabelle/Rocq formalization work | B | LIPIcs | 2019, 2021–2026 |
+| **CPP** | Certified Programs and Proofs (co-located with POPL) | B | ACM | 2019–2026 |
+| **CADE** | Conference on Automated Deduction (odd years) | A | Springer LNAI | 2019, 2021, 2023, 2025 |
+| **IJCAR** | International Joint Conference on Automated Reasoning (even years; merges CADE, ITP, TABLEAUX, FroCoS) | A | Springer LNAI | 2020, 2022, 2024, 2026 |
+| **CAV** | Computer Aided Verification | A* | Springer LNCS | 2019–2026 |
+| **TACAS** | Tools and Algorithms for the Construction and Analysis of Systems (ETAPS) | A | Springer LNCS | 2019–2026 |
+| **LICS** | ACM/IEEE Symposium on Logic in Computer Science | A* | ACM / IEEE | 2019–2025 |
+| **POPL** | Principles of Programming Languages (the POPL issue of PACMPL) | A* | ACM | 2019–2026 |
+
+ITP 2020 has no LIPIcs volume: that year ITP was merged into IJCAR 2020, so its
+papers are in `data/ijcar/2020.json`.
+
+#### DROPS (LIPIcs)
+
+Each LIPIcs volume page on `drops.dagstuhl.de` embeds a schema.org JSON-LD
+`PublicationVolume` listing every article with title, authors, abstract and
+keywords, so one request covers a whole proceedings. The config maps a year to
+its LIPIcs volume number. Front matter (article `.0`) and the complete-volume
+PDF are dropped.
+
+#### Crossref
+
+The `crossref` source enumerates a proceedings through the Crossref REST API.
+`match` selects the volume in one of three ways, and `year_overrides` patches it
+per edition:
+
+```json
+{
+    "name": "cade",
+    "source_type": "crossref",
+    "years": [2023, 2025],
+    "match": {"prefixes": ["10.1007"]},
+    "year_overrides": {
+        "2023": {"container_title": "Automated Deduction – CADE 29"},
+        "2025": {"container_title": "Automated Deduction – CADE 30"}
+    }
+}
+```
+
+- `container_title` — exact book title (Springer LNCS chapters carry the
+  conference name as their second container-title).
+- `container_title_contains` — substring of the proceedings title, for ACM and
+  IEEE, whose event metadata is inconsistent (CPP 2020 is filed under
+  "POPL '20"). This is a relevance-ranked search, so only the first page (1,000
+  records) is read.
+- `issn` + `issue` + `volume` — a journal issue. PACMPL's POPL issue is dated the
+  December before the conference, hence `date_from: "{prev_year}-10-01"` and a
+  per-year `volume` (PACMPL volume = year − 2016).
+
+`prefixes` restricts DOI prefixes (publishers). Corrections and errata, which
+publishers register as chapters of their own, are skipped.
+
+Springer and PACMPL deposit abstracts with Crossref; ACM proceedings and IEEE
+do not, so missing abstracts are filled in from the Semantic Scholar batch API
+(`/graph/v1/paper/batch`, anonymous, hence serialized with retries). Freshly
+published volumes (e.g. TACAS 2026) can lack abstracts on both sides for a
+while; the weekly run picks them up once deposited. CADE 2019 (LNAI 11716) is
+the one older volume Springer registered without abstracts, and Semantic Scholar
+and OpenAlex have none for most of it either, so about two thirds of its entries
+stay abstract-less.
+
 ### Sources deliberately not configured
 
 - **MLSB** (ML in Structural Biology) — the workshop is explicitly non-archival and
@@ -79,6 +152,16 @@ These cover the protein-ligand structure and biomolecular design literature:
 - **ICML 2026 / CVPR 2026** — the virtual-site JSON is still a 200-paper stub.
 - **ISMB / RECOMB / PSB** — no free proceedings API. DBLP has the TOCs but drops the
   connection after a few dozen requests and carries no abstracts.
+- **DBLP in general** — its search API now sits behind a JavaScript bot challenge
+  ("Making sure you're not a bot!"), so it cannot be used as an enumerator at all.
+- **MATH-AI / AI4MATH / AI4Science workshops** — AI-driven venues, out of scope
+  for this collection. (If ever wanted: the 2023–2024 MATH-AI, 2024–2025 AI4MATH,
+  and 2023–2025 AI4Science editions are searchable on OpenReview; MATH-AI
+  2025/2026 and AI4Science 2021/2022/2024 are not.)
+- **LICS 2026** — not yet deposited with Crossref.
+- **FM, FMCAD, VMCAI, ATVA, FSCD, CSL, CICM** — B/C-ranked formal-methods venues;
+  FSCD and CSL are LIPIcs and could be added with the `drops` source, the rest
+  are Springer LNCS and would use `crossref`.
 
 ### OpenReview access note
 
@@ -162,7 +245,7 @@ if papers:
 ├── scripts/
 │   ├── fetch_papers.py        # The main script to fetch and process data
 │   ├── configs/
-│   │   └── conferences.json # Configuration for target conferences
+│   │   └── conferences.jsonc # Configuration for target conferences
 └── README.md
 ```
 
@@ -192,7 +275,7 @@ This will fetch the latest data from all configured conferences and update the J
 We welcome contributions! Here are some ways you can help:
 
 1.  **Fork** the repository.
-2.  **Add/Update Configuration**: To add a new conference, edit `scripts/configs/conferences.json`.
+2.  **Add/Update Configuration**: To add a new conference, edit `scripts/configs/conferences.jsonc`.
 3.  **Create a Pull Request**: Submit a PR with a clear description of your changes.
 
 ## License

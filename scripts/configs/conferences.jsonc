@@ -216,5 +216,96 @@
             "2025": "JOURNAL:\"Pac Symp Biocomput\" AND PUB_YEAR:2025 AND SRC:MED",
             "2026": "JOURNAL:\"Pac Symp Biocomput\" AND PUB_YEAR:2026 AND SRC:MED"
         }
+    },
+    {
+        "name": "itp",
+        "source_type": "drops",
+        "volumes": {
+            "2019": 141,
+            "2021": 193,
+            "2022": 237,
+            "2023": 268,
+            "2024": 309,
+            "2025": 352,
+            "2026": 382
+        }
+    },
+    {
+        "name": "cpp",
+        "source_type": "crossref",
+        "years": [2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026],
+        "match": {
+            "container_title_contains": "Certified Programs and Proofs",
+            "prefixes": ["10.1145"]
+        }
+    },
+    {
+        "name": "cade",
+        "source_type": "crossref",
+        "years": [2019, 2021, 2023, 2025],
+        "match": {"prefixes": ["10.1007"]},
+        "year_overrides": {
+            "2019": {"container_title": "Automated Deduction – CADE 27"},
+            "2021": {"container_title": "Automated Deduction – CADE 28"},
+            "2023": {"container_title": "Automated Deduction – CADE 29"},
+            "2025": {"container_title": "Automated Deduction – CADE 30"}
+        }
+    },
+    {
+        "name": "ijcar",
+        "source_type": "crossref",
+        "years": [2020, 2022, 2024, 2026],
+        "match": {
+            "container_title": "Automated Reasoning",
+            "prefixes": ["10.1007"]
+        }
+    },
+    {
+        "name": "cav",
+        "source_type": "crossref",
+        "years": [2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026],
+        "match": {
+            "container_title": "Computer Aided Verification",
+            "prefixes": ["10.1007"]
+        }
+    },
+    {
+        "name": "tacas",
+        "source_type": "crossref",
+        "years": [2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026],
+        "match": {
+            "container_title": "Tools and Algorithms for the Construction and Analysis of Systems",
+            "prefixes": ["10.1007"]
+        }
+    },
+    {
+        "name": "lics",
+        "source_type": "crossref",
+        "years": [2019, 2020, 2021, 2022, 2023, 2024, 2025],
+        "match": {
+            "container_title_contains": "Symposium on Logic in Computer Science",
+            "prefixes": ["10.1145", "10.1109"]
+        }
+    },
+    {
+        "name": "popl",
+        "source_type": "crossref",
+        "years": [2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026],
+        "match": {
+            "issn": "2475-1421",
+            "issue": "POPL",
+            "prefixes": ["10.1145"],
+            "date_from": "{prev_year}-10-01"
+        },
+        "year_overrides": {
+            "2019": {"volume": 3},
+            "2020": {"volume": 4},
+            "2021": {"volume": 5},
+            "2022": {"volume": 6},
+            "2023": {"volume": 7},
+            "2024": {"volume": 8},
+            "2025": {"volume": 9},
+            "2026": {"volume": 10}
+        }
     }
 ]

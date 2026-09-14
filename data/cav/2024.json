@@ -1,0 +1,1042 @@
+[
+  {
+    "id": "10.1007/978-3-031-65630-9_13",
+    "title": "Marabou 2.0: A Versatile Formal Analyzer of Neural Networks",
+    "authors": [
+      "Haoze Wu",
+      "Omri Isac",
+      "Aleksandar Zeljić",
+      "Teruhiro Tagomori",
+      "Matthew Daggitt",
+      "Wen Kokke",
+      "Idan Refaeli",
+      "Guy Amir",
+      "Kyle Julian",
+      "Shahaf Bassan",
+      "Pei Huang",
+      "Ori Lahav",
+      "Min Wu",
+      "Min Zhang",
+      "Ekaterina Komendantskaya",
+      "Guy Katz",
+      "Clark Barrett"
+    ],
+    "abstract": "This paper serves as a comprehensive system description of version 2.0 of the Marabou framework for formal analysis of neural networks. We discuss the tool’s architectural design and highlight the major features and components introduced since its initial release.",
+    "topic": "",
+    "conference": "cav",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-65630-9_13"
+  },
+  {
+    "id": "10.1007/978-3-031-65630-9_16",
+    "title": "Enchanting Program Specification Synthesis by Large Language Models Using Static Analysis and Program Verification",
+    "authors": [
+      "Cheng Wen",
+      "Jialun Cao",
+      "Jie Su",
+      "Zhiwu Xu",
+      "Shengchao Qin",
+      "Mengda He",
+      "Haokun Li",
+      "Shing-Chi Cheung",
+      "Cong Tian"
+    ],
+    "abstract": "Formal verification provides a rigorous and systematic approach to ensure the correctness and reliability of software systems. Yet, constructing specifications for the full proof relies on domain expertise and non-trivial manpower. In view of such needs, an automated approach for specification synthesis is desired. While existing automated approaches are limited in their versatility, i.e. , they either focus only on synthesizing loop invariants for numerical programs, or are tailored for specific types of programs or invariants. Programs involving multiple complicated data types ( e.g. , arrays, pointers) and code structures ( e.g. , nested loops, function calls) are often beyond their capabilities. To help bridge this gap, we present AutoSpec , an automated approach to synthesize specifications for automated program verification. It overcomes the shortcomings of existing work in specification versatility, synthesizing satisfiable and adequate specifications for full proof. It is driven by static analysis and program verification, and is empowered by large language models (LLMs). AutoSpec addresses the practical challenges in three ways: (1) driving AutoSpec by static analysis and program verification, LLMs serve as generators to generate candidate specifications, (2) programs are decomposed to direct the attention of LLMs, and (3) candidate specifications are validated in each round to avoid error accumulation during the interaction with LLMs. In this way, AutoSpec can incrementally and iteratively generate satisfiable and adequate specifications. The evaluation shows its effectiveness and usefulness, as it outperforms existing works by successfully verifying 79% of programs through automatic specification synthesis, a significant improvement of 1.592x. It can also be successfully applied to verify the programs in a real-world X509-parser project.",
+    "topic": "",
+    "conference": "cav",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-65630-9_16"
+  },
+  {
+    "id": "10.1007/978-3-031-65630-9_4",
+    "title": "mypyvy: A Research Platform for Verification of Transition Systems in First-Order Logic",
+    "authors": [
+      "James R. Wilcox",
+      "Yotam M. Y. Feldman",
+      "Oded Padon",
+      "Sharon Shoham"
+    ],
+    "abstract": "is an open-source tool for specifying transition systems in first-order logic and reasoning about them. is particularly suitable for analyzing and verifying distributed algorithms. implements key functionalities needed for safety verification and provides flexible interfaces that make it useful not only as a verification tool but also as a research platform for developing verification techniques, and in particular invariant inference algorithms. Moreover, the input language is both simple and general, and the repository includes several dozen benchmarks—transition systems that model a wide range of distributed and concurrent algorithms. has supported several recent research efforts that benefited from its development framework and benchmark set.",
+    "topic": "",
+    "conference": "cav",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-65630-9_4"
+  },
+  {
+    "id": "10.1007/978-3-031-65630-9_1",
+    "title": "The VerCors Verifier: A Progress Report",
+    "authors": [
+      "Lukas Armborst",
+      "Pieter Bos",
+      "Lars B. van den Haak",
+      "Marieke Huisman",
+      "Robert Rubbens",
+      "Ömer Şakar",
+      "Philip Tasche"
+    ],
+    "abstract": "This paper gives an overview of the most recent developments on the VerCors verifier. VerCors is a deductive verifier for concurrent software, written in multiple programming languages, where the specifications are written in terms of pre-/postcondition contracts using permission-based separation logic. In essence, VerCors is a program transformation tool: it translates an annotated program into input for the Viper framework, which is then used as verification back-end. The paper discusses the different programming languages and features for which VerCors provides verification support. It also discusses how the tool internally has been reorganised to become easily extendible, and to improve the connection and interaction with Viper. In addition, we also introduce two tools built on top of VerCors, which support correctness-preserving transformations of verified programs. Finally, we discuss how the VerCors verifier has been used on a range of realistic case studies.",
+    "topic": "",
+    "conference": "cav",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-65630-9_1"
+  },
+  {
+    "id": "10.1007/978-3-031-65630-9_10",
+    "title": "Monitoring Unmanned Aircraft: Specification, Integration, and Lessons-Learned",
+    "authors": [
+      "Jan Baumeister",
+      "Bernd Finkbeiner",
+      "Florian Kohn",
+      "Florian Löhr",
+      "Guido Manfredi",
+      "Sebastian Schirmer",
+      "Christoph Torens"
+    ],
+    "abstract": "This paper reports on the integration of runtime monitoring into fully-electric aircraft designed by Volocopter, a German aircraft manufacturer of electric multi-rotor helicopters. The runtime monitor recognizes hazardous situations and system faults. Since the correct operation of the monitor is critical for the safety of the aircraft, the development of the monitor must follow strict aeronautical standards. This includes the integration of the monitor into different development environments, such as log-file analysis, hardware/software-in-the-loop testing, and test flights. We have used the stream-based monitoring framework RTLola to generate monitors for a range of requirements. In this paper, we present representative monitoring specifications and our lessons learned from integrating the generated monitors. Our main finding is that the specification and the integration need to be decoupled, because the specification remains stable throughout the development process, whereas the different development stages require a separate integration of the monitor into each environment. We achieve this decoupling with a novel abstraction layer in the monitoring framework that adapts the monitor to each environment without affecting the core component generated from the specification. The decoupling of the integration has also allowed us to react quickly to the frequent changes in the hardware and software environment of the monitor due to the fast-paced development of the aircraft in a startup company.",
+    "topic": "",
+    "conference": "cav",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-65630-9_10"
+  },
+  {
+    "id": "10.1007/978-3-031-65630-9_11",
+    "title": "Testing the Migration from Analog to Software-Based Railway Interlocking Systems",
+    "authors": [
+      "Anna Becchi",
+      "Alessandro Cimatti",
+      "Giuseppe Scaglione"
+    ],
+    "abstract": "We work in the context of a tool set developed for the Italian Railway Network supporting the migration of legacy relay-based interlocking systems to a new software-based implementation. We propose to generate test cases from the analog implementation in a way that they are significant for a comparison with a cycle-based computational model, by leveraging stable states abstraction. Our methodology found actual bugs in the new code that were missed by other analyses, and aids in documenting the expected differences with the legacy behaviors.",
+    "topic": "",
+    "conference": "cav",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-65630-9_11"
+  },
+  {
+    "id": "10.1007/978-3-031-65630-9_12",
+    "title": "soid: A Tool for Legal Accountability for Automated Decision Making",
+    "authors": [
+      "Samuel Judson",
+      "Matthew Elacqua",
+      "Filip Cano",
+      "Timos Antonopoulos",
+      "Bettina Könighofer",
+      "Scott J. Shapiro",
+      "Ruzica Piskac"
+    ],
+    "abstract": "We present $$\\textsf{soid}$$ , a tool for interrogating the decision making of autonomous agents using SMT-based automated reasoning. Relying on the Z3 SMT solver and KLEE symbolic execution engine, $$\\textsf{soid}$$ allows investigators to receive rigorously proven answers to factual and counterfactual queries about agent behavior, enabling effective legal and engineering accountability for harmful or otherwise incorrect decisions. We evaluate $$\\textsf{soid}$$ qualitatively and quantitatively on a pair of examples, i) a buggy implementation of a classic decision tree inference benchmark from the explainable AI (XAI) literature; and ii) a car crash in a simulated physics environment. For the latter, we also contribute the $$\\textsf{soid}\\hbox {-}\\!\\textsf{gui}$$ , a domain-specific, web-based example interface for legal and other practitioners to specify factual and counterfactual queries without requiring sophisticated programming or formal methods expertise.",
+    "topic": "",
+    "conference": "cav",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-65630-9_12"
+  },
+  {
+    "id": "10.1007/978-3-031-65630-9_14",
+    "title": "Monitizer: Automating Design and Evaluation of Neural Network Monitors",
+    "authors": [
+      "Muqsit Azeem",
+      "Marta Grobelna",
+      "Sudeep Kanav",
+      "Jan Křetínský",
+      "Stefanie Mohr",
+      "Sabine Rieder"
+    ],
+    "abstract": "The behavior of neural networks (NNs) on previously unseen types of data (out-of-distribution or OOD) is typically unpredictable. This can be dangerous if the network’s output is used for decision making in a safety-critical system. Hence, detecting that an input is OOD is crucial for the safe application of the NN. Verification approaches do not scale to practical NNs, making runtime monitoring more appealing for practical use. While various monitors have been suggested recently, their optimization for a given problem, as well as comparison with each other and reproduction of results, remain challenging.\nWe present a tool for users and developers of NN monitors. It allows for (i) application of various types of monitors from the literature to a given input NN, (ii) optimization of the monitor’s hyperparameters, and (iii) experimental evaluation and comparison to other approaches. Besides, it facilitates the development of new monitoring approaches. We demonstrate the tool’s usability on several use cases of different types of users as well as on a case study comparing different approaches from recent literature.",
+    "topic": "",
+    "conference": "cav",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-65630-9_14"
+  },
+  {
+    "id": "10.1007/978-3-031-65630-9_15",
+    "title": "Guiding Enumerative Program Synthesis with Large Language Models",
+    "authors": [
+      "Yixuan Li",
+      "Julian Parsert",
+      "Elizabeth Polgreen"
+    ],
+    "abstract": "Pre-trained Large Language Models (LLMs) are beginning to dominate the discourse around automatic code generation with natural language specifications. In contrast, the best-performing synthesizers in the domain of formal synthesis with precise logical specifications are still based on enumerative algorithms. In this paper, we evaluate the abilities of LLMs to solve formal synthesis benchmarks by carefully crafting a library of prompts for the domain. When one-shot synthesis fails, we propose a novel enumerative synthesis algorithm, which integrates calls to an LLM into a weighted probabilistic search. This allows the synthesizer to provide the LLM with information about the progress of the enumerator, and the LLM to provide the enumerator with syntactic guidance in an iterative loop. We evaluate our techniques on benchmarks from the Syntax-Guided Synthesis (SyGuS) competition. We find that GPT-3.5 as a stand-alone tool for formal synthesis is easily outperformed by state-of-the-art formal synthesis algorithms, but our approach integrating the LLM into an enumerative synthesis algorithm shows significant performance gains over both the LLM and the enumerative synthesizer alone and the winning SyGuS competition tool.",
+    "topic": "",
+    "conference": "cav",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-65630-9_15"
+  },
+  {
+    "id": "10.1007/978-3-031-65630-9_17",
+    "title": "Verifying Global Two-Safety Properties in Neural Networks with Confidence",
+    "authors": [
+      "Anagha Athavale",
+      "Ezio Bartocci",
+      "Maria Christakis",
+      "Matteo Maffei",
+      "Dejan Nickovic",
+      "Georg Weissenbacher"
+    ],
+    "abstract": "We present the first automated verification technique for confidence-based 2-safety properties, such as global robustness and global fairness, in deep neural networks (DNNs). Our approach combines self-composition to leverage existing reachability analysis techniques and a novel abstraction of the softmax function, which is amenable to automated verification. We characterize and prove the soundness of our static analysis technique. Furthermore, we implement it on top of Marabou, a safety analysis tool for neural networks, conducting a performance evaluation on several publicly available benchmarks for DNN verification.",
+    "topic": "",
+    "conference": "cav",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-65630-9_17"
+  },
+  {
+    "id": "10.1007/978-3-031-65630-9_18",
+    "title": "Certified Robust Accuracy of Neural Networks Are Bounded Due to Bayes Errors",
+    "authors": [
+      "Ruihan Zhang",
+      "Jun Sun"
+    ],
+    "abstract": "Adversarial examples pose a security threat to many critical systems built on neural networks. While certified training improves robustness, it also decreases accuracy noticeably. Despite various proposals for addressing this issue, the significant accuracy drop remains. More importantly, it is not clear whether there is a certain fundamental limit on achieving robustness whilst maintaining accuracy. In this work, we offer a novel perspective based on Bayes errors. By adopting Bayes error to robustness analysis, we investigate the limit of certified robust accuracy, taking into account data distribution uncertainties. We first show that the accuracy inevitably decreases in the pursuit of robustness due to changed Bayes error in the altered data distribution. Subsequently, we establish an upper bound for certified robust accuracy, considering the distribution of individual classes and their boundaries. Our theoretical results are empirically evaluated on real-world datasets and are shown to be consistent with the limited success of existing certified training results, e.g. , for CIFAR10, our analysis results in an upper bound (of certified robust accuracy) of 67.49%, meanwhile existing approaches are only able to increase it from 53.89% in 2017 to 62.84% in 2023.",
+    "topic": "",
+    "conference": "cav",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-65630-9_18"
+  },
+  {
+    "id": "10.1007/978-3-031-65630-9_19",
+    "title": "Boosting Few-Pixel Robustness Verification via Covering Verification Designs",
+    "authors": [
+      "Yuval Shapira",
+      "Naor Wiesel",
+      "Shahar Shabelman",
+      "Dana Drachsler-Cohen"
+    ],
+    "abstract": "Proving local robustness is crucial to increase the reliability of neural networks. While many verifiers prove robustness in $$L_\\infty \\ \\epsilon $$ -balls, very little work deals with robustness verification in $$L_0\\ \\epsilon $$ -balls, capturing robustness to few pixel attacks. This verification introduces a combinatorial challenge, because the space of pixels to perturb is discrete and of exponential size. A previous work relies on covering designs to identify sets for defining $$L_\\infty $$ neighborhoods, which if proven robust imply that the $$L_0\\ \\epsilon $$ -ball is robust. However, the number of neighborhoods to verify remains very high, leading to a high analysis time. We propose covering verification designs , a combinatorial design that tailors effective but analysis-incompatible coverings to $$L_0$$ robustness verification. The challenge is that computing a covering verification design introduces a high time and memory overhead, which is intensified in our setting, where multiple candidate coverings are required to identify how to reduce the overall analysis time. We introduce , an $$L_0$$ robustness verifier that selects between different candidate coverings without constructing them , but by predicting their block size distribution. This prediction relies on a theorem providing closed-form expressions for the mean and variance of this distribution. constructs the chosen covering verification design on-the-fly , while keeping the memory consumption minimal and enabling to parallelize the analysis. The experimental results show that reduces the verification time on average by up to 5.1x compared to prior work and that it scales to larger $$L_0\\ \\epsilon $$ -balls.",
+    "topic": "",
+    "conference": "cav",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-65630-9_19"
+  },
+  {
+    "id": "10.1007/978-3-031-65630-9_2",
+    "title": "Parsimonious Optimal Dynamic Partial Order Reduction",
+    "authors": [
+      "Parosh Aziz Abdulla",
+      "Mohamed Faouzi Atig",
+      "Sarbojit Das",
+      "Bengt Jonsson",
+      "Konstantinos Sagonas"
+    ],
+    "abstract": "Stateless model checking is a fully automatic verification technique for concurrent programs that checks for safety violations by exploring all possible thread schedulings. It becomes effective when coupled with Dynamic Partial Order Reduction (DPOR), which introduces an equivalence on schedulings and reduces the amount of needed exploration. DPOR algorithms that are optimal are particularly effective in that they guarantee to explore exactly one execution from each equivalence class. Unfortunately, existing sequence-based optimal algorithms may in the worst case consume memory that is exponential in the size of the analyzed program. In this paper, we present Parsimonious-OPtimal DPOR (POP), an optimal DPOR algorithm for analyzing multi-threaded programs under sequential consistency, whose space consumption is polynomial in the worst case. POP combines several novel algorithmic techniques, including (i) a parsimonious race reversal strategy, which avoids multiple reversals of the same race, (ii) an eager race reversal strategy to avoid storing initial fragments of to-be-explored executions, and (iii) a space-efficient scheme for preventing redundant exploration, which replaces the use of sleep sets. Our implementation in Nidhugg shows that these techniques can significantly speed up the analysis of concurrent programs, and do so with low memory consumption. Comparison to TruSt, a related optimal DPOR algorithm that represents executions as graphs, shows that POP ’s implementation achieves similar performance for smaller benchmarks, and scales much better than TruSt ’s on programs with long executions.",
+    "topic": "",
+    "conference": "cav",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-65630-9_2"
+  },
+  {
+    "id": "10.1007/978-3-031-65630-9_20",
+    "title": "Unifying Qualitative and Quantitative Safety Verification of DNN-Controlled Systems",
+    "authors": [
+      "Dapeng Zhi",
+      "Peixin Wang",
+      "Si Liu",
+      "C.-H. Luke Ong",
+      "Min Zhang"
+    ],
+    "abstract": "The rapid advance of deep reinforcement learning techniques enables the oversight of safety-critical systems through the utilization of Deep Neural Networks (DNNs). This underscores the pressing need to promptly establish certified safety guarantees for such DNN-controlled systems. Most of the existing verification approaches rely on qualitative approaches, predominantly employing reachability analysis. However, qualitative verification proves inadequate for DNN-controlled systems as their behaviors exhibit stochastic tendencies when operating in open and adversarial environments. In this paper, we propose a novel framework for unifying both qualitative and quantitative safety verification problems of DNN-controlled systems. This is achieved by formulating the verification tasks as the synthesis of valid neural barrier certificates (NBCs). Initially, the framework seeks to establish almost-sure safety guarantees through qualitative verification. In cases where qualitative verification fails, our quantitative verification method is invoked, yielding precise lower and upper bounds on probabilistic safety across both infinite and finite time horizons. To facilitate the synthesis of NBCs, we introduce their k -inductive variants. We also devise a simulation-guided approach for training NBCs, aiming to achieve tightness in computing precise certified lower and upper bounds. We prototype our approach into a tool called and showcase its efficacy on four classic DNN-controlled systems.",
+    "topic": "",
+    "conference": "cav",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-65630-9_20"
+  },
+  {
+    "id": "10.1007/978-3-031-65630-9_3",
+    "title": "Collective Contracts for Message-Passing Parallel Programs",
+    "authors": [
+      "Ziqing Luo",
+      "Stephen F. Siegel"
+    ],
+    "abstract": "Procedure contracts are a well-known approach for specifying programs in a modular way. We investigate a new contract theory for collective procedures in parallel message-passing programs. As in the sequential setting, one can verify that a procedure f conforms to its contract using only the contracts, and not the implementations, of the collective procedures called by f . We apply this approach to C programs that use the Message Passing Interface (MPI), introducing a new contract language that extends the ANSI/ISO C Specification Language. We present contracts for the standard MPI collective functions, as well as many user-defined collective functions. A prototype verification system has been implemented using the CIVL model checker for checking contract satisfaction within small bounds on the number of processes.",
+    "topic": "",
+    "conference": "cav",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-65630-9_3"
+  },
+  {
+    "id": "10.1007/978-3-031-65630-9_5",
+    "title": "Efficient Implementation of an Abstract Domain of Quantified First-Order Formulas",
+    "authors": [
+      "Eden Frenkel",
+      "Tej Chajed",
+      "Oded Padon",
+      "Sharon Shoham"
+    ],
+    "abstract": "This paper lays a practical foundation for using abstract interpretation with an abstract domain that consists of sets of quantified first-order logic formulas. This abstract domain seems infeasible at first sight due to the complexity of the formulas involved and the enormous size of sets of formulas (abstract elements). We introduce an efficient representation of abstract elements, which eliminates redundancies based on a novel syntactic subsumption relation that under-approximates semantic entailment. We develop algorithms and data structures to efficiently compute the join of an abstract element with the abstraction of a concrete state, operating on the representation of abstract elements. To demonstrate feasibility of the domain, we use our data structures and algorithms to implement a symbolic abstraction algorithm that computes the least fixpoint of the best abstract transformer of a transition system, which corresponds to the strongest inductive invariant. We succeed at finding, for example, the least fixpoint for Paxos (which in our representation has 1,438 formulas with $$\\forall ^*\\exists ^*\\forall ^*$$ quantification) in time comparable to state-of-the-art property-directed approaches.",
+    "topic": "",
+    "conference": "cav",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-65630-9_5"
+  },
+  {
+    "id": "10.1007/978-3-031-65630-9_6",
+    "title": "Verifying Cake-Cutting, Faster",
+    "authors": [
+      "Noah Bertram",
+      "Tean Lai",
+      "Justin Hsu"
+    ],
+    "abstract": "Envy-free cake-cutting protocols procedurally divide an infinitely divisible good among a set of agents so that no agent prefers another’s allocation to their own. These protocols are highly complex and difficult to prove correct. Recently, Bertram, Levinson, and Hsu introduced a language called Slice for describing and verifying cake-cutting protocols. Slice programs can be translated to formulas encoding envy-freeness, which are solved by SMT. While Slice works well on smaller protocols, it has difficulty scaling to more complex cake-cutting protocols.\nWe improve Slice in two ways. First, we show any protocol execution in Slice can be replicated using piecewise uniform valuations. We then reduce Slice’s constraint formulas to formulas within the theory of linear real arithmetic, showing that verifying envy-freeness is efficiently decidable. Second, we design and implement a linear type system which enforces that no two agents receive the same part of the good. We implement our methods and verify a range of challenging examples, including the first nontrivial four-agent protocol.",
+    "topic": "",
+    "conference": "cav",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-65630-9_6"
+  },
+  {
+    "id": "10.1007/978-3-031-65630-9_7",
+    "title": "General Anticipatory Runtime Verification",
+    "authors": [
+      "Raik Hipler",
+      "Hannes Kallwies",
+      "Martin Leucker",
+      "César Sánchez"
+    ],
+    "abstract": "Runtime verification is a technique for monitoring a system’s behavior against a formal specification. Monitors must produce verdicts that are sound with respect to the specification. Anticipation is the ability to immediately produce verdicts when the monitor can confidently predict the inevitability of the verdict.\nStream runtime verification is a specialized form of runtime verification tailored to the monitoring and verification of data streams. In this paper we study anticipatory monitoring for stream runtime verification. More specifically, we present an algorithm with anticipation for monitoring of Lola specifications, which we then extend to exploit assumptions and tolerate uncertainties. As perfect anticipation is in general not computable, we use techniques from abstract interpretation, especially widening, to approximate anticipatory monitoring verdicts. Finally, we report on three empirical cases studies using a prototype implementation of a symbolic instantiation of our approach.",
+    "topic": "",
+    "conference": "cav",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-65630-9_7"
+  },
+  {
+    "id": "10.1007/978-3-031-65630-9_8",
+    "title": "Proactive Real-Time First-Order Enforcement",
+    "authors": [
+      "François Hublet",
+      "Leonardo Lima",
+      "David Basin",
+      "Srđan Krstić",
+      "Dmitriy Traytel"
+    ],
+    "abstract": "Modern software systems must comply with increasingly complex regulations in domains ranging from industrial automation to data protection. Runtime enforcement addresses this challenge by empowering systems to not only observe, but also actively control, the behavior of target systems by modifying their actions to ensure policy compliance. We propose a novel approach to the proactive real-time enforcement of policies expressed in metric first-order temporal logic (MFOTL). We introduce a new system model, define an expressive MFOTL fragment that is enforceable in that model, and develop a sound enforcement algorithm for this fragment. We implement this algorithm in a tool called WhyEnf and carry out a case study on enforcing GDPR-related policies. Our tool can enforce all policies from the study in real-time with modest overhead. Our work thus provides the first tool-supported approach that can proactively enforce expressive first-order policies in real time.",
+    "topic": "",
+    "conference": "cav",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-65630-9_8"
+  },
+  {
+    "id": "10.1007/978-3-031-65630-9_9",
+    "title": "Predictive Monitoring with Strong Trace Prefixes",
+    "authors": [
+      "Zhendong Ang",
+      "Umang Mathur"
+    ],
+    "abstract": "Runtime predictive analyses enhance coverage of traditional dynamic analyses based bug detection techniques by identifying a space of feasible reorderings of the observed execution and determining if any reordering in this space witnesses the violation of some desired safety property. The most popular approach for modelling the space of feasible reorderings is through Mazurkiewicz’s trace equivalence. The simplicity of the framework also gives rise to efficient predictive analyses, and has been the de facto means for obtaining space and time efficient algorithms for monitoring concurrent programs.\nIn this work, we investigate how to enhance the predictive power of trace-based reasoning, while still retaining the algorithmic benefits it offers. Towards this, we extend trace theory by naturally embedding a class of prefixes, which we call strong trace prefixes . We formally characterize strong trace prefixes using an enhanced dependence relation, study its predictive power and establish a tight connection to the previously proposed notion of synchronization-preserving correct reorderings developed in the context of data race and deadlock prediction. We then show that despite the enhanced predictive power, strong trace prefixes continue to enjoy the algorithmic benefits of Mazurkiewicz traces in the context of prediction against co-safety properties, and derive new algorithms for synchronization-preserving data races and deadlocks with better asymptotic space and time usage. We also show that strong trace prefixes can capture more violations of pattern languages. We implement our proposed algorithms and our evaluation confirms the practical utility of reasoning based on strong prefix traces.",
+    "topic": "",
+    "conference": "cav",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-65630-9_9"
+  },
+  {
+    "id": "10.1007/978-3-031-65633-0_21",
+    "title": "Compositional Value Iteration with Pareto Caching",
+    "authors": [
+      "Kazuki Watanabe",
+      "Marck van der Vegt",
+      "Sebastian Junges",
+      "Ichiro Hasuo"
+    ],
+    "abstract": "The de-facto standard approach in MDP verification is based on value iteration (VI). We propose compositional VI , a framework for model checking compositional MDPs, that addresses efficiency while maintaining soundness. Concretely, compositional MDPs naturally arise from the combination of individual components, and their structure can be expressed using, e.g., string diagrams. Towards efficiency, we observe that compositional VI repeatedly verifies individual components. We propose a technique called Pareto caching that allows to reuse verification results, even for previously unseen queries. Towards soundness, we present two stopping criteria: one generalizes the optimistic value iteration paradigm and the other uses Pareto caches in conjunction with recent baseline algorithms. Our experimental evaluations shows the promise of the novel algorithm and its variations, and identifies challenges for future work.",
+    "topic": "",
+    "conference": "cav",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-65633-0_21"
+  },
+  {
+    "id": "10.1007/978-3-031-65633-0_9",
+    "title": "Regular Reinforcement Learning",
+    "authors": [
+      "Taylor Dohmen",
+      "Mateo Perez",
+      "Fabio Somenzi",
+      "Ashutosh Trivedi"
+    ],
+    "abstract": "In reinforcement learning, an agent incrementally refines a behavioral policy through a series of episodic interactions with its environment. This process can be characterized as explicit reinforcement learning, as it deals with explicit states and concrete transitions. Building upon the concept of symbolic model checking, we propose a symbolic variant of reinforcement learning, in which sets of states are represented through predicates and transitions are represented by predicate transformers. Drawing inspiration from regular model checking, we choose regular languages over the states as our predicates, and rational transductions as predicate transformations. We refer to this framework as regular reinforcement learning , and study its utility as a symbolic approach to reinforcement learning. Theoretically, we establish results around decidability, approximability, and efficient learnability in the context of regular reinforcement learning. Towards practical applications, we develop a deep regular reinforcement learning algorithm, enabled by the use of graph neural networks. We showcase the applicability and effectiveness of (deep) regular reinforcement learning through empirical evaluation on a diverse set of case studies.",
+    "topic": "",
+    "conference": "cav",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-65633-0_9"
+  },
+  {
+    "id": "10.1007/978-3-031-65633-0_1",
+    "title": "Syntax-Guided Automated Program Repair for Hyperproperties",
+    "authors": [
+      "Raven Beutner",
+      "Tzu-Han Hsu",
+      "Borzoo Bonakdarpour",
+      "Bernd Finkbeiner"
+    ],
+    "abstract": "We study the problem of automatically repairing infinite-state software programs w.r.t. temporal hyperproperties. As a first step, we present a repair approach for the temporal logic HyperLTL based on symbolic execution, constraint generation, and syntax-guided synthesis of repair expression (SyGuS). To improve the repair quality, we introduce the notation of a transparent repair that aims to find a patch that is as close as possible to the original program. As a practical realization, we develop an iterative repair approach. Here, we search for a sequence of repairs that are closer and closer to the original program’s behavior. We implement our method in a prototype and report on encouraging experimental results using off-the-shelf SyGuS solvers.",
+    "topic": "",
+    "conference": "cav",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-65633-0_1"
+  },
+  {
+    "id": "10.1007/978-3-031-65633-0_10",
+    "title": "LTL Learning on GPUs",
+    "authors": [
+      "Mojtaba Valizadeh",
+      "Nathanaël Fijalkow",
+      "Martin Berger"
+    ],
+    "abstract": "Linear temporal logic (LTL) is widely used in industrial verification. LTL formulae can be learned from traces. Scaling LTL formula learning is an open problem. We implement the first GPU-based LTL learner using a novel form of enumerative program synthesis. The learner is sound and complete. Our benchmarks indicate that it handles traces at least 2048 times more numerous, and on average at least 46 times faster than existing state-of-the-art learners. This is achieved with, among others, a branch-free implementation of LTL that has $$O(\\log n)$$ time complexity, where n is trace length, while previous implementations are $$O(n^2)$$ or worse (assuming bitwise boolean operations and shifts by powers of 2 have unit costs—a realistic assumption on modern processors).",
+    "topic": "",
+    "conference": "cav",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-65633-0_10"
+  },
+  {
+    "id": "10.1007/978-3-031-65633-0_11",
+    "title": "Safe Exploration in Reinforcement Learning by Reachability Analysis over Learned Models",
+    "authors": [
+      "Yuning Wang",
+      "He Zhu"
+    ],
+    "abstract": "We introduce VELM, a reinforcement learning (RL) framework grounded in verification principles for safe exploration in unknown environments. VELM ensures that an RL agent systematically explores its environment, adhering to safety properties throughout the learning process. VELM learns environment models as symbolic formulas and conducts formal reachability analysis over the learned models for safety verification. An online shielding layer is then constructed to confine the RL agent’s exploration solely within a state space verified as safe in the learned model, thereby bolstering the overall safety profile of the RL system. Our experimental results demonstrate the efficacy of VELM across diverse RL environments, highlighting its capacity to significantly reduce safety violations in comparison to existing safe learning techniques, all without compromising the RL agent’s reward performance.",
+    "topic": "",
+    "conference": "cav",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-65633-0_11"
+  },
+  {
+    "id": "10.1007/978-3-031-65633-0_12",
+    "title": "Using Four-Valued Signal Temporal Logic for Incremental Verification of Hybrid Systems",
+    "authors": [
+      "Florian Lercher",
+      "Matthias Althoff"
+    ],
+    "abstract": "Hybrid systems are often safety-critical and at the same time difficult to formally verify due to their mixed discrete and continuous behavior. To address this issue, we propose a novel incremental verification algorithm for hybrid systems based on online monitoring techniques and reachability analysis. To this end, we develop a four-valued semantics for signal temporal logic that allows us to distinguish two types of uncertainty: one arising from set-based evaluation and another one from the incremental nature of our algorithm. Using these semantics to continuously update the verification verdict, our verification algorithm is the first to run alongside the reachability analysis of the system to be verified. This makes it possible to stop the reachability analysis as soon as we obtain a conclusive verdict. We demonstrate the usefulness of our novel approach by several experiments.",
+    "topic": "",
+    "conference": "cav",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-65633-0_12"
+  },
+  {
+    "id": "10.1007/978-3-031-65633-0_13",
+    "title": "Optimization-Based Model Checking and Trace Synthesis for Complex STL Specifications",
+    "authors": [
+      "Sota Sato",
+      "Jie An",
+      "Zhenya Zhang",
+      "Ichiro Hasuo"
+    ],
+    "abstract": "Techniques of light-weight formal methods, such as monitoring and falsification, are attracting attention for quality assurance of cyber-physical systems. The techniques require formal specs, however, and writing right specs is still a practical challenge. Commonly one relies on trace synthesis —i.e. automatic generation of a signal that satisfies a given spec—to examine the meaning of a spec. In this work, motivated by 1) complex STL specs from an automotive safety standard and 2) the struggle of existing tools in their trace synthesis, we introduce a novel trace synthesis algorithm for STL specs. It combines the use of MILP (inspired by works on controller synthesis) and a variable-interval encoding of STL semantics (previously studied for SMT-based STL model checking). The algorithm solves model checking, too, as the dual of trace synthesis. Our experiments show that only ours has realistic performance needed for the interactive examination of STL specs by trace synthesis.",
+    "topic": "",
+    "conference": "cav",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-65633-0_13"
+  },
+  {
+    "id": "10.1007/978-3-031-65633-0_14",
+    "title": "Inner-Approximate Reachability Computation via Zonotopic Boundary Analysis",
+    "authors": [
+      "Dejin Ren",
+      "Zhen Liang",
+      "Chenyu Wu",
+      "Jianqiang Ding",
+      "Taoran Wu",
+      "Bai Xue"
+    ],
+    "abstract": "Inner-approximate reachability analysis involves calculating subsets of reachable sets, known as inner-approximations. This analysis is crucial in the fields of dynamic systems analysis and control theory as it provides a reliable estimation of the set of states that a system can reach from given initial states at a specific time instant. In this paper, we study the inner-approximate reachability analysis problem based on the set-boundary reachability method for systems modelled by ordinary differential equations, in which the computed inner-approximations are represented with zonotopes. The set-boundary reachability method computes an inner-approximation by excluding states reached from the initial set’s boundary. The effectiveness of this method is highly dependent on the efficient extraction of the exact boundary of the initial set. To address this, we propose methods leveraging boundary and tiling matrices that can efficiently extract and refine the exact boundary of the initial set represented by zonotopes. Additionally, we enhance the exclusion strategy by contracting the outer-approximations in a flexible way, which allows for the computation of less conservative inner-approximations. To evaluate the proposed method, we compare it with state-of-the-art methods against a series of benchmarks. The numerical results demonstrate that our method is not only efficient but also accurate in computing inner-approximations.",
+    "topic": "",
+    "conference": "cav",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-65633-0_14"
+  },
+  {
+    "id": "10.1007/978-3-031-65633-0_15",
+    "title": "Scenario-Based Flexible Modeling and Scalable Falsification for Reconfigurable CPSs",
+    "authors": [
+      "Jiawan Wang",
+      "Wenxia Liu",
+      "Muzimiao Zhang",
+      "Jiaqi Wei",
+      "Yuhui Shi",
+      "Lei Bu",
+      "Xuandong Li"
+    ],
+    "abstract": "Cyber-physical systems (CPSs) are used in many safety-critical areas, making it crucial to ensure their safety. However, with CPSs increasingly dynamically deployed and reconfigured during runtime, their safety analysis becomes challenging. For one thing, reconfigurable CPSs usually consist of multiple agents dynamically connected during runtime. Their highly dynamic system topologies are too intricate for traditional modeling languages, which, in turn, hinders formal analysis. For another, due to the growing size and uncertainty of reconfigurable CPSs, their system models can be huge and even unavailable at design time. This calls for runtime analysis approaches with better scalability and efficiency. To address these challenges, we propose a scenario-based hierarchical modeling language for reconfigurable CPS. It provides template models for agent inherent features, together with an instantiation mechanism to activate single agent’s runtime behavior, communication configurations for multiple agents’ connected behaviors, and scenario task configurations for their dynamic topologies. We also present a path-oriented falsification approach to falsify system requirements. It employs classification-model-based optimization to explore search space effectively and cut unnecessary system simulations and robustness calculations for efficiency. Our modeling and falsification are implemented in a tool called . Experiments have shown that it can largely reduce modeling time and improve modeling accuracy, and perform scalable CPS falsification with high success rates in seconds.",
+    "topic": "",
+    "conference": "cav",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-65633-0_15"
+  },
+  {
+    "id": "10.1007/978-3-031-65633-0_16",
+    "title": "Playing Games with Your PET: Extending the Partial Exploration Tool to Stochastic Games",
+    "authors": [
+      "Tobias Meggendorfer",
+      "Maximilian Weininger"
+    ],
+    "abstract": "We present version 2.0 of the Partial Exploration Tool ( Pet ), a tool for verification of probabilistic systems. We extend the previous version by adding support for stochastic games , based on a recent unified framework for sound value iteration algorithms. Thereby, Pet2 is the first tool implementing a sound and efficient approach for solving stochastic games with objectives of the type reachability/safety and mean payoff. We complement this approach by developing and implementing a partial-exploration based variant for all three objectives. Our experimental evaluation shows that Pet2 offers the most efficient partial-exploration based algorithm and is the most viable tool on SGs, even outperforming unsound tools.",
+    "topic": "",
+    "conference": "cav",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-65633-0_16"
+  },
+  {
+    "id": "10.1007/978-3-031-65633-0_17",
+    "title": "What Should Be Observed for Optimal Reward in POMDPs?",
+    "authors": [
+      "Alyzia-Maria Konsta",
+      "Alberto Lluch Lafuente",
+      "Christoph Matheja"
+    ],
+    "abstract": "Partially observable Markov Decision Processes (POMDPs) are a standard model for agents making decisions in uncertain environments. Most work on POMDPs focuses on synthesizing strategies based on the available capabilities. However, system designers can often control an agent’s observation capabilities, e.g. by placing or selecting sensors. This raises the question of how one should select an agent’s sensors cost-effectively such that it achieves the desired goals. In this paper, we study the novel optimal observability problem ( oop ): Given a POMDP $$\\mathscr {M}$$ , how should one change $$\\mathscr {M}$$ ’s observation capabilities within a fixed budget such that its (minimal) expected reward remains below a given threshold? We show that the problem is undecidable in general and decidable when considering positional strategies only. We present two algorithms for a decidable fragment of the oop : one based on optimal strategies of $$\\mathscr {M}$$ ’s underlying Markov decision process and one based on parameter synthesis with SMT. We report promising results for variants of typical examples from the POMDP literature.",
+    "topic": "",
+    "conference": "cav",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-65633-0_17"
+  },
+  {
+    "id": "10.1007/978-3-031-65633-0_18",
+    "title": "Stochastic Omega-Regular Verification and Control with Supermartingales",
+    "authors": [
+      "Alessandro Abate",
+      "Mirco Giacobbe",
+      "Diptarko Roy"
+    ],
+    "abstract": "We present for the first time a supermartingale certificate for $$\\omega $$ -regular specifications. We leverage the Robbins & Siegmund convergence theorem to characterize supermartingale certificates for the almost-sure acceptance of Streett conditions on general stochastic processes, which we call Streett supermartingales. This enables effective verification and control of discrete-time stochastic dynamical models with infinite state space under $$\\omega $$ -regular and linear temporal logic specifications. Our result generalises reachability, safety, reach-avoid, persistence and recurrence specifications; our contribution applies to discrete-time stochastic dynamical models and probabilistic programs with discrete and continuous state spaces and distributions, and carries over to deterministic models and programs. We provide a synthesis algorithm for control policies and Streett supermartingales as proof certificates for $$\\omega $$ -regular objectives, which is sound and complete for supermartingales and control policies with polynomial templates and any stochastic dynamical model whose post-expectation is expressible as a polynomial. We additionally provide an optimisation of our algorithm that reduces the problem to satisfiability modulo theories, under the assumption that templates and post-expectation are in piecewise linear form. We have built a prototype and have demonstrated the efficacy of our approach on several exemplar $$\\omega $$ -regular verification and control synthesis problems.",
+    "topic": "",
+    "conference": "cav",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-65633-0_18"
+  },
+  {
+    "id": "10.1007/978-3-031-65633-0_19",
+    "title": "Lexicographic Ranking Supermartingales with Lazy Lower Bounds",
+    "authors": [
+      "Toru Takisaka",
+      "Libo Zhang",
+      "Changjiang Wang",
+      "Jiamou Liu"
+    ],
+    "abstract": "Lexicographic Ranking SuperMartingale (LexRSM) is a probabilistic extension of Lexicographic Ranking Function (LexRF), which is a widely accepted technique for verifying program termination. In this paper, we are the first to propose sound probabilistic extensions of LexRF with a weaker non-negativity condition, called single-component (SC) non-negativity. It is known that such an extension, if it exists, will be nontrivial due to the intricacies of the probabilistic circumstances.\nToward the goal, we first devise the notion of fixability , which offers a systematic approach for analyzing the soundness of possibly negative LexRSM. This notion yields a desired extension of LexRF that is sound for general stochastic processes. We next propose another extension, called Lazy LexRSM , toward the application to automated verification; it is sound over probabilistic programs with linear arithmetics, while its subclass is amenable to automated synthesis via linear programming. We finally propose a LexRSM synthesis algorithm for this subclass, and perform experiments.",
+    "topic": "",
+    "conference": "cav",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-65633-0_19"
+  },
+  {
+    "id": "10.1007/978-3-031-65633-0_2",
+    "title": "The SemGuS Toolkit",
+    "authors": [
+      "Keith J. C. Johnson",
+      "Andrew Reynolds",
+      "Thomas Reps",
+      "Loris D’Antoni"
+    ],
+    "abstract": "Semantics-Guided Synthesis (SemGuS) is a programmable framework for defining synthesis problems in a domain- and solver-agnostic way. This paper presents the standardized SemGuS format, together with an open-source toolkit that providesa parser, a verifier, and enumerative SemGuS solvers. The paper also describes an initial set of SemGuS benchmarks, which form the basis for comparing SemGuS solvers, and presents an evaluation of the baseline enumerative solvers.",
+    "topic": "",
+    "conference": "cav",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-65633-0_2"
+  },
+  {
+    "id": "10.1007/978-3-031-65633-0_20",
+    "title": "Probabilistic Access Policies with Automated Reasoning Support",
+    "authors": [
+      "Shaowei Zhu",
+      "Yunbo Zhang"
+    ],
+    "abstract": "Existing access policy languages like Cedar equipped with SMT-based automated reasoning capabilities are effective in providing formal guarantees about the policies. However, this scheme only supports access control based on deterministic information. Observing that certain information useful for access control can be described by random variables, we are motivated to develop a new paradigm of access control in which access policies contain rules about uncertainty, or more precisely, probabilities of random events. To compute these probabilities, we rely on probabilistic programming languages. Additionally, we show that the probabilistic part of these policies can be encoded in linear real arithmetic, which enables practical automated reasoning tasks such as proving relative permissiveness between policies. We demonstrate the advantages of the proposed probabilistic policies over the existing paradigm through two case studies on real-world datasets with a prototype implementation.",
+    "topic": "",
+    "conference": "cav",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-65633-0_20"
+  },
+  {
+    "id": "10.1007/978-3-031-65633-0_22",
+    "title": "Approximate Relational Reasoning for Quantum Programs",
+    "authors": [
+      "Peng Yan",
+      "Hanru Jiang",
+      "Nengkun Yu"
+    ],
+    "abstract": "Quantum computation is inevitably subject to imperfections in its implementation. These imperfections arise from various sources, including environmental noise at the hardware level and the introduction of approximate implementations by quantum algorithm designers, such as lower-depth computations. Given the significant advantage of relational logic in program reasoning and the importance of assessing the robustness of quantum programs between their ideal specifications and imperfect implementations, we design a proof system to verify the approximate relational properties of quantum programs. We demonstrate the effectiveness of our approach by providing the first formal verification of the renowned low-depth approximation of the quantum Fourier transform. Furthermore, we validate the approximate correctness of the repeat-until-success algorithm. From the technical point of view, we develop approximate quantum coupling as a fundamental tool to study approximate relational reasoning for quantum programs, a novel generalization of the widely used approximate probabilistic coupling in probabilistic programs, answering a previously posed open question for projective predicates.",
+    "topic": "",
+    "conference": "cav",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-65633-0_22"
+  },
+  {
+    "id": "10.1007/978-3-031-65633-0_23",
+    "title": "QReach: A Reachability Analysis Tool for Quantum Markov Chains",
+    "authors": [
+      "Aochu Dai",
+      "Mingsheng Ying"
+    ],
+    "abstract": "We present QReach, the first reachability analysis tool for quantum Markov chains based on decision diagrams CFLOBDD (presented at CAV 2023). QReach provides a novel framework for finding reachable subspaces, as well as a series of model-checking subprocedures like image computation. Experiments indicate its practicality in verification of quantum circuits and algorithms. QReach is expected to play a central role in future quantum model checkers.",
+    "topic": "",
+    "conference": "cav",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-65633-0_23"
+  },
+  {
+    "id": "10.1007/978-3-031-65633-0_24",
+    "title": "Measurement-Based Verification of Quantum Markov Chains",
+    "authors": [
+      "Ji Guan",
+      "Yuan Feng",
+      "Andrea Turrini",
+      "Mingsheng Ying"
+    ],
+    "abstract": "Model-checking techniques have been extended to analyze quantum programs and communication protocols represented as quantum Markov chains, an extension of classical Markov chains. To specify qualitative temporal properties, a subspace-based quantum temporal logic is used, which is built on Birkhoff-von Neumann atomic propositions. These propositions determine whether a quantum state is within a subspace of the entire state space. In this paper, we propose the measurement-based linear-time temporal logic MLTL to check quantitative properties. MLTL builds upon classical linear-time temporal logic (LTL) but introduces quantum atomic propositions that reason about the probability distribution after measuring a quantum state. To facilitate verification, we extend the symbolic dynamics-based techniques for stochastic matrices described by Agrawal et al. (JACM 2015) to handle more general quantum linear operators (super-operators) through eigenvalue analysis. This extension enables the development of an efficient algorithm for approximately model checking a quantum Markov chain against an MLTL formula. To demonstrate the utility of our model-checking algorithm, we use it to simultaneously verify linear-time properties of both quantum and classical random walks. Through this verification, we confirm the previously established advantages discovered by Ambainis et al. (STOC 2001) of quantum walks over classical random walks and discover new phenomena unique to quantum walks.",
+    "topic": "",
+    "conference": "cav",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-65633-0_24"
+  },
+  {
+    "id": "10.1007/978-3-031-65633-0_25",
+    "title": "Simulating Quantum Circuits by Model Counting",
+    "authors": [
+      "Jingyi Mei",
+      "Marcello Bonsangue",
+      "Alfons Laarman"
+    ],
+    "abstract": "Quantum circuit compilation comprises many computationally hard reasoning tasks that lie inside # $${\\textsf{P}}$$ and its decision counterpart in $${\\textsf{PP}}$$ . The classical simulation of universal quantum circuits is a core example. We show for the first time that a strong simulation of universal quantum circuits can be efficiently tackled through weighted model counting by providing a linear-length encoding of Clifford+ T circuits. To achieve this, we exploit the stabilizer formalism by Knill, Gottesmann, and Aaronson by reinterpreting quantum states as a linear combination of stabilizer states. With an open-source simulator implementation, we demonstrate empirically that model counting often outperforms state-of-the-art simulation techniques based on the ZX calculus and decision diagrams. Our work paves the way to apply the existing array of powerful classical reasoning tools to realize efficient quantum circuit compilation; one of the obstacles on the road towards quantum supremacy.",
+    "topic": "",
+    "conference": "cav",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-65633-0_25"
+  },
+  {
+    "id": "10.1007/978-3-031-65633-0_3",
+    "title": "Relational Synthesis of Recursive Programs via Constraint Annotated Tree Automata",
+    "authors": [
+      "Anders Miltner",
+      "Ziteng Wang",
+      "Swarat Chaudhuri",
+      "Isil Dillig"
+    ],
+    "abstract": "In this paper, we present a new synthesis method based on the novel concept of a constraint annotated tree automaton (CATA) . A CATA is a variant of a finite tree automaton (FTA) where the acceptance of a term by the automaton is conditioned upon the logical satisfiability of a formula. In the context of program synthesis, CATAs allow the construction of a more precise version space than FTAs by ruling out programs that make inconsistent assumptions about the unknown semantics of functions under synthesis. We apply our proposed algorithm to synthesizing recursive (or mutually recursive) procedures from relational specifications and demonstrate that our method allows solving synthesis problems that are beyond the scope of existing approaches.",
+    "topic": "",
+    "conference": "cav",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-65633-0_3"
+  },
+  {
+    "id": "10.1007/978-3-031-65633-0_4",
+    "title": "Information Flow Guided Synthesis with Unbounded Communication",
+    "authors": [
+      "Bernd Finkbeiner",
+      "Niklas Metzger",
+      "Yoram Moses"
+    ],
+    "abstract": "Information flow guided synthesis is a compositional approach to the automated construction of distributed systems where the assumptions between the components are captured as information-flow requirements. Information-flow requirements are hyperproperties that ensure that if a component needs to act on certain information that is only available in other components, then this information will be passed to the component. We present a new method for the automatic construction of information flow assumptions from specifications given as temporal safety properties. The new method is the first approach to handle situations where the required amount of information is unbounded. For example, we can analyze communication protocols that transmit a stream of messages in a potentially infinite loop. We show that component implementations can then, in principle, be constructed from the information flow requirements using a synthesis tool for hyperproperties. We additionally present a more practical synthesis technique that constructs the components using efficient methods for standard synthesis from trace properties. We have implemented the technique in the prototype tool FlowSy , which outperforms previous approaches to distributed synthesis on several benchmarks.",
+    "topic": "",
+    "conference": "cav",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-65633-0_4"
+  },
+  {
+    "id": "10.1007/978-3-031-65633-0_5",
+    "title": "Synthesis of Temporal Causality",
+    "authors": [
+      "Bernd Finkbeiner",
+      "Hadar Frenkel",
+      "Niklas Metzger",
+      "Julian Siber"
+    ],
+    "abstract": "We present an automata-based algorithm to synthesize $$\\omega $$ -regular causes for $$\\omega $$ -regular effects on executions of a reactive system, such as counterexamples uncovered by a model checker. Our theory is a generalization of temporal causality , which has recently been proposed as a framework for drawing causal relationships between trace properties on a given trace. So far, algorithms exist only for verifying a single causal relationship and, as an extension, cause synthesis through enumeration, which is complete only for a small fragment of effect properties. This work presents the first complete cause-synthesis algorithm for the class of $$\\omega $$ -regular effects. We show that in this case, causes are guaranteed to be $$\\omega $$ -regular themselves and can be computed as, e.g., nondeterministic Büchi automata. We demonstrate the practical feasibility of this algorithm with a prototype tool and evaluate its performance for cause synthesis and cause checking.",
+    "topic": "",
+    "conference": "cav",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-65633-0_5"
+  },
+  {
+    "id": "10.1007/978-3-031-65633-0_6",
+    "title": "Dynamic Programming for Symbolic Boolean Realizability and Synthesis",
+    "authors": [
+      "Yi Lin",
+      "Lucas Martinelli Tabajara",
+      "Moshe Y. Vardi"
+    ],
+    "abstract": "Inspired by recent progress in dynamic programming approaches for weighted model counting, we investigate a dynamic-programming approach in the context of boolean realizability and synthesis, which takes a conjunctive-normal-form boolean formula over input and output variables, and aims at synthesizing witness functions for the output variables in terms of the inputs. We show how graded project-join trees, obtained via tree decomposition, can be used to compute a BDD representing the realizability set for the input formulas in a bottom-up order. We then show how the intermediate BDDs generated during realizability checking phase can be applied to synthesizing the witness functions in a top-down manner. An experimental evaluation of a solver – DPSynth – based on these ideas demonstrates that our approach for Boolean realizabilty and synthesis has superior time and space performance over a heuristics-based approach using same symbolic representations. We discuss the advantage on scalability of the new approach, and also investigate our findings on the performance of the DP framework.",
+    "topic": "",
+    "conference": "cav",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-65633-0_6"
+  },
+  {
+    "id": "10.1007/978-3-031-65633-0_7",
+    "title": "Localized Attractor Computations for Infinite-State Games",
+    "authors": [
+      "Anne-Kathrin Schmuck",
+      "Philippe Heim",
+      "Rayna Dimitrova",
+      "Satya Prakash Nayak"
+    ],
+    "abstract": "Infinite-state games are a commonly used model for the synthesis of reactive systems with unbounded data domains. Symbolic methods for solving such games need to be able to construct intricate arguments to establish the existence of winning strategies. Often, large problem instances require prohibitively complex arguments. Therefore, techniques that identify smaller and simpler sub-problems and exploit the respective results for the given game-solving task are highly desirable.\nIn this paper, we propose the first such technique for infinite-state games. The main idea is to enhance symbolic game-solving with the results of localized attractor computations performed in sub-games. The crux of our approach lies in identifying useful sub-games by computing permissive winning strategy templates in finite abstractions of the infinite-state game. The experimental evaluation of our method demonstrates that it outperforms existing techniques and is applicable to infinite-state games beyond the state of the art.",
+    "topic": "",
+    "conference": "cav",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-65633-0_7"
+  },
+  {
+    "id": "10.1007/978-3-031-65633-0_8",
+    "title": "Bisimulation Learning",
+    "authors": [
+      "Alessandro Abate",
+      "Mirco Giacobbe",
+      "Yannik Schnitzer"
+    ],
+    "abstract": "We introduce a data-driven approach to computing finite bisimulations for state transition systems with very large, possibly infinite state space. Our novel technique computes stutter-insensitive bisimulations of deterministic systems, which we characterize as the problem of learning a state classifier together with a ranking function for each class. Our procedure learns a candidate state classifier and candidate ranking functions from a finite dataset of sample states; then, it checks whether these generalise to the entire state space using satisfiability modulo theory solving. Upon the affirmative answer, the procedure concludes that the classifier constitutes a valid stutter-insensitive bisimulation of the system. Upon a negative answer, the solver produces a counterexample state for which the classifier violates the claim, adds it to the dataset, and repeats learning and checking in a counterexample-guided inductive synthesis loop until a valid bisimulation is found. We demonstrate on a range of benchmarks from reactive verification and software model checking that our method yields faster verification results than alternative state-of-the-art tools in practice. Our method produces succinct abstractions that enable an effective verification of linear temporal logic without next operator, and are interpretable for system diagnostics.",
+    "topic": "",
+    "conference": "cav",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-65633-0_8"
+  },
+  {
+    "id": "10.1007/978-3-031-65627-9_24",
+    "title": "Interactive Theorem Proving Modulo Fuzzing",
+    "authors": [
+      "Sujit Kumar Muduli",
+      "Rohan Ravikumar Padulkar",
+      "Subhajit Roy"
+    ],
+    "abstract": "Interactive theorem provers (ITPs) exploit the collaboration between humans and computers, enabling proof of complex theorems. Further, ITPs allow extraction of provably correct implementations from proofs. However, often, the extracted code interface with external libraries containing real-life complexities—proprietary library calls, remote/cloud APIs, complex models like ML models, inline assembly, highly non-linear arithmetic, vector instructions etc. We refer to such functions/operations as closed-box components . For such components, the user has to provide appropriate assumed lemmas to model the behavior of these functions. However, we found instances where these assumed lemmas are inconsistent with the actual semantics of these closed-box components. Hence, even correct-by-construction code extracted from an ITP may still behave incorrectly when interfaced with such closed-box components .\nTo this end, we propose StarFuzz , that allows the $$\\text {F}^\\star $$ interactive theorem prover to provide better end-to-end assurance on the application— even when interfaced with the closed-box components . Under the hood, StarFuzz rides on Sādhak , an SMT solver that combines fuzz testing to allow satisfiability checking over closed-box components. On the $$\\text {F}^\\star $$ library that includes external implementations in OCaml, StarFuzz discovered four bugs—one bug that revealed an error on the assumed lemmas for a closed-box function, and three bugs in the external implementations of these components.",
+    "topic": "",
+    "conference": "cav",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-65627-9_24"
+  },
+  {
+    "id": "10.1007/978-3-031-65627-9_1",
+    "title": "Split Gröbner Bases for Satisfiability Modulo Finite Fields",
+    "authors": [
+      "Alex Ozdemir",
+      "Shankara Pailoor",
+      "Alp Bassa",
+      "Kostas Ferles",
+      "Clark Barrett",
+      "Işil Dillig"
+    ],
+    "abstract": "Satisfiability modulo finite fields enables automated verification for cryptosystems. Unfortunately, previous solvers scale poorly for even some simple systems of field equations, in part because they build a full Gröbner basis (GB) for the system. We propose a new solver that uses multiple, simpler GBs instead of one full GB. Our solver, implemented within the cvc5 SMT solver, admits specialized propagation algorithms, e.g., for understanding bitsums. Experiments show that it solves important bitsum-heavy determinism benchmarks far faster than prior solvers, without introducing much overhead for other benchmarks.",
+    "topic": "",
+    "conference": "cav",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-65627-9_1"
+  },
+  {
+    "id": "10.1007/978-3-031-65627-9_10",
+    "title": "The MoXI Model Exchange Tool Suite",
+    "authors": [
+      "Chris Johannsen",
+      "Karthik Nukala",
+      "Rohit Dureja",
+      "Ahmed Irfan",
+      "Natarajan Shankar",
+      "Cesare Tinelli",
+      "Moshe Y. Vardi",
+      "Kristin Yvonne Rozier"
+    ],
+    "abstract": "We release the first tool suite implementing MoXI (Model eXchange Interlingua), an intermediate language for symbolic model checking designed to be an international research-community standard and developed by a widespread collaboration under a National Science Foundation (NSF) CISE Community Research Infrastructure initiative. Although we focus here on hardware verification, the MoXI language is useful for software model checking and verification of infinite-state systems in general. MoXI builds on elements of SMT-LIB 2; it is easy to add new theories and operators. Our contributions include: (1) introducing the first tool suite of automated translators into and out of the new model-checking intermediate language; (2) composing an initial example benchmark set enabling the model-checking research community to build future translations; (3) compiling details for utilizing, extending, and improving upon our tool suite, including usage characteristics and initial performance data. Experimental evaluations demonstrate that compiling SMV-language models through MoXI to perform symbolic model checking with the tools from the last Hardware Model Checking Competition performs competitively with model checking directly via nuXmv .",
+    "topic": "",
+    "conference": "cav",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-65627-9_10"
+  },
+  {
+    "id": "10.1007/978-3-031-65627-9_11",
+    "title": "SMLP: Symbolic Machine Learning Prover",
+    "authors": [
+      "Franz Brauße",
+      "Zurab Khasidashvili",
+      "Konstantin Korovin"
+    ],
+    "abstract": "Symbolic Machine Learning Prover (SMLP) is a tool and a library for system exploration based on data samples obtained by simulating or executing the system on a number of input vectors. SMLP aims at exploring the system based on this data by taking a grey-box approach: SMLP uses symbolic reasoning for ML model exploration and optimization under verification and stability constraints, based on SMT, constraint, and neural network solvers. In addition, the model exploration is guided by probabilistic and statistical methods in a closed feedback loop with the system’s response. SMLP has been applied in industrial setting at Intel for analyzing and optimizing hardware designs at the analog level. SMLP is a general purpose tool and can be applied to any system that can be sampled and modeled by machine learning models.",
+    "topic": "",
+    "conference": "cav",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-65627-9_11"
+  },
+  {
+    "id": "10.1007/978-3-031-65627-9_12",
+    "title": "Avoiding the Shoals - A New Approach to Liveness Checking",
+    "authors": [
+      "Yechuan Xia",
+      "Alessandro Cimatti",
+      "Alberto Griggio",
+      "Jianwen Li"
+    ],
+    "abstract": "We present , a new SAT-based model-checking algorithm for the verification of liveness properties of finite-state symbolic transition systems. Like other recent approaches, works by reducing liveness checking to a sequence of safety checks. Similarly to , it incrementally strengthens the input system using constraints obtained by refuting candidate counterexamples to the input liveness property, assumed (w.l.o.g.) to be of the form FGq . Differently from (and crucially), however, instead of directly searching for lasso-shaped counterexamples visiting $$\\lnot q$$ infinitely-often, searches for counterexamples incrementally, via a recursive chain of safety checks, each of which tries to determine whether it is possible to reach a $$\\lnot q$$ -state from a given $$\\lnot q$$ -state (which was previously determined to be reachable), in a manner similar to . When the current candidate counterexample is refuted, exploits the inductive invariants generated by the (recursive) safety checks to restrict the search space, until either no more reachable $$\\lnot q$$ -states remain, or a real lasso-shaped counterexample is found.\nIn this paper, we describe in detail, prove its soundness and completeness, and compare it against the state of the art both theoretically and empirically. Our experimental results show that our implementation of outperforms state-of-the-art implementations of , and other SAT-based liveness checking algorithms on a wide range of benchmarks from the literature.",
+    "topic": "",
+    "conference": "cav",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-65627-9_12"
+  },
+  {
+    "id": "10.1007/978-3-031-65627-9_13",
+    "title": "Toward Liveness Proofs at Scale",
+    "authors": [
+      "Kenneth L. McMillan"
+    ],
+    "abstract": "While the problem of mechanized proof of liveness of reactive programs has been studied for decades, there is currently no method of proving liveness that is conceptually simple to apply in practice to realistic problems, can be scaled to large problems without modular decomposition, and does not fail unpredictably due to the use of fragile heuristics. We introduce a method of liveness proof by relational rankings, implement it, and show that it meets these criteria in a realistic industrial case study involving a model of the memory subsystem in a CPU.",
+    "topic": "",
+    "conference": "cav",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-65627-9_13"
+  },
+  {
+    "id": "10.1007/978-3-031-65627-9_14",
+    "title": "Strided Difference Bound Matrices",
+    "authors": [
+      "Arjun Pitchanathan",
+      "Albert Cohen",
+      "Oleksandr Zinenko",
+      "Tobias Grosser"
+    ],
+    "abstract": "A wide range of symbolic analysis and optimization problems can be formalized using polyhedra. Sub-classes of polyhedra, also known as sub-polyhedral domains, are sought for their lower space and time complexity. We introduce the Strided Difference Bound Matrix (SDBM) domain, which represents a sweet spot in the context of optimizing compilers. Its expressiveness and efficient algorithms are particularly well suited to the construction of machine learning compilers. We present decision algorithms, abstract domain operators and computational complexity proofs for SDBM. We also conduct an empirical study with the MLIR compiler framework to validate the domain’s practical applicability. We characterize a sub-class of SDBMs that frequently occurs in practice, and demonstrate even faster algorithms on this sub-class.",
+    "topic": "",
+    "conference": "cav",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-65627-9_14"
+  },
+  {
+    "id": "10.1007/978-3-031-65627-9_15",
+    "title": "The Top-Down Solver Verified: Building Confidence in Static Analyzers",
+    "authors": [
+      "Yannick Stade",
+      "Sarah Tilscher",
+      "Helmut Seidl"
+    ],
+    "abstract": "The top-down solver (TD) is a local fixpoint algorithm for arbitrary equation systems. It considers the right-hand sides as black boxes and detects dependencies between unknowns on the fly—features that significantly increase both its usability and practical efficiency. At the same time, the recursive evaluation strategy of the TD, combined with the non-local destabilization mechanism, obfuscates the correctness of the computed solution. To strengthen the confidence in tools relying on the TD as their fixpoint engine, we provide a first machine-checked proof of the partial correctness of the TD. Our proof builds on the observation that the TD can be obtained from a considerably simpler recursive fixpoint algorithm, the plain TD, by applying an optimization that neither affects the termination behavior nor the computed result. Accordingly, we break down the proof into a partial correctness proof of the plain TD, which is only then extended to include the optimization. The backbone of our proof is a mutual induction following the solver’s computation trace. We establish sufficient invariants about the solver state to conclude the correctness of its optimization, i.e., the plain TD terminates if and only if the TD terminates, and they return the identical result. The proof is written using Isabelle/HOL and is available in the archive of formal proofs.",
+    "topic": "",
+    "conference": "cav",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-65627-9_15"
+  },
+  {
+    "id": "10.1007/978-3-031-65627-9_16",
+    "title": "End-to-End Mechanized Proof of a JIT-Accelerated eBPF Virtual Machine for IoT",
+    "authors": [
+      "Shenghao Yuan",
+      "Frédéric Besson",
+      "Jean-Pierre Talpin"
+    ],
+    "abstract": "Modern operating systems have adopted Berkeley Packet Filters (BPF) as a mechanism to extend kernel functionalities dynamically, e.g., Linux’s eBPF or RIOT’s rBPF. The just-in-time (JIT) compilation of eBPF introduced in Linux eBPF for performance has however led to numerous critical issues. Instead, RIOT’s rBPF uses a slower but memory-isolating interpreter (a virtual machine) which implements a defensive semantics of BPF; and therefore trades performance for security. To increase performance without sacrificing security, this paper presents a fully verified JIT implementation for RIOT’s rBPF, consisting of: i/ an end-to-end refinement workflow to both proving the JIT correct from an abstract specification and by deriving a verified concrete C implementation; ii/ a symbolic CompCert interpreter for executing binary code; iii/ a verified JIT compiler for rBPF; iv/ a verified hybrid rBPF virtual machine. Our core contribution is, to the best of our knowledge, the first and fully verified rBPF JIT compiler with correctness guarantees from high-level specification to low-level implementation. Benchmarks on microcontrollers hosting the RIOT operating system demonstrate significant performance improvements over the existing implementations of rBPF, even in worst-case application scenarios.",
+    "topic": "",
+    "conference": "cav",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-65627-9_16"
+  },
+  {
+    "id": "10.1007/978-3-031-65627-9_17",
+    "title": "A Framework for Debugging Automated Program Verification Proofs via Proof Actions",
+    "authors": [
+      "Chanhee Cho",
+      "Yi Zhou",
+      "Jay Bosamiya",
+      "Bryan Parno"
+    ],
+    "abstract": "Many program verification tools provide automation via SMT solvers, allowing them to automatically discharge many proofs. However, when a proof fails, it can be hard to understand why it failed or how to fix it. The main feedback the developer receives is simply the verification result (i.e., success or failure), with no visibility into the solver’s internal state. To assist developers using such tools, we introduce ProofPlumber, a novel and extensible proof-action framework for understanding and debugging proof failures. Proof actions act on the developer’s source-level proofs (e.g., assertions and lemmas) to determine why they failed and potentially suggest remedies. We evaluate ProofPlumber by writing a collection of proof actions that capture common proof debugging practices. We produce 17 proof actions, each only 29–177 lines of code.",
+    "topic": "",
+    "conference": "cav",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-65627-9_17"
+  },
+  {
+    "id": "10.1007/978-3-031-65627-9_18",
+    "title": "Verification Algorithms for Automated Separation Logic Verifiers",
+    "authors": [
+      "Marco Eilers",
+      "Malte Schwerhoff",
+      "Peter Müller"
+    ],
+    "abstract": "Most automated program verifiers for separation logic use either symbolic execution or verification condition generation to extract proof obligations, which are then handed over to an SMT solver. Existing verification algorithms are designed to be sound, but differ in performance and completeness. These characteristics may also depend on the programs and properties to be verified. Consequently, developers and users of program verifiers have to select a verification algorithm carefully for their application domain. Taking an informed decision requires a systematic comparison of the performance and completeness characteristics of the verification algorithms used by modern separation logic verifiers, but such a comparison does not exist.\nThis paper describes five verification algorithms for separation logic, three that are used in existing tools and two novel algorithms that combine characteristics of existing symbolic execution and verification condition generation algorithms. A detailed evaluation of implementations of these five algorithms in the Viper infrastructure assesses their performance and completeness for different classes of input programs. Based on the experimental results, we identify candidate portfolios of algorithms that maximize completeness and performance.",
+    "topic": "",
+    "conference": "cav",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-65627-9_18"
+  },
+  {
+    "id": "10.1007/978-3-031-65627-9_19",
+    "title": "SMT-Based Symbolic Model-Checking for Operator Precedence Languages",
+    "authors": [
+      "Michele Chiari",
+      "Luca Geatti",
+      "Nicola Gigante",
+      "Matteo Pradella"
+    ],
+    "abstract": "Operator Precedence Languages (OPL) have been recently identified as a suitable formalism for model checking recursive procedural programs, thanks to their ability of modeling the program stack. OPL requirements can be expressed in the Precedence Oriented Temporal Logic (), which features modalities to reason on the natural matching between function calls and returns, exceptions, and other advanced programming constructs that previous approaches, such as Visibly Pushdown Languages, cannot model effectively. Existing approaches for model checking of have been designed following the explicit-state, automata-based approach, a feature that severely limits their scalability. In this paper, we give the first symbolic, SMT-based approach for model checking properties. While previous approaches construct the automaton for both the formula and the model of the program, we encode them into a (sequence of) SMT formulas. The search of a trace of the model witnessing a violation of the formula is then carried out by an SMT-solver, in a Bounded Model Checking fashion. We carried out an experimental evaluation, which shows the effectiveness of the proposed solution.",
+    "topic": "",
+    "conference": "cav",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-65627-9_19"
+  },
+  {
+    "id": "10.1007/978-3-031-65627-9_2",
+    "title": "Arithmetic Solving in Z3",
+    "authors": [
+      "Nikolaj Bjørner",
+      "Lev Nachmanson"
+    ],
+    "abstract": "The theory of arithmetic is integral to many uses of SMT solvers. Z3 has implemented native solvers for arithmetic reasoning since its first release. We present a full re-implementation of Z3’s original arithmetic solver. It is based on substantial experiences from user feedback, engineering and experimentation. While providing a comprehensive overview of the main components we emphasize selected new insights we arrived at while developing and testing the solver.",
+    "topic": "",
+    "conference": "cav",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-65627-9_2"
+  },
+  {
+    "id": "10.1007/978-3-031-65627-9_20",
+    "title": "On Polynomial Expressions with C-Finite Recurrences in Loops with Nested Nondeterministic Branches",
+    "authors": [
+      "Chenglin Wang",
+      "Fangzhen Lin"
+    ],
+    "abstract": "Loops are inductive constructs, which make them difficult to analyze and verify in general. One approach is to represent the inductive behaviors of the program variables in a loop by recurrences and try to solve them for closed-form solutions. These solutions can then be used to generate invariants or directly fed into an SMT-based verifier. One problem with this approach is that if a loop contains nondeterministic choices or complex operations such as non-linear assignments, then recurrences for program variables may not exist or may have no closed-form solutions. In such cases, an alternative is to generate recurrences for expressions, and there has been recent work along this line. In this paper, we further work in this direction and propose a template-based method for extracting polynomial expressions that satisfy some c-finite recurrences. While in general there are possibly infinitely many such polynomials for a given loop, we show that the desired polynomials form a finite union of vector spaces. We propose an algorithm for computing the bases of the vector spaces, and identify two cases where the bases can be computed efficiently. To demonstrate the usefulness of our results, we implemented a prototype system based on one of the special cases, and integrated it into an SMT-based verifier. Our experimental results show that the new verifier can now verify programs with non-linear properties.",
+    "topic": "",
+    "conference": "cav",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-65627-9_20"
+  },
+  {
+    "id": "10.1007/978-3-031-65627-9_21",
+    "title": "Breaking the Mold: Nonlinear Ranking Function Synthesis Without Templates",
+    "authors": [
+      "Shaowei Zhu",
+      "Zachary Kincaid"
+    ],
+    "abstract": "This paper studies the problem of synthesizing (lexicographic) polynomial ranking functions for loops that can be described in polynomial arithmetic over integers and reals. While the analogous ranking function synthesis problem for linear arithmetic is decidable, even checking whether a given function ranks an integer loop is undecidable in the nonlinear setting. We side-step the decidability barrier by working within the theory of linear integer/real rings (LIRR) rather than the standard model of arithmetic. We develop a termination analysis that is guaranteed to succeed if a loop (expressed as a formula) admits a (lexicographic) polynomial ranking function. In contrast to template-based ranking function synthesis in real arithmetic, our completeness result holds for lexicographic ranking functions of unbounded dimension and degree, and effectively subsumes linear lexicographic ranking function synthesis for linear integer loops.",
+    "topic": "",
+    "conference": "cav",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-65627-9_21"
+  },
+  {
+    "id": "10.1007/978-3-031-65627-9_22",
+    "title": "Hevm, a Fast Symbolic Execution Framework for EVM Bytecode",
+    "authors": [
+      "Dxo",
+      "Mate Soos",
+      "Zoe Paraskevopoulou",
+      "Martin Lundfall",
+      "Mikael Brockman"
+    ],
+    "abstract": "We present , a symbolic execution engine for the EVM. can prove safety properties for EVM bytecode or verify semantic equivalence between two bytecode objects. It exposes a user-friendly API in Solidity that allows end-users to define symbolic tests using almost the same syntax as they would for their usual unit tests. We evaluate our framework against state-of-the-art tools, using a comprehensive set of benchmarks. Our empirical findings demonstrate that outperforms its counterparts, effectively solving a greater number of problems within competitive time frames.",
+    "topic": "",
+    "conference": "cav",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-65627-9_22"
+  },
+  {
+    "id": "10.1007/978-3-031-65627-9_23",
+    "title": "SolTG: A CHC-Based Solidity Test Case Generator",
+    "authors": [
+      "Konstantin Britikov",
+      "Ilia Zlatkin",
+      "Grigory Fedyukovich",
+      "Leonardo Alt",
+      "Natasha Sharygina"
+    ],
+    "abstract": "Achieving high test coverage is important when developing blockchain smart contracts, but it could be challenging without automated reasoning tools. In this paper, we present SolTG , an automated test case generator for Solidity based on constrained Horn clauses (CHC). SolTG exhaustively enumerates symbolic path constraints from the contract’s CHC representation and makes calls to the Satisfiability Modulo Theories (SMT) solver to find input values under which the contract exhibits the corresponding behavior. Test cases synthesized by SolTG have the form of a sequence of function calls over concrete values of input parameters which lead to a specific execution scenario. The tool supports multiple Solidity-specific features and is capable of exhibiting a high coverage for industrial-grade Solidity code. We present a detailed architecture of SolTG based on the existing translation of smart contracts into a CHC representation. We also present the experimental results for test generation on the regression and industrial benchmarks.",
+    "topic": "",
+    "conference": "cav",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-65627-9_23"
+  },
+  {
+    "id": "10.1007/978-3-031-65627-9_3",
+    "title": "Algebraic Reasoning Meets Automata in Solving Linear Integer Arithmetic",
+    "authors": [
+      "Peter Habermehl",
+      "Vojtěch Havlena",
+      "Michal Hečko",
+      "Lukáš Holík",
+      "Ondřej Lengál"
+    ],
+    "abstract": "We present a new angle on solving quantified linear integer arithmetic based on combining the automata-based approach, where numbers are understood as bitvectors, with ideas from (nowadays prevalent) algebraic approaches, which work directly with numbers. This combination is enabled by a fine-grained version of the duality between automata and arithmetic formulae. In particular, we employ a construction where states of automaton are obtained as derivatives of arithmetic formulae: then every state corresponds to a formula. Optimizations based on techniques and ideas transferred from the world of algebraic methods are used on thousands of automata states, which dramatically amplifies their effect. The merit of this combination of automata with algebraic methods is demonstrated by our prototype implementation being competitive to and even superior to state-of-the-art SMT solvers.",
+    "topic": "",
+    "conference": "cav",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-65627-9_3"
+  },
+  {
+    "id": "10.1007/978-3-031-65627-9_4",
+    "title": "Distributed SMT Solving Based on Dynamic Variable-Level Partitioning",
+    "authors": [
+      "Mengyu Zhao",
+      "Shaowei Cai",
+      "Yuhang Qian"
+    ],
+    "abstract": "Satisfiability Modulo Theories on arithmetic theories have significant applications in many important domains. Previous efforts have been mainly devoted to improving the techniques and heuristics in sequential SMT solvers. With the development of computing resources, a promising direction to boost performance is parallel and even distributed SMT solving. We explore this potential in a divide-and-conquer view and propose a novel dynamic parallel framework with variable-level partitioning. To the best of our knowledge, this is the first attempt to perform variable-level partitioning for arithmetic theories. Moreover, we enhance the interval constraint propagation algorithm, coordinate it with Boolean propagation, and integrate it into our variable-level partitioning strategy. Our partitioning algorithm effectively capitalizes on propagation information, enabling efficient formula simplification and search space pruning. We apply our method to three state-of-the-art SMT solvers, namely CVC5, OpenSMT2, and Z3, resulting in efficient parallel SMT solvers. Experiments are carried out on benchmarks of linear and non-linear arithmetic over both real and integer variables, and our variable-level partitioning method shows substantial improvements over previous partitioning strategies and is particularly good at non-linear theories.",
+    "topic": "",
+    "conference": "cav",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-65627-9_4"
+  },
+  {
+    "id": "10.1007/978-3-031-65627-9_5",
+    "title": "Quantified Linear Arithmetic Satisfiability via Fine-Grained Strategy Improvement",
+    "authors": [
+      "Charlie Murphy",
+      "Zachary Kincaid"
+    ],
+    "abstract": "Checking satisfiability of formulae in the theory of linear arithmetic has far reaching applications, including program verification and synthesis. Many satisfiability solvers excel at proving and disproving satisfiability of quantifier-free linear arithmetic formulas and have recently begun to support quantified formulas. Beyond simply checking satisfiability of formulas, fine-grained strategies for satisfiability games enables solving additional program verification and synthesis tasks. Quantified satisfiability games are played between two players—SAT and UNSAT—who take turns instantiating quantifiers and choosing branches of boolean connectives to evaluate the given formula. A winning strategy for SAT (resp. UNSAT) determines the choices of SAT (resp. UNSAT) as a function of UNSAT ’s (resp. SAT ’s) choices such that the given formula evaluates to true (resp. false) no matter what choices UNSAT (resp. SAT) may make. As we are interested in both checking satisfiability and synthesizing winning strategies, we must avoid conversion to normal-forms that alter the game semantics of the formula (e.g. prenex normal form). We present fine-grained strategy improvement and strategy synthesis, the first technique capable of synthesizing winning fine-grained strategies for linear arithmetic satisfiability games, which may be used in higher-level applications. We experimentally evaluate our technique and find it performs favorably compared with state-of-the-art solvers.",
+    "topic": "",
+    "conference": "cav",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-65627-9_5"
+  },
+  {
+    "id": "10.1007/978-3-031-65627-9_6",
+    "title": "From Clauses to Klauses",
+    "authors": [
+      "Joseph E. Reeves",
+      "Marijn J. H. Heule",
+      "Randal E. Bryant"
+    ],
+    "abstract": "Satisfiability (SAT) solvers have been using the same input format for decades: a formula in conjunctive normal form. Cardinality constraints appear frequently in problem descriptions: over $$64\\%$$ of the SAT Competition formulas contain at least one cardinality constraint, while over $$17\\%$$ contain many large cardinality constraints. Allowing general cardinality constraints as input would simplify encodings and enable the solver to handle constraints natively or to encode them using different (and possibly dynamically changing) clausal forms. We modify the modern SAT solver CaDiCaL to handle cardinality constraints natively. Unlike the stronger cardinality reasoning in pseudo-Boolean (PB) or other systems, our incremental approach with cardinality-based propagation requires only moderate changes to a SAT solver, preserves the ability to run important inprocessing techniques, and is easily combined with existing proof-producing and validation tools. Our experimental evaluation on SAT Competition formulas shows our solver configurations with cardinality support consistently outperform other SAT and PB solvers.",
+    "topic": "",
+    "conference": "cav",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-65627-9_6"
+  },
+  {
+    "id": "10.1007/978-3-031-65627-9_7",
+    "title": "CaDiCaL 2.0",
+    "authors": [
+      "Armin Biere",
+      "Tobias Faller",
+      "Katalin Fazekas",
+      "Mathias Fleury",
+      "Nils Froleyks",
+      "Florian Pollitt"
+    ],
+    "abstract": "The SAT solver CaDiCaL provides a rich feature set with a clean library interface. It has been adopted by many users, is well documented and easy to extend due to its effective testing and debugging infrastructure. In this tool paper we give a high-level introduction into the solver architecture and then go briefly over implemented techniques. We describe basic features and novel advanced usage scenarios. Experiments confirm that CaDiCaL despite this flexibility has state-of-the-art performance both in a stand-alone as well as incremental setting.",
+    "topic": "",
+    "conference": "cav",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-65627-9_7"
+  },
+  {
+    "id": "10.1007/978-3-031-65627-9_8",
+    "title": "Formally Certified Approximate Model Counting",
+    "authors": [
+      "Yong Kiam Tan",
+      "Jiong Yang",
+      "Mate Soos",
+      "Magnus O. Myreen",
+      "Kuldeep S. Meel"
+    ],
+    "abstract": "Approximate model counting is the task of approximating the number of solutions to an input Boolean formula. The state-of-the-art approximate model counter for formulas in conjunctive normal form (CNF), $$\\textsf{ApproxMC}$$ , provides a scalable means of obtaining model counts with probably approximately correct (PAC)-style guarantees. Nevertheless, the validity of $$\\textsf{ApproxMC}$$ ’s approximation relies on a careful theoretical analysis of its randomized algorithm and the correctness of its highly optimized implementation, especially the latter’s stateful interactions with an incremental CNF satisfiability solver capable of natively handling parity (XOR) constraints.\nWe present the first certification framework for approximate model counting with formally verified guarantees on the quality of its output approximation. Our approach combines: (i) a static , once-off, formal proof of the algorithm’s PAC guarantee in the Isabelle/HOL proof assistant; and (ii) dynamic , per-run, verification of $$\\textsf{ApproxMC}$$ ’s calls to an external CNF-XOR solver using proof certificates. We detail our general approach to establish a rigorous connection between these two parts of the verification, including our blueprint for turning the formalized, randomized algorithm into a verified proof checker, and our design of proof certificates for both $$\\textsf{ApproxMC}$$ and its internal CNF-XOR solving steps. Experimentally, we show that certificate generation adds little overhead to an approximate counter implementation, and that our certificate checker is able to fully certify $$84.7\\%$$ of instances with generated certificates when given the same time and memory limits as the counter.",
+    "topic": "",
+    "conference": "cav",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-65627-9_8"
+  },
+  {
+    "id": "10.1007/978-3-031-65627-9_9",
+    "title": "Scalable Bit-Blasting with Abstractions",
+    "authors": [
+      "Aina Niemetz",
+      "Mathias Preiner",
+      "Yoni Zohar"
+    ],
+    "abstract": "The dominant state-of-the-art approach for solving bit-vector formulas in Satisfiability Modulo Theories (SMT) is bit-blasting, an eager reduction to propositional logic. Bit-blasting is surprisingly efficient in practice but does not generally scale well with increasing bit-widths, especially when bit-vector arithmetic is present. In this paper, we present a novel CEGAR-style abstraction-refinement procedure for the theory of fixed-size bit-vectors that significantly improves the scalability of bit-blasting. We provide lemma schemes for various arithmetic bit-vector operators and an abduction-based framework for synthesizing refinement lemmas. We extended the state-of-the-art SMT solver Bitwuzla with our abstraction-refinement approach and show that it significantly improves solver performance on a variety of benchmark sets, including industrial benchmarks that arise from smart contract verification.",
+    "topic": "",
+    "conference": "cav",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1007/978-3-031-65627-9_9"
+  }
+]

@@ -1,0 +1,580 @@
+[
+  {
+    "id": "10.4230/LIPIcs.ITP.2025",
+    "title": "LIPIcs, Volume 352, ITP 2025, Complete Volume",
+    "authors": [
+      "Yannick Forster",
+      "Chantal Keller"
+    ],
+    "abstract": "LIPIcs, Volume 352, ITP 2025, Complete Volume",
+    "topic": "LIPIcs, Volume 352, ITP 2025, Complete Volume",
+    "conference": "itp",
+    "year": 2025,
+    "paper_url": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITP.2025"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2025.1",
+    "title": "A Certified Proof Checker for Deep Neural Network Verification in Imandra",
+    "authors": [
+      "Remi Desmartin",
+      "Omri Isac",
+      "Grant Passmore",
+      "Ekaterina Komendantskaya",
+      "Kathrin Stark",
+      "Guy Katz"
+    ],
+    "abstract": "Recent advances in the verification of deep neural networks (DNNs) have opened the way for a broader usage of DNN verification technology in many application areas, including safety-critical ones. However, DNN verifiers are themselves complex programs that have been shown to be susceptible to errors and numerical imprecision; this, in turn, has raised the question of trust in DNN verifiers. One prominent attempt to address this issue is enhancing DNN verifiers with the capability of producing certificates of their results that are subject to independent algorithmic checking. While formulations of Marabou certificate checking already exist on top of the state-of-the-art DNN verifier Marabou, they are implemented in C++, and that code itself raises the question of trust (e.g., in the precision of floating point calculations or guarantees for implementation soundness). Here, we present an alternative implementation of the Marabou certificate checking in Imandra - an industrial functional programming language and an interactive theorem prover (ITP) - that allows us to obtain full proof of certificate correctness. The significance of the result is two-fold. Firstly, it gives stronger independent guarantees for Marabou proofs. Secondly, it opens the way for the wider adoption of DNN verifiers in interactive theorem proving in the same way as many ITPs already incorporate SMT solvers.",
+    "topic": "Neural Network Verification; Farkas Lemma; Proof Certification",
+    "conference": "itp",
+    "year": 2025,
+    "paper_url": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITP.2025.1"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2025.2",
+    "title": "A Formal Analysis of Algorithms for Matroids and Greedoids",
+    "authors": [
+      "Mohammad Abdulaziz",
+      "Thomas Ammer",
+      "Shriya Meenakshisundaram",
+      "Adem Rimpapa"
+    ],
+    "abstract": "We present a formal analysis, in Isabelle/HOL, of optimisation algorithms for matroids, which are useful generalisations of combinatorial structures that occur in optimisation, and greedoids, which are a generalisation of matroids. Although some formalisation work has been done earlier on matroids, our work here presents the first formalisation of results on greedoids, and many results we formalise in relation to matroids are also formalised for the first time in this work. We formalise the analysis of a number of optimisation algorithms for matroids and greedoids. We also derive from those algorithms executable implementations of Kruskal’s algorithm for computing optimal spanning trees, an algorithm for maximum cardinality matching for bi-partite graphs, and Prim’s algorithm for computing minimum weight spanning trees.",
+    "topic": "Matroids; Greedoids; Combinatorial Optimisation; Graph Algorithms; Isabelle/HOL; Formal Verification",
+    "conference": "itp",
+    "year": 2025,
+    "paper_url": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITP.2025.2"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2025.3",
+    "title": "A Formal Proof of Complexity Bounds on Diophantine Equations",
+    "authors": [
+      "Jonas Bayer",
+      "Marco David"
+    ],
+    "abstract": "We present a universal construction of Diophantine equations with bounded complexity in Isabelle/HOL. This is a formalization of our own work in number theory [Jonas Bayer et al., 2025].\nHilbert’s Tenth Problem was answered negatively by Yuri Matiyasevich, who showed that there is no general algorithm to decide whether an arbitrary Diophantine equation has a solution. However, the problem remains open when generalized to the field of rational numbers, or contrarily, when restricted to Diophantine equations with bounded complexity, characterized by the number of variables ν and the degree δ. If every Diophantine set can be represented within the bounds (ν, δ), we say that this pair is universal, and it follows that the corresponding class of equations is undecidable. In a separate mathematics article, we have determined the first non-trivial universal pair for the case of integer unknowns. \nIn this paper, we contribute a formal verification of this new result. In doing so, we markedly extend the Isabelle AFP entry on multivariate polynomials [Christian Sternagel et al., 2010], formalize parts of a number theory textbook [Melvyn B. Nathanson, 1996], and develop classical theory on Diophantine equations [Yuri Matiyasevich and Julia Robinson, 1975] in Isabelle. In addition, our work includes metaprogramming infrastructure designed to efficiently handle complex definitions of multivariate polynomials. Our mathematical draft has been formalized while the mathematical research was ongoing, and benefited largely from the help of the theorem prover. We reflect on how the close collaboration between mathematician and computer is an uncommon but promising modus operandi.",
+    "topic": "Diophantine Equations; Hilbert’s Tenth Problem; Isabelle/HOL",
+    "conference": "itp",
+    "year": 2025,
+    "paper_url": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITP.2025.3"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2025.4",
+    "title": "A Formalization of Divided Powers in Lean",
+    "authors": [
+      "Antoine Chambert-Loir",
+      "María Inés de Frutos-Fernández"
+    ],
+    "abstract": "Given an ideal I in a commutative ring A, a divided power structure on I is a collection of maps {γ_n : I → A}_{n ∈ ℕ}, subject to axioms that imply that it behaves like the family {x ↦ xⁿ/n!}_{n ∈ ℕ}, but which can be defined even when division by factorials is not possible in A. Divided power structures have important applications in diverse areas of mathematics, including algebraic topology, number theory and algebraic geometry.\nIn this article we describe a formalization in Lean 4 of the basic theory of divided power structures, including divided power morphisms and sub-divided power ideals, and we provide several fundamental constructions, in particular quotients and sums. This constitutes the first formalization of this theory in any theorem prover.\nAs a prerequisite of general interest, we expand the formalized theory of multivariate power series rings, endowing them with a topology and defining evaluation and substitution of power series.",
+    "topic": "Formal mathematics; algebraic number theory; commutative algebra; divided powers; Lean; Mathlib",
+    "conference": "itp",
+    "year": 2025,
+    "paper_url": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITP.2025.4"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2025.5",
+    "title": "A Mechanized First-Order Theory of Algebraic Data Types with Pattern Matching",
+    "authors": [
+      "Joshua M. Cohen"
+    ],
+    "abstract": "Algebraic data types (ADTs) and pattern matching are widely used to write elegant functional programs and to specify program behavior. These constructs are critical to most general-purpose interactive theorem provers (e.g. Lean, Rocq/Coq), first-order SMT-based deductive verifiers (e.g. Dafny, VeriFast), and intermediate verification languages (e.g. Why3). Such features require layers of compilation - in Rocq, pattern matches are compiled to remove nesting, while SMT-based tools further axiomatize ADTs with a first-order specification. However, these critical steps have been omitted from prior formalizations of such toolchains (e.g. MetaRocq). We give the first proved-sound sophisticated pattern matching compiler (based on Maranget’s compilation to decision trees) and first-order axiomatization of ADTs, both based on Why3 implementations. We prove the soundness of exhaustiveness checking, extending pen-and-paper proofs from the literature, and formulate a robustness property with which we find an exhaustiveness-related bug in Why3. We show that many of our proofs could be useful for reasoning about any first-order program verifier supporting ADTs.",
+    "topic": "Pattern Matching Compilation; Algebraic Data Types; First-Order Logic",
+    "conference": "itp",
+    "year": 2025,
+    "paper_url": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITP.2025.5"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2025.6",
+    "title": "A Natural Language Formalization of Perfectoid Rings in ℕaproche",
+    "authors": [
+      "Peter Koepke"
+    ],
+    "abstract": "This paper describes an experiment to formalize sophisticated mathematics in the ℕaproche proof assistant which uses natural language input and a first-order internal logic. We view this as a contribution to the ongoing discussion whether formal systems for research mathematics require complex, computer-orientated type systems or whether approaches closer to traditional mathematical practices are possible. The formalization also explores the limits of the current ℕaproche system and avenues for further development.",
+    "topic": "formal mathematics; formalization; perfectoid rings; controlled natural language; Naproche",
+    "conference": "itp",
+    "year": 2025,
+    "paper_url": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITP.2025.6"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2025.7",
+    "title": "A Verified Cost Model for Call-By-Push-Value",
+    "authors": [
+      "Zhuo Zoey Chen",
+      "Johannes Åman Pohjola",
+      "Christine Rizkallah"
+    ],
+    "abstract": "The call-by-push-value λ-calculus allows for syntactically specifying the order of evaluation as part of the term language. Hence, it serves as a unifying language for embedding various evaluation strategies including call-by-value and call-by-name. Given the impact of call-by-push-value, it is remarkable that its adequacy as a model for computational complexity theory has not yet been studied. In this paper, we show that the call-by-push-value λ-calculus is reasonable for both time and space complexity. A reasonable cost model can encode other reasonable cost models with polynomial overhead in time and constant factor overhead in space. We achieve this by encoding call-by-push-value λ-calculus into Turing machines, following a simulation strategy by Forster et al.; for the converse direction, we prove that Levy’s encoding of the call-by-value λ-calculus has reasonable complexity bounds. The main results have been formalised in the HOL4 theorem prover.",
+    "topic": "lambda calculus; formalizations of computational models; computability theory; HOL; call-by-push-value reduction; time and space complexity; abstract machines",
+    "conference": "itp",
+    "year": 2025,
+    "paper_url": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITP.2025.7"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2025.8",
+    "title": "Abstract, Compositional Consistency: Isabelle/HOL Locales for Completeness à la Fitting",
+    "authors": [
+      "Asta Halkjær From",
+      "Anders Schlichtkrull"
+    ],
+    "abstract": "Smullyan and Fitting have used abstract consistency properties to great effect in unifying meta-theoretical results in logic. In this paper, we generalize these developments with the help of Isabelle/HOL. We use locales to decompose abstract consistency into general parts, and provide the textbook variants as special cases. Users can assemble their own consistency property for a given logic. The compositionality alleviates the absence of dependent types in Isabelle/HOL. We use our development to mechanize completeness of calculi for three logics: (1) first-order logic where we only instantiate universal quantifiers with already occurring terms, (2) second-order logic over general models, and (3) a recently developed strong hybrid logic with propositional quantification.",
+    "topic": "Logic; completeness; abstract consistency property; Isabelle/HOL; locales",
+    "conference": "itp",
+    "year": 2025,
+    "paper_url": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITP.2025.8"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2025.9",
+    "title": "Algebra Is Half the Battle: Verifying Presentations of Graded Unipotent Chevalley Groups",
+    "authors": [
+      "Eric Wang",
+      "Arohee Bhoja",
+      "Cayden Codel",
+      "Noah G. Singer"
+    ],
+    "abstract": "Graded unipotent Chevalley groups are an important family of groups on matrices with polynomial entries over a finite field. Using the Lean theorem prover, we verify that three such groups, namely, the A₃- and the two B₃-type groups, satisfy a useful group-theoretic condition. Specifically, these groups are defined by a set of equations called Steinberg relations, and we prove that a certain canonical \"smaller\" set of Steinberg relations suffices to derive the rest.\nOur work is motivated by an application for building topologically-interesting objects called higher-dimensional expanders (HDXs). In the past decade, HDXs have formed the basis for many new results in theoretical computer science, such as in quantum error correction and in property testing. Yet despite the increasing prevalence of HDXs, only two methods of constructing them are known. One such method builds an HDX from groups that satisfy the aforementioned property, and the Chevalley groups we use are (essentially) the only ones currently known to satisfy it.",
+    "topic": "Group presentations; term rewriting; metaprogramming; proof automation; the Lean theorem prover",
+    "conference": "itp",
+    "year": 2025,
+    "paper_url": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITP.2025.9"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2025.10",
+    "title": "An Isabelle/HOL Formalization of Semi-Thue and Conditional Semi-Thue Systems",
+    "authors": [
+      "Dohan Kim"
+    ],
+    "abstract": "We present a formalized framework for semi-Thue and conditional semi-Thue systems for studying monoids and their word problem using the Isabelle/HOL proof assistant. We provide a formalized decision procedure for the word problem of monoids if they are finitely presented by complete semi-Thue systems. In particular, we present a new formalized method for checking confluence using (conditional) critical pairs for certain conditional semi-Thue systems. We propose and formalize an inference system for generating conditional equational theories and Thue congruences using conditional semi-Thue systems. Then we provide a new formalized decision procedure for the word problem of monoids which have finite complete (reductive) conditional presentations.",
+    "topic": "semi-Thue systems; conditional semi-Thue systems; conditional string rewriting; monoids; word problem",
+    "conference": "itp",
+    "year": 2025,
+    "paper_url": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITP.2025.10"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2025.11",
+    "title": "Animating MRBNFs: Truly Modular Binding-Aware Datatypes in Isabelle/HOL",
+    "authors": [
+      "Jan van Brügge",
+      "Andrei Popescu",
+      "Dmitriy Traytel"
+    ],
+    "abstract": "Nominal Isabelle provides powerful tools for meta-theoretic reasoning about syntax of logics or programming languages, in which variables are bound. It has been instrumental to major verification successes, such as Gödel’s incompleteness theorems. However, the existing tooling is not compositional. In particular, it does not support nested recursion, linear binding patterns, or infinitely branching syntax. These limitations are fundamental in the way nominal datatypes and functions on them are constructed within Nominal Isabelle. Taking advantage of recent theoretical advancements that overcome these limitations through a modular approach using the concept of map-restricted bounded natural functor (MRBNF), we develop and implement a new definitional package for binding-aware datatypes in Isabelle/HOL, called MrBNF. We describe the journey from the user specification to the end-product types, constants and theorems the tool generates. We validate MrBNF in two formalization case studies that so far were out of reach of nominal approaches: (1) Mazza’s isomorphism between the finitary and the infinitary affine λ-calculus, and (2) the POPLmark 2B challenge, which involves non-free binders for linear pattern matching.",
+    "topic": "syntax with bindings; datatypes; inductive predicates; Isabelle/HOL",
+    "conference": "itp",
+    "year": 2025,
+    "paper_url": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITP.2025.11"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2025.12",
+    "title": "Automatically Generalizing Proofs and Statements",
+    "authors": [
+      "Anshula Gandhi",
+      "Anand Rao Tadipatri",
+      "Timothy Gowers"
+    ],
+    "abstract": "We present an algorithm, developed in the Lean programming language, to automatically generalize mathematical proofs. The algorithm, which builds on work by Olivier Pons, advances state-of-the-art proof generalization by robustly generalizing repeated and related constants, as well as abstracting out hypotheses implicitly concerning them. We also discuss the role of proof generalization in conjecturing, learning from failure, and other aspects of mathematical proof discovery.",
+    "topic": "automated reasoning; automated theorem proving; interactive theorem proving; formalization of mathematics; generalization; Lean theorem prover; Lean tactic",
+    "conference": "itp",
+    "year": 2025,
+    "paper_url": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITP.2025.12"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2025.13",
+    "title": "Barendregt’s Theory of the λ-Calculus, Refreshed and Formalized",
+    "authors": [
+      "Adrienne Lancelot",
+      "Beniamino Accattoli",
+      "Maxime Vemclefs"
+    ],
+    "abstract": "Barendregt’s book on the untyped λ-calculus refines the inconsistent view of β-divergence as representation of the undefined via the key concept of head reduction.\nIn this paper, we put together recent revisitations of some key theorems laid out in Barendregt’s book, and we formalize them in the Abella proof assistant. Our work provides a compact and refreshed presentation of the core of the book. \nThe formalization faithfully mimics pen-and-paper proofs. Two interesting aspects are the manipulation of contexts for the study of contextual equivalence and a formal alternative to the informal trick at work in Takahashi’s proof of the genericity lemma. As a by-product, we obtain an alternative definition of contextual equivalence that does not mention contexts.",
+    "topic": "lambda-calculus; head reduction; equational theory",
+    "conference": "itp",
+    "year": 2025,
+    "paper_url": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITP.2025.13"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2025.14",
+    "title": "Canonical for Automated Theorem Proving in Lean",
+    "authors": [
+      "Chase Norman",
+      "Jeremy Avigad"
+    ],
+    "abstract": "Canonical is a solver for type inhabitation in dependent type theory, that is, the problem of producing a term of a given type. We present a Lean tactic which invokes Canonical to generate proof terms and synthesize programs. The tactic supports higher-order and dependently-typed goals, structural recursion over indexed inductive types, and definitional equality. Canonical finds proofs for 84% of Natural Number Game problems in 51 seconds total.",
+    "topic": "Automated Reasoning; Interactive Theorem Proving; Dependent Type Theory; Inhabitation; Unification; Program Synthesis; Formal Methods",
+    "conference": "itp",
+    "year": 2025,
+    "paper_url": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITP.2025.14"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2025.15",
+    "title": "Certified Implementability of Global Multiparty Protocols",
+    "authors": [
+      "Elaine Li",
+      "Thomas Wies"
+    ],
+    "abstract": "Implementability is the decision problem at the heart of top-down approaches to protocol verification. In this paper, we present a mechanization of a recently proposed precise implementability characterization by Li et al. for a large class of protocols that subsumes many existing formalisms in the literature. Our protocols and implementations model asynchronous commmunication, and can exhibit infinite behavior. We improve upon their pen-and-paper results by unifying distinct formalisms, simplifying existing proof arguments, elaborating on the construction of canonical implementations, and even uncovering a subtle bug in the semantics for infinite words. As a corollary of our mechanization, we show that the original characterization of implementability applies even to protocols with infinitely many participants. We also contribute a reusable library for reasoning about generic communicating state machines. Our mechanization consists of about 15k lines of Rocq code. We believe that our mechanization can provide the foundation for deductively proving the implementability of protocols beyond the reach of prior work, extracting certified implementations for finite protocols, and investigating implementability under alternative asynchronous communication models.",
+    "topic": "Asynchronous protocols; communicating state machines; labeled transition systems; infinite semantics; realizability; multiparty session types; choreographies; deadlock freedom",
+    "conference": "itp",
+    "year": 2025,
+    "paper_url": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITP.2025.15"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2025.16",
+    "title": "Finiteness of Symbolic Derivatives in Lean",
+    "authors": [
+      "Ekaterina Zhuchko",
+      "Hendrik Maarand",
+      "Margus Veanes",
+      "Gabriel Ebner"
+    ],
+    "abstract": "Brzozowski proved that the set of derivatives of any regular expression is finite modulo associativity, idempotence and, notably, commutativity of the union operator. We extend this result to the case of symbolic location based derivatives, for which we prove finiteness of the state space by quotienting only by associativity, deduplication and idempotence (ADI); the fact that we don't use commutativity allows for this result to carry over to the derivative based backtracking (PCRE) match semantics, where the union operator is noncommutative. Furthermore, we consider regular expressions extended with lookarounds, intersection, and negation. We also show that our method for proving finiteness allows us to include certain simplification rules in the derivative operation while preserving finiteness. The finiteness proof is constructive: given an expression R, we construct a finite set that is an overapproximation (modulo ADI) of the set of derivatives of R. We reuse some of the infrastructure provided in previous formalization efforts for regular expressions in Lean 4, showing the flexibility and reusability of the framework.",
+    "topic": "Lean; regular languages; lookarounds; derivatives; finiteness",
+    "conference": "itp",
+    "year": 2025,
+    "paper_url": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITP.2025.16"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2025.17",
+    "title": "Formalising Inductive and Coinductive Containers",
+    "authors": [
+      "Stefania Damato",
+      "Thorsten Altenkirch",
+      "Axel Ljungström"
+    ],
+    "abstract": "Containers capture the concept of strictly positive data types in programming. The original development of containers is done in the internal language of locally cartesian closed categories (LCCCs) with disjoint coproducts and W-types, and uniqueness of identity proofs (UIP) is implicitly assumed throughout. Although it is claimed that these developments can also be interpreted in extensional Martin-Löf type theory, this interpretation is not made explicit. In this paper, we present a formalisation of the results that \"containers preserve least and greatest fixed points\" in Cubical Agda, thereby giving a formulation in intensional type theory. Our proofs do not make use of UIP and thereby generalise the original results from talking about container functors on Set to container functors on the wild category of types. Our main incentive for using Cubical Agda is that its path type restores the equivalence between bisimulation and coinductive equality. Thus, besides developing container theory in a more general setting, we also demonstrate the usefulness of Cubical Agda’s path type to coinductive proofs.",
+    "topic": "type theory; container; initial algebra; terminal coalgebra; Cubical Agda",
+    "conference": "itp",
+    "year": 2025,
+    "paper_url": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITP.2025.17"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2025.18",
+    "title": "Formalising New Mathematics in Isabelle: Diagonal Ramsey",
+    "authors": [
+      "Lawrence C. Paulson"
+    ],
+    "abstract": "The formalisation of mathematics is becoming routine, but its value to research mathematicians remains unproven. There are few examples of using proof assistants to verify new work. This paper reports the formalisation - inspired by a Lean one by Bhavik Mehta - of a major new result [Marcelo Campos et al., 2023] about Ramsey numbers. One unexpected finding was a heavy role for computer algebra techniques.",
+    "topic": "Isabelle; formalisation of mathematics; Ramsey’s theorem; computer algebra",
+    "conference": "itp",
+    "year": 2025,
+    "paper_url": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITP.2025.18"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2025.19",
+    "title": "Formalising Subject Reduction and Progress for Multiparty Session Processes",
+    "authors": [
+      "Burak Ekici",
+      "Tadayoshi Kamegai",
+      "Nobuko Yoshida"
+    ],
+    "abstract": "Multiparty session types (MPST) provide a robust typing discipline for specifying and verifying communication protocols in concurrent and distributed systems involving multiple participants. This work formalises the non-stuck theorem for synchronous MPST in the Coq proof assistant, ensuring that well-typed communications never get stuck. We present a fully mechanised proof of the theorem, where recursive type unfoldings are modelled as infinite trees, leveraging coinductive reasoning. This marks the first formal proof to incorporate precise subtyping, aiming to extend the typability of processes thus precision of the type system. The proof is grounded in fundamental properties such as subject reduction and progress.\nDuring the mechanisation process, we discovered that the structural congruence rule for recursive processes, as presented in several prior works on MPST, violates subject reduction. We resolve this issue by revising and formalising the rule to ensure the preservation of type soundness.\nOur approach to formal proofs about infinite type trees involves analysing their finite prefixes through inductive reasoning within outer-level coinductively stated goals. We employ the greatest fixed point of the parameterised least fixed point technique to define coinductive predicates and use parameterised coinduction to prove properties. The formalisation comprises approximately 16K lines of Coq code, accessible at: https://github.com/Apiros3/smpst-sr-smer.",
+    "topic": "multiparty session types; type trees; subtyping; progress; subject reduction; non-stuck theorem; Coq",
+    "conference": "itp",
+    "year": 2025,
+    "paper_url": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITP.2025.19"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2025.20",
+    "title": "Formalizing Colimits in 𝒞at",
+    "authors": [
+      "Mario Carneiro",
+      "Emily Riehl"
+    ],
+    "abstract": "Certain results involving \"higher structures\" are not currently accessible to computer formalization because the prerequisite ∞-category theory has not been formalized. To support future work on formalizing ∞-category theory in Lean’s mathematics library, we formalize some fundamental constructions involving the 1-category of categories. Specifically, we construct the left adjoint to the nerve embedding of categories into simplicial sets, defining the homotopy category functor. We prove further that this adjunction is reflective, which allows us to conclude that 𝒞at has colimits. To our knowledge this is the first formalized proof that the nerve functor is a fully faithful right adjoint and that the category of categories is cocomplete.",
+    "topic": "category theory; infinity-category theory; nerve; simplicial set; colimit",
+    "conference": "itp",
+    "year": 2025,
+    "paper_url": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITP.2025.20"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2025.21",
+    "title": "Formalizing Concentration Inequalities in Rocq: Infrastructure and Automation",
+    "authors": [
+      "Reynald Affeldt",
+      "Alessandro Bruni",
+      "Cyril Cohen",
+      "Pierre Roux",
+      "Takafumi Saikawa"
+    ],
+    "abstract": "Concentration inequalities are standard lemmas providing upper bounds on deviations of random variables. To formalize concentration inequalities, we have been developing a general library of lemmas for probability theory in the Rocq prover. This effort led us to revisit already established technical aspects of the Mathematical Components libraries. In this paper, we report on improvements of general interest resulting from our formalization. We devise types for numeric values and a lightweight semi-decision procedure, based on interval arithmetic. We also extend the hierarchy of available mathematical structures to formalize Lebesgue spaces. We illustrate our new formalization of probability theory with the complete proof of a concentration inequality for Bernoulli sampling.",
+    "topic": "Rocq prover; Mathematical Components library; abstraction interpretation; probability theory; concentration inequalities",
+    "conference": "itp",
+    "year": 2025,
+    "paper_url": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITP.2025.21"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2025.22",
+    "title": "Formalizing Splitting in Isabelle/HOL",
+    "authors": [
+      "Ghilain Bergeron",
+      "Florent Krasnopol",
+      "Sophie Tourret"
+    ],
+    "abstract": "We describe the formalization in Isabelle/HOL of a framework for splitting, a theorem proving technique that extends saturation-based calculi with branching abilities. The framework preserves the completeness of the original calculus. We focus here on the simplest splitting model and provide an extension of the ordered resolution calculus with a variant of splitting called Lightweight AVATAR.",
+    "topic": "Isabelle/HOL; saturation-based calculi; splitting",
+    "conference": "itp",
+    "year": 2025,
+    "paper_url": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITP.2025.22"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2025.23",
+    "title": "Formalizing the Hidden Number Problem in Isabelle/HOL",
+    "authors": [
+      "Sage Binder",
+      "Eric Ren",
+      "Katherine Kosaian"
+    ],
+    "abstract": "We formalize the hidden number problem (HNP), as introduced in a seminal work by Boneh and Venkatesan in 1996, in Isabelle/HOL. Intuitively, the HNP involves demonstrating the existence of an algorithm (the \"adversary\") which can compute (with high probability) a hidden number α given access to a bit-leaking oracle. Originally developed to establish the security of Diffie-Hellman key exchange, the HNP has since been used not only for protocol security but also in cryptographic attacks, including notable ones on DSA and ECDSA. Further, as the HNP establishes an expressive paradigm for reasoning about security in the context of information leakage, many HNP variants for other specialized cryptographic applications have since been developed. A main contribution of our work is explicating and clarifying the HNP proof blueprint from the original source material; naturally, formalization forces us to make all assumptions and proof steps precise and transparent. For example, the source material did not explicitly define the adversary and only abstractly defined what information is being leaked; our formalization concretizes both definitions. Additionally, the HNP makes use of an instance of Babai’s nearest plane algorithm, which solves the approximate closest vector problem; we formalize this as a result of independent interest. Our formalizations of Babai’s algorithm and the HNP adversary are executable, setting up potential future work, e.g. in developing formally verified instances of cryptographic attacks.",
+    "topic": "hidden number problem; Babai’s nearest plane algorithm; cryptography; interactive theorem proving; Isabelle/HOL",
+    "conference": "itp",
+    "year": 2025,
+    "paper_url": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITP.2025.23"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2025.24",
+    "title": "Formally Verifying a Vertical Cell Decomposition Algorithm",
+    "authors": [
+      "Yves Bertot",
+      "Thomas Portet"
+    ],
+    "abstract": "The broad context of this work is the application of formal methods to geometry and robotics. We describe an algorithm to decompose a working area containing obstacles into a collection of safe cells and the formal proof that this algorithm is correct. We expect such an algorithm will be useful to compute safe trajectories.\nTo our knowledge, this is one of the first formalization of such an algorithm to decompose a working space into elementary cells that are suitable for later applications, with the proof of correctness that guarantees that large parts of the working space are safe. Techniques to perform this proof go from algebraic reasoning on coordinates and determinants to sorting. The main difficulty comes from the possible existence of degenerate cases, which are treated in a principled way.",
+    "topic": "Formal Verification; Motion planning; algorithmic geometry",
+    "conference": "itp",
+    "year": 2025,
+    "paper_url": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITP.2025.24"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2025.25",
+    "title": "GOL in GOL in HOL: Verified Circuits in Conway’s Game of Life",
+    "authors": [
+      "Magnus O. Myreen",
+      "Mario Carneiro"
+    ],
+    "abstract": "Conway’s Game of Life (GOL) is a cellular automaton that has captured the interest of hobbyists and mathematicians alike for more than 50 years. The Game of Life is Turing complete, and people have been building increasingly sophisticated constructions within GOL, such as 8-bit displays, Turing machines, and even an implementation of GOL itself. In this paper, we report on a project to build an implementation of GOL within GOL, via logic circuits, fully formally verified within the HOL4 theorem prover. This required a combination of interactive tactic proving, symbolic simulation, and semi-automated forward proof to assemble the components into an infinite circuit which can calculate the next step of the simulation while respecting signal propagation delays. The result is a verified \"GOL in GOL compiler\" which takes an initial GOL state and returns a mega-cell version of it that can be passed to off-the-shelf GOL simulators, such as Golly. We believe these techniques are also applicable to other cellular automata, as well as for hardware verification which takes into account both the physical configuration of components and wire delays.",
+    "topic": "Cellular automata; Higher-order logic; Interactive theorem proving",
+    "conference": "itp",
+    "year": 2025,
+    "paper_url": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITP.2025.25"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2025.26",
+    "title": "Improving the SMT Proof Reconstruction Pipeline in Isabelle/HOL",
+    "authors": [
+      "Hanna Lachnitt",
+      "Mathias Fleury",
+      "Haniel Barbosa",
+      "Jibiana Jakpor",
+      "Bruno Andreotti",
+      "Andrew Reynolds",
+      "Hans-Jörg Schurr",
+      "Clark Barrett",
+      "Cesare Tinelli"
+    ],
+    "abstract": "Sledgehammer is a tool that increases the level of automation in the Isabelle/HOL proof assistant by asking external automatic theorem provers (ATPs), including SMT solvers, to prove the current goal. When the external ATP succeeds it must provide enough evidence that the goal holds for Isabelle to be able to reprove it internally based on that evidence. In particular, Isabelle can do this by replaying fine-grained proof certificates from proof-producing SMT solvers as long as they are expressed in the Alethe format, which until now was supported only by the veriT SMT solver. We report on our experience adding proof reconstruction support for the cvc5 SMT solver in Isabelle by extending cvc5 to produce proofs in the Alethe format and then adapting Isabelle to reconstruct those proofs. We discuss several difficulties and pitfalls we encountered and describe a set of tools and techniques we developed to improve the process. A notable outcome of this effort is that Isabelle can now be used as an independent proof checker for SMT problems written in the SMT-LIB standard. We evaluate cvc5’s integration on a set of SMT-LIB benchmarks originating from Isabelle as well as on a set of Isabelle proofs. Our results confirm that this integration complements and improves Sledgehammer’s capabilities.",
+    "topic": "interactive theorem proving; proof assistants; Isabelle/HOL; SMT; certification; proof certificates; proof reconstruction; proof automation",
+    "conference": "itp",
+    "year": 2025,
+    "paper_url": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITP.2025.26"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2025.27",
+    "title": "Inductive Predicates via Least Fixpoints in Higher-Order Separation Logic",
+    "authors": [
+      "Robbert Krebbers",
+      "Luko van der Maas",
+      "Enrico Tassi"
+    ],
+    "abstract": "Inductive predicates play a key role in program verification using separation logic. There are many methods for defining such predicates in separation logic, which all have different conditions and thus support different classes of predicates. The most common methods are: (1) through a structurally-recursive definition (commonly used to define representation predicates for the verification of data structures), and (2) through step-indexing (commonly used to give a semantics of Hoare triples for partial program correctness). A lesser-known method is to define such inductive predicates internally in higher-order separation logic through a least fixpoint of a monotone function.\nThe contributions of this paper are fourfold. First, we present the folklore result (from the Iris library) that one can define least (and greatest) fixpoints internally in separation logic by extending the standard second-order impredicative encoding with some modalities. Second, we show that these fixpoints are useful to define representation predicates where the mathematical and in-memory data structures do not correspond. Third, we show that these fixpoints can be used to define Hoare triples and weakest preconditions for total program correctness in Iris. Fourth, we present a prototype command (akin to Rocq’s Inductive), written in Rocq-Elpi, to generate the least fixpoint and its reasoning principles (constructors and induction principles) from a high-level specification.",
+    "topic": "Separation Logic; Program Verification; Data Structures; Iris; Rocq prover",
+    "conference": "itp",
+    "year": 2025,
+    "paper_url": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITP.2025.27"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2025.28",
+    "title": "Mechanising Böhm Trees and λη-Completeness",
+    "authors": [
+      "Chun Tian",
+      "Michael Norrish"
+    ],
+    "abstract": "The Böhm tree is a critical notion in untyped λ-calculus, capturing the semantics of β-reduction. It underpins the proof that the equational theory of βη-equivalence is Hilbert-Post complete.\nThis paper presents the first formalisation of this result, following the classic text by Barendregt. It includes a coinductive definition of Böhm trees, and then uses the \"Böhm out\" technique to prove a restricted version of Böhm’s separability theorem, which leads to the completeness theorem.\nCarrying out the proofs in HOL4, we develop a new technology to generate fresh names occurring in Böhm trees. We also simplify Barendregt’s approach, avoiding comparing Böhm trees, and leveraging more modern proofs about η-reduction (due to Takahashi).\nAlong the way, we also present the first mechanised proof that terms having head-normal forms are exactly those that are solvable (due to Wadsworth).",
+    "topic": "untyped λ-calculus; Böhm trees; higher-order logic; theorem proving",
+    "conference": "itp",
+    "year": 2025,
+    "paper_url": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITP.2025.28"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2025.29",
+    "title": "Nanopass Back-Translation of Call-Return Trees for Mechanized Secure Compilation Proofs",
+    "authors": [
+      "Jérémy Thibault",
+      "Joseph Lenormand",
+      "Cătălin Hriţcu"
+    ],
+    "abstract": "Researchers aim to build secure compilation chains enforcing that if there is no attack a source context can mount against a source program then there is also no attack an adversarial target context can mount against the compiled program. Proving that these compilation chains are secure is, however, challenging, and involves a non-trivial back-translation step: for any attack a target context mounts against the compiled program one has to exhibit a source context mounting the same attack against the source program. We describe a novel back-translation technique, which results in simpler proofs that can be more easily mechanized in a proof assistant. Given a finite set of finite trace prefixes, capturing the interaction recorded during an attack between a target context and the compiled program, we build a call-return tree that we back-translate into a source context producing the same trace prefixes. We use state in the generated source context to record the current location in the call-return tree. The back-translation is done in several small steps, each adding to the tree new information describing how the location should change depending on how the context regains control. To prove this back-translation correct we give semantics to every intermediate call-return tree language, using ghost state to store information and explicitly enforce execution invariants. We prove several small forward simulations, basically seeing the back-translation as a verified nanopass compiler. Thanks to this modular structure, we are able to mechanize this complex back-translation and its correctness proof in the Rocq prover without too much effort.",
+    "topic": "secure compilation; back-translation; machine-checked proofs; Rocq; Coq",
+    "conference": "itp",
+    "year": 2025,
+    "paper_url": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITP.2025.29"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2025.30",
+    "title": "Nondeterministic Asynchronous Dataflow in Isabelle/HOL",
+    "authors": [
+      "Rafael Castro Gonçalves Silva",
+      "Laouen Fernet",
+      "Dmitriy Traytel"
+    ],
+    "abstract": "We formalize nondeterministic asynchronous dataflow networks in Isabelle/HOL. Dataflow networks are comprised of operators that are capable of communicating with the network, performing silent computations, and making nondeterministic choices. We represent operators using a shallow embedding as codatatypes. Using this representation, we define standard asynchronous dataflow primitives, including sequential and parallel composition and a feedback operator. These primitives adhere to a number of laws from the literature, which we prove by coinduction using weak bisimilarity as our equality. Albeit coinductive and nondeterministic, our model is executable via code extraction to Haskell.",
+    "topic": "dataflow; verification; coinduction; Isabelle/HOL",
+    "conference": "itp",
+    "year": 2025,
+    "paper_url": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITP.2025.30"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2025.31",
+    "title": "On Verifying Secret Control Flow Elimination",
+    "authors": [
+      "David Knothe",
+      "Oliver Bringmann"
+    ],
+    "abstract": "Many countermeasures against timing side-channel attacks have been developed in recent years, including tools to verify that code or a binary is constant-time, compilers or languages that compile into constant-time code, and a formal verification of a compiler that retains the constant-time property.\nWe take a first step toward formally verifying a C compiler that eliminates control-flow-induced timing side channels. Specifically, we extend CompCert with Partial Control-Flow Linearization (PCFL) [Simon Moll and Sebastian Hack, 2018], a global if-conversion algorithm that was repurposed by Soares et al. [Luigi Soares et al., 2023] for removing timing side channels.\nOur transformation is split into multiple steps, separating linearization from instruction predication. One of the intermediate states contains the current program points before and after linearization simultaneously and we exploit a postdominance relation between those to show semantic preservation. We give a new proof that PCFL leaves uniform program points untouched and use it to show that our transformation correctly eliminates all secret control flow.\nAlthough our transformation currently only supports a subset of C, making it unsuitable for use in production, it gives an insight into how a global graph-based linearization technique like PCFL can be verified in CompCert and thereby shows the challenges and obstacles of this undertaking.",
+    "topic": "CompCert; small-step; linearization; side-channels; constant-time; verification; security; taint analysis",
+    "conference": "itp",
+    "year": 2025,
+    "paper_url": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITP.2025.31"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2025.32",
+    "title": "Program Optimisations via Hylomorphisms for Extraction of Executable Code",
+    "authors": [
+      "David Castro Perez",
+      "Marco Paviotti",
+      "Michael Vollmer"
+    ],
+    "abstract": "Generic programming with recursion schemes provides a powerful abstraction for structuring recursion and provides a rigorous reasoning principle for program optimisations which have been successfully applied to compilers for functional languages. Formalising recursion schemes in a type theory offers additional termination guarantees, but it often requires compromising on performance, requiring the assumption of additional axioms, and/or introducing unsafe casts into extracted code.\nThis paper presents the first Rocq formalisation of hylomorphisms allowing for the mechanisation of all recognised recursive algorithms. The key contribution of this paper is that this formalisation is fully axiom-free, and it allows the extraction of safe, idiomatic functional code. We exemplify the framework by formalising a series of algorithms based on different recursive paradigms such as divide-and conquer, dynamic programming, and mutual recursion and demonstrate that the extracted functional code for the programs formalised in our framework is efficient, humanly readable, and runnable. Furthermore, we show the use of the machine-checked proofs of the laws of hylomorphisms to do program optimisations.",
+    "topic": "hylomorphisms; program calculation; divide and conquer; fusion",
+    "conference": "itp",
+    "year": 2025,
+    "paper_url": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITP.2025.32"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2025.33",
+    "title": "Scott’s Representation Theorem and the Univalent Karoubi Envelope",
+    "authors": [
+      "Arnoud van der Leer",
+      "Kobe Wullaert",
+      "Benedikt Ahrens"
+    ],
+    "abstract": "Lambek and Scott constructed a correspondence between simply-typed lambda calculi and Cartesian closed categories. Scott’s Representation Theorem is a cousin to this result for untyped lambda calculi. It states that every untyped lambda calculus arises from a reflexive object in some category.\nWe present a formalization of Scott’s Representation Theorem in univalent foundations, in the (Rocq-)UniMath library. Specifically, we implement two proofs of that theorem, one by Scott and one by Hyland. We also explain the role of the Karoubi envelope - a categorical construction - in the proofs and the impact the chosen foundation has on this construction. Finally, we report on some automation we have implemented for the reduction of λ-terms.",
+    "topic": "Lambda calculi; algebraic theories; categorical semantics; Karoubi envelope; formalization; Rocq-UniMath; univalent foundations",
+    "conference": "itp",
+    "year": 2025,
+    "paper_url": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITP.2025.33"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2025.34",
+    "title": "Verification of the CVM Algorithm with a Functional Probabilistic Invariant",
+    "authors": [
+      "Emin Karayel",
+      "Seng Joe Watt",
+      "Derek Khu",
+      "Kuldeep S. Meel",
+      "Yong Kiam Tan"
+    ],
+    "abstract": "Estimating the number of distinct elements in a data stream is a classic problem with numerous applications in computer science. We formalize a recent, remarkably simple, randomized algorithm for this problem due to Chakraborty, Vinodchandran, and Meel (called the CVM algorithm). Their algorithm deviated considerably from the state of the art, due to its avoidance of intricate derandomization techniques, while still maintaining a close-to-optimal logarithmic space complexity.\nCentral to our formalization is a new proof technique based on functional probabilistic invariants, which allows us to derive concentration bounds using the Cramér-Chernoff method without relying on independence. This simplifies the formal analysis considerably compared to the original proof by Chakraborty et al. Moreover, our technique opens up the possible algorithm design space; we demonstrate this by introducing and verifying a new variant of the CVM algorithm that is both total and unbiased - neither of which is a property of the original algorithm. In this paper, we introduce the proof technique, describe its use in mechanizing both versions of the CVM algorithm in Isabelle/HOL, and present a supporting formalized library on negatively associated random variables used to verify the latter variant.",
+    "topic": "Verification; Isabelle/HOL; Randomized Algorithms; Distinct Elements",
+    "conference": "itp",
+    "year": 2025,
+    "paper_url": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITP.2025.34"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2025.35",
+    "title": "Verifying an Efficient Algorithm for Computing Bernoulli Numbers",
+    "authors": [
+      "Manuel Eberl",
+      "Peter Lammich"
+    ],
+    "abstract": "The Bernoulli numbers B_k are a sequence of rational numbers that is ubiquitous in mathematics, but difficult to compute efficiently (compared to e.g. approximating π).\nIn 2008, Harvey gave the currently fastest known practical way for computing them: his algorithm computes B_k mod p in time O(p log^{1 + o(1)} p). By doing this for O(k) many small primes p in parallel and then combining the results with the Chinese Remainder Theorem, one recovers the value of B_k as a rational number in O(k² log^{2 + o(1)} k) time. One advantage of this approach is that the expensive part of the algorithm is highly parallelisable and has very low memory requirements. This algorithm still holds the world record with its computation of B_{10⁸}.\nWe give a verified efficient LLVM implementation of this algorithm. This was achieved by formalising the necessary mathematical background theory in Isabelle/HOL, proving an abstract version of the algorithm correct, and refining this abstract version down to LLVM using Lammich’s Isabelle-LLVM framework, including many low-level optimisations. The performance of the resulting LLVM code is comparable with Harvey’s original unverified and hand-optimised C++ implementation.",
+    "topic": "Bernoulli numbers; LLVM; verification; Isabelle; Chinese remainder theorem; modular arithmetic; Montgomery arithmetic",
+    "conference": "itp",
+    "year": 2025,
+    "paper_url": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITP.2025.35"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2025.36",
+    "title": "Verifying Datalog Reasoning with Lean",
+    "authors": [
+      "Johannes Tantow",
+      "Lukas Gerlach",
+      "Stephan Mennicke",
+      "Markus Krötzsch"
+    ],
+    "abstract": "Datalog is an essential logical rule language with many applications, and modern rule engines compute logical consequences for Datalog with high performance and scalability. While Datalog is rather simple and, in principle, explainable by design, such sophisticated implementations and optimizations are hard to verify. We therefore propose a certificate-based approach to validate results of Datalog reasoners in a formally verified checker for Datalog proofs. Using the proof assistant Lean, we implement such a checker and verify its correctness against direct formalizations of the Datalog semantics. We propose two JSON encodings for Datalog proofs: one using the widely supported Datalog proof trees, and one using directed acyclic graphs for succinctness. To evaluate the practical feasibility and performance of our approach, we validate proofs that we obtain by converting derivation traces of an existing Datalog reasoner into our tool-independent format.",
+    "topic": "Certifying Algorithms; Datalog; Formal Verification",
+    "conference": "itp",
+    "year": 2025,
+    "paper_url": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITP.2025.36"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2025.37",
+    "title": "LeanLTL: A Unifying Framework for Linear Temporal Logics in Lean (Short Paper)",
+    "authors": [
+      "Eric Vin",
+      "Kyle A. Miller",
+      "Daniel J. Fremont"
+    ],
+    "abstract": "We propose LeanLTL, a unifying framework for linear temporal logics in Lean 4. LeanLTL supports reasoning about traces that represent either infinite or finite linear time. The library allows traditional LTL syntax to be combined with arbitrary Lean expressions, making it straightforward to define properties involving numerical or other types. We prove that standard flavors of LTL can be embedded in our framework. The library also provides automation for reasoning about LeanLTL formulas in a way that facilitates using Lean’s existing tactics. Finally, we provide examples illustrating the utility of the library in reasoning about systems that come from applications.",
+    "topic": "Linear Temporal Logic; Interactive Theorem Proving; Lean 4",
+    "conference": "itp",
+    "year": 2025,
+    "paper_url": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITP.2025.37"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2025.38",
+    "title": "Sledgehammering Without ATPs (Short Paper)",
+    "authors": [
+      "Martin Desharnais",
+      "Jasmin Blanchette"
+    ],
+    "abstract": "We describe an alternative architecture for \"hammers,\" inspired by Magnushammer, in which proofs are found by the proof assistant’s built-in automation instead of by external automatic theorem provers (ATPs). We implemented this approach in Isabelle’s Sledgehammer and evaluated it. The new ATP-free approach nicely complements the traditional Sledgehammer. The two approaches in combination solve more goals than the traditional ATP-based approach alone.",
+    "topic": "Interactive theorem proving; proof assistants; proof automation",
+    "conference": "itp",
+    "year": 2025,
+    "paper_url": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITP.2025.38"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2025.39",
+    "title": "Towards Automating Permutation Proofs in Rocq: A Reflexive Approach with Iterative Deepening Search (Short Paper)",
+    "authors": [
+      "Nadeem Abdul Hamid"
+    ],
+    "abstract": "The concept of permutations is fundamental in computer science, and is useful for specifying and reasoning about a variety of data structures and algorithms. This paper presents the implementation of a fully automated tactic for proving complex permutation goals within the Rocq Prover (formerly, Coq proof assistant). Our approach leverages proof by reflection and an iterative deepening search procedure to establish permutation relations on arbitrary lists composed of concatenation operations. We detail the construction of mapping/substitution environments, a unification algorithm, and metaprogramming tactics to automate the proof process. The potential impact of the tactic for goals involving permutations is demonstrated by significant reduction in proof script length for an existing non-trivial development.",
+    "topic": "permutations; reflection; tactics; Rocq; Coq",
+    "conference": "itp",
+    "year": 2025,
+    "paper_url": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITP.2025.39"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2025.40",
+    "title": "Autosubst: On Mechanising Binders in a General-Purpose Proof Assistant (Invited Talk)",
+    "authors": [
+      "Kathrin Stark"
+    ],
+    "abstract": "The question of handling binders effectively regularly comes up when mechanising results in a proof assistant. Since the beginning of proof assistants, many solutions have been suggested: these include de Bruijn syntax, locally nameless binders, nominal syntax or HOAS. But even today - 20 years after the POPLMark Challenge [Brian E. Aydemir et al., 2005] - new tools and approaches to binding are still being published. Binders are still mentioned as being a complication of mechanised proofs over pen-and-paper proofs and the source of uninteresting technicalities and heaps of boilerplate - particularly, when working in a proof assistant without native support for binders or quotients.\nAutosubst [Steven Schäfer et al., 2015; Steven Schäfer et al., 2015], initially developed a decade ago as a teaching tool, addresses this problem by automating boilerplate code generation for a de Bruijn representation in the Rocq prover. Autosubst translates a specification into the corresponding pure or scoped de Bruijn algebra: It hence generates a corresponding instantiation operation for parallel substitutions, and several equational substitution lemmas. Central to its usability is a rewriting tactic that automatically decides equality up to substitutions, requiring minimal input and knowledge from the user’s side. This greatly simplifies using the otherwise notoriously difficult de Bruijn representation. Since then, Autosubst has been successfully used in several projects.\nIn this talk, I will give an overview of the background and history of Autosubst and give an overview on the work, tools, and formalisations around it [Kathrin Stark et al., 2019; Kathrin Stark, 2020; Andreas Abel et al., 2019]. Moreover, this talk will highlight some of the more recent extensions [Yannick Forster and Kathrin Stark, 2020] as well as outline future challenges and directions.",
+    "topic": "Syntax; binders; Rocq",
+    "conference": "itp",
+    "year": 2025,
+    "paper_url": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITP.2025.40"
+  },
+  {
+    "id": "10.4230/LIPIcs.ITP.2025.41",
+    "title": "Taming Floating-Point Rounding Errors with Proofs (Invited Talk)",
+    "authors": [
+      "Laura Titolo"
+    ],
+    "abstract": "Developing floating-point software poses significant challenges due to round-off errors inherent in computer arithmetic. These errors can accumulate over the course of numerical computations, significantly affecting the evaluation of both arithmetic and Boolean expressions. Reasoning about floating-point computations is especially important in safety-critical systems, where discrepancies between ideal real-number calculations and their finite-precision implementations can lead to catastrophic consequences.\nThis talk provides an overview of the application of theorem proving to the formal verification of NASA’s safety-critical avionics software that relies on finite-precision arithmetic. Key applications include geofencing, detect-and-avoid algorithms, and aircraft positioning systems. In particular, the talk highlights how theorem proving has been effectively integrated with static analysis and global optimization tools to develop new toolchains that improve the reliability of floating-point programs and provide formal guarantees of their correctness.\nThe talk begins with the formal verification of the ADS-B Compact Position Reporting (CPR) algorithm. The Automatic Dependent Surveillance–Broadcast (ADS-B) protocol [RTCA SC-186, 2009] is a fundamental component of the next generation of air transportation systems, providing direct exchange of precise aircraft state information. The use of ADS-B has been mandatory since 2020 for most commercial aircraft in the U.S. [Code of Federal Regulations, 2015] and Europe [European Commission, 2017]. Currently, about 100,000 general aviation aircraft are equipped with ADS-B. The CPR algorithm is responsible for encoding and decoding aircraft positions in ADS-B messages. Unfortunately, pilots and manufacturers have reported errors in the positions obtained using the CPR algorithm.\nIn [Dutle et al., 2017], it was formally proven that the original operational requirements of the CPR algorithm were insufficient to guarantee the intended precision, even when assuming computations are performed with exact arithmetic. Therefore, the ideal real-number implementation of CPR has been formally proven correct under a slightly tightened set of requirements. Nevertheless, even under these more restrictive requirements, a straightforward floating-point implementation of the CPR algorithm may still be unsound and produce incorrect results due to round-off errors.\nAn alternative implementation of the CPR algorithm is presented in [Titolo et al., 2018]. This version includes simplifications that reduce the numerical complexity of the expressions compared to the original version. The double-precision floating-point implementation of this improved version is proven correct using a combination of formal methods tools: the static analyzer Frama-C [Kirchner et al., 2015], the interactive theorem prover PVS [Owre et al., 1992], and Gappa [de Dinechin et al., 2011], a tool for formally verifying properties of numerical programs.\nWhile successful, the proposed verification approach is not fully automatic and it requires a certain level of expertise. A background in floating-point arithmetic and a deep understanding of the features of each tool is essential for completing the verification. In order to automatize this approach, the PRECiSA static analyzer and the ReFlow code extractor were developed.\nPRECiSA [Moscato et al., 2017; Titolo et al., 2018; Titolo et al., 2024] is a static analyzer for floating-point programs. It bounds the round-off errors that may occur and produces externally checkable certificates. PRECiSA uses static analysis by abstract interpretation to approximate the collecting semantics of the program and compute symbolic round-off error expressions that model the error along each program trace. The global optimizer Kodiak [Smith et al., 2015] is used to evaluate these symbolic expressions, producing sound numerical enclosures. PRECiSA generates proof certificates that ensure the correctness of both the symbolic and numerical round-off error estimations. It relies on the higher-order logic interactive theorem prover PVS [Owre et al., 1992], the floating-point formalization originally presented in [Boldo and Muñoz, 2006] and extended in [Moscato et al., 2017], as well as the formalization of Kodiak’s branch-and-bound algorithm [Narkawicz and Muñoz, 2013].\nReFlow [Titolo et al., 2020] is a C code extractor that produces a formally verified floating-point C implementation from a PVS real-number specification. It instruments the code to emit a warning when the floating-point control flow may diverge from the real-number specification due to unstable conditionals, and it automatically generates ACSL [Baudin et al., 2016] annotations that express the relationship between the floating-point implementation and its real-number counterpart.\nReFlow is integrated with the Frama-C analyzer and the PVS theorem prover to provide a fully automatic toolchain for generating and verifying floating-point C code from a PVS real-number specification. In particular, the code generated by ReFlow is used as input to Frama-C, which produces a set of verification conditions in the PVS specification language. Although PVS is an interactive theorem prover, these verification conditions are automatically discharged by ad hoc strategies. As a result, users do not need expertise in theorem proving or floating-point arithmetic to verify the correctness of the generated C program. This verification toolchain has been used to generate C implementations from two formal developments by NASA: the winding number point-in-polygon algorithm used for geofencing applications [Moscato et al., 2019], and a fragment of the DAIDALUS [Muñoz et al., 2015] software library [Bernardes et al., 2023].\nThe talk concludes by outlining future challenges in verifying floating-point code, focusing on LLM-generated code and quantized neural networks, which are especially vulnerable to rounding errors.",
+    "topic": "Floating point arithmetic; avionics",
+    "conference": "itp",
+    "year": 2025,
+    "paper_url": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ITP.2025.41"
+  }
+]

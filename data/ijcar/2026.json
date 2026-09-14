@@ -1,0 +1,680 @@
+[
+  {
+    "id": "10.1007/978-3-032-32589-1_17",
+    "title": "Hardware Model Checking Certification with Certifaiger and Cerbtora",
+    "authors": [
+      "Nils Froleyks",
+      "Emily Yu"
+    ],
+    "abstract": "Certificates are machine-checkable witnesses that help increase confidence in verification results by providing independently verifiable evidence beyond a simple yes/no answer. In this short paper, we present two certificate checkers for hardware model checking, Certifaiger and Cerbtora, which target bit-level and word-level verification of hardware designs, respectively. Certifaiger has been adopted in recent editions of the Hardware Model Checking Competition, but not described in the literature before. Cerbtora extends the same theoretical framework to the word level, in which certificates are expressed in the same modeling language as the design under test and are validated using efficient automated reasoning engines. We describe the architecture and main components of both tools and evaluate them on competition benchmarks.",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1007/978-3-032-32589-1_17"
+  },
+  {
+    "id": "10.1007/978-3-032-32589-1_10",
+    "title": "A General Approach for SMT Proof Skeletons",
+    "authors": [
+      "Joseph E. Reeves",
+      "Haniel Barbosa",
+      "Andrew Reynolds",
+      "Marijn J. H. Heule"
+    ],
+    "abstract": "SMT solvers increasingly produce proof certificates to meet the trust requirements of safety-critical applications. However, eagerly justifying learned theory lemmas during solving constitutes a major performance bottleneck. Recent work mitigates this cost by emitting proof skeletons that record only SAT reasoning and unannotated theory lemmas, though existing approaches depend on new proof formats and specialized theory-specific tooling. We present a general approach that restricts SMT proof skeletons to core SMT reasoning: preprocessing, clausification, and unannotated theory lemmas. We develop external tools for SAT reasoning and proof trimming that reduce the number of theory lemmas requiring justification. An experimental evaluation using the SMT solver cvc5 on SMT-LIB benchmarks across the UF, LIA and LRA theories, with and without quantifiers, demonstrates faster solving and competitive checking performance compared to eager proof production, particularly on quantifier-free problems.",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1007/978-3-032-32589-1_10"
+  },
+  {
+    "id": "10.1007/978-3-032-32589-1_6",
+    "title": "Pgeon: Generating Tableau-Based Provers from Declarative Specifications of Logical Calculi",
+    "authors": [
+      "Romain Sidhoum",
+      "Simon Robillard",
+      "David Delahaye"
+    ],
+    "abstract": "This paper introduces Pgeon, a meta-prover framework that generates tableau-based automated theorem provers from declarative specifications. In Pgeon, the syntax of a given calculus, its tableau inference rules, and the proof-search strategy are described in a small domain-specific language that closely follows textbook presentations. From such a specification, Pgeon instantiates a fully functional prover, handling tableau construction, rule instantiation, branching, and backtracking in a logic-agnostic manner. Proof-search is driven by a strategy engine that gives users explicit control over exploration order while keeping logical content separate from operational concerns. Pgeon supports first-order reasoning through binders, capture-avoiding substitution, and extensible term generators required for Skolemization and free variable introduction. We describe the design of the specification language, the execution model of the tool, and the strategy mechanism, and illustrate the approach on case studies covering classical first-order tableau calculus and intuitionistic propositional calculus.",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1007/978-3-032-32589-1_6"
+  },
+  {
+    "id": "10.1007/978-3-032-32589-1_5",
+    "title": "Towards Fast Automatic Verification of Textbook Proof Steps",
+    "authors": [
+      "Adam Dingle"
+    ],
+    "abstract": "Natural-language proof assistants such as Naproche and our own system Natty can translate a mathematical text in controlled natural language into a series of logical formulas to be verified. Natty also contains an automatic prover that is designed to quickly verify formulas representing proof steps. Natty’s prover is based on superposition, but uses a variety of techniques that are unusual for superposition-based provers, including commutative unification and a form of rewriting that sometimes preserves the rewritten clause. To evaluate this prover and others, we have produced a test suite called TextbookMath containing over 150 theorems and their proofs, which we transcribed from a classic number systems textbook by Mendelson into N, the controlled natural language of Natty. Natty can read this text and generate a set of over 900 conjectures of higher-order logic, each corresponding to a single proof step in the original Mendelson text. We find that established high-order provers such as E and Vampire can prove only about 85% of these conjectures using a single strategy with a 5-second timeout. Surprisingly, some of the conjectures they fail to prove look relatively easy and should be provable with only a few superposition steps. Natty’s automatic prover can prove about 91% of these conjectures under a similar time restriction. If we expand the Mendelson text with various intermediate proof steps and lemmas, Natty can completely verify a textbook development of the natural numbers, integers and rationals including 5 of Wiedijk’s well-known list of 100 theorems.",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1007/978-3-032-32589-1_5"
+  },
+  {
+    "id": "10.1007/978-3-032-32589-1_11",
+    "title": "Avoiding Big Integers: Parallel Multimodular Algebraic Verification of Arithmetic Circuits",
+    "authors": [
+      "Clemens Hofstadler",
+      "Daniela Kaufmann",
+      "Chen Chen"
+    ],
+    "abstract": "Word-level verification of arithmetic circuits with large operands typically relies on arbitrary-precision arithmetic, which can lead to significant computational overhead as word sizes grow. In this paper, we present a hybrid algebraic verification technique based on polynomial reasoning that combines linear and nonlinear rewriting. Our approach relies on multimodular reasoning using homomorphic images, where computations are performed in parallel modulo different primes, thereby avoiding any large-integer arithmetic. We implement the proposed method in the verification tool TalisMan2.0 and evaluate it on a suite of multiplier benchmarks. Our results show that hybrid multimodular reasoning significantly improves upon existing approaches.",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1007/978-3-032-32589-1_11"
+  },
+  {
+    "id": "10.1007/978-3-032-32589-1_18",
+    "title": "Beyond Eager Encodings: A Theory-Agnostic Approach to Theory-Lemma Enumeration in SMT",
+    "authors": [
+      "Emanuele Civini",
+      "Gabriele Masina",
+      "Giuseppe Spallitta",
+      "Roberto Sebastiani"
+    ],
+    "abstract": "Lifting Boolean-reasoning techniques to the SMT level most often requires producing theory lemmas that rule out theory-inconsistent truth assignments. With standard SMT solving, it is common to “lazily” generate such lemmas on demand during the search; with some harder SMT-level tasks —such as unsat-core extraction, MaxSMT, $$\\mathcal {T}$$ -OBDD or $$\\mathcal {T}$$ -SDD compilation— it may be beneficial or even necessary to “eagerly” pre-compute all the needed theory lemmas upfront. Whereas in principle “classic” eager SMT encodings could do the job, they are specific for very few and easy theories, they do not comply with theory combination, and may produce lots of unnecessary lemma\nIn this paper, we present theory-agnostic methods for enumerating complete sets of theory lemmas tailored to a given formula. Starting from AllSMT as a baseline approach, we propose improved lemma-enumeration techniques, including divide&conquer, projected enumeration, and theory-driven partitioning, which are highly parallelizable and which may drastically improve scalability. An experimental evaluation demonstrates that these techniques significantly enhance efficiency and enable the method to scale to substantially more complex instances.",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1007/978-3-032-32589-1_18"
+  },
+  {
+    "id": "10.1007/978-3-032-32589-1_24",
+    "title": "Learning Computation Tree Logic with Neural Networks",
+    "authors": [
+      "Benjamin Bordais",
+      "Daniel Neider",
+      "Mustafa Yalçıner"
+    ],
+    "abstract": "Automatically identifying temporal properties from observations of a system’s behavior provides valuable insight into that system’s inner workings. Temporal properties are often expressed in temporal logics, such as Computation Tree Logic (CTL). Existing approaches to learning CTL specifications from observations rely on constraint-solving by encoding the search for formulas into a satisfiability problem that perfectly separates observations that the system can (positive) or cannot (negative) perform. While adequate in noise-free settings, these methods often struggle with noisy data, such as incomplete executions or mislabeled traces, and scale poorly to large inputs. To overcome these limitations, we propose a neural approach for learning CTL specifications from positive- and negative-labeled observations represented as transition systems. Our method employs a neural network in which neurons encode the presence of CTL operators at specific positions. After training, a deterministic extraction procedure converts network weights into interpretable CTL formulas. In contrast to satisfiability-based learning approaches, our framework efficiently produces high-quality specifications even under noisy data conditions. It supports arbitrary CTL formulas up to a user-defined size budget and consistently yields accurate results within short computation times, demonstrating that neural architectures can provide a fast and noise-tolerant method for inferring temporal properties.",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1007/978-3-032-32589-1_24"
+  },
+  {
+    "id": "10.1007/978-3-032-32589-1_16",
+    "title": "Checking Regular Expressions in Cvc5 Proofs",
+    "authors": [
+      "Ofec Israel",
+      "Yoni Zohar",
+      "Andrew Reynolds",
+      "S. Hitarth",
+      "Bruno Dutertre",
+      "Clark Barrett",
+      "Cesare Tinelli"
+    ],
+    "abstract": "cvc5 is a state-of-the-art proof-producing SMT solver, capable of solving formulas over a myriad of theories, including Unicode strings. Matching regular expressions against concrete strings is done numerous times during the solving process, and forms a bottleneck in proof-checking for unsatisfiable formulas. We describe three approaches for checking regular expressions in the Eunoia proof-checking framework, and evaluate them on proofs produced by cvc5.",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1007/978-3-032-32589-1_16"
+  },
+  {
+    "id": "10.1007/978-3-032-32589-1_23",
+    "title": "A Complete Proof System for HyperLTL",
+    "authors": [
+      "Naijun Zhan",
+      "Wen Tang",
+      "Dimitar Guelev"
+    ],
+    "abstract": "$$\\text {HyperLTL}$$ extends Linear Temporal Logic (LTL) with explicit trace variables and quantification over traces, allowing formulas to relate multiple executions within a single specification. Consequently, $$\\text {HyperLTL}$$ has become an important specification formalism for hyperproperties, i.e., properties of sets of traces rather than individual traces. However, the satisfiability of $$\\text {HyperLTL}$$ is undecidable, so fully automatic reasoning cannot, in general, replace deductive methods to establish validity. Furthermore, $$\\text {HyperLTL}$$ restricts trace quantification to the outermost scope of formulas. In this paper, we study $$\\text {HyperLTL} ^*$$ , a generalization that removes this restriction by allowing trace quantifiers to occur under temporal operators. We present a Gentzen-style sequent calculus for $$\\text {HyperLTL} ^*$$ and establish completeness by means of suitable infinitary rules. We then derive sound finitary principles that are amenable to interactive theorem proving and can serve as a foundation for mechanized reasoning. We illustrate the use of the calculus on representative $$\\text {HyperLTL}$$ -style specifications that are difficult to discharge by existing automatic procedures. Finally, we analyze the expressiveness of $$\\text {HyperLTL} ^*$$ and discuss how the calculus can be combined with first-order reasoning infrastructure.",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1007/978-3-032-32589-1_23"
+  },
+  {
+    "id": "10.1007/978-3-032-32589-1_22",
+    "title": "Uniform Interpolation with Constructive Diamond",
+    "authors": [
+      "Iris van der Giessen",
+      "Ian Shillito"
+    ],
+    "abstract": "Uniform interpolation is a strong form of interpolation providing an interpretation of propositional quantifiers within a propositional logic. Pitts’ seminal work establishes this property for intuitionistic propositional logic relying on a sequent calculus in which naïve backward proof-search terminates. This constructive approach has been adapted to a wide range of logics, including intuitionistic modal logics. Surprisingly, no intuitionistic modal logic with independent box and diamond has yet been shown to satisfy uniform interpolation. We fill in this gap by proving the uniform interpolation property for Constructive K (CK) and Wijesekera’s K (WK). We build on Pitts’ technique by exploiting existing terminating calculi for CK and WK, which we prove to eliminate cut, and formalise all our results in the proof assistant Rocq. Together, our results constitute the first positive uniform interpolation results for intuitionistic modal logics with diamond.",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1007/978-3-032-32589-1_22"
+  },
+  {
+    "id": "10.1007/978-3-032-32589-1_27",
+    "title": "SMT-Based Deontic Reasoning for Åqvist Logics",
+    "authors": [
+      "Christian Köll",
+      "Agata Ciabattoni",
+      "Dmitry Rozplokhas"
+    ],
+    "abstract": "Building on the small-model constructions for Åqvist’s deontic logics introduced in [24], we present Deo-SMT , an SMT-based reasoner implemented in Z3 for checking validity and generating countermodels. Deo-SMT covers all four of Åqvist’s logics ( E , F , F+(CM) , G ) and provides countermodel visualizations as text, matrices, and directed graphs. Our tool outperforms the existing Isabelle/HOL approach, while providing a lightweight and accessible interface for normative reasoning.",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1007/978-3-032-32589-1_27"
+  },
+  {
+    "id": "10.1007/978-3-032-32589-1_14",
+    "title": "On Constructing Most General Solutions for Parametric Constraints",
+    "authors": [
+      "Viorica Sofronie-Stokkermans"
+    ],
+    "abstract": "Let $$\\mathcal{T}$$ be a theory allowing a form of elimination of existential quantifiers (possibly for formulae in a certain class). We analyze possibilities of constructing (most general) solutions w.r.t. $$\\mathcal{T}$$ for formulae of the form $$\\exists x_1 \\dots \\exists x_n \\phi (x_1, \\dots , x_n, y_1, \\dots , y_m)$$ , where $$\\phi $$ is a quantifier-free conjunction of literals in the signature of $$\\mathcal{T}$$ , and the free variables $$y_1, \\dots , y_m$$ are regarded as parameters. We show that in the presence of function symbols which describe “--” constructions in certain models of $$\\mathcal{T}$$ , we can describe the most general solution of such formulae, thus generalizing results about the existence of most general unifiers in discriminator varieties. We illustrate the ideas on examples.",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1007/978-3-032-32589-1_14"
+  },
+  {
+    "id": "10.1007/978-3-032-32589-1_3",
+    "title": "Generating Theorems by Generating Proof Structures",
+    "authors": [
+      "Christoph Wernhard"
+    ],
+    "abstract": "We address generating theorems from a given set of axioms, without proof goal, aiming at value from a mathematical point of view or as lemmas for automated proving. As benchmark, we convert a fragment of the Metamath database set.mm. Our techniques are centered on proof terms and condensed detachment. This ties in with automated first-order proving by proof structure enumeration, and links to Metamath and formulas-as-types. Our methods for generating theorems are based on partitioning the set of proof terms into inductively characterized levels. We study two ideas for improvement: Lemma synthesis by DAG compression of proof term sets, and incorporating combinators into proof terms. Our lemmas significantly improve solution rates of provers, e.g., of Vampire from 74% to 94%, and of leanCoP from 7% to 44%.",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1007/978-3-032-32589-1_3"
+  },
+  {
+    "id": "10.1007/978-3-032-32589-1_13",
+    "title": "Automatically Translating Proof Systems for SMT Solvers to the $$\\lambda \\Pi $$-Calculus",
+    "authors": [
+      "Ciarán Dunne",
+      "Guillaume Burel"
+    ],
+    "abstract": "Eunoia is a logical framework designed for specifying the proofs and proof systems of SMT solvers, namely cvc5 . We present a translation from a core fragment of Eunoia to the $$\\lambda \\Pi $$ -calculus modulo rewriting as implemented by the LambdaPi proof assistant. The translation is implemented by our tool , which we use for generating LambdaPi encodings of (a) a large fragment of the Cooperating Proof Calculus (CPC), the Eunoia signature defining cvc5 ’s proof system, and (b) proofs produced by cvc5 on problems from various fragments of SMT-LIB.",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1007/978-3-032-32589-1_13"
+  },
+  {
+    "id": "10.1007/978-3-032-32589-1_2",
+    "title": "Completeness of Synthesis Under Realizability Assumptions Using Superposition",
+    "authors": [
+      "Márton Hajdu",
+      "Petra Hozzová",
+      "Laura Kovács",
+      "Eva Maria Wagner"
+    ],
+    "abstract": "Program synthesis is the task of automatically deriving a program that has been specified by a user in advance. Combining automated theorem proving with program synthesis enables the automated construction of proven-to-be-correct programs, thereby ensuring software reliability. In this paper, we consider the superposition-based calculus extended to support synthesis of recursion-free programs allowing reasoning with uncomputable symbols. We present cases where the calculus fails and refine it to solve them. We prove that the refined calculus is sound. Finally, we also prove completeness in the following sense: if at least one computable program satisfying the given specification exists, we show that the modified calculus finds one.",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1007/978-3-032-32589-1_2"
+  },
+  {
+    "id": "10.1007/978-3-032-32589-1_12",
+    "title": "Bringing Closure to Theory Combination Properties",
+    "authors": [
+      "Guilherme V. Toledo",
+      "Benjamin Przybocki",
+      "Yoni Zohar"
+    ],
+    "abstract": "We consider the closure of three classical combination properties, namely, stable infiniteness, gentleness and shininess (or, equivalently for decidable theories, strong politeness), under intersection and combinability. We compute every possible intersection, and then compute the maximal set of theories that can be combined with each resulting intersection. We iterate this process until no new sets are identified. How many properties will we end up with?",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1007/978-3-032-32589-1_12"
+  },
+  {
+    "id": "10.1007/978-3-032-32589-1_7",
+    "title": "grind: An SMT-Inspired Tactic for Lean 4 (Short Paper – System Description)",
+    "authors": [
+      "Kim Morrison",
+      "Leonardo de Moura"
+    ],
+    "abstract": "We describe , an SMT-inspired proof automation tactic for Lean 4. Unlike hammer-style tools that translate proof obligations into external logics and invoke external ATP and SMT solvers, works natively in the Calculus of Inductive Constructions, producing kernel-checkable proof terms without any soundness compromises. At its core, combines congruence closure for dependent type theory with E-matching and a suite of satellite solvers for linear integer arithmetic, linear arithmetic over ordered modules, polynomial equations over commutative (semi)rings, and associative-commutative operators. Each satellite solver is parameterized by Lean’s typeclasses, enabling it to operate over any type that implements the appropriate algebraic interface—not just hardcoded numeric types. Users can extend with new theory solvers through a plugin API, control theorem instantiation through instantiation constraints on E-matching patterns, and inspect the internal state through an interactive DSL. An annotation system, including automatic pattern selection, enables libraries to declare how their theorems should be used by . The tactic is distributed as part of Lean and is used extensively in Lean’s Mathlib [19] and CSLib [2] libraries.",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1007/978-3-032-32589-1_7"
+  },
+  {
+    "id": "10.1007/978-3-032-32589-1_25",
+    "title": "Growing HOLMS: A Verified Automated Prover for Grzegorczyk Logic in HOL Light",
+    "authors": [
+      "Antonella Bilotta",
+      "Marco Maggesi",
+      "Cosimo Perini Brogi"
+    ],
+    "abstract": "This paper presents a certified theorem prover for Grzegorczyk logic (Grz) implemented in the general-purpose proof assistant HOL Light. Our prover builds on original HOL Light formalisations of modal adequacy for Grz with respect to finite partially ordered frames, and on the standard full and faithful translation of Grz into Gödel–Löb logic (GL). This formalised embedding allows us to extend the range of modal systems supported by the HOLMS library for automated modal reasoning, and constitutes a new methodology experimented in our framework, being the first logic added to the library through a modal translation.\nThe deductive engine performs an automated proof search in the labelled sequent calculus for GL. When the proof search on the translated formula succeeds, the system returns a HOL Light theorem certifying provability of the original Grz formula. When proof search terminates negatively, the system constructs a verified GL countermodel and thus certifies that the original formula is not provable in Grz.",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1007/978-3-032-32589-1_25"
+  },
+  {
+    "id": "10.1007/978-3-032-32589-1_4",
+    "title": "Twitch: Learning Abstractions for Equational Theorem Proving",
+    "authors": [
+      "Guy Axelrod",
+      "Moa Johansson",
+      "Nicholas Smallbone"
+    ],
+    "abstract": "Automated theorem provers often perform better when told what shapes of terms are interesting. In this paper we discover interesting term shapes automatically, in the form of abstractions , term patterns that occur over and over again in proofs. Our tool Twitch produces abstractions automatically and can do so in two ways: (1) from a partial, failed proof of a conjecture; (2) from successful proofs of other theorems in the same domain. Twitch is built on top of Stitch , a tool designed for discovering reusable library functions in program synthesis tasks. We have also extended Twee, an equational theorem prover, to use the generated abstractions. We evaluate Twitch on a set of unit equality (UEQ) problems from TPTP, and show that it proves problems previously unsolved by Twee, as well as yielding speed-ups on many other problems.",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1007/978-3-032-32589-1_4"
+  },
+  {
+    "id": "10.1007/978-3-032-32589-1_1",
+    "title": "Tao’s Equational Proof Challenge Accepted",
+    "authors": [
+      "Lydia Kondylidou",
+      "Jasmin Blanchette",
+      "Marijn J. H. Heule"
+    ],
+    "abstract": "In the context of the Equational Theories Project, Terence Tao posed the challenge of finding alternatives to a complicated 62-step proof found by the Vampire superposition prover. We introduce a proof minimization tool called Krympa. Using a combination of brute force and heuristics, and exploiting both Vampire and the Twee equational prover, the tool reduces the 62-step proof to 20 steps, each corresponding to a rewrite. In an empirical evaluation, it also performs well on 1431 equational problems originating from the same project, reducing in particular a 151-step proof to only 10 steps.",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1007/978-3-032-32589-1_1"
+  },
+  {
+    "id": "10.1007/978-3-032-32589-1_21",
+    "title": "Pitts and Intuitionistic Multi-Succedent: Uniform Interpolation for KM",
+    "authors": [
+      "Hugo Férée",
+      "Ian Shillito"
+    ],
+    "abstract": "Pitts’ proof-theoretic technique for uniform interpolation, which generates uniform interpolants from terminating sequent calculi, has only been applied to logics on an intuitionistic basis through single-succedent sequent calculi. We adapt the technique to the intuitionistic multi-succedent setting by focusing on the intuitionistic modal logic KM. To do this, we design a novel multi-succedent sequent calculus for this logic which terminates, eliminates cut, and provides a decidability argument. Then, we adapt Pitts’ technique to our calculus to construct uniform interpolants for KM, while highlighting the hurdles we overcame. Finally, by (re)proving the algebraisability of KM, we deduce the coherence of the class of KM-algebras. All our results are fully mechanised in the Rocq proof assistant, ensuring correctness and enabling effective computation of interpolants.",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1007/978-3-032-32589-1_21"
+  },
+  {
+    "id": "10.1007/978-3-032-32589-1_19",
+    "title": "Ethos: A Fast Proof Checker for the Eunoia Logical Framework",
+    "authors": [
+      "Andrew Reynolds",
+      "Hans-Jörg Schurr",
+      "Mallku Soldevila",
+      "Haniel Barbosa",
+      "Clark Barrett",
+      "Cesare Tinelli"
+    ],
+    "abstract": "SMT solvers are used in many safety-critical applications. To provide evidence of the correctness of their answers, some SMT solvers generate externally checkable proof certificates. We present a high-performance checker for SMT proof certificates called Ethos . In contrast with other dedicated SMT proof checkers, Ethos does not implement a fixed proof calculus. Instead, it allows users to specify their own calculus in the declarative language Eunoia, which extends the familiar SMT-LIB syntax to make that easy and convenient. We give a short overview of Eunoia and then focus on Ethos itself. We describe multiple optimization and implementation details which make Ethos fast and practical. We also evaluate Ethos on proofs generated by cvc5, showing that the flexibility of Ethos allows us to efficiently check fine-grained proofs, containing no proof holes, over all SMT-LIB logics without floating point arithmetic.",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1007/978-3-032-32589-1_19"
+  },
+  {
+    "id": "10.1007/978-3-032-32589-1_8",
+    "title": "Formally Verified Graph Generation with SAT Modulo Symmetries and Lean",
+    "authors": [
+      "Markus Kirchweger",
+      "Pablo Manrique",
+      "Stefan Szeider"
+    ],
+    "abstract": "In this paper, we present the first proof-of-concept framework for end-to-end formally verified graph generation. Our approach integrates SAT modulo symmetries with the Lean proof assistant, providing a unified, machine-checked verification pipeline that spans high-level graph-theoretic specifications, propositional encodings, symmetry-breaking mechanisms, and solver-based search. By formalizing graph invariance and symmetry reasoning within Lean, we eliminate common trust assumptions and obtain fully certified non-existence results. We evaluate the framework on three benchmark classes of graph-generation problems, showing practical feasibility on nontrivial unsatisfiable instances.",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1007/978-3-032-32589-1_8"
+  },
+  {
+    "id": "10.1007/978-3-032-32589-1_15",
+    "title": "Program Synthesis for Non-linear Real Arithmetic: Going Beyond Realizability",
+    "authors": [
+      "S. Akshay",
+      "Supratik Chakraborty",
+      "R. Govind",
+      "Aniruddha R. Joshi"
+    ],
+    "abstract": "We study the problem of synthesizing programs from non-linear real arithmetic () specifications. Existing techniques, such as syntax-guided synthesis (), fail to synthesize programs when the specification is unrealizable . We argue this is unsatisfactory in many situations, and aim to synthesize programs from arbitrary specifications, such that for any input, the synthesized program either produces outputs satisfying the specification or reports non-existence of any such output. To avoid rounding errors inherent in floating-point arithmetic, we restrict our programs to work on rational inputs and outputs.\nWe first show that our variant of the synthesis problem is as hard as a long-standing open problem in number theory, and that synthesizing loop-free programs from arbitrary NRA specifications with rational inputs and outputs is impossible in general. Second, we present a sound and complete synthesis algorithm for the case where the specification involves a single output variable. We also show that for realizable specifications, a program generated by for (real inputs and outputs) serves as a solution to our problem, where inputs and outputs are rationals. Third, we provide a sound (but necessarily incomplete) synthesis algorithm for the general case of specifications. We have implemented our approach in a prototype tool called that solves many benchmarks beyond the reach of state-of-the-art SyGuS tools, even when we render the specifications realizable.",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1007/978-3-032-32589-1_15"
+  },
+  {
+    "id": "10.1007/978-3-032-32589-1_9",
+    "title": "Accelerating Loops with Arrays",
+    "authors": [
+      "Florian Frohn",
+      "Jürgen Giesl"
+    ],
+    "abstract": "We propose a novel acceleration technique for loops operating on arrays. The goal of acceleration is to characterize the transitive closure of loops in a logic which is suitable for automated reasoning. Using the new notion of inductive lvalues , our technique can handle loops where previous techniques fail, and it unifies acceleration for arrays and scalar variables by regarding scalars as arrays of dimension 0. Moreover, our approach uses $$\\lambda $$ s instead of quantifiers. Then the resulting SMT problems can be solved via lemmas on demand . An empirical evaluation of our implementation in the tool shows the power of our approach.",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1007/978-3-032-32589-1_9"
+  },
+  {
+    "id": "10.1007/978-3-032-32589-1_26",
+    "title": "Automatic Abstraction Refinement for Hyperproperties Verification",
+    "authors": [
+      "Malak Marrid",
+      "Shachar Itzhaky",
+      "Sharon Shoham",
+      "Yakir Vizel"
+    ],
+    "abstract": "This paper proposes a novel automatic abstraction-refinement procedure for verifying hyperproperties. Hyperproperties specify the behavior of a system across multiple executions, and are an important extension of standard temporal properties. Our verification procedure is based on predicate abstraction and the recently introduced reduction of hyperproperty verification to satisfiability of Constrained Horn Clauses (CHCs). Moreover, it formalizes and uses CHC-based refinement for abstract counterexamples in the shape of directed acyclic graphs.\nWe implemented our new algorithm on top of the SMT solver Z3. Our experimental evaluation shows our automatic abstraction refinement procedure can solve a variety of hyperproperty verification problems, completely automatically. This is in contrast to other existing techniques that require a user-given abstraction.",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1007/978-3-032-32589-1_26"
+  },
+  {
+    "id": "10.1007/978-3-032-32589-1_20",
+    "title": "Finite Model Finding in First-Order Modal Logics",
+    "authors": [
+      "Happy Khairunnisa Sariyanto",
+      "Alexander Steen",
+      "Geoff Sutcliffe"
+    ],
+    "abstract": "Modal logics extend classical first-order logic with the modalities of necessity ( $$\\Box $$ ) and possibility ( $$\\Diamond $$ ). A model of a set of modal logic formulae can be represented by a Kripke structure. This paper describes a method and implementation for finding finite Kripke models for formulae in first-order modal logics. The approach relies on translating the modal logic formulae to classical logic formulae, using an SMT solver to generate a finite model of the classical logic formulae, then translating the classical model to a finite Kripke model. This process has been implemented in the new model finding system MoMo which produces TPTP-compliant Kripke model representations. An evaluation on the modal logic problems in the TPTP problem library confirms the practicality of this approach. Up to the authors’ knowledge, MoMo is the first model finder for first-order modal logics.",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1007/978-3-032-32589-1_20"
+  },
+  {
+    "id": "10.1007/978-3-032-32592-1_17",
+    "title": "Verification of Configurable SRA Systems",
+    "authors": [
+      "Alessandro Cimatti",
+      "Alberto Griggio",
+      "Christian Lidström",
+      "Gianluca Redondi",
+      "Dylan Trenti"
+    ],
+    "abstract": "Many digital systems are designed as collections of asynchronous processes orchestrated by a domain-specific scheduler. The verification of such scheduler-restricted asynchronous systems (SRA) is challenging due to process-process and process-scheduler interactions. In this paper, we tackle the problem of verifying configurable SRA. A configurable SRA describes an unbounded family of possible SRA, each resulting from an instantiation satisfying given configuration constraints; our goal is proving at once that every legal instantiation of a configurable SRA is correct. We propose a contract-based, deductive verification approach that combines (i) compositional proof rules that abstract the scheduler to prove top-level invariant properties, (ii) automatic summarizations of the methods invoked by the scheduler, (iii) simplification with respect to the nature of the space of configurations. The approach is grounded in (object-oriented) first order logic, requires reasoning over quantified statements, and leverages the Dafny software verifier as a backend. An experimental evaluation on industrial case studies demonstrates that the framework scales effectively and enables practical reasoning about complex parameterized behaviors.",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1007/978-3-032-32592-1_17"
+  },
+  {
+    "id": "10.1007/978-3-032-32592-1_7",
+    "title": "Saving Craig in the Fluted Fragment",
+    "authors": [
+      "Hongkai Yin"
+    ],
+    "abstract": "The fluted fragment lacks the Craig Interpolation Property. In this paper we establish a weakened form of interpolation. Given an entailment in the fluted fragment, we distinguish predicates that only take an argument sequence starting with $$x_1$$ from those that do not. A predicate of the former kind is allowed to appear in a weak interpolant only if it occurs in both the premise and the conclusion; and any predicate of the latter kind can be used in a weak interpolant no matter whether it is in the shared signature. Our proof also shows that the weakened interpolation holds in every finite variable subfragment of the fluted fragment. In addition, this work provides a generalization of A. Herzig’s translation of the ordered fragment, as well as a new proof of the finite model property of the fluted fragment.",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1007/978-3-032-32592-1_7"
+  },
+  {
+    "id": "10.1007/978-3-032-32592-1_11",
+    "title": "A Unified Formalization of Context-Free Grammar Theory",
+    "authors": [
+      "Tobias Nipkow",
+      "Fabian Lehr",
+      "Moritz Roos",
+      "Akihisa Yamada"
+    ],
+    "abstract": "We present an Isabelle/HOL formalization of the theory of context-free grammars and their links to finite automata. In particular we focus on first-time formalizations of an executable translation into Greibach Normal Form, the Chomsky-Schützenberger Representation Theorem and Parikh’s Theorem.",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1007/978-3-032-32592-1_11"
+  },
+  {
+    "id": "10.1007/978-3-032-32592-1_8",
+    "title": "Complexity and Expressivity of the Uniform Fluted Fragment",
+    "authors": [
+      "Hongkai Yin"
+    ],
+    "abstract": "We investigate the uniform fluted fragment, a subfragment of the fluted fragment obtained by imposing the uniformity restriction on Boolean combinations. First, with a novel trick in model construction, we prove that the uniform fluted fragment has an exponentially bounded model property. It follows that, unlike the full fluted fragment (where satisfiability is non-elementary), satisfiability in this subfragment is NExpTime -complete. Second, we formulate a bisimulation for the subfragment, and establish a characterization of its expressive power in the style of van Benthem. Finally, we show that the uniform fluted fragment is equi-expressive with the uniform forward fragment (if we consider only sentences), and that satisfiability in the latter is also NExpTime -complete.",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1007/978-3-032-32592-1_8"
+  },
+  {
+    "id": "10.1007/978-3-032-32592-1_2",
+    "title": "A Two-Watched Literal Scheme for First-Order Logic",
+    "authors": [
+      "Yasmine Briefs",
+      "Martin Bromberger",
+      "Tobias Gehl",
+      "Lorenz Leutgeb",
+      "Simon Schwarz",
+      "Christoph Weidenbach"
+    ],
+    "abstract": "The two-watched literal scheme, a core component of efficient CDCL (Conflict-Driven Clause Learning) implementations for propositional logic, is extended to first-order logic. Given a set of first-order clauses and a set of ground literals, our lifted two-watched literal scheme efficiently detects all propagating and false clauses with respect to the ground literals. We present the algorithm as a system of rules and prove its soundness and completeness. Additionally, we provide an implementation of the two-watched literal scheme, which outperforms a standard dynamic programming approach for detecting propagatable literals and conflicts, especially when dealing with long clauses.",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1007/978-3-032-32592-1_2"
+  },
+  {
+    "id": "10.1007/978-3-032-32592-1_19",
+    "title": "Refactoring-as-Propositions: Proved Refactoring of Hybrid Systems via Proved Refinements",
+    "authors": [
+      "Enguerrand Prebet",
+      "André Platzer"
+    ],
+    "abstract": "Cyber-physical systems are inherently complex due to their connection between software and the physical world. Iterative design reduces their complexity, but increases the need to repeatedly recheck their safety in full after every change. We introduce the refactoring-as-propositions principle in which refactorings are represented as propositions along with a method for proving that system refactorings preserve their required properties by transferring the proof along the respective modification. It is based on differential refinement logic (), with which one can simultaneously and rigorously refer to properties of the systems and the relation between a refactored system and its original version. Refinements represent a uniform way of expressing different types of hybrid system refactorings, including those that introduce auxiliary variables. Furthermore, we show how these refactorings can be proved automatically, and/or reduce to a modular proof solely about the local change rather than about the whole system.",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1007/978-3-032-32592-1_19"
+  },
+  {
+    "id": "10.1007/978-3-032-32592-1_20",
+    "title": "Complete Robust Hybrid Systems Reachability",
+    "authors": [
+      "Noah Abou El Wafa",
+      "André Platzer"
+    ],
+    "abstract": "This paper introduces robust differential dynamic logic (a fragment of differential dynamic logic) to specify and reason about robust hybrid systems . By small, natural, and practically meaningful syntactic restrictions, specifications are ensured (by construction) to be topologically open and, thus, robust with respect to infinitesimal perturbations without explicit quantitative margins of error in the syntax or in proofs. The main result is a proof of absolute completeness of robust differential dynamic logic for reachability properties of general hybrid systems. The proof is constructive, self-contained, and demonstrates how robustly-correct hybrid systems reachability specifications can be automatically verified through proof.",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1007/978-3-032-32592-1_20"
+  },
+  {
+    "id": "10.1007/978-3-032-32592-1_5",
+    "title": "Automating Proof Search when Equality is a Logical Connective",
+    "authors": [
+      "Kaustuv Chaudhuri",
+      "Arunava Gantait",
+      "Dale Miller"
+    ],
+    "abstract": "Treating syntactic equality as a logical connective—governed by left- and right-introduction rules within the sequent calculus—offers an elegant and powerful approach to term identity. This treatment of equality allows for the derivation of core mathematical principles, such as Peano’s axioms (excluding induction), and serves as a foundation for the Abella interactive proof assistant. However, integrating this equality into automated proof search remains challenging. We present a proof search procedure that extends unification to handle the complexities of quantifier alternation and equations that occur in both positive and negative occurrences. While established logical frameworks such as $$\\lambda $$ Prolog and LF lack direct support for this kind of equality, our procedure enables a lightweight logical framework that addresses this gap. Our system enables unification-aware proof search across a diverse range of first-order sequent calculi that can directly use this form of equality.",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1007/978-3-032-32592-1_5"
+  },
+  {
+    "id": "10.1007/978-3-032-32592-1_15",
+    "title": "An Applicative Multiset Path Order",
+    "authors": [
+      "Nao Hirokawa",
+      "Teppei Saito",
+      "Teppei Tanaka",
+      "Wataru Yachi"
+    ],
+    "abstract": "We present a variant of the multiset path order for untyped applicative term rewriting. Compared to existing work, our variant incorporates two distinctive features, dubbed arity assignment and reification, to overcome difficulties in handling partial and variable application.",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1007/978-3-032-32592-1_15"
+  },
+  {
+    "id": "10.1007/978-3-032-32592-1_6",
+    "title": "Ordered Adjoint Logic",
+    "authors": [
+      "Sophia Roshal",
+      "Frank Pfenning"
+    ],
+    "abstract": "Ordered logics and type systems have been used in a variety of applications including computational linguistics, memory allocation, stream processing, logical frameworks, parametricity, and enforcing security protocols. In most formulations, ordered types are also linear, requiring each resource to be used exactly once. Prior work by Kanovich et al. has investigated calculi that relax this constraint through subexponentials within a linear ordered logic. We generalize their work by using adjoint modalities to combine logics with varying fine-grained structural properties, including weakening, left contraction, right contraction, left mobility, and right mobility. We show that the resulting sequent calculus admits cut elimination.\nWe further provide a natural deduction formulation in which structural rules are implicit, and show that proof checking for this system is decidable. This makes it a suitable foundation for an expressive adjoint programming language or logical framework.",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1007/978-3-032-32592-1_6"
+  },
+  {
+    "id": "10.1007/978-3-032-32592-1_14",
+    "title": "The Termination of Nielsen Transformations Applied to Word Equations with Length Constraints",
+    "authors": [
+      "Benjamin Przybocki",
+      "Clark Barrett"
+    ],
+    "abstract": "Nielsen transformations form the basis of a simple and widely used procedure for solving word equations. We make progress on the problem of determining when this procedure terminates in the presence of length constraints. To do this, we introduce extended word equations , a mathematical model of a word equation with partial information about length constraints. We then define extended Nielsen transformations , which adapt Nielsen transformations to the setting of extended word equations. We provide a partial characterization of when repeatedly applying extended Nielsen transformations to an extended word equation is guaranteed to terminate.",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1007/978-3-032-32592-1_14"
+  },
+  {
+    "id": "10.1007/978-3-032-32592-1_3",
+    "title": "A Superposition Calculus for Separation Logic",
+    "authors": [
+      "Tanguy Bozec",
+      "Nicolas Peltier"
+    ],
+    "abstract": "This paper presents a novel extension of the superposition calculus for reasoning about formulas in Separation Logic (SL). Our approach integrates the efficiency of saturation-based theorem proving with the expressive power of SL, which is widely used to describe and reason about memory heaps. The target logic strictly extends first-order equational logic with SL constructs built from points-to atoms and separating conjunctions. The resulting calculus retains the core strengths of the superposition paradigm while addressing the distinctive semantic challenges of SL. We prove that the calculus is sound and complete w.r.t the standard redundancy criterion.",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1007/978-3-032-32592-1_3"
+  },
+  {
+    "id": "10.1007/978-3-032-32592-1_13",
+    "title": "Towards Term-Based Verification of Diagrammatic Equivalence",
+    "authors": [
+      "Julie Cailler",
+      "Noé Delorme",
+      "Simon Perdrix",
+      "Sophie Tourret"
+    ],
+    "abstract": "A string diagram is a two-dimensional graphical representation that can be described as a one-dimensional term generated from a set of primitives using sequential and parallel compositions. Since different syntactic terms may represent the same diagram, this syntax is quotiented by a collection of coherence equations expressing equivalence up to deformation. This work lays foundations for automated reasoning about diagrammatic equivalence, motivated primarily by the verification of quantum circuit equivalences. We consider two classes of diagrams, for which we introduce normalizing term rewriting systems that equate diagrammatically equivalent terms. In both cases, we prove termination and confluence with the help of the proof assistant Isabelle/HOL.",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1007/978-3-032-32592-1_13"
+  },
+  {
+    "id": "10.1007/978-3-032-32592-1_22",
+    "title": "Implementing Fuzzy OSF Logic Unification and Normalization (Short Paper)",
+    "authors": [
+      "Gian Carlo Milanese",
+      "Gabriella Pasi"
+    ],
+    "abstract": "We present an implemented reasoner for fuzzy order-sorted feature (OSF) logic, supporting fuzzy unification and normalization of OSF terms modulo a sort theory. Fuzzy OSF logic is a knowledge representation and reasoning language based on feature symbols, denoting functions, and sort symbols, denoting fuzzy sets. Sort symbols are organized in a fuzzy subsumption relation that extends to OSF terms, record-like structures representing classes of entities. The unification algorithm for these structures provides a calculus of fuzzy type subsumption. We demonstrate the system’s behavior on representative examples, such as computing the membership degree of an instance to a sort, and computing subsumption degrees between sorts and OSF terms. We also report a comparison with a resolution-based fuzzy logic programming system.",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1007/978-3-032-32592-1_22"
+  },
+  {
+    "id": "10.1007/978-3-032-32592-1_16",
+    "title": "A Deductive Refinement Calculus for Differential-Algebraic Programs",
+    "authors": [
+      "Jonathan Hellwig",
+      "Long Qian",
+      "André Platzer"
+    ],
+    "abstract": "This paper presents differential-algebraic refinement logic () with which one can deductively verify both properties and relations of differential-algebraic programs (DAPs) that extend hybrid dynamical systems with differential-algebraic equations (DAEs). A refinement calculus is introduced that enables the sound comparison of trajectories of differential-algebraic equations, crucially utilizing a novel trace-based semantics. This enables the incremental verification/simplification of complicated DAEs, while ensuring correctness at each step by the soundness of the calculus. The calculus is shown to certify index reductions of DAEs, providing trustworthy syntactic proofs of correctness at each step of the reduction.",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1007/978-3-032-32592-1_16"
+  },
+  {
+    "id": "10.1007/978-3-032-32592-1_4",
+    "title": "Proof Nets for PiL",
+    "authors": [
+      "Matteo Acclavio",
+      "Giulia Manara"
+    ],
+    "abstract": "We introduce proof nets for PiL, an extension of first-order multiplicative additive linear logic with new operators allowing a shallow encoding of processes in the $$\\pi $$ -calculus as formulas. We provide correctness criterion, sequentialization procedure, and a proof translation algorithm.\nWe show that proof nets provide a canonical representation of sequent calculus derivations modulo rule permutations.",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1007/978-3-032-32592-1_4"
+  },
+  {
+    "id": "10.1007/978-3-032-32592-1_18",
+    "title": "Disproving (Positive) Almost-Sure Termination of Probabilistic Term Rewriting via Random Walks",
+    "authors": [
+      "J.-C. Kassing",
+      "H. Nagel",
+      "A. Schlecht",
+      "J. Giesl"
+    ],
+    "abstract": "While numerous techniques have been developed to automatically prove termination of probabilistic programs, there are only few automated methods to disprove their termination. In this paper, we present the first techniques to automatically disprove (positive) almost-sure termination of probabilistic term rewriting. Disproving termination of non-probabilistic systems requires finding a finite representation of an infinite computation, e.g., a loop of the rewrite system. We extend such qualitative techniques to probabilistic term rewriting, where a quantitative analysis is required. In addition to the existence of a loop, we have to count the number of such loops in order to embed suitable random walks into a computation, thereby disproving termination. To evaluate their power, we implemented all our techniques in the tool .",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1007/978-3-032-32592-1_18"
+  },
+  {
+    "id": "10.1007/978-3-032-32592-1_21",
+    "title": "The ARI Infrastructure for Automated Confluence Analysis",
+    "authors": [
+      "Nao Hirokawa",
+      "Aart Middeldorp",
+      "Teppei Saito",
+      "René Thiemann"
+    ],
+    "abstract": "We report on the new ARI infrastructure that supports tools and competitions in term rewriting. It offers ARI-COPS, a database for confluence problems and competition results, and ARIWeb, a convenient web interface for tools that participate in the annual confluence competition. These are built on top of the new ARI format for rewrite systems, a format converter, certifiers for competition results, and a duplicate checker.",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1007/978-3-032-32592-1_21"
+  },
+  {
+    "id": "10.1007/978-3-032-32592-1_12",
+    "title": "Unification of Deterministic Higher-Order Patterns",
+    "authors": [
+      "Johannes Niederhauser",
+      "Aart Middeldorp"
+    ],
+    "abstract": "We present a sound and complete unification procedure for deterministic higher-order patterns, a class of simply-typed lambda terms introduced by Yokoyama et al. which comes with a deterministic matching problem. Our unification procedure can be seen as a special case of full higher-order unification where flex-flex pairs can be solved in a most general way. Moreover, our method generalizes Libal and Miller’s recent functions-as-constructors higher-order unification (FCU) by dropping their global restriction on variable arguments, thereby losing the property that every solvable problem has a most general unifier. In fact, minimal complete sets of unifiers of deterministic higher-order patterns may be infinite, so decidability of the unification problem remains an open question.",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1007/978-3-032-32592-1_12"
+  },
+  {
+    "id": "10.1007/978-3-032-32592-1_10",
+    "title": "Complexity of Reasoning in Kleene Algebra with Sum-of-Letters Hypotheses",
+    "authors": [
+      "Stepan L. Kuznetsov"
+    ],
+    "abstract": "Kleene algebras are an algebraic abstraction of regular expressions, one of the central notions in computer science. While the equational theory of Kleene algebras is known to be decidable, reasoning from finite sets of hypotheses (Horn theory) quickly becomes undecidable. This happens even for simple classes of hypotheses which themselves do not involve Kleene star. One of such classes of hypotheses is formed by sum-of-letters hypotheses, of the form $$a \\le b_1 + \\ldots + b_k$$ , where $$a, b_1, \\ldots , b_k$$ are letters. In the present paper, we strengthen the undecidability result proved for this class of hypotheses by Doumane et al. (2019) and establish the exact complexity— $$\\varSigma ^0_1$$ -completeness. Moreover, we strengthen our result and show the same complexity bounds for one fixed set of sum-of-letters hypotheses. We also accompany this result with a decidability one, for comparison.",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1007/978-3-032-32592-1_10"
+  },
+  {
+    "id": "10.1007/978-3-032-32592-1_1",
+    "title": "Free Set Theory – Cut Elimination and Consistency",
+    "authors": [
+      "Andrzej Indrzejczak"
+    ],
+    "abstract": "We present a sequent calculus for Scott’s theory of classes founded on positive free logic. Cut elimination, the generalised subformula property and consistency are shown to hold, also in the intuitionistic variant. Eventually the calculus is extended to cover the original Zermelo’s set theory Z without the axiom of choice by means of (systems of) rules. The calculus for Z preserves cut elimination, moreover, some of its subsystems and extensions are also provably consistent.",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1007/978-3-032-32592-1_1"
+  },
+  {
+    "id": "10.1007/978-3-032-32592-1_9",
+    "title": "Semantics for Dependently-Typed HOL",
+    "authors": [
+      "Florian Rabe"
+    ],
+    "abstract": "Both higher-order logic and dependent types are popular features for languages used for the formalization of complex domains. Recently DHOL was introduced as a language that provides the expressivity of dependent types while retaining the general feel of higher-order logic. Since then multiple extensions and theorem provers have been developed, and DHOL was adopted as the first TPTP standard for using dependent types in automated theorem provers.\nHowever, the literature lacks a model theoretical semantics for DHOL. The present paper fills in this gap, covering dependent types, rank-1 polymorphism, and functions with preconditions. It introduces both standard models and an appropriate generalization of Henkin-style models and proves soundness and completeness. Considerable care went into keeping the formulation as close to the usual definitions for HOL and elegant enough to serve as a reference point for language extensions and theorem provers for DHOL.",
+    "topic": "",
+    "conference": "ijcar",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1007/978-3-032-32592-1_9"
+  }
+]

@@ -1,6 +1,8 @@
 import argparse
 import asyncio
+import html
 import json
+import re
 import httpx
 import yaml
 import xml.etree.ElementTree as ET
@@ -454,6 +456,403 @@ async def _openreview_get(
     return None
 
 
+# --- DROPS (LIPIcs) -----------------------------------------------------------
+
+def _drops_author_name(author: dict) -> str:
+    given = (author.get('givenName') or '').strip()
+    family = (author.get('familyName') or '').strip()
+    if given or family:
+        return f"{given} {family}".strip()
+    # DROPS writes bare names as "Family, Given".
+    name = (author.get('name') or '').strip()
+    if ',' in name:
+        family, given = [part.strip() for part in name.split(',', 1)]
+        return f"{given} {family}".strip()
+    return name
+
+
+def _normalize_paper_from_drops(raw_paper: dict, conference: str, year: int) -> dict[str, Any]:
+    authors = raw_paper.get('author', [])
+    if isinstance(authors, dict):
+        authors = [authors]
+    authors_list = [name for name in (_drops_author_name(a) for a in authors) if name]
+
+    identifier = raw_paper.get('identifier', '') or ''
+    doi = identifier.replace('https://doi.org/', '')
+
+    keywords = raw_paper.get('keywords', []) or []
+    if isinstance(keywords, str):
+        keywords = [keywords]
+    topic = '; '.join(str(k).strip() for k in keywords if k)
+
+    normalized_data = {
+        'id': doi,
+        'title': (raw_paper.get('headline') or raw_paper.get('name') or '').strip(),
+        'authors': authors_list,
+        # DROPS keeps the authors' hard line breaks (CRLF); normalize them.
+        'abstract': re.sub(r'\r\n?', '\n', raw_paper.get('abstract') or '').strip(),
+        'topic': topic,
+        'conference': conference,
+        'year': year,
+        'paper_url': raw_paper.get('url') or (f"https://doi.org/{doi}" if doi else '')
+    }
+
+    return normalized_data
+
+
+async def _fetch_papers_from_drops(
+    client: httpx.AsyncClient, volume: int
+) -> list[dict[str, Any]]:
+    """Fetch one LIPIcs volume from DROPS (Schloss Dagstuhl's open-access server).
+
+    The volume page embeds a schema.org JSON-LD `PublicationVolume` whose
+    `hasPart` lists every article with title, authors, abstract and keywords,
+    so a single request covers the whole proceedings. (DROPS also has an
+    OAI-PMH endpoint, but it cannot be scoped to one volume.)
+    """
+    url = f"https://drops.dagstuhl.de/entities/volume/LIPIcs-volume-{volume}"
+    logger.info(f"Fetching from {url}...")
+
+    try:
+        response = await client.get(
+            url, timeout=60, follow_redirects=True,
+            headers={"User-Agent": BROWSER_USER_AGENT},
+        )
+        response.raise_for_status()
+    except httpx.RequestError as e:
+        logger.error(f"  -> Failed to fetch {url}: {e}")
+        return []
+    except httpx.HTTPStatusError as e:
+        logger.error(f"  -> Failed to fetch {url}: {e}")
+        return []
+
+    match = re.search(
+        r'<script type="application/ld\+json">(.*?)</script>', response.text, re.S
+    )
+    if not match:
+        logger.error(f"  -> No JSON-LD block found in {url}")
+        return []
+
+    try:
+        data = json.loads(match.group(1))
+    except json.JSONDecodeError as e:
+        logger.error(f"  -> Failed to parse JSON-LD from {url}: {e}")
+        return []
+
+    volume_entity = data.get('mainEntity', data)
+    parts = volume_entity.get('hasPart', [])
+    volume_name = volume_entity.get('name', '')
+
+    papers = []
+    for part in parts:
+        if part.get('@type') != 'ScholarlyArticle':
+            continue
+        doi = (part.get('identifier') or '').replace('https://doi.org/', '')
+        # Article DOIs end in ".<n>"; ".0" is the front matter and the DOI
+        # without a suffix is the complete-volume PDF.
+        suffix = doi.rsplit('.', 1)[-1] if '.' in doi else ''
+        if not suffix.isdigit() or int(suffix) == 0:
+            continue
+        papers.append(part)
+
+    if not papers:
+        logger.warning(f"  -> No papers found in {url}")
+        return []
+
+    logger.info(f"  -> Found {len(papers)} papers in {volume_name or url}")
+    return papers
+
+
+# --- Crossref (Springer LNCS, ACM, IEEE, PACMPL) -------------------------------
+
+CROSSREF_API = "https://api.crossref.org/works"
+# A descriptive User-Agent gets Crossref's "polite" pool.
+CROSSREF_USER_AGENT = (
+    "airas-papers-db/1.0 (https://github.com/airas-org/airas-papers-db) httpx"
+)
+CROSSREF_ROWS = 1000
+CROSSREF_PAPER_TYPES = {"proceedings-article", "book-chapter", "journal-article"}
+CROSSREF_NON_PAPER_TITLE = re.compile(
+    r"^\s*(Correction|Corrections|Erratum|Errata|Retraction Note)\b", re.I
+)
+# Crossref answers concurrent bursts with 429, so its requests are serialized.
+CROSSREF_REQUEST_DELAY = 1.0
+CROSSREF_MAX_RETRIES = 5
+_crossref_lock = asyncio.Lock()
+
+# Semantic Scholar fills in abstracts for publishers that do not deposit them
+# with Crossref (ACM, IEEE). The anonymous batch endpoint is shared and
+# rate-limited, so calls are serialized.
+SEMANTIC_SCHOLAR_BATCH_URL = "https://api.semanticscholar.org/graph/v1/paper/batch"
+SEMANTIC_SCHOLAR_BATCH_SIZE = 500
+SEMANTIC_SCHOLAR_REQUEST_DELAY = 1.5
+SEMANTIC_SCHOLAR_MAX_RETRIES = 5
+_semantic_scholar_lock = asyncio.Lock()
+
+
+def _clean_jats_abstract(text: str) -> str:
+    """Crossref abstracts are JATS XML fragments; reduce them to plain text."""
+    if not text:
+        return ''
+    text = re.sub(r'<jats:title>.*?</jats:title>', ' ', text, flags=re.S)
+    # Inline formulas carry both TeX and MathML; keep the TeX.
+    text = re.sub(r'<mml:math.*?</mml:math>', ' ', text, flags=re.S)
+    # Paragraph breaks are the only line breaks worth keeping; the XML's own
+    # line wrapping inside a paragraph is noise.
+    paragraph_break = '\x00'
+    text = re.sub(r'</jats:p>', paragraph_break, text)
+    text = re.sub(r'<[^>]+>', ' ', text)
+    text = html.unescape(text)
+    text = re.sub(r'\s+', ' ', text)
+    text = re.sub(rf'\s*{paragraph_break}\s*', '\n', text).strip()
+    return text
+
+
+def _normalize_paper_from_crossref(raw_paper: dict, conference: str, year: int) -> dict[str, Any]:
+    authors_list = []
+    for author in raw_paper.get('author', []):
+        given = (author.get('given') or '').strip()
+        family = (author.get('family') or '').strip()
+        full_name = f"{given} {family}".strip() or (author.get('name') or '').strip()
+        if full_name:
+            authors_list.append(full_name)
+
+    titles = raw_paper.get('title') or ['']
+    title = html.unescape(re.sub(r'\s+', ' ', titles[0])).strip()
+
+    doi = raw_paper.get('DOI', '')
+
+    normalized_data = {
+        'id': doi,
+        'title': title,
+        'authors': authors_list,
+        # `_abstract` is set by the Semantic Scholar fill-in when Crossref has
+        # none; those can carry raw HTML too, so both go through the cleaner.
+        'abstract': _clean_jats_abstract(raw_paper.get('_abstract') or raw_paper.get('abstract', '')),
+        'topic': '',  # Crossref carries no per-paper topic taxonomy
+        'conference': conference,
+        'year': year,
+        'paper_url': f"https://doi.org/{doi}" if doi else (raw_paper.get('URL') or '')
+    }
+
+    return normalized_data
+
+
+def _crossref_item_matches(item: dict, spec: dict) -> bool:
+    if item.get('type') not in CROSSREF_PAPER_TYPES:
+        return False
+
+    prefixes = spec.get('prefixes')
+    if prefixes and not any(item.get('DOI', '').startswith(p) for p in prefixes):
+        return False
+
+    container_titles = item.get('container-title') or []
+    if 'container_title' in spec and spec['container_title'] not in container_titles:
+        return False
+    if 'container_title_contains' in spec:
+        needle = spec['container_title_contains'].lower()
+        if not any(needle in ct.lower() for ct in container_titles):
+            return False
+
+    if 'issue' in spec and item.get('issue') != str(spec['issue']):
+        return False
+    if 'volume' in spec and item.get('volume') != str(spec['volume']):
+        return False
+
+    return True
+
+
+async def _fill_abstracts_from_semantic_scholar(
+    client: httpx.AsyncClient, items: list[dict], label: str
+) -> None:
+    """Look up abstracts by DOI for the items that have none, in place."""
+    missing = [item for item in items if not item.get('abstract') and item.get('DOI')]
+    if not missing:
+        return
+
+    filled = 0
+    for start in range(0, len(missing), SEMANTIC_SCHOLAR_BATCH_SIZE):
+        batch = missing[start:start + SEMANTIC_SCHOLAR_BATCH_SIZE]
+        ids = [f"DOI:{item['DOI']}" for item in batch]
+
+        async with _semantic_scholar_lock:
+            results = None
+            for attempt in range(1, SEMANTIC_SCHOLAR_MAX_RETRIES + 1):
+                try:
+                    response = await client.post(
+                        SEMANTIC_SCHOLAR_BATCH_URL,
+                        params={"fields": "abstract"},
+                        json={"ids": ids},
+                        timeout=60,
+                    )
+                    if response.status_code in (429, 503):
+                        wait = SEMANTIC_SCHOLAR_REQUEST_DELAY * 2 ** attempt
+                        logger.warning(
+                            f"  -> {label}: Semantic Scholar HTTP {response.status_code}, "
+                            f"retry {attempt}/{SEMANTIC_SCHOLAR_MAX_RETRIES} in {wait:.0f}s"
+                        )
+                        await asyncio.sleep(wait)
+                        continue
+                    if response.status_code == 400:
+                        # "No valid paper ids given": none of the batch is indexed yet.
+                        results = []
+                        break
+                    response.raise_for_status()
+                    results = response.json()
+                    break
+                except (httpx.HTTPError, json.JSONDecodeError) as e:
+                    logger.error(
+                        f"  -> {label}: Semantic Scholar request failed: {type(e).__name__}: {e}"
+                    )
+                    break
+            await asyncio.sleep(SEMANTIC_SCHOLAR_REQUEST_DELAY)
+
+        if not isinstance(results, list):
+            continue
+        for item, result in zip(batch, results):
+            abstract = (result or {}).get('abstract')
+            if abstract:
+                item['_abstract'] = abstract.strip()
+                filled += 1
+
+    logger.info(
+        f"  -> {label}: filled {filled}/{len(missing)} missing abstracts from Semantic Scholar"
+    )
+
+
+async def _crossref_get(
+    client: httpx.AsyncClient, params: dict[str, Any], label: str
+) -> dict[str, Any] | None:
+    """One serialized, rate-limit-aware Crossref request. Returns the
+    response's `message` object, or None once it gives up."""
+    async with _crossref_lock:
+        for attempt in range(1, CROSSREF_MAX_RETRIES + 1):
+            try:
+                response = await client.get(
+                    CROSSREF_API,
+                    params=params,
+                    headers={"User-Agent": CROSSREF_USER_AGENT},
+                    timeout=60,
+                )
+                if response.status_code in (429, 503, 504):
+                    wait = CROSSREF_REQUEST_DELAY * 2 ** attempt
+                    logger.warning(
+                        f"  -> {label}: Crossref HTTP {response.status_code}, "
+                        f"retry {attempt}/{CROSSREF_MAX_RETRIES} in {wait:.0f}s"
+                    )
+                    await asyncio.sleep(wait)
+                    continue
+                response.raise_for_status()
+                message = response.json().get("message", {})
+                await asyncio.sleep(CROSSREF_REQUEST_DELAY)
+                return message
+            except httpx.RequestError as e:
+                # Timeouts and dropped connections are transient; retry them.
+                wait = CROSSREF_REQUEST_DELAY * 2 ** attempt
+                logger.warning(
+                    f"  -> {label}: Crossref {type(e).__name__}: {e}, "
+                    f"retry {attempt}/{CROSSREF_MAX_RETRIES} in {wait:.0f}s"
+                )
+                await asyncio.sleep(wait)
+                continue
+            except httpx.HTTPStatusError as e:
+                logger.error(f"  -> Failed to fetch {label} from Crossref: {e}")
+                return None
+            except json.JSONDecodeError as e:
+                logger.error(f"  -> Failed to parse Crossref JSON for {label}: {e}")
+                return None
+
+    logger.error(f"  -> Gave up on {label} after {CROSSREF_MAX_RETRIES} Crossref retries")
+    return None
+
+
+async def _fetch_papers_from_crossref(
+    client: httpx.AsyncClient, spec: dict, year: int, label: str
+) -> list[dict[str, Any]]:
+    """Enumerate one proceedings volume through the Crossref REST API.
+
+    `spec` selects the volume in one of three ways:
+      - `container_title`: exact book title (Springer LNCS proceedings deposit
+        the conference name as the second container-title);
+      - `container_title_contains`: substring of the proceedings title (ACM and
+        IEEE, whose `event` metadata is inconsistent - CPP 2020 is filed under
+        "POPL '20");
+      - `issn` + `issue` (+ `volume`): a journal issue (PACMPL's POPL issue).
+    `prefixes` restricts DOI prefixes (publishers), and `date_from` /
+    `date_until` widen the publication-date window (PACMPL issues are dated
+    the December before the conference). Crossref returns abstracts for
+    Springer and PACMPL; the rest are filled in from Semantic Scholar.
+    """
+    date_from = spec.get('date_from', '{year}-01-01').format(year=year, prev_year=year - 1)
+    date_until = spec.get('date_until', '{year}-12-31').format(year=year, prev_year=year - 1)
+
+    filters = [f"from-pub-date:{date_from}", f"until-pub-date:{date_until}"]
+    params: dict[str, Any] = {
+        "rows": CROSSREF_ROWS,
+        "select": "DOI,title,author,abstract,container-title,type,issue,volume,URL",
+    }
+    if 'container_title' in spec:
+        filters.append(f"container-title:{spec['container_title']}")
+    if 'container_title_contains' in spec:
+        params["query.container-title"] = spec['container_title_contains']
+    if 'issn' in spec:
+        filters.append(f"issn:{spec['issn']}")
+    # Repeated filters of the same name are OR-ed by Crossref.
+    filters.extend(f"prefix:{prefix}" for prefix in spec.get('prefixes', []))
+    params["filter"] = ",".join(filters)
+
+    logger.info(f"Fetching from Crossref: {label} ({params['filter']})...")
+
+    # A `query.*` search is a relevance-ranked search over everything the
+    # filters admit (tens of thousands of records for a publisher-year), so it
+    # is not paged through: the matching proceedings sit at the top of the
+    # first page, which is far larger than any single proceedings volume.
+    # (Deep paging with `cursor` drops the relevance ordering, so the single
+    # page is requested without one.)
+    single_page = 'container_title_contains' in spec
+
+    items: list[dict[str, Any]] = []
+    cursor = "*"
+    while True:
+        page_params = params if single_page else {**params, "cursor": cursor}
+        message = await _crossref_get(client, page_params, label)
+        if message is None:
+            return []
+        page = message.get("items", [])
+        if not page:
+            break
+        items.extend(page)
+        next_cursor = message.get("next-cursor")
+        if single_page or len(page) < CROSSREF_ROWS or not next_cursor:
+            break
+        cursor = next_cursor
+
+    papers = [item for item in items if _crossref_item_matches(item, spec)]
+    if not papers:
+        logger.warning(f"  -> No papers matched for {label} ({len(items)} records seen)")
+        return []
+    if single_page and len(papers) >= CROSSREF_ROWS // 2:
+        logger.warning(
+            f"  -> {label}: {len(papers)} matches on a single page; the search may be truncated"
+        )
+
+    # Crossref lists a title-less placeholder for a few ACM records, and
+    # publishers register corrections/errata as chapters of their own.
+    papers = [
+        p for p in papers
+        if p.get('title') and not CROSSREF_NON_PAPER_TITLE.match(p['title'][0])
+    ]
+
+    await _fill_abstracts_from_semantic_scholar(client, papers, label)
+
+    without_abstract = sum(1 for p in papers if not (p.get('abstract') or p.get('_abstract')))
+    logger.info(
+        f"  -> Found {len(papers)} papers for {label}"
+        + (f" ({without_abstract} without abstract)" if without_abstract else "")
+    )
+    return papers
+
+
 def _save_json(data: list[dict[str, Any]], path: Path):
     path.parent.mkdir(parents=True, exist_ok=True)
     with open(path, "w", encoding="utf-8") as f:
@@ -544,6 +943,27 @@ async def main():
                     )
                     tasks.append((task, conf_name, year, "europepmc"))
 
+            elif source_type == "drops":
+                volumes = config.get("volumes", {})
+                for year_str, volume in volumes.items():
+                    year = int(year_str)
+                    task = asyncio.create_task(
+                        _fetch_papers_from_drops(client, int(volume))
+                    )
+                    tasks.append((task, conf_name, year, "drops"))
+
+            elif source_type == "crossref":
+                # `match` is shared by every year; `year_overrides` patches it
+                # per edition (CADE's book title carries its running number).
+                base_match = config.get("match", {})
+                overrides = config.get("year_overrides", {})
+                for year in config["years"]:
+                    spec = {**base_match, **overrides.get(str(year), {})}
+                    task = asyncio.create_task(
+                        _fetch_papers_from_crossref(client, spec, year, f"{conf_name} {year}")
+                    )
+                    tasks.append((task, conf_name, year, "crossref"))
+
         logger.info(f"\nFetching data from {len(tasks)} conference-year combinations...")
         results = await asyncio.gather(*(task for task, _, _, _ in tasks))
 
@@ -580,6 +1000,16 @@ async def main():
         elif source_type == "europepmc":
             normalized_papers = [
                 _normalize_paper_from_europepmc(p, conference=conf_name, year=year)
+                for p in raw_papers
+            ]
+        elif source_type == "drops":
+            normalized_papers = [
+                _normalize_paper_from_drops(p, conference=conf_name, year=year)
+                for p in raw_papers
+            ]
+        elif source_type == "crossref":
+            normalized_papers = [
+                _normalize_paper_from_crossref(p, conference=conf_name, year=year)
                 for p in raw_papers
             ]
 
