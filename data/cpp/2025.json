@@ -14,6 +14,19 @@
     "paper_url": "https://doi.org/10.1145/3703595.3705874"
   },
   {
+    "id": "10.1145/3703595.3705881",
+    "title": "Formalizing Simultaneous Critical Pairs for Confluence of Left-Linear Rewrite Systems",
+    "authors": [
+      "Christina Kirk",
+      "Aart Middeldorp"
+    ],
+    "abstract": "We report on the formalization of a sufficient condition for confluence of first-order left-linear rewrite systems within the proof assistant Isabelle/HOL. This criterion, originally proposed by Okui (1998), is based on simultaneous critical pairs, which finitely represent peaks consisting of a multi-step and a normal step. It properly subsumes the formalized result on development-closed critical pairs.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2025,
+    "paper_url": "https://doi.org/10.1145/3703595.3705881"
+  },
+  {
     "id": "10.1145/3703595.3705875",
     "title": "Formalization of Differential Privacy in Isabelle/HOL",
     "authors": [
@@ -40,19 +53,6 @@
     "paper_url": "https://doi.org/10.1145/3703595.3705886"
   },
   {
-    "id": "10.1145/3703595.3705881",
-    "title": "Formalizing Simultaneous Critical Pairs for Confluence of Left-Linear Rewrite Systems",
-    "authors": [
-      "Christina Kirk",
-      "Aart Middeldorp"
-    ],
-    "abstract": "We report on the formalization of a sufficient condition for confluence of first-order left-linear rewrite systems within the proof assistant Isabelle/HOL. This criterion, originally proposed by Okui (1998), is based on simultaneous critical pairs, which finitely represent peaks consisting of a multi-step and a normal step. It properly subsumes the formalized result on development-closed critical pairs.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2025,
-    "paper_url": "https://doi.org/10.1145/3703595.3705881"
-  },
-  {
     "id": "10.1145/3703595.3705885",
     "title": "Machine Checked Proofs and Programs in Algebraic Combinatorics",
     "authors": [
@@ -65,18 +65,6 @@
     "paper_url": "https://doi.org/10.1145/3703595.3705885"
   },
   {
-    "id": "10.1145/3703595.3710845",
-    "title": "Prospects for Computer Formalization of Infinite-Dimensional Category Theory (Invited Talk)",
-    "authors": [
-      "Emily Riehl"
-    ],
-    "abstract": "As mathematics becomes increasingly complicated, the prospect of using a computer proof assistant to (i) certify the correctness of one’s own work and (ii) interact with the formalized mathematical literature becomes increasingly attractive. In this talk, we will describe some challenges that arise when it comes to formalizing weak infinite-dimensional category theory, specifically the theory of ∞-categories developed by Joyal and Lurie. We introduce two parallel ongoing collaborative efforts to formalize ∞-category theory in two different proof assistants: Lean and Rzk. We show some sample formalized proofs to highlight the advantages and drawbacks of each formal system and explain how you could contribute to this effort. This involves joint work with Mario Carneiro, Dominic Verity, Nikolai Kudasov, and Jonathan Weinberger.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2025,
-    "paper_url": "https://doi.org/10.1145/3703595.3710845"
-  },
-  {
     "id": "10.1145/3703595.3710846",
     "title": "CRIS: The Power of Imagination in Specification and Verification (Invited Talk)",
     "authors": [
@@ -87,6 +75,59 @@
     "conference": "cpp",
     "year": 2025,
     "paper_url": "https://doi.org/10.1145/3703595.3710846"
+  },
+  {
+    "id": "10.1145/3703595.3705876",
+    "title": "The Nextgen Modality: A Modality for Non-Frame-Preserving Updates in Separation Logic",
+    "authors": [
+      "Simon Friis Vindum",
+      "Aïna Linn Georges",
+      "Lars Birkedal"
+    ],
+    "abstract": "As separation logic is a logic of resources, the way in which resources can soundly change and be updated is a fundamental aspect. Such changes have typically been restricted to certain local or frame-preserving updates. However, recently we have seen separation logics where the restriction to frame-preserving updates seems to be a hindrance towards achieving the ideal program reasoning rules. In this, paper we propose a novel nextgen modality that enables reasoning across generations where each generational change can update resources in ways that are non-local and non-frame-preserving. We implement the idea as an extension to the Iris base logic, which enriches Iris with an entirely new capability: the ability to make non-frame-preserving updates to ghost state. We show that two existing Iris modalities are special cases of the nextgen modality. Our “extension” can thus also be seen as a generalization and simplification of the Iris base logic. To demonstrate the utility of the nextgen modality we use it to construct a separation logic for a programming language with explicit stack allocation and with a return operation that clears entire stack frames. The nextgen modality is used to great effect in the reasoning rule for return, where a modular and practical reasoning rule is otherwise out of reach. This is the first separation logic for a high-level programming language with stack allocation. We sketch ideas for future work in other domains where we think the nextgen modality can be useful.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2025,
+    "paper_url": "https://doi.org/10.1145/3703595.3705876"
+  },
+  {
+    "id": "10.1145/3703595.3705877",
+    "title": "Tactic Script Optimisation for Aesop",
+    "authors": [
+      "Jannis Limperg"
+    ],
+    "abstract": "White-box proof search tactics such as Coq's auto, Isabelle's auto and Lean's Aesop apply proof rules that often translate directly to lower-level tactics. When these search tactics find a proof, they can, at least in principle, generate a tactic script, i.e. a sequence of lower-level tactics that proves the goal. Such a script can then replace the typically much slower invocation of the search tactic, or it can be used to understand and debug the search. However, at least for Aesop, naively generated scripts are highly unidiomatic. For example, they use tactics that users would typically avoid; they apply these tactics in an unusual order; and they do not use Lean's constructs for structuring tactic scripts. To address these issues, I propose a three-stage optimisation pipeline that transforms naive scripts into scripts resembling a human-written Lean proof. The first stage replaces less idiomatic tactics with more idiomatic ones, checking that the two sequences of tactics produce the same result. The second stage permutes the tactics in the script to bring them into a natural, depth-first order, which then allows us to use Lean's structuring constructs. The third stage runs some straightforward post-processing passes.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2025,
+    "paper_url": "https://doi.org/10.1145/3703595.3705877"
+  },
+  {
+    "id": "10.1145/3703595.3705888",
+    "title": "Split Decisions: Explicit Contexts for Substructural Languages",
+    "authors": [
+      "Daniel Zackon",
+      "Chuta Sano",
+      "Alberto Momigliano",
+      "Brigitte Pientka"
+    ],
+    "abstract": "A central challenge in mechanizing the meta-theory of substructural languages is modeling contexts. Although various ad hoc approaches to this problem exist, we lack a set of good practices and a simple infrastructure that can be leveraged for mechanizing a wide range of substructural systems. In this work, we describe Contexts as Resource Vectors (CARVe), a general syntactic infrastructure for managing substructural contexts, where elements are annotated with tags from a resource algebra denoting their availability. Assumptions persist as contexts are manipulated since we model resource consumption by changing their tags. We may thus define relations between substructural contexts via simultaneous substitutions without the need to split them. Moreover, we establish a series of algebraic properties about context operations that are typically required to carry out proofs in practice. CARVe is implemented in the proof assistant Beluga. To illustrate best practices for using our infrastructure, we give a detailed reformulation of the linear sequent calculus and bidirectional linear λ-calculus in terms of CARVe’s context operations and prove their equivalence using the aforementioned algebraic properties. In addition, we apply CARVe to mechanize a diverse set of systems, from the affine λ-calculus to the session-typed process calculus CP, giving us confidence that CARVe is sufficiently general to mechanize a broad range of substructural systems.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2025,
+    "paper_url": "https://doi.org/10.1145/3703595.3705888"
+  },
+  {
+    "id": "10.1145/3703595.3710845",
+    "title": "Prospects for Computer Formalization of Infinite-Dimensional Category Theory (Invited Talk)",
+    "authors": [
+      "Emily Riehl"
+    ],
+    "abstract": "As mathematics becomes increasingly complicated, the prospect of using a computer proof assistant to (i) certify the correctness of one’s own work and (ii) interact with the formalized mathematical literature becomes increasingly attractive. In this talk, we will describe some challenges that arise when it comes to formalizing weak infinite-dimensional category theory, specifically the theory of ∞-categories developed by Joyal and Lurie. We introduce two parallel ongoing collaborative efforts to formalize ∞-category theory in two different proof assistants: Lean and Rzk. We show some sample formalized proofs to highlight the advantages and drawbacks of each formal system and explain how you could contribute to this effort. This involves joint work with Mario Carneiro, Dominic Verity, Nikolai Kudasov, and Jonathan Weinberger.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2025,
+    "paper_url": "https://doi.org/10.1145/3703595.3710845"
   },
   {
     "id": "10.1145/3703595.3705883",
@@ -118,47 +159,6 @@
     "paper_url": "https://doi.org/10.1145/3703595.3705873"
   },
   {
-    "id": "10.1145/3703595.3705888",
-    "title": "Split Decisions: Explicit Contexts for Substructural Languages",
-    "authors": [
-      "Daniel Zackon",
-      "Chuta Sano",
-      "Alberto Momigliano",
-      "Brigitte Pientka"
-    ],
-    "abstract": "A central challenge in mechanizing the meta-theory of substructural languages is modeling contexts. Although various ad hoc approaches to this problem exist, we lack a set of good practices and a simple infrastructure that can be leveraged for mechanizing a wide range of substructural systems. In this work, we describe Contexts as Resource Vectors (CARVe), a general syntactic infrastructure for managing substructural contexts, where elements are annotated with tags from a resource algebra denoting their availability. Assumptions persist as contexts are manipulated since we model resource consumption by changing their tags. We may thus define relations between substructural contexts via simultaneous substitutions without the need to split them. Moreover, we establish a series of algebraic properties about context operations that are typically required to carry out proofs in practice. CARVe is implemented in the proof assistant Beluga. To illustrate best practices for using our infrastructure, we give a detailed reformulation of the linear sequent calculus and bidirectional linear λ-calculus in terms of CARVe’s context operations and prove their equivalence using the aforementioned algebraic properties. In addition, we apply CARVe to mechanize a diverse set of systems, from the affine λ-calculus to the session-typed process calculus CP, giving us confidence that CARVe is sufficiently general to mechanize a broad range of substructural systems.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2025,
-    "paper_url": "https://doi.org/10.1145/3703595.3705888"
-  },
-  {
-    "id": "10.1145/3703595.3705877",
-    "title": "Tactic Script Optimisation for Aesop",
-    "authors": [
-      "Jannis Limperg"
-    ],
-    "abstract": "White-box proof search tactics such as Coq's auto, Isabelle's auto and Lean's Aesop apply proof rules that often translate directly to lower-level tactics. When these search tactics find a proof, they can, at least in principle, generate a tactic script, i.e. a sequence of lower-level tactics that proves the goal. Such a script can then replace the typically much slower invocation of the search tactic, or it can be used to understand and debug the search. However, at least for Aesop, naively generated scripts are highly unidiomatic. For example, they use tactics that users would typically avoid; they apply these tactics in an unusual order; and they do not use Lean's constructs for structuring tactic scripts. To address these issues, I propose a three-stage optimisation pipeline that transforms naive scripts into scripts resembling a human-written Lean proof. The first stage replaces less idiomatic tactics with more idiomatic ones, checking that the two sequences of tactics produce the same result. The second stage permutes the tactics in the script to bring them into a natural, depth-first order, which then allows us to use Lean's structuring constructs. The third stage runs some straightforward post-processing passes.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2025,
-    "paper_url": "https://doi.org/10.1145/3703595.3705877"
-  },
-  {
-    "id": "10.1145/3703595.3705876",
-    "title": "The Nextgen Modality: A Modality for Non-Frame-Preserving Updates in Separation Logic",
-    "authors": [
-      "Simon Friis Vindum",
-      "Aïna Linn Georges",
-      "Lars Birkedal"
-    ],
-    "abstract": "As separation logic is a logic of resources, the way in which resources can soundly change and be updated is a fundamental aspect. Such changes have typically been restricted to certain local or frame-preserving updates. However, recently we have seen separation logics where the restriction to frame-preserving updates seems to be a hindrance towards achieving the ideal program reasoning rules. In this, paper we propose a novel nextgen modality that enables reasoning across generations where each generational change can update resources in ways that are non-local and non-frame-preserving. We implement the idea as an extension to the Iris base logic, which enriches Iris with an entirely new capability: the ability to make non-frame-preserving updates to ghost state. We show that two existing Iris modalities are special cases of the nextgen modality. Our “extension” can thus also be seen as a generalization and simplification of the Iris base logic. To demonstrate the utility of the nextgen modality we use it to construct a separation logic for a programming language with explicit stack allocation and with a return operation that clears entire stack frames. The nextgen modality is used to great effect in the reasoning rule for return, where a modular and practical reasoning rule is otherwise out of reach. This is the first separation logic for a high-level programming language with stack allocation. We sketch ideas for future work in other domains where we think the nextgen modality can be useful.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2025,
-    "paper_url": "https://doi.org/10.1145/3703595.3705876"
-  },
-  {
     "id": "10.1145/3703595.3705890",
     "title": "Monadic Interpreters for Concurrent Memory Models",
     "authors": [
@@ -171,6 +171,19 @@
     "conference": "cpp",
     "year": 2025,
     "paper_url": "https://doi.org/10.1145/3703595.3705890"
+  },
+  {
+    "id": "10.1145/3703595.3705887",
+    "title": "Formalizing the One-Way to Hiding Theorem",
+    "authors": [
+      "Katharina Heidler",
+      "Dominique Unruh"
+    ],
+    "abstract": "As the standardization process for post-quantum cryptography progresses, the need for computer-verified security proofs against classical and quantum attackers increases. Even though some tools are already tackling this issue, none are foundational. We take a first step in this direction and present a complete formalization of the One-way to Hiding (O2H) Theorem, a central theorem for security proofs against quantum attackers. With this new formalization, we build more secure foundations for proof-checking tools in the quantum setting. Using the theorem prover Isabelle, we verify the semi-classical O2H Theorem by Ambainis, Hamburg and Unruh (Crypto 2019) in different variations. We also give a novel (and for the formalization simpler) proof to the O2H Theorem for mixed states and extend the theorem to non-terminating adversaries. This work provides a theoretical and foundational background for several verification tools and for security proofs in the quantum setting.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2025,
+    "paper_url": "https://doi.org/10.1145/3703595.3705887"
   },
   {
     "id": "10.1145/3703595.3705878",
@@ -191,17 +204,31 @@
     "paper_url": "https://doi.org/10.1145/3703595.3705878"
   },
   {
-    "id": "10.1145/3703595.3705887",
-    "title": "Formalizing the One-Way to Hiding Theorem",
+    "id": "10.1145/3703595.3705871",
+    "title": "Leakage-Free Probabilistic Jasmin Programs",
     "authors": [
-      "Katharina Heidler",
+      "José Bacelar Almeida",
+      "Denis Firsov",
+      "Tiago Oliveira",
       "Dominique Unruh"
     ],
-    "abstract": "As the standardization process for post-quantum cryptography progresses, the need for computer-verified security proofs against classical and quantum attackers increases. Even though some tools are already tackling this issue, none are foundational. We take a first step in this direction and present a complete formalization of the One-way to Hiding (O2H) Theorem, a central theorem for security proofs against quantum attackers. With this new formalization, we build more secure foundations for proof-checking tools in the quantum setting. Using the theorem prover Isabelle, we verify the semi-classical O2H Theorem by Ambainis, Hamburg and Unruh (Crypto 2019) in different variations. We also give a novel (and for the formalization simpler) proof to the O2H Theorem for mixed states and extend the theorem to non-terminating adversaries. This work provides a theoretical and foundational background for several verification tools and for security proofs in the quantum setting.",
+    "abstract": "This paper presents a semantic characterization of leakage-freeness through timing side-channels for Jasmin programs. Our characterization covers probabilistic Jasmin programs that are not constant-time. In addition, we provide a characterization in terms of probabilistic relational Hoare logic and prove the equivalence between both definitions. We also prove that our new characterizations are compositional and relate our new definitions to existing ones from prior work, which could only be applied to deterministic programs. To provide practical evidence, we use the Jasmin framework to develop a rejection sampling algorithm and provide an EasyCrypt proof that ensures the algorithm's implementation is leakage-free while not being constant-time.",
     "topic": "",
     "conference": "cpp",
     "year": 2025,
-    "paper_url": "https://doi.org/10.1145/3703595.3705887"
+    "paper_url": "https://doi.org/10.1145/3703595.3705871"
+  },
+  {
+    "id": "10.1145/3703595.3705882",
+    "title": "An Isabelle/HOL Framework for Synthetic Completeness Proofs",
+    "authors": [
+      "Asta Halkjær From"
+    ],
+    "abstract": "Proof assistants like Isabelle/HOL provide the perfect opportunity to develop more than just one-off formalizations, but frameworks for developing new results within a given area. Completeness results for logical calculi often include bespoke versions of Lindenbaum's lemma. In this paper, I mechanize an abstract, transfinite version of the lemma and use it to build witnessed, maximal consistent sets (MCSs) for any notion of consistency that satisfies a few requirements. I prove abstract results about when MCSs reflect the proof rules of the underlying calculi. Finally, I formalize a process for mechanically calculating saturated set conditions from a given logic's semantics. This separates the truth lemma that connects MCS-membership and satisfiability into semantic and syntactic components, giving concrete proof obligations for each operator of the logic. To illustrate the framework's applicability, I instantiate it with propositional, first-order, modal and hybrid logic examples. I mechanize strong completeness for each logic, even for uncountably large languages, proving that, if a formula is valid under a set of assumptions, then we can derive it from a finite subset.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2025,
+    "paper_url": "https://doi.org/10.1145/3703595.3705882"
   },
   {
     "id": "10.1145/3703595.3705879",
@@ -217,33 +244,6 @@
     "conference": "cpp",
     "year": 2025,
     "paper_url": "https://doi.org/10.1145/3703595.3705879"
-  },
-  {
-    "id": "10.1145/3703595.3705882",
-    "title": "An Isabelle/HOL Framework for Synthetic Completeness Proofs",
-    "authors": [
-      "Asta Halkjær From"
-    ],
-    "abstract": "Proof assistants like Isabelle/HOL provide the perfect opportunity to develop more than just one-off formalizations, but frameworks for developing new results within a given area. Completeness results for logical calculi often include bespoke versions of Lindenbaum's lemma. In this paper, I mechanize an abstract, transfinite version of the lemma and use it to build witnessed, maximal consistent sets (MCSs) for any notion of consistency that satisfies a few requirements. I prove abstract results about when MCSs reflect the proof rules of the underlying calculi. Finally, I formalize a process for mechanically calculating saturated set conditions from a given logic's semantics. This separates the truth lemma that connects MCS-membership and satisfiability into semantic and syntactic components, giving concrete proof obligations for each operator of the logic. To illustrate the framework's applicability, I instantiate it with propositional, first-order, modal and hybrid logic examples. I mechanize strong completeness for each logic, even for uncountably large languages, proving that, if a formula is valid under a set of assumptions, then we can derive it from a finite subset.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2025,
-    "paper_url": "https://doi.org/10.1145/3703595.3705882"
-  },
-  {
-    "id": "10.1145/3703595.3705871",
-    "title": "Leakage-Free Probabilistic Jasmin Programs",
-    "authors": [
-      "José Bacelar Almeida",
-      "Denis Firsov",
-      "Tiago Oliveira",
-      "Dominique Unruh"
-    ],
-    "abstract": "This paper presents a semantic characterization of leakage-freeness through timing side-channels for Jasmin programs. Our characterization covers probabilistic Jasmin programs that are not constant-time. In addition, we provide a characterization in terms of probabilistic relational Hoare logic and prove the equivalence between both definitions. We also prove that our new characterizations are compositional and relate our new definitions to existing ones from prior work, which could only be applied to deterministic programs. To provide practical evidence, we use the Jasmin framework to develop a rejection sampling algorithm and provide an EasyCrypt proof that ensures the algorithm's implementation is leakage-free while not being constant-time.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2025,
-    "paper_url": "https://doi.org/10.1145/3703595.3705871"
   },
   {
     "id": "10.1145/3703595.3705889",

@@ -1,181 +1,5 @@
 [
   {
-    "id": "10.1093/bioinformatics/btad252",
-    "title": "RNA design via structure-aware multifrontier ensemble optimization",
-    "authors": [
-      "Zhou T",
-      "Dai N",
-      "Li S",
-      "Ward M",
-      "Mathews DH",
-      "Huang L"
-    ],
-    "abstract": "<h4>Motivation</h4>RNA design is the search for a sequence or set of sequences that will fold to desired structure, also known as the inverse problem of RNA folding. However, the sequences designed by existing algorithms often suffer from low ensemble stability, which worsens for long sequence design. Additionally, for many methods only a small number of sequences satisfying the MFE criterion can be found by each run of design. These drawbacks limit their use cases.<h4>Results</h4>We propose an innovative optimization paradigm, SAMFEO, which optimizes ensemble objectives (equilibrium probability or ensemble defect) by iterative search and yields a very large number of successfully designed RNA sequences as byproducts. We develop a search method which leverages structure level and ensemble level information at different stages of the optimization: initialization, sampling, mutation, and updating. Our work, while being less complicated than others, is the first algorithm that is able to design thousands of RNA sequences for the puzzles from the Eterna100 benchmark. In addition, our algorithm solves the most Eterna100 puzzles among all the general optimization based methods in our study. The only baseline solving more puzzles than our work is dependent on handcrafted heuristics designed for a specific folding model. Surprisingly, our approach shows superiority on designing long sequences for structures adapted from the database of 16S Ribosomal RNAs.<h4>Availability and implementation</h4>Our source code and data used in this article is available at https://github.com/shanry/SAMFEO.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btad252"
-  },
-  {
-    "id": "10.1093/bioinformatics/btad204",
-    "title": "COmic: convolutional kernel networks for interpretable end-to-end learning on (multi-)omics data",
-    "authors": [
-      "Ditz JC",
-      "Reuter B",
-      "Pfeifer N"
-    ],
-    "abstract": "<h4>Motivation</h4>The size of available omics datasets is steadily increasing with technological advancement in recent years. While this increase in sample size can be used to improve the performance of relevant prediction tasks in healthcare, models that are optimized for large datasets usually operate as black boxes. In high-stakes scenarios, like healthcare, using a black-box model poses safety and security issues. Without an explanation about molecular factors and phenotypes that affected the prediction, healthcare providers are left with no choice but to blindly trust the models. We propose a new type of artificial neural network, named Convolutional Omics Kernel Network (COmic). By combining convolutional kernel networks with pathway-induced kernels, our method enables robust and interpretable end-to-end learning on omics datasets ranging in size from a few hundred to several hundreds of thousands of samples. Furthermore, COmic can be easily adapted to utilize multiomics data.<h4>Results</h4>We evaluated the performance capabilities of COmic on six different breast cancer cohorts. Additionally, we trained COmic models on multiomics data using the METABRIC cohort. Our models performed either better or similar to competitors on both tasks. We show how the use of pathway-induced Laplacian kernels opens the black-box nature of neural networks and results in intrinsically interpretable models that eliminate the need for post hoc explanation models.<h4>Availability and implementation</h4>Datasets, labels, and pathway-induced graph Laplacians used for the single-omics tasks can be downloaded at https://ibm.ent.box.com/s/ac2ilhyn7xjj27r0xiwtom4crccuobst/folder/48027287036. While datasets and graph Laplacians for the METABRIC cohort can be downloaded from the above mentioned repository, the labels have to be downloaded from cBioPortal at https://www.cbioportal.org/study/clinicalData?id=brca\\_metabric. COmic source code as well as all scripts necessary to reproduce the experiments and analysis are publicly available at https://github.com/jditz/comics.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btad204"
-  },
-  {
-    "id": "10.1093/bioinformatics/btad263",
-    "title": "Phylogenetic diversity statistics for all clades in a phylogeny",
-    "authors": [
-      "Grover S",
-      "Markin A",
-      "Anderson TK",
-      "Eulenstein O"
-    ],
-    "abstract": "The classic quantitative measure of phylogenetic diversity (PD) has been used to address problems in conservation biology, microbial ecology, and evolutionary biology. PD is the minimum total length of the branches in a phylogeny required to cover a specified set of taxa on the phylogeny. A general goal in the application of PD has been identifying a set of taxa of size k that maximize PD on a given phylogeny; this has been mirrored in active research to develop efficient algorithms for the problem. Other descriptive statistics, such as the minimum PD, average PD, and standard deviation of PD, can provide invaluable insight into the distribution of PD across a phylogeny (relative to a fixed value of k). However, there has been limited or no research on computing these statistics, especially when required for each clade in a phylogeny, enabling direct comparisons of PD between clades. We introduce efficient algorithms for computing PD and the associated descriptive statistics for a given phylogeny and each of its clades. In simulation studies, we demonstrate the ability of our algorithms to analyze large-scale phylogenies with applications in ecology and evolutionary biology. The software is available at https://github.com/flu-crew/PD_stats.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btad263"
-  },
-  {
-    "id": "10.1093/bioinformatics/btad264",
-    "title": "isONform: reference-free transcriptome reconstruction from Oxford Nanopore data",
-    "authors": [
-      "Petri AJ",
-      "Sahlin K"
-    ],
-    "abstract": "<h4>Motivation</h4>With advances in long-read transcriptome sequencing, we can now fully sequence transcripts, which greatly improves our ability to study transcription processes. A popular long-read transcriptome sequencing technique is Oxford Nanopore Technologies (ONT), which through its cost-effective sequencing and high throughput, has the potential to characterize the transcriptome in a cell. However, due to transcript variability and sequencing errors, long cDNA reads need substantial bioinformatic processing to produce a set of isoform predictions from the reads. Several genome and annotation-based methods exist to produce transcript predictions. However, such methods require high-quality genomes and annotations and are limited by the accuracy of long-read splice aligners. In addition, gene families with high heterogeneity may not be well represented by a reference genome and would benefit from reference-free analysis. Reference-free methods to predict transcripts from ONT, such as RATTLE, exist, but their sensitivity is not comparable to reference-based approaches.<h4>Results</h4>We present isONform, a high-sensitivity algorithm to construct isoforms from ONT cDNA sequencing data. The algorithm is based on iterative bubble popping on gene graphs built from fuzzy seeds from the reads. Using simulated, synthetic, and biological ONT cDNA data, we show that isONform has substantially higher sensitivity than RATTLE albeit with some loss in precision. On biological data, we show that isONform's predictions have substantially higher consistency with the annotation-based method StringTie2 compared with RATTLE. We believe isONform can be used both for isoform construction for organisms without well-annotated genomes and as an orthogonal method to verify predictions of reference-based methods.<h4>Availability and implementation</h4>https://github.com/aljpetri/isONform.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btad264"
-  },
-  {
-    "id": "10.1093/bioinformatics/btad203",
-    "title": "A gated graph transformer for protein complex structure quality assessment and its performance in CASP15",
-    "authors": [
-      "Chen X",
-      "Morehead A",
-      "Liu J",
-      "Cheng J"
-    ],
-    "abstract": "<h4>Motivation</h4>Proteins interact to form complexes to carry out essential biological functions. Computational methods such as AlphaFold-multimer have been developed to predict the quaternary structures of protein complexes. An important yet largely unsolved challenge in protein complex structure prediction is to accurately estimate the quality of predicted protein complex structures without any knowledge of the corresponding native structures. Such estimations can then be used to select high-quality predicted complex structures to facilitate biomedical research such as protein function analysis and drug discovery.<h4>Results</h4>In this work, we introduce a new gated neighborhood-modulating graph transformer to predict the quality of 3D protein complex structures. It incorporates node and edge gates within a graph transformer framework to control information flow during graph message passing. We trained, evaluated and tested the method (called DProQA) on newly-curated protein complex datasets before the 15th Critical Assessment of Techniques for Protein Structure Prediction (CASP15) and then blindly tested it in the 2022 CASP15 experiment. The method was ranked 3rd among the single-model quality assessment methods in CASP15 in terms of the ranking loss of TM-score on 36 complex targets. The rigorous internal and external experiments demonstrate that DProQA is effective in ranking protein complex structures.<h4>Availability and implementation</h4>The source code, data, and pre-trained models are available at https://github.com/jianlin-cheng/DProQA.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btad203"
-  },
-  {
-    "id": "10.1093/bioinformatics/btad232",
-    "title": "AttOmics: attention-based architecture for diagnosis and prognosis from omics data",
-    "authors": [
-      "Beaude A",
-      "Rafiee Vahid M",
-      "Augé F",
-      "Zehraoui F",
-      "Hanczar B"
-    ],
-    "abstract": "<h4>Motivation</h4>The increasing availability of high-throughput omics data allows for considering a new medicine centered on individual patients. Precision medicine relies on exploiting these high-throughput data with machine-learning models, especially the ones based on deep-learning approaches, to improve diagnosis. Due to the high-dimensional small-sample nature of omics data, current deep-learning models end up with many parameters and have to be fitted with a limited training set. Furthermore, interactions between molecular entities inside an omics profile are not patient specific but are the same for all patients.<h4>Results</h4>In this article, we propose AttOmics, a new deep-learning architecture based on the self-attention mechanism. First, we decompose each omics profile into a set of groups, where each group contains related features. Then, by applying the self-attention mechanism to the set of groups, we can capture the different interactions specific to a patient. The results of different experiments carried out in this article show that our model can accurately predict the phenotype of a patient with fewer parameters than deep neural networks. Visualizing the attention maps can provide new insights into the essential groups for a particular phenotype.<h4>Availability and implementation</h4>The code and data are available at https://forge.ibisc.univ-evry.fr/abeaude/AttOmics. TCGA data can be downloaded from the Genomic Data Commons Data Portal.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btad232"
-  },
-  {
-    "id": "10.1093/bioinformatics/btad253",
-    "title": "Robust reconstruction of single-cell RNA-seq data with iterative gene weight updates",
-    "authors": [
-      "Sheng Y",
-      "Barak B",
-      "Nitzan M"
-    ],
-    "abstract": "<h4>Motivation</h4>Single-cell RNA-sequencing technologies have greatly enhanced our understanding of heterogeneous cell populations and underlying regulatory processes. However, structural (spatial or temporal) relations between cells are lost during cell dissociation. These relations are crucial for identifying associated biological processes. Many existing tissue-reconstruction algorithms use prior information about subsets of genes that are informative with respect to the structure or process to be reconstructed. When such information is not available, and in the general case when the input genes code for multiple processes, including being susceptible to noise, biological reconstruction is often computationally challenging.<h4>Results</h4>We propose an algorithm that iteratively identifies manifold-informative genes using existing reconstruction algorithms for single-cell RNA-seq data as subroutine. We show that our algorithm improves the quality of tissue reconstruction for diverse synthetic and real scRNA-seq data, including data from the mammalian intestinal epithelium and liver lobules.<h4>Availability and implementation</h4>The code and data for benchmarking are available at github.com/syq2012/iterative_weight_update_for_reconstruction.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btad253"
-  },
-  {
-    "id": "10.1093/bioinformatics/btad221",
-    "title": "Phylogenomic branch length estimation using quartets",
-    "authors": [
-      "Tabatabaee Y",
-      "Zhang C",
-      "Warnow T",
-      "Mirarab S"
-    ],
-    "abstract": "<h4>Motivation</h4>Branch lengths and topology of a species tree are essential in most downstream analyses, including estimation of diversification dates, characterization of selection, understanding adaptation, and comparative genomics. Modern phylogenomic analyses often use methods that account for the heterogeneity of evolutionary histories across the genome due to processes such as incomplete lineage sorting. However, these methods typically do not generate branch lengths in units that are usable by downstream applications, forcing phylogenomic analyses to resort to alternative shortcuts such as estimating branch lengths by concatenating gene alignments into a supermatrix. Yet, concatenation and other available approaches for estimating branch lengths fail to address heterogeneity across the genome.<h4>Results</h4>In this article, we derive expected values of gene tree branch lengths in substitution units under an extension of the multispecies coalescent (MSC) model that allows substitutions with varying rates across the species tree. We present CASTLES, a new technique for estimating branch lengths on the species tree from estimated gene trees that uses these expected values, and our study shows that CASTLES improves on the most accurate prior methods with respect to both speed and accuracy.<h4>Availability and implementation</h4>CASTLES is available at https://github.com/ytabatabaee/CASTLES.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btad221"
-  },
-  {
-    "id": "10.1093/bioinformatics/btad208",
-    "title": "Combining protein sequences and structures with transformers and equivariant graph neural networks to predict protein function",
-    "authors": [
-      "Boadu F",
-      "Cao H",
-      "Cheng J"
-    ],
-    "abstract": "<h4>Motivation</h4>Millions of protein sequences have been generated by numerous genome and transcriptome sequencing projects. However, experimentally determining the function of the proteins is still a time consuming, low-throughput, and expensive process, leading to a large protein sequence-function gap. Therefore, it is important to develop computational methods to accurately predict protein function to fill the gap. Even though many methods have been developed to use protein sequences as input to predict function, much fewer methods leverage protein structures in protein function prediction because there was lack of accurate protein structures for most proteins until recently.<h4>Results</h4>We developed TransFun-a method using a transformer-based protein language model and 3D-equivariant graph neural networks to distill information from both protein sequences and structures to predict protein function. It extracts feature embeddings from protein sequences using a pre-trained protein language model (ESM) via transfer learning and combines them with 3D structures of proteins predicted by AlphaFold2 through equivariant graph neural networks. Benchmarked on the CAFA3 test dataset and a new test dataset, TransFun outperforms several state-of-the-art methods, indicating that the language model and 3D-equivariant graph neural networks are effective methods to leverage protein sequences and structures to improve protein function prediction. Combining TransFun predictions and sequence similarity-based predictions can further increase prediction accuracy.<h4>Availability and implementation</h4>The source code of TransFun is available at https://github.com/jianlin-cheng/TransFun.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btad208"
-  },
-  {
-    "id": "10.1093/bioinformatics/btad218",
-    "title": "Seeding with minimized subsequence",
-    "authors": [
-      "Li X",
-      "Shi Q",
-      "Chen K",
-      "Shao M"
-    ],
-    "abstract": "<h4>Motivation</h4>Modern methods for computation-intensive tasks in sequence analysis (e.g. read mapping, sequence alignment, genome assembly, etc.) often first transform each sequence into a list of short, regular-length seeds so that compact data structures and efficient algorithms can be employed to handle the ever-growing large-scale data. Seeding methods using kmers (substrings of length k) have gained tremendous success in processing sequencing data with low mutation/error rates. However, they are much less effective for sequencing data with high error rates as kmers cannot tolerate errors.<h4>Results</h4>We propose SubseqHash, a strategy that uses subsequences, rather than substrings, as seeds. Formally, SubseqHash maps a string of length n to its smallest subsequence of length k, k < n, according to a given order overall length-k strings. Finding the smallest subsequence of a string by enumeration is impractical as the number of subsequences grows exponentially. To overcome this barrier, we propose a novel algorithmic framework that consists of a specifically designed order (termed ABC order) and an algorithm that computes the minimized subsequence under an ABC order in polynomial time. We first show that the ABC order exhibits the desired property and the probability of hash collision using the ABC order is close to the Jaccard index. We then show that SubseqHash overwhelmingly outperforms the substring-based seeding methods in producing high-quality seed-matches for three critical applications: read mapping, sequence alignment, and overlap detection. SubseqHash presents a major algorithmic breakthrough for tackling the high error rates and we expect it to be widely adapted for long-reads analysis.<h4>Availability and implementation</h4>SubseqHash is freely available at https://github.com/Shao-Group/subseqhash.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btad218"
-  },
-  {
-    "id": "10.1093/bioinformatics/btad249",
-    "title": "PPAD: a deep learning architecture to predict progression of Alzheimer's disease",
-    "authors": [
-      "Al Olaimat M",
-      "Martinez J",
-      "Saeed F",
-      "Bozdag S"
-    ],
-    "abstract": "<h4>Motivation</h4>Alzheimer's disease (AD) is a neurodegenerative disease that affects millions of people worldwide. Mild cognitive impairment (MCI) is an intermediary stage between cognitively normal state and AD. Not all people who have MCI convert to AD. The diagnosis of AD is made after significant symptoms of dementia such as short-term memory loss are already present. Since AD is currently an irreversible disease, diagnosis at the onset of the disease brings a huge burden on patients, their caregivers, and the healthcare sector. Thus, there is a crucial need to develop methods for the early prediction AD for patients who have MCI. Recurrent neural networks (RNN) have been successfully used to handle electronic health records (EHR) for predicting conversion from MCI to AD. However, RNN ignores irregular time intervals between successive events which occurs common in electronic health record data. In this study, we propose two deep learning architectures based on RNN, namely Predicting Progression of Alzheimer's Disease (PPAD) and PPAD-Autoencoder. PPAD and PPAD-Autoencoder are designed for early predicting conversion from MCI to AD at the next visit and multiple visits ahead for patients, respectively. To minimize the effect of the irregular time intervals between visits, we propose using age in each visit as an indicator of time change between successive visits.<h4>Results</h4>Our experimental results conducted on Alzheimer's Disease Neuroimaging Initiative and National Alzheimer's Coordinating Center datasets showed that our proposed models outperformed all baseline models for most prediction scenarios in terms of F2 and sensitivity. We also observed that the age feature was one of top features and was able to address irregular time interval problem.<h4>Availability and implementation</h4>https://github.com/bozdaglab/PPAD.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btad249"
-  },
-  {
-    "id": "10.1093/bioinformatics/btad266",
-    "title": "Reference panel-guided super-resolution inference of Hi-C data",
-    "authors": [
-      "Zhang Y",
-      "Blanchette M"
-    ],
-    "abstract": "<h4>Motivation</h4>Accurately assessing contacts between DNA fragments inside the nucleus with Hi-C experiment is crucial for understanding the role of 3D genome organization in gene regulation. This challenging task is due in part to the high sequencing depth of Hi-C libraries required to support high-resolution analyses. Most existing Hi-C data are collected with limited sequencing coverage, leading to poor chromatin interaction frequency estimation. Current computational approaches to enhance Hi-C signals focus on the analysis of individual Hi-C datasets of interest, without taking advantage of the facts that (i) several hundred Hi-C contact maps are publicly available and (ii) the vast majority of local spatial organizations are conserved across multiple cell types.<h4>Results</h4>Here, we present RefHiC-SR, an attention-based deep learning framework that uses a reference panel of Hi-C datasets to facilitate the enhancement of Hi-C data resolution of a given study sample. We compare RefHiC-SR against tools that do not use reference samples and find that RefHiC-SR outperforms other programs across different cell types, and sequencing depths. It also enables high-accuracy mapping of structures such as loops and topologically associating domains.<h4>Availability and implementation</h4>https://github.com/BlanchetteLab/RefHiC.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btad266"
-  },
-  {
     "id": "10.1093/bioinformatics/btad217",
     "title": "ChromDL: a next-generation regulatory DNA classifier",
     "authors": [
@@ -469,6 +293,323 @@
     "paper_url": "https://doi.org/10.1093/bioinformatics/btad250"
   },
   {
+    "id": "10.1093/bioinformatics/btad252",
+    "title": "RNA design via structure-aware multifrontier ensemble optimization",
+    "authors": [
+      "Zhou T",
+      "Dai N",
+      "Li S",
+      "Ward M",
+      "Mathews DH",
+      "Huang L"
+    ],
+    "abstract": "<h4>Motivation</h4>RNA design is the search for a sequence or set of sequences that will fold to desired structure, also known as the inverse problem of RNA folding. However, the sequences designed by existing algorithms often suffer from low ensemble stability, which worsens for long sequence design. Additionally, for many methods only a small number of sequences satisfying the MFE criterion can be found by each run of design. These drawbacks limit their use cases.<h4>Results</h4>We propose an innovative optimization paradigm, SAMFEO, which optimizes ensemble objectives (equilibrium probability or ensemble defect) by iterative search and yields a very large number of successfully designed RNA sequences as byproducts. We develop a search method which leverages structure level and ensemble level information at different stages of the optimization: initialization, sampling, mutation, and updating. Our work, while being less complicated than others, is the first algorithm that is able to design thousands of RNA sequences for the puzzles from the Eterna100 benchmark. In addition, our algorithm solves the most Eterna100 puzzles among all the general optimization based methods in our study. The only baseline solving more puzzles than our work is dependent on handcrafted heuristics designed for a specific folding model. Surprisingly, our approach shows superiority on designing long sequences for structures adapted from the database of 16S Ribosomal RNAs.<h4>Availability and implementation</h4>Our source code and data used in this article is available at https://github.com/shanry/SAMFEO.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btad252"
+  },
+  {
+    "id": "10.1093/bioinformatics/btad204",
+    "title": "COmic: convolutional kernel networks for interpretable end-to-end learning on (multi-)omics data",
+    "authors": [
+      "Ditz JC",
+      "Reuter B",
+      "Pfeifer N"
+    ],
+    "abstract": "<h4>Motivation</h4>The size of available omics datasets is steadily increasing with technological advancement in recent years. While this increase in sample size can be used to improve the performance of relevant prediction tasks in healthcare, models that are optimized for large datasets usually operate as black boxes. In high-stakes scenarios, like healthcare, using a black-box model poses safety and security issues. Without an explanation about molecular factors and phenotypes that affected the prediction, healthcare providers are left with no choice but to blindly trust the models. We propose a new type of artificial neural network, named Convolutional Omics Kernel Network (COmic). By combining convolutional kernel networks with pathway-induced kernels, our method enables robust and interpretable end-to-end learning on omics datasets ranging in size from a few hundred to several hundreds of thousands of samples. Furthermore, COmic can be easily adapted to utilize multiomics data.<h4>Results</h4>We evaluated the performance capabilities of COmic on six different breast cancer cohorts. Additionally, we trained COmic models on multiomics data using the METABRIC cohort. Our models performed either better or similar to competitors on both tasks. We show how the use of pathway-induced Laplacian kernels opens the black-box nature of neural networks and results in intrinsically interpretable models that eliminate the need for post hoc explanation models.<h4>Availability and implementation</h4>Datasets, labels, and pathway-induced graph Laplacians used for the single-omics tasks can be downloaded at https://ibm.ent.box.com/s/ac2ilhyn7xjj27r0xiwtom4crccuobst/folder/48027287036. While datasets and graph Laplacians for the METABRIC cohort can be downloaded from the above mentioned repository, the labels have to be downloaded from cBioPortal at https://www.cbioportal.org/study/clinicalData?id=brca\\_metabric. COmic source code as well as all scripts necessary to reproduce the experiments and analysis are publicly available at https://github.com/jditz/comics.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btad204"
+  },
+  {
+    "id": "10.1093/bioinformatics/btad263",
+    "title": "Phylogenetic diversity statistics for all clades in a phylogeny",
+    "authors": [
+      "Grover S",
+      "Markin A",
+      "Anderson TK",
+      "Eulenstein O"
+    ],
+    "abstract": "The classic quantitative measure of phylogenetic diversity (PD) has been used to address problems in conservation biology, microbial ecology, and evolutionary biology. PD is the minimum total length of the branches in a phylogeny required to cover a specified set of taxa on the phylogeny. A general goal in the application of PD has been identifying a set of taxa of size k that maximize PD on a given phylogeny; this has been mirrored in active research to develop efficient algorithms for the problem. Other descriptive statistics, such as the minimum PD, average PD, and standard deviation of PD, can provide invaluable insight into the distribution of PD across a phylogeny (relative to a fixed value of k). However, there has been limited or no research on computing these statistics, especially when required for each clade in a phylogeny, enabling direct comparisons of PD between clades. We introduce efficient algorithms for computing PD and the associated descriptive statistics for a given phylogeny and each of its clades. In simulation studies, we demonstrate the ability of our algorithms to analyze large-scale phylogenies with applications in ecology and evolutionary biology. The software is available at https://github.com/flu-crew/PD_stats.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btad263"
+  },
+  {
+    "id": "10.1093/bioinformatics/btad264",
+    "title": "isONform: reference-free transcriptome reconstruction from Oxford Nanopore data",
+    "authors": [
+      "Petri AJ",
+      "Sahlin K"
+    ],
+    "abstract": "<h4>Motivation</h4>With advances in long-read transcriptome sequencing, we can now fully sequence transcripts, which greatly improves our ability to study transcription processes. A popular long-read transcriptome sequencing technique is Oxford Nanopore Technologies (ONT), which through its cost-effective sequencing and high throughput, has the potential to characterize the transcriptome in a cell. However, due to transcript variability and sequencing errors, long cDNA reads need substantial bioinformatic processing to produce a set of isoform predictions from the reads. Several genome and annotation-based methods exist to produce transcript predictions. However, such methods require high-quality genomes and annotations and are limited by the accuracy of long-read splice aligners. In addition, gene families with high heterogeneity may not be well represented by a reference genome and would benefit from reference-free analysis. Reference-free methods to predict transcripts from ONT, such as RATTLE, exist, but their sensitivity is not comparable to reference-based approaches.<h4>Results</h4>We present isONform, a high-sensitivity algorithm to construct isoforms from ONT cDNA sequencing data. The algorithm is based on iterative bubble popping on gene graphs built from fuzzy seeds from the reads. Using simulated, synthetic, and biological ONT cDNA data, we show that isONform has substantially higher sensitivity than RATTLE albeit with some loss in precision. On biological data, we show that isONform's predictions have substantially higher consistency with the annotation-based method StringTie2 compared with RATTLE. We believe isONform can be used both for isoform construction for organisms without well-annotated genomes and as an orthogonal method to verify predictions of reference-based methods.<h4>Availability and implementation</h4>https://github.com/aljpetri/isONform.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btad264"
+  },
+  {
+    "id": "10.1093/bioinformatics/btad203",
+    "title": "A gated graph transformer for protein complex structure quality assessment and its performance in CASP15",
+    "authors": [
+      "Chen X",
+      "Morehead A",
+      "Liu J",
+      "Cheng J"
+    ],
+    "abstract": "<h4>Motivation</h4>Proteins interact to form complexes to carry out essential biological functions. Computational methods such as AlphaFold-multimer have been developed to predict the quaternary structures of protein complexes. An important yet largely unsolved challenge in protein complex structure prediction is to accurately estimate the quality of predicted protein complex structures without any knowledge of the corresponding native structures. Such estimations can then be used to select high-quality predicted complex structures to facilitate biomedical research such as protein function analysis and drug discovery.<h4>Results</h4>In this work, we introduce a new gated neighborhood-modulating graph transformer to predict the quality of 3D protein complex structures. It incorporates node and edge gates within a graph transformer framework to control information flow during graph message passing. We trained, evaluated and tested the method (called DProQA) on newly-curated protein complex datasets before the 15th Critical Assessment of Techniques for Protein Structure Prediction (CASP15) and then blindly tested it in the 2022 CASP15 experiment. The method was ranked 3rd among the single-model quality assessment methods in CASP15 in terms of the ranking loss of TM-score on 36 complex targets. The rigorous internal and external experiments demonstrate that DProQA is effective in ranking protein complex structures.<h4>Availability and implementation</h4>The source code, data, and pre-trained models are available at https://github.com/jianlin-cheng/DProQA.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btad203"
+  },
+  {
+    "id": "10.1093/bioinformatics/btad232",
+    "title": "AttOmics: attention-based architecture for diagnosis and prognosis from omics data",
+    "authors": [
+      "Beaude A",
+      "Rafiee Vahid M",
+      "Augé F",
+      "Zehraoui F",
+      "Hanczar B"
+    ],
+    "abstract": "<h4>Motivation</h4>The increasing availability of high-throughput omics data allows for considering a new medicine centered on individual patients. Precision medicine relies on exploiting these high-throughput data with machine-learning models, especially the ones based on deep-learning approaches, to improve diagnosis. Due to the high-dimensional small-sample nature of omics data, current deep-learning models end up with many parameters and have to be fitted with a limited training set. Furthermore, interactions between molecular entities inside an omics profile are not patient specific but are the same for all patients.<h4>Results</h4>In this article, we propose AttOmics, a new deep-learning architecture based on the self-attention mechanism. First, we decompose each omics profile into a set of groups, where each group contains related features. Then, by applying the self-attention mechanism to the set of groups, we can capture the different interactions specific to a patient. The results of different experiments carried out in this article show that our model can accurately predict the phenotype of a patient with fewer parameters than deep neural networks. Visualizing the attention maps can provide new insights into the essential groups for a particular phenotype.<h4>Availability and implementation</h4>The code and data are available at https://forge.ibisc.univ-evry.fr/abeaude/AttOmics. TCGA data can be downloaded from the Genomic Data Commons Data Portal.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btad232"
+  },
+  {
+    "id": "10.1093/bioinformatics/btad253",
+    "title": "Robust reconstruction of single-cell RNA-seq data with iterative gene weight updates",
+    "authors": [
+      "Sheng Y",
+      "Barak B",
+      "Nitzan M"
+    ],
+    "abstract": "<h4>Motivation</h4>Single-cell RNA-sequencing technologies have greatly enhanced our understanding of heterogeneous cell populations and underlying regulatory processes. However, structural (spatial or temporal) relations between cells are lost during cell dissociation. These relations are crucial for identifying associated biological processes. Many existing tissue-reconstruction algorithms use prior information about subsets of genes that are informative with respect to the structure or process to be reconstructed. When such information is not available, and in the general case when the input genes code for multiple processes, including being susceptible to noise, biological reconstruction is often computationally challenging.<h4>Results</h4>We propose an algorithm that iteratively identifies manifold-informative genes using existing reconstruction algorithms for single-cell RNA-seq data as subroutine. We show that our algorithm improves the quality of tissue reconstruction for diverse synthetic and real scRNA-seq data, including data from the mammalian intestinal epithelium and liver lobules.<h4>Availability and implementation</h4>The code and data for benchmarking are available at github.com/syq2012/iterative_weight_update_for_reconstruction.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btad253"
+  },
+  {
+    "id": "10.1093/bioinformatics/btad221",
+    "title": "Phylogenomic branch length estimation using quartets",
+    "authors": [
+      "Tabatabaee Y",
+      "Zhang C",
+      "Warnow T",
+      "Mirarab S"
+    ],
+    "abstract": "<h4>Motivation</h4>Branch lengths and topology of a species tree are essential in most downstream analyses, including estimation of diversification dates, characterization of selection, understanding adaptation, and comparative genomics. Modern phylogenomic analyses often use methods that account for the heterogeneity of evolutionary histories across the genome due to processes such as incomplete lineage sorting. However, these methods typically do not generate branch lengths in units that are usable by downstream applications, forcing phylogenomic analyses to resort to alternative shortcuts such as estimating branch lengths by concatenating gene alignments into a supermatrix. Yet, concatenation and other available approaches for estimating branch lengths fail to address heterogeneity across the genome.<h4>Results</h4>In this article, we derive expected values of gene tree branch lengths in substitution units under an extension of the multispecies coalescent (MSC) model that allows substitutions with varying rates across the species tree. We present CASTLES, a new technique for estimating branch lengths on the species tree from estimated gene trees that uses these expected values, and our study shows that CASTLES improves on the most accurate prior methods with respect to both speed and accuracy.<h4>Availability and implementation</h4>CASTLES is available at https://github.com/ytabatabaee/CASTLES.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btad221"
+  },
+  {
+    "id": "10.1093/bioinformatics/btad208",
+    "title": "Combining protein sequences and structures with transformers and equivariant graph neural networks to predict protein function",
+    "authors": [
+      "Boadu F",
+      "Cao H",
+      "Cheng J"
+    ],
+    "abstract": "<h4>Motivation</h4>Millions of protein sequences have been generated by numerous genome and transcriptome sequencing projects. However, experimentally determining the function of the proteins is still a time consuming, low-throughput, and expensive process, leading to a large protein sequence-function gap. Therefore, it is important to develop computational methods to accurately predict protein function to fill the gap. Even though many methods have been developed to use protein sequences as input to predict function, much fewer methods leverage protein structures in protein function prediction because there was lack of accurate protein structures for most proteins until recently.<h4>Results</h4>We developed TransFun-a method using a transformer-based protein language model and 3D-equivariant graph neural networks to distill information from both protein sequences and structures to predict protein function. It extracts feature embeddings from protein sequences using a pre-trained protein language model (ESM) via transfer learning and combines them with 3D structures of proteins predicted by AlphaFold2 through equivariant graph neural networks. Benchmarked on the CAFA3 test dataset and a new test dataset, TransFun outperforms several state-of-the-art methods, indicating that the language model and 3D-equivariant graph neural networks are effective methods to leverage protein sequences and structures to improve protein function prediction. Combining TransFun predictions and sequence similarity-based predictions can further increase prediction accuracy.<h4>Availability and implementation</h4>The source code of TransFun is available at https://github.com/jianlin-cheng/TransFun.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btad208"
+  },
+  {
+    "id": "10.1093/bioinformatics/btad218",
+    "title": "Seeding with minimized subsequence",
+    "authors": [
+      "Li X",
+      "Shi Q",
+      "Chen K",
+      "Shao M"
+    ],
+    "abstract": "<h4>Motivation</h4>Modern methods for computation-intensive tasks in sequence analysis (e.g. read mapping, sequence alignment, genome assembly, etc.) often first transform each sequence into a list of short, regular-length seeds so that compact data structures and efficient algorithms can be employed to handle the ever-growing large-scale data. Seeding methods using kmers (substrings of length k) have gained tremendous success in processing sequencing data with low mutation/error rates. However, they are much less effective for sequencing data with high error rates as kmers cannot tolerate errors.<h4>Results</h4>We propose SubseqHash, a strategy that uses subsequences, rather than substrings, as seeds. Formally, SubseqHash maps a string of length n to its smallest subsequence of length k, k < n, according to a given order overall length-k strings. Finding the smallest subsequence of a string by enumeration is impractical as the number of subsequences grows exponentially. To overcome this barrier, we propose a novel algorithmic framework that consists of a specifically designed order (termed ABC order) and an algorithm that computes the minimized subsequence under an ABC order in polynomial time. We first show that the ABC order exhibits the desired property and the probability of hash collision using the ABC order is close to the Jaccard index. We then show that SubseqHash overwhelmingly outperforms the substring-based seeding methods in producing high-quality seed-matches for three critical applications: read mapping, sequence alignment, and overlap detection. SubseqHash presents a major algorithmic breakthrough for tackling the high error rates and we expect it to be widely adapted for long-reads analysis.<h4>Availability and implementation</h4>SubseqHash is freely available at https://github.com/Shao-Group/subseqhash.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btad218"
+  },
+  {
+    "id": "10.1093/bioinformatics/btad249",
+    "title": "PPAD: a deep learning architecture to predict progression of Alzheimer's disease",
+    "authors": [
+      "Al Olaimat M",
+      "Martinez J",
+      "Saeed F",
+      "Bozdag S"
+    ],
+    "abstract": "<h4>Motivation</h4>Alzheimer's disease (AD) is a neurodegenerative disease that affects millions of people worldwide. Mild cognitive impairment (MCI) is an intermediary stage between cognitively normal state and AD. Not all people who have MCI convert to AD. The diagnosis of AD is made after significant symptoms of dementia such as short-term memory loss are already present. Since AD is currently an irreversible disease, diagnosis at the onset of the disease brings a huge burden on patients, their caregivers, and the healthcare sector. Thus, there is a crucial need to develop methods for the early prediction AD for patients who have MCI. Recurrent neural networks (RNN) have been successfully used to handle electronic health records (EHR) for predicting conversion from MCI to AD. However, RNN ignores irregular time intervals between successive events which occurs common in electronic health record data. In this study, we propose two deep learning architectures based on RNN, namely Predicting Progression of Alzheimer's Disease (PPAD) and PPAD-Autoencoder. PPAD and PPAD-Autoencoder are designed for early predicting conversion from MCI to AD at the next visit and multiple visits ahead for patients, respectively. To minimize the effect of the irregular time intervals between visits, we propose using age in each visit as an indicator of time change between successive visits.<h4>Results</h4>Our experimental results conducted on Alzheimer's Disease Neuroimaging Initiative and National Alzheimer's Coordinating Center datasets showed that our proposed models outperformed all baseline models for most prediction scenarios in terms of F2 and sensitivity. We also observed that the age feature was one of top features and was able to address irregular time interval problem.<h4>Availability and implementation</h4>https://github.com/bozdaglab/PPAD.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btad249"
+  },
+  {
+    "id": "10.1093/bioinformatics/btad266",
+    "title": "Reference panel-guided super-resolution inference of Hi-C data",
+    "authors": [
+      "Zhang Y",
+      "Blanchette M"
+    ],
+    "abstract": "<h4>Motivation</h4>Accurately assessing contacts between DNA fragments inside the nucleus with Hi-C experiment is crucial for understanding the role of 3D genome organization in gene regulation. This challenging task is due in part to the high sequencing depth of Hi-C libraries required to support high-resolution analyses. Most existing Hi-C data are collected with limited sequencing coverage, leading to poor chromatin interaction frequency estimation. Current computational approaches to enhance Hi-C signals focus on the analysis of individual Hi-C datasets of interest, without taking advantage of the facts that (i) several hundred Hi-C contact maps are publicly available and (ii) the vast majority of local spatial organizations are conserved across multiple cell types.<h4>Results</h4>Here, we present RefHiC-SR, an attention-based deep learning framework that uses a reference panel of Hi-C datasets to facilitate the enhancement of Hi-C data resolution of a given study sample. We compare RefHiC-SR against tools that do not use reference samples and find that RefHiC-SR outperforms other programs across different cell types, and sequencing depths. It also enables high-accuracy mapping of structures such as loops and topologically associating domains.<h4>Availability and implementation</h4>https://github.com/BlanchetteLab/RefHiC.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btad266"
+  },
+  {
+    "id": "10.1093/bioinformatics/btad230",
+    "title": "A weighted distance-based approach for deriving consensus tumor evolutionary trees",
+    "authors": [
+      "Guang Z",
+      "Smith-Erb M",
+      "Oesper L"
+    ],
+    "abstract": "<h4>Motivation</h4>The acquisition of somatic mutations by a tumor can be modeled by a type of evolutionary tree. However, it is impossible to observe this tree directly. Instead, numerous algorithms have been developed to infer such a tree from different types of sequencing data. But such methods can produce conflicting trees for the same patient, making it desirable to have approaches that can combine several such tumor trees into a consensus or summary tree. We introduce The Weighted m-Tumor Tree Consensus Problem (W-m-TTCP) to find a consensus tree among multiple plausible tumor evolutionary histories, each assigned a confidence weight, given a specific distance measure between tumor trees. We present an algorithm called TuELiP that is based on integer linear programming which solves the W-m-TTCP, and unlike other existing consensus methods, allows the input trees to be weighted differently.<h4>Results</h4>On simulated data we show that TuELiP outperforms two existing methods at correctly identifying the true underlying tree used to create the simulations. We also show that the incorporation of weights can lead to more accurate tree inference. On a Triple-Negative Breast Cancer dataset, we show that including confidence weights can have important impacts on the consensus tree identified.<h4>Availability</h4>An implementation of TuELiP and simulated datasets are available at https://bitbucket.org/oesperlab/consensus-ilp/src/main/.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btad230"
+  },
+  {
+    "id": "10.1093/bioinformatics/btad239",
+    "title": "GAN-based data augmentation for transcriptomics: survey and comparative assessment",
+    "authors": [
+      "Lacan A",
+      "Sebag M",
+      "Hanczar B"
+    ],
+    "abstract": "<h4>Motivation</h4>Transcriptomics data are becoming more accessible due to high-throughput and less costly sequencing methods. However, data scarcity prevents exploiting deep learning models' full predictive power for phenotypes prediction. Artificially enhancing the training sets, namely data augmentation, is suggested as a regularization strategy. Data augmentation corresponds to label-invariant transformations of the training set (e.g. geometric transformations on images and syntax parsing on text data). Such transformations are, unfortunately, unknown in the transcriptomic field. Therefore, deep generative models such as generative adversarial networks (GANs) have been proposed to generate additional samples. In this article, we analyze GAN-based data augmentation strategies with respect to performance indicators and the classification of cancer phenotypes.<h4>Results</h4>This work highlights a significant boost in binary and multiclass classification performances due to augmentation strategies. Without augmentation, training a classifier on only 50 RNA-seq samples yields an accuracy of, respectively, 94% and 70% for binary and tissue classification. In comparison, we achieved 98% and 94% of accuracy when adding 1000 augmented samples. Richer architectures and more expensive training of the GAN return better augmentation performances and generated data quality overall. Further analysis of the generated data shows that several performance indicators are needed to assess its quality correctly.<h4>Availability and implementation</h4>All data used for this research are publicly available and comes from The Cancer Genome Atlas. Reproducible code is available on the GitLab repository: https://forge.ibisc.univ-evry.fr/alacan/GANs-for-transcriptomics.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btad239"
+  },
+  {
+    "id": "10.1093/bioinformatics/btad274",
+    "title": "Privacy preserving identification of population stratification for collaborative genomic research",
+    "authors": [
+      "Dervishi L",
+      "Li W",
+      "Halimi A",
+      "Jiang X",
+      "Vaidya J",
+      "Ayday E"
+    ],
+    "abstract": "The rapid improvements in genomic sequencing technology have led to the proliferation of locally collected genomic datasets. Given the sensitivity of genomic data, it is crucial to conduct collaborative studies while preserving the privacy of the individuals. However, before starting any collaborative research effort, the quality of the data needs to be assessed. One of the essential steps of the quality control process is population stratification: identifying the presence of genetic difference in individuals due to subpopulations. One of the common methods used to group genomes of individuals based on ancestry is principal component analysis (PCA). In this article, we propose a privacy-preserving framework which utilizes PCA to assign individuals to populations across multiple collaborators as part of the population stratification step. In our proposed client-server-based scheme, we initially let the server train a global PCA model on a publicly available genomic dataset which contains individuals from multiple populations. The global PCA model is later used to reduce the dimensionality of the local data by each collaborator (client). After adding noise to achieve local differential privacy (LDP), the collaborators send metadata (in the form of their local PCA outputs) about their research datasets to the server, which then aligns the local PCA results to identify the genetic differences among collaborators' datasets. Our results on real genomic data show that the proposed framework can perform population stratification analysis with high accuracy while preserving the privacy of the research participants.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btad274"
+  },
+  {
+    "id": "10.1093/bioinformatics/btad269",
+    "title": "CLARIFY: cell-cell interaction and gene regulatory network refinement from spatially resolved transcriptomics",
+    "authors": [
+      "Bafna M",
+      "Li H",
+      "Zhang X"
+    ],
+    "abstract": "<h4>Motivation</h4>Gene regulatory networks (GRNs) in a cell provide the tight feedback needed to synchronize cell actions. However, genes in a cell also take input from, and provide signals to other neighboring cells. These cell-cell interactions (CCIs) and the GRNs deeply influence each other. Many computational methods have been developed for GRN inference in cells. More recently, methods were proposed to infer CCIs using single cell gene expression data with or without cell spatial location information. However, in reality, the two processes do not exist in isolation and are subject to spatial constraints. Despite this rationale, no methods currently exist to infer GRNs and CCIs using the same model.<h4>Results</h4>We propose CLARIFY, a tool that takes GRNs as input, uses them and spatially resolved gene expression data to infer CCIs, while simultaneously outputting refined cell-specific GRNs. CLARIFY uses a novel multi-level graph autoencoder, which mimics cellular networks at a higher level and cell-specific GRNs at a deeper level. We applied CLARIFY to two real spatial transcriptomic datasets, one using seqFISH and the other using MERFISH, and also tested on simulated datasets from scMultiSim. We compared the quality of predicted GRNs and CCIs with state-of-the-art baseline methods that inferred either only GRNs or only CCIs. The results show that CLARIFY consistently outperforms the baseline in terms of commonly used evaluation metrics. Our results point to the importance of co-inference of CCIs and GRNs and to the use of layered graph neural networks as an inference tool for biological networks.<h4>Availability and implementation</h4>The source code and data is available at https://github.com/MihirBafna/CLARIFY.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btad269"
+  },
+  {
+    "id": "10.1093/bioinformatics/btad240",
+    "title": "SynBa: improved estimation of drug combination synergies with uncertainty quantification",
+    "authors": [
+      "Zhang H",
+      "Ek CH",
+      "Rattray M",
+      "Milo M"
+    ],
+    "abstract": "<h4>Motivation</h4>There exists a range of different quantification frameworks to estimate the synergistic effect of drug combinations. The diversity and disagreement in estimates make it challenging to determine which combinations from a large drug screening should be proceeded with. Furthermore, the lack of accurate uncertainty quantification for those estimates precludes the choice of optimal drug combinations based on the most favourable synergistic effect.<h4>Results</h4>In this work, we propose SynBa, a flexible Bayesian approach to estimate the uncertainty of the synergistic efficacy and potency of drug combinations, so that actionable decisions can be derived from the model outputs. The actionability is enabled by incorporating the Hill equation into SynBa, so that the parameters representing the potency and the efficacy can be preserved. Existing knowledge may be conveniently inserted due to the flexibility of the prior, as shown by the empirical Beta prior defined for the normalized maximal inhibition. Through experiments on large combination screenings and comparison against benchmark methods, we show that SynBa provides improved accuracy of dose-response predictions and better-calibrated uncertainty estimation for the parameters and the predictions.<h4>Availability and implementation</h4>The code for SynBa is available at https://github.com/HaotingZhang1/SynBa. The datasets are publicly available (DOI of DREAM: 10.7303/syn4231880; DOI of the NCI-ALMANAC subset: 10.5281/zenodo.4135059).",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btad240"
+  },
+  {
+    "id": "10.1093/bioinformatics/btad234",
+    "title": "Transfer learning for drug-target interaction prediction",
+    "authors": [
+      "Dalkıran A",
+      "Atakan A",
+      "Rifaioğlu AS",
+      "Martin MJ",
+      "Atalay RÇ",
+      "Acar AC",
+      "Doğan T",
+      "Atalay V"
+    ],
+    "abstract": "<h4>Motivation</h4>Utilizing AI-driven approaches for drug-target interaction (DTI) prediction require large volumes of training data which are not available for the majority of target proteins. In this study, we investigate the use of deep transfer learning for the prediction of interactions between drug candidate compounds and understudied target proteins with scarce training data. The idea here is to first train a deep neural network classifier with a generalized source training dataset of large size and then to reuse this pre-trained neural network as an initial configuration for re-training/fine-tuning purposes with a small-sized specialized target training dataset. To explore this idea, we selected six protein families that have critical importance in biomedicine: kinases, G-protein-coupled receptors (GPCRs), ion channels, nuclear receptors, proteases, and transporters. In two independent experiments, the protein families of transporters and nuclear receptors were individually set as the target datasets, while the remaining five families were used as the source datasets. Several size-based target family training datasets were formed in a controlled manner to assess the benefit provided by the transfer learning approach.<h4>Results</h4>Here, we present a systematic evaluation of our approach by pre-training a feed-forward neural network with source training datasets and applying different modes of transfer learning from the pre-trained source network to a target dataset. The performance of deep transfer learning is evaluated and compared with that of training the same deep neural network from scratch. We found that when the training dataset contains fewer than 100 compounds, transfer learning outperforms the conventional strategy of training the system from scratch, suggesting that transfer learning is advantageous for predicting binders to under-studied targets.<h4>Availability and implementation</h4>The source code and datasets are available at https://github.com/cansyl/TransferLearning4DTI. Our web-based service containing the ready-to-use pre-trained models is accessible at https://tl4dti.kansil.org.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btad234"
+  },
+  {
+    "id": "10.1093/bioinformatics/btad236",
+    "title": "Bakdrive: identifying a minimum set of bacterial species driving interactions across multiple microbial communities",
+    "authors": [
+      "Wang Q",
+      "Nute M",
+      "Treangen TJ"
+    ],
+    "abstract": "<h4>Motivation</h4>Interactions among microbes within microbial communities have been shown to play crucial roles in human health. In spite of recent progress, low-level knowledge of bacteria driving microbial interactions within microbiomes remains unknown, limiting our ability to fully decipher and control microbial communities.<h4>Results</h4>We present a novel approach for identifying species driving interactions within microbiomes. Bakdrive infers ecological networks of given metagenomic sequencing samples and identifies minimum sets of driver species (MDS) using control theory. Bakdrive has three key innovations in this space: (i) it leverages inherent information from metagenomic sequencing samples to identify driver species, (ii) it explicitly takes host-specific variation into consideration, and (iii) it does not require a known ecological network. In extensive simulated data, we demonstrate identifying driver species identified from healthy donor samples and introducing them to the disease samples, we can restore the gut microbiome in recurrent Clostridioides difficile (rCDI) infection patients to a healthy state. We also applied Bakdrive to two real datasets, rCDI and Crohn's disease patients, uncovering driver species consistent with previous work. Bakdrive represents a novel approach for capturing microbial interactions.<h4>Availability and implementation</h4>Bakdrive is open-source and available at: https://gitlab.com/treangenlab/bakdrive.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btad236"
+  },
+  {
+    "id": "10.1093/bioinformatics/btad267",
+    "title": "scKINETICS: inference of regulatory velocity with single-cell transcriptomics data",
+    "authors": [
+      "Burdziak C",
+      "Zhao CJ",
+      "Haviv D",
+      "Alonso-Curbelo D",
+      "Lowe SW",
+      "Pe'er D"
+    ],
+    "abstract": "<h4>Motivation</h4>Transcriptional dynamics are governed by the action of regulatory proteins and are fundamental to systems ranging from normal development to disease. RNA velocity methods for tracking phenotypic dynamics ignore information on the regulatory drivers of gene expression variability through time.<h4>Results</h4>We introduce scKINETICS (Key regulatory Interaction NETwork for Inferring Cell Speed), a dynamical model of gene expression change which is fit with the simultaneous learning of per-cell transcriptional velocities and a governing gene regulatory network. Fitting is accomplished through an expectation-maximization approach designed to learn the impact of each regulator on its target genes, leveraging biologically motivated priors from epigenetic data, gene-gene coexpression, and constraints on cells' future states imposed by the phenotypic manifold. Applying this approach to an acute pancreatitis dataset recapitulates a well-studied axis of acinar-to-ductal transdifferentiation whilst proposing novel regulators of this process, including factors with previously appreciated roles in driving pancreatic tumorigenesis. In benchmarking experiments, we show that scKINETICS successfully extends and improves existing velocity approaches to generate interpretable, mechanistic models of gene regulatory dynamics.<h4>Availability and implementation</h4>All python code and an accompanying Jupyter notebook with demonstrations are available at http://github.com/dpeerlab/scKINETICS.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btad267"
+  },
+  {
+    "id": "10.1093/bioinformatics/btad228",
+    "title": "TSignal: a transformer model for signal peptide prediction",
+    "authors": [
+      "Dumitrescu A",
+      "Jokinen E",
+      "Paatero A",
+      "Kellosalo J",
+      "Paavilainen VO",
+      "Lähdesmäki H"
+    ],
+    "abstract": "<h4>Motivation</h4>Signal peptides (SPs) are short amino acid segments present at the N-terminus of newly synthesized proteins that facilitate protein translocation into the lumen of the endoplasmic reticulum, after which they are cleaved off. Specific regions of SPs influence the efficiency of protein translocation, and small changes in their primary structure can abolish protein secretion altogether. The lack of conserved motifs across SPs, sensitivity to mutations, and variability in the length of the peptides make SP prediction a challenging task that has been extensively pursued over the years.<h4>Results</h4>We introduce TSignal, a deep transformer-based neural network architecture that utilizes BERT language models and dot-product attention techniques. TSignal predicts the presence of SPs and the cleavage site between the SP and the translocated mature protein. We use common benchmark datasets and show competitive accuracy in terms of SP presence prediction and state-of-the-art accuracy in terms of cleavage site prediction for most of the SP types and organism groups. We further illustrate that our fully data-driven trained model identifies useful biological information on heterogeneous test sequences.<h4>Availability and implementation</h4>TSignal is available at: https://github.com/Dumitrescu-Alexandru/TSignal.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btad228"
+  },
+  {
     "id": "10.1093/bioinformatics/btad238",
     "title": "Finding phylogeny-aware and biologically meaningful averages of metagenomic samples: L2UniFrac",
     "authors": [
@@ -627,147 +768,6 @@
     "conference": "ismb",
     "year": 2023,
     "paper_url": "https://doi.org/10.1093/bioinformatics/btad229"
-  },
-  {
-    "id": "10.1093/bioinformatics/btad230",
-    "title": "A weighted distance-based approach for deriving consensus tumor evolutionary trees",
-    "authors": [
-      "Guang Z",
-      "Smith-Erb M",
-      "Oesper L"
-    ],
-    "abstract": "<h4>Motivation</h4>The acquisition of somatic mutations by a tumor can be modeled by a type of evolutionary tree. However, it is impossible to observe this tree directly. Instead, numerous algorithms have been developed to infer such a tree from different types of sequencing data. But such methods can produce conflicting trees for the same patient, making it desirable to have approaches that can combine several such tumor trees into a consensus or summary tree. We introduce The Weighted m-Tumor Tree Consensus Problem (W-m-TTCP) to find a consensus tree among multiple plausible tumor evolutionary histories, each assigned a confidence weight, given a specific distance measure between tumor trees. We present an algorithm called TuELiP that is based on integer linear programming which solves the W-m-TTCP, and unlike other existing consensus methods, allows the input trees to be weighted differently.<h4>Results</h4>On simulated data we show that TuELiP outperforms two existing methods at correctly identifying the true underlying tree used to create the simulations. We also show that the incorporation of weights can lead to more accurate tree inference. On a Triple-Negative Breast Cancer dataset, we show that including confidence weights can have important impacts on the consensus tree identified.<h4>Availability</h4>An implementation of TuELiP and simulated datasets are available at https://bitbucket.org/oesperlab/consensus-ilp/src/main/.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btad230"
-  },
-  {
-    "id": "10.1093/bioinformatics/btad239",
-    "title": "GAN-based data augmentation for transcriptomics: survey and comparative assessment",
-    "authors": [
-      "Lacan A",
-      "Sebag M",
-      "Hanczar B"
-    ],
-    "abstract": "<h4>Motivation</h4>Transcriptomics data are becoming more accessible due to high-throughput and less costly sequencing methods. However, data scarcity prevents exploiting deep learning models' full predictive power for phenotypes prediction. Artificially enhancing the training sets, namely data augmentation, is suggested as a regularization strategy. Data augmentation corresponds to label-invariant transformations of the training set (e.g. geometric transformations on images and syntax parsing on text data). Such transformations are, unfortunately, unknown in the transcriptomic field. Therefore, deep generative models such as generative adversarial networks (GANs) have been proposed to generate additional samples. In this article, we analyze GAN-based data augmentation strategies with respect to performance indicators and the classification of cancer phenotypes.<h4>Results</h4>This work highlights a significant boost in binary and multiclass classification performances due to augmentation strategies. Without augmentation, training a classifier on only 50 RNA-seq samples yields an accuracy of, respectively, 94% and 70% for binary and tissue classification. In comparison, we achieved 98% and 94% of accuracy when adding 1000 augmented samples. Richer architectures and more expensive training of the GAN return better augmentation performances and generated data quality overall. Further analysis of the generated data shows that several performance indicators are needed to assess its quality correctly.<h4>Availability and implementation</h4>All data used for this research are publicly available and comes from The Cancer Genome Atlas. Reproducible code is available on the GitLab repository: https://forge.ibisc.univ-evry.fr/alacan/GANs-for-transcriptomics.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btad239"
-  },
-  {
-    "id": "10.1093/bioinformatics/btad274",
-    "title": "Privacy preserving identification of population stratification for collaborative genomic research",
-    "authors": [
-      "Dervishi L",
-      "Li W",
-      "Halimi A",
-      "Jiang X",
-      "Vaidya J",
-      "Ayday E"
-    ],
-    "abstract": "The rapid improvements in genomic sequencing technology have led to the proliferation of locally collected genomic datasets. Given the sensitivity of genomic data, it is crucial to conduct collaborative studies while preserving the privacy of the individuals. However, before starting any collaborative research effort, the quality of the data needs to be assessed. One of the essential steps of the quality control process is population stratification: identifying the presence of genetic difference in individuals due to subpopulations. One of the common methods used to group genomes of individuals based on ancestry is principal component analysis (PCA). In this article, we propose a privacy-preserving framework which utilizes PCA to assign individuals to populations across multiple collaborators as part of the population stratification step. In our proposed client-server-based scheme, we initially let the server train a global PCA model on a publicly available genomic dataset which contains individuals from multiple populations. The global PCA model is later used to reduce the dimensionality of the local data by each collaborator (client). After adding noise to achieve local differential privacy (LDP), the collaborators send metadata (in the form of their local PCA outputs) about their research datasets to the server, which then aligns the local PCA results to identify the genetic differences among collaborators' datasets. Our results on real genomic data show that the proposed framework can perform population stratification analysis with high accuracy while preserving the privacy of the research participants.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btad274"
-  },
-  {
-    "id": "10.1093/bioinformatics/btad269",
-    "title": "CLARIFY: cell-cell interaction and gene regulatory network refinement from spatially resolved transcriptomics",
-    "authors": [
-      "Bafna M",
-      "Li H",
-      "Zhang X"
-    ],
-    "abstract": "<h4>Motivation</h4>Gene regulatory networks (GRNs) in a cell provide the tight feedback needed to synchronize cell actions. However, genes in a cell also take input from, and provide signals to other neighboring cells. These cell-cell interactions (CCIs) and the GRNs deeply influence each other. Many computational methods have been developed for GRN inference in cells. More recently, methods were proposed to infer CCIs using single cell gene expression data with or without cell spatial location information. However, in reality, the two processes do not exist in isolation and are subject to spatial constraints. Despite this rationale, no methods currently exist to infer GRNs and CCIs using the same model.<h4>Results</h4>We propose CLARIFY, a tool that takes GRNs as input, uses them and spatially resolved gene expression data to infer CCIs, while simultaneously outputting refined cell-specific GRNs. CLARIFY uses a novel multi-level graph autoencoder, which mimics cellular networks at a higher level and cell-specific GRNs at a deeper level. We applied CLARIFY to two real spatial transcriptomic datasets, one using seqFISH and the other using MERFISH, and also tested on simulated datasets from scMultiSim. We compared the quality of predicted GRNs and CCIs with state-of-the-art baseline methods that inferred either only GRNs or only CCIs. The results show that CLARIFY consistently outperforms the baseline in terms of commonly used evaluation metrics. Our results point to the importance of co-inference of CCIs and GRNs and to the use of layered graph neural networks as an inference tool for biological networks.<h4>Availability and implementation</h4>The source code and data is available at https://github.com/MihirBafna/CLARIFY.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btad269"
-  },
-  {
-    "id": "10.1093/bioinformatics/btad240",
-    "title": "SynBa: improved estimation of drug combination synergies with uncertainty quantification",
-    "authors": [
-      "Zhang H",
-      "Ek CH",
-      "Rattray M",
-      "Milo M"
-    ],
-    "abstract": "<h4>Motivation</h4>There exists a range of different quantification frameworks to estimate the synergistic effect of drug combinations. The diversity and disagreement in estimates make it challenging to determine which combinations from a large drug screening should be proceeded with. Furthermore, the lack of accurate uncertainty quantification for those estimates precludes the choice of optimal drug combinations based on the most favourable synergistic effect.<h4>Results</h4>In this work, we propose SynBa, a flexible Bayesian approach to estimate the uncertainty of the synergistic efficacy and potency of drug combinations, so that actionable decisions can be derived from the model outputs. The actionability is enabled by incorporating the Hill equation into SynBa, so that the parameters representing the potency and the efficacy can be preserved. Existing knowledge may be conveniently inserted due to the flexibility of the prior, as shown by the empirical Beta prior defined for the normalized maximal inhibition. Through experiments on large combination screenings and comparison against benchmark methods, we show that SynBa provides improved accuracy of dose-response predictions and better-calibrated uncertainty estimation for the parameters and the predictions.<h4>Availability and implementation</h4>The code for SynBa is available at https://github.com/HaotingZhang1/SynBa. The datasets are publicly available (DOI of DREAM: 10.7303/syn4231880; DOI of the NCI-ALMANAC subset: 10.5281/zenodo.4135059).",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btad240"
-  },
-  {
-    "id": "10.1093/bioinformatics/btad234",
-    "title": "Transfer learning for drug-target interaction prediction",
-    "authors": [
-      "Dalkıran A",
-      "Atakan A",
-      "Rifaioğlu AS",
-      "Martin MJ",
-      "Atalay RÇ",
-      "Acar AC",
-      "Doğan T",
-      "Atalay V"
-    ],
-    "abstract": "<h4>Motivation</h4>Utilizing AI-driven approaches for drug-target interaction (DTI) prediction require large volumes of training data which are not available for the majority of target proteins. In this study, we investigate the use of deep transfer learning for the prediction of interactions between drug candidate compounds and understudied target proteins with scarce training data. The idea here is to first train a deep neural network classifier with a generalized source training dataset of large size and then to reuse this pre-trained neural network as an initial configuration for re-training/fine-tuning purposes with a small-sized specialized target training dataset. To explore this idea, we selected six protein families that have critical importance in biomedicine: kinases, G-protein-coupled receptors (GPCRs), ion channels, nuclear receptors, proteases, and transporters. In two independent experiments, the protein families of transporters and nuclear receptors were individually set as the target datasets, while the remaining five families were used as the source datasets. Several size-based target family training datasets were formed in a controlled manner to assess the benefit provided by the transfer learning approach.<h4>Results</h4>Here, we present a systematic evaluation of our approach by pre-training a feed-forward neural network with source training datasets and applying different modes of transfer learning from the pre-trained source network to a target dataset. The performance of deep transfer learning is evaluated and compared with that of training the same deep neural network from scratch. We found that when the training dataset contains fewer than 100 compounds, transfer learning outperforms the conventional strategy of training the system from scratch, suggesting that transfer learning is advantageous for predicting binders to under-studied targets.<h4>Availability and implementation</h4>The source code and datasets are available at https://github.com/cansyl/TransferLearning4DTI. Our web-based service containing the ready-to-use pre-trained models is accessible at https://tl4dti.kansil.org.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btad234"
-  },
-  {
-    "id": "10.1093/bioinformatics/btad236",
-    "title": "Bakdrive: identifying a minimum set of bacterial species driving interactions across multiple microbial communities",
-    "authors": [
-      "Wang Q",
-      "Nute M",
-      "Treangen TJ"
-    ],
-    "abstract": "<h4>Motivation</h4>Interactions among microbes within microbial communities have been shown to play crucial roles in human health. In spite of recent progress, low-level knowledge of bacteria driving microbial interactions within microbiomes remains unknown, limiting our ability to fully decipher and control microbial communities.<h4>Results</h4>We present a novel approach for identifying species driving interactions within microbiomes. Bakdrive infers ecological networks of given metagenomic sequencing samples and identifies minimum sets of driver species (MDS) using control theory. Bakdrive has three key innovations in this space: (i) it leverages inherent information from metagenomic sequencing samples to identify driver species, (ii) it explicitly takes host-specific variation into consideration, and (iii) it does not require a known ecological network. In extensive simulated data, we demonstrate identifying driver species identified from healthy donor samples and introducing them to the disease samples, we can restore the gut microbiome in recurrent Clostridioides difficile (rCDI) infection patients to a healthy state. We also applied Bakdrive to two real datasets, rCDI and Crohn's disease patients, uncovering driver species consistent with previous work. Bakdrive represents a novel approach for capturing microbial interactions.<h4>Availability and implementation</h4>Bakdrive is open-source and available at: https://gitlab.com/treangenlab/bakdrive.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btad236"
-  },
-  {
-    "id": "10.1093/bioinformatics/btad267",
-    "title": "scKINETICS: inference of regulatory velocity with single-cell transcriptomics data",
-    "authors": [
-      "Burdziak C",
-      "Zhao CJ",
-      "Haviv D",
-      "Alonso-Curbelo D",
-      "Lowe SW",
-      "Pe'er D"
-    ],
-    "abstract": "<h4>Motivation</h4>Transcriptional dynamics are governed by the action of regulatory proteins and are fundamental to systems ranging from normal development to disease. RNA velocity methods for tracking phenotypic dynamics ignore information on the regulatory drivers of gene expression variability through time.<h4>Results</h4>We introduce scKINETICS (Key regulatory Interaction NETwork for Inferring Cell Speed), a dynamical model of gene expression change which is fit with the simultaneous learning of per-cell transcriptional velocities and a governing gene regulatory network. Fitting is accomplished through an expectation-maximization approach designed to learn the impact of each regulator on its target genes, leveraging biologically motivated priors from epigenetic data, gene-gene coexpression, and constraints on cells' future states imposed by the phenotypic manifold. Applying this approach to an acute pancreatitis dataset recapitulates a well-studied axis of acinar-to-ductal transdifferentiation whilst proposing novel regulators of this process, including factors with previously appreciated roles in driving pancreatic tumorigenesis. In benchmarking experiments, we show that scKINETICS successfully extends and improves existing velocity approaches to generate interpretable, mechanistic models of gene regulatory dynamics.<h4>Availability and implementation</h4>All python code and an accompanying Jupyter notebook with demonstrations are available at http://github.com/dpeerlab/scKINETICS.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btad267"
-  },
-  {
-    "id": "10.1093/bioinformatics/btad228",
-    "title": "TSignal: a transformer model for signal peptide prediction",
-    "authors": [
-      "Dumitrescu A",
-      "Jokinen E",
-      "Paatero A",
-      "Kellosalo J",
-      "Paavilainen VO",
-      "Lähdesmäki H"
-    ],
-    "abstract": "<h4>Motivation</h4>Signal peptides (SPs) are short amino acid segments present at the N-terminus of newly synthesized proteins that facilitate protein translocation into the lumen of the endoplasmic reticulum, after which they are cleaved off. Specific regions of SPs influence the efficiency of protein translocation, and small changes in their primary structure can abolish protein secretion altogether. The lack of conserved motifs across SPs, sensitivity to mutations, and variability in the length of the peptides make SP prediction a challenging task that has been extensively pursued over the years.<h4>Results</h4>We introduce TSignal, a deep transformer-based neural network architecture that utilizes BERT language models and dot-product attention techniques. TSignal predicts the presence of SPs and the cleavage site between the SP and the translocated mature protein. We use common benchmark datasets and show competitive accuracy in terms of SP presence prediction and state-of-the-art accuracy in terms of cleavage site prediction for most of the SP types and organism groups. We further illustrate that our fully data-driven trained model identifies useful biological information on heterogeneous test sequences.<h4>Availability and implementation</h4>TSignal is available at: https://github.com/Dumitrescu-Alexandru/TSignal.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btad228"
   },
   {
     "id": "10.1093/bioinformatics/btad223",

@@ -12,24 +12,6 @@
     "paper_url": "https://doi.org/10.1145/3779031.3779100"
   },
   {
-    "id": "10.1145/3779031.3779111",
-    "title": "Formalization of a Proof Calculus for Incremental Linearization for Satisfiability Modulo Nonlinear Arithmetic and Transcendental Functions",
-    "authors": [
-      "Tomaz Mascarenhas",
-      "Harun Khan",
-      "Abdalrhman Mohamed",
-      "Andrew Reynolds",
-      "Haniel Barbosa",
-      "Clark Barrett",
-      "Cesare Tinelli"
-    ],
-    "abstract": "Determining the satisfiability of formulas involving nonlinear real arithmetic and transcendental functions is necessary in many applications, such as formally verifying dynamic systems. Doing this automatically generally requires costly and intricate methods, which limits their applicability. In the context of SMT solving, Incremental Linearization was introduced recently to facilitate reasoning on this domain, via an incomplete but easy to implement and highly effective approach. The approach, based on abstraction-refinement via an incremental axiomatization of the nonlinear and transcendental operators, is currently implemented in the SMT solvers MathSAT and cvc5. The cvc5 implementation is also proof-producing. This paper presents two contributions: a formalization in the Lean proof assistant of the proof calculus employed by cvc5, and an extension of the lean-smt plugin to reconstruct the proofs produced by cvc5 using this proof calculus. These contributions ensure the soundness of the proof calculus, making the underlying algorithm more trustworthy. Moreover, they allow users to check cvc5 results obtained via incremental linearization, as well as improve Lean’s automation for problems in nonlinear arithmetic. We discuss how we modeled the rules in the proof assistant and the challenges encountered while formalizing them, as well as the issues in reconstructing proofs involving these rules in Lean, and how we solved them.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2026,
-    "paper_url": "https://doi.org/10.1145/3779031.3779111"
-  },
-  {
     "id": "10.1145/3779031.3779104",
     "title": "Layers of Confluence for Actors",
     "authors": [
@@ -75,47 +57,22 @@
     "paper_url": "https://doi.org/10.1145/3779031.3779097"
   },
   {
-    "id": "10.1145/3779031.3779090",
-    "title": "Can We Formalise Type Theory Intrinsically without Any Compromise? A Case Study in Cubical Agda",
+    "id": "10.1145/3779031.3779111",
+    "title": "Formalization of a Proof Calculus for Incremental Linearization for Satisfiability Modulo Nonlinear Arithmetic and Transcendental Functions",
     "authors": [
-      "Liang-Ting Chen",
-      "Fredrik Nordvall Forsberg",
-      "Tzu-Chun Tsai"
+      "Tomaz Mascarenhas",
+      "Harun Khan",
+      "Abdalrhman Mohamed",
+      "Andrew Reynolds",
+      "Haniel Barbosa",
+      "Clark Barrett",
+      "Cesare Tinelli"
     ],
-    "abstract": "We present an intrinsic representation of type theory in the proof assistant Cubical Agda, inspired by Awodey’s natural models of type theory. The initial natural model is defined as quotient inductive-inductive-recursive types, leading us to a syntax accepted by Cubical Agda without using any transports, postulates, or custom rewrite rules. We formalise some meta-properties such as the standard model, normalisation by evaluation for typed terms, and strictification constructions. Since our formalisation is carried out using Cubical Agda's native support for quotient inductive types, all our constructions compute at a reasonable speed. When we try to develop more sophisticated metatheory, however, the 'transport hell' problem reappears. Ultimately, it remains a considerable struggle to develop the metatheory of type theory using an intrinsic representation that lacks strict equations. The effort required is about the same whether or not the notion of natural model is used.",
+    "abstract": "Determining the satisfiability of formulas involving nonlinear real arithmetic and transcendental functions is necessary in many applications, such as formally verifying dynamic systems. Doing this automatically generally requires costly and intricate methods, which limits their applicability. In the context of SMT solving, Incremental Linearization was introduced recently to facilitate reasoning on this domain, via an incomplete but easy to implement and highly effective approach. The approach, based on abstraction-refinement via an incremental axiomatization of the nonlinear and transcendental operators, is currently implemented in the SMT solvers MathSAT and cvc5. The cvc5 implementation is also proof-producing. This paper presents two contributions: a formalization in the Lean proof assistant of the proof calculus employed by cvc5, and an extension of the lean-smt plugin to reconstruct the proofs produced by cvc5 using this proof calculus. These contributions ensure the soundness of the proof calculus, making the underlying algorithm more trustworthy. Moreover, they allow users to check cvc5 results obtained via incremental linearization, as well as improve Lean’s automation for problems in nonlinear arithmetic. We discuss how we modeled the rules in the proof assistant and the challenges encountered while formalizing them, as well as the issues in reconstructing proofs involving these rules in Lean, and how we solved them.",
     "topic": "",
     "conference": "cpp",
     "year": 2026,
-    "paper_url": "https://doi.org/10.1145/3779031.3779090"
-  },
-  {
-    "id": "10.1145/3779031.3779109",
-    "title": "Modular Specifications and Implementations of Random Samplers in Higher-Order Separation Logic",
-    "authors": [
-      "Virgil Marionneau",
-      "Félix Sassus Bourda",
-      "Alejandro Aguirre",
-      "Lars Birkedal"
-    ],
-    "abstract": "Probabilistic programs have a myriad of applications, from randomized algorithms to statistical modeling, and as such have inspired a long tradition of probabilistic program logics to verify their correctness. One essential use of probabilistic programs is to program new samplers from more primitive samplers, e.g., to generate samples from more complex distributions only given a primitive uniform sampler. Such samplers are an ideal case study for probabilistic program logics, to ensure that they implement the target distributions correctly. But proving correctness is often not enough, one also wants to reason about clients of these samplers, which require their specifications to be expressive and reusable. In this work, we propose a methodology for giving specifications to samplers that are detailed enough to prove that they are correct, and expressive enough to reason about their clients. We propose our methodology for Eris, a recent probabilistic program logic based on the Iris separation logic. We identify what makes the proof rules and reasoning principles for primitive distributions in Eris work, and we distill them into a distribution typeclass. This presents at an abstract level the requirements that a concrete implementation of a target distribution should satisfy, and provides reasoning principles for clients of the interface. Working at this level of abstraction allows us to prove correctness results, as well as to derive additional reasoning principles for all implementations that adhere to the typeclass interface. We instantiate this approach to a variety of samplers for classical distributions, such as binomials, geometrics and beta-binomials.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2026,
-    "paper_url": "https://doi.org/10.1145/3779031.3779109"
-  },
-  {
-    "id": "10.1145/3779031.3779085",
-    "title": "Mechanizing Synthetic Tait Computability in Istari",
-    "authors": [
-      "Runming Li",
-      "Yue Yao",
-      "Robert Harper"
-    ],
-    "abstract": "Categorical gluing is a powerful technique for proving meta-theorems of type theories such as canonicity and normalization. Synthetic Tait Computability (STC) provides an abstract treatment of the complex gluing models by internalizing the gluing category into a modal dependent type theory with a phase distinction. This work presents a mechanization of STC in the Istari proof assistant. Istari is a Martin-L'of-style extensional type theory with equality reflection, which avoids much of the explicit transport reasoning typically found in intensional proof assistants. This work develops a reusable library for synthetic phase distinction, including modalities, extension types, and strict glue types, and applies it to two case studies: (1) a canonicity model for dependent type theory with dependent products and booleans with large elimination, and (2) a Kripke canonicity model for the cost-aware logical framework. Our results demonstrate that the core STC constructions can be formalized essentially verbatim in Istari, preserving the elegance of the on-paper arguments while ensuring machine-checked correctness.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2026,
-    "paper_url": "https://doi.org/10.1145/3779031.3779085"
+    "paper_url": "https://doi.org/10.1145/3779031.3779111"
   },
   {
     "id": "10.1145/3779031.3779088",
@@ -149,6 +106,100 @@
     "paper_url": "https://doi.org/10.1145/3779031.3779106"
   },
   {
+    "id": "10.1145/3779031.3779109",
+    "title": "Modular Specifications and Implementations of Random Samplers in Higher-Order Separation Logic",
+    "authors": [
+      "Virgil Marionneau",
+      "Félix Sassus Bourda",
+      "Alejandro Aguirre",
+      "Lars Birkedal"
+    ],
+    "abstract": "Probabilistic programs have a myriad of applications, from randomized algorithms to statistical modeling, and as such have inspired a long tradition of probabilistic program logics to verify their correctness. One essential use of probabilistic programs is to program new samplers from more primitive samplers, e.g., to generate samples from more complex distributions only given a primitive uniform sampler. Such samplers are an ideal case study for probabilistic program logics, to ensure that they implement the target distributions correctly. But proving correctness is often not enough, one also wants to reason about clients of these samplers, which require their specifications to be expressive and reusable. In this work, we propose a methodology for giving specifications to samplers that are detailed enough to prove that they are correct, and expressive enough to reason about their clients. We propose our methodology for Eris, a recent probabilistic program logic based on the Iris separation logic. We identify what makes the proof rules and reasoning principles for primitive distributions in Eris work, and we distill them into a distribution typeclass. This presents at an abstract level the requirements that a concrete implementation of a target distribution should satisfy, and provides reasoning principles for clients of the interface. Working at this level of abstraction allows us to prove correctness results, as well as to derive additional reasoning principles for all implementations that adhere to the typeclass interface. We instantiate this approach to a variety of samplers for classical distributions, such as binomials, geometrics and beta-binomials.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1145/3779031.3779109"
+  },
+  {
+    "id": "10.1145/3779031.3779085",
+    "title": "Mechanizing Synthetic Tait Computability in Istari",
+    "authors": [
+      "Runming Li",
+      "Yue Yao",
+      "Robert Harper"
+    ],
+    "abstract": "Categorical gluing is a powerful technique for proving meta-theorems of type theories such as canonicity and normalization. Synthetic Tait Computability (STC) provides an abstract treatment of the complex gluing models by internalizing the gluing category into a modal dependent type theory with a phase distinction. This work presents a mechanization of STC in the Istari proof assistant. Istari is a Martin-L'of-style extensional type theory with equality reflection, which avoids much of the explicit transport reasoning typically found in intensional proof assistants. This work develops a reusable library for synthetic phase distinction, including modalities, extension types, and strict glue types, and applies it to two case studies: (1) a canonicity model for dependent type theory with dependent products and booleans with large elimination, and (2) a Kripke canonicity model for the cost-aware logical framework. Our results demonstrate that the core STC constructions can be formalized essentially verbatim in Istari, preserving the elegance of the on-paper arguments while ensuring machine-checked correctness.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1145/3779031.3779085"
+  },
+  {
+    "id": "10.1145/3779031.3779086",
+    "title": "Using Ghost Ownership to Verify Union-Find and Persistent Arrays in Rust",
+    "authors": [
+      "Arnaud Golfouse",
+      "Armaël Guéneau",
+      "Jacques-Henri Jourdan"
+    ],
+    "abstract": "The type system of Rust enforces the “shared xor mutable” principle, which forbids mutation of shared memory. This principle eases verification in Rust, but certain programs require circumventing it with the mechanism of interior mutability. Thus, supporting interior mutability in a deductive verification tool is difficult. The Verus tool demonstrated the use of ghost resources to that end. So far, this mechanism has only been applied to Verus in order to verify primarily system code. We extend the deductive verification tool Creusot with support for linear ghost resources. We show how Creusot’s full support for mutable borrows enables better specifications for primitives of linear ghost code. We apply this methodology to the verification of two data structures using sharing and mutation: union-find and persistent arrays.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1145/3779031.3779086"
+  },
+  {
+    "id": "10.1145/3779031.3779090",
+    "title": "Can We Formalise Type Theory Intrinsically without Any Compromise? A Case Study in Cubical Agda",
+    "authors": [
+      "Liang-Ting Chen",
+      "Fredrik Nordvall Forsberg",
+      "Tzu-Chun Tsai"
+    ],
+    "abstract": "We present an intrinsic representation of type theory in the proof assistant Cubical Agda, inspired by Awodey’s natural models of type theory. The initial natural model is defined as quotient inductive-inductive-recursive types, leading us to a syntax accepted by Cubical Agda without using any transports, postulates, or custom rewrite rules. We formalise some meta-properties such as the standard model, normalisation by evaluation for typed terms, and strictification constructions. Since our formalisation is carried out using Cubical Agda's native support for quotient inductive types, all our constructions compute at a reasonable speed. When we try to develop more sophisticated metatheory, however, the 'transport hell' problem reappears. Ultimately, it remains a considerable struggle to develop the metatheory of type theory using an intrinsic representation that lacks strict equations. The effort required is about the same whether or not the notion of natural model is used.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1145/3779031.3779090"
+  },
+  {
+    "id": "10.1145/3779031.3779093",
+    "title": "A Lambda-Superposition Tactic for Isabelle/HOL",
+    "authors": [
+      "Massin Guerdi"
+    ],
+    "abstract": "This paper introduces slam, an Isabelle/HOL tactic and automated theorem prover based on the λ-superposition calculus. An alternative to Isabelle’s metis tactic, slam targets higher-order logic directly, avoiding the overhead introduced by metis’s translations to first-order logic. Like metis, slam can be used as a Sledgehammer backend to reconstruct proofs produced by external higher-order automated theorem provers such as E, Vampire, and Zipperposition.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1145/3779031.3779093"
+  },
+  {
+    "id": "10.1145/3779031.3779094",
+    "title": "Certified Symbolic Finite Transducers: Formalization and Applications to String Analysis",
+    "authors": [
+      "Shuanglong Kan",
+      "Anthony W. Lin"
+    ],
+    "abstract": "Finite Transducers (FTs) extend the capabilities of Finite Au- tomata (FAs) by enabling the transformation of input strings into output strings. In many practical applications — includ- ing program analysis, string constraint solving, and analysis of security-critical sanitizers — Symbolic FTs (SFTs) and Sym- bolic FAs (SFAs) are used instead of the explicitly represented models. To circumvent to the notorious state-space explosion problem caused by an extremely large alphabet size (e.g. Unicode), SFTs and SFAs allow the representation of the alphabet as an effective boolean algebra including finite unions of intervals, as well as SMT-Algebras. The security-critical nature of many of these applications demands trustworthy implementations of such systems. To this end, we present the first formalization of SFTs and their most important algorithms in Isabelle/HOL. To evaluate the effectiveness of our formalization, we apply the formalized SFTs to two applications: (1) sanitizers for web applications used for preventing XSS attacks, and (2) string solving, which increasingly employs intricate string replacement operations. Our experimental results demonstrate that our methods are competitive with the existing unverified implementations.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1145/3779031.3779094"
+  },
+  {
+    "id": "10.1145/3779031.3779091",
+    "title": "A Rose Tree Is Blooming (Proof Pearl)",
+    "authors": [
+      "Joomy Korkut"
+    ],
+    "abstract": "Game trees are a fundamental mathematical abstraction for analyzing games, often implemented as rose trees in functional programming. We can construct rose trees by starting from an initial state and iteratively applying the function that provides the states one move away, an approach known as an anamorphism (or colloquially, an unfold). In ML or Haskell, finite and infinite rose trees share the same type, but proof assistants typically distinguish them: finite trees as inductive, infinite ones as coinductive. With the inductive approach, defining the unfold function is tricky but we obtain a finite tree that is easy to compute with and easy to reason about. With the coinductive approach, defining the unfold function is easy but we obtain a potentially infinite tree, which is harder to reason about since we must resort to proof techniques like bisimulation. In this paper, we compare the inductive and coinductive approaches to game trees, implement unfold functions for both, and prove the soundness and completeness of both unfold functions (with respect to the game) in the Rocq Prover. We illustrate these techniques with implementations of a tic-tac-toe game and a simple SAT solver.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1145/3779031.3779091"
+  },
+  {
     "id": "10.1145/3779031.3779087",
     "title": "A Certifying Proof Assistant for Synthetic Mathematics in Lean",
     "authors": [
@@ -178,57 +229,6 @@
     "conference": "cpp",
     "year": 2026,
     "paper_url": "https://doi.org/10.1145/3779031.3779107"
-  },
-  {
-    "id": "10.1145/3779031.3779086",
-    "title": "Using Ghost Ownership to Verify Union-Find and Persistent Arrays in Rust",
-    "authors": [
-      "Arnaud Golfouse",
-      "Armaël Guéneau",
-      "Jacques-Henri Jourdan"
-    ],
-    "abstract": "The type system of Rust enforces the “shared xor mutable” principle, which forbids mutation of shared memory. This principle eases verification in Rust, but certain programs require circumventing it with the mechanism of interior mutability. Thus, supporting interior mutability in a deductive verification tool is difficult. The Verus tool demonstrated the use of ghost resources to that end. So far, this mechanism has only been applied to Verus in order to verify primarily system code. We extend the deductive verification tool Creusot with support for linear ghost resources. We show how Creusot’s full support for mutable borrows enables better specifications for primitives of linear ghost code. We apply this methodology to the verification of two data structures using sharing and mutation: union-find and persistent arrays.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2026,
-    "paper_url": "https://doi.org/10.1145/3779031.3779086"
-  },
-  {
-    "id": "10.1145/3779031.3779091",
-    "title": "A Rose Tree Is Blooming (Proof Pearl)",
-    "authors": [
-      "Joomy Korkut"
-    ],
-    "abstract": "Game trees are a fundamental mathematical abstraction for analyzing games, often implemented as rose trees in functional programming. We can construct rose trees by starting from an initial state and iteratively applying the function that provides the states one move away, an approach known as an anamorphism (or colloquially, an unfold). In ML or Haskell, finite and infinite rose trees share the same type, but proof assistants typically distinguish them: finite trees as inductive, infinite ones as coinductive. With the inductive approach, defining the unfold function is tricky but we obtain a finite tree that is easy to compute with and easy to reason about. With the coinductive approach, defining the unfold function is easy but we obtain a potentially infinite tree, which is harder to reason about since we must resort to proof techniques like bisimulation. In this paper, we compare the inductive and coinductive approaches to game trees, implement unfold functions for both, and prove the soundness and completeness of both unfold functions (with respect to the game) in the Rocq Prover. We illustrate these techniques with implementations of a tic-tac-toe game and a simple SAT solver.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2026,
-    "paper_url": "https://doi.org/10.1145/3779031.3779091"
-  },
-  {
-    "id": "10.1145/3779031.3779094",
-    "title": "Certified Symbolic Finite Transducers: Formalization and Applications to String Analysis",
-    "authors": [
-      "Shuanglong Kan",
-      "Anthony W. Lin"
-    ],
-    "abstract": "Finite Transducers (FTs) extend the capabilities of Finite Au- tomata (FAs) by enabling the transformation of input strings into output strings. In many practical applications — includ- ing program analysis, string constraint solving, and analysis of security-critical sanitizers — Symbolic FTs (SFTs) and Sym- bolic FAs (SFAs) are used instead of the explicitly represented models. To circumvent to the notorious state-space explosion problem caused by an extremely large alphabet size (e.g. Unicode), SFTs and SFAs allow the representation of the alphabet as an effective boolean algebra including finite unions of intervals, as well as SMT-Algebras. The security-critical nature of many of these applications demands trustworthy implementations of such systems. To this end, we present the first formalization of SFTs and their most important algorithms in Isabelle/HOL. To evaluate the effectiveness of our formalization, we apply the formalized SFTs to two applications: (1) sanitizers for web applications used for preventing XSS attacks, and (2) string solving, which increasingly employs intricate string replacement operations. Our experimental results demonstrate that our methods are competitive with the existing unverified implementations.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2026,
-    "paper_url": "https://doi.org/10.1145/3779031.3779094"
-  },
-  {
-    "id": "10.1145/3779031.3779093",
-    "title": "A Lambda-Superposition Tactic for Isabelle/HOL",
-    "authors": [
-      "Massin Guerdi"
-    ],
-    "abstract": "This paper introduces slam, an Isabelle/HOL tactic and automated theorem prover based on the λ-superposition calculus. An alternative to Isabelle’s metis tactic, slam targets higher-order logic directly, avoiding the overhead introduced by metis’s translations to first-order logic. Like metis, slam can be used as a Sledgehammer backend to reconstruct proofs produced by external higher-order automated theorem provers such as E, Vampire, and Zipperposition.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2026,
-    "paper_url": "https://doi.org/10.1145/3779031.3779093"
   },
   {
     "id": "10.1145/3779031.3779092",
@@ -338,20 +338,6 @@
     "paper_url": "https://doi.org/10.1145/3779031.3779102"
   },
   {
-    "id": "10.1145/3779031.3779099",
-    "title": "Adding Sorts to an Isabelle Formalization of Superposition",
-    "authors": [
-      "Balazs Toth",
-      "Martin Desharnais-Schäfer",
-      "Jasmin Blanchette"
-    ],
-    "abstract": "The superposition calculus has been formalized in Isabelle/HOL twice before but in both cases without a type system. Nowadays, modern superposition provers support types. We extend an existing Isabelle formalization of untyped superposition with simple monomorphic types, or sorts. This extension is straightforward on paper but surprisingly tricky to implement formally. We also use this opportunity to refactor the proof text to avoid quadruplicated definitions, lemmas, and proofs about terms, atoms, literals, and clauses. The extended formalization and its refactoring benefit from Isabelle's locales, structured Isar proofs, and Sledgehammer proof tool.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2026,
-    "paper_url": "https://doi.org/10.1145/3779031.3779099"
-  },
-  {
     "id": "10.1145/3779031.3779110",
     "title": "A Recipe for Modular Verification of Generic Tree Traversals",
     "authors": [
@@ -379,5 +365,19 @@
     "conference": "cpp",
     "year": 2026,
     "paper_url": "https://doi.org/10.1145/3779031.3779089"
+  },
+  {
+    "id": "10.1145/3779031.3779099",
+    "title": "Adding Sorts to an Isabelle Formalization of Superposition",
+    "authors": [
+      "Balazs Toth",
+      "Martin Desharnais-Schäfer",
+      "Jasmin Blanchette"
+    ],
+    "abstract": "The superposition calculus has been formalized in Isabelle/HOL twice before but in both cases without a type system. Nowadays, modern superposition provers support types. We extend an existing Isabelle formalization of untyped superposition with simple monomorphic types, or sorts. This extension is straightforward on paper but surprisingly tricky to implement formally. We also use this opportunity to refactor the proof text to avoid quadruplicated definitions, lemmas, and proofs about terms, atoms, literals, and clauses. The extended formalization and its refactoring benefit from Isabelle's locales, structured Isar proofs, and Sledgehammer proof tool.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1145/3779031.3779099"
   }
 ]

@@ -1,5 +1,108 @@
 [
   {
+    "id": "10.1093/bioinformatics/btac257",
+    "title": "DECODE: a computational pipeline to discover T cell receptor binding rules",
+    "authors": [
+      "Papadopoulou I",
+      "Nguyen AP",
+      "Weber A",
+      "Martínez MR"
+    ],
+    "abstract": "<h4>Motivation</h4>Understanding the mechanisms underlying T cell receptor (TCR) binding is of fundamental importance to understanding adaptive immune responses. A better understanding of the biochemical rules governing TCR binding can be used, e.g. to guide the design of more powerful and safer T cell-based therapies. Advances in repertoire sequencing technologies have made available millions of TCR sequences. Data abundance has, in turn, fueled the development of many computational models to predict the binding properties of TCRs from their sequences. Unfortunately, while many of these works have made great strides toward predicting TCR specificity using machine learning, the black-box nature of these models has resulted in a limited understanding of the rules that govern the binding of a TCR and an epitope.<h4>Results</h4>We present an easy-to-use and customizable computational pipeline, DECODE, to extract the binding rules from any black-box model designed to predict the TCR-epitope binding. DECODE offers a range of analytical and visualization tools to guide the user in the extraction of such rules. We demonstrate our pipeline on a recently published TCR-binding prediction model, TITAN, and show how to use the provided metrics to assess the quality of the computed rules. In conclusion, DECODE can lead to a better understanding of the sequence motifs that underlie TCR binding. Our pipeline can facilitate the investigation of current immunotherapeutic challenges, such as cross-reactive events due to off-target TCR binding.<h4>Availability and implementation</h4>Code is available publicly at https://github.com/phineasng/DECODE.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac257"
+  },
+  {
+    "id": "10.1093/bioinformatics/btac218",
+    "title": "DeepCRISTL: deep transfer learning to predict CRISPR/Cas9 functional and endogenous on-target editing efficiency",
+    "authors": [
+      "Elkayam S",
+      "Orenstein Y"
+    ],
+    "abstract": "<h4>Motivation</h4>CRISPR/Cas9 technology has been revolutionizing the field of gene editing in recent years. Guide RNAs (gRNAs) enable Cas9 proteins to target specific genomic loci for editing. However, editing efficiency varies between gRNAs. Thus, computational methods were developed to predict editing efficiency for any gRNA of interest. High-throughput datasets of Cas9 editing efficiencies were produced to train machine-learning models to predict editing efficiency. However, these high-throughput datasets have low correlation with functional and endogenous editing. Another difficulty arises from the fact that functional and endogenous editing efficiency is more difficult to measure, and as a result, functional and endogenous datasets are too small to train accurate machine-learning models on.<h4>Results</h4>We developed DeepCRISTL, a deep-learning model to predict the on-target efficiency given a gRNA sequence. DeepCRISTL takes advantage of high-throughput datasets to learn general patterns of gRNA on-target editing efficiency, and then uses transfer learning (TL) to fine-tune the model and fit it to the functional and endogenous prediction task. We pre-trained the DeepCRISTL model on more than 150 000 gRNAs, produced through the DeepHF study as a high-throughput dataset of three Cas9 enzymes. We improved the DeepHF model by multi-task and ensemble techniques and achieved state-of-the-art results over each of the three enzymes: up to 0.89 in Spearman correlation between predicted and measured on-target efficiencies. To fine-tune model weights to predict on-target efficiency of functional or endogenous datasets, we tested several TL approaches, with gradual learning being the overall best performer, both when pre-trained on DeepHF and when pre-trained on CRISPROn, another high-throughput dataset. DeepCRISTL outperformed state-of-the-art methods on all functional and endogenous datasets. Using saliency maps, we identified and compared the important features learned by the model in each dataset. We believe DeepCRISTL will improve prediction performance in many other CRISPR/Cas9 editing contexts by leveraging TL to utilize both high-throughput datasets, and smaller and more biologically relevant datasets, such as functional and endogenous datasets.<h4>Availability and implementation</h4>DeepCRISTL is available via github.com/OrensteinLab/DeepCRISTL.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac218"
+  },
+  {
+    "id": "10.1093/bioinformatics/btac246",
+    "title": "Bridging the gaps in statistical models of protein alignment",
+    "authors": [
+      "Sumanaweera D",
+      "Allison L",
+      "Konagurthu AS"
+    ],
+    "abstract": "<h4>Summary</h4>Sequences of proteins evolve by accumulating substitutions together with insertions and deletions (indels) of amino acids. However, it remains a common practice to disconnect substitutions and indels, and infer approximate models for each of them separately, to quantify sequence relationships. Although this approach brings with it computational convenience (which remains its primary motivation), there is a dearth of attempts to unify and model them systematically and together. To overcome this gap, this article demonstrates how a complete statistical model quantifying the evolution of pairs of aligned proteins can be constructed using a time-parameterized substitution matrix and a time-parameterized alignment state machine. Methods to derive all parameters of such a model from any benchmark collection of aligned protein sequences are described here. This has not only allowed us to generate a unified statistical model for each of the nine widely used substitution matrices (PAM, JTT, BLOSUM, JO, WAG, VTML, LG, MIQS and PFASUM), but also resulted in a new unified model, MMLSUM. Our underlying methodology measures the Shannon information content using each model to explain losslessly any given collection of alignments, which has allowed us to quantify the performance of all the above models on six comprehensive alignment benchmarks. Our results show that MMLSUM results in a new and clear overall best performance, followed by PFASUM, VTML, BLOSUM and MIQS, respectively, amongst the top five. We further analyze the statistical properties of MMLSUM model and contrast it with others.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac246"
+  },
+  {
+    "id": "10.1093/bioinformatics/btac250",
+    "title": "SPARSE: a sparse hypergraph neural network for learning multiple types of latent combinations to accurately predict drug-drug interactions",
+    "authors": [
+      "Nguyen DA",
+      "Nguyen CH",
+      "Petschner P",
+      "Mamitsuka H"
+    ],
+    "abstract": "<h4>Motivation</h4>Predicting side effects of drug-drug interactions (DDIs) is an important task in pharmacology. The state-of-the-art methods for DDI prediction use hypergraph neural networks to learn latent representations of drugs and side effects to express high-order relationships among two interacting drugs and a side effect. The idea of these methods is that each side effect is caused by a unique combination of latent features of the corresponding interacting drugs. However, in reality, a side effect might have multiple, different mechanisms that cannot be represented by a single combination of latent features of drugs. Moreover, DDI data are sparse, suggesting that using a sparsity regularization would help to learn better latent representations to improve prediction performances.<h4>Results</h4>We propose SPARSE, which encodes the DDI hypergraph and drug features to latent spaces to learn multiple types of combinations of latent features of drugs and side effects, controlling the model sparsity by a sparse prior. Our extensive experiments using both synthetic and three real-world DDI datasets showed the clear predictive performance advantage of SPARSE over cutting-edge competing methods. Also, latent feature analysis over unknown top predictions by SPARSE demonstrated the interpretability advantage contributed by the model sparsity.<h4>Availability and implementation</h4>Code and data can be accessed at https://github.com/anhnda/SPARSE.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac250"
+  },
+  {
+    "id": "10.1093/bioinformatics/btac233",
+    "title": "An approachable, flexible and practical machine learning workshop for biologists",
+    "authors": [
+      "Magnano CS",
+      "Mu F",
+      "Russ RS",
+      "Cvetkovic M",
+      "Treu D",
+      "Gitter A"
+    ],
+    "abstract": "<h4>Summary</h4>The increasing prevalence and importance of machine learning in biological research have created a need for machine learning training resources tailored towards biological researchers. However, existing resources are often inaccessible, infeasible or inappropriate for biologists because they require significant computational and mathematical knowledge, demand an unrealistic time-investment or teach skills primarily for computational researchers. We created the Machine Learning for Biologists (ML4Bio) workshop, a short, intensive workshop that empowers biological researchers to comprehend machine learning applications and pursue machine learning collaborations in their own research. The ML4Bio workshop focuses on classification and was designed around three principles: (i) emphasizing preparedness over fluency or expertise, (ii) necessitating minimal coding and mathematical background and (iii) requiring low time investment. It incorporates active learning methods and custom open-source software that allows participants to explore machine learning workflows. After multiple sessions to improve workshop design, we performed a study on three workshop sessions. Despite some confusion around identifying subtle methodological flaws in machine learning workflows, participants generally reported that the workshop met their goals, provided them with valuable skills and knowledge and greatly increased their beliefs that they could engage in research that uses machine learning. ML4Bio is an educational tool for biological researchers, and its creation and evaluation provide valuable insight into tailoring educational resources for active researchers in different domains.<h4>Availability and implementation</h4>Workshop materials are available at https://github.com/carpentries-incubator/ml4bio-workshop and the ml4bio software is available at https://github.com/gitter-lab/ml4bio.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac233"
+  },
+  {
+    "id": "10.1093/bioinformatics/btac240",
+    "title": "From drug repositioning to target repositioning: prediction of therapeutic targets using genetically perturbed transcriptomic signatures",
+    "authors": [
+      "Namba S",
+      "Iwata M",
+      "Yamanishi Y"
+    ],
+    "abstract": "<h4>Motivation</h4>A critical element of drug development is the identification of therapeutic targets for diseases. However, the depletion of therapeutic targets is a serious problem.<h4>Results</h4>In this study, we propose the novel concept of target repositioning, an extension of the concept of drug repositioning, to predict new therapeutic targets for various diseases. Predictions were performed by a trans-disease analysis which integrated genetically perturbed transcriptomic signatures (knockdown of 4345 genes and overexpression of 3114 genes) and disease-specific gene transcriptomic signatures of 79 diseases. The trans-disease method, which takes into account similarities among diseases, enabled us to distinguish the inhibitory from activatory targets and to predict the therapeutic targetability of not only proteins with known target-disease associations but also orphan proteins without known associations. Our proposed method is expected to be useful for understanding the commonality of mechanisms among diseases and for therapeutic target identification in drug discovery.<h4>Availability and implementation</h4>Supplemental information and software are available at the following website [http://labo.bio.kyutech.ac.jp/~yamani/target_repositioning/].<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac240"
+  },
+  {
+    "id": "10.1093/bioinformatics/btac228",
+    "title": "PolarMorphism enables discovery of shared genetic variants across multiple traits from GWAS summary statistics",
+    "authors": [
+      "von Berg J",
+      "Ten Dam M",
+      "van der Laan SW",
+      "de Ridder J"
+    ],
+    "abstract": "<h4>Motivation</h4>Pleiotropic SNPs are associated with multiple traits. Such SNPs can help pinpoint biological processes with an effect on multiple traits or point to a shared etiology between traits. We present PolarMorphism, a new method for the identification of pleiotropic SNPs from genome-wide association studies (GWAS) summary statistics. PolarMorphism can be readily applied to more than two traits or whole trait domains. PolarMorphism makes use of the fact that trait-specific SNP effect sizes can be seen as Cartesian coordinates and can thus be converted to polar coordinates r (distance from the origin) and theta (angle with the Cartesian x-axis, in the case of two traits). r describes the overall effect of a SNP, while theta describes the extent to which a SNP is shared. r and theta are used to determine the significance of SNP sharedness, resulting in a P-value per SNP that can be used for further analysis.<h4>Results</h4>We apply PolarMorphism to a large collection of publicly available GWAS summary statistics enabling the construction of a pleiotropy network that shows the extent to which traits share SNPs. We show how PolarMorphism can be used to gain insight into relationships between traits and trait domains and contrast it with genetic correlation. Furthermore, pathway analysis of the newly discovered pleiotropic SNPs demonstrates that analysis of more than two traits simultaneously yields more biologically relevant results than the combined results of pairwise analysis of the same traits. Finally, we show that PolarMorphism is more efficient and more powerful than previously published methods.<h4>Availability and implementation</h4>code: https://github.com/UMCUGenetics/PolarMorphism, results: 10.5281/zenodo.5844193.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac228"
+  },
+  {
     "id": "10.1093/bioinformatics/btac265",
     "title": "QuCo: quartet-based co-estimation of species trees and gene trees",
     "authors": [
@@ -138,109 +241,6 @@
     "paper_url": "https://doi.org/10.1093/bioinformatics/btac255"
   },
   {
-    "id": "10.1093/bioinformatics/btac257",
-    "title": "DECODE: a computational pipeline to discover T cell receptor binding rules",
-    "authors": [
-      "Papadopoulou I",
-      "Nguyen AP",
-      "Weber A",
-      "Martínez MR"
-    ],
-    "abstract": "<h4>Motivation</h4>Understanding the mechanisms underlying T cell receptor (TCR) binding is of fundamental importance to understanding adaptive immune responses. A better understanding of the biochemical rules governing TCR binding can be used, e.g. to guide the design of more powerful and safer T cell-based therapies. Advances in repertoire sequencing technologies have made available millions of TCR sequences. Data abundance has, in turn, fueled the development of many computational models to predict the binding properties of TCRs from their sequences. Unfortunately, while many of these works have made great strides toward predicting TCR specificity using machine learning, the black-box nature of these models has resulted in a limited understanding of the rules that govern the binding of a TCR and an epitope.<h4>Results</h4>We present an easy-to-use and customizable computational pipeline, DECODE, to extract the binding rules from any black-box model designed to predict the TCR-epitope binding. DECODE offers a range of analytical and visualization tools to guide the user in the extraction of such rules. We demonstrate our pipeline on a recently published TCR-binding prediction model, TITAN, and show how to use the provided metrics to assess the quality of the computed rules. In conclusion, DECODE can lead to a better understanding of the sequence motifs that underlie TCR binding. Our pipeline can facilitate the investigation of current immunotherapeutic challenges, such as cross-reactive events due to off-target TCR binding.<h4>Availability and implementation</h4>Code is available publicly at https://github.com/phineasng/DECODE.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2022,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btac257"
-  },
-  {
-    "id": "10.1093/bioinformatics/btac218",
-    "title": "DeepCRISTL: deep transfer learning to predict CRISPR/Cas9 functional and endogenous on-target editing efficiency",
-    "authors": [
-      "Elkayam S",
-      "Orenstein Y"
-    ],
-    "abstract": "<h4>Motivation</h4>CRISPR/Cas9 technology has been revolutionizing the field of gene editing in recent years. Guide RNAs (gRNAs) enable Cas9 proteins to target specific genomic loci for editing. However, editing efficiency varies between gRNAs. Thus, computational methods were developed to predict editing efficiency for any gRNA of interest. High-throughput datasets of Cas9 editing efficiencies were produced to train machine-learning models to predict editing efficiency. However, these high-throughput datasets have low correlation with functional and endogenous editing. Another difficulty arises from the fact that functional and endogenous editing efficiency is more difficult to measure, and as a result, functional and endogenous datasets are too small to train accurate machine-learning models on.<h4>Results</h4>We developed DeepCRISTL, a deep-learning model to predict the on-target efficiency given a gRNA sequence. DeepCRISTL takes advantage of high-throughput datasets to learn general patterns of gRNA on-target editing efficiency, and then uses transfer learning (TL) to fine-tune the model and fit it to the functional and endogenous prediction task. We pre-trained the DeepCRISTL model on more than 150 000 gRNAs, produced through the DeepHF study as a high-throughput dataset of three Cas9 enzymes. We improved the DeepHF model by multi-task and ensemble techniques and achieved state-of-the-art results over each of the three enzymes: up to 0.89 in Spearman correlation between predicted and measured on-target efficiencies. To fine-tune model weights to predict on-target efficiency of functional or endogenous datasets, we tested several TL approaches, with gradual learning being the overall best performer, both when pre-trained on DeepHF and when pre-trained on CRISPROn, another high-throughput dataset. DeepCRISTL outperformed state-of-the-art methods on all functional and endogenous datasets. Using saliency maps, we identified and compared the important features learned by the model in each dataset. We believe DeepCRISTL will improve prediction performance in many other CRISPR/Cas9 editing contexts by leveraging TL to utilize both high-throughput datasets, and smaller and more biologically relevant datasets, such as functional and endogenous datasets.<h4>Availability and implementation</h4>DeepCRISTL is available via github.com/OrensteinLab/DeepCRISTL.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2022,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btac218"
-  },
-  {
-    "id": "10.1093/bioinformatics/btac246",
-    "title": "Bridging the gaps in statistical models of protein alignment",
-    "authors": [
-      "Sumanaweera D",
-      "Allison L",
-      "Konagurthu AS"
-    ],
-    "abstract": "<h4>Summary</h4>Sequences of proteins evolve by accumulating substitutions together with insertions and deletions (indels) of amino acids. However, it remains a common practice to disconnect substitutions and indels, and infer approximate models for each of them separately, to quantify sequence relationships. Although this approach brings with it computational convenience (which remains its primary motivation), there is a dearth of attempts to unify and model them systematically and together. To overcome this gap, this article demonstrates how a complete statistical model quantifying the evolution of pairs of aligned proteins can be constructed using a time-parameterized substitution matrix and a time-parameterized alignment state machine. Methods to derive all parameters of such a model from any benchmark collection of aligned protein sequences are described here. This has not only allowed us to generate a unified statistical model for each of the nine widely used substitution matrices (PAM, JTT, BLOSUM, JO, WAG, VTML, LG, MIQS and PFASUM), but also resulted in a new unified model, MMLSUM. Our underlying methodology measures the Shannon information content using each model to explain losslessly any given collection of alignments, which has allowed us to quantify the performance of all the above models on six comprehensive alignment benchmarks. Our results show that MMLSUM results in a new and clear overall best performance, followed by PFASUM, VTML, BLOSUM and MIQS, respectively, amongst the top five. We further analyze the statistical properties of MMLSUM model and contrast it with others.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2022,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btac246"
-  },
-  {
-    "id": "10.1093/bioinformatics/btac250",
-    "title": "SPARSE: a sparse hypergraph neural network for learning multiple types of latent combinations to accurately predict drug-drug interactions",
-    "authors": [
-      "Nguyen DA",
-      "Nguyen CH",
-      "Petschner P",
-      "Mamitsuka H"
-    ],
-    "abstract": "<h4>Motivation</h4>Predicting side effects of drug-drug interactions (DDIs) is an important task in pharmacology. The state-of-the-art methods for DDI prediction use hypergraph neural networks to learn latent representations of drugs and side effects to express high-order relationships among two interacting drugs and a side effect. The idea of these methods is that each side effect is caused by a unique combination of latent features of the corresponding interacting drugs. However, in reality, a side effect might have multiple, different mechanisms that cannot be represented by a single combination of latent features of drugs. Moreover, DDI data are sparse, suggesting that using a sparsity regularization would help to learn better latent representations to improve prediction performances.<h4>Results</h4>We propose SPARSE, which encodes the DDI hypergraph and drug features to latent spaces to learn multiple types of combinations of latent features of drugs and side effects, controlling the model sparsity by a sparse prior. Our extensive experiments using both synthetic and three real-world DDI datasets showed the clear predictive performance advantage of SPARSE over cutting-edge competing methods. Also, latent feature analysis over unknown top predictions by SPARSE demonstrated the interpretability advantage contributed by the model sparsity.<h4>Availability and implementation</h4>Code and data can be accessed at https://github.com/anhnda/SPARSE.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2022,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btac250"
-  },
-  {
-    "id": "10.1093/bioinformatics/btac233",
-    "title": "An approachable, flexible and practical machine learning workshop for biologists",
-    "authors": [
-      "Magnano CS",
-      "Mu F",
-      "Russ RS",
-      "Cvetkovic M",
-      "Treu D",
-      "Gitter A"
-    ],
-    "abstract": "<h4>Summary</h4>The increasing prevalence and importance of machine learning in biological research have created a need for machine learning training resources tailored towards biological researchers. However, existing resources are often inaccessible, infeasible or inappropriate for biologists because they require significant computational and mathematical knowledge, demand an unrealistic time-investment or teach skills primarily for computational researchers. We created the Machine Learning for Biologists (ML4Bio) workshop, a short, intensive workshop that empowers biological researchers to comprehend machine learning applications and pursue machine learning collaborations in their own research. The ML4Bio workshop focuses on classification and was designed around three principles: (i) emphasizing preparedness over fluency or expertise, (ii) necessitating minimal coding and mathematical background and (iii) requiring low time investment. It incorporates active learning methods and custom open-source software that allows participants to explore machine learning workflows. After multiple sessions to improve workshop design, we performed a study on three workshop sessions. Despite some confusion around identifying subtle methodological flaws in machine learning workflows, participants generally reported that the workshop met their goals, provided them with valuable skills and knowledge and greatly increased their beliefs that they could engage in research that uses machine learning. ML4Bio is an educational tool for biological researchers, and its creation and evaluation provide valuable insight into tailoring educational resources for active researchers in different domains.<h4>Availability and implementation</h4>Workshop materials are available at https://github.com/carpentries-incubator/ml4bio-workshop and the ml4bio software is available at https://github.com/gitter-lab/ml4bio.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2022,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btac233"
-  },
-  {
-    "id": "10.1093/bioinformatics/btac240",
-    "title": "From drug repositioning to target repositioning: prediction of therapeutic targets using genetically perturbed transcriptomic signatures",
-    "authors": [
-      "Namba S",
-      "Iwata M",
-      "Yamanishi Y"
-    ],
-    "abstract": "<h4>Motivation</h4>A critical element of drug development is the identification of therapeutic targets for diseases. However, the depletion of therapeutic targets is a serious problem.<h4>Results</h4>In this study, we propose the novel concept of target repositioning, an extension of the concept of drug repositioning, to predict new therapeutic targets for various diseases. Predictions were performed by a trans-disease analysis which integrated genetically perturbed transcriptomic signatures (knockdown of 4345 genes and overexpression of 3114 genes) and disease-specific gene transcriptomic signatures of 79 diseases. The trans-disease method, which takes into account similarities among diseases, enabled us to distinguish the inhibitory from activatory targets and to predict the therapeutic targetability of not only proteins with known target-disease associations but also orphan proteins without known associations. Our proposed method is expected to be useful for understanding the commonality of mechanisms among diseases and for therapeutic target identification in drug discovery.<h4>Availability and implementation</h4>Supplemental information and software are available at the following website [http://labo.bio.kyutech.ac.jp/~yamani/target_repositioning/].<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2022,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btac240"
-  },
-  {
-    "id": "10.1093/bioinformatics/btac228",
-    "title": "PolarMorphism enables discovery of shared genetic variants across multiple traits from GWAS summary statistics",
-    "authors": [
-      "von Berg J",
-      "Ten Dam M",
-      "van der Laan SW",
-      "de Ridder J"
-    ],
-    "abstract": "<h4>Motivation</h4>Pleiotropic SNPs are associated with multiple traits. Such SNPs can help pinpoint biological processes with an effect on multiple traits or point to a shared etiology between traits. We present PolarMorphism, a new method for the identification of pleiotropic SNPs from genome-wide association studies (GWAS) summary statistics. PolarMorphism can be readily applied to more than two traits or whole trait domains. PolarMorphism makes use of the fact that trait-specific SNP effect sizes can be seen as Cartesian coordinates and can thus be converted to polar coordinates r (distance from the origin) and theta (angle with the Cartesian x-axis, in the case of two traits). r describes the overall effect of a SNP, while theta describes the extent to which a SNP is shared. r and theta are used to determine the significance of SNP sharedness, resulting in a P-value per SNP that can be used for further analysis.<h4>Results</h4>We apply PolarMorphism to a large collection of publicly available GWAS summary statistics enabling the construction of a pleiotropy network that shows the extent to which traits share SNPs. We show how PolarMorphism can be used to gain insight into relationships between traits and trait domains and contrast it with genetic correlation. Furthermore, pathway analysis of the newly discovered pleiotropic SNPs demonstrates that analysis of more than two traits simultaneously yields more biologically relevant results than the combined results of pairwise analysis of the same traits. Finally, we show that PolarMorphism is more efficient and more powerful than previously published methods.<h4>Availability and implementation</h4>code: https://github.com/UMCUGenetics/PolarMorphism, results: 10.5281/zenodo.5844193.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2022,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btac228"
-  },
-  {
     "id": "10.1093/bioinformatics/btac264",
     "title": "The effect of genome graph expressiveness on the discrepancy between genome graph distance and string set distance",
     "authors": [
@@ -366,6 +366,142 @@
     "conference": "ismb",
     "year": 2022,
     "paper_url": "https://doi.org/10.1093/bioinformatics/btac254"
+  },
+  {
+    "id": "10.1093/bioinformatics/btac248",
+    "title": "MeConcord: a new metric to quantitatively characterize DNA methylation heterogeneity across reads and CpG sites",
+    "authors": [
+      "Zhang X",
+      "Wang X"
+    ],
+    "abstract": "<h4>Motivation</h4>Intermediately methylated regions occupy a significant fraction of the human genome and are closely associated with epigenetic regulations or cell-type deconvolution of bulk data. However, these regions show distinct methylation patterns, corresponding to different biological mechanisms. Although there have been some metrics developed for investigating these regions, the high noise sensitivity limits the utility for distinguishing distinct methylation patterns.<h4>Results</h4>We proposed a method named MeConcord to measure local methylation concordance across reads and CpG sites, respectively. MeConcord showed the most stable performance in distinguishing distinct methylation patterns ('identical', 'uniform' and 'disordered') compared with other metrics. Applying MeConcord to the whole genome data across 25 cell lines or primary cells or tissues, we found that distinct methylation patterns were associated with different genomic characteristics, such as CTCF binding or imprinted genes. Further, we showed the differences of CpG island hypermethylation patterns between senescence and tumorigenesis by using MeConcord. MeConcord is a powerful method to study local read-level methylation patterns for both the whole genome and specific regions of interest.<h4>Availability and implementation</h4>MeConcord is available at https://github.com/WangLabTHU/MeConcord.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac248"
+  },
+  {
+    "id": "10.1093/bioinformatics/btac249",
+    "title": "Visualizing hierarchies in scRNA-seq data using a density tree-biased autoencoder",
+    "authors": [
+      "Garrido Q",
+      "Damrich S",
+      "Jäger A",
+      "Cerletti D",
+      "Claassen M",
+      "Najman L",
+      "Hamprecht FA"
+    ],
+    "abstract": "<h4>Motivation</h4>Single-cell RNA sequencing (scRNA-seq) allows studying the development of cells in unprecedented detail. Given that many cellular differentiation processes are hierarchical, their scRNA-seq data are expected to be approximately tree-shaped in gene expression space. Inference and representation of this tree structure in two dimensions is highly desirable for biological interpretation and exploratory analysis.<h4>Results</h4>Our two contributions are an approach for identifying a meaningful tree structure from high-dimensional scRNA-seq data, and a visualization method respecting the tree structure. We extract the tree structure by means of a density-based maximum spanning tree on a vector quantization of the data and show that it captures biological information well. We then introduce density-tree biased autoencoder (DTAE), a tree-biased autoencoder that emphasizes the tree structure of the data in low dimensional space. We compare to other dimension reduction methods and demonstrate the success of our method both qualitatively and quantitatively on real and toy data.<h4>Availability and implementation</h4>Our implementation relying on PyTorch and Higra is available at github.com/hci-unihd/DTAE.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac249"
+  },
+  {
+    "id": "10.1093/bioinformatics/btac247",
+    "title": "On the reliability and the limits of inference of amino acid sequence alignments",
+    "authors": [
+      "Rajapaksa S",
+      "Sumanaweera D",
+      "Lesk AM",
+      "Allison L",
+      "Stuckey PJ",
+      "Garcia de la Banda M",
+      "Abramson D",
+      "Konagurthu AS"
+    ],
+    "abstract": "<h4>Motivation</h4>Alignments are correspondences between sequences. How reliable are alignments of amino acid sequences of proteins, and what inferences about protein relationships can be drawn? Using techniques not previously applied to these questions, by weighting every possible sequence alignment by its posterior probability we derive a formal mathematical expectation, and develop an efficient algorithm for computation of the distance between alternative alignments allowing quantitative comparisons of sequence-based alignments with corresponding reference structure alignments.<h4>Results</h4>By analyzing the sequences and structures of 1 million protein domain pairs, we report the variation of the expected distance between sequence-based and structure-based alignments, as a function of (Markov time of) sequence divergence. Our results clearly demarcate the 'daylight', 'twilight' and 'midnight' zones for interpreting residue-residue correspondences from sequence information alone.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac247"
+  },
+  {
+    "id": "10.1093/bioinformatics/btac256",
+    "title": "DeepGOZero: improving protein function prediction from sequence and zero-shot learning based on ontology axioms",
+    "authors": [
+      "Kulmanov M",
+      "Hoehndorf R"
+    ],
+    "abstract": "<h4>Motivation</h4>Protein functions are often described using the Gene Ontology (GO) which is an ontology consisting of over 50 000 classes and a large set of formal axioms. Predicting the functions of proteins is one of the key challenges in computational biology and a variety of machine learning methods have been developed for this purpose. However, these methods usually require a significant amount of training data and cannot make predictions for GO classes that have only few or no experimental annotations.<h4>Results</h4>We developed DeepGOZero, a machine learning model which improves predictions for functions with no or only a small number of annotations. To achieve this goal, we rely on a model-theoretic approach for learning ontology embeddings and combine it with neural networks for protein function prediction. DeepGOZero can exploit formal axioms in the GO to make zero-shot predictions, i.e., predict protein functions even if not a single protein in the training phase was associated with that function. Furthermore, the zero-shot prediction method employed by DeepGOZero is generic and can be applied whenever associations with ontology classes need to be predicted.<h4>Availability and implementation</h4>http://github.com/bio-ontology-research-group/deepgozero.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac256"
+  },
+  {
+    "id": "10.1093/bioinformatics/btac221",
+    "title": "BITES: balanced individual treatment effect for survival data",
+    "authors": [
+      "Schrod S",
+      "Schäfer A",
+      "Solbrig S",
+      "Lohmayer R",
+      "Gronwald W",
+      "Oefner PJ",
+      "Beißbarth T",
+      "Spang R",
+      "Zacharias HU",
+      "Altenbuchinger M"
+    ],
+    "abstract": "<h4>Motivation</h4>Estimating the effects of interventions on patient outcome is one of the key aspects of personalized medicine. Their inference is often challenged by the fact that the training data comprises only the outcome for the administered treatment, and not for alternative treatments (the so-called counterfactual outcomes). Several methods were suggested for this scenario based on observational data, i.e. data where the intervention was not applied randomly, for both continuous and binary outcome variables. However, patient outcome is often recorded in terms of time-to-event data, comprising right-censored event times if an event does not occur within the observation period. Albeit their enormous importance, time-to-event data are rarely used for treatment optimization. We suggest an approach named BITES (Balanced Individual Treatment Effect for Survival data), which combines a treatment-specific semi-parametric Cox loss with a treatment-balanced deep neural network; i.e. we regularize differences between treated and non-treated patients using Integral Probability Metrics (IPM).<h4>Results</h4>We show in simulation studies that this approach outperforms the state of the art. Furthermore, we demonstrate in an application to a cohort of breast cancer patients that hormone treatment can be optimized based on six routine parameters. We successfully validated this finding in an independent cohort.<h4>Availability and implementation</h4>We provide BITES as an easy-to-use python implementation including scheduled hyper-parameter optimization (https://github.com/sschrod/BITES). The data underlying this article are available in the CRAN repository at https://rdrr.io/cran/survival/man/gbsg.html and https://rdrr.io/cran/survival/man/rotterdam.html.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac221"
+  },
+  {
+    "id": "10.1093/bioinformatics/btac225",
+    "title": "DeepMHCII: a novel binding core-aware deep interaction model for accurate MHC-II peptide binding affinity prediction",
+    "authors": [
+      "You R",
+      "Qu W",
+      "Mamitsuka H",
+      "Zhu S"
+    ],
+    "abstract": "<h4>Motivation</h4>Computationally predicting major histocompatibility complex (MHC)-peptide binding affinity is an important problem in immunological bioinformatics. Recent cutting-edge deep learning-based methods for this problem are unable to achieve satisfactory performance for MHC class II molecules. This is because such methods generate the input by simply concatenating the two given sequences: (the estimated binding core of) a peptide and (the pseudo sequence of) an MHC class II molecule, ignoring biological knowledge behind the interactions of the two molecules. We thus propose a binding core-aware deep learning-based model, DeepMHCII, with a binding interaction convolution layer, which allows to integrate all potential binding cores (in a given peptide) with the MHC pseudo (binding) sequence, through modeling the interaction with multiple convolutional kernels.<h4>Results</h4>Extensive empirical experiments with four large-scale datasets demonstrate that DeepMHCII significantly outperformed four state-of-the-art methods under numerous settings, such as 5-fold cross-validation, leave one molecule out, validation with independent testing sets and binding core prediction. All these results and visualization of the predicted binding cores indicate the effectiveness of our model, DeepMHCII, and the importance of properly modeling biological facts in deep learning for high predictive performance and efficient knowledge discovery.<h4>Availability and implementation</h4>DeepMHCII is publicly available at https://github.com/yourh/DeepMHCII.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac225"
+  },
+  {
+    "id": "10.1093/bioinformatics/btac252",
+    "title": "A LASSO-based approach to sample sites for phylogenetic tree search",
+    "authors": [
+      "Ecker N",
+      "Azouri D",
+      "Bettisworth B",
+      "Stamatakis A",
+      "Mansour Y",
+      "Mayrose I",
+      "Pupko T"
+    ],
+    "abstract": "<h4>Motivation</h4>In recent years, full-genome sequences have become increasingly available and as a result many modern phylogenetic analyses are based on very long sequences, often with over 100 000 sites. Phylogenetic reconstructions of large-scale alignments are challenging for likelihood-based phylogenetic inference programs and usually require using a powerful computer cluster. Current tools for alignment trimming prior to phylogenetic analysis do not promise a significant reduction in the alignment size and are claimed to have a negative effect on the accuracy of the obtained tree.<h4>Results</h4>Here, we propose an artificial-intelligence-based approach, which provides means to select the optimal subset of sites and a formula by which one can compute the log-likelihood of the entire data based on this subset. Our approach is based on training a regularized Lasso-regression model that optimizes the log-likelihood prediction accuracy while putting a constraint on the number of sites used for the approximation. We show that computing the likelihood based on 5% of the sites already provides accurate approximation of the tree likelihood based on the entire data. Furthermore, we show that using this Lasso-based approximation during a tree search decreased running-time substantially while retaining the same tree-search performance.<h4>Availability and implementation</h4>The code was implemented in Python version 3.8 and is available through GitHub (https://github.com/noaeker/lasso_positions_sampling). The datasets used in this paper were retrieved from Zhou et al. (2018) as described in section 3.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac252"
+  },
+  {
+    "id": "10.1093/bioinformatics/btac242",
+    "title": "Simulating domain architecture evolution",
+    "authors": [
+      "Cui X",
+      "Xue Y",
+      "McCormack C",
+      "Garces A",
+      "Rachman TW",
+      "Yi Y",
+      "Stolzer M",
+      "Durand D"
+    ],
+    "abstract": "<h4>Motivation</h4>Simulation is an essential technique for generating biomolecular data with a 'known' history for use in validating phylogenetic inference and other evolutionary methods. On longer time scales, simulation supports investigations of equilibrium behavior and provides a formal framework for testing competing evolutionary hypotheses. Twenty years of molecular evolution research have produced a rich repertoire of simulation methods. However, current models do not capture the stringent constraints acting on the domain insertions, duplications, and deletions by which multidomain architectures evolve. Although these processes have the potential to generate any combination of domains, only a tiny fraction of possible domain combinations are observed in nature. Modeling these stringent constraints on domain order and co-occurrence is a fundamental challenge in domain architecture simulation that does not arise with sequence and gene family simulation.<h4>Results</h4>Here, we introduce a stochastic model of domain architecture evolution to simulate evolutionary trajectories that reflect the constraints on domain order and co-occurrence observed in nature. This framework is implemented in a novel domain architecture simulator, DomArchov, using the Metropolis-Hastings algorithm with data-driven transition probabilities. The use of a data-driven event module enables quick and easy redeployment of the simulator for use in different taxonomic and protein function contexts. Using empirical evaluation with metazoan datasets, we demonstrate that domain architectures simulated by DomArchov recapitulate properties of genuine domain architectures that reflect the constraints on domain order and adjacency seen in nature. This work expands the realm of evolutionary processes that are amenable to simulation.<h4>Availability and implementation</h4>DomArchov is written in Python 3 and is available at http://www.cs.cmu.edu/~durand/DomArchov. The data underlying this article are available via the same link.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac242"
   },
   {
     "id": "10.1093/bioinformatics/btac262",
@@ -510,142 +646,6 @@
     "conference": "ismb",
     "year": 2022,
     "paper_url": "https://doi.org/10.1093/bioinformatics/btac223"
-  },
-  {
-    "id": "10.1093/bioinformatics/btac248",
-    "title": "MeConcord: a new metric to quantitatively characterize DNA methylation heterogeneity across reads and CpG sites",
-    "authors": [
-      "Zhang X",
-      "Wang X"
-    ],
-    "abstract": "<h4>Motivation</h4>Intermediately methylated regions occupy a significant fraction of the human genome and are closely associated with epigenetic regulations or cell-type deconvolution of bulk data. However, these regions show distinct methylation patterns, corresponding to different biological mechanisms. Although there have been some metrics developed for investigating these regions, the high noise sensitivity limits the utility for distinguishing distinct methylation patterns.<h4>Results</h4>We proposed a method named MeConcord to measure local methylation concordance across reads and CpG sites, respectively. MeConcord showed the most stable performance in distinguishing distinct methylation patterns ('identical', 'uniform' and 'disordered') compared with other metrics. Applying MeConcord to the whole genome data across 25 cell lines or primary cells or tissues, we found that distinct methylation patterns were associated with different genomic characteristics, such as CTCF binding or imprinted genes. Further, we showed the differences of CpG island hypermethylation patterns between senescence and tumorigenesis by using MeConcord. MeConcord is a powerful method to study local read-level methylation patterns for both the whole genome and specific regions of interest.<h4>Availability and implementation</h4>MeConcord is available at https://github.com/WangLabTHU/MeConcord.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2022,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btac248"
-  },
-  {
-    "id": "10.1093/bioinformatics/btac249",
-    "title": "Visualizing hierarchies in scRNA-seq data using a density tree-biased autoencoder",
-    "authors": [
-      "Garrido Q",
-      "Damrich S",
-      "Jäger A",
-      "Cerletti D",
-      "Claassen M",
-      "Najman L",
-      "Hamprecht FA"
-    ],
-    "abstract": "<h4>Motivation</h4>Single-cell RNA sequencing (scRNA-seq) allows studying the development of cells in unprecedented detail. Given that many cellular differentiation processes are hierarchical, their scRNA-seq data are expected to be approximately tree-shaped in gene expression space. Inference and representation of this tree structure in two dimensions is highly desirable for biological interpretation and exploratory analysis.<h4>Results</h4>Our two contributions are an approach for identifying a meaningful tree structure from high-dimensional scRNA-seq data, and a visualization method respecting the tree structure. We extract the tree structure by means of a density-based maximum spanning tree on a vector quantization of the data and show that it captures biological information well. We then introduce density-tree biased autoencoder (DTAE), a tree-biased autoencoder that emphasizes the tree structure of the data in low dimensional space. We compare to other dimension reduction methods and demonstrate the success of our method both qualitatively and quantitatively on real and toy data.<h4>Availability and implementation</h4>Our implementation relying on PyTorch and Higra is available at github.com/hci-unihd/DTAE.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2022,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btac249"
-  },
-  {
-    "id": "10.1093/bioinformatics/btac247",
-    "title": "On the reliability and the limits of inference of amino acid sequence alignments",
-    "authors": [
-      "Rajapaksa S",
-      "Sumanaweera D",
-      "Lesk AM",
-      "Allison L",
-      "Stuckey PJ",
-      "Garcia de la Banda M",
-      "Abramson D",
-      "Konagurthu AS"
-    ],
-    "abstract": "<h4>Motivation</h4>Alignments are correspondences between sequences. How reliable are alignments of amino acid sequences of proteins, and what inferences about protein relationships can be drawn? Using techniques not previously applied to these questions, by weighting every possible sequence alignment by its posterior probability we derive a formal mathematical expectation, and develop an efficient algorithm for computation of the distance between alternative alignments allowing quantitative comparisons of sequence-based alignments with corresponding reference structure alignments.<h4>Results</h4>By analyzing the sequences and structures of 1 million protein domain pairs, we report the variation of the expected distance between sequence-based and structure-based alignments, as a function of (Markov time of) sequence divergence. Our results clearly demarcate the 'daylight', 'twilight' and 'midnight' zones for interpreting residue-residue correspondences from sequence information alone.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2022,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btac247"
-  },
-  {
-    "id": "10.1093/bioinformatics/btac256",
-    "title": "DeepGOZero: improving protein function prediction from sequence and zero-shot learning based on ontology axioms",
-    "authors": [
-      "Kulmanov M",
-      "Hoehndorf R"
-    ],
-    "abstract": "<h4>Motivation</h4>Protein functions are often described using the Gene Ontology (GO) which is an ontology consisting of over 50 000 classes and a large set of formal axioms. Predicting the functions of proteins is one of the key challenges in computational biology and a variety of machine learning methods have been developed for this purpose. However, these methods usually require a significant amount of training data and cannot make predictions for GO classes that have only few or no experimental annotations.<h4>Results</h4>We developed DeepGOZero, a machine learning model which improves predictions for functions with no or only a small number of annotations. To achieve this goal, we rely on a model-theoretic approach for learning ontology embeddings and combine it with neural networks for protein function prediction. DeepGOZero can exploit formal axioms in the GO to make zero-shot predictions, i.e., predict protein functions even if not a single protein in the training phase was associated with that function. Furthermore, the zero-shot prediction method employed by DeepGOZero is generic and can be applied whenever associations with ontology classes need to be predicted.<h4>Availability and implementation</h4>http://github.com/bio-ontology-research-group/deepgozero.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2022,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btac256"
-  },
-  {
-    "id": "10.1093/bioinformatics/btac221",
-    "title": "BITES: balanced individual treatment effect for survival data",
-    "authors": [
-      "Schrod S",
-      "Schäfer A",
-      "Solbrig S",
-      "Lohmayer R",
-      "Gronwald W",
-      "Oefner PJ",
-      "Beißbarth T",
-      "Spang R",
-      "Zacharias HU",
-      "Altenbuchinger M"
-    ],
-    "abstract": "<h4>Motivation</h4>Estimating the effects of interventions on patient outcome is one of the key aspects of personalized medicine. Their inference is often challenged by the fact that the training data comprises only the outcome for the administered treatment, and not for alternative treatments (the so-called counterfactual outcomes). Several methods were suggested for this scenario based on observational data, i.e. data where the intervention was not applied randomly, for both continuous and binary outcome variables. However, patient outcome is often recorded in terms of time-to-event data, comprising right-censored event times if an event does not occur within the observation period. Albeit their enormous importance, time-to-event data are rarely used for treatment optimization. We suggest an approach named BITES (Balanced Individual Treatment Effect for Survival data), which combines a treatment-specific semi-parametric Cox loss with a treatment-balanced deep neural network; i.e. we regularize differences between treated and non-treated patients using Integral Probability Metrics (IPM).<h4>Results</h4>We show in simulation studies that this approach outperforms the state of the art. Furthermore, we demonstrate in an application to a cohort of breast cancer patients that hormone treatment can be optimized based on six routine parameters. We successfully validated this finding in an independent cohort.<h4>Availability and implementation</h4>We provide BITES as an easy-to-use python implementation including scheduled hyper-parameter optimization (https://github.com/sschrod/BITES). The data underlying this article are available in the CRAN repository at https://rdrr.io/cran/survival/man/gbsg.html and https://rdrr.io/cran/survival/man/rotterdam.html.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2022,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btac221"
-  },
-  {
-    "id": "10.1093/bioinformatics/btac225",
-    "title": "DeepMHCII: a novel binding core-aware deep interaction model for accurate MHC-II peptide binding affinity prediction",
-    "authors": [
-      "You R",
-      "Qu W",
-      "Mamitsuka H",
-      "Zhu S"
-    ],
-    "abstract": "<h4>Motivation</h4>Computationally predicting major histocompatibility complex (MHC)-peptide binding affinity is an important problem in immunological bioinformatics. Recent cutting-edge deep learning-based methods for this problem are unable to achieve satisfactory performance for MHC class II molecules. This is because such methods generate the input by simply concatenating the two given sequences: (the estimated binding core of) a peptide and (the pseudo sequence of) an MHC class II molecule, ignoring biological knowledge behind the interactions of the two molecules. We thus propose a binding core-aware deep learning-based model, DeepMHCII, with a binding interaction convolution layer, which allows to integrate all potential binding cores (in a given peptide) with the MHC pseudo (binding) sequence, through modeling the interaction with multiple convolutional kernels.<h4>Results</h4>Extensive empirical experiments with four large-scale datasets demonstrate that DeepMHCII significantly outperformed four state-of-the-art methods under numerous settings, such as 5-fold cross-validation, leave one molecule out, validation with independent testing sets and binding core prediction. All these results and visualization of the predicted binding cores indicate the effectiveness of our model, DeepMHCII, and the importance of properly modeling biological facts in deep learning for high predictive performance and efficient knowledge discovery.<h4>Availability and implementation</h4>DeepMHCII is publicly available at https://github.com/yourh/DeepMHCII.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2022,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btac225"
-  },
-  {
-    "id": "10.1093/bioinformatics/btac252",
-    "title": "A LASSO-based approach to sample sites for phylogenetic tree search",
-    "authors": [
-      "Ecker N",
-      "Azouri D",
-      "Bettisworth B",
-      "Stamatakis A",
-      "Mansour Y",
-      "Mayrose I",
-      "Pupko T"
-    ],
-    "abstract": "<h4>Motivation</h4>In recent years, full-genome sequences have become increasingly available and as a result many modern phylogenetic analyses are based on very long sequences, often with over 100 000 sites. Phylogenetic reconstructions of large-scale alignments are challenging for likelihood-based phylogenetic inference programs and usually require using a powerful computer cluster. Current tools for alignment trimming prior to phylogenetic analysis do not promise a significant reduction in the alignment size and are claimed to have a negative effect on the accuracy of the obtained tree.<h4>Results</h4>Here, we propose an artificial-intelligence-based approach, which provides means to select the optimal subset of sites and a formula by which one can compute the log-likelihood of the entire data based on this subset. Our approach is based on training a regularized Lasso-regression model that optimizes the log-likelihood prediction accuracy while putting a constraint on the number of sites used for the approximation. We show that computing the likelihood based on 5% of the sites already provides accurate approximation of the tree likelihood based on the entire data. Furthermore, we show that using this Lasso-based approximation during a tree search decreased running-time substantially while retaining the same tree-search performance.<h4>Availability and implementation</h4>The code was implemented in Python version 3.8 and is available through GitHub (https://github.com/noaeker/lasso_positions_sampling). The datasets used in this paper were retrieved from Zhou et al. (2018) as described in section 3.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2022,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btac252"
-  },
-  {
-    "id": "10.1093/bioinformatics/btac242",
-    "title": "Simulating domain architecture evolution",
-    "authors": [
-      "Cui X",
-      "Xue Y",
-      "McCormack C",
-      "Garces A",
-      "Rachman TW",
-      "Yi Y",
-      "Stolzer M",
-      "Durand D"
-    ],
-    "abstract": "<h4>Motivation</h4>Simulation is an essential technique for generating biomolecular data with a 'known' history for use in validating phylogenetic inference and other evolutionary methods. On longer time scales, simulation supports investigations of equilibrium behavior and provides a formal framework for testing competing evolutionary hypotheses. Twenty years of molecular evolution research have produced a rich repertoire of simulation methods. However, current models do not capture the stringent constraints acting on the domain insertions, duplications, and deletions by which multidomain architectures evolve. Although these processes have the potential to generate any combination of domains, only a tiny fraction of possible domain combinations are observed in nature. Modeling these stringent constraints on domain order and co-occurrence is a fundamental challenge in domain architecture simulation that does not arise with sequence and gene family simulation.<h4>Results</h4>Here, we introduce a stochastic model of domain architecture evolution to simulate evolutionary trajectories that reflect the constraints on domain order and co-occurrence observed in nature. This framework is implemented in a novel domain architecture simulator, DomArchov, using the Metropolis-Hastings algorithm with data-driven transition probabilities. The use of a data-driven event module enables quick and easy redeployment of the simulator for use in different taxonomic and protein function contexts. Using empirical evaluation with metazoan datasets, we demonstrate that domain architectures simulated by DomArchov recapitulate properties of genuine domain architectures that reflect the constraints on domain order and adjacency seen in nature. This work expands the realm of evolutionary processes that are amenable to simulation.<h4>Availability and implementation</h4>DomArchov is written in Python 3 and is available at http://www.cs.cmu.edu/~durand/DomArchov. The data underlying this article are available via the same link.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2022,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btac242"
   },
   {
     "id": "10.1093/bioinformatics/btac251",

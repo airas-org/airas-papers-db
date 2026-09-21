@@ -1,5 +1,18 @@
 [
   {
+    "id": "10.1145/3573105.3575671",
+    "title": "Aesop: White-Box Best-First Proof Search for Lean",
+    "authors": [
+      "Jannis Limperg",
+      "Asta Halkjær From"
+    ],
+    "abstract": "We present Aesop, a proof search tactic for the Lean 4 interactive theorem prover. Aesop performs a tree-based search over a user-specified set of proof rules. It supports safe and unsafe rules and uses a best-first search strategy with customisable prioritisation. Aesop also allows users to register custom normalisation rules and integrates Lean's simplifier to support equational reasoning. Many details of Aesop's search procedure are designed to make it a white-box proof automation tactic, meaning that users should be able to easily predict how their rules will be applied, and thus how powerful and fast their Aesop invocations will be. Since we use a best-first search strategy, it is not obvious how to handle metavariables which appear in multiple goals. The most common strategy for dealing with metavariables relies on backtracking and is therefore not suitable for best-first search. We give an algorithm which addresses this issue. The algorithm works with any search strategy, is independent of the underlying logic and makes few assumptions about how rules interact with metavariables. We conjecture that with a fair search strategy, the algorithm is as complete as the given set of rules allows.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1145/3573105.3575671"
+  },
+  {
     "id": "10.1145/3573105.3579108",
     "title": "Improved Assistance for Interactive Proof (Keynote)",
     "authors": [
@@ -22,47 +35,6 @@
     "conference": "cpp",
     "year": 2023,
     "paper_url": "https://doi.org/10.1145/3573105.3575689"
-  },
-  {
-    "id": "10.1145/3573105.3575671",
-    "title": "Aesop: White-Box Best-First Proof Search for Lean",
-    "authors": [
-      "Jannis Limperg",
-      "Asta Halkjær From"
-    ],
-    "abstract": "We present Aesop, a proof search tactic for the Lean 4 interactive theorem prover. Aesop performs a tree-based search over a user-specified set of proof rules. It supports safe and unsafe rules and uses a best-first search strategy with customisable prioritisation. Aesop also allows users to register custom normalisation rules and integrates Lean's simplifier to support equational reasoning. Many details of Aesop's search procedure are designed to make it a white-box proof automation tactic, meaning that users should be able to easily predict how their rules will be applied, and thus how powerful and fast their Aesop invocations will be. Since we use a best-first search strategy, it is not obvious how to handle metavariables which appear in multiple goals. The most common strategy for dealing with metavariables relies on backtracking and is therefore not suitable for best-first search. We give an algorithm which addresses this issue. The algorithm works with any search strategy, is independent of the underlying logic and makes few assumptions about how rules interact with metavariables. We conjecture that with a fair search strategy, the algorithm is as complete as the given set of rules allows.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1145/3573105.3575671"
-  },
-  {
-    "id": "10.1145/3573105.3575672",
-    "title": "A First Complete Algorithm for Real Quantifier Elimination in Isabelle/HOL",
-    "authors": [
-      "Katherine Kosaian",
-      "Yong Kiam Tan",
-      "André Platzer"
-    ],
-    "abstract": "We formalize a multivariate quantifier elimination (QE) algorithm in the theorem prover Isabelle/HOL. Our algorithm is complete, in that it is able to reduce any quantified formula in the first-order logic of real arithmetic to a logically equivalent quantifier-free formula. The algorithm we formalize is a hybrid mixture of Tarski’s original QE algorithm and the Ben-Or, Kozen, and Reif algorithm, and it is the first complete multivariate QE algorithm formalized in Isabelle/HOL.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1145/3573105.3575672"
-  },
-  {
-    "id": "10.1145/3573105.3575683",
-    "title": "Practical and Sound Equality Tests, Automatically: Deriving eqType Instances for Jasmin’s Data Types with Coq-Elpi",
-    "authors": [
-      "Benjamin Grégoire",
-      "Jean-Christophe Léchenet",
-      "Enrico Tassi"
-    ],
-    "abstract": "In this paper we describe the design and implementation of feqb, a tool that synthesizes sound equality tests for inductive data types in the dependent type theory of the Coq system. Our procedure scales to large inductive data types, as in hundreds of constructors, since the terms and proofs it synthesizes are linear in the size of the inductive type. Moreover it supports some forms of dependently typed arguments and sigma types pairing data with proofs of decidable properties. Finally feqb handles deeply nested containers without requiring any human intervention.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1145/3573105.3575683"
   },
   {
     "id": "10.1145/3573105.3575685",
@@ -92,6 +64,34 @@
     "conference": "cpp",
     "year": 2023,
     "paper_url": "https://doi.org/10.1145/3573105.3575682"
+  },
+  {
+    "id": "10.1145/3573105.3575672",
+    "title": "A First Complete Algorithm for Real Quantifier Elimination in Isabelle/HOL",
+    "authors": [
+      "Katherine Kosaian",
+      "Yong Kiam Tan",
+      "André Platzer"
+    ],
+    "abstract": "We formalize a multivariate quantifier elimination (QE) algorithm in the theorem prover Isabelle/HOL. Our algorithm is complete, in that it is able to reduce any quantified formula in the first-order logic of real arithmetic to a logically equivalent quantifier-free formula. The algorithm we formalize is a hybrid mixture of Tarski’s original QE algorithm and the Ben-Or, Kozen, and Reif algorithm, and it is the first complete multivariate QE algorithm formalized in Isabelle/HOL.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1145/3573105.3575672"
+  },
+  {
+    "id": "10.1145/3573105.3575683",
+    "title": "Practical and Sound Equality Tests, Automatically: Deriving eqType Instances for Jasmin’s Data Types with Coq-Elpi",
+    "authors": [
+      "Benjamin Grégoire",
+      "Jean-Christophe Léchenet",
+      "Enrico Tassi"
+    ],
+    "abstract": "In this paper we describe the design and implementation of feqb, a tool that synthesizes sound equality tests for inductive data types in the dependent type theory of the Coq system. Our procedure scales to large inductive data types, as in hundreds of constructors, since the terms and proofs it synthesizes are linear in the size of the inductive type. Moreover it supports some forms of dependently typed arguments and sigma types pairing data with proofs of decidable properties. Finally feqb handles deeply nested containers without requiring any human intervention.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1145/3573105.3575683"
   },
   {
     "id": "10.1145/3573105.3575678",
@@ -134,49 +134,6 @@
     "paper_url": "https://doi.org/10.1145/3573105.3575688"
   },
   {
-    "id": "10.1145/3573105.3575674",
-    "title": "Compiling Higher-Order Specifications to SMT Solvers: How to Deal with Rejection Constructively",
-    "authors": [
-      "Matthew L. Daggitt",
-      "Robert Atkey",
-      "Wen Kokke",
-      "Ekaterina Komendantskaya",
-      "Luca Arnaboldi"
-    ],
-    "abstract": "Modern verification tools frequently rely on compiling high-level specifications to SMT queries. However, the high-level specification language is usually more expressive than the available solvers and therefore some syntactically valid specifications must be rejected by the tool. In such cases, the challenge is to provide a comprehensible error message to the user that relates the original syntactic form of the specification to the semantic reason it has been rejected. In this paper we demonstrate how this analysis may be performed by combining a standard unification-based type-checker with type classes and automatic generalisation. Concretely, type-checking is used as a constructive procedure for under-approximating whether a given specification lies in the subset of problems supported by the solver. Any resulting proof of rejection can be transformed into a detailed explanation to the user. The approach is compositional and does not require the user to add extra typing annotations to their program. We subsequently describe how the type system may be leveraged to provide a sound and complete compilation procedure from suitably typed expressions to SMT queries, which we have verified in Agda.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1145/3573105.3575674"
-  },
-  {
-    "id": "10.1145/3573105.3575681",
-    "title": "Mechanised Semantics for Gated Static Single Assignment",
-    "authors": [
-      "Yann Herklotz",
-      "Delphine Demange",
-      "Sandrine Blazy"
-    ],
-    "abstract": "The Gated Static Single Assignment (GSA) form was proposed by Ottenstein et al. in 1990, as an intermediate representation for implementing advanced static analyses and optimisation passes in compilers. Compared to SSA, GSA records additional data dependencies and provides more context, making optimisations more effective and allowing one to reason about programs as data-flow graphs. Many practical implementations have been proposed that follow, more or less faithfully, Ottenstein et al.'s seminal paper. But many discrepancies remain between these, depending on the kind of dependencies they are supposed to track and to leverage in analyses and code optimisations. In this paper, we present a formal semantics for GSA, mechanised in Coq. In particular, we clarify the nature and the purpose of gates in GSA, and define control-flow insensitive semantics for them. We provide a specification that can be used as a reference description for GSA. We also specify a translation from SSA to GSA and prove that this specification is semantics-preserving. We demonstrate that the approach is practical by implementing the specification as a validated translation within the CompCertSSA verified compiler.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1145/3573105.3575681"
-  },
-  {
-    "id": "10.1145/3573105.3575675",
-    "title": "A Formalization of Doob’s Martingale Convergence Theorems in mathlib",
-    "authors": [
-      "Kexing Ying",
-      "Rémy Degenne"
-    ],
-    "abstract": "We present the formalization of Doob’s martingale convergence theorems in the mathlib library for the Lean theorem prover. These theorems give conditions under which (sub)martingales converge, almost everywhere or in L1. In order to formalize those results, we build a definition of the conditional expectation in Banach spaces and develop the theory of stochastic processes, stopping times and martingales. As an application of the convergence theorems, we also present the formalization of Lévy’s generalized Borel-Cantelli lemma. This work on martingale theory is one of the first developments of probability theory in mathlib, and it builds upon diverse parts of that library such as topology, analysis and most importantly measure theory.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1145/3573105.3575675"
-  },
-  {
     "id": "10.1145/3573105.3575668",
     "title": "Formalizing and Computing Propositional Quantifiers",
     "authors": [
@@ -206,6 +163,49 @@
     "conference": "cpp",
     "year": 2023,
     "paper_url": "https://doi.org/10.1145/3573105.3575676"
+  },
+  {
+    "id": "10.1145/3573105.3575674",
+    "title": "Compiling Higher-Order Specifications to SMT Solvers: How to Deal with Rejection Constructively",
+    "authors": [
+      "Matthew L. Daggitt",
+      "Robert Atkey",
+      "Wen Kokke",
+      "Ekaterina Komendantskaya",
+      "Luca Arnaboldi"
+    ],
+    "abstract": "Modern verification tools frequently rely on compiling high-level specifications to SMT queries. However, the high-level specification language is usually more expressive than the available solvers and therefore some syntactically valid specifications must be rejected by the tool. In such cases, the challenge is to provide a comprehensible error message to the user that relates the original syntactic form of the specification to the semantic reason it has been rejected. In this paper we demonstrate how this analysis may be performed by combining a standard unification-based type-checker with type classes and automatic generalisation. Concretely, type-checking is used as a constructive procedure for under-approximating whether a given specification lies in the subset of problems supported by the solver. Any resulting proof of rejection can be transformed into a detailed explanation to the user. The approach is compositional and does not require the user to add extra typing annotations to their program. We subsequently describe how the type system may be leveraged to provide a sound and complete compilation procedure from suitably typed expressions to SMT queries, which we have verified in Agda.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1145/3573105.3575674"
+  },
+  {
+    "id": "10.1145/3573105.3575675",
+    "title": "A Formalization of Doob’s Martingale Convergence Theorems in mathlib",
+    "authors": [
+      "Kexing Ying",
+      "Rémy Degenne"
+    ],
+    "abstract": "We present the formalization of Doob’s martingale convergence theorems in the mathlib library for the Lean theorem prover. These theorems give conditions under which (sub)martingales converge, almost everywhere or in L1. In order to formalize those results, we build a definition of the conditional expectation in Banach spaces and develop the theory of stochastic processes, stopping times and martingales. As an application of the convergence theorems, we also present the formalization of Lévy’s generalized Borel-Cantelli lemma. This work on martingale theory is one of the first developments of probability theory in mathlib, and it builds upon diverse parts of that library such as topology, analysis and most importantly measure theory.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1145/3573105.3575675"
+  },
+  {
+    "id": "10.1145/3573105.3575681",
+    "title": "Mechanised Semantics for Gated Static Single Assignment",
+    "authors": [
+      "Yann Herklotz",
+      "Delphine Demange",
+      "Sandrine Blazy"
+    ],
+    "abstract": "The Gated Static Single Assignment (GSA) form was proposed by Ottenstein et al. in 1990, as an intermediate representation for implementing advanced static analyses and optimisation passes in compilers. Compared to SSA, GSA records additional data dependencies and provides more context, making optimisations more effective and allowing one to reason about programs as data-flow graphs. Many practical implementations have been proposed that follow, more or less faithfully, Ottenstein et al.'s seminal paper. But many discrepancies remain between these, depending on the kind of dependencies they are supposed to track and to leverage in analyses and code optimisations. In this paper, we present a formal semantics for GSA, mechanised in Coq. In particular, we clarify the nature and the purpose of gates in GSA, and define control-flow insensitive semantics for them. We provide a specification that can be used as a reference description for GSA. We also specify a translation from SSA to GSA and prove that this specification is semantics-preserving. We demonstrate that the approach is practical by implementing the specification as a validated translation within the CompCertSSA verified compiler.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1145/3573105.3575681"
   },
   {
     "id": "10.1145/3573105.3575687",
@@ -238,18 +238,6 @@
     "conference": "cpp",
     "year": 2023,
     "paper_url": "https://doi.org/10.1145/3573105.3575667"
-  },
-  {
-    "id": "10.1145/3573105.3575669",
-    "title": "A Formalized Reduction of Keller’s Conjecture",
-    "authors": [
-      "Joshua Clune"
-    ],
-    "abstract": "Keller’s conjecture in d dimensions states that there are no faceshare-free tilings of d-dimensional space by translates of a d-dimensional cube. In 2020, Brakensiek et al. resolved this 90-year-old conjecture by proving that the largest number of dimensions for which no faceshare-free tilings exist is 7. This result, as well as many others pertaining to Keller’s conjecture, critically relies on a reduction from Keller’s original conjecture to a statement about cliques in generalized Keller graphs. In this paper, we present a formalization of this reduction in the Lean 3 theorem prover. Additionally, we combine this formalized reduction with the verification of a large clique in the Keller graph G8 to obtain the first verified end-to-end proof that Keller’s conjecture is false in 8 dimensions.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1145/3573105.3575669"
   },
   {
     "id": "10.1145/3573105.3575684",
@@ -301,6 +289,18 @@
     "paper_url": "https://doi.org/10.1145/3573105.3575690"
   },
   {
+    "id": "10.1145/3573105.3575669",
+    "title": "A Formalized Reduction of Keller’s Conjecture",
+    "authors": [
+      "Joshua Clune"
+    ],
+    "abstract": "Keller’s conjecture in d dimensions states that there are no faceshare-free tilings of d-dimensional space by translates of a d-dimensional cube. In 2020, Brakensiek et al. resolved this 90-year-old conjecture by proving that the largest number of dimensions for which no faceshare-free tilings exist is 7. This result, as well as many others pertaining to Keller’s conjecture, critically relies on a reduction from Keller’s original conjecture to a statement about cliques in generalized Keller graphs. In this paper, we present a formalization of this reduction in the Lean 3 theorem prover. Additionally, we combine this formalized reduction with the verification of a large clique in the Keller graph G8 to obtain the first verified end-to-end proof that Keller’s conjecture is false in 8 dimensions.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1145/3573105.3575669"
+  },
+  {
     "id": "10.1145/3573105.3575677",
     "title": "Computing Cohomology Rings in Cubical Agda",
     "authors": [
@@ -328,20 +328,6 @@
     "paper_url": "https://doi.org/10.1145/3573105.3575679"
   },
   {
-    "id": "10.1145/3573105.3575673",
-    "title": "Verifying Term Graph Optimizations using Isabelle/HOL",
-    "authors": [
-      "Brae J. Webb",
-      "Ian J. Hayes",
-      "Mark Utting"
-    ],
-    "abstract": "Our objective is to formally verify the correctness of the hundreds of expression optimization rules used within the GraalVM compiler. When defining the semantics of a programming language, expressions naturally form abstract syntax trees, or, terms. However, in order to facilitate sharing of common subexpressions, modern compilers represent expressions as term graphs. Defining the semantics of term graphs is more complicated than defining the semantics of their equivalent term representations. More significantly, defining optimizations directly on term graphs and proving semantics preservation is considerably more complicated than on the equivalent term representations. On terms, optimizations can be expressed as conditional term rewriting rules, and proofs that the rewrites are semantics preserving are relatively straightforward. In this paper, we explore an approach to using term rewrites to verify term graph transformations of optimizations within the GraalVM compiler. This approach significantly reduces the overall verification effort and allows for simpler encoding of optimization rules.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1145/3573105.3575673"
-  },
-  {
     "id": "10.1145/3573105.3575680",
     "title": "A Formalisation of the Balog–Szemerédi–Gowers Theorem in Isabelle/HOL",
     "authors": [
@@ -354,6 +340,20 @@
     "conference": "cpp",
     "year": 2023,
     "paper_url": "https://doi.org/10.1145/3573105.3575680"
+  },
+  {
+    "id": "10.1145/3573105.3575673",
+    "title": "Verifying Term Graph Optimizations using Isabelle/HOL",
+    "authors": [
+      "Brae J. Webb",
+      "Ian J. Hayes",
+      "Mark Utting"
+    ],
+    "abstract": "Our objective is to formally verify the correctness of the hundreds of expression optimization rules used within the GraalVM compiler. When defining the semantics of a programming language, expressions naturally form abstract syntax trees, or, terms. However, in order to facilitate sharing of common subexpressions, modern compilers represent expressions as term graphs. Defining the semantics of term graphs is more complicated than defining the semantics of their equivalent term representations. More significantly, defining optimizations directly on term graphs and proving semantics preservation is considerably more complicated than on the equivalent term representations. On terms, optimizations can be expressed as conditional term rewriting rules, and proofs that the rewrites are semantics preserving are relatively straightforward. In this paper, we explore an approach to using term rewrites to verify term graph transformations of optimizations within the GraalVM compiler. This approach significantly reduces the overall verification effort and allows for simpler encoding of optimization rules.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1145/3573105.3575673"
   },
   {
     "id": "10.1145/3573105.3575691",

@@ -123,19 +123,6 @@
     "paper_url": "https://doi.org/10.1145/3497775.3503679"
   },
   {
-    "id": "10.1145/3497775.3503680",
-    "title": "(Deep) induction rules for GADTs",
-    "authors": [
-      "Patricia Johann",
-      "Enrico Ghiorzi"
-    ],
-    "abstract": "Deep data types are those that are constructed from other data types, including, possibly, themselves. In this case, they are said to be truly nested. Deep induction is an extension of structural induction that traverses all of the structure in a deep data type, propagating predicates on its primitive data throughout the entire structure. Deep induction can be used to prove properties of nested types, including truly nested types, that cannot be proved via structural induction. In this paper we show how to extend deep induction to GADTs that are not truly nested GADTs. This opens the way to incorporating automatic generation of (deep) induction rules for them into proof assistants. We also show that the techniques developed in this paper do not suffice for extending deep induction to truly nested GADTs, so more sophisticated techniques are needed to derive deep induction rules for them.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2022,
-    "paper_url": "https://doi.org/10.1145/3497775.3503680"
-  },
-  {
     "id": "10.1145/3497775.3505265",
     "title": "The sel4 verification: the art and craft of proof and the reality of commercial support (invited talk)",
     "authors": [
@@ -160,6 +147,31 @@
     "conference": "cpp",
     "year": 2022,
     "paper_url": "https://doi.org/10.1145/3497775.3503686"
+  },
+  {
+    "id": "10.1145/3497775.3503680",
+    "title": "(Deep) induction rules for GADTs",
+    "authors": [
+      "Patricia Johann",
+      "Enrico Ghiorzi"
+    ],
+    "abstract": "Deep data types are those that are constructed from other data types, including, possibly, themselves. In this case, they are said to be truly nested. Deep induction is an extension of structural induction that traverses all of the structure in a deep data type, propagating predicates on its primitive data throughout the entire structure. Deep induction can be used to prove properties of nested types, including truly nested types, that cannot be proved via structural induction. In this paper we show how to extend deep induction to GADTs that are not truly nested GADTs. This opens the way to incorporating automatic generation of (deep) induction rules for them into proof assistants. We also show that the techniques developed in this paper do not suffice for extending deep induction to truly nested GADTs, so more sophisticated techniques are needed to derive deep induction rules for them.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1145/3497775.3503680"
+  },
+  {
+    "id": "10.1145/3497775.3503949",
+    "title": "Structural embeddings revisited (invited talk)",
+    "authors": [
+      "César Muñoz"
+    ],
+    "abstract": "A semantic embedding is a logical encoding of a formal language, namely the object language, into the specification language of a logical framework. In their seminal paper “Experience with embedding hardware description languages in HOL”, Boulton et al. coined the terms deep and shallow embeddings depending on whether or not the syntax of terms of the target language is represented by a data type in the specification language. Thus, a deep embedding enables reasoning about classes of terms, while a shallow embedding limits reasoning to concrete terms. Embeddings of programming languages are well-known applications of interactive theorem provers, specially of those based on higher-order logic. These embeddings are often intended to support the study of a programming language semantics or to enhance a programming language with the deductive capabilities of the logical framework. A different type of embeddings, here referred to as structural embeddings, are intended to augment specification languages with structural elements of the object language. In a structural embedding, the outermost elements of the object language, i.e., the structural parts, are encoded, either deeply or shallowly, but the internal elements, i.e., the basic expressions, are those of the specification language. Advances in automated reasoning and user interfaces have enabled structural embeddings to enhance usability of interactive theorem provers and to reduce the gap between verification tools and modeling tools used by practitioners. This talk presents an overview of several years of research on theorem proving in safety-critical aerospace systems through the lens of embeddings and, more particularly, structural embeddings. The talk focuses on lessons learned and provides examples of successful applications to automated reasoning, termination analysis, floating-point analysis, and verification of cyber-physical systems. Our main point, which is hardly original, is that interactive theorem provers will serve as intermediate systems that connect a cluster of components. Structural embeddings could then provide the frontend capabilities to access this cluster of components.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1145/3497775.3503949"
   },
   {
     "id": "10.1145/3497775.3503693",
@@ -187,16 +199,47 @@
     "paper_url": "https://doi.org/10.1145/3497775.3503682"
   },
   {
-    "id": "10.1145/3497775.3503949",
-    "title": "Structural embeddings revisited (invited talk)",
+    "id": "10.1145/3497775.3503674",
+    "title": "An extension of the framework types-to-sets for Isabelle/HOL",
     "authors": [
-      "César Muñoz"
+      "Mihails Milehins"
     ],
-    "abstract": "A semantic embedding is a logical encoding of a formal language, namely the object language, into the specification language of a logical framework. In their seminal paper “Experience with embedding hardware description languages in HOL”, Boulton et al. coined the terms deep and shallow embeddings depending on whether or not the syntax of terms of the target language is represented by a data type in the specification language. Thus, a deep embedding enables reasoning about classes of terms, while a shallow embedding limits reasoning to concrete terms. Embeddings of programming languages are well-known applications of interactive theorem provers, specially of those based on higher-order logic. These embeddings are often intended to support the study of a programming language semantics or to enhance a programming language with the deductive capabilities of the logical framework. A different type of embeddings, here referred to as structural embeddings, are intended to augment specification languages with structural elements of the object language. In a structural embedding, the outermost elements of the object language, i.e., the structural parts, are encoded, either deeply or shallowly, but the internal elements, i.e., the basic expressions, are those of the specification language. Advances in automated reasoning and user interfaces have enabled structural embeddings to enhance usability of interactive theorem provers and to reduce the gap between verification tools and modeling tools used by practitioners. This talk presents an overview of several years of research on theorem proving in safety-critical aerospace systems through the lens of embeddings and, more particularly, structural embeddings. The talk focuses on lessons learned and provides examples of successful applications to automated reasoning, termination analysis, floating-point analysis, and verification of cyber-physical systems. Our main point, which is hardly original, is that interactive theorem provers will serve as intermediate systems that connect a cluster of components. Structural embeddings could then provide the frontend capabilities to access this cluster of components.",
+    "abstract": "In their article titled From Types to Sets by Local Type Definitions in Higher-Order Logic and published in the proceedings of the conference Interactive Theorem Proving in 2016, Ondřej Kunčar and Andrei Popescu propose an extension of the logic Isabelle/HOL and an associated algorithm for the relativization of the type-based theorems to more flexible set-based theorems, collectively referred to as Types-To-Sets. One of the aims of their work was to open an opportunity for the development of a software tool for applied relativization in the implementation of the logic Isabelle/HOL of the proof assistant Isabelle. In this article, we provide a description of a software framework for the interactive automated relativization of definitions and theorems in Isabelle/HOL, developed as an extension of the proof language Isabelle/Isar, building upon some of the ideas for further work expressed in the original article on Types-To-Sets by Ondřej Kunčar and Andrei Popescu and the subsequent article Smooth Manifolds and Types to Sets for Linear Algebra in Isabelle/HOL, which was written by Fabian Immler and Bohua Zhan and published in the proceedings of the International Conference on Certified Programs and Proofs in 2019.",
     "topic": "",
     "conference": "cpp",
     "year": 2022,
-    "paper_url": "https://doi.org/10.1145/3497775.3503949"
+    "paper_url": "https://doi.org/10.1145/3497775.3503674"
+  },
+  {
+    "id": "10.1145/3497775.3503691",
+    "title": "CertiStr: a certified string solver",
+    "authors": [
+      "Shuanglong Kan",
+      "Anthony Widjaja Lin",
+      "Philipp Rümmer",
+      "Micha Schrader"
+    ],
+    "abstract": "Theories over strings are among the most heavily researched logical theories in the SMT community in the past decade, owing to the error-prone nature of string manipulations, which often leads to security vulnerabilities (e.g. cross-site scripting and code injection). The majority of the existing decision procedures and solvers for these theories are themselves intricate; they are complicated algorithmically, and also have to deal with a very rich vocabulary of operations. This has led to a plethora of bugs in implementation, which have for instance been discovered through fuzzing. In this paper, we present CertiStr, a certified implementation of a string constraint solver for the theory of strings with concatenation and regular constraints. CertiStr aims to solve string constraints using a forward-propagation algorithm based on symbolic representations of regular constraints as symbolic automata, which returns three results: sat, unsat, and unknown, and is guaranteed to terminate for the string constraints whose concatenation dependencies are acyclic. The implementation has been developed and proven correct in Isabelle/HOL, through which an effective solver in OCaml was generated. We demonstrate the effectiveness and efficiency of CertiStr against the standard Kaluza benchmark, in which 80.4% tests are in the string constraint fragment of CertiStr. Of these 80.4% tests, CertiStr can solve 83.5% (i.e. CertiStr returns sat or unsat) within 60s.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1145/3497775.3503691"
+  },
+  {
+    "id": "10.1145/3497775.3503681",
+    "title": "Applying formal verification to microkernel IPC at meta",
+    "authors": [
+      "Quentin Carbonneaux",
+      "Noam Zilberstein",
+      "Christoph Klee",
+      "Peter W. O'Hearn",
+      "Francesco Zappa Nardelli"
+    ],
+    "abstract": "We use Iris, an implementation of concurrent separation logic in the Coq proof assistant, to verify two queue data structures used for inter-process communication in an operating system under development. Our motivations are twofold. First, we wish to leverage formal verification to boost confidence in a delicate piece of industrial code that was subject to numerous revisions. Second, we aim to gain information on the cost-benefit tradeoff of applying a state-of-the-art formal verification tool in our industrial setting. On both fronts, our endeavor has been a success. The verification effort proved that the queue algorithms are correct and uncovered four algorithmic simplifications as well as bugs in client code. The simplifications involve the removal of two memory barriers, one atomic load, and one boolean check, all in a performance-sensitive part of the OS. Removing the redundant boolean check revealed unintended uses of uninitialized memory in multiple device drivers, which were fixed. The proof work was completed in person months, not years, by engineers with no prior familiarity with Iris. These findings are spurring further use of verification at Meta.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1145/3497775.3503681"
   },
   {
     "id": "10.1145/3497775.3503676",
@@ -253,49 +296,6 @@
     "paper_url": "https://doi.org/10.1145/3497775.3503690"
   },
   {
-    "id": "10.1145/3497775.3503674",
-    "title": "An extension of the framework types-to-sets for Isabelle/HOL",
-    "authors": [
-      "Mihails Milehins"
-    ],
-    "abstract": "In their article titled From Types to Sets by Local Type Definitions in Higher-Order Logic and published in the proceedings of the conference Interactive Theorem Proving in 2016, Ondřej Kunčar and Andrei Popescu propose an extension of the logic Isabelle/HOL and an associated algorithm for the relativization of the type-based theorems to more flexible set-based theorems, collectively referred to as Types-To-Sets. One of the aims of their work was to open an opportunity for the development of a software tool for applied relativization in the implementation of the logic Isabelle/HOL of the proof assistant Isabelle. In this article, we provide a description of a software framework for the interactive automated relativization of definitions and theorems in Isabelle/HOL, developed as an extension of the proof language Isabelle/Isar, building upon some of the ideas for further work expressed in the original article on Types-To-Sets by Ondřej Kunčar and Andrei Popescu and the subsequent article Smooth Manifolds and Types to Sets for Linear Algebra in Isabelle/HOL, which was written by Fabian Immler and Bohua Zhan and published in the proceedings of the International Conference on Certified Programs and Proofs in 2019.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2022,
-    "paper_url": "https://doi.org/10.1145/3497775.3503674"
-  },
-  {
-    "id": "10.1145/3497775.3503691",
-    "title": "CertiStr: a certified string solver",
-    "authors": [
-      "Shuanglong Kan",
-      "Anthony Widjaja Lin",
-      "Philipp Rümmer",
-      "Micha Schrader"
-    ],
-    "abstract": "Theories over strings are among the most heavily researched logical theories in the SMT community in the past decade, owing to the error-prone nature of string manipulations, which often leads to security vulnerabilities (e.g. cross-site scripting and code injection). The majority of the existing decision procedures and solvers for these theories are themselves intricate; they are complicated algorithmically, and also have to deal with a very rich vocabulary of operations. This has led to a plethora of bugs in implementation, which have for instance been discovered through fuzzing. In this paper, we present CertiStr, a certified implementation of a string constraint solver for the theory of strings with concatenation and regular constraints. CertiStr aims to solve string constraints using a forward-propagation algorithm based on symbolic representations of regular constraints as symbolic automata, which returns three results: sat, unsat, and unknown, and is guaranteed to terminate for the string constraints whose concatenation dependencies are acyclic. The implementation has been developed and proven correct in Isabelle/HOL, through which an effective solver in OCaml was generated. We demonstrate the effectiveness and efficiency of CertiStr against the standard Kaluza benchmark, in which 80.4% tests are in the string constraint fragment of CertiStr. Of these 80.4% tests, CertiStr can solve 83.5% (i.e. CertiStr returns sat or unsat) within 60s.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2022,
-    "paper_url": "https://doi.org/10.1145/3497775.3503691"
-  },
-  {
-    "id": "10.1145/3497775.3503681",
-    "title": "Applying formal verification to microkernel IPC at meta",
-    "authors": [
-      "Quentin Carbonneaux",
-      "Noam Zilberstein",
-      "Christoph Klee",
-      "Peter W. O'Hearn",
-      "Francesco Zappa Nardelli"
-    ],
-    "abstract": "We use Iris, an implementation of concurrent separation logic in the Coq proof assistant, to verify two queue data structures used for inter-process communication in an operating system under development. Our motivations are twofold. First, we wish to leverage formal verification to boost confidence in a delicate piece of industrial code that was subject to numerous revisions. Second, we aim to gain information on the cost-benefit tradeoff of applying a state-of-the-art formal verification tool in our industrial setting. On both fronts, our endeavor has been a success. The verification effort proved that the queue algorithms are correct and uncovered four algorithmic simplifications as well as bugs in client code. The simplifications involve the removal of two memory barriers, one atomic load, and one boolean check, all in a performance-sensitive part of the OS. Removing the redundant boolean check revealed unintended uses of uninitialized memory in multiple device drivers, which were fixed. The proof work was completed in person months, not years, by engineers with no prior familiarity with Iris. These findings are spurring further use of verification at Meta.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2022,
-    "paper_url": "https://doi.org/10.1145/3497775.3503681"
-  },
-  {
     "id": "10.1145/3497775.3503692",
     "title": "A drag-and-drop proof tactic",
     "authors": [
@@ -324,19 +324,6 @@
     "paper_url": "https://doi.org/10.1145/3497775.3503677"
   },
   {
-    "id": "10.1145/3497775.3503684",
-    "title": "Undecidability, incompleteness, and completeness of second-order logic in Coq",
-    "authors": [
-      "Mark Koch",
-      "Dominik Kirst"
-    ],
-    "abstract": "We mechanise central metatheoretic results about second-order logic (SOL) using the Coq proof assistant. Concretely, we consider undecidability via many-one reduction from Diophantine equations (Hilbert's tenth problem), incompleteness regarding full semantics via categoricity of second-order Peano arithmetic, and completeness regarding Henkin semantics via translation to mono-sorted first-order logic (FOL). Moreover, this translation is used to transport further characteristic properties of FOL to SOL, namely the compactness and Löwenheim-Skolem theorems.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2022,
-    "paper_url": "https://doi.org/10.1145/3497775.3503684"
-  },
-  {
     "id": "10.1145/3497775.3503687",
     "title": "Forward build systems, formally",
     "authors": [
@@ -363,5 +350,18 @@
     "conference": "cpp",
     "year": 2022,
     "paper_url": "https://doi.org/10.1145/3497775.3503694"
+  },
+  {
+    "id": "10.1145/3497775.3503684",
+    "title": "Undecidability, incompleteness, and completeness of second-order logic in Coq",
+    "authors": [
+      "Mark Koch",
+      "Dominik Kirst"
+    ],
+    "abstract": "We mechanise central metatheoretic results about second-order logic (SOL) using the Coq proof assistant. Concretely, we consider undecidability via many-one reduction from Diophantine equations (Hilbert's tenth problem), incompleteness regarding full semantics via categoricity of second-order Peano arithmetic, and completeness regarding Henkin semantics via translation to mono-sorted first-order logic (FOL). Moreover, this translation is used to transport further characteristic properties of FOL to SOL, namely the compactness and Löwenheim-Skolem theorems.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1145/3497775.3503684"
   }
 ]
