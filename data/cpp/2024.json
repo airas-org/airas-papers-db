@@ -55,6 +55,19 @@
     "paper_url": "https://doi.org/10.1145/3636501.3636947"
   },
   {
+    "id": "10.1145/3636501.3636946",
+    "title": "Formal Probabilistic Methods for Combinatorial Structures using the Lovász Local Lemma",
+    "authors": [
+      "Chelsea Edmonds",
+      "Lawrence C. Paulson"
+    ],
+    "abstract": "Formalised libraries of combinatorial mathematics have rapidly expanded over the last five years, but few use one of the most important tools: probability. How can often intuitive probabilistic arguments on the existence of combinatorial structures, such as hypergraphs, be translated into a formal text? We present a modular framework using locales in Isabelle/HOL to formalise such probabilistic proofs, including the basic existence method and first formalisation of the Lovász local lemma, a fundamental result in probability. The formalisation focuses on general, reusable formal probabilistic lemmas for combinatorial structures, and highlights several notable gaps in typical intuitive probabilistic reasoning on paper. The applicability of the techniques is demonstrated through the formalisation of several classic lemmas on the existence of hypergraphs with certain colourings.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1145/3636501.3636946"
+  },
+  {
     "id": "10.1145/3636501.3636942",
     "title": "A Formalization of Complete Discrete Valuation Rings and Local Fields",
     "authors": [
@@ -79,45 +92,6 @@
     "conference": "cpp",
     "year": 2024,
     "paper_url": "https://doi.org/10.1145/3636501.3636953"
-  },
-  {
-    "id": "10.1145/3636501.3636945",
-    "title": "Formalizing the ∞-Categorical Yoneda Lemma",
-    "authors": [
-      "Nikolai Kudasov",
-      "Emily Riehl",
-      "Jonathan Weinberger"
-    ],
-    "abstract": "Formalized 1-category theory forms a core component of various libraries of mathematical proofs. However, more sophisticated results in fields from algebraic topology to theoretical physics, where objects have “higher structure,” rely on infinite-dimensional categories in place of 1-dimensional categories, and ∞-category theory has thusfar proved unamenable to computer formalization. Using a new proof assistant called Rzk, which is designed to support Riehl–Shulman’s simplicial extension of homotopy type theory for synthetic ∞-category theory, we provide the first formalizations of results from ∞-category theory. This includes in particular a formalization of the Yoneda lemma, often regarded as the fundamental theorem of category theory, a theorem which roughly states that an object of a given category is determined by its relationship to all of the other objects of the category. A key feature of our framework is that, thanks to the synthetic theory, many constructions are automatically natural or functorial. We plan to use Rzk to formalize further results from ∞-category theory, such as the theory of limits and colimits and adjunctions.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2024,
-    "paper_url": "https://doi.org/10.1145/3636501.3636945"
-  },
-  {
-    "id": "10.1145/3636501.3637683",
-    "title": "Under-Approximation for Scalable Bug Detection (Keynote)",
-    "authors": [
-      "Azalea Raad"
-    ],
-    "abstract": "Incorrectness Logic (IL) has recently been advanced as a logical under-approximate theory for proving the presence of bugs - dual to Hoare Logic, which is an over-approximate theory for proving the absence of bugs. To facilitate scalable bug detection, later we developed incorrectness separation logic (ISL) by marrying the under-approximate reasoning of IL with the local reasoning of separation logic and its frame rule. This locality leads to techniques that are compositional both in code (concentrating on a program component) and in the resources accessed (spatial locality), without tracking the entire global state or the global program within which a component sits. This enables reasoning to scale to large teams and codebases: reasoning can be done even when a global program is not present. We then developed Pulse-X, an automatic program analysis for catching memory safety errors, underpinned by ISL. Using PulseX, deployed at Meta, we found a number of real bugs in codebases such as OpenSSL, which were subsequently confirmed and fixed. We have compared the performance of Pulse-X against the state-of-the-art tool Infer on a number of large programs; our comparison shows that Pulse-X is comparable with Infer in terms of performance, and in certain cases its fix-rate surpasses that of Infer.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2024,
-    "paper_url": "https://doi.org/10.1145/3636501.3637683"
-  },
-  {
-    "id": "10.1145/3636501.3636950",
-    "title": "Unification for Subformula Linking under Quantifiers",
-    "authors": [
-      "Ike Mulder",
-      "Robbert Krebbers"
-    ],
-    "abstract": "Subformula linking is a technique that allows one to simplify proof goals by identifying subformulas of hypotheses that share atoms with the goal. It has been used by recent prototypes for gesture-based interactive theorem proving, but also for theorem proving in separation logic. When linking formulas, we should avoid information loss, i.e., subformula linking should succeed precisely when a provable simplification can be generated. Avoiding information loss is challenging when quantifiers are involved. Existing approaches either generate simplifications that involve equalities, or determine substitutions for variables via unification. The first approach can produce unprovable simplifications, while the second approach can fail to find desired links. We propose a third approach, called Quantifying on the Uninstantiated (QU), which is also based on unification and lies between the two existing approaches. We show that QU has practical applications for proof automation, by improving tactics for resource framing in the Iris framework for separation logic in Coq.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2024,
-    "paper_url": "https://doi.org/10.1145/3636501.3636950"
   },
   {
     "id": "10.1145/3636501.3636958",
@@ -167,32 +141,31 @@
     "paper_url": "https://doi.org/10.1145/3636501.3636951"
   },
   {
-    "id": "10.1145/3636501.3636946",
-    "title": "Formal Probabilistic Methods for Combinatorial Structures using the Lovász Local Lemma",
+    "id": "10.1145/3636501.3636945",
+    "title": "Formalizing the ∞-Categorical Yoneda Lemma",
     "authors": [
-      "Chelsea Edmonds",
-      "Lawrence C. Paulson"
+      "Nikolai Kudasov",
+      "Emily Riehl",
+      "Jonathan Weinberger"
     ],
-    "abstract": "Formalised libraries of combinatorial mathematics have rapidly expanded over the last five years, but few use one of the most important tools: probability. How can often intuitive probabilistic arguments on the existence of combinatorial structures, such as hypergraphs, be translated into a formal text? We present a modular framework using locales in Isabelle/HOL to formalise such probabilistic proofs, including the basic existence method and first formalisation of the Lovász local lemma, a fundamental result in probability. The formalisation focuses on general, reusable formal probabilistic lemmas for combinatorial structures, and highlights several notable gaps in typical intuitive probabilistic reasoning on paper. The applicability of the techniques is demonstrated through the formalisation of several classic lemmas on the existence of hypergraphs with certain colourings.",
+    "abstract": "Formalized 1-category theory forms a core component of various libraries of mathematical proofs. However, more sophisticated results in fields from algebraic topology to theoretical physics, where objects have “higher structure,” rely on infinite-dimensional categories in place of 1-dimensional categories, and ∞-category theory has thusfar proved unamenable to computer formalization. Using a new proof assistant called Rzk, which is designed to support Riehl–Shulman’s simplicial extension of homotopy type theory for synthetic ∞-category theory, we provide the first formalizations of results from ∞-category theory. This includes in particular a formalization of the Yoneda lemma, often regarded as the fundamental theorem of category theory, a theorem which roughly states that an object of a given category is determined by its relationship to all of the other objects of the category. A key feature of our framework is that, thanks to the synthetic theory, many constructions are automatically natural or functorial. We plan to use Rzk to formalize further results from ∞-category theory, such as the theory of limits and colimits and adjunctions.",
     "topic": "",
     "conference": "cpp",
     "year": 2024,
-    "paper_url": "https://doi.org/10.1145/3636501.3636946"
+    "paper_url": "https://doi.org/10.1145/3636501.3636945"
   },
   {
-    "id": "10.1145/3636501.3636940",
-    "title": "Compositional Verification of Concurrent C Programs with Search Structure Templates",
+    "id": "10.1145/3636501.3636950",
+    "title": "Unification for Subformula Linking under Quantifiers",
     "authors": [
-      "Duc-Than Nguyen",
-      "Lennart Beringer",
-      "William Mansky",
-      "Shengyi Wang"
+      "Ike Mulder",
+      "Robbert Krebbers"
     ],
-    "abstract": "Concurrent search structure templates are a technique for separating the verification of a concurrent data structure into concurrency-control and data-structure components, which can then be modularly combined with no additional proof effort. In this paper, we implement the template approach in the Verified Software Toolchain (VST), and use it to prove correctness of C implementations of fine-grained concurrent data structures. This involves translating code, specifications, and proofs to the idiom of C and VST, and gives us another look at the requirements and limitations of the template approach. We encounter several questions about the boundaries between template and data structure, as well as some common data structure operations that cannot naturally be decomposed into templates. Nonetheless, the approach appears promising for modular verification of real-world concurrent data structures.",
+    "abstract": "Subformula linking is a technique that allows one to simplify proof goals by identifying subformulas of hypotheses that share atoms with the goal. It has been used by recent prototypes for gesture-based interactive theorem proving, but also for theorem proving in separation logic. When linking formulas, we should avoid information loss, i.e., subformula linking should succeed precisely when a provable simplification can be generated. Avoiding information loss is challenging when quantifiers are involved. Existing approaches either generate simplifications that involve equalities, or determine substitutions for variables via unification. The first approach can produce unprovable simplifications, while the second approach can fail to find desired links. We propose a third approach, called Quantifying on the Uninstantiated (QU), which is also based on unification and lies between the two existing approaches. We show that QU has practical applications for proof automation, by improving tactics for resource framing in the Iris framework for separation logic in Coq.",
     "topic": "",
     "conference": "cpp",
     "year": 2024,
-    "paper_url": "https://doi.org/10.1145/3636501.3636940"
+    "paper_url": "https://doi.org/10.1145/3636501.3636950"
   },
   {
     "id": "10.1145/3636501.3636957",
@@ -208,30 +181,16 @@
     "paper_url": "https://doi.org/10.1145/3636501.3636957"
   },
   {
-    "id": "10.1145/3636501.3636952",
-    "title": "Memory Simulations, Security and Optimization in a Verified Compiler",
+    "id": "10.1145/3636501.3637683",
+    "title": "Under-Approximation for Scalable Bug Detection (Keynote)",
     "authors": [
-      "David Monniaux"
+      "Azalea Raad"
     ],
-    "abstract": "Current compilers implement security features and optimizations that require nontrivial semantic reasoning about pointers and memory allocation: the program after the insertion of the security feature, or after applying the optimization, must simulate the original program despite a different memory layout. In this article, we illustrate such reasoning on pointer allocations through memory extensions and injections, as well as fine points on undefined values, by explaining how we implemented and proved correct two security features (stack canaries and pointer authentication) and one optimization (tail recursion elimination) in the CompCert formally verified compiler.",
+    "abstract": "Incorrectness Logic (IL) has recently been advanced as a logical under-approximate theory for proving the presence of bugs - dual to Hoare Logic, which is an over-approximate theory for proving the absence of bugs. To facilitate scalable bug detection, later we developed incorrectness separation logic (ISL) by marrying the under-approximate reasoning of IL with the local reasoning of separation logic and its frame rule. This locality leads to techniques that are compositional both in code (concentrating on a program component) and in the resources accessed (spatial locality), without tracking the entire global state or the global program within which a component sits. This enables reasoning to scale to large teams and codebases: reasoning can be done even when a global program is not present. We then developed Pulse-X, an automatic program analysis for catching memory safety errors, underpinned by ISL. Using PulseX, deployed at Meta, we found a number of real bugs in codebases such as OpenSSL, which were subsequently confirmed and fixed. We have compared the performance of Pulse-X against the state-of-the-art tool Infer on a number of large programs; our comparison shows that Pulse-X is comparable with Infer in terms of performance, and in certain cases its fix-rate surpasses that of Infer.",
     "topic": "",
     "conference": "cpp",
     "year": 2024,
-    "paper_url": "https://doi.org/10.1145/3636501.3636952"
-  },
-  {
-    "id": "10.1145/3636501.3636959",
-    "title": "Lean Formalization of Extended Regular Expression Matching with Lookarounds",
-    "authors": [
-      "Ekaterina Zhuchko",
-      "Margus Veanes",
-      "Gabriel Ebner"
-    ],
-    "abstract": "We present a formalization of a matching algorithm for extended regular expression matching based on locations and symbolic derivatives which supports intersection, complement and lookarounds and whose implementation mirrors an extension of the recent .NET NonBacktracking regular expression engine. The formalization of the algorithm and its semantics uses the Lean 4 proof assistant. The proof of its correctness is with respect to standard matching semantics.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2024,
-    "paper_url": "https://doi.org/10.1145/3636501.3636959"
+    "paper_url": "https://doi.org/10.1145/3636501.3637683"
   },
   {
     "id": "10.1145/3636501.3636961",
@@ -267,6 +226,21 @@
     "paper_url": "https://doi.org/10.1145/3636501.3636944"
   },
   {
+    "id": "10.1145/3636501.3636940",
+    "title": "Compositional Verification of Concurrent C Programs with Search Structure Templates",
+    "authors": [
+      "Duc-Than Nguyen",
+      "Lennart Beringer",
+      "William Mansky",
+      "Shengyi Wang"
+    ],
+    "abstract": "Concurrent search structure templates are a technique for separating the verification of a concurrent data structure into concurrency-control and data-structure components, which can then be modularly combined with no additional proof effort. In this paper, we implement the template approach in the Verified Software Toolchain (VST), and use it to prove correctness of C implementations of fine-grained concurrent data structures. This involves translating code, specifications, and proofs to the idiom of C and VST, and gives us another look at the requirements and limitations of the template approach. We encounter several questions about the boundaries between template and data structure, as well as some common data structure operations that cannot naturally be decomposed into templates. Nonetheless, the approach appears promising for modular verification of real-world concurrent data structures.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1145/3636501.3636940"
+  },
+  {
     "id": "10.1145/3636501.3636955",
     "title": "Univalent Double Categories",
     "authors": [
@@ -280,6 +254,32 @@
     "conference": "cpp",
     "year": 2024,
     "paper_url": "https://doi.org/10.1145/3636501.3636955"
+  },
+  {
+    "id": "10.1145/3636501.3636959",
+    "title": "Lean Formalization of Extended Regular Expression Matching with Lookarounds",
+    "authors": [
+      "Ekaterina Zhuchko",
+      "Margus Veanes",
+      "Gabriel Ebner"
+    ],
+    "abstract": "We present a formalization of a matching algorithm for extended regular expression matching based on locations and symbolic derivatives which supports intersection, complement and lookarounds and whose implementation mirrors an extension of the recent .NET NonBacktracking regular expression engine. The formalization of the algorithm and its semantics uses the Lean 4 proof assistant. The proof of its correctness is with respect to standard matching semantics.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1145/3636501.3636959"
+  },
+  {
+    "id": "10.1145/3636501.3636952",
+    "title": "Memory Simulations, Security and Optimization in a Verified Compiler",
+    "authors": [
+      "David Monniaux"
+    ],
+    "abstract": "Current compilers implement security features and optimizations that require nontrivial semantic reasoning about pointers and memory allocation: the program after the insertion of the security feature, or after applying the optimization, must simulate the original program despite a different memory layout. In this article, we illustrate such reasoning on pointer allocations through memory extensions and injections, as well as fine points on undefined values, by explaining how we implemented and proved correct two security features (stack canaries and pointer authentication) and one optimization (tail recursion elimination) in the CompCert formally verified compiler.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1145/3636501.3636952"
   },
   {
     "id": "10.1145/3636501.3636949",

@@ -469,147 +469,6 @@
     "paper_url": "https://doi.org/10.1093/bioinformatics/btad266"
   },
   {
-    "id": "10.1093/bioinformatics/btad230",
-    "title": "A weighted distance-based approach for deriving consensus tumor evolutionary trees",
-    "authors": [
-      "Guang Z",
-      "Smith-Erb M",
-      "Oesper L"
-    ],
-    "abstract": "<h4>Motivation</h4>The acquisition of somatic mutations by a tumor can be modeled by a type of evolutionary tree. However, it is impossible to observe this tree directly. Instead, numerous algorithms have been developed to infer such a tree from different types of sequencing data. But such methods can produce conflicting trees for the same patient, making it desirable to have approaches that can combine several such tumor trees into a consensus or summary tree. We introduce The Weighted m-Tumor Tree Consensus Problem (W-m-TTCP) to find a consensus tree among multiple plausible tumor evolutionary histories, each assigned a confidence weight, given a specific distance measure between tumor trees. We present an algorithm called TuELiP that is based on integer linear programming which solves the W-m-TTCP, and unlike other existing consensus methods, allows the input trees to be weighted differently.<h4>Results</h4>On simulated data we show that TuELiP outperforms two existing methods at correctly identifying the true underlying tree used to create the simulations. We also show that the incorporation of weights can lead to more accurate tree inference. On a Triple-Negative Breast Cancer dataset, we show that including confidence weights can have important impacts on the consensus tree identified.<h4>Availability</h4>An implementation of TuELiP and simulated datasets are available at https://bitbucket.org/oesperlab/consensus-ilp/src/main/.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btad230"
-  },
-  {
-    "id": "10.1093/bioinformatics/btad239",
-    "title": "GAN-based data augmentation for transcriptomics: survey and comparative assessment",
-    "authors": [
-      "Lacan A",
-      "Sebag M",
-      "Hanczar B"
-    ],
-    "abstract": "<h4>Motivation</h4>Transcriptomics data are becoming more accessible due to high-throughput and less costly sequencing methods. However, data scarcity prevents exploiting deep learning models' full predictive power for phenotypes prediction. Artificially enhancing the training sets, namely data augmentation, is suggested as a regularization strategy. Data augmentation corresponds to label-invariant transformations of the training set (e.g. geometric transformations on images and syntax parsing on text data). Such transformations are, unfortunately, unknown in the transcriptomic field. Therefore, deep generative models such as generative adversarial networks (GANs) have been proposed to generate additional samples. In this article, we analyze GAN-based data augmentation strategies with respect to performance indicators and the classification of cancer phenotypes.<h4>Results</h4>This work highlights a significant boost in binary and multiclass classification performances due to augmentation strategies. Without augmentation, training a classifier on only 50 RNA-seq samples yields an accuracy of, respectively, 94% and 70% for binary and tissue classification. In comparison, we achieved 98% and 94% of accuracy when adding 1000 augmented samples. Richer architectures and more expensive training of the GAN return better augmentation performances and generated data quality overall. Further analysis of the generated data shows that several performance indicators are needed to assess its quality correctly.<h4>Availability and implementation</h4>All data used for this research are publicly available and comes from The Cancer Genome Atlas. Reproducible code is available on the GitLab repository: https://forge.ibisc.univ-evry.fr/alacan/GANs-for-transcriptomics.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btad239"
-  },
-  {
-    "id": "10.1093/bioinformatics/btad274",
-    "title": "Privacy preserving identification of population stratification for collaborative genomic research",
-    "authors": [
-      "Dervishi L",
-      "Li W",
-      "Halimi A",
-      "Jiang X",
-      "Vaidya J",
-      "Ayday E"
-    ],
-    "abstract": "The rapid improvements in genomic sequencing technology have led to the proliferation of locally collected genomic datasets. Given the sensitivity of genomic data, it is crucial to conduct collaborative studies while preserving the privacy of the individuals. However, before starting any collaborative research effort, the quality of the data needs to be assessed. One of the essential steps of the quality control process is population stratification: identifying the presence of genetic difference in individuals due to subpopulations. One of the common methods used to group genomes of individuals based on ancestry is principal component analysis (PCA). In this article, we propose a privacy-preserving framework which utilizes PCA to assign individuals to populations across multiple collaborators as part of the population stratification step. In our proposed client-server-based scheme, we initially let the server train a global PCA model on a publicly available genomic dataset which contains individuals from multiple populations. The global PCA model is later used to reduce the dimensionality of the local data by each collaborator (client). After adding noise to achieve local differential privacy (LDP), the collaborators send metadata (in the form of their local PCA outputs) about their research datasets to the server, which then aligns the local PCA results to identify the genetic differences among collaborators' datasets. Our results on real genomic data show that the proposed framework can perform population stratification analysis with high accuracy while preserving the privacy of the research participants.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btad274"
-  },
-  {
-    "id": "10.1093/bioinformatics/btad269",
-    "title": "CLARIFY: cell-cell interaction and gene regulatory network refinement from spatially resolved transcriptomics",
-    "authors": [
-      "Bafna M",
-      "Li H",
-      "Zhang X"
-    ],
-    "abstract": "<h4>Motivation</h4>Gene regulatory networks (GRNs) in a cell provide the tight feedback needed to synchronize cell actions. However, genes in a cell also take input from, and provide signals to other neighboring cells. These cell-cell interactions (CCIs) and the GRNs deeply influence each other. Many computational methods have been developed for GRN inference in cells. More recently, methods were proposed to infer CCIs using single cell gene expression data with or without cell spatial location information. However, in reality, the two processes do not exist in isolation and are subject to spatial constraints. Despite this rationale, no methods currently exist to infer GRNs and CCIs using the same model.<h4>Results</h4>We propose CLARIFY, a tool that takes GRNs as input, uses them and spatially resolved gene expression data to infer CCIs, while simultaneously outputting refined cell-specific GRNs. CLARIFY uses a novel multi-level graph autoencoder, which mimics cellular networks at a higher level and cell-specific GRNs at a deeper level. We applied CLARIFY to two real spatial transcriptomic datasets, one using seqFISH and the other using MERFISH, and also tested on simulated datasets from scMultiSim. We compared the quality of predicted GRNs and CCIs with state-of-the-art baseline methods that inferred either only GRNs or only CCIs. The results show that CLARIFY consistently outperforms the baseline in terms of commonly used evaluation metrics. Our results point to the importance of co-inference of CCIs and GRNs and to the use of layered graph neural networks as an inference tool for biological networks.<h4>Availability and implementation</h4>The source code and data is available at https://github.com/MihirBafna/CLARIFY.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btad269"
-  },
-  {
-    "id": "10.1093/bioinformatics/btad240",
-    "title": "SynBa: improved estimation of drug combination synergies with uncertainty quantification",
-    "authors": [
-      "Zhang H",
-      "Ek CH",
-      "Rattray M",
-      "Milo M"
-    ],
-    "abstract": "<h4>Motivation</h4>There exists a range of different quantification frameworks to estimate the synergistic effect of drug combinations. The diversity and disagreement in estimates make it challenging to determine which combinations from a large drug screening should be proceeded with. Furthermore, the lack of accurate uncertainty quantification for those estimates precludes the choice of optimal drug combinations based on the most favourable synergistic effect.<h4>Results</h4>In this work, we propose SynBa, a flexible Bayesian approach to estimate the uncertainty of the synergistic efficacy and potency of drug combinations, so that actionable decisions can be derived from the model outputs. The actionability is enabled by incorporating the Hill equation into SynBa, so that the parameters representing the potency and the efficacy can be preserved. Existing knowledge may be conveniently inserted due to the flexibility of the prior, as shown by the empirical Beta prior defined for the normalized maximal inhibition. Through experiments on large combination screenings and comparison against benchmark methods, we show that SynBa provides improved accuracy of dose-response predictions and better-calibrated uncertainty estimation for the parameters and the predictions.<h4>Availability and implementation</h4>The code for SynBa is available at https://github.com/HaotingZhang1/SynBa. The datasets are publicly available (DOI of DREAM: 10.7303/syn4231880; DOI of the NCI-ALMANAC subset: 10.5281/zenodo.4135059).",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btad240"
-  },
-  {
-    "id": "10.1093/bioinformatics/btad234",
-    "title": "Transfer learning for drug-target interaction prediction",
-    "authors": [
-      "Dalkıran A",
-      "Atakan A",
-      "Rifaioğlu AS",
-      "Martin MJ",
-      "Atalay RÇ",
-      "Acar AC",
-      "Doğan T",
-      "Atalay V"
-    ],
-    "abstract": "<h4>Motivation</h4>Utilizing AI-driven approaches for drug-target interaction (DTI) prediction require large volumes of training data which are not available for the majority of target proteins. In this study, we investigate the use of deep transfer learning for the prediction of interactions between drug candidate compounds and understudied target proteins with scarce training data. The idea here is to first train a deep neural network classifier with a generalized source training dataset of large size and then to reuse this pre-trained neural network as an initial configuration for re-training/fine-tuning purposes with a small-sized specialized target training dataset. To explore this idea, we selected six protein families that have critical importance in biomedicine: kinases, G-protein-coupled receptors (GPCRs), ion channels, nuclear receptors, proteases, and transporters. In two independent experiments, the protein families of transporters and nuclear receptors were individually set as the target datasets, while the remaining five families were used as the source datasets. Several size-based target family training datasets were formed in a controlled manner to assess the benefit provided by the transfer learning approach.<h4>Results</h4>Here, we present a systematic evaluation of our approach by pre-training a feed-forward neural network with source training datasets and applying different modes of transfer learning from the pre-trained source network to a target dataset. The performance of deep transfer learning is evaluated and compared with that of training the same deep neural network from scratch. We found that when the training dataset contains fewer than 100 compounds, transfer learning outperforms the conventional strategy of training the system from scratch, suggesting that transfer learning is advantageous for predicting binders to under-studied targets.<h4>Availability and implementation</h4>The source code and datasets are available at https://github.com/cansyl/TransferLearning4DTI. Our web-based service containing the ready-to-use pre-trained models is accessible at https://tl4dti.kansil.org.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btad234"
-  },
-  {
-    "id": "10.1093/bioinformatics/btad236",
-    "title": "Bakdrive: identifying a minimum set of bacterial species driving interactions across multiple microbial communities",
-    "authors": [
-      "Wang Q",
-      "Nute M",
-      "Treangen TJ"
-    ],
-    "abstract": "<h4>Motivation</h4>Interactions among microbes within microbial communities have been shown to play crucial roles in human health. In spite of recent progress, low-level knowledge of bacteria driving microbial interactions within microbiomes remains unknown, limiting our ability to fully decipher and control microbial communities.<h4>Results</h4>We present a novel approach for identifying species driving interactions within microbiomes. Bakdrive infers ecological networks of given metagenomic sequencing samples and identifies minimum sets of driver species (MDS) using control theory. Bakdrive has three key innovations in this space: (i) it leverages inherent information from metagenomic sequencing samples to identify driver species, (ii) it explicitly takes host-specific variation into consideration, and (iii) it does not require a known ecological network. In extensive simulated data, we demonstrate identifying driver species identified from healthy donor samples and introducing them to the disease samples, we can restore the gut microbiome in recurrent Clostridioides difficile (rCDI) infection patients to a healthy state. We also applied Bakdrive to two real datasets, rCDI and Crohn's disease patients, uncovering driver species consistent with previous work. Bakdrive represents a novel approach for capturing microbial interactions.<h4>Availability and implementation</h4>Bakdrive is open-source and available at: https://gitlab.com/treangenlab/bakdrive.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btad236"
-  },
-  {
-    "id": "10.1093/bioinformatics/btad267",
-    "title": "scKINETICS: inference of regulatory velocity with single-cell transcriptomics data",
-    "authors": [
-      "Burdziak C",
-      "Zhao CJ",
-      "Haviv D",
-      "Alonso-Curbelo D",
-      "Lowe SW",
-      "Pe'er D"
-    ],
-    "abstract": "<h4>Motivation</h4>Transcriptional dynamics are governed by the action of regulatory proteins and are fundamental to systems ranging from normal development to disease. RNA velocity methods for tracking phenotypic dynamics ignore information on the regulatory drivers of gene expression variability through time.<h4>Results</h4>We introduce scKINETICS (Key regulatory Interaction NETwork for Inferring Cell Speed), a dynamical model of gene expression change which is fit with the simultaneous learning of per-cell transcriptional velocities and a governing gene regulatory network. Fitting is accomplished through an expectation-maximization approach designed to learn the impact of each regulator on its target genes, leveraging biologically motivated priors from epigenetic data, gene-gene coexpression, and constraints on cells' future states imposed by the phenotypic manifold. Applying this approach to an acute pancreatitis dataset recapitulates a well-studied axis of acinar-to-ductal transdifferentiation whilst proposing novel regulators of this process, including factors with previously appreciated roles in driving pancreatic tumorigenesis. In benchmarking experiments, we show that scKINETICS successfully extends and improves existing velocity approaches to generate interpretable, mechanistic models of gene regulatory dynamics.<h4>Availability and implementation</h4>All python code and an accompanying Jupyter notebook with demonstrations are available at http://github.com/dpeerlab/scKINETICS.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btad267"
-  },
-  {
-    "id": "10.1093/bioinformatics/btad228",
-    "title": "TSignal: a transformer model for signal peptide prediction",
-    "authors": [
-      "Dumitrescu A",
-      "Jokinen E",
-      "Paatero A",
-      "Kellosalo J",
-      "Paavilainen VO",
-      "Lähdesmäki H"
-    ],
-    "abstract": "<h4>Motivation</h4>Signal peptides (SPs) are short amino acid segments present at the N-terminus of newly synthesized proteins that facilitate protein translocation into the lumen of the endoplasmic reticulum, after which they are cleaved off. Specific regions of SPs influence the efficiency of protein translocation, and small changes in their primary structure can abolish protein secretion altogether. The lack of conserved motifs across SPs, sensitivity to mutations, and variability in the length of the peptides make SP prediction a challenging task that has been extensively pursued over the years.<h4>Results</h4>We introduce TSignal, a deep transformer-based neural network architecture that utilizes BERT language models and dot-product attention techniques. TSignal predicts the presence of SPs and the cleavage site between the SP and the translocated mature protein. We use common benchmark datasets and show competitive accuracy in terms of SP presence prediction and state-of-the-art accuracy in terms of cleavage site prediction for most of the SP types and organism groups. We further illustrate that our fully data-driven trained model identifies useful biological information on heterogeneous test sequences.<h4>Availability and implementation</h4>TSignal is available at: https://github.com/Dumitrescu-Alexandru/TSignal.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btad228"
-  },
-  {
     "id": "10.1093/bioinformatics/btad238",
     "title": "Finding phylogeny-aware and biologically meaningful averages of metagenomic samples: L2UniFrac",
     "authors": [
@@ -922,5 +781,146 @@
     "conference": "ismb",
     "year": 2023,
     "paper_url": "https://doi.org/10.1093/bioinformatics/btad265"
+  },
+  {
+    "id": "10.1093/bioinformatics/btad230",
+    "title": "A weighted distance-based approach for deriving consensus tumor evolutionary trees",
+    "authors": [
+      "Guang Z",
+      "Smith-Erb M",
+      "Oesper L"
+    ],
+    "abstract": "<h4>Motivation</h4>The acquisition of somatic mutations by a tumor can be modeled by a type of evolutionary tree. However, it is impossible to observe this tree directly. Instead, numerous algorithms have been developed to infer such a tree from different types of sequencing data. But such methods can produce conflicting trees for the same patient, making it desirable to have approaches that can combine several such tumor trees into a consensus or summary tree. We introduce The Weighted m-Tumor Tree Consensus Problem (W-m-TTCP) to find a consensus tree among multiple plausible tumor evolutionary histories, each assigned a confidence weight, given a specific distance measure between tumor trees. We present an algorithm called TuELiP that is based on integer linear programming which solves the W-m-TTCP, and unlike other existing consensus methods, allows the input trees to be weighted differently.<h4>Results</h4>On simulated data we show that TuELiP outperforms two existing methods at correctly identifying the true underlying tree used to create the simulations. We also show that the incorporation of weights can lead to more accurate tree inference. On a Triple-Negative Breast Cancer dataset, we show that including confidence weights can have important impacts on the consensus tree identified.<h4>Availability</h4>An implementation of TuELiP and simulated datasets are available at https://bitbucket.org/oesperlab/consensus-ilp/src/main/.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btad230"
+  },
+  {
+    "id": "10.1093/bioinformatics/btad239",
+    "title": "GAN-based data augmentation for transcriptomics: survey and comparative assessment",
+    "authors": [
+      "Lacan A",
+      "Sebag M",
+      "Hanczar B"
+    ],
+    "abstract": "<h4>Motivation</h4>Transcriptomics data are becoming more accessible due to high-throughput and less costly sequencing methods. However, data scarcity prevents exploiting deep learning models' full predictive power for phenotypes prediction. Artificially enhancing the training sets, namely data augmentation, is suggested as a regularization strategy. Data augmentation corresponds to label-invariant transformations of the training set (e.g. geometric transformations on images and syntax parsing on text data). Such transformations are, unfortunately, unknown in the transcriptomic field. Therefore, deep generative models such as generative adversarial networks (GANs) have been proposed to generate additional samples. In this article, we analyze GAN-based data augmentation strategies with respect to performance indicators and the classification of cancer phenotypes.<h4>Results</h4>This work highlights a significant boost in binary and multiclass classification performances due to augmentation strategies. Without augmentation, training a classifier on only 50 RNA-seq samples yields an accuracy of, respectively, 94% and 70% for binary and tissue classification. In comparison, we achieved 98% and 94% of accuracy when adding 1000 augmented samples. Richer architectures and more expensive training of the GAN return better augmentation performances and generated data quality overall. Further analysis of the generated data shows that several performance indicators are needed to assess its quality correctly.<h4>Availability and implementation</h4>All data used for this research are publicly available and comes from The Cancer Genome Atlas. Reproducible code is available on the GitLab repository: https://forge.ibisc.univ-evry.fr/alacan/GANs-for-transcriptomics.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btad239"
+  },
+  {
+    "id": "10.1093/bioinformatics/btad274",
+    "title": "Privacy preserving identification of population stratification for collaborative genomic research",
+    "authors": [
+      "Dervishi L",
+      "Li W",
+      "Halimi A",
+      "Jiang X",
+      "Vaidya J",
+      "Ayday E"
+    ],
+    "abstract": "The rapid improvements in genomic sequencing technology have led to the proliferation of locally collected genomic datasets. Given the sensitivity of genomic data, it is crucial to conduct collaborative studies while preserving the privacy of the individuals. However, before starting any collaborative research effort, the quality of the data needs to be assessed. One of the essential steps of the quality control process is population stratification: identifying the presence of genetic difference in individuals due to subpopulations. One of the common methods used to group genomes of individuals based on ancestry is principal component analysis (PCA). In this article, we propose a privacy-preserving framework which utilizes PCA to assign individuals to populations across multiple collaborators as part of the population stratification step. In our proposed client-server-based scheme, we initially let the server train a global PCA model on a publicly available genomic dataset which contains individuals from multiple populations. The global PCA model is later used to reduce the dimensionality of the local data by each collaborator (client). After adding noise to achieve local differential privacy (LDP), the collaborators send metadata (in the form of their local PCA outputs) about their research datasets to the server, which then aligns the local PCA results to identify the genetic differences among collaborators' datasets. Our results on real genomic data show that the proposed framework can perform population stratification analysis with high accuracy while preserving the privacy of the research participants.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btad274"
+  },
+  {
+    "id": "10.1093/bioinformatics/btad269",
+    "title": "CLARIFY: cell-cell interaction and gene regulatory network refinement from spatially resolved transcriptomics",
+    "authors": [
+      "Bafna M",
+      "Li H",
+      "Zhang X"
+    ],
+    "abstract": "<h4>Motivation</h4>Gene regulatory networks (GRNs) in a cell provide the tight feedback needed to synchronize cell actions. However, genes in a cell also take input from, and provide signals to other neighboring cells. These cell-cell interactions (CCIs) and the GRNs deeply influence each other. Many computational methods have been developed for GRN inference in cells. More recently, methods were proposed to infer CCIs using single cell gene expression data with or without cell spatial location information. However, in reality, the two processes do not exist in isolation and are subject to spatial constraints. Despite this rationale, no methods currently exist to infer GRNs and CCIs using the same model.<h4>Results</h4>We propose CLARIFY, a tool that takes GRNs as input, uses them and spatially resolved gene expression data to infer CCIs, while simultaneously outputting refined cell-specific GRNs. CLARIFY uses a novel multi-level graph autoencoder, which mimics cellular networks at a higher level and cell-specific GRNs at a deeper level. We applied CLARIFY to two real spatial transcriptomic datasets, one using seqFISH and the other using MERFISH, and also tested on simulated datasets from scMultiSim. We compared the quality of predicted GRNs and CCIs with state-of-the-art baseline methods that inferred either only GRNs or only CCIs. The results show that CLARIFY consistently outperforms the baseline in terms of commonly used evaluation metrics. Our results point to the importance of co-inference of CCIs and GRNs and to the use of layered graph neural networks as an inference tool for biological networks.<h4>Availability and implementation</h4>The source code and data is available at https://github.com/MihirBafna/CLARIFY.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btad269"
+  },
+  {
+    "id": "10.1093/bioinformatics/btad240",
+    "title": "SynBa: improved estimation of drug combination synergies with uncertainty quantification",
+    "authors": [
+      "Zhang H",
+      "Ek CH",
+      "Rattray M",
+      "Milo M"
+    ],
+    "abstract": "<h4>Motivation</h4>There exists a range of different quantification frameworks to estimate the synergistic effect of drug combinations. The diversity and disagreement in estimates make it challenging to determine which combinations from a large drug screening should be proceeded with. Furthermore, the lack of accurate uncertainty quantification for those estimates precludes the choice of optimal drug combinations based on the most favourable synergistic effect.<h4>Results</h4>In this work, we propose SynBa, a flexible Bayesian approach to estimate the uncertainty of the synergistic efficacy and potency of drug combinations, so that actionable decisions can be derived from the model outputs. The actionability is enabled by incorporating the Hill equation into SynBa, so that the parameters representing the potency and the efficacy can be preserved. Existing knowledge may be conveniently inserted due to the flexibility of the prior, as shown by the empirical Beta prior defined for the normalized maximal inhibition. Through experiments on large combination screenings and comparison against benchmark methods, we show that SynBa provides improved accuracy of dose-response predictions and better-calibrated uncertainty estimation for the parameters and the predictions.<h4>Availability and implementation</h4>The code for SynBa is available at https://github.com/HaotingZhang1/SynBa. The datasets are publicly available (DOI of DREAM: 10.7303/syn4231880; DOI of the NCI-ALMANAC subset: 10.5281/zenodo.4135059).",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btad240"
+  },
+  {
+    "id": "10.1093/bioinformatics/btad234",
+    "title": "Transfer learning for drug-target interaction prediction",
+    "authors": [
+      "Dalkıran A",
+      "Atakan A",
+      "Rifaioğlu AS",
+      "Martin MJ",
+      "Atalay RÇ",
+      "Acar AC",
+      "Doğan T",
+      "Atalay V"
+    ],
+    "abstract": "<h4>Motivation</h4>Utilizing AI-driven approaches for drug-target interaction (DTI) prediction require large volumes of training data which are not available for the majority of target proteins. In this study, we investigate the use of deep transfer learning for the prediction of interactions between drug candidate compounds and understudied target proteins with scarce training data. The idea here is to first train a deep neural network classifier with a generalized source training dataset of large size and then to reuse this pre-trained neural network as an initial configuration for re-training/fine-tuning purposes with a small-sized specialized target training dataset. To explore this idea, we selected six protein families that have critical importance in biomedicine: kinases, G-protein-coupled receptors (GPCRs), ion channels, nuclear receptors, proteases, and transporters. In two independent experiments, the protein families of transporters and nuclear receptors were individually set as the target datasets, while the remaining five families were used as the source datasets. Several size-based target family training datasets were formed in a controlled manner to assess the benefit provided by the transfer learning approach.<h4>Results</h4>Here, we present a systematic evaluation of our approach by pre-training a feed-forward neural network with source training datasets and applying different modes of transfer learning from the pre-trained source network to a target dataset. The performance of deep transfer learning is evaluated and compared with that of training the same deep neural network from scratch. We found that when the training dataset contains fewer than 100 compounds, transfer learning outperforms the conventional strategy of training the system from scratch, suggesting that transfer learning is advantageous for predicting binders to under-studied targets.<h4>Availability and implementation</h4>The source code and datasets are available at https://github.com/cansyl/TransferLearning4DTI. Our web-based service containing the ready-to-use pre-trained models is accessible at https://tl4dti.kansil.org.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btad234"
+  },
+  {
+    "id": "10.1093/bioinformatics/btad236",
+    "title": "Bakdrive: identifying a minimum set of bacterial species driving interactions across multiple microbial communities",
+    "authors": [
+      "Wang Q",
+      "Nute M",
+      "Treangen TJ"
+    ],
+    "abstract": "<h4>Motivation</h4>Interactions among microbes within microbial communities have been shown to play crucial roles in human health. In spite of recent progress, low-level knowledge of bacteria driving microbial interactions within microbiomes remains unknown, limiting our ability to fully decipher and control microbial communities.<h4>Results</h4>We present a novel approach for identifying species driving interactions within microbiomes. Bakdrive infers ecological networks of given metagenomic sequencing samples and identifies minimum sets of driver species (MDS) using control theory. Bakdrive has three key innovations in this space: (i) it leverages inherent information from metagenomic sequencing samples to identify driver species, (ii) it explicitly takes host-specific variation into consideration, and (iii) it does not require a known ecological network. In extensive simulated data, we demonstrate identifying driver species identified from healthy donor samples and introducing them to the disease samples, we can restore the gut microbiome in recurrent Clostridioides difficile (rCDI) infection patients to a healthy state. We also applied Bakdrive to two real datasets, rCDI and Crohn's disease patients, uncovering driver species consistent with previous work. Bakdrive represents a novel approach for capturing microbial interactions.<h4>Availability and implementation</h4>Bakdrive is open-source and available at: https://gitlab.com/treangenlab/bakdrive.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btad236"
+  },
+  {
+    "id": "10.1093/bioinformatics/btad267",
+    "title": "scKINETICS: inference of regulatory velocity with single-cell transcriptomics data",
+    "authors": [
+      "Burdziak C",
+      "Zhao CJ",
+      "Haviv D",
+      "Alonso-Curbelo D",
+      "Lowe SW",
+      "Pe'er D"
+    ],
+    "abstract": "<h4>Motivation</h4>Transcriptional dynamics are governed by the action of regulatory proteins and are fundamental to systems ranging from normal development to disease. RNA velocity methods for tracking phenotypic dynamics ignore information on the regulatory drivers of gene expression variability through time.<h4>Results</h4>We introduce scKINETICS (Key regulatory Interaction NETwork for Inferring Cell Speed), a dynamical model of gene expression change which is fit with the simultaneous learning of per-cell transcriptional velocities and a governing gene regulatory network. Fitting is accomplished through an expectation-maximization approach designed to learn the impact of each regulator on its target genes, leveraging biologically motivated priors from epigenetic data, gene-gene coexpression, and constraints on cells' future states imposed by the phenotypic manifold. Applying this approach to an acute pancreatitis dataset recapitulates a well-studied axis of acinar-to-ductal transdifferentiation whilst proposing novel regulators of this process, including factors with previously appreciated roles in driving pancreatic tumorigenesis. In benchmarking experiments, we show that scKINETICS successfully extends and improves existing velocity approaches to generate interpretable, mechanistic models of gene regulatory dynamics.<h4>Availability and implementation</h4>All python code and an accompanying Jupyter notebook with demonstrations are available at http://github.com/dpeerlab/scKINETICS.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btad267"
+  },
+  {
+    "id": "10.1093/bioinformatics/btad228",
+    "title": "TSignal: a transformer model for signal peptide prediction",
+    "authors": [
+      "Dumitrescu A",
+      "Jokinen E",
+      "Paatero A",
+      "Kellosalo J",
+      "Paavilainen VO",
+      "Lähdesmäki H"
+    ],
+    "abstract": "<h4>Motivation</h4>Signal peptides (SPs) are short amino acid segments present at the N-terminus of newly synthesized proteins that facilitate protein translocation into the lumen of the endoplasmic reticulum, after which they are cleaved off. Specific regions of SPs influence the efficiency of protein translocation, and small changes in their primary structure can abolish protein secretion altogether. The lack of conserved motifs across SPs, sensitivity to mutations, and variability in the length of the peptides make SP prediction a challenging task that has been extensively pursued over the years.<h4>Results</h4>We introduce TSignal, a deep transformer-based neural network architecture that utilizes BERT language models and dot-product attention techniques. TSignal predicts the presence of SPs and the cleavage site between the SP and the translocated mature protein. We use common benchmark datasets and show competitive accuracy in terms of SP presence prediction and state-of-the-art accuracy in terms of cleavage site prediction for most of the SP types and organism groups. We further illustrate that our fully data-driven trained model identifies useful biological information on heterogeneous test sequences.<h4>Availability and implementation</h4>TSignal is available at: https://github.com/Dumitrescu-Alexandru/TSignal.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btad228"
   }
 ]

@@ -28,6 +28,19 @@
     "paper_url": "https://doi.org/10.1145/3437992.3439924"
   },
   {
+    "id": "10.1145/3437992.3439935",
+    "title": "An Isabelle/HOL formalization of AProVE’s termination method for LLVM IR",
+    "authors": [
+      "Max W. Haslbeck",
+      "René Thiemann"
+    ],
+    "abstract": "AProVE is a powerful termination prover for various programming languages, including a termination analysis method for imperative programs specified in the LLVM intermediate representation (IR). The method internally works in three steps: first, it transforms LLVM IR code into a symbolic execution graph; second, the graph is translated into an integer transition system; finally, termination of the transition sys- tem is proved by the back end of AProVE. Since AProVE is unverified software, our aim is to increase its reliability by certifying the generated proofs. To this end, we require formal semantics of all program representations, i.e., for LLVM IR, for symbolic execution graphs and for inte- ger transition systems. As the latter is already available, we define the former ones. We note that our semantics for LLVM IR use arithmetic with unbounded integers. We further verify the first and the second step of AProVE’s termination method, including verified algorithms to check concrete proofs. Since the third step can already be certified, we obtain a complete formally verified method for certifying AProVE’s termination proofs of LLVM IR programs. The whole formalization has been done in Isabelle/HOL and our certifier is available as a Haskell program via code generation.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2021,
+    "paper_url": "https://doi.org/10.1145/3437992.3439935"
+  },
+  {
     "id": "10.1145/3437992.3439918",
     "title": "A verified decision procedure for the first-order theory of rewriting for linear variable-separated rewrite systems",
     "authors": [
@@ -54,19 +67,6 @@
     "conference": "cpp",
     "year": 2021,
     "paper_url": "https://doi.org/10.1145/3437992.3439931"
-  },
-  {
-    "id": "10.1145/3437992.3439935",
-    "title": "An Isabelle/HOL formalization of AProVE’s termination method for LLVM IR",
-    "authors": [
-      "Max W. Haslbeck",
-      "René Thiemann"
-    ],
-    "abstract": "AProVE is a powerful termination prover for various programming languages, including a termination analysis method for imperative programs specified in the LLVM intermediate representation (IR). The method internally works in three steps: first, it transforms LLVM IR code into a symbolic execution graph; second, the graph is translated into an integer transition system; finally, termination of the transition sys- tem is proved by the back end of AProVE. Since AProVE is unverified software, our aim is to increase its reliability by certifying the generated proofs. To this end, we require formal semantics of all program representations, i.e., for LLVM IR, for symbolic execution graphs and for inte- ger transition systems. As the latter is already available, we define the former ones. We note that our semantics for LLVM IR use arithmetic with unbounded integers. We further verify the first and the second step of AProVE’s termination method, including verified algorithms to check concrete proofs. Since the third step can already be certified, we obtain a complete formally verified method for certifying AProVE’s termination proofs of LLVM IR programs. The whole formalization has been done in Isabelle/HOL and our certifier is available as a Haskell program via code generation.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2021,
-    "paper_url": "https://doi.org/10.1145/3437992.3439935"
   },
   {
     "id": "10.1145/3437992.3439933",
@@ -136,16 +136,17 @@
     "paper_url": "https://doi.org/10.1145/3437992.3439914"
   },
   {
-    "id": "10.1145/3437992.3439916",
-    "title": "Lutsig: a verified Verilog compiler for verified circuit development",
+    "id": "10.1145/3437992.3439919",
+    "title": "Formalizing the ring of Witt vectors",
     "authors": [
-      "Andreas Lööw"
+      "Johan Commelin",
+      "Robert Y. Lewis"
     ],
-    "abstract": "We report on a new verified Verilog compiler called Lutsig. Lutsig currently targets (a class of) FPGAs and is capable of producing technology mapped netlists for FPGAs. We have connected Lutsig to existing Verilog development tools, and in this paper we show how Lutsig, as a consequence of this connection, fits into a hardware development methodology for verified circuits in the HOL4 theorem prover. One important step in the methodology is transporting properties proved at the behavioral Verilog level down to technology mapped netlists, and Lutsig is the component in the methodology that enables such transportation.",
+    "abstract": "The ring of Witt vectors W R over a base ring R is an important tool in algebraic number theory and lies at the foundations of modern p-adic Hodge theory. W R has the interesting property that it constructs a ring of characteristic 0 out of a ring of characteristic p > 1, and it can be used more specifically to construct from a finite field containing ℤ/pℤ the corresponding unramified field extension of the p-adic numbers ℚp (which is unique up to isomorphism). We formalize the notion of a Witt vector in the Lean proof assistant, along with the corresponding ring operations and other algebraic structure. We prove in Lean that, for prime p, the ring of Witt vectors over ℤ/pℤ is isomorphic to the ring of p-adic integers ℤp. In the process we develop idioms to cleanly handle calculations of identities between operations on the ring of Witt vectors. These calculations are intractable with a naive approach, and require a proof technique that is usually skimmed over in the informal literature. Our proofs resemble the informal arguments while being fully rigorous.",
     "topic": "",
     "conference": "cpp",
     "year": 2021,
-    "paper_url": "https://doi.org/10.1145/3437992.3439916"
+    "paper_url": "https://doi.org/10.1145/3437992.3439919"
   },
   {
     "id": "10.1145/3437992.3439913",
@@ -162,17 +163,17 @@
     "paper_url": "https://doi.org/10.1145/3437992.3439913"
   },
   {
-    "id": "10.1145/3437992.3439919",
-    "title": "Formalizing the ring of Witt vectors",
+    "id": "10.1145/3437992.3439912",
+    "title": "A modular Isabelle framework for verifying saturation provers",
     "authors": [
-      "Johan Commelin",
-      "Robert Y. Lewis"
+      "Sophie Tourret",
+      "Jasmin Blanchette"
     ],
-    "abstract": "The ring of Witt vectors W R over a base ring R is an important tool in algebraic number theory and lies at the foundations of modern p-adic Hodge theory. W R has the interesting property that it constructs a ring of characteristic 0 out of a ring of characteristic p > 1, and it can be used more specifically to construct from a finite field containing ℤ/pℤ the corresponding unramified field extension of the p-adic numbers ℚp (which is unique up to isomorphism). We formalize the notion of a Witt vector in the Lean proof assistant, along with the corresponding ring operations and other algebraic structure. We prove in Lean that, for prime p, the ring of Witt vectors over ℤ/pℤ is isomorphic to the ring of p-adic integers ℤp. In the process we develop idioms to cleanly handle calculations of identities between operations on the ring of Witt vectors. These calculations are intractable with a naive approach, and require a proof technique that is usually skimmed over in the informal literature. Our proofs resemble the informal arguments while being fully rigorous.",
+    "abstract": "We present a formalization in Isabelle/HOL of a comprehensive framework for proving the completeness of automatic theorem provers based on resolution, superposition, or other saturation calculi. The framework helps calculus designers and prover developers derive, from the completeness of a calculus, the completeness of prover architectures implementing the calculus. It also helps derive the completeness of calculi obtained by lifting ground (i.e., variable-free) calculi. As a case study, we re-verified Bachmair and Ganzinger's resolution prover RP to show the benefits of modularity.",
     "topic": "",
     "conference": "cpp",
     "year": 2021,
-    "paper_url": "https://doi.org/10.1145/3437992.3439919"
+    "paper_url": "https://doi.org/10.1145/3437992.3439912"
   },
   {
     "id": "10.1145/3437992.3439927",
@@ -191,17 +192,16 @@
     "paper_url": "https://doi.org/10.1145/3437992.3439927"
   },
   {
-    "id": "10.1145/3437992.3439912",
-    "title": "A modular Isabelle framework for verifying saturation provers",
+    "id": "10.1145/3437992.3439916",
+    "title": "Lutsig: a verified Verilog compiler for verified circuit development",
     "authors": [
-      "Sophie Tourret",
-      "Jasmin Blanchette"
+      "Andreas Lööw"
     ],
-    "abstract": "We present a formalization in Isabelle/HOL of a comprehensive framework for proving the completeness of automatic theorem provers based on resolution, superposition, or other saturation calculi. The framework helps calculus designers and prover developers derive, from the completeness of a calculus, the completeness of prover architectures implementing the calculus. It also helps derive the completeness of calculi obtained by lifting ground (i.e., variable-free) calculi. As a case study, we re-verified Bachmair and Ganzinger's resolution prover RP to show the benefits of modularity.",
+    "abstract": "We report on a new verified Verilog compiler called Lutsig. Lutsig currently targets (a class of) FPGAs and is capable of producing technology mapped netlists for FPGAs. We have connected Lutsig to existing Verilog development tools, and in this paper we show how Lutsig, as a consequence of this connection, fits into a hardware development methodology for verified circuits in the HOL4 theorem prover. One important step in the methodology is transporting properties proved at the behavioral Verilog level down to technology mapped netlists, and Lutsig is the component in the methodology that enables such transportation.",
     "topic": "",
     "conference": "cpp",
     "year": 2021,
-    "paper_url": "https://doi.org/10.1145/3437992.3439912"
+    "paper_url": "https://doi.org/10.1145/3437992.3439916"
   },
   {
     "id": "10.1145/3437992.3439925",
@@ -220,16 +220,44 @@
     "paper_url": "https://doi.org/10.1145/3437992.3439925"
   },
   {
-    "id": "10.1145/3437992.3439910",
-    "title": "Teaching algorithms and data structures with a proof assistant (invited talk)",
+    "id": "10.1145/3437992.3439911",
+    "title": "Underpinning the foundations: sail-based semantics, testing, and reasoning for production and CHERI-enabled architectures (invited talk)",
     "authors": [
-      "Tobias Nipkow"
+      "Peter Sewell"
     ],
-    "abstract": "We report on a new course Verified Functional Data Structures and Algorithms taught at the Technical University of Munich. The course first introduces students to interactive theorem proving with the Isabelle proof assistant. Then it covers a range of standard data structures, in particular search trees and priority queues: it is shown how to express these data structures functionally and how to reason about their correctness and running time in Isabelle.",
+    "abstract": "This talk will describe our work to establish and use mechanised and rather complete semantics for full-scale architectures: the mainstream Armv8-A architecture, the emerging RISC-V architecture, the CHERI-MIPS and CHERI-RISC-V research architectures that use hardware capabilities for improved security, and Arm’s prototype Morello architecture - an industrial demonstrator incorporating the CHERI ideas. It brings together a variety of tools, especially our Sail ISA definition language and Isla symbolic evaluation engine, to build semantic definitions that are readable, executable as test oracles, support reasoning within the Coq, HOL4, and Isabelle proof assistants, support SMT-based symbolic evaluation, support model-based test generation, and can be integrated with operational and axiomatic concurrency models. For Armv8-A, we have the complete sequential semantics of the instruction-set architecture (ISA) automatically translated from the Arm-internal model to Sail, and for RISC-V, we have hand-written what is now the offically adopted model. For their concurrent semantics, the \"user\" semantics, partly as a result of our collaborations with Arm and within the RISC-V concurrency task group, have become simplified and well-defined, with multiple models proved equivalent, and we are currently working on the \"system\" semantics. Recently, we have added a symbolic execution tool for Sail specifications, Isla, which supports axiomatic concurrency models but now for tests that span the full range of the instruction-set architecture, and including instruction cache maintenance instructions and self-modifying code. For CHERI-MIPS and CHERI-RISC-V, we have used Sail models as the golden reference during the design process, working with our systems colleagues in the CHERI team to use lightweight formal specification routinely in documentation, testing, and test generation. We have stated and proved (in Isabelle) some of the fundamental intended security properties of the full CHERI-MIPS ISA. Morello, supported by the UKRI Digital Security by Design programme, offers a path to hardware enforcement of fine-grained memory safety and/or secure encapsulation in the production Armv8-A architecture, potentially excluding or mitigating a large fraction of today’s security vulnerabilities for existing C/C++ code with little modification. We are currently working with Arm to prove fundamental security properties for the complete Morello ISA definition, and to generate tests which are being used during hardware development. All these tools and models are (or will soon be) available under open-source licences for others to use and build on.",
     "topic": "",
     "conference": "cpp",
     "year": 2021,
-    "paper_url": "https://doi.org/10.1145/3437992.3439910"
+    "paper_url": "https://doi.org/10.1145/3437992.3439911"
+  },
+  {
+    "id": "10.1145/3437992.3439926",
+    "title": "An anti-locally-nameless approach to formalizing quantifiers",
+    "authors": [
+      "Olivier Laurent"
+    ],
+    "abstract": "We investigate the possibility of formalizing quantifiers in proof theory while avoiding, as far as possible, the use of true binding structures, α-equivalence or variable renamings. We propose a solution with two kinds of variables in terms and formulas, as originally done by Gentzen. In this way formulas are first-order structures, and we are able to avoid capture problems in substitutions. However at the level of proofs and proof manipulations, some binding structure seems unavoidable. We give a representation with de Bruijn indices for proof rules which does not impact the formula representation and keeps the whole set of definitions first-order.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2021,
+    "paper_url": "https://doi.org/10.1145/3437992.3439926"
+  },
+  {
+    "id": "10.1145/3437992.3439920",
+    "title": "A Coq formalization of data provenance",
+    "authors": [
+      "Véronique Benzaken",
+      "Sarah Cohen-Boulakia",
+      "Évelyne Contejean",
+      "Chantal Keller",
+      "Rébecca Zucchini"
+    ],
+    "abstract": "In multiple domains, large amounts of data are daily generated and combined to be analyzed. The interpretation of these analyses requires to track back the provenance of combined data with respect to initial, raw data. The correctness of the provenance is crucial in many critical domains, such as medicine to prescribe treatments. In this article, we propose the first provenance-aware extended relational algebra formalized in a proof assistant (Coq), for a non trivial subset of database queries: queries containing aggregates, null values, and correlated sub-queries. The formalization is validated by an adequacy proof with respect to standard evaluation of queries. This development is a first step towards a posteriori certification of provenance for data manipulation, with strong guaranties.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2021,
+    "paper_url": "https://doi.org/10.1145/3437992.3439920"
   },
   {
     "id": "10.1145/3437992.3439917",
@@ -262,57 +290,16 @@
     "paper_url": "https://doi.org/10.1145/3437992.3439934"
   },
   {
-    "id": "10.1145/3437992.3439926",
-    "title": "An anti-locally-nameless approach to formalizing quantifiers",
+    "id": "10.1145/3437992.3439910",
+    "title": "Teaching algorithms and data structures with a proof assistant (invited talk)",
     "authors": [
-      "Olivier Laurent"
+      "Tobias Nipkow"
     ],
-    "abstract": "We investigate the possibility of formalizing quantifiers in proof theory while avoiding, as far as possible, the use of true binding structures, α-equivalence or variable renamings. We propose a solution with two kinds of variables in terms and formulas, as originally done by Gentzen. In this way formulas are first-order structures, and we are able to avoid capture problems in substitutions. However at the level of proofs and proof manipulations, some binding structure seems unavoidable. We give a representation with de Bruijn indices for proof rules which does not impact the formula representation and keeps the whole set of definitions first-order.",
+    "abstract": "We report on a new course Verified Functional Data Structures and Algorithms taught at the Technical University of Munich. The course first introduces students to interactive theorem proving with the Isabelle proof assistant. Then it covers a range of standard data structures, in particular search trees and priority queues: it is shown how to express these data structures functionally and how to reason about their correctness and running time in Isabelle.",
     "topic": "",
     "conference": "cpp",
     "year": 2021,
-    "paper_url": "https://doi.org/10.1145/3437992.3439926"
-  },
-  {
-    "id": "10.1145/3437992.3439911",
-    "title": "Underpinning the foundations: sail-based semantics, testing, and reasoning for production and CHERI-enabled architectures (invited talk)",
-    "authors": [
-      "Peter Sewell"
-    ],
-    "abstract": "This talk will describe our work to establish and use mechanised and rather complete semantics for full-scale architectures: the mainstream Armv8-A architecture, the emerging RISC-V architecture, the CHERI-MIPS and CHERI-RISC-V research architectures that use hardware capabilities for improved security, and Arm’s prototype Morello architecture - an industrial demonstrator incorporating the CHERI ideas. It brings together a variety of tools, especially our Sail ISA definition language and Isla symbolic evaluation engine, to build semantic definitions that are readable, executable as test oracles, support reasoning within the Coq, HOL4, and Isabelle proof assistants, support SMT-based symbolic evaluation, support model-based test generation, and can be integrated with operational and axiomatic concurrency models. For Armv8-A, we have the complete sequential semantics of the instruction-set architecture (ISA) automatically translated from the Arm-internal model to Sail, and for RISC-V, we have hand-written what is now the offically adopted model. For their concurrent semantics, the \"user\" semantics, partly as a result of our collaborations with Arm and within the RISC-V concurrency task group, have become simplified and well-defined, with multiple models proved equivalent, and we are currently working on the \"system\" semantics. Recently, we have added a symbolic execution tool for Sail specifications, Isla, which supports axiomatic concurrency models but now for tests that span the full range of the instruction-set architecture, and including instruction cache maintenance instructions and self-modifying code. For CHERI-MIPS and CHERI-RISC-V, we have used Sail models as the golden reference during the design process, working with our systems colleagues in the CHERI team to use lightweight formal specification routinely in documentation, testing, and test generation. We have stated and proved (in Isabelle) some of the fundamental intended security properties of the full CHERI-MIPS ISA. Morello, supported by the UKRI Digital Security by Design programme, offers a path to hardware enforcement of fine-grained memory safety and/or secure encapsulation in the production Armv8-A architecture, potentially excluding or mitigating a large fraction of today’s security vulnerabilities for existing C/C++ code with little modification. We are currently working with Arm to prove fundamental security properties for the complete Morello ISA definition, and to generate tests which are being used during hardware development. All these tools and models are (or will soon be) available under open-source licences for others to use and build on.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2021,
-    "paper_url": "https://doi.org/10.1145/3437992.3439911"
-  },
-  {
-    "id": "10.1145/3437992.3439920",
-    "title": "A Coq formalization of data provenance",
-    "authors": [
-      "Véronique Benzaken",
-      "Sarah Cohen-Boulakia",
-      "Évelyne Contejean",
-      "Chantal Keller",
-      "Rébecca Zucchini"
-    ],
-    "abstract": "In multiple domains, large amounts of data are daily generated and combined to be analyzed. The interpretation of these analyses requires to track back the provenance of combined data with respect to initial, raw data. The correctness of the provenance is crucial in many critical domains, such as medicine to prescribe treatments. In this article, we propose the first provenance-aware extended relational algebra formalized in a proof assistant (Coq), for a non trivial subset of database queries: queries containing aggregates, null values, and correlated sub-queries. The formalization is validated by an adequacy proof with respect to standard evaluation of queries. This development is a first step towards a posteriori certification of provenance for data manipulation, with strong guaranties.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2021,
-    "paper_url": "https://doi.org/10.1145/3437992.3439920"
-  },
-  {
-    "id": "10.1145/3437992.3439922",
-    "title": "Formalizing category theory in Agda",
-    "authors": [
-      "Jason Z. S. Hu",
-      "Jacques Carette"
-    ],
-    "abstract": "The generality and pervasiveness of category theory in modern mathematics makes it a frequent and useful target of formalization. It is however quite challenging to formalize, for a variety of reasons. Agda currently (i.e. in 2020) does not have a standard, working formalization of category theory. We document our work on solving this dilemma. The formalization revealed a number of potential design choices, and we present, motivate and explain the ones we picked. In particular, we find that alternative definitions or alternative proofs from those found in standard textbooks can be advantageous, as well as \"fit\" Agda's type theory more smoothly. Some definitions regarded as equivalent in standard textbooks turn out to make different \"universe level\" assumptions, with some being more polymorphic than others. We also pay close attention to engineering issues so that the library integrates well with Agda's own standard library, as well as being compatible with as many of supported type theories in Agda as possible.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2021,
-    "paper_url": "https://doi.org/10.1145/3437992.3439922"
+    "paper_url": "https://doi.org/10.1145/3437992.3439910"
   },
   {
     "id": "10.1145/3437992.3439923",
@@ -353,5 +340,18 @@
     "conference": "cpp",
     "year": 2021,
     "paper_url": "https://doi.org/10.1145/3437992.3439930"
+  },
+  {
+    "id": "10.1145/3437992.3439922",
+    "title": "Formalizing category theory in Agda",
+    "authors": [
+      "Jason Z. S. Hu",
+      "Jacques Carette"
+    ],
+    "abstract": "The generality and pervasiveness of category theory in modern mathematics makes it a frequent and useful target of formalization. It is however quite challenging to formalize, for a variety of reasons. Agda currently (i.e. in 2020) does not have a standard, working formalization of category theory. We document our work on solving this dilemma. The formalization revealed a number of potential design choices, and we present, motivate and explain the ones we picked. In particular, we find that alternative definitions or alternative proofs from those found in standard textbooks can be advantageous, as well as \"fit\" Agda's type theory more smoothly. Some definitions regarded as equivalent in standard textbooks turn out to make different \"universe level\" assumptions, with some being more polymorphic than others. We also pay close attention to engineering issues so that the library integrates well with Agda's own standard library, as well as being compatible with as many of supported type theories in Agda as possible.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2021,
+    "paper_url": "https://doi.org/10.1145/3437992.3439922"
   }
 ]

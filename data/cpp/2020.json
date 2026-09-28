@@ -38,19 +38,6 @@
     "paper_url": "https://doi.org/10.1145/3372885.3373824"
   },
   {
-    "id": "10.1145/3372885.3373819",
-    "title": "A constructive formalization of the weak perfect graph theorem",
-    "authors": [
-      "Abhishek Kr Singh",
-      "Raja Natarajan"
-    ],
-    "abstract": "The Perfect Graph Theorems are important results in graph theory describing the relationship between clique number ω(G) and chromatic number χ(G) of a graph G. A graph G is called perfect if χ(H)=ω(H) for every induced subgraph H of G. The Strong Perfect Graph Theorem (SPGT) states that a graph is perfect if and only if it does not contain an odd hole (or an odd anti-hole) as its induced subgraph. The Weak Perfect Graph Theorem (WPGT) states that a graph is perfect if and only if its complement is perfect. In this paper, we present a formal framework for working with finite simple graphs. We model finite simple graphs in the Coq Proof Assistant by representing its vertices as a finite set over a countably infinite domain. We argue that this approach provides a formal framework in which it is convenient to work with different types of graph constructions (or expansions) involved in the proof of the Lovász Replication Lemma (LRL), which is also the key result used in the proof of Weak Perfect Graph Theorem. Finally, we use this setting to develop a constructive formalization of the Weak Perfect Graph Theorem.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2020,
-    "paper_url": "https://doi.org/10.1145/3372885.3373819"
-  },
-  {
     "id": "10.1145/3372885.3373816",
     "title": "Verified programming of Turing machines in Coq",
     "authors": [
@@ -63,6 +50,19 @@
     "conference": "cpp",
     "year": 2020,
     "paper_url": "https://doi.org/10.1145/3372885.3373816"
+  },
+  {
+    "id": "10.1145/3372885.3373819",
+    "title": "A constructive formalization of the weak perfect graph theorem",
+    "authors": [
+      "Abhishek Kr Singh",
+      "Raja Natarajan"
+    ],
+    "abstract": "The Perfect Graph Theorems are important results in graph theory describing the relationship between clique number ω(G) and chromatic number χ(G) of a graph G. A graph G is called perfect if χ(H)=ω(H) for every induced subgraph H of G. The Strong Perfect Graph Theorem (SPGT) states that a graph is perfect if and only if it does not contain an odd hole (or an odd anti-hole) as its induced subgraph. The Weak Perfect Graph Theorem (WPGT) states that a graph is perfect if and only if its complement is perfect. In this paper, we present a formal framework for working with finite simple graphs. We model finite simple graphs in the Coq Proof Assistant by representing its vertices as a finite set over a countably infinite domain. We argue that this approach provides a formal framework in which it is convenient to work with different types of graph constructions (or expansions) involved in the proof of the Lovász Replication Lemma (LRL), which is also the key result used in the proof of Weak Perfect Graph Theorem. Finally, we use this setting to develop a constructive formalization of the Weak Perfect Graph Theorem.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1145/3372885.3373819"
   },
   {
     "id": "10.1145/3372885.3373817",
@@ -105,21 +105,6 @@
     "paper_url": "https://doi.org/10.1145/3372885.3373821"
   },
   {
-    "id": "10.1145/3372885.3373823",
-    "title": "REPLica: REPL instrumentation for Coq analysis",
-    "authors": [
-      "Talia Ringer",
-      "Alex Sanchez-Stern",
-      "Dan Grossman",
-      "Sorin Lerner"
-    ],
-    "abstract": "Proof engineering tools make it easier to develop and maintain large systems verified using interactive theorem provers. Developing useful proof engineering tools hinges on understanding the development processes of proof engineers. This paper breaks down one barrier to achieving that understanding: remotely collecting granular data on proof developments as they happen. We have built a tool called REPLica that instruments Coq’s interaction model in order to collect fine-grained data on proof developments. It is decoupled from the user interface, and designed in a way that generalizes to other interactive theorem provers with similar interaction models. We have used REPLica to collect data over the span of a month from a group of intermediate through expert proof engineers—enough data to reconstruct hundreds of interactive sessions. The data reveals patterns in fixing proofs and in changing programs and specifications useful for the improvement of proof engineering tools. Our experiences conducting this study suggest design considerations both at the level of the study and at the level of the interactive theorem prover that can facilitate future studies of this kind.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2020,
-    "paper_url": "https://doi.org/10.1145/3372885.3373823"
-  },
-  {
     "id": "10.1145/3372885.3373831",
     "title": "Completeness of an axiomatization of graph isomorphism via graph rewriting in Coq",
     "authors": [
@@ -131,32 +116,6 @@
     "conference": "cpp",
     "year": 2020,
     "paper_url": "https://doi.org/10.1145/3372885.3373831"
-  },
-  {
-    "id": "10.1145/3372885.3373832",
-    "title": "Undecidability of higher-order unification formalised in Coq",
-    "authors": [
-      "Simon Spies",
-      "Yannick Forster"
-    ],
-    "abstract": "We formalise undecidability results concerning higher-order unification in the simply-typed λ-calculus with β-conversion in Coq. We prove the undecidability of general higher-order unification by reduction from Hilbert’s tenth problem, the solvability of Diophantine equations, following a proof by Dowek. We sharpen the result by establishing the undecidability of second-order and third-order unification following proofs by Goldfarb and Huet, respectively. Goldfarb’s proof for second-order unification is by reduction from Hilbert’s tenth problem. Huet’s original proof uses the Post correspondence problem (PCP) to show the undecidability of third-order unification. We simplify and formalise his proof as a reduction from modified PCP. We also verify a decision procedure for first-order unification. All proofs are carried out in the setting of synthetic undecidability and rely on Coq’s built-in notion of computation.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2020,
-    "paper_url": "https://doi.org/10.1145/3372885.3373832"
-  },
-  {
-    "id": "10.1145/3372885.3373836",
-    "title": "A verified packrat parser interpreter for parsing expression grammars",
-    "authors": [
-      "Clement Blaudeau",
-      "Natarajan Shankar"
-    ],
-    "abstract": "Parsing expression grammars (PEGs) offer a natural opportunity for building verified parser interpreters based on higher-order parsing combinators. PEGs are expressive, unambiguous, and efficient to parse in a top-down recursive descent style. We use the rich type system of the PVS specification language and verification system to formalize the metatheory of PEGs and define a reference implementation of a recursive parser interpreter for PEGs. In order to ensure termination of parsing, we define a notion of a well-formed grammar. Rather than relying on an inductive definition of parsing, we use abstract syntax trees that represent the computational trace of the parser to provide an effective proof certificate for correct parsing and ensure that parsing properties including soundness and completeness are maintained. The correctness properties are embedded in the types of the operations so that the proofs can be easily constructed from local proof obligations. Building on the reference parser interpreter, we define a packrat parser interpreter as well as an extension that is capable of semantic interpretation. Both these parser interpreters are proved equivalent to the reference one. All of the parsers are executable. The proofs are formalized in mathematical terms so that similar parser interpreters can be defined in any specification language with a type system similar to PVS.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2020,
-    "paper_url": "https://doi.org/10.1145/3372885.3373836"
   },
   {
     "id": "10.1145/3372885.3373837",
@@ -184,6 +143,90 @@
     "conference": "cpp",
     "year": 2020,
     "paper_url": "https://doi.org/10.1145/3372885.3378574"
+  },
+  {
+    "id": "10.1145/3372885.3373832",
+    "title": "Undecidability of higher-order unification formalised in Coq",
+    "authors": [
+      "Simon Spies",
+      "Yannick Forster"
+    ],
+    "abstract": "We formalise undecidability results concerning higher-order unification in the simply-typed λ-calculus with β-conversion in Coq. We prove the undecidability of general higher-order unification by reduction from Hilbert’s tenth problem, the solvability of Diophantine equations, following a proof by Dowek. We sharpen the result by establishing the undecidability of second-order and third-order unification following proofs by Goldfarb and Huet, respectively. Goldfarb’s proof for second-order unification is by reduction from Hilbert’s tenth problem. Huet’s original proof uses the Post correspondence problem (PCP) to show the undecidability of third-order unification. We simplify and formalise his proof as a reduction from modified PCP. We also verify a decision procedure for first-order unification. All proofs are carried out in the setting of synthetic undecidability and rely on Coq’s built-in notion of computation.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1145/3372885.3373832"
+  },
+  {
+    "id": "10.1145/3372885.3373823",
+    "title": "REPLica: REPL instrumentation for Coq analysis",
+    "authors": [
+      "Talia Ringer",
+      "Alex Sanchez-Stern",
+      "Dan Grossman",
+      "Sorin Lerner"
+    ],
+    "abstract": "Proof engineering tools make it easier to develop and maintain large systems verified using interactive theorem provers. Developing useful proof engineering tools hinges on understanding the development processes of proof engineers. This paper breaks down one barrier to achieving that understanding: remotely collecting granular data on proof developments as they happen. We have built a tool called REPLica that instruments Coq’s interaction model in order to collect fine-grained data on proof developments. It is decoupled from the user interface, and designed in a way that generalizes to other interactive theorem provers with similar interaction models. We have used REPLica to collect data over the span of a month from a group of intermediate through expert proof engineers—enough data to reconstruct hundreds of interactive sessions. The data reveals patterns in fixing proofs and in changing programs and specifications useful for the improvement of proof engineering tools. Our experiences conducting this study suggest design considerations both at the level of the study and at the level of the interactive theorem prover that can facilitate future studies of this kind.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1145/3372885.3373823"
+  },
+  {
+    "id": "10.1145/3372885.3373836",
+    "title": "A verified packrat parser interpreter for parsing expression grammars",
+    "authors": [
+      "Clement Blaudeau",
+      "Natarajan Shankar"
+    ],
+    "abstract": "Parsing expression grammars (PEGs) offer a natural opportunity for building verified parser interpreters based on higher-order parsing combinators. PEGs are expressive, unambiguous, and efficient to parse in a top-down recursive descent style. We use the rich type system of the PVS specification language and verification system to formalize the metatheory of PEGs and define a reference implementation of a recursive parser interpreter for PEGs. In order to ensure termination of parsing, we define a notion of a well-formed grammar. Rather than relying on an inductive definition of parsing, we use abstract syntax trees that represent the computational trace of the parser to provide an effective proof certificate for correct parsing and ensure that parsing properties including soundness and completeness are maintained. The correctness properties are embedded in the types of the operations so that the proofs can be easily constructed from local proof obligations. Building on the reference parser interpreter, we define a packrat parser interpreter as well as an extension that is capable of semantic interpretation. Both these parser interpreters are proved equivalent to the reference one. All of the parsers are executable. The proofs are formalized in mathematical terms so that similar parser interpreters can be defined in any specification language with a type system similar to PVS.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1145/3372885.3373836"
+  },
+  {
+    "id": "10.1145/3372885.3373825",
+    "title": "Cubical synthetic homotopy theory",
+    "authors": [
+      "Anders Mörtberg",
+      "Loïc Pujet"
+    ],
+    "abstract": "Homotopy type theory is an extension of type theory that enables synthetic reasoning about spaces and homotopy theory. This has led to elegant computer formalizations of multiple classical results from homotopy theory. However, many proofs are still surprisingly complicated to formalize. One reason for this is the axiomatic treatment of univalence and higher inductive types which complicates synthetic reasoning as many intermediate steps, that could hold simply by computation, require explicit arguments. Cubical type theory offers a solution to this in the form of a new type theory with native support for both univalence and higher inductive types. In this paper we show how the recent cubical extension of Agda can be used to formalize some of the major results of homotopy type theory in a direct and elegant manner.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1145/3372885.3373825"
+  },
+  {
+    "id": "10.1145/3372885.3373828",
+    "title": "Verified security of BLT signature scheme",
+    "authors": [
+      "Denis Firsov",
+      "Ahto Buldas",
+      "Ahto Truu",
+      "Risto Laanoja"
+    ],
+    "abstract": "The majority of real-world applications of digital signatures use timestamping to ensure non-repudiation in face of possible key revocations. This observation led Buldas, Laanoja, and Truu to a server-assisted digital signature scheme built around cryptographic timestamping. In this paper, we report on the machine-checked proofs of existential unforgeability under the chosen-message attack (EUF-CMA) of some variations of BLT digital signature scheme. The proofs are developed and verified using the EasyCrypt framework, which provides interactive theorem proving supported by the state-of-the-art SMT solvers.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1145/3372885.3373828"
+  },
+  {
+    "id": "10.1145/3372885.3373811",
+    "title": "Verifying x86 instruction implementations",
+    "authors": [
+      "Shilpi Goel",
+      "Anna Slobodova",
+      "Rob Sumners",
+      "Sol Swords"
+    ],
+    "abstract": "Verification of modern microprocessors is a complex task that requires a substantial allocation of resources. Despite significant progress in formal verification, the goal of complete verification of an industrial design has not been achieved. In this paper, we describe a current contribution of formal methods to the validation of modern x86 microprocessors at Centaur Technology. We focus on proving correctness of instruction implementations, which includes the decoding of an instruction, its translation into a sequence of micro-operations, any subsequent execution of traps to microcode ROM, and the implementation of these micro-operations in execution units. All these tasks are performed within one verification framework, which includes a theorem prover, a verified symbolic simulator, and SAT solvers. We describe the work of defining the needed formal models for both the architecture and micro-architecture in this framework, as well as tools for decomposing the requisite properties into smaller lemmas which can be automatically checked. We additionally cover the advantages and limitations of our approach. To our knowledge, there are no similar results in the verification of implementations of an x86 microprocessor.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1145/3372885.3373811"
   },
   {
     "id": "10.1145/3372885.3373835",
@@ -223,49 +266,6 @@
     "conference": "cpp",
     "year": 2020,
     "paper_url": "https://doi.org/10.1145/3372885.3373812"
-  },
-  {
-    "id": "10.1145/3372885.3373811",
-    "title": "Verifying x86 instruction implementations",
-    "authors": [
-      "Shilpi Goel",
-      "Anna Slobodova",
-      "Rob Sumners",
-      "Sol Swords"
-    ],
-    "abstract": "Verification of modern microprocessors is a complex task that requires a substantial allocation of resources. Despite significant progress in formal verification, the goal of complete verification of an industrial design has not been achieved. In this paper, we describe a current contribution of formal methods to the validation of modern x86 microprocessors at Centaur Technology. We focus on proving correctness of instruction implementations, which includes the decoding of an instruction, its translation into a sequence of micro-operations, any subsequent execution of traps to microcode ROM, and the implementation of these micro-operations in execution units. All these tasks are performed within one verification framework, which includes a theorem prover, a verified symbolic simulator, and SAT solvers. We describe the work of defining the needed formal models for both the architecture and micro-architecture in this framework, as well as tools for decomposing the requisite properties into smaller lemmas which can be automatically checked. We additionally cover the advantages and limitations of our approach. To our knowledge, there are no similar results in the verification of implementations of an x86 microprocessor.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2020,
-    "paper_url": "https://doi.org/10.1145/3372885.3373811"
-  },
-  {
-    "id": "10.1145/3372885.3373828",
-    "title": "Verified security of BLT signature scheme",
-    "authors": [
-      "Denis Firsov",
-      "Ahto Buldas",
-      "Ahto Truu",
-      "Risto Laanoja"
-    ],
-    "abstract": "The majority of real-world applications of digital signatures use timestamping to ensure non-repudiation in face of possible key revocations. This observation led Buldas, Laanoja, and Truu to a server-assisted digital signature scheme built around cryptographic timestamping. In this paper, we report on the machine-checked proofs of existential unforgeability under the chosen-message attack (EUF-CMA) of some variations of BLT digital signature scheme. The proofs are developed and verified using the EasyCrypt framework, which provides interactive theorem proving supported by the state-of-the-art SMT solvers.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2020,
-    "paper_url": "https://doi.org/10.1145/3372885.3373828"
-  },
-  {
-    "id": "10.1145/3372885.3373825",
-    "title": "Cubical synthetic homotopy theory",
-    "authors": [
-      "Anders Mörtberg",
-      "Loïc Pujet"
-    ],
-    "abstract": "Homotopy type theory is an extension of type theory that enables synthetic reasoning about spaces and homotopy theory. This has led to elegant computer formalizations of multiple classical results from homotopy theory. However, many proofs are still surprisingly complicated to formalize. One reason for this is the axiomatic treatment of univalence and higher inductive types which complicates synthetic reasoning as many intermediate steps, that could hold simply by computation, require explicit arguments. Cubical type theory offers a solution to this in the form of a new type theory with native support for both univalence and higher inductive types. In this paper we show how the recent cubical extension of Agda can be used to formalize some of the major results of homotopy type theory in a direct and elegant manner.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2020,
-    "paper_url": "https://doi.org/10.1145/3372885.3373825"
   },
   {
     "id": "10.1145/3372885.3373815",
@@ -309,6 +309,19 @@
     "paper_url": "https://doi.org/10.1145/3372885.3373820"
   },
   {
+    "id": "10.1145/3372885.3373834",
+    "title": "Proof pearl: Braun trees",
+    "authors": [
+      "Tobias Nipkow",
+      "Thomas Sewell"
+    ],
+    "abstract": "Braun trees are functional data structures for implementing extensible arrays and priority queues (and sorting functions based on the latter) efficiently. Some well-known functions on Braun trees have not yet been verified, including especially Okasaki’s linear time conversion from lists to Braun trees. We supply the missing proofs and verify all of these algorithms in Isabelle, including non-obvious time complexity claims. In particular we provide the first linear-time conversion from Braun trees to lists. We also state and verify a new characterization of Braun trees as the trees t whose index set is the interval {1, …, size of t}.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1145/3372885.3373834"
+  },
+  {
     "id": "10.1145/3372885.3373826",
     "title": "A formal proof of the independence of the continuum hypothesis",
     "authors": [
@@ -322,18 +335,19 @@
     "paper_url": "https://doi.org/10.1145/3372885.3373826"
   },
   {
-    "id": "10.1145/3372885.3373829",
-    "title": "ConCert: a smart contract certification framework in Coq",
+    "id": "10.1145/3372885.3373818",
+    "title": "Intrinsically-typed definitional interpreters for linear, session-typed languages",
     "authors": [
-      "Danil Annenkov",
-      "Jakob Botsch Nielsen",
-      "Bas Spitters"
+      "Arjen Rouvoet",
+      "Casper Bach Poulsen",
+      "Robbert Krebbers",
+      "Eelco Visser"
     ],
-    "abstract": "We present a new way of embedding functional languages into the Coq proof assistant by using meta-programming. This allows us to develop the meta-theory of the language using the deep embedding and provides a convenient way for reasoning about concrete programs using the shallow embedding. We connect the deep and the shallow embeddings by a soundness theorem. As an instance of our approach, we develop an embedding of a core smart contract language into Coq and verify several important properties of a crowdfunding contract based on a previous formalisation of smart contract execution in blockchains.",
+    "abstract": "An intrinsically-typed definitional interpreter is a concise specification of dynamic semantics, that is executable and type safe by construction. Unfortunately, scaling intrinsically-typed definitional interpreters to more complicated object languages often results in definitions that are cluttered with manual proof work. For linearly-typed languages (including session-typed languages) one has to prove that the interpreter, as well as all the operations on semantic components, treat values linearly. We present new methods and tools that make it possible to implement intrinsically-typed definitional interpreters for linearly-typed languages in a way that hides the majority of the manual proof work. Inspired by separation logic, we develop reusable and composable abstractions for programming with linear operations using dependent types. Using these abstractions, we define interpreters for linear lambda calculi with strong references, concurrency, and session-typed communication in Agda.",
     "topic": "",
     "conference": "cpp",
     "year": 2020,
-    "paper_url": "https://doi.org/10.1145/3372885.3373829"
+    "paper_url": "https://doi.org/10.1145/3372885.3373818"
   },
   {
     "id": "10.1145/3372885.3373822",
@@ -350,32 +364,18 @@
     "paper_url": "https://doi.org/10.1145/3372885.3373822"
   },
   {
-    "id": "10.1145/3372885.3373834",
-    "title": "Proof pearl: Braun trees",
+    "id": "10.1145/3372885.3373829",
+    "title": "ConCert: a smart contract certification framework in Coq",
     "authors": [
-      "Tobias Nipkow",
-      "Thomas Sewell"
+      "Danil Annenkov",
+      "Jakob Botsch Nielsen",
+      "Bas Spitters"
     ],
-    "abstract": "Braun trees are functional data structures for implementing extensible arrays and priority queues (and sorting functions based on the latter) efficiently. Some well-known functions on Braun trees have not yet been verified, including especially Okasaki’s linear time conversion from lists to Braun trees. We supply the missing proofs and verify all of these algorithms in Isabelle, including non-obvious time complexity claims. In particular we provide the first linear-time conversion from Braun trees to lists. We also state and verify a new characterization of Braun trees as the trees t whose index set is the interval {1, …, size of t}.",
+    "abstract": "We present a new way of embedding functional languages into the Coq proof assistant by using meta-programming. This allows us to develop the meta-theory of the language using the deep embedding and provides a convenient way for reasoning about concrete programs using the shallow embedding. We connect the deep and the shallow embeddings by a soundness theorem. As an instance of our approach, we develop an embedding of a core smart contract language into Coq and verify several important properties of a crowdfunding contract based on a previous formalisation of smart contract execution in blockchains.",
     "topic": "",
     "conference": "cpp",
     "year": 2020,
-    "paper_url": "https://doi.org/10.1145/3372885.3373834"
-  },
-  {
-    "id": "10.1145/3372885.3373818",
-    "title": "Intrinsically-typed definitional interpreters for linear, session-typed languages",
-    "authors": [
-      "Arjen Rouvoet",
-      "Casper Bach Poulsen",
-      "Robbert Krebbers",
-      "Eelco Visser"
-    ],
-    "abstract": "An intrinsically-typed definitional interpreter is a concise specification of dynamic semantics, that is executable and type safe by construction. Unfortunately, scaling intrinsically-typed definitional interpreters to more complicated object languages often results in definitions that are cluttered with manual proof work. For linearly-typed languages (including session-typed languages) one has to prove that the interpreter, as well as all the operations on semantic components, treat values linearly. We present new methods and tools that make it possible to implement intrinsically-typed definitional interpreters for linearly-typed languages in a way that hides the majority of the manual proof work. Inspired by separation logic, we develop reusable and composable abstractions for programming with linear operations using dependent types. Using these abstractions, we define interpreters for linear lambda calculi with strong references, concurrency, and session-typed communication in Agda.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2020,
-    "paper_url": "https://doi.org/10.1145/3372885.3373818"
+    "paper_url": "https://doi.org/10.1145/3372885.3373829"
   },
   {
     "id": "10.1145/3372885.3373813",

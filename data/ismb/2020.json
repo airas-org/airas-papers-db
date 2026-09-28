@@ -491,6 +491,178 @@
     "paper_url": "https://doi.org/10.1093/bioinformatics/btaa464"
   },
   {
+    "id": "10.1093/bioinformatics/btaa504",
+    "title": "MutCombinator: identification of mutated peptides allowing combinatorial mutations using nucleotide-based graph search",
+    "authors": [
+      "Choi S",
+      "Paek E"
+    ],
+    "abstract": "<h4>Motivation</h4>Proteogenomics has proven its utility by integrating genomics and proteomics. Typical approaches use data from next-generation sequencing to infer proteins expressed. A sample-specific protein sequence database is often adopted to identify novel peptides from matched mass spectrometry-based proteomics; nevertheless, there is no software that can practically identify all possible forms of mutated peptides suggested by various genomic information sources.<h4>Results</h4>We propose MutCombinator, which enables us to practically identify mutated peptides from tandem mass spectra allowing combinatorial mutations during the database search. It uses an upgraded version of a variant graph, keeping track of frame information. The variant graph is indexed by nine nucleotides for fast access. Using MutCombinator, we could identify more mutated peptides than previous methods, because combinations of point mutations are considered and also because it can be practically applied together with a large mutation database such as COSMIC. Furthermore, MutCombinator supports in-frame search for coding regions and three-frame search for non-coding regions.<h4>Availability and implementation</h4>https://prix.hanyang.ac.kr/download/mutcombinator.jsp.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btaa504"
+  },
+  {
+    "id": "10.1093/bioinformatics/btaa403",
+    "title": "TopicNet: a framework for measuring transcriptional regulatory network change",
+    "authors": [
+      "Lou S",
+      "Li T",
+      "Kong X",
+      "Zhang J",
+      "Liu J",
+      "Lee D",
+      "Gerstein M"
+    ],
+    "abstract": "<h4>Motivation</h4>Recently, many chromatin immunoprecipitation sequencing experiments have been carried out for a diverse group of transcription factors (TFs) in many different types of human cells. These experiments manifest large-scale and dynamic changes in regulatory network connectivity (i.e. network 'rewiring'), highlighting the different regulatory programs operating in disparate cellular states. However, due to the dense and noisy nature of current regulatory networks, directly comparing the gains and losses of targets of key TFs across cell states is often not informative. Thus, here, we seek an abstracted, low-dimensional representation to understand the main features of network change.<h4>Results</h4>We propose a method called TopicNet that applies latent Dirichlet allocation to extract functional topics for a collection of genes regulated by a given TF. We then define a rewiring score to quantify regulatory-network changes in terms of the topic changes for this TF. Using this framework, we can pinpoint particular TFs that change greatly in network connectivity between different cellular states (such as observed in oncogenesis). Also, incorporating gene expression data, we define a topic activity score that measures the degree to which a given topic is active in a particular cellular state. And we show how activity differences can indicate differential survival in various cancers.<h4>Availability and implementation</h4>The TopicNet framework and related analysis were implemented using R and all codes are available at https://github.com/gersteinlab/topicnet.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btaa403"
+  },
+  {
+    "id": "10.1093/bioinformatics/btaa397",
+    "title": "Efficient exact inference for dynamical systems with noisy measurements using sequential approximate Bayesian computation",
+    "authors": [
+      "Schälte Y",
+      "Hasenauer J"
+    ],
+    "abstract": "<h4>Motivation</h4>Approximate Bayesian computation (ABC) is an increasingly popular method for likelihood-free parameter inference in systems biology and other fields of research, as it allows analyzing complex stochastic models. However, the introduced approximation error is often not clear. It has been shown that ABC actually gives exact inference under the implicit assumption of a measurement noise model. Noise being common in biological systems, it is intriguing to exploit this insight. But this is difficult in practice, as ABC is in general highly computationally demanding. Thus, the question we want to answer here is how to efficiently account for measurement noise in ABC.<h4>Results</h4>We illustrate exemplarily how ABC yields erroneous parameter estimates when neglecting measurement noise. Then, we discuss practical ways of correctly including the measurement noise in the analysis. We present an efficient adaptive sequential importance sampling-based algorithm applicable to various model types and noise models. We test and compare it on several models, including ordinary and stochastic differential equations, Markov jump processes and stochastically interacting agents, and noise models including normal, Laplace and Poisson noise. We conclude that the proposed algorithm could improve the accuracy of parameter estimates for a broad spectrum of applications.<h4>Availability and implementation</h4>The developed algorithms are made publicly available as part of the open-source python toolbox pyABC (https://github.com/icb-dcm/pyabc).<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btaa397"
+  },
+  {
+    "id": "10.1093/bioinformatics/btaa431",
+    "title": "The locality dilemma of Sankoff-like RNA alignments",
+    "authors": [
+      "Müller T",
+      "Miladi M",
+      "Hutter F",
+      "Hofacker I",
+      "Will S",
+      "Backofen R"
+    ],
+    "abstract": "<h4>Motivation</h4>Elucidating the functions of non-coding RNAs by homology has been strongly limited due to fundamental computational and modeling issues. While existing simultaneous alignment and folding (SA&F) algorithms successfully align homologous RNAs with precisely known boundaries (global SA&F), the more pressing problem of identifying new classes of homologous RNAs in the genome (local SA&F) is intrinsically more difficult and much less understood. Typically, the length of local alignments is strongly overestimated and alignment boundaries are dramatically mispredicted. We hypothesize that local SA&F approaches are compromised this way due to a score bias, which is caused by the contribution of RNA structure similarity to their overall alignment score.<h4>Results</h4>In the light of this hypothesis, we study pairwise local SA&F for the first time systematically-based on a novel local RNA alignment benchmark set and quality measure. First, we vary the relative influence of structure similarity compared to sequence similarity. Putting more emphasis on the structure component leads to overestimating the length of local alignments. This clearly shows the bias of current scores and strongly hints at the structure component as its origin. Second, we study the interplay of several important scoring parameters by learning parameters for local and global SA&F. The divergence of these optimized parameter sets underlines the fundamental obstacles for local SA&F. Third, by introducing a position-wise correction term in local SA&F, we constructively solve its principal issues.<h4>Availability and implementation</h4>The benchmark data, detailed results and scripts are available at https://github.com/BackofenLab/local_alignment. The RNA alignment tool LocARNA, including the modifications proposed in this work, is available at https://github.com/s-will/LocARNA/releases/tag/v2.0.0RC6.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btaa431"
+  },
+  {
+    "id": "10.1093/bioinformatics/btaa487",
+    "title": "REINDEER: efficient indexing of k-mer presence and abundance in sequencing datasets",
+    "authors": [
+      "Marchet C",
+      "Iqbal Z",
+      "Gautheret D",
+      "Salson M",
+      "Chikhi R"
+    ],
+    "abstract": "<h4>Motivation</h4>In this work we present REINDEER, a novel computational method that performs indexing of sequences and records their abundances across a collection of datasets. To the best of our knowledge, other indexing methods have so far been unable to record abundances efficiently across large datasets.<h4>Results</h4>We used REINDEER to index the abundances of sequences within 2585 human RNA-seq experiments in 45 h using only 56 GB of RAM. This makes REINDEER the first method able to record abundances at the scale of ∼4 billion distinct k-mers across 2585 datasets. REINDEER also supports exact presence/absence queries of k-mers. Briefly, REINDEER constructs the compacted de Bruijn graph of each dataset, then conceptually merges those de Bruijn graphs into a single global one. Then, REINDEER constructs and indexes monotigs, which in a nutshell are groups of k-mers of similar abundances.<h4>Availability and implementation</h4>https://github.com/kamimrcht/REINDEER.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btaa487"
+  },
+  {
+    "id": "10.1093/bioinformatics/btaa479",
+    "title": "MHCAttnNet: predicting MHC-peptide bindings for MHC alleles classes I and II using an attention-based deep neural model",
+    "authors": [
+      "Venkatesh G",
+      "Grover A",
+      "Srinivasaraghavan G",
+      "Rao S"
+    ],
+    "abstract": "<h4>Motivation</h4>Accurate prediction of binding between a major histocompatibility complex (MHC) allele and a peptide plays a major role in the synthesis of personalized cancer vaccines. The immune system struggles to distinguish between a cancerous and a healthy cell. In a patient suffering from cancer who has a particular MHC allele, only those peptides that bind with the MHC allele with high affinity, help the immune system recognize the cancerous cells.<h4>Results</h4>MHCAttnNet is a deep neural model that uses an attention mechanism to capture the relevant subsequences of the amino acid sequences of peptides and MHC alleles. It then uses this to accurately predict the MHC-peptide binding. MHCAttnNet achieves an AUC-PRC score of 94.18% with 161 class I MHC alleles, which outperforms the state-of-the-art models for this task. MHCAttnNet also achieves a better F1-score in comparison to the state-of-the-art models while covering a larger number of class II MHC alleles. The attention mechanism used by MHCAttnNet provides a heatmap over the amino acids thus indicating the important subsequences present in the amino acid sequence. This approach also allows us to focus on a much smaller number of relevant trigrams corresponding to the amino acid sequence of an MHC allele, from 9251 possible trigrams to about 258. This significantly reduces the number of amino acid subsequences that need to be clinically tested.<h4>Availability and implementation</h4>The data and source code are available at https://github.com/gopuvenkat/MHCAttnNet.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btaa479"
+  },
+  {
+    "id": "10.1093/bioinformatics/btaa478",
+    "title": "Privacy-preserving construction of generalized linear mixed model for biomedical computation",
+    "authors": [
+      "Zhu R",
+      "Jiang C",
+      "Wang X",
+      "Wang S",
+      "Zheng H",
+      "Tang H"
+    ],
+    "abstract": "<h4>Motivation</h4>The generalized linear mixed model (GLMM) is an extension of the generalized linear model (GLM) in which the linear predictor takes random effects into account. Given its power of precisely modeling the mixed effects from multiple sources of random variations, the method has been widely used in biomedical computation, for instance in the genome-wide association studies (GWASs) that aim to detect genetic variance significantly associated with phenotypes such as human diseases. Collaborative GWAS on large cohorts of patients across multiple institutions is often impeded by the privacy concerns of sharing personal genomic and other health data. To address such concerns, we present in this paper a privacy-preserving Expectation-Maximization (EM) algorithm to build GLMM collaboratively when input data are distributed to multiple participating parties and cannot be transferred to a central server. We assume that the data are horizontally partitioned among participating parties: i.e. each party holds a subset of records (including observational values of fixed effect variables and their corresponding outcome), and for all records, the outcome is regulated by the same set of known fixed effects and random effects.<h4>Results</h4>Our collaborative EM algorithm is mathematically equivalent to the original EM algorithm commonly used in GLMM construction. The algorithm also runs efficiently when tested on simulated and real human genomic data, and thus can be practically used for privacy-preserving GLMM construction. We implemented the algorithm for collaborative GLMM (cGLMM) construction in R. The data communication was implemented using the rsocket package.<h4>Availability and implementation</h4>The software is released in open source at https://github.com/huthvincent/cGLMM.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btaa478"
+  },
+  {
+    "id": "10.1093/bioinformatics/btaa453",
+    "title": "Identification of conserved evolutionary trajectories in tumors",
+    "authors": [
+      "Hodzic E",
+      "Shrestha R",
+      "Malikic S",
+      "Collins CC",
+      "Litchfield K",
+      "Turajlic S",
+      "Sahinalp SC"
+    ],
+    "abstract": "<h4>Motivation</h4>As multi-region, time-series and single-cell sequencing data become more widely available; it is becoming clear that certain tumors share evolutionary characteristics with others. In the last few years, several computational methods have been developed with the goal of inferring the subclonal composition and evolutionary history of tumors from tumor biopsy sequencing data. However, the phylogenetic trees that they report differ significantly between tumors (even those with similar characteristics).<h4>Results</h4>In this article, we present a novel combinatorial optimization method, CONETT, for detection of recurrent tumor evolution trajectories. Our method constructs a consensus tree of conserved evolutionary trajectories based on the information about temporal order of alteration events in a set of tumors. We apply our method to previously published datasets of 100 clear-cell renal cell carcinoma and 99 non-small-cell lung cancer patients and identify both conserved trajectories that were reported in the original studies, as well as new trajectories.<h4>Availability and implementation</h4>CONETT is implemented in C++ and available at https://github.com/ehodzic/CONETT.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btaa453"
+  },
+  {
+    "id": "10.1093/bioinformatics/btaa471",
+    "title": "ClonArch: visualizing the spatial clonal architecture of tumors",
+    "authors": [
+      "Wu J",
+      "El-Kebir M"
+    ],
+    "abstract": "<h4>Motivation</h4>Cancer is caused by the accumulation of somatic mutations that lead to the formation of distinct populations of cells, called clones. The resulting clonal architecture is the main cause of relapse and resistance to treatment. With decreasing costs in DNA sequencing technology, rich cancer genomics datasets with many spatial sequencing samples are becoming increasingly available, enabling the inference of high-resolution tumor clones and prevalences across different spatial coordinates. While temporal and phylogenetic aspects of tumor evolution, such as clonal evolution over time and clonal response to treatment, are commonly visualized in various clonal evolution diagrams, visual analytics methods that reveal the spatial clonal architecture are missing.<h4>Results</h4>This article introduces ClonArch, a web-based tool to interactively visualize the phylogenetic tree and spatial distribution of clones in a single tumor mass. ClonArch uses the marching squares algorithm to draw closed boundaries representing the presence of clones in a real or simulated tumor. ClonArch enables researchers to examine the spatial clonal architecture of a subset of relevant mutations at different prevalence thresholds and across multiple phylogenetic trees. In addition to simulated tumors with varying number of biopsies, we demonstrate the use of ClonArch on a hepatocellular carcinoma tumor with ∼280 sequencing biopsies. ClonArch provides an automated way to interactively examine the spatial clonal architecture of a tumor, facilitating clinical and biological interpretations of the spatial aspects of intra-tumor heterogeneity.<h4>Availability and implementation</h4>https://github.com/elkebir-group/ClonArch.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btaa471"
+  },
+  {
+    "id": "10.1093/bioinformatics/btaa458",
+    "title": "ganon: precise metagenomics classification against large and up-to-date sets of reference sequences",
+    "authors": [
+      "Piro VC",
+      "Dadi TH",
+      "Seiler E",
+      "Reinert K",
+      "Renard BY"
+    ],
+    "abstract": "<h4>Motivation</h4>The exponential growth of assembled genome sequences greatly benefits metagenomics studies. However, currently available methods struggle to manage the increasing amount of sequences and their frequent updates. Indexing the current RefSeq can take days and hundreds of GB of memory on large servers. Few methods address these issues thus far, and even though many can theoretically handle large amounts of references, time/memory requirements are prohibitive in practice. As a result, many studies that require sequence classification use often outdated and almost never truly up-to-date indices.<h4>Results</h4>Motivated by those limitations, we created ganon, a k-mer-based read classification tool that uses Interleaved Bloom Filters in conjunction with a taxonomic clustering and a k-mer counting/filtering scheme. Ganon provides an efficient method for indexing references, keeping them updated. It requires <55 min to index the complete RefSeq of bacteria, archaea, fungi and viruses. The tool can further keep these indices up-to-date in a fraction of the time necessary to create them. Ganon makes it possible to query against very large reference sets and therefore it classifies significantly more reads and identifies more species than similar methods. When classifying a high-complexity CAMI challenge dataset against complete genomes from RefSeq, ganon shows strongly increased precision with equal or better sensitivity compared with state-of-the-art tools. With the same dataset against the complete RefSeq, ganon improved the F1-score by 65% at the genus level. It supports taxonomy- and assembly-level classification, multiple indices and hierarchical classification.<h4>Availability and implementation</h4>The software is open-source and available at: https://gitlab.com/rki_bioinformatics/ganon.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btaa458"
+  },
+  {
+    "id": "10.1093/bioinformatics/btaa446",
+    "title": "Distance indexing and seed clustering in sequence graphs",
+    "authors": [
+      "Chang X",
+      "Eizenga J",
+      "Novak AM",
+      "Sirén J",
+      "Paten B"
+    ],
+    "abstract": "<h4>Motivation</h4>Graph representations of genomes are capable of expressing more genetic variation and can therefore better represent a population than standard linear genomes. However, due to the greater complexity of genome graphs relative to linear genomes, some functions that are trivial on linear genomes become much more difficult in genome graphs. Calculating distance is one such function that is simple in a linear genome but complicated in a graph context. In read mapping algorithms such distance calculations are fundamental to determining if seed alignments could belong to the same mapping.<h4>Results</h4>We have developed an algorithm for quickly calculating the minimum distance between positions on a sequence graph using a minimum distance index. We have also developed an algorithm that uses the distance index to cluster seeds on a graph. We demonstrate that our implementations of these algorithms are efficient and practical to use for a new generation of mapping algorithms based upon genome graphs.<h4>Availability and implementation</h4>Our algorithms have been implemented as part of the vg toolkit and are available at https://github.com/vgteam/vg.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btaa446"
+  },
+  {
     "id": "10.1093/bioinformatics/btaa433",
     "title": "Cancer mutational signatures representation by large-scale context embedding",
     "authors": [
@@ -814,177 +986,5 @@
     "conference": "ismb",
     "year": 2020,
     "paper_url": "https://doi.org/10.1093/bioinformatics/btaa440"
-  },
-  {
-    "id": "10.1093/bioinformatics/btaa504",
-    "title": "MutCombinator: identification of mutated peptides allowing combinatorial mutations using nucleotide-based graph search",
-    "authors": [
-      "Choi S",
-      "Paek E"
-    ],
-    "abstract": "<h4>Motivation</h4>Proteogenomics has proven its utility by integrating genomics and proteomics. Typical approaches use data from next-generation sequencing to infer proteins expressed. A sample-specific protein sequence database is often adopted to identify novel peptides from matched mass spectrometry-based proteomics; nevertheless, there is no software that can practically identify all possible forms of mutated peptides suggested by various genomic information sources.<h4>Results</h4>We propose MutCombinator, which enables us to practically identify mutated peptides from tandem mass spectra allowing combinatorial mutations during the database search. It uses an upgraded version of a variant graph, keeping track of frame information. The variant graph is indexed by nine nucleotides for fast access. Using MutCombinator, we could identify more mutated peptides than previous methods, because combinations of point mutations are considered and also because it can be practically applied together with a large mutation database such as COSMIC. Furthermore, MutCombinator supports in-frame search for coding regions and three-frame search for non-coding regions.<h4>Availability and implementation</h4>https://prix.hanyang.ac.kr/download/mutcombinator.jsp.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2020,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btaa504"
-  },
-  {
-    "id": "10.1093/bioinformatics/btaa403",
-    "title": "TopicNet: a framework for measuring transcriptional regulatory network change",
-    "authors": [
-      "Lou S",
-      "Li T",
-      "Kong X",
-      "Zhang J",
-      "Liu J",
-      "Lee D",
-      "Gerstein M"
-    ],
-    "abstract": "<h4>Motivation</h4>Recently, many chromatin immunoprecipitation sequencing experiments have been carried out for a diverse group of transcription factors (TFs) in many different types of human cells. These experiments manifest large-scale and dynamic changes in regulatory network connectivity (i.e. network 'rewiring'), highlighting the different regulatory programs operating in disparate cellular states. However, due to the dense and noisy nature of current regulatory networks, directly comparing the gains and losses of targets of key TFs across cell states is often not informative. Thus, here, we seek an abstracted, low-dimensional representation to understand the main features of network change.<h4>Results</h4>We propose a method called TopicNet that applies latent Dirichlet allocation to extract functional topics for a collection of genes regulated by a given TF. We then define a rewiring score to quantify regulatory-network changes in terms of the topic changes for this TF. Using this framework, we can pinpoint particular TFs that change greatly in network connectivity between different cellular states (such as observed in oncogenesis). Also, incorporating gene expression data, we define a topic activity score that measures the degree to which a given topic is active in a particular cellular state. And we show how activity differences can indicate differential survival in various cancers.<h4>Availability and implementation</h4>The TopicNet framework and related analysis were implemented using R and all codes are available at https://github.com/gersteinlab/topicnet.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2020,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btaa403"
-  },
-  {
-    "id": "10.1093/bioinformatics/btaa397",
-    "title": "Efficient exact inference for dynamical systems with noisy measurements using sequential approximate Bayesian computation",
-    "authors": [
-      "Schälte Y",
-      "Hasenauer J"
-    ],
-    "abstract": "<h4>Motivation</h4>Approximate Bayesian computation (ABC) is an increasingly popular method for likelihood-free parameter inference in systems biology and other fields of research, as it allows analyzing complex stochastic models. However, the introduced approximation error is often not clear. It has been shown that ABC actually gives exact inference under the implicit assumption of a measurement noise model. Noise being common in biological systems, it is intriguing to exploit this insight. But this is difficult in practice, as ABC is in general highly computationally demanding. Thus, the question we want to answer here is how to efficiently account for measurement noise in ABC.<h4>Results</h4>We illustrate exemplarily how ABC yields erroneous parameter estimates when neglecting measurement noise. Then, we discuss practical ways of correctly including the measurement noise in the analysis. We present an efficient adaptive sequential importance sampling-based algorithm applicable to various model types and noise models. We test and compare it on several models, including ordinary and stochastic differential equations, Markov jump processes and stochastically interacting agents, and noise models including normal, Laplace and Poisson noise. We conclude that the proposed algorithm could improve the accuracy of parameter estimates for a broad spectrum of applications.<h4>Availability and implementation</h4>The developed algorithms are made publicly available as part of the open-source python toolbox pyABC (https://github.com/icb-dcm/pyabc).<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2020,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btaa397"
-  },
-  {
-    "id": "10.1093/bioinformatics/btaa431",
-    "title": "The locality dilemma of Sankoff-like RNA alignments",
-    "authors": [
-      "Müller T",
-      "Miladi M",
-      "Hutter F",
-      "Hofacker I",
-      "Will S",
-      "Backofen R"
-    ],
-    "abstract": "<h4>Motivation</h4>Elucidating the functions of non-coding RNAs by homology has been strongly limited due to fundamental computational and modeling issues. While existing simultaneous alignment and folding (SA&F) algorithms successfully align homologous RNAs with precisely known boundaries (global SA&F), the more pressing problem of identifying new classes of homologous RNAs in the genome (local SA&F) is intrinsically more difficult and much less understood. Typically, the length of local alignments is strongly overestimated and alignment boundaries are dramatically mispredicted. We hypothesize that local SA&F approaches are compromised this way due to a score bias, which is caused by the contribution of RNA structure similarity to their overall alignment score.<h4>Results</h4>In the light of this hypothesis, we study pairwise local SA&F for the first time systematically-based on a novel local RNA alignment benchmark set and quality measure. First, we vary the relative influence of structure similarity compared to sequence similarity. Putting more emphasis on the structure component leads to overestimating the length of local alignments. This clearly shows the bias of current scores and strongly hints at the structure component as its origin. Second, we study the interplay of several important scoring parameters by learning parameters for local and global SA&F. The divergence of these optimized parameter sets underlines the fundamental obstacles for local SA&F. Third, by introducing a position-wise correction term in local SA&F, we constructively solve its principal issues.<h4>Availability and implementation</h4>The benchmark data, detailed results and scripts are available at https://github.com/BackofenLab/local_alignment. The RNA alignment tool LocARNA, including the modifications proposed in this work, is available at https://github.com/s-will/LocARNA/releases/tag/v2.0.0RC6.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2020,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btaa431"
-  },
-  {
-    "id": "10.1093/bioinformatics/btaa487",
-    "title": "REINDEER: efficient indexing of k-mer presence and abundance in sequencing datasets",
-    "authors": [
-      "Marchet C",
-      "Iqbal Z",
-      "Gautheret D",
-      "Salson M",
-      "Chikhi R"
-    ],
-    "abstract": "<h4>Motivation</h4>In this work we present REINDEER, a novel computational method that performs indexing of sequences and records their abundances across a collection of datasets. To the best of our knowledge, other indexing methods have so far been unable to record abundances efficiently across large datasets.<h4>Results</h4>We used REINDEER to index the abundances of sequences within 2585 human RNA-seq experiments in 45 h using only 56 GB of RAM. This makes REINDEER the first method able to record abundances at the scale of ∼4 billion distinct k-mers across 2585 datasets. REINDEER also supports exact presence/absence queries of k-mers. Briefly, REINDEER constructs the compacted de Bruijn graph of each dataset, then conceptually merges those de Bruijn graphs into a single global one. Then, REINDEER constructs and indexes monotigs, which in a nutshell are groups of k-mers of similar abundances.<h4>Availability and implementation</h4>https://github.com/kamimrcht/REINDEER.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2020,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btaa487"
-  },
-  {
-    "id": "10.1093/bioinformatics/btaa479",
-    "title": "MHCAttnNet: predicting MHC-peptide bindings for MHC alleles classes I and II using an attention-based deep neural model",
-    "authors": [
-      "Venkatesh G",
-      "Grover A",
-      "Srinivasaraghavan G",
-      "Rao S"
-    ],
-    "abstract": "<h4>Motivation</h4>Accurate prediction of binding between a major histocompatibility complex (MHC) allele and a peptide plays a major role in the synthesis of personalized cancer vaccines. The immune system struggles to distinguish between a cancerous and a healthy cell. In a patient suffering from cancer who has a particular MHC allele, only those peptides that bind with the MHC allele with high affinity, help the immune system recognize the cancerous cells.<h4>Results</h4>MHCAttnNet is a deep neural model that uses an attention mechanism to capture the relevant subsequences of the amino acid sequences of peptides and MHC alleles. It then uses this to accurately predict the MHC-peptide binding. MHCAttnNet achieves an AUC-PRC score of 94.18% with 161 class I MHC alleles, which outperforms the state-of-the-art models for this task. MHCAttnNet also achieves a better F1-score in comparison to the state-of-the-art models while covering a larger number of class II MHC alleles. The attention mechanism used by MHCAttnNet provides a heatmap over the amino acids thus indicating the important subsequences present in the amino acid sequence. This approach also allows us to focus on a much smaller number of relevant trigrams corresponding to the amino acid sequence of an MHC allele, from 9251 possible trigrams to about 258. This significantly reduces the number of amino acid subsequences that need to be clinically tested.<h4>Availability and implementation</h4>The data and source code are available at https://github.com/gopuvenkat/MHCAttnNet.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2020,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btaa479"
-  },
-  {
-    "id": "10.1093/bioinformatics/btaa478",
-    "title": "Privacy-preserving construction of generalized linear mixed model for biomedical computation",
-    "authors": [
-      "Zhu R",
-      "Jiang C",
-      "Wang X",
-      "Wang S",
-      "Zheng H",
-      "Tang H"
-    ],
-    "abstract": "<h4>Motivation</h4>The generalized linear mixed model (GLMM) is an extension of the generalized linear model (GLM) in which the linear predictor takes random effects into account. Given its power of precisely modeling the mixed effects from multiple sources of random variations, the method has been widely used in biomedical computation, for instance in the genome-wide association studies (GWASs) that aim to detect genetic variance significantly associated with phenotypes such as human diseases. Collaborative GWAS on large cohorts of patients across multiple institutions is often impeded by the privacy concerns of sharing personal genomic and other health data. To address such concerns, we present in this paper a privacy-preserving Expectation-Maximization (EM) algorithm to build GLMM collaboratively when input data are distributed to multiple participating parties and cannot be transferred to a central server. We assume that the data are horizontally partitioned among participating parties: i.e. each party holds a subset of records (including observational values of fixed effect variables and their corresponding outcome), and for all records, the outcome is regulated by the same set of known fixed effects and random effects.<h4>Results</h4>Our collaborative EM algorithm is mathematically equivalent to the original EM algorithm commonly used in GLMM construction. The algorithm also runs efficiently when tested on simulated and real human genomic data, and thus can be practically used for privacy-preserving GLMM construction. We implemented the algorithm for collaborative GLMM (cGLMM) construction in R. The data communication was implemented using the rsocket package.<h4>Availability and implementation</h4>The software is released in open source at https://github.com/huthvincent/cGLMM.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2020,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btaa478"
-  },
-  {
-    "id": "10.1093/bioinformatics/btaa453",
-    "title": "Identification of conserved evolutionary trajectories in tumors",
-    "authors": [
-      "Hodzic E",
-      "Shrestha R",
-      "Malikic S",
-      "Collins CC",
-      "Litchfield K",
-      "Turajlic S",
-      "Sahinalp SC"
-    ],
-    "abstract": "<h4>Motivation</h4>As multi-region, time-series and single-cell sequencing data become more widely available; it is becoming clear that certain tumors share evolutionary characteristics with others. In the last few years, several computational methods have been developed with the goal of inferring the subclonal composition and evolutionary history of tumors from tumor biopsy sequencing data. However, the phylogenetic trees that they report differ significantly between tumors (even those with similar characteristics).<h4>Results</h4>In this article, we present a novel combinatorial optimization method, CONETT, for detection of recurrent tumor evolution trajectories. Our method constructs a consensus tree of conserved evolutionary trajectories based on the information about temporal order of alteration events in a set of tumors. We apply our method to previously published datasets of 100 clear-cell renal cell carcinoma and 99 non-small-cell lung cancer patients and identify both conserved trajectories that were reported in the original studies, as well as new trajectories.<h4>Availability and implementation</h4>CONETT is implemented in C++ and available at https://github.com/ehodzic/CONETT.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2020,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btaa453"
-  },
-  {
-    "id": "10.1093/bioinformatics/btaa471",
-    "title": "ClonArch: visualizing the spatial clonal architecture of tumors",
-    "authors": [
-      "Wu J",
-      "El-Kebir M"
-    ],
-    "abstract": "<h4>Motivation</h4>Cancer is caused by the accumulation of somatic mutations that lead to the formation of distinct populations of cells, called clones. The resulting clonal architecture is the main cause of relapse and resistance to treatment. With decreasing costs in DNA sequencing technology, rich cancer genomics datasets with many spatial sequencing samples are becoming increasingly available, enabling the inference of high-resolution tumor clones and prevalences across different spatial coordinates. While temporal and phylogenetic aspects of tumor evolution, such as clonal evolution over time and clonal response to treatment, are commonly visualized in various clonal evolution diagrams, visual analytics methods that reveal the spatial clonal architecture are missing.<h4>Results</h4>This article introduces ClonArch, a web-based tool to interactively visualize the phylogenetic tree and spatial distribution of clones in a single tumor mass. ClonArch uses the marching squares algorithm to draw closed boundaries representing the presence of clones in a real or simulated tumor. ClonArch enables researchers to examine the spatial clonal architecture of a subset of relevant mutations at different prevalence thresholds and across multiple phylogenetic trees. In addition to simulated tumors with varying number of biopsies, we demonstrate the use of ClonArch on a hepatocellular carcinoma tumor with ∼280 sequencing biopsies. ClonArch provides an automated way to interactively examine the spatial clonal architecture of a tumor, facilitating clinical and biological interpretations of the spatial aspects of intra-tumor heterogeneity.<h4>Availability and implementation</h4>https://github.com/elkebir-group/ClonArch.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2020,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btaa471"
-  },
-  {
-    "id": "10.1093/bioinformatics/btaa458",
-    "title": "ganon: precise metagenomics classification against large and up-to-date sets of reference sequences",
-    "authors": [
-      "Piro VC",
-      "Dadi TH",
-      "Seiler E",
-      "Reinert K",
-      "Renard BY"
-    ],
-    "abstract": "<h4>Motivation</h4>The exponential growth of assembled genome sequences greatly benefits metagenomics studies. However, currently available methods struggle to manage the increasing amount of sequences and their frequent updates. Indexing the current RefSeq can take days and hundreds of GB of memory on large servers. Few methods address these issues thus far, and even though many can theoretically handle large amounts of references, time/memory requirements are prohibitive in practice. As a result, many studies that require sequence classification use often outdated and almost never truly up-to-date indices.<h4>Results</h4>Motivated by those limitations, we created ganon, a k-mer-based read classification tool that uses Interleaved Bloom Filters in conjunction with a taxonomic clustering and a k-mer counting/filtering scheme. Ganon provides an efficient method for indexing references, keeping them updated. It requires <55 min to index the complete RefSeq of bacteria, archaea, fungi and viruses. The tool can further keep these indices up-to-date in a fraction of the time necessary to create them. Ganon makes it possible to query against very large reference sets and therefore it classifies significantly more reads and identifies more species than similar methods. When classifying a high-complexity CAMI challenge dataset against complete genomes from RefSeq, ganon shows strongly increased precision with equal or better sensitivity compared with state-of-the-art tools. With the same dataset against the complete RefSeq, ganon improved the F1-score by 65% at the genus level. It supports taxonomy- and assembly-level classification, multiple indices and hierarchical classification.<h4>Availability and implementation</h4>The software is open-source and available at: https://gitlab.com/rki_bioinformatics/ganon.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2020,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btaa458"
-  },
-  {
-    "id": "10.1093/bioinformatics/btaa446",
-    "title": "Distance indexing and seed clustering in sequence graphs",
-    "authors": [
-      "Chang X",
-      "Eizenga J",
-      "Novak AM",
-      "Sirén J",
-      "Paten B"
-    ],
-    "abstract": "<h4>Motivation</h4>Graph representations of genomes are capable of expressing more genetic variation and can therefore better represent a population than standard linear genomes. However, due to the greater complexity of genome graphs relative to linear genomes, some functions that are trivial on linear genomes become much more difficult in genome graphs. Calculating distance is one such function that is simple in a linear genome but complicated in a graph context. In read mapping algorithms such distance calculations are fundamental to determining if seed alignments could belong to the same mapping.<h4>Results</h4>We have developed an algorithm for quickly calculating the minimum distance between positions on a sequence graph using a minimum distance index. We have also developed an algorithm that uses the distance index to cluster seeds on a graph. We demonstrate that our implementations of these algorithms are efficient and practical to use for a new generation of mapping algorithms based upon genome graphs.<h4>Availability and implementation</h4>Our algorithms have been implemented as part of the vg toolkit and are available at https://github.com/vgteam/vg.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2020,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btaa446"
   }
 ]

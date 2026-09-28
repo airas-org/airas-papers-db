@@ -1,42 +1,5 @@
 [
   {
-    "id": "10.1145/3573105.3575671",
-    "title": "Aesop: White-Box Best-First Proof Search for Lean",
-    "authors": [
-      "Jannis Limperg",
-      "Asta Halkjær From"
-    ],
-    "abstract": "We present Aesop, a proof search tactic for the Lean 4 interactive theorem prover. Aesop performs a tree-based search over a user-specified set of proof rules. It supports safe and unsafe rules and uses a best-first search strategy with customisable prioritisation. Aesop also allows users to register custom normalisation rules and integrates Lean's simplifier to support equational reasoning. Many details of Aesop's search procedure are designed to make it a white-box proof automation tactic, meaning that users should be able to easily predict how their rules will be applied, and thus how powerful and fast their Aesop invocations will be. Since we use a best-first search strategy, it is not obvious how to handle metavariables which appear in multiple goals. The most common strategy for dealing with metavariables relies on backtracking and is therefore not suitable for best-first search. We give an algorithm which addresses this issue. The algorithm works with any search strategy, is independent of the underlying logic and makes few assumptions about how rules interact with metavariables. We conjecture that with a fair search strategy, the algorithm is as complete as the given set of rules allows.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1145/3573105.3575671"
-  },
-  {
-    "id": "10.1145/3573105.3579108",
-    "title": "Improved Assistance for Interactive Proof (Keynote)",
-    "authors": [
-      "Cezary Kaliszyk"
-    ],
-    "abstract": "Machine learning techniques have been included in various theorem proving tools for approximately two decades. Some of the learning tasks are well understood and tools actually help practitioners, while other tasks are still in their early developmental stages. In this talk I will try to classify the various learning tasks and discuss the learning techniques and tools that are aimed at enhancing the efficiency of interactive theorem provers. I will discuss the most successful techniques aimed at improving the power of automation, that use Monte-Carlo simulations guided by reinforcement learning from previous proof attempts. I will also consider the present and the future challenges including more efficient interaction with interactive theorem provers.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1145/3573105.3579108"
-  },
-  {
-    "id": "10.1145/3573105.3575689",
-    "title": "Formalising Sharkovsky’s Theorem (Proof Pearl)",
-    "authors": [
-      "Bhavik Mehta"
-    ],
-    "abstract": "Sharkovsky's theorem is a celebrated result by Ukrainian mathematician Oleksandr Sharkovsky in the theory of discrete dynamical systems, including the fact that if a continuous function of reals has a point of period 3, it must have points of any period. We formalise the proof in the Lean theorem prover, giving a characterisation of the possible sets of periods a continuous function on the real numbers may have. We further include the converse of the theorem, showing that the aforementioned sets are achievable under mild conditions.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1145/3573105.3575689"
-  },
-  {
     "id": "10.1145/3573105.3575685",
     "title": "Formalising Decentralised Exchanges in Coq",
     "authors": [
@@ -64,6 +27,19 @@
     "conference": "cpp",
     "year": 2023,
     "paper_url": "https://doi.org/10.1145/3573105.3575682"
+  },
+  {
+    "id": "10.1145/3573105.3575671",
+    "title": "Aesop: White-Box Best-First Proof Search for Lean",
+    "authors": [
+      "Jannis Limperg",
+      "Asta Halkjær From"
+    ],
+    "abstract": "We present Aesop, a proof search tactic for the Lean 4 interactive theorem prover. Aesop performs a tree-based search over a user-specified set of proof rules. It supports safe and unsafe rules and uses a best-first search strategy with customisable prioritisation. Aesop also allows users to register custom normalisation rules and integrates Lean's simplifier to support equational reasoning. Many details of Aesop's search procedure are designed to make it a white-box proof automation tactic, meaning that users should be able to easily predict how their rules will be applied, and thus how powerful and fast their Aesop invocations will be. Since we use a best-first search strategy, it is not obvious how to handle metavariables which appear in multiple goals. The most common strategy for dealing with metavariables relies on backtracking and is therefore not suitable for best-first search. We give an algorithm which addresses this issue. The algorithm works with any search strategy, is independent of the underlying logic and makes few assumptions about how rules interact with metavariables. We conjecture that with a fair search strategy, the algorithm is as complete as the given set of rules allows.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1145/3573105.3575671"
   },
   {
     "id": "10.1145/3573105.3575672",
@@ -94,18 +70,28 @@
     "paper_url": "https://doi.org/10.1145/3573105.3575683"
   },
   {
-    "id": "10.1145/3573105.3575678",
-    "title": "A Formal Disproof of Hirsch Conjecture",
+    "id": "10.1145/3573105.3579108",
+    "title": "Improved Assistance for Interactive Proof (Keynote)",
     "authors": [
-      "Xavier Allamigeon",
-      "Quentin Canu",
-      "Pierre-Yves Strub"
+      "Cezary Kaliszyk"
     ],
-    "abstract": "The purpose of this paper is the formal verification of a counterexample of Santos et al. to the so-called Hirsch Conjecture on the diameter of polytopes (bounded convex polyhedra). In contrast with the pen-and-paper proof, our approach is entirely computational: we have implemented in Coq and proved correct an algorithm that explicitly computes, within the proof assistant, vertex-edge graphs of polytopes as well as their diameter. The originality of this certificate-based algorithm is to achieve a tradeoff between simplicity and efficiency. Simplicity is crucial in obtaining the proof of correctness of the algorithm. This proof splits into the correctness of an abstract algorithm stated over proof-oriented data types and the correspondence with a low-level implementation over computation-oriented data types. A special effort has been made to reduce the algorithm to a small sequence of elementary operations (e.g. matrix multiplications, basic routines on graphs), in order to make the derivation of the correctness of the low-level implementation more transparent. Efficiency allows us to scale up to polytopes with a challenging combinatorics. For instance, we formally check the two counterexamples to Hirsch conjecture due to Matschke, Santos and Weibel, respectively 20- and 23-dimensional polytopes with 36425 and 73224 vertices involving rational coefficients with up to 20 digits. We also illustrate the performance of the method by computing the list of vertices or the diameter of well-known classes of polytopes, such as (polars of) cyclic polytopes involved in McMullen's Upper Bound Theorem.",
+    "abstract": "Machine learning techniques have been included in various theorem proving tools for approximately two decades. Some of the learning tasks are well understood and tools actually help practitioners, while other tasks are still in their early developmental stages. In this talk I will try to classify the various learning tasks and discuss the learning techniques and tools that are aimed at enhancing the efficiency of interactive theorem provers. I will discuss the most successful techniques aimed at improving the power of automation, that use Monte-Carlo simulations guided by reinforcement learning from previous proof attempts. I will also consider the present and the future challenges including more efficient interaction with interactive theorem provers.",
     "topic": "",
     "conference": "cpp",
     "year": 2023,
-    "paper_url": "https://doi.org/10.1145/3573105.3575678"
+    "paper_url": "https://doi.org/10.1145/3573105.3579108"
+  },
+  {
+    "id": "10.1145/3573105.3575689",
+    "title": "Formalising Sharkovsky’s Theorem (Proof Pearl)",
+    "authors": [
+      "Bhavik Mehta"
+    ],
+    "abstract": "Sharkovsky's theorem is a celebrated result by Ukrainian mathematician Oleksandr Sharkovsky in the theory of discrete dynamical systems, including the fact that if a continuous function of reals has a point of period 3, it must have points of any period. We formalise the proof in the Lean theorem prover, giving a characterisation of the possible sets of periods a continuous function on the real numbers may have. We further include the converse of the theorem, showing that the aforementioned sets are achievable under mild conditions.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1145/3573105.3575689"
   },
   {
     "id": "10.1145/3573105.3579107",
@@ -165,6 +151,20 @@
     "paper_url": "https://doi.org/10.1145/3573105.3575676"
   },
   {
+    "id": "10.1145/3573105.3575678",
+    "title": "A Formal Disproof of Hirsch Conjecture",
+    "authors": [
+      "Xavier Allamigeon",
+      "Quentin Canu",
+      "Pierre-Yves Strub"
+    ],
+    "abstract": "The purpose of this paper is the formal verification of a counterexample of Santos et al. to the so-called Hirsch Conjecture on the diameter of polytopes (bounded convex polyhedra). In contrast with the pen-and-paper proof, our approach is entirely computational: we have implemented in Coq and proved correct an algorithm that explicitly computes, within the proof assistant, vertex-edge graphs of polytopes as well as their diameter. The originality of this certificate-based algorithm is to achieve a tradeoff between simplicity and efficiency. Simplicity is crucial in obtaining the proof of correctness of the algorithm. This proof splits into the correctness of an abstract algorithm stated over proof-oriented data types and the correspondence with a low-level implementation over computation-oriented data types. A special effort has been made to reduce the algorithm to a small sequence of elementary operations (e.g. matrix multiplications, basic routines on graphs), in order to make the derivation of the correctness of the low-level implementation more transparent. Efficiency allows us to scale up to polytopes with a challenging combinatorics. For instance, we formally check the two counterexamples to Hirsch conjecture due to Matschke, Santos and Weibel, respectively 20- and 23-dimensional polytopes with 36425 and 73224 vertices involving rational coefficients with up to 20 digits. We also illustrate the performance of the method by computing the list of vertices or the diameter of well-known classes of polytopes, such as (polars of) cyclic polytopes involved in McMullen's Upper Bound Theorem.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1145/3573105.3575678"
+  },
+  {
     "id": "10.1145/3573105.3575674",
     "title": "Compiling Higher-Order Specifications to SMT Solvers: How to Deal with Rejection Constructively",
     "authors": [
@@ -192,20 +192,6 @@
     "conference": "cpp",
     "year": 2023,
     "paper_url": "https://doi.org/10.1145/3573105.3575675"
-  },
-  {
-    "id": "10.1145/3573105.3575681",
-    "title": "Mechanised Semantics for Gated Static Single Assignment",
-    "authors": [
-      "Yann Herklotz",
-      "Delphine Demange",
-      "Sandrine Blazy"
-    ],
-    "abstract": "The Gated Static Single Assignment (GSA) form was proposed by Ottenstein et al. in 1990, as an intermediate representation for implementing advanced static analyses and optimisation passes in compilers. Compared to SSA, GSA records additional data dependencies and provides more context, making optimisations more effective and allowing one to reason about programs as data-flow graphs. Many practical implementations have been proposed that follow, more or less faithfully, Ottenstein et al.'s seminal paper. But many discrepancies remain between these, depending on the kind of dependencies they are supposed to track and to leverage in analyses and code optimisations. In this paper, we present a formal semantics for GSA, mechanised in Coq. In particular, we clarify the nature and the purpose of gates in GSA, and define control-flow insensitive semantics for them. We provide a specification that can be used as a reference description for GSA. We also specify a translation from SSA to GSA and prove that this specification is semantics-preserving. We demonstrate that the approach is practical by implementing the specification as a validated translation within the CompCertSSA verified compiler.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1145/3573105.3575681"
   },
   {
     "id": "10.1145/3573105.3575687",
@@ -238,6 +224,73 @@
     "conference": "cpp",
     "year": 2023,
     "paper_url": "https://doi.org/10.1145/3573105.3575667"
+  },
+  {
+    "id": "10.1145/3573105.3575681",
+    "title": "Mechanised Semantics for Gated Static Single Assignment",
+    "authors": [
+      "Yann Herklotz",
+      "Delphine Demange",
+      "Sandrine Blazy"
+    ],
+    "abstract": "The Gated Static Single Assignment (GSA) form was proposed by Ottenstein et al. in 1990, as an intermediate representation for implementing advanced static analyses and optimisation passes in compilers. Compared to SSA, GSA records additional data dependencies and provides more context, making optimisations more effective and allowing one to reason about programs as data-flow graphs. Many practical implementations have been proposed that follow, more or less faithfully, Ottenstein et al.'s seminal paper. But many discrepancies remain between these, depending on the kind of dependencies they are supposed to track and to leverage in analyses and code optimisations. In this paper, we present a formal semantics for GSA, mechanised in Coq. In particular, we clarify the nature and the purpose of gates in GSA, and define control-flow insensitive semantics for them. We provide a specification that can be used as a reference description for GSA. We also specify a translation from SSA to GSA and prove that this specification is semantics-preserving. We demonstrate that the approach is practical by implementing the specification as a validated translation within the CompCertSSA verified compiler.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1145/3573105.3575681"
+  },
+  {
+    "id": "10.1145/3573105.3575677",
+    "title": "Computing Cohomology Rings in Cubical Agda",
+    "authors": [
+      "Thomas Lamiaux",
+      "Axel Ljungström",
+      "Anders Mörtberg"
+    ],
+    "abstract": "In Homotopy Type Theory, cohomology theories are studied synthetically using higher inductive types and univalence. This paper extends previous developments by providing the first fully mechanized definition of cohomology rings. These rings may be defined as direct sums of cohomology groups together with a multiplication induced by the cup product, and can in many cases be characterized as quotients of multivariate polynomial rings. To this end, we introduce appropriate definitions of direct sums and graded rings, which we then use to define both cohomology rings and multivariate polynomial rings. Using this, we compute the cohomology rings of some classical spaces, such as the spheres and the Klein bottle. The formalization is constructive so that it can be used to do concrete computations, and it relies on the Cubical Agda system which natively supports higher inductive types and computational univalence.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1145/3573105.3575677"
+  },
+  {
+    "id": "10.1145/3573105.3575679",
+    "title": "Encoding Dependently-Typed Constructions into Simple Type Theory",
+    "authors": [
+      "Anthony Bordg",
+      "Adrián Doña Mateo"
+    ],
+    "abstract": "In this article, we show how one can formalise in type theory mathematical objects, for which dependent types are usually deemed unavoidable, using only simple types. We outline a method to encode most of the terms of Lean's dependent type theory into the simple type theory of Isabelle/HOL. Taking advantage of Isabelle's automation, we illustrate our method with the formalisation in Isabelle/HOL of a mathematical notion developed in the 1980s: strict omega-categories.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1145/3573105.3575679"
+  },
+  {
+    "id": "10.1145/3573105.3575680",
+    "title": "A Formalisation of the Balog–Szemerédi–Gowers Theorem in Isabelle/HOL",
+    "authors": [
+      "Angeliki Koutsoukou-Argyraki",
+      "Mantas Bakšys",
+      "Chelsea Edmonds"
+    ],
+    "abstract": "We describe our formalisation in the interactive theorem prover Isabelle/HOL of the Balog–Szemerédi–Gowers Theorem, a profound result in additive combinatorics which played a central role in Gowers’s proof deriving the first effective bounds for Szemerédi’s Theorem. The proof is of great mathematical interest given that it involves an interplay between different mathematical areas, namely applications of graph theory and probability theory to additive combinatorics involving algebraic objects. This interplay is what made the process of the formalisation, for which we had to develop formalisations of new background material in the aforementioned areas, more rich and technically challenging. We demonstrate how locales, Isabelle’s module system, can be employed to handle such interplays in mathematical formalisations. To treat the graph-theoretic aspects of the proof, we make use of a new, more general undirected graph theory library developed by Edmonds, which is both flexible and extensible. In addition to the main theorem, which, following our source, is formulated for difference sets, we also give an alternative version for sumsets which required a formalisation of an auxiliary triangle inequality. We moreover formalise a few additional results in additive combinatorics that are not used in the proof of the main theorem. This is the first formalisation of the Balog–Szemerédi–Gowers Theorem in any proof assistant to our knowledge.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1145/3573105.3575680"
+  },
+  {
+    "id": "10.1145/3573105.3575669",
+    "title": "A Formalized Reduction of Keller’s Conjecture",
+    "authors": [
+      "Joshua Clune"
+    ],
+    "abstract": "Keller’s conjecture in d dimensions states that there are no faceshare-free tilings of d-dimensional space by translates of a d-dimensional cube. In 2020, Brakensiek et al. resolved this 90-year-old conjecture by proving that the largest number of dimensions for which no faceshare-free tilings exist is 7. This result, as well as many others pertaining to Keller’s conjecture, critically relies on a reduction from Keller’s original conjecture to a statement about cliques in generalized Keller graphs. In this paper, we present a formalization of this reduction in the Lean 3 theorem prover. Additionally, we combine this formalized reduction with the verification of a large clique in the Keller graph G8 to obtain the first verified end-to-end proof that Keller’s conjecture is false in 8 dimensions.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1145/3573105.3575669"
   },
   {
     "id": "10.1145/3573105.3575684",
@@ -289,59 +342,6 @@
     "paper_url": "https://doi.org/10.1145/3573105.3575690"
   },
   {
-    "id": "10.1145/3573105.3575669",
-    "title": "A Formalized Reduction of Keller’s Conjecture",
-    "authors": [
-      "Joshua Clune"
-    ],
-    "abstract": "Keller’s conjecture in d dimensions states that there are no faceshare-free tilings of d-dimensional space by translates of a d-dimensional cube. In 2020, Brakensiek et al. resolved this 90-year-old conjecture by proving that the largest number of dimensions for which no faceshare-free tilings exist is 7. This result, as well as many others pertaining to Keller’s conjecture, critically relies on a reduction from Keller’s original conjecture to a statement about cliques in generalized Keller graphs. In this paper, we present a formalization of this reduction in the Lean 3 theorem prover. Additionally, we combine this formalized reduction with the verification of a large clique in the Keller graph G8 to obtain the first verified end-to-end proof that Keller’s conjecture is false in 8 dimensions.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1145/3573105.3575669"
-  },
-  {
-    "id": "10.1145/3573105.3575677",
-    "title": "Computing Cohomology Rings in Cubical Agda",
-    "authors": [
-      "Thomas Lamiaux",
-      "Axel Ljungström",
-      "Anders Mörtberg"
-    ],
-    "abstract": "In Homotopy Type Theory, cohomology theories are studied synthetically using higher inductive types and univalence. This paper extends previous developments by providing the first fully mechanized definition of cohomology rings. These rings may be defined as direct sums of cohomology groups together with a multiplication induced by the cup product, and can in many cases be characterized as quotients of multivariate polynomial rings. To this end, we introduce appropriate definitions of direct sums and graded rings, which we then use to define both cohomology rings and multivariate polynomial rings. Using this, we compute the cohomology rings of some classical spaces, such as the spheres and the Klein bottle. The formalization is constructive so that it can be used to do concrete computations, and it relies on the Cubical Agda system which natively supports higher inductive types and computational univalence.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1145/3573105.3575677"
-  },
-  {
-    "id": "10.1145/3573105.3575679",
-    "title": "Encoding Dependently-Typed Constructions into Simple Type Theory",
-    "authors": [
-      "Anthony Bordg",
-      "Adrián Doña Mateo"
-    ],
-    "abstract": "In this article, we show how one can formalise in type theory mathematical objects, for which dependent types are usually deemed unavoidable, using only simple types. We outline a method to encode most of the terms of Lean's dependent type theory into the simple type theory of Isabelle/HOL. Taking advantage of Isabelle's automation, we illustrate our method with the formalisation in Isabelle/HOL of a mathematical notion developed in the 1980s: strict omega-categories.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1145/3573105.3575679"
-  },
-  {
-    "id": "10.1145/3573105.3575680",
-    "title": "A Formalisation of the Balog–Szemerédi–Gowers Theorem in Isabelle/HOL",
-    "authors": [
-      "Angeliki Koutsoukou-Argyraki",
-      "Mantas Bakšys",
-      "Chelsea Edmonds"
-    ],
-    "abstract": "We describe our formalisation in the interactive theorem prover Isabelle/HOL of the Balog–Szemerédi–Gowers Theorem, a profound result in additive combinatorics which played a central role in Gowers’s proof deriving the first effective bounds for Szemerédi’s Theorem. The proof is of great mathematical interest given that it involves an interplay between different mathematical areas, namely applications of graph theory and probability theory to additive combinatorics involving algebraic objects. This interplay is what made the process of the formalisation, for which we had to develop formalisations of new background material in the aforementioned areas, more rich and technically challenging. We demonstrate how locales, Isabelle’s module system, can be employed to handle such interplays in mathematical formalisations. To treat the graph-theoretic aspects of the proof, we make use of a new, more general undirected graph theory library developed by Edmonds, which is both flexible and extensible. In addition to the main theorem, which, following our source, is formulated for difference sets, we also give an alternative version for sumsets which required a formalisation of an auxiliary triangle inequality. We moreover formalise a few additional results in additive combinatorics that are not used in the proof of the main theorem. This is the first formalisation of the Balog–Szemerédi–Gowers Theorem in any proof assistant to our knowledge.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1145/3573105.3575680"
-  },
-  {
     "id": "10.1145/3573105.3575673",
     "title": "Verifying Term Graph Optimizations using Isabelle/HOL",
     "authors": [
@@ -356,6 +356,18 @@
     "paper_url": "https://doi.org/10.1145/3573105.3575673"
   },
   {
+    "id": "10.1145/3573105.3575686",
+    "title": "Terms for Efficient Proof Checking and Parsing",
+    "authors": [
+      "Michael Färber"
+    ],
+    "abstract": "Proofs automatically generated by interactive or automated theorem provers are often several orders of magnitude larger than proofs written by hand. This implies significant challenges for processing such proofs efficiently. It turns out that the data structures used to encode terms have a high impact on performance. This article proposes several term data structures; in particular, heterogeneous terms for proof checking that distinguish long- and short-lived terms, and abstract terms for proof parsing. Both term data structures are implemented in the proof checker Kontroli, enabling it to parse and check proofs both sequentially and concurrently without overhead. The evaluation on three datasets exported from interactive theorem provers shows that the new term data structures significantly improve proof checking performance.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1145/3573105.3575686"
+  },
+  {
     "id": "10.1145/3573105.3575691",
     "title": "Semantics of Probabilistic Programs using s-Finite Kernels in Coq",
     "authors": [
@@ -368,17 +380,5 @@
     "conference": "cpp",
     "year": 2023,
     "paper_url": "https://doi.org/10.1145/3573105.3575691"
-  },
-  {
-    "id": "10.1145/3573105.3575686",
-    "title": "Terms for Efficient Proof Checking and Parsing",
-    "authors": [
-      "Michael Färber"
-    ],
-    "abstract": "Proofs automatically generated by interactive or automated theorem provers are often several orders of magnitude larger than proofs written by hand. This implies significant challenges for processing such proofs efficiently. It turns out that the data structures used to encode terms have a high impact on performance. This article proposes several term data structures; in particular, heterogeneous terms for proof checking that distinguish long- and short-lived terms, and abstract terms for proof parsing. Both term data structures are implemented in the proof checker Kontroli, enabling it to parse and check proofs both sequentially and concurrently without overhead. The evaluation on three datasets exported from interactive theorem provers shows that the new term data structures significantly improve proof checking performance.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1145/3573105.3575686"
   }
 ]
