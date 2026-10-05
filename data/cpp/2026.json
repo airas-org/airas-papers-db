@@ -16,6 +16,22 @@
     "paper_url": "https://doi.org/10.1145/3779031.3779104"
   },
   {
+    "id": "10.1145/3779031.3779088",
+    "title": "Foundational Verification of Running-Time Bounds for Interactive Programs",
+    "authors": [
+      "Andy Tockman",
+      "Pratap Singh",
+      "Andres Erbsen",
+      "Samuel Gruetter",
+      "Adam Chlipala"
+    ],
+    "abstract": "Some important domains of software demand concrete bounds on how long functions may run, for instance for real-time cyberphysical systems where missed deadlines may damage industrial machinery. Such programs may interact with external devices throughout execution, where time deadlines ought to depend on, for instance, sensor readings (e.g. we only scramble to close a valve immediately when a sensor reports that a tank is about to overflow). We present the first software-development toolchain that delivers first-principles proofs of meaningful time bounds for interactive machine code, while allowing all per-application programming and verification to happen at the source-code level. We allow C-like programs to be proved against separation-logic specifications that also constrain their running time, and such proofs are composed with verification of a compiler to RISC-V machine code. All components are implemented and proved inside the Rocq proof assistant, producing final theorems whose statements depend only on machine-language formal semantics and some elementary specification constructions for describing running time. As a capstone case study, we extended a past verification (of a real microcontroller-based cyberphysical system) to bound time between arrival of network packets and actuation of an attached device.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1145/3779031.3779088"
+  },
+  {
     "id": "10.1145/3779031.3779100",
     "title": "Cylindrical Algebraic Decomposition in Coq/Rocq",
     "authors": [
@@ -57,69 +73,6 @@
     "paper_url": "https://doi.org/10.1145/3779031.3779097"
   },
   {
-    "id": "10.1145/3779031.3779088",
-    "title": "Foundational Verification of Running-Time Bounds for Interactive Programs",
-    "authors": [
-      "Andy Tockman",
-      "Pratap Singh",
-      "Andres Erbsen",
-      "Samuel Gruetter",
-      "Adam Chlipala"
-    ],
-    "abstract": "Some important domains of software demand concrete bounds on how long functions may run, for instance for real-time cyberphysical systems where missed deadlines may damage industrial machinery. Such programs may interact with external devices throughout execution, where time deadlines ought to depend on, for instance, sensor readings (e.g. we only scramble to close a valve immediately when a sensor reports that a tank is about to overflow). We present the first software-development toolchain that delivers first-principles proofs of meaningful time bounds for interactive machine code, while allowing all per-application programming and verification to happen at the source-code level. We allow C-like programs to be proved against separation-logic specifications that also constrain their running time, and such proofs are composed with verification of a compiler to RISC-V machine code. All components are implemented and proved inside the Rocq proof assistant, producing final theorems whose statements depend only on machine-language formal semantics and some elementary specification constructions for describing running time. As a capstone case study, we extended a past verification (of a real microcontroller-based cyberphysical system) to bound time between arrival of network packets and actuation of an attached device.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2026,
-    "paper_url": "https://doi.org/10.1145/3779031.3779088"
-  },
-  {
-    "id": "10.1145/3779031.3779106",
-    "title": "Towards Composable Proofs of Cache Coherence Protocols",
-    "authors": [
-      "Martina Camaioni",
-      "Yann Herklotz",
-      "Tz-Ching Yu",
-      "Thomas Bourgeat"
-    ],
-    "abstract": "Verifying cache coherence protocols is a notoriously difficult problem. At the intersection between distributed protocol and computer architecture, it has long served as a premier target for formal methods. Current verification approaches hinge on the challenging discovery of large global inductive invariants. This paper introduces an alternative proof strategy that tames the complexity through two main contributions: protocol decomposition and a framework of local invariants. We prove the correctness of the standard MSI protocol compositionally by independently verifying the simpler MI and SI subprotocols and proving MSI behaves as their combination. This decomposition revealed a useful insight: the invariants necessary in these proofs can be established using a small set of simple local invariants: invariants between a single cache and the parent and memory, eliminating complex global reasoning across children caches. We demonstrate how our approach reduces the number of required invariants from several dozens to hundreds in prior work to a small, structured and manageable set, simplifying the proof of correctness. The entire development is formalized in Lean 4.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2026,
-    "paper_url": "https://doi.org/10.1145/3779031.3779106"
-  },
-  {
-    "id": "10.1145/3779031.3779111",
-    "title": "Formalization of a Proof Calculus for Incremental Linearization for Satisfiability Modulo Nonlinear Arithmetic and Transcendental Functions",
-    "authors": [
-      "Tomaz Mascarenhas",
-      "Harun Khan",
-      "Abdalrhman Mohamed",
-      "Andrew Reynolds",
-      "Haniel Barbosa",
-      "Clark Barrett",
-      "Cesare Tinelli"
-    ],
-    "abstract": "Determining the satisfiability of formulas involving nonlinear real arithmetic and transcendental functions is necessary in many applications, such as formally verifying dynamic systems. Doing this automatically generally requires costly and intricate methods, which limits their applicability. In the context of SMT solving, Incremental Linearization was introduced recently to facilitate reasoning on this domain, via an incomplete but easy to implement and highly effective approach. The approach, based on abstraction-refinement via an incremental axiomatization of the nonlinear and transcendental operators, is currently implemented in the SMT solvers MathSAT and cvc5. The cvc5 implementation is also proof-producing. This paper presents two contributions: a formalization in the Lean proof assistant of the proof calculus employed by cvc5, and an extension of the lean-smt plugin to reconstruct the proofs produced by cvc5 using this proof calculus. These contributions ensure the soundness of the proof calculus, making the underlying algorithm more trustworthy. Moreover, they allow users to check cvc5 results obtained via incremental linearization, as well as improve Lean’s automation for problems in nonlinear arithmetic. We discuss how we modeled the rules in the proof assistant and the challenges encountered while formalizing them, as well as the issues in reconstructing proofs involving these rules in Lean, and how we solved them.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2026,
-    "paper_url": "https://doi.org/10.1145/3779031.3779111"
-  },
-  {
-    "id": "10.1145/3779031.3779086",
-    "title": "Using Ghost Ownership to Verify Union-Find and Persistent Arrays in Rust",
-    "authors": [
-      "Arnaud Golfouse",
-      "Armaël Guéneau",
-      "Jacques-Henri Jourdan"
-    ],
-    "abstract": "The type system of Rust enforces the “shared xor mutable” principle, which forbids mutation of shared memory. This principle eases verification in Rust, but certain programs require circumventing it with the mechanism of interior mutability. Thus, supporting interior mutability in a deductive verification tool is difficult. The Verus tool demonstrated the use of ghost resources to that end. So far, this mechanism has only been applied to Verus in order to verify primarily system code. We extend the deductive verification tool Creusot with support for linear ghost resources. We show how Creusot’s full support for mutable borrows enables better specifications for primitives of linear ghost code. We apply this methodology to the verification of two data structures using sharing and mutation: union-find and persistent arrays.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2026,
-    "paper_url": "https://doi.org/10.1145/3779031.3779086"
-  },
-  {
     "id": "10.1145/3779031.3779109",
     "title": "Modular Specifications and Implementations of Random Samplers in Higher-Order Separation Logic",
     "authors": [
@@ -147,6 +100,66 @@
     "conference": "cpp",
     "year": 2026,
     "paper_url": "https://doi.org/10.1145/3779031.3779085"
+  },
+  {
+    "id": "10.1145/3779031.3779106",
+    "title": "Towards Composable Proofs of Cache Coherence Protocols",
+    "authors": [
+      "Martina Camaioni",
+      "Yann Herklotz",
+      "Tz-Ching Yu",
+      "Thomas Bourgeat"
+    ],
+    "abstract": "Verifying cache coherence protocols is a notoriously difficult problem. At the intersection between distributed protocol and computer architecture, it has long served as a premier target for formal methods. Current verification approaches hinge on the challenging discovery of large global inductive invariants. This paper introduces an alternative proof strategy that tames the complexity through two main contributions: protocol decomposition and a framework of local invariants. We prove the correctness of the standard MSI protocol compositionally by independently verifying the simpler MI and SI subprotocols and proving MSI behaves as their combination. This decomposition revealed a useful insight: the invariants necessary in these proofs can be established using a small set of simple local invariants: invariants between a single cache and the parent and memory, eliminating complex global reasoning across children caches. We demonstrate how our approach reduces the number of required invariants from several dozens to hundreds in prior work to a small, structured and manageable set, simplifying the proof of correctness. The entire development is formalized in Lean 4.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1145/3779031.3779106"
+  },
+  {
+    "id": "10.1145/3779031.3779090",
+    "title": "Can We Formalise Type Theory Intrinsically without Any Compromise? A Case Study in Cubical Agda",
+    "authors": [
+      "Liang-Ting Chen",
+      "Fredrik Nordvall Forsberg",
+      "Tzu-Chun Tsai"
+    ],
+    "abstract": "We present an intrinsic representation of type theory in the proof assistant Cubical Agda, inspired by Awodey’s natural models of type theory. The initial natural model is defined as quotient inductive-inductive-recursive types, leading us to a syntax accepted by Cubical Agda without using any transports, postulates, or custom rewrite rules. We formalise some meta-properties such as the standard model, normalisation by evaluation for typed terms, and strictification constructions. Since our formalisation is carried out using Cubical Agda's native support for quotient inductive types, all our constructions compute at a reasonable speed. When we try to develop more sophisticated metatheory, however, the 'transport hell' problem reappears. Ultimately, it remains a considerable struggle to develop the metatheory of type theory using an intrinsic representation that lacks strict equations. The effort required is about the same whether or not the notion of natural model is used.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1145/3779031.3779090"
+  },
+  {
+    "id": "10.1145/3779031.3779111",
+    "title": "Formalization of a Proof Calculus for Incremental Linearization for Satisfiability Modulo Nonlinear Arithmetic and Transcendental Functions",
+    "authors": [
+      "Tomaz Mascarenhas",
+      "Harun Khan",
+      "Abdalrhman Mohamed",
+      "Andrew Reynolds",
+      "Haniel Barbosa",
+      "Clark Barrett",
+      "Cesare Tinelli"
+    ],
+    "abstract": "Determining the satisfiability of formulas involving nonlinear real arithmetic and transcendental functions is necessary in many applications, such as formally verifying dynamic systems. Doing this automatically generally requires costly and intricate methods, which limits their applicability. In the context of SMT solving, Incremental Linearization was introduced recently to facilitate reasoning on this domain, via an incomplete but easy to implement and highly effective approach. The approach, based on abstraction-refinement via an incremental axiomatization of the nonlinear and transcendental operators, is currently implemented in the SMT solvers MathSAT and cvc5. The cvc5 implementation is also proof-producing. This paper presents two contributions: a formalization in the Lean proof assistant of the proof calculus employed by cvc5, and an extension of the lean-smt plugin to reconstruct the proofs produced by cvc5 using this proof calculus. These contributions ensure the soundness of the proof calculus, making the underlying algorithm more trustworthy. Moreover, they allow users to check cvc5 results obtained via incremental linearization, as well as improve Lean’s automation for problems in nonlinear arithmetic. We discuss how we modeled the rules in the proof assistant and the challenges encountered while formalizing them, as well as the issues in reconstructing proofs involving these rules in Lean, and how we solved them.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1145/3779031.3779111"
+  },
+  {
+    "id": "10.1145/3779031.3779094",
+    "title": "Certified Symbolic Finite Transducers: Formalization and Applications to String Analysis",
+    "authors": [
+      "Shuanglong Kan",
+      "Anthony W. Lin"
+    ],
+    "abstract": "Finite Transducers (FTs) extend the capabilities of Finite Au- tomata (FAs) by enabling the transformation of input strings into output strings. In many practical applications — includ- ing program analysis, string constraint solving, and analysis of security-critical sanitizers — Symbolic FTs (SFTs) and Sym- bolic FAs (SFAs) are used instead of the explicitly represented models. To circumvent to the notorious state-space explosion problem caused by an extremely large alphabet size (e.g. Unicode), SFTs and SFAs allow the representation of the alphabet as an effective boolean algebra including finite unions of intervals, as well as SMT-Algebras. The security-critical nature of many of these applications demands trustworthy implementations of such systems. To this end, we present the first formalization of SFTs and their most important algorithms in Isabelle/HOL. To evaluate the effectiveness of our formalization, we apply the formalized SFTs to two applications: (1) sanitizers for web applications used for preventing XSS attacks, and (2) string solving, which increasingly employs intricate string replacement operations. Our experimental results demonstrate that our methods are competitive with the existing unverified implementations.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1145/3779031.3779094"
   },
   {
     "id": "10.1145/3779031.3779087",
@@ -180,17 +193,30 @@
     "paper_url": "https://doi.org/10.1145/3779031.3779107"
   },
   {
-    "id": "10.1145/3779031.3779094",
-    "title": "Certified Symbolic Finite Transducers: Formalization and Applications to String Analysis",
+    "id": "10.1145/3779031.3779093",
+    "title": "A Lambda-Superposition Tactic for Isabelle/HOL",
     "authors": [
-      "Shuanglong Kan",
-      "Anthony W. Lin"
+      "Massin Guerdi"
     ],
-    "abstract": "Finite Transducers (FTs) extend the capabilities of Finite Au- tomata (FAs) by enabling the transformation of input strings into output strings. In many practical applications — includ- ing program analysis, string constraint solving, and analysis of security-critical sanitizers — Symbolic FTs (SFTs) and Sym- bolic FAs (SFAs) are used instead of the explicitly represented models. To circumvent to the notorious state-space explosion problem caused by an extremely large alphabet size (e.g. Unicode), SFTs and SFAs allow the representation of the alphabet as an effective boolean algebra including finite unions of intervals, as well as SMT-Algebras. The security-critical nature of many of these applications demands trustworthy implementations of such systems. To this end, we present the first formalization of SFTs and their most important algorithms in Isabelle/HOL. To evaluate the effectiveness of our formalization, we apply the formalized SFTs to two applications: (1) sanitizers for web applications used for preventing XSS attacks, and (2) string solving, which increasingly employs intricate string replacement operations. Our experimental results demonstrate that our methods are competitive with the existing unverified implementations.",
+    "abstract": "This paper introduces slam, an Isabelle/HOL tactic and automated theorem prover based on the λ-superposition calculus. An alternative to Isabelle’s metis tactic, slam targets higher-order logic directly, avoiding the overhead introduced by metis’s translations to first-order logic. Like metis, slam can be used as a Sledgehammer backend to reconstruct proofs produced by external higher-order automated theorem provers such as E, Vampire, and Zipperposition.",
     "topic": "",
     "conference": "cpp",
     "year": 2026,
-    "paper_url": "https://doi.org/10.1145/3779031.3779094"
+    "paper_url": "https://doi.org/10.1145/3779031.3779093"
+  },
+  {
+    "id": "10.1145/3779031.3779086",
+    "title": "Using Ghost Ownership to Verify Union-Find and Persistent Arrays in Rust",
+    "authors": [
+      "Arnaud Golfouse",
+      "Armaël Guéneau",
+      "Jacques-Henri Jourdan"
+    ],
+    "abstract": "The type system of Rust enforces the “shared xor mutable” principle, which forbids mutation of shared memory. This principle eases verification in Rust, but certain programs require circumventing it with the mechanism of interior mutability. Thus, supporting interior mutability in a deductive verification tool is difficult. The Verus tool demonstrated the use of ghost resources to that end. So far, this mechanism has only been applied to Verus in order to verify primarily system code. We extend the deductive verification tool Creusot with support for linear ghost resources. We show how Creusot’s full support for mutable borrows enables better specifications for primitives of linear ghost code. We apply this methodology to the verification of two data structures using sharing and mutation: union-find and persistent arrays.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1145/3779031.3779086"
   },
   {
     "id": "10.1145/3779031.3779091",
@@ -203,20 +229,6 @@
     "conference": "cpp",
     "year": 2026,
     "paper_url": "https://doi.org/10.1145/3779031.3779091"
-  },
-  {
-    "id": "10.1145/3779031.3779090",
-    "title": "Can We Formalise Type Theory Intrinsically without Any Compromise? A Case Study in Cubical Agda",
-    "authors": [
-      "Liang-Ting Chen",
-      "Fredrik Nordvall Forsberg",
-      "Tzu-Chun Tsai"
-    ],
-    "abstract": "We present an intrinsic representation of type theory in the proof assistant Cubical Agda, inspired by Awodey’s natural models of type theory. The initial natural model is defined as quotient inductive-inductive-recursive types, leading us to a syntax accepted by Cubical Agda without using any transports, postulates, or custom rewrite rules. We formalise some meta-properties such as the standard model, normalisation by evaluation for typed terms, and strictification constructions. Since our formalisation is carried out using Cubical Agda's native support for quotient inductive types, all our constructions compute at a reasonable speed. When we try to develop more sophisticated metatheory, however, the 'transport hell' problem reappears. Ultimately, it remains a considerable struggle to develop the metatheory of type theory using an intrinsic representation that lacks strict equations. The effort required is about the same whether or not the notion of natural model is used.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2026,
-    "paper_url": "https://doi.org/10.1145/3779031.3779090"
   },
   {
     "id": "10.1145/3779031.3779095",
@@ -246,18 +258,6 @@
     "paper_url": "https://doi.org/10.1145/3779031.3779103"
   },
   {
-    "id": "10.1145/3779031.3779093",
-    "title": "A Lambda-Superposition Tactic for Isabelle/HOL",
-    "authors": [
-      "Massin Guerdi"
-    ],
-    "abstract": "This paper introduces slam, an Isabelle/HOL tactic and automated theorem prover based on the λ-superposition calculus. An alternative to Isabelle’s metis tactic, slam targets higher-order logic directly, avoiding the overhead introduced by metis’s translations to first-order logic. Like metis, slam can be used as a Sledgehammer backend to reconstruct proofs produced by external higher-order automated theorem provers such as E, Vampire, and Zipperposition.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2026,
-    "paper_url": "https://doi.org/10.1145/3779031.3779093"
-  },
-  {
     "id": "10.1145/3779031.3779098",
     "title": "Brack: A Verified Compiler for Scheme via CakeML",
     "authors": [
@@ -283,6 +283,20 @@
     "conference": "cpp",
     "year": 2026,
     "paper_url": "https://doi.org/10.1145/3779031.3779096"
+  },
+  {
+    "id": "10.1145/3779031.3779092",
+    "title": "Verified VCG and Verified Compiler for Dafny",
+    "authors": [
+      "Daniel Nezamabadi",
+      "Magnus O. Myreen",
+      "Yong Kiam Tan"
+    ],
+    "abstract": "Dafny is a verification-aware programming language that comes with a compiler and static program verifier. However, neither the compiler nor the verifier is proved correct; in fact, soundness bugs have been found in both tools. This paper shows that the aforementioned Dafny tools can be developed with foundational correctness guarantees. We present a functional big-step semantics for an imperative subset of Dafny and, based on this semantics, a verified verification condition generator (VCG) and a verified compiler for Dafny. The subset of Dafny we have formalized includes mutually recursive method calls, while loops, and arrays---these language features are significant enough to cover challenging examples such as McCarthy's 91 function and array-based programs that are used when teaching Dafny. The verified VCG allows one to prove functional correctness of annotated Dafny programs, while the verified compiler can be used to compile verified Dafny programs to CakeML programs. From there, one can obtain executable machine code via the (already verified) CakeML compiler, all while provably maintaining the functional correctness guarantees that were proved for the source-level Dafny programs. Our work has been mechanized in the HOL4 theorem prover.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1145/3779031.3779092"
   },
   {
     "id": "10.1145/3779031.3779108",
@@ -322,20 +336,6 @@
     "conference": "cpp",
     "year": 2026,
     "paper_url": "https://doi.org/10.1145/3779031.3779102"
-  },
-  {
-    "id": "10.1145/3779031.3779092",
-    "title": "Verified VCG and Verified Compiler for Dafny",
-    "authors": [
-      "Daniel Nezamabadi",
-      "Magnus O. Myreen",
-      "Yong Kiam Tan"
-    ],
-    "abstract": "Dafny is a verification-aware programming language that comes with a compiler and static program verifier. However, neither the compiler nor the verifier is proved correct; in fact, soundness bugs have been found in both tools. This paper shows that the aforementioned Dafny tools can be developed with foundational correctness guarantees. We present a functional big-step semantics for an imperative subset of Dafny and, based on this semantics, a verified verification condition generator (VCG) and a verified compiler for Dafny. The subset of Dafny we have formalized includes mutually recursive method calls, while loops, and arrays---these language features are significant enough to cover challenging examples such as McCarthy's 91 function and array-based programs that are used when teaching Dafny. The verified VCG allows one to prove functional correctness of annotated Dafny programs, while the verified compiler can be used to compile verified Dafny programs to CakeML programs. From there, one can obtain executable machine code via the (already verified) CakeML compiler, all while provably maintaining the functional correctness guarantees that were proved for the source-level Dafny programs. Our work has been mechanized in the HOL4 theorem prover.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2026,
-    "paper_url": "https://doi.org/10.1145/3779031.3779092"
   },
   {
     "id": "10.1145/3779031.3779099",

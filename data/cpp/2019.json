@@ -25,18 +25,6 @@
     "paper_url": "https://doi.org/10.1145/3293880.3294088"
   },
   {
-    "id": "10.1145/3293880.3294090",
-    "title": "Verified solving and asymptotics of linear recurrences",
-    "authors": [
-      "Manuel Eberl"
-    ],
-    "abstract": "Linear recurrences with constant coefficients are an interesting class of recurrence equations that can be solved explicitly. The most famous example are certainly the Fibonacci numbers with the equation f(n) = f(n−1) + f(n−2) and the quite non-obvious closed form 1 √ 5 (ϕn − (−ϕ)−n) where ϕ is the golden ratio. This work builds on existing tools in Isabelle – such as formal power series and polynomial factorisation algorithms – to develop a theory of these recurrences and derive a fully executable solver for them that can be exported to programming languages like Haskell. Based on this development, I also provide an efficient method to prove ‘Big-O’ asymptotics of a solution automatically without explicitly finding the closed-form solution first.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2019,
-    "paper_url": "https://doi.org/10.1145/3293880.3294090"
-  },
-  {
     "id": "10.1145/3293880.3294104",
     "title": "Dynamic class initialization semantics: a Jinja extension",
     "authors": [
@@ -48,6 +36,18 @@
     "conference": "cpp",
     "year": 2019,
     "paper_url": "https://doi.org/10.1145/3293880.3294104"
+  },
+  {
+    "id": "10.1145/3293880.3294090",
+    "title": "Verified solving and asymptotics of linear recurrences",
+    "authors": [
+      "Manuel Eberl"
+    ],
+    "abstract": "Linear recurrences with constant coefficients are an interesting class of recurrence equations that can be solved explicitly. The most famous example are certainly the Fibonacci numbers with the equation f(n) = f(n−1) + f(n−2) and the quite non-obvious closed form 1 √ 5 (ϕn − (−ϕ)−n) where ϕ is the golden ratio. This work builds on existing tools in Isabelle – such as formal power series and polynomial factorisation algorithms – to develop a theory of these recurrences and derive a fully executable solver for them that can be exported to programming languages like Haskell. Based on this development, I also provide an efficient method to prove ‘Big-O’ asymptotics of a solution automatically without explicitly finding the closed-form solution first.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2019,
+    "paper_url": "https://doi.org/10.1145/3293880.3294090"
   },
   {
     "id": "10.1145/3293880.3294101",
@@ -123,18 +123,6 @@
     "paper_url": "https://doi.org/10.1145/3293880.3294106"
   },
   {
-    "id": "10.1145/3293880.3294089",
-    "title": "A formal proof of Hensel's lemma over the p-adic integers",
-    "authors": [
-      "Robert Y. Lewis"
-    ],
-    "abstract": "The field of p-adic numbers ℚp and the ring of p-adic integers ℤp are essential constructions of modern number theory. Hensel’s lemma, described by Gouvêa as the “most important algebraic property of the p-adic numbers,” shows the existence of roots of polynomials over ℤp provided an initial seed point. The theorem can be proved for the p-adics with significantly weaker hypotheses than for general rings. We construct ℚp and ℤp in the Lean proof assistant, with various associated algebraic properties, and formally prove a strong form of Hensel’s lemma. The proof lies at the intersection of algebraic and analytic reasoning and demonstrates how the Lean mathematical library handles such a heterogeneous topic.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2019,
-    "paper_url": "https://doi.org/10.1145/3293880.3294089"
-  },
-  {
     "id": "10.1145/3293880.3294100",
     "title": "A verified prover based on ordered resolution",
     "authors": [
@@ -177,18 +165,16 @@
     "paper_url": "https://doi.org/10.1145/3293880.3294099"
   },
   {
-    "id": "10.1145/3293880.3294094",
-    "title": "A proof-theoretic approach to certifying skolemization",
+    "id": "10.1145/3293880.3294089",
+    "title": "A formal proof of Hensel's lemma over the p-adic integers",
     "authors": [
-      "Kaustuv Chaudhuri",
-      "Matteo Manighetti",
-      "Dale Miller"
+      "Robert Y. Lewis"
     ],
-    "abstract": "When presented with a formula to prove, most theorem provers for classical first-order logic process that formula following several steps, one of which is commonly called skolemization. That process eliminates quantifier alternation within formulas by extending the language of the underlying logic with new Skolem functions and by instantiating certain quantifiers with terms built using Skolem functions. In this paper, we address the problem of checking (i.e., certifying) proof evidence that involves Skolem terms. Our goal is to do such certification without using the mathematical concepts of model-theoretic semantics (i.e., preservation of satisfiability) and choice principles (i.e., epsilon terms). Instead, our proof checking kernel is an implementation of Gentzen's sequent calculus, which directly supports quantifier alternation by using eigenvariables. We shall describe deskolemization as a mapping from client-side terms, used in proofs generated by theorem provers, into kernel-side terms, used within our proof checking kernel. This mapping which associates skolemized terms to eigenvariables relies on using outer skolemization. We also point out that the removal of Skolem terms from a proof is influenced by the polarities given to propositional connectives.",
+    "abstract": "The field of p-adic numbers ℚp and the ring of p-adic integers ℤp are essential constructions of modern number theory. Hensel’s lemma, described by Gouvêa as the “most important algebraic property of the p-adic numbers,” shows the existence of roots of polynomials over ℤp provided an initial seed point. The theorem can be proved for the p-adics with significantly weaker hypotheses than for general rings. We construct ℚp and ℤp in the Lean proof assistant, with various associated algebraic properties, and formally prove a strong form of Hensel’s lemma. The proof lies at the intersection of algebraic and analytic reasoning and demonstrates how the Lean mathematical library handles such a heterogeneous topic.",
     "topic": "",
     "conference": "cpp",
     "year": 2019,
-    "paper_url": "https://doi.org/10.1145/3293880.3294094"
+    "paper_url": "https://doi.org/10.1145/3293880.3294089"
   },
   {
     "id": "10.1145/3293880.3294091",
@@ -215,6 +201,20 @@
     "conference": "cpp",
     "year": 2019,
     "paper_url": "https://doi.org/10.1145/3293880.3294087"
+  },
+  {
+    "id": "10.1145/3293880.3294094",
+    "title": "A proof-theoretic approach to certifying skolemization",
+    "authors": [
+      "Kaustuv Chaudhuri",
+      "Matteo Manighetti",
+      "Dale Miller"
+    ],
+    "abstract": "When presented with a formula to prove, most theorem provers for classical first-order logic process that formula following several steps, one of which is commonly called skolemization. That process eliminates quantifier alternation within formulas by extending the language of the underlying logic with new Skolem functions and by instantiating certain quantifiers with terms built using Skolem functions. In this paper, we address the problem of checking (i.e., certifying) proof evidence that involves Skolem terms. Our goal is to do such certification without using the mathematical concepts of model-theoretic semantics (i.e., preservation of satisfiability) and choice principles (i.e., epsilon terms). Instead, our proof checking kernel is an implementation of Gentzen's sequent calculus, which directly supports quantifier alternation by using eigenvariables. We shall describe deskolemization as a mapping from client-side terms, used in proofs generated by theorem provers, into kernel-side terms, used within our proof checking kernel. This mapping which associates skolemized terms to eigenvariables relies on using outer skolemization. We also point out that the removal of Skolem terms from a proof is influenced by the polarities given to propositional connectives.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2019,
+    "paper_url": "https://doi.org/10.1145/3293880.3294094"
   },
   {
     "id": "10.1145/3293880.3294105",
@@ -259,19 +259,6 @@
     "paper_url": "https://doi.org/10.1145/3293880.3294095"
   },
   {
-    "id": "10.1145/3293880.3294107",
-    "title": "A Coq mechanised formal semantics for realistic SQL queries: formally reconciling SQL and bag relational algebra",
-    "authors": [
-      "Véronique Benzaken",
-      "Évelyne Contejean"
-    ],
-    "abstract": "In this article, we provide a Coq mechanised, executable, formal semantics for a realistic fragment of SQL consisting of \"select [distinct] from where group by having\" queries with null values, functions, aggregates, quantifiers and nested potentially correlated sub-queries. Relying on the Coq extraction mechanism to Ocaml, we further produce a Coq certified semantic analyser for a SQL compiler. We then relate this fragment to a Coq formalised (extended) relational algebra that enjoys a bag semantics hence recovering all well-known algebraic equivalences upon which are based most of compilation optimisations. By doing so, we provide the first formally mechanised proof of the equivalence of SQL and extended relational algebra.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2019,
-    "paper_url": "https://doi.org/10.1145/3293880.3294107"
-  },
-  {
     "id": "10.1145/3293880.3294102",
     "title": "Formally verified big step semantics out of x86-64 binaries",
     "authors": [
@@ -284,5 +271,18 @@
     "conference": "cpp",
     "year": 2019,
     "paper_url": "https://doi.org/10.1145/3293880.3294102"
+  },
+  {
+    "id": "10.1145/3293880.3294107",
+    "title": "A Coq mechanised formal semantics for realistic SQL queries: formally reconciling SQL and bag relational algebra",
+    "authors": [
+      "Véronique Benzaken",
+      "Évelyne Contejean"
+    ],
+    "abstract": "In this article, we provide a Coq mechanised, executable, formal semantics for a realistic fragment of SQL consisting of \"select [distinct] from where group by having\" queries with null values, functions, aggregates, quantifiers and nested potentially correlated sub-queries. Relying on the Coq extraction mechanism to Ocaml, we further produce a Coq certified semantic analyser for a SQL compiler. We then relate this fragment to a Coq formalised (extended) relational algebra that enjoys a bag semantics hence recovering all well-known algebraic equivalences upon which are based most of compilation optimisations. By doing so, we provide the first formally mechanised proof of the equivalence of SQL and extended relational algebra.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2019,
+    "paper_url": "https://doi.org/10.1145/3293880.3294107"
   }
 ]
