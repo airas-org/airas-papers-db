@@ -29,6 +29,71 @@
     "paper_url": "https://doi.org/10.1145/3573105.3575682"
   },
   {
+    "id": "10.1145/3573105.3575671",
+    "title": "Aesop: White-Box Best-First Proof Search for Lean",
+    "authors": [
+      "Jannis Limperg",
+      "Asta Halkjær From"
+    ],
+    "abstract": "We present Aesop, a proof search tactic for the Lean 4 interactive theorem prover. Aesop performs a tree-based search over a user-specified set of proof rules. It supports safe and unsafe rules and uses a best-first search strategy with customisable prioritisation. Aesop also allows users to register custom normalisation rules and integrates Lean's simplifier to support equational reasoning. Many details of Aesop's search procedure are designed to make it a white-box proof automation tactic, meaning that users should be able to easily predict how their rules will be applied, and thus how powerful and fast their Aesop invocations will be. Since we use a best-first search strategy, it is not obvious how to handle metavariables which appear in multiple goals. The most common strategy for dealing with metavariables relies on backtracking and is therefore not suitable for best-first search. We give an algorithm which addresses this issue. The algorithm works with any search strategy, is independent of the underlying logic and makes few assumptions about how rules interact with metavariables. We conjecture that with a fair search strategy, the algorithm is as complete as the given set of rules allows.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1145/3573105.3575671"
+  },
+  {
+    "id": "10.1145/3573105.3575672",
+    "title": "A First Complete Algorithm for Real Quantifier Elimination in Isabelle/HOL",
+    "authors": [
+      "Katherine Kosaian",
+      "Yong Kiam Tan",
+      "André Platzer"
+    ],
+    "abstract": "We formalize a multivariate quantifier elimination (QE) algorithm in the theorem prover Isabelle/HOL. Our algorithm is complete, in that it is able to reduce any quantified formula in the first-order logic of real arithmetic to a logically equivalent quantifier-free formula. The algorithm we formalize is a hybrid mixture of Tarski’s original QE algorithm and the Ben-Or, Kozen, and Reif algorithm, and it is the first complete multivariate QE algorithm formalized in Isabelle/HOL.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1145/3573105.3575672"
+  },
+  {
+    "id": "10.1145/3573105.3575683",
+    "title": "Practical and Sound Equality Tests, Automatically: Deriving eqType Instances for Jasmin’s Data Types with Coq-Elpi",
+    "authors": [
+      "Benjamin Grégoire",
+      "Jean-Christophe Léchenet",
+      "Enrico Tassi"
+    ],
+    "abstract": "In this paper we describe the design and implementation of feqb, a tool that synthesizes sound equality tests for inductive data types in the dependent type theory of the Coq system. Our procedure scales to large inductive data types, as in hundreds of constructors, since the terms and proofs it synthesizes are linear in the size of the inductive type. Moreover it supports some forms of dependently typed arguments and sigma types pairing data with proofs of decidable properties. Finally feqb handles deeply nested containers without requiring any human intervention.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1145/3573105.3575683"
+  },
+  {
+    "id": "10.1145/3573105.3579108",
+    "title": "Improved Assistance for Interactive Proof (Keynote)",
+    "authors": [
+      "Cezary Kaliszyk"
+    ],
+    "abstract": "Machine learning techniques have been included in various theorem proving tools for approximately two decades. Some of the learning tasks are well understood and tools actually help practitioners, while other tasks are still in their early developmental stages. In this talk I will try to classify the various learning tasks and discuss the learning techniques and tools that are aimed at enhancing the efficiency of interactive theorem provers. I will discuss the most successful techniques aimed at improving the power of automation, that use Monte-Carlo simulations guided by reinforcement learning from previous proof attempts. I will also consider the present and the future challenges including more efficient interaction with interactive theorem provers.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1145/3573105.3579108"
+  },
+  {
+    "id": "10.1145/3573105.3575689",
+    "title": "Formalising Sharkovsky’s Theorem (Proof Pearl)",
+    "authors": [
+      "Bhavik Mehta"
+    ],
+    "abstract": "Sharkovsky's theorem is a celebrated result by Ukrainian mathematician Oleksandr Sharkovsky in the theory of discrete dynamical systems, including the fact that if a continuous function of reals has a point of period 3, it must have points of any period. We formalise the proof in the Lean theorem prover, giving a characterisation of the possible sets of periods a continuous function on the real numbers may have. We further include the converse of the theorem, showing that the aforementioned sets are achievable under mild conditions.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1145/3573105.3575689"
+  },
+  {
     "id": "10.1145/3573105.3579107",
     "title": "CompCert: A Journey through the Landscape of Mechanized Semantics for Verified Compilation (Keynote)",
     "authors": [
@@ -55,41 +120,20 @@
     "paper_url": "https://doi.org/10.1145/3573105.3575688"
   },
   {
-    "id": "10.1145/3573105.3575671",
-    "title": "Aesop: White-Box Best-First Proof Search for Lean",
+    "id": "10.1145/3573105.3575674",
+    "title": "Compiling Higher-Order Specifications to SMT Solvers: How to Deal with Rejection Constructively",
     "authors": [
-      "Jannis Limperg",
-      "Asta Halkjær From"
+      "Matthew L. Daggitt",
+      "Robert Atkey",
+      "Wen Kokke",
+      "Ekaterina Komendantskaya",
+      "Luca Arnaboldi"
     ],
-    "abstract": "We present Aesop, a proof search tactic for the Lean 4 interactive theorem prover. Aesop performs a tree-based search over a user-specified set of proof rules. It supports safe and unsafe rules and uses a best-first search strategy with customisable prioritisation. Aesop also allows users to register custom normalisation rules and integrates Lean's simplifier to support equational reasoning. Many details of Aesop's search procedure are designed to make it a white-box proof automation tactic, meaning that users should be able to easily predict how their rules will be applied, and thus how powerful and fast their Aesop invocations will be. Since we use a best-first search strategy, it is not obvious how to handle metavariables which appear in multiple goals. The most common strategy for dealing with metavariables relies on backtracking and is therefore not suitable for best-first search. We give an algorithm which addresses this issue. The algorithm works with any search strategy, is independent of the underlying logic and makes few assumptions about how rules interact with metavariables. We conjecture that with a fair search strategy, the algorithm is as complete as the given set of rules allows.",
+    "abstract": "Modern verification tools frequently rely on compiling high-level specifications to SMT queries. However, the high-level specification language is usually more expressive than the available solvers and therefore some syntactically valid specifications must be rejected by the tool. In such cases, the challenge is to provide a comprehensible error message to the user that relates the original syntactic form of the specification to the semantic reason it has been rejected. In this paper we demonstrate how this analysis may be performed by combining a standard unification-based type-checker with type classes and automatic generalisation. Concretely, type-checking is used as a constructive procedure for under-approximating whether a given specification lies in the subset of problems supported by the solver. Any resulting proof of rejection can be transformed into a detailed explanation to the user. The approach is compositional and does not require the user to add extra typing annotations to their program. We subsequently describe how the type system may be leveraged to provide a sound and complete compilation procedure from suitably typed expressions to SMT queries, which we have verified in Agda.",
     "topic": "",
     "conference": "cpp",
     "year": 2023,
-    "paper_url": "https://doi.org/10.1145/3573105.3575671"
-  },
-  {
-    "id": "10.1145/3573105.3579108",
-    "title": "Improved Assistance for Interactive Proof (Keynote)",
-    "authors": [
-      "Cezary Kaliszyk"
-    ],
-    "abstract": "Machine learning techniques have been included in various theorem proving tools for approximately two decades. Some of the learning tasks are well understood and tools actually help practitioners, while other tasks are still in their early developmental stages. In this talk I will try to classify the various learning tasks and discuss the learning techniques and tools that are aimed at enhancing the efficiency of interactive theorem provers. I will discuss the most successful techniques aimed at improving the power of automation, that use Monte-Carlo simulations guided by reinforcement learning from previous proof attempts. I will also consider the present and the future challenges including more efficient interaction with interactive theorem provers.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1145/3573105.3579108"
-  },
-  {
-    "id": "10.1145/3573105.3575689",
-    "title": "Formalising Sharkovsky’s Theorem (Proof Pearl)",
-    "authors": [
-      "Bhavik Mehta"
-    ],
-    "abstract": "Sharkovsky's theorem is a celebrated result by Ukrainian mathematician Oleksandr Sharkovsky in the theory of discrete dynamical systems, including the fact that if a continuous function of reals has a point of period 3, it must have points of any period. We formalise the proof in the Lean theorem prover, giving a characterisation of the possible sets of periods a continuous function on the real numbers may have. We further include the converse of the theorem, showing that the aforementioned sets are achievable under mild conditions.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1145/3573105.3575689"
+    "paper_url": "https://doi.org/10.1145/3573105.3575674"
   },
   {
     "id": "10.1145/3573105.3575678",
@@ -150,22 +194,6 @@
     "paper_url": "https://doi.org/10.1145/3573105.3575675"
   },
   {
-    "id": "10.1145/3573105.3575674",
-    "title": "Compiling Higher-Order Specifications to SMT Solvers: How to Deal with Rejection Constructively",
-    "authors": [
-      "Matthew L. Daggitt",
-      "Robert Atkey",
-      "Wen Kokke",
-      "Ekaterina Komendantskaya",
-      "Luca Arnaboldi"
-    ],
-    "abstract": "Modern verification tools frequently rely on compiling high-level specifications to SMT queries. However, the high-level specification language is usually more expressive than the available solvers and therefore some syntactically valid specifications must be rejected by the tool. In such cases, the challenge is to provide a comprehensible error message to the user that relates the original syntactic form of the specification to the semantic reason it has been rejected. In this paper we demonstrate how this analysis may be performed by combining a standard unification-based type-checker with type classes and automatic generalisation. Concretely, type-checking is used as a constructive procedure for under-approximating whether a given specification lies in the subset of problems supported by the solver. Any resulting proof of rejection can be transformed into a detailed explanation to the user. The approach is compositional and does not require the user to add extra typing annotations to their program. We subsequently describe how the type system may be leveraged to provide a sound and complete compilation procedure from suitably typed expressions to SMT queries, which we have verified in Agda.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1145/3573105.3575674"
-  },
-  {
     "id": "10.1145/3573105.3575687",
     "title": "FastVer2: A Provably Correct Monitor for Concurrent, Key-Value Stores",
     "authors": [
@@ -198,48 +226,6 @@
     "paper_url": "https://doi.org/10.1145/3573105.3575667"
   },
   {
-    "id": "10.1145/3573105.3575672",
-    "title": "A First Complete Algorithm for Real Quantifier Elimination in Isabelle/HOL",
-    "authors": [
-      "Katherine Kosaian",
-      "Yong Kiam Tan",
-      "André Platzer"
-    ],
-    "abstract": "We formalize a multivariate quantifier elimination (QE) algorithm in the theorem prover Isabelle/HOL. Our algorithm is complete, in that it is able to reduce any quantified formula in the first-order logic of real arithmetic to a logically equivalent quantifier-free formula. The algorithm we formalize is a hybrid mixture of Tarski’s original QE algorithm and the Ben-Or, Kozen, and Reif algorithm, and it is the first complete multivariate QE algorithm formalized in Isabelle/HOL.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1145/3573105.3575672"
-  },
-  {
-    "id": "10.1145/3573105.3575683",
-    "title": "Practical and Sound Equality Tests, Automatically: Deriving eqType Instances for Jasmin’s Data Types with Coq-Elpi",
-    "authors": [
-      "Benjamin Grégoire",
-      "Jean-Christophe Léchenet",
-      "Enrico Tassi"
-    ],
-    "abstract": "In this paper we describe the design and implementation of feqb, a tool that synthesizes sound equality tests for inductive data types in the dependent type theory of the Coq system. Our procedure scales to large inductive data types, as in hundreds of constructors, since the terms and proofs it synthesizes are linear in the size of the inductive type. Moreover it supports some forms of dependently typed arguments and sigma types pairing data with proofs of decidable properties. Finally feqb handles deeply nested containers without requiring any human intervention.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1145/3573105.3575683"
-  },
-  {
-    "id": "10.1145/3573105.3575677",
-    "title": "Computing Cohomology Rings in Cubical Agda",
-    "authors": [
-      "Thomas Lamiaux",
-      "Axel Ljungström",
-      "Anders Mörtberg"
-    ],
-    "abstract": "In Homotopy Type Theory, cohomology theories are studied synthetically using higher inductive types and univalence. This paper extends previous developments by providing the first fully mechanized definition of cohomology rings. These rings may be defined as direct sums of cohomology groups together with a multiplication induced by the cup product, and can in many cases be characterized as quotients of multivariate polynomial rings. To this end, we introduce appropriate definitions of direct sums and graded rings, which we then use to define both cohomology rings and multivariate polynomial rings. Using this, we compute the cohomology rings of some classical spaces, such as the spheres and the Klein bottle. The formalization is constructive so that it can be used to do concrete computations, and it relies on the Cubical Agda system which natively supports higher inductive types and computational univalence.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1145/3573105.3575677"
-  },
-  {
     "id": "10.1145/3573105.3575681",
     "title": "Mechanised Semantics for Gated Static Single Assignment",
     "authors": [
@@ -254,17 +240,18 @@
     "paper_url": "https://doi.org/10.1145/3573105.3575681"
   },
   {
-    "id": "10.1145/3573105.3575679",
-    "title": "Encoding Dependently-Typed Constructions into Simple Type Theory",
+    "id": "10.1145/3573105.3575677",
+    "title": "Computing Cohomology Rings in Cubical Agda",
     "authors": [
-      "Anthony Bordg",
-      "Adrián Doña Mateo"
+      "Thomas Lamiaux",
+      "Axel Ljungström",
+      "Anders Mörtberg"
     ],
-    "abstract": "In this article, we show how one can formalise in type theory mathematical objects, for which dependent types are usually deemed unavoidable, using only simple types. We outline a method to encode most of the terms of Lean's dependent type theory into the simple type theory of Isabelle/HOL. Taking advantage of Isabelle's automation, we illustrate our method with the formalisation in Isabelle/HOL of a mathematical notion developed in the 1980s: strict omega-categories.",
+    "abstract": "In Homotopy Type Theory, cohomology theories are studied synthetically using higher inductive types and univalence. This paper extends previous developments by providing the first fully mechanized definition of cohomology rings. These rings may be defined as direct sums of cohomology groups together with a multiplication induced by the cup product, and can in many cases be characterized as quotients of multivariate polynomial rings. To this end, we introduce appropriate definitions of direct sums and graded rings, which we then use to define both cohomology rings and multivariate polynomial rings. Using this, we compute the cohomology rings of some classical spaces, such as the spheres and the Klein bottle. The formalization is constructive so that it can be used to do concrete computations, and it relies on the Cubical Agda system which natively supports higher inductive types and computational univalence.",
     "topic": "",
     "conference": "cpp",
     "year": 2023,
-    "paper_url": "https://doi.org/10.1145/3573105.3575679"
+    "paper_url": "https://doi.org/10.1145/3573105.3575677"
   },
   {
     "id": "10.1145/3573105.3575684",
@@ -316,16 +303,17 @@
     "paper_url": "https://doi.org/10.1145/3573105.3575690"
   },
   {
-    "id": "10.1145/3573105.3575669",
-    "title": "A Formalized Reduction of Keller’s Conjecture",
+    "id": "10.1145/3573105.3575679",
+    "title": "Encoding Dependently-Typed Constructions into Simple Type Theory",
     "authors": [
-      "Joshua Clune"
+      "Anthony Bordg",
+      "Adrián Doña Mateo"
     ],
-    "abstract": "Keller’s conjecture in d dimensions states that there are no faceshare-free tilings of d-dimensional space by translates of a d-dimensional cube. In 2020, Brakensiek et al. resolved this 90-year-old conjecture by proving that the largest number of dimensions for which no faceshare-free tilings exist is 7. This result, as well as many others pertaining to Keller’s conjecture, critically relies on a reduction from Keller’s original conjecture to a statement about cliques in generalized Keller graphs. In this paper, we present a formalization of this reduction in the Lean 3 theorem prover. Additionally, we combine this formalized reduction with the verification of a large clique in the Keller graph G8 to obtain the first verified end-to-end proof that Keller’s conjecture is false in 8 dimensions.",
+    "abstract": "In this article, we show how one can formalise in type theory mathematical objects, for which dependent types are usually deemed unavoidable, using only simple types. We outline a method to encode most of the terms of Lean's dependent type theory into the simple type theory of Isabelle/HOL. Taking advantage of Isabelle's automation, we illustrate our method with the formalisation in Isabelle/HOL of a mathematical notion developed in the 1980s: strict omega-categories.",
     "topic": "",
     "conference": "cpp",
     "year": 2023,
-    "paper_url": "https://doi.org/10.1145/3573105.3575669"
+    "paper_url": "https://doi.org/10.1145/3573105.3575679"
   },
   {
     "id": "10.1145/3573105.3575680",
@@ -340,6 +328,18 @@
     "conference": "cpp",
     "year": 2023,
     "paper_url": "https://doi.org/10.1145/3573105.3575680"
+  },
+  {
+    "id": "10.1145/3573105.3575669",
+    "title": "A Formalized Reduction of Keller’s Conjecture",
+    "authors": [
+      "Joshua Clune"
+    ],
+    "abstract": "Keller’s conjecture in d dimensions states that there are no faceshare-free tilings of d-dimensional space by translates of a d-dimensional cube. In 2020, Brakensiek et al. resolved this 90-year-old conjecture by proving that the largest number of dimensions for which no faceshare-free tilings exist is 7. This result, as well as many others pertaining to Keller’s conjecture, critically relies on a reduction from Keller’s original conjecture to a statement about cliques in generalized Keller graphs. In this paper, we present a formalization of this reduction in the Lean 3 theorem prover. Additionally, we combine this formalized reduction with the verification of a large clique in the Keller graph G8 to obtain the first verified end-to-end proof that Keller’s conjecture is false in 8 dimensions.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1145/3573105.3575669"
   },
   {
     "id": "10.1145/3573105.3575673",

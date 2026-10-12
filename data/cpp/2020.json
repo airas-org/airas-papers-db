@@ -52,17 +52,17 @@
     "paper_url": "https://doi.org/10.1145/3372885.3373816"
   },
   {
-    "id": "10.1145/3372885.3373831",
-    "title": "Completeness of an axiomatization of graph isomorphism via graph rewriting in Coq",
+    "id": "10.1145/3372885.3373817",
+    "title": "Coq à la carte: a practical approach to modular syntax with binders",
     "authors": [
-      "Christian Doczkal",
-      "Damien Pous"
+      "Yannick Forster",
+      "Kathrin Stark"
     ],
-    "abstract": "The labeled multigraphs of treewidth at most two can be described using a simple term language over which isomorphism of the denoted graphs can be finitely axiomatized. We formally verify soundness and completeness of such an axiomatization using Coq and the mathematical components library. The completeness proof is based on a normalizing and confluent rewrite system on term-labeled graphs. While for most of the development a dependently typed representation of graphs based on finite types of vertices and edges is most convenient, we switch to a graph representation employing a fixed type of vertices shared among all graphs for establishing confluence of the rewrite system. The completeness result is then obtained by transferring confluence from the fixed-type setting to the dependently typed setting.",
+    "abstract": "The mechanisation of the meta-theory of programming languages is still considered hard and requires considerable effort. When formalising properties of the extension of a language, one hence wants to reuse definitions and proofs. But type-theoretic proof assistants use inductive types and predicates to formalise syntax and type systems, and these definitions are closed to extensions. Available approaches for modular syntax are either inapplicable to type theory or add a layer of indirectness by requiring complicated encodings of types. We present a concise, transparent, and accessible approach to modular syntax with binders by adapting Swierstra's Data Types à la Carte approach to the Coq proof assistant. Our approach relies on two phases of code generation: We extend the Autosubst 2 tool and allow users to specify modular syntax with binders in a HOAS-like input language. To state and automatically compose modular functions and lemmas, we implement commands based on MetaCoq. We support modular syntax, functions, predicates, and theorems. We demonstrate the practicality of our approach by modular proofs of preservation, weak head normalisation, and strong normalisation for several variants of mini-ML.",
     "topic": "",
     "conference": "cpp",
     "year": 2020,
-    "paper_url": "https://doi.org/10.1145/3372885.3373831"
+    "paper_url": "https://doi.org/10.1145/3372885.3373817"
   },
   {
     "id": "10.1145/3372885.3373819",
@@ -78,17 +78,32 @@
     "paper_url": "https://doi.org/10.1145/3372885.3373819"
   },
   {
-    "id": "10.1145/3372885.3373817",
-    "title": "Coq à la carte: a practical approach to modular syntax with binders",
+    "id": "10.1145/3372885.3373823",
+    "title": "REPLica: REPL instrumentation for Coq analysis",
     "authors": [
-      "Yannick Forster",
-      "Kathrin Stark"
+      "Talia Ringer",
+      "Alex Sanchez-Stern",
+      "Dan Grossman",
+      "Sorin Lerner"
     ],
-    "abstract": "The mechanisation of the meta-theory of programming languages is still considered hard and requires considerable effort. When formalising properties of the extension of a language, one hence wants to reuse definitions and proofs. But type-theoretic proof assistants use inductive types and predicates to formalise syntax and type systems, and these definitions are closed to extensions. Available approaches for modular syntax are either inapplicable to type theory or add a layer of indirectness by requiring complicated encodings of types. We present a concise, transparent, and accessible approach to modular syntax with binders by adapting Swierstra's Data Types à la Carte approach to the Coq proof assistant. Our approach relies on two phases of code generation: We extend the Autosubst 2 tool and allow users to specify modular syntax with binders in a HOAS-like input language. To state and automatically compose modular functions and lemmas, we implement commands based on MetaCoq. We support modular syntax, functions, predicates, and theorems. We demonstrate the practicality of our approach by modular proofs of preservation, weak head normalisation, and strong normalisation for several variants of mini-ML.",
+    "abstract": "Proof engineering tools make it easier to develop and maintain large systems verified using interactive theorem provers. Developing useful proof engineering tools hinges on understanding the development processes of proof engineers. This paper breaks down one barrier to achieving that understanding: remotely collecting granular data on proof developments as they happen. We have built a tool called REPLica that instruments Coq’s interaction model in order to collect fine-grained data on proof developments. It is decoupled from the user interface, and designed in a way that generalizes to other interactive theorem provers with similar interaction models. We have used REPLica to collect data over the span of a month from a group of intermediate through expert proof engineers—enough data to reconstruct hundreds of interactive sessions. The data reveals patterns in fixing proofs and in changing programs and specifications useful for the improvement of proof engineering tools. Our experiences conducting this study suggest design considerations both at the level of the study and at the level of the interactive theorem prover that can facilitate future studies of this kind.",
     "topic": "",
     "conference": "cpp",
     "year": 2020,
-    "paper_url": "https://doi.org/10.1145/3372885.3373817"
+    "paper_url": "https://doi.org/10.1145/3372885.3373823"
+  },
+  {
+    "id": "10.1145/3372885.3373831",
+    "title": "Completeness of an axiomatization of graph isomorphism via graph rewriting in Coq",
+    "authors": [
+      "Christian Doczkal",
+      "Damien Pous"
+    ],
+    "abstract": "The labeled multigraphs of treewidth at most two can be described using a simple term language over which isomorphism of the denoted graphs can be finitely axiomatized. We formally verify soundness and completeness of such an axiomatization using Coq and the mathematical components library. The completeness proof is based on a normalizing and confluent rewrite system on term-labeled graphs. While for most of the development a dependently typed representation of graphs based on finite types of vertices and edges is most convenient, we switch to a graph representation employing a fixed type of vertices shared among all graphs for establishing confluence of the rewrite system. The completeness result is then obtained by transferring confluence from the fixed-type setting to the dependently typed setting.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1145/3372885.3373831"
   },
   {
     "id": "10.1145/3372885.3373830",
@@ -145,19 +160,6 @@
     "paper_url": "https://doi.org/10.1145/3372885.3378574"
   },
   {
-    "id": "10.1145/3372885.3373836",
-    "title": "A verified packrat parser interpreter for parsing expression grammars",
-    "authors": [
-      "Clement Blaudeau",
-      "Natarajan Shankar"
-    ],
-    "abstract": "Parsing expression grammars (PEGs) offer a natural opportunity for building verified parser interpreters based on higher-order parsing combinators. PEGs are expressive, unambiguous, and efficient to parse in a top-down recursive descent style. We use the rich type system of the PVS specification language and verification system to formalize the metatheory of PEGs and define a reference implementation of a recursive parser interpreter for PEGs. In order to ensure termination of parsing, we define a notion of a well-formed grammar. Rather than relying on an inductive definition of parsing, we use abstract syntax trees that represent the computational trace of the parser to provide an effective proof certificate for correct parsing and ensure that parsing properties including soundness and completeness are maintained. The correctness properties are embedded in the types of the operations so that the proofs can be easily constructed from local proof obligations. Building on the reference parser interpreter, we define a packrat parser interpreter as well as an extension that is capable of semantic interpretation. Both these parser interpreters are proved equivalent to the reference one. All of the parsers are executable. The proofs are formalized in mathematical terms so that similar parser interpreters can be defined in any specification language with a type system similar to PVS.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2020,
-    "paper_url": "https://doi.org/10.1145/3372885.3373836"
-  },
-  {
     "id": "10.1145/3372885.3373835",
     "title": "Three equivalent ordinal notation systems in cubical Agda",
     "authors": [
@@ -185,19 +187,17 @@
     "paper_url": "https://doi.org/10.1145/3372885.3373832"
   },
   {
-    "id": "10.1145/3372885.3373823",
-    "title": "REPLica: REPL instrumentation for Coq analysis",
+    "id": "10.1145/3372885.3373836",
+    "title": "A verified packrat parser interpreter for parsing expression grammars",
     "authors": [
-      "Talia Ringer",
-      "Alex Sanchez-Stern",
-      "Dan Grossman",
-      "Sorin Lerner"
+      "Clement Blaudeau",
+      "Natarajan Shankar"
     ],
-    "abstract": "Proof engineering tools make it easier to develop and maintain large systems verified using interactive theorem provers. Developing useful proof engineering tools hinges on understanding the development processes of proof engineers. This paper breaks down one barrier to achieving that understanding: remotely collecting granular data on proof developments as they happen. We have built a tool called REPLica that instruments Coq’s interaction model in order to collect fine-grained data on proof developments. It is decoupled from the user interface, and designed in a way that generalizes to other interactive theorem provers with similar interaction models. We have used REPLica to collect data over the span of a month from a group of intermediate through expert proof engineers—enough data to reconstruct hundreds of interactive sessions. The data reveals patterns in fixing proofs and in changing programs and specifications useful for the improvement of proof engineering tools. Our experiences conducting this study suggest design considerations both at the level of the study and at the level of the interactive theorem prover that can facilitate future studies of this kind.",
+    "abstract": "Parsing expression grammars (PEGs) offer a natural opportunity for building verified parser interpreters based on higher-order parsing combinators. PEGs are expressive, unambiguous, and efficient to parse in a top-down recursive descent style. We use the rich type system of the PVS specification language and verification system to formalize the metatheory of PEGs and define a reference implementation of a recursive parser interpreter for PEGs. In order to ensure termination of parsing, we define a notion of a well-formed grammar. Rather than relying on an inductive definition of parsing, we use abstract syntax trees that represent the computational trace of the parser to provide an effective proof certificate for correct parsing and ensure that parsing properties including soundness and completeness are maintained. The correctness properties are embedded in the types of the operations so that the proofs can be easily constructed from local proof obligations. Building on the reference parser interpreter, we define a packrat parser interpreter as well as an extension that is capable of semantic interpretation. Both these parser interpreters are proved equivalent to the reference one. All of the parsers are executable. The proofs are formalized in mathematical terms so that similar parser interpreters can be defined in any specification language with a type system similar to PVS.",
     "topic": "",
     "conference": "cpp",
     "year": 2020,
-    "paper_url": "https://doi.org/10.1145/3372885.3373823"
+    "paper_url": "https://doi.org/10.1145/3372885.3373836"
   },
   {
     "id": "10.1145/3372885.3373811",
@@ -281,6 +281,19 @@
     "paper_url": "https://doi.org/10.1145/3372885.3373826"
   },
   {
+    "id": "10.1145/3372885.3373834",
+    "title": "Proof pearl: Braun trees",
+    "authors": [
+      "Tobias Nipkow",
+      "Thomas Sewell"
+    ],
+    "abstract": "Braun trees are functional data structures for implementing extensible arrays and priority queues (and sorting functions based on the latter) efficiently. Some well-known functions on Braun trees have not yet been verified, including especially Okasaki’s linear time conversion from lists to Braun trees. We supply the missing proofs and verify all of these algorithms in Isabelle, including non-obvious time complexity claims. In particular we provide the first linear-time conversion from Braun trees to lists. We also state and verify a new characterization of Braun trees as the trees t whose index set is the interval {1, …, size of t}.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1145/3372885.3373834"
+  },
+  {
     "id": "10.1145/3372885.3373815",
     "title": "Formalising oblivious transfer in the semi-honest and malicious model in CryptHOL",
     "authors": [
@@ -322,19 +335,6 @@
     "paper_url": "https://doi.org/10.1145/3372885.3373820"
   },
   {
-    "id": "10.1145/3372885.3373834",
-    "title": "Proof pearl: Braun trees",
-    "authors": [
-      "Tobias Nipkow",
-      "Thomas Sewell"
-    ],
-    "abstract": "Braun trees are functional data structures for implementing extensible arrays and priority queues (and sorting functions based on the latter) efficiently. Some well-known functions on Braun trees have not yet been verified, including especially Okasaki’s linear time conversion from lists to Braun trees. We supply the missing proofs and verify all of these algorithms in Isabelle, including non-obvious time complexity claims. In particular we provide the first linear-time conversion from Braun trees to lists. We also state and verify a new characterization of Braun trees as the trees t whose index set is the interval {1, …, size of t}.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2020,
-    "paper_url": "https://doi.org/10.1145/3372885.3373834"
-  },
-  {
     "id": "10.1145/3372885.3373822",
     "title": "A mechanized formalization of GraphQL",
     "authors": [
@@ -347,6 +347,20 @@
     "conference": "cpp",
     "year": 2020,
     "paper_url": "https://doi.org/10.1145/3372885.3373822"
+  },
+  {
+    "id": "10.1145/3372885.3373829",
+    "title": "ConCert: a smart contract certification framework in Coq",
+    "authors": [
+      "Danil Annenkov",
+      "Jakob Botsch Nielsen",
+      "Bas Spitters"
+    ],
+    "abstract": "We present a new way of embedding functional languages into the Coq proof assistant by using meta-programming. This allows us to develop the meta-theory of the language using the deep embedding and provides a convenient way for reasoning about concrete programs using the shallow embedding. We connect the deep and the shallow embeddings by a soundness theorem. As an instance of our approach, we develop an embedding of a core smart contract language into Coq and verify several important properties of a crowdfunding contract based on a previous formalisation of smart contract execution in blockchains.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1145/3372885.3373829"
   },
   {
     "id": "10.1145/3372885.3373818",
@@ -362,20 +376,6 @@
     "conference": "cpp",
     "year": 2020,
     "paper_url": "https://doi.org/10.1145/3372885.3373818"
-  },
-  {
-    "id": "10.1145/3372885.3373829",
-    "title": "ConCert: a smart contract certification framework in Coq",
-    "authors": [
-      "Danil Annenkov",
-      "Jakob Botsch Nielsen",
-      "Bas Spitters"
-    ],
-    "abstract": "We present a new way of embedding functional languages into the Coq proof assistant by using meta-programming. This allows us to develop the meta-theory of the language using the deep embedding and provides a convenient way for reasoning about concrete programs using the shallow embedding. We connect the deep and the shallow embeddings by a soundness theorem. As an instance of our approach, we develop an embedding of a core smart contract language into Coq and verify several important properties of a crowdfunding contract based on a previous formalisation of smart contract execution in blockchains.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2020,
-    "paper_url": "https://doi.org/10.1145/3372885.3373829"
   },
   {
     "id": "10.1145/3372885.3373813",

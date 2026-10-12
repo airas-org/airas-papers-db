@@ -492,166 +492,6 @@
     "paper_url": "https://doi.org/10.1093/bioinformatics/btae231"
   },
   {
-    "id": "10.1093/bioinformatics/btae246",
-    "title": "Integration of background knowledge for automatic detection of inconsistencies in gene ontology annotation",
-    "authors": [
-      "Chen J",
-      "Goudey B",
-      "Geard N",
-      "Verspoor K"
-    ],
-    "abstract": "<h4>Motivation</h4>Biological background knowledge plays an important role in the manual quality assurance (QA) of biological database records. One such QA task is the detection of inconsistencies in literature-based Gene Ontology Annotation (GOA). This manual verification ensures the accuracy of the GO annotations based on a comprehensive review of the literature used as evidence, Gene Ontology (GO) terms, and annotated genes in GOA records. While automatic approaches for the detection of semantic inconsistencies in GOA have been developed, they operate within predetermined contexts, lacking the ability to leverage broader evidence, especially relevant domain-specific background knowledge. This paper investigates various types of background knowledge that could improve the detection of prevalent inconsistencies in GOA. In addition, the paper proposes several approaches to integrate background knowledge into the automatic GOA inconsistency detection process.<h4>Results</h4>We have extended a previously developed GOA inconsistency dataset with several kinds of GOA-related background knowledge, including GeneRIF statements, biological concepts mentioned within evidence texts, GO hierarchy and existing GO annotations of the specific gene. We have proposed several effective approaches to integrate background knowledge as part of the automatic GOA inconsistency detection process. The proposed approaches can improve automatic detection of self-consistency and several of the most prevalent types of inconsistencies.This is the first study to explore the advantages of utilizing background knowledge and to propose a practical approach to incorporate knowledge in automatic GOA inconsistency detection. We establish a new benchmark for performance on this task. Our methods may be applicable to various tasks that involve incorporating biological background knowledge.<h4>Availability and implementation</h4>https://github.com/jiyuc/de-inconsistency.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2024,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btae246"
-  },
-  {
-    "id": "10.1093/bioinformatics/btae240",
-    "title": "Enhancing generalizability and performance in drug-target interaction identification by integrating pharmacophore and pre-trained models",
-    "authors": [
-      "Zhang Z",
-      "He X",
-      "Long D",
-      "Luo G",
-      "Chen S"
-    ],
-    "abstract": "<h4>Motivation</h4>In drug discovery, it is crucial to assess the drug-target binding affinity (DTA). Although molecular docking is widely used, computational efficiency limits its application in large-scale virtual screening. Deep learning-based methods learn virtual scoring functions from labeled datasets and can quickly predict affinity. However, there are three limitations. First, existing methods only consider the atom-bond graph or one-dimensional sequence representations of compounds, ignoring the information about functional groups (pharmacophores) with specific biological activities. Second, relying on limited labeled datasets fails to learn comprehensive embedding representations of compounds and proteins, resulting in poor generalization performance in complex scenarios. Third, existing feature fusion methods cannot adequately capture contextual interaction information.<h4>Results</h4>Therefore, we propose a novel DTA prediction method named HeteroDTA. Specifically, a multi-view compound feature extraction module is constructed to model the atom-bond graph and pharmacophore graph. The residue concat graph and protein sequence are also utilized to model protein structure and function. Moreover, to enhance the generalization capability and reduce the dependence on task-specific labeled data, pre-trained models are utilized to initialize the atomic features of the compounds and the embedding representations of the protein sequence. A context-aware nonlinear feature fusion method is also proposed to learn interaction patterns between compounds and proteins. Experimental results on public benchmark datasets show that HeteroDTA significantly outperforms existing methods. In addition, HeteroDTA shows excellent generalization performance in cold-start experiments and superiority in the representation learning ability of drug-target pairs. Finally, the effectiveness of HeteroDTA is demonstrated in a real-world drug discovery study.<h4>Availability and implementation</h4>The source code and data are available at https://github.com/daydayupzzl/HeteroDTA.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2024,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btae240"
-  },
-  {
-    "id": "10.1093/bioinformatics/btae261",
-    "title": "CODEX: COunterfactual Deep learning for the in silico EXploration of cancer cell line perturbations",
-    "authors": [
-      "Schrod S",
-      "Zacharias HU",
-      "Beißbarth T",
-      "Hauschild AC",
-      "Altenbuchinger M"
-    ],
-    "abstract": "<h4>Motivation</h4>High-throughput screens (HTS) provide a powerful tool to decipher the causal effects of chemical and genetic perturbations on cancer cell lines. Their ability to evaluate a wide spectrum of interventions, from single drugs to intricate drug combinations and CRISPR-interference, has established them as an invaluable resource for the development of novel therapeutic approaches. Nevertheless, the combinatorial complexity of potential interventions makes a comprehensive exploration intractable. Hence, prioritizing interventions for further experimental investigation becomes of utmost importance.<h4>Results</h4>We propose CODEX (COunterfactual Deep learning for the in silico EXploration of cancer cell line perturbations) as a general framework for the causal modeling of HTS data, linking perturbations to their downstream consequences. CODEX relies on a stringent causal modeling strategy based on counterfactual reasoning. As such, CODEX predicts drug-specific cellular responses, comprising cell survival and molecular alterations, and facilitates the in silico exploration of drug combinations. This is achieved for both bulk and single-cell HTS. We further show that CODEX provides a rationale to explore complex genetic modifications from CRISPR-interference in silico in single cells.<h4>Availability and implementation</h4>Our implementation of CODEX is publicly available at https://github.com/sschrod/CODEX. All data used in this article are publicly available.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2024,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btae261"
-  },
-  {
-    "id": "10.1093/bioinformatics/btae237",
-    "title": "Predicting protein functions using positive-unlabeled ranking with ontology-based priors",
-    "authors": [
-      "Zhapa-Camacho F",
-      "Tang Z",
-      "Kulmanov M",
-      "Hoehndorf R"
-    ],
-    "abstract": "Automated protein function prediction is a crucial and widely studied problem in bioinformatics. Computationally, protein function is a multilabel classification problem where only positive samples are defined and there is a large number of unlabeled annotations. Most existing methods rely on the assumption that the unlabeled set of protein function annotations are negatives, inducing the false negative issue, where potential positive samples are trained as negatives. We introduce a novel approach named PU-GO, wherein we address function prediction as a positive-unlabeled ranking problem. We apply empirical risk minimization, i.e. we minimize the classification risk of a classifier where class priors are obtained from the Gene Ontology hierarchical structure. We show that our approach is more robust than other state-of-the-art methods on similarity-based and time-based benchmark datasets.<h4>Availability and implementation</h4>Data and code are available at https://github.com/bio-ontology-research-group/PU-GO.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2024,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btae237"
-  },
-  {
-    "id": "10.1093/bioinformatics/btae258",
-    "title": "Optimal sequencing budget allocation for trajectory reconstruction of single cells",
-    "authors": [
-      "Moriel N",
-      "Memet E",
-      "Nitzan M"
-    ],
-    "abstract": "<h4>Background</h4>Charting cellular trajectories over gene expression is key to understanding dynamic cellular processes and their underlying mechanisms. While advances in single-cell RNA-sequencing technologies and computational methods have pushed forward the recovery of such trajectories, trajectory inference remains a challenge due to the noisy, sparse, and high-dimensional nature of single-cell data. This challenge can be alleviated by increasing either the number of cells sampled along the trajectory (breadth) or the sequencing depth, i.e. the number of reads captured per cell (depth). Generally, these two factors are coupled due to an inherent breadth-depth tradeoff that arises when the sequencing budget is constrained due to financial or technical limitations.<h4>Results</h4>Here we study the optimal allocation of a fixed sequencing budget to optimize the recovery of trajectory attributes. Empirical results reveal that reconstruction accuracy of internal cell structure in expression space scales with the logarithm of either the breadth or depth of sequencing. We additionally observe a power law relationship between the optimal number of sampled cells and the corresponding sequencing budget. For linear trajectories, non-monotonicity in trajectory reconstruction across the breadth-depth tradeoff can impact downstream inference, such as expression pattern analysis along the trajectory. We demonstrate these results for five single-cell RNA-sequencing datasets encompassing differentiation of embryonic stem cells, pancreatic beta cells, hepatoblast and multipotent hematopoietic cells, as well as induced reprogramming of embryonic fibroblasts into neurons. By addressing the challenges of single-cell data, our study offers insights into maximizing the efficiency of cellular trajectory analysis through strategic allocation of sequencing resources.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2024,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btae258"
-  },
-  {
-    "id": "10.1093/bioinformatics/btae234",
-    "title": "REUNION: transcription factor binding prediction and regulatory association inference from single-cell multi-omics data",
-    "authors": [
-      "Yang Y",
-      "Pe'er D"
-    ],
-    "abstract": "<h4>Motivation</h4>Profiling of gene expression and chromatin accessibility by single-cell multi-omics approaches can help to systematically decipher how transcription factors (TFs) regulate target gene expression via cis-region interactions. However, integrating information from different modalities to discover regulatory associations is challenging, in part because motif scanning approaches miss many likely TF binding sites.<h4>Results</h4>We develop REUNION, a framework for predicting genome-wide TF binding and cis-region-TF-gene \"triplet\" regulatory associations using single-cell multi-omics data. The first component of REUNION, Unify, utilizes information theory-inspired complementary score functions that incorporate TF expression, chromatin accessibility, and target gene expression to identify regulatory associations. The second component, Rediscover, takes Unify estimates as input for pseudo semi-supervised learning to predict TF binding in accessible genomic regions that may or may not include detected TF motifs. Rediscover leverages latent chromatin accessibility and sequence feature spaces of the genomic regions, without requiring chromatin immunoprecipitation data for model training. Applied to peripheral blood mononuclear cell data, REUNION outperforms alternative methods in TF binding prediction on average performance. In particular, it recovers missing region-TF associations from regions lacking detected motifs, which circumvents the reliance on motif scanning and facilitates discovery of novel associations involving potential co-binding transcriptional regulators. Newly identified region-TF associations, even in regions lacking a detected motif, improve the prediction of target gene expression in regulatory triplets, and are thus likely to genuinely participate in the regulation.<h4>Availability and implementation</h4>All source code is available at https://github.com/yangymargaret/REUNION.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2024,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btae234"
-  },
-  {
-    "id": "10.1093/bioinformatics/btae242",
-    "title": "GraphCompass: spatial metrics for differential analyses of cell organization across conditions",
-    "authors": [
-      "Ali M",
-      "Kuijs M",
-      "Hediyeh-Zadeh S",
-      "Treis T",
-      "Hrovatin K",
-      "Palla G",
-      "Schaar AC",
-      "Theis FJ"
-    ],
-    "abstract": "<h4>Summary</h4>Spatial omics technologies are increasingly leveraged to characterize how disease disrupts tissue organization and cellular niches. While multiple methods to analyze spatial variation within a sample have been published, statistical and computational approaches to compare cell spatial organization across samples or conditions are mostly lacking. We present GraphCompass, a comprehensive set of omics-adapted graph analysis methods to quantitatively evaluate and compare the spatial arrangement of cells in samples representing diverse biological conditions. GraphCompass builds upon the Squidpy spatial omics toolbox and encompasses various statistical approaches to perform cross-condition analyses at the level of individual cell types, niches, and samples. Additionally, GraphCompass provides custom visualization functions that enable effective communication of results. We demonstrate how GraphCompass can be used to address key biological questions, such as how cellular organization and tissue architecture differ across various disease states and which spatial patterns correlate with a given pathological condition. GraphCompass can be applied to various popular omics techniques, including, but not limited to, spatial proteomics (e.g. MIBI-TOF), spot-based transcriptomics (e.g. 10× Genomics Visium), and single-cell resolved transcriptomics (e.g. Stereo-seq). In this work, we showcase the capabilities of GraphCompass through its application to three different studies that may also serve as benchmark datasets for further method development. With its easy-to-use implementation, extensive documentation, and comprehensive tutorials, GraphCompass is accessible to biologists with varying levels of computational expertise. By facilitating comparative analyses of cell spatial organization, GraphCompass promises to be a valuable asset in advancing our understanding of tissue function in health and disease..",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2024,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btae242"
-  },
-  {
-    "id": "10.1093/bioinformatics/btae241",
-    "title": "Integrating patients in time series clinical transcriptomics data",
-    "authors": [
-      "Hasanaj E",
-      "Mathur S",
-      "Bar-Joseph Z"
-    ],
-    "abstract": "<h4>Motivation</h4>Analysis of time series transcriptomics data from clinical trials is challenging. Such studies usually profile very few time points from several individuals with varying response patterns and dynamics. Current methods for these datasets are mainly based on linear, global orderings using visit times which do not account for the varying response rates and subgroups within a patient cohort.<h4>Results</h4>We developed a new method that utilizes multi-commodity flow algorithms for trajectory inference in large scale clinical studies. Recovered trajectories satisfy individual-based timing restrictions while integrating data from multiple patients. Testing the method on multiple drug datasets demonstrated an improved performance compared to prior approaches suggested for this task, while identifying novel disease subtypes that correspond to heterogeneous patient response patterns.<h4>Availability and implementation</h4>The source code and instructions to download the data have been deposited on GitHub at https://github.com/euxhenh/Truffle.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2024,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btae241"
-  },
-  {
-    "id": "10.1093/bioinformatics/btae254",
-    "title": "Optimal phylogenetic reconstruction of insertion and deletion events",
-    "authors": [
-      "Tule S",
-      "Foley G",
-      "Zhao C",
-      "Forbes M",
-      "Bodén M"
-    ],
-    "abstract": "<h4>Motivation</h4>Insertions and deletions (indels) influence the genetic code in fundamentally distinct ways from substitutions, significantly impacting gene product structure and function. Despite their influence, the evolutionary history of indels is often neglected in phylogenetic tree inference and ancestral sequence reconstruction, hindering efforts to comprehend biological diversity determinants and engineer variants for medical and industrial applications.<h4>Results</h4>We frame determining the optimal history of indel events as a single Mixed-Integer Programming (MIP) problem, across all branch points in a phylogenetic tree adhering to topological constraints, and all sites implied by a given set of aligned, extant sequences. By disentangling the impact on ancestral sequences at each branch point, this approach identifies the minimal indel events that jointly explain the diversity in sequences mapped to the tips of that tree. MIP can recover alternate optimal indel histories, if available. We evaluated MIP for indel inference on a dataset comprising 15 real phylogenetic trees associated with protein families ranging from 165 to 2000 extant sequences, and on 60 synthetic trees at comparable scales of data and reflecting realistic rates of mutation. Across relevant metrics, MIP outperformed alternative parsimony-based approaches and reported the fewest indel events, on par or below their occurrence in synthetic datasets. MIP offers a rational justification for indel patterns in extant sequences; importantly, it uniquely identifies global optima on complex protein data sets without making unrealistic assumptions of independence or evolutionary underpinnings, promising a deeper understanding of molecular evolution and aiding novel protein design.<h4>Availability and implementation</h4>The implementation is available via GitHub at https://github.com/santule/indelmip.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2024,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btae254"
-  },
-  {
-    "id": "10.1093/bioinformatics/btae250",
-    "title": "Modeling metastatic progression from cross-sectional cancer genomics data",
-    "authors": [
-      "Rupp K",
-      "Lösch A",
-      "Hu YL",
-      "Nie C",
-      "Schill R",
-      "Klever M",
-      "Pfahler S",
-      "Grasedyck L",
-      "Wettig T",
-      "Beerenwinkel N",
-      "Spang R"
-    ],
-    "abstract": "<h4>Motivation</h4>Metastasis formation is a hallmark of cancer lethality. Yet, metastases are generally unobservable during their early stages of dissemination and spread to distant organs. Genomic datasets of matched primary tumors and metastases may offer insights into the underpinnings and the dynamics of metastasis formation.<h4>Results</h4>We present metMHN, a cancer progression model designed to deduce the joint progression of primary tumors and metastases using cross-sectional cancer genomics data. The model elucidates the statistical dependencies among genomic events, the formation of metastasis, and the clinical emergence of both primary tumors and their metastatic counterparts. metMHN enables the chronological reconstruction of mutational sequences and facilitates estimation of the timing of metastatic seeding. In a study of nearly 5000 lung adenocarcinomas, metMHN pinpointed TP53 and EGFR as mediators of metastasis formation. Furthermore, the study revealed that post-seeding adaptation is predominantly influenced by frequent copy number alterations.<h4>Availability and implementation</h4>All datasets and code are available on GitHub at https://github.com/cbg-ethz/metMHN.",
-    "topic": "Lung cancer; Metastasis; Markov Chains; Cancer Genomics; Cancer Progression Models; Mutual Hazard Networks",
-    "conference": "ismb",
-    "year": 2024,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btae250"
-  },
-  {
     "id": "10.1093/bioinformatics/btae263",
     "title": "Adaptive digital tissue deconvolution",
     "authors": [
@@ -820,6 +660,166 @@
     "conference": "ismb",
     "year": 2024,
     "paper_url": "https://doi.org/10.1093/bioinformatics/btae217"
+  },
+  {
+    "id": "10.1093/bioinformatics/btae246",
+    "title": "Integration of background knowledge for automatic detection of inconsistencies in gene ontology annotation",
+    "authors": [
+      "Chen J",
+      "Goudey B",
+      "Geard N",
+      "Verspoor K"
+    ],
+    "abstract": "<h4>Motivation</h4>Biological background knowledge plays an important role in the manual quality assurance (QA) of biological database records. One such QA task is the detection of inconsistencies in literature-based Gene Ontology Annotation (GOA). This manual verification ensures the accuracy of the GO annotations based on a comprehensive review of the literature used as evidence, Gene Ontology (GO) terms, and annotated genes in GOA records. While automatic approaches for the detection of semantic inconsistencies in GOA have been developed, they operate within predetermined contexts, lacking the ability to leverage broader evidence, especially relevant domain-specific background knowledge. This paper investigates various types of background knowledge that could improve the detection of prevalent inconsistencies in GOA. In addition, the paper proposes several approaches to integrate background knowledge into the automatic GOA inconsistency detection process.<h4>Results</h4>We have extended a previously developed GOA inconsistency dataset with several kinds of GOA-related background knowledge, including GeneRIF statements, biological concepts mentioned within evidence texts, GO hierarchy and existing GO annotations of the specific gene. We have proposed several effective approaches to integrate background knowledge as part of the automatic GOA inconsistency detection process. The proposed approaches can improve automatic detection of self-consistency and several of the most prevalent types of inconsistencies.This is the first study to explore the advantages of utilizing background knowledge and to propose a practical approach to incorporate knowledge in automatic GOA inconsistency detection. We establish a new benchmark for performance on this task. Our methods may be applicable to various tasks that involve incorporating biological background knowledge.<h4>Availability and implementation</h4>https://github.com/jiyuc/de-inconsistency.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btae246"
+  },
+  {
+    "id": "10.1093/bioinformatics/btae240",
+    "title": "Enhancing generalizability and performance in drug-target interaction identification by integrating pharmacophore and pre-trained models",
+    "authors": [
+      "Zhang Z",
+      "He X",
+      "Long D",
+      "Luo G",
+      "Chen S"
+    ],
+    "abstract": "<h4>Motivation</h4>In drug discovery, it is crucial to assess the drug-target binding affinity (DTA). Although molecular docking is widely used, computational efficiency limits its application in large-scale virtual screening. Deep learning-based methods learn virtual scoring functions from labeled datasets and can quickly predict affinity. However, there are three limitations. First, existing methods only consider the atom-bond graph or one-dimensional sequence representations of compounds, ignoring the information about functional groups (pharmacophores) with specific biological activities. Second, relying on limited labeled datasets fails to learn comprehensive embedding representations of compounds and proteins, resulting in poor generalization performance in complex scenarios. Third, existing feature fusion methods cannot adequately capture contextual interaction information.<h4>Results</h4>Therefore, we propose a novel DTA prediction method named HeteroDTA. Specifically, a multi-view compound feature extraction module is constructed to model the atom-bond graph and pharmacophore graph. The residue concat graph and protein sequence are also utilized to model protein structure and function. Moreover, to enhance the generalization capability and reduce the dependence on task-specific labeled data, pre-trained models are utilized to initialize the atomic features of the compounds and the embedding representations of the protein sequence. A context-aware nonlinear feature fusion method is also proposed to learn interaction patterns between compounds and proteins. Experimental results on public benchmark datasets show that HeteroDTA significantly outperforms existing methods. In addition, HeteroDTA shows excellent generalization performance in cold-start experiments and superiority in the representation learning ability of drug-target pairs. Finally, the effectiveness of HeteroDTA is demonstrated in a real-world drug discovery study.<h4>Availability and implementation</h4>The source code and data are available at https://github.com/daydayupzzl/HeteroDTA.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btae240"
+  },
+  {
+    "id": "10.1093/bioinformatics/btae261",
+    "title": "CODEX: COunterfactual Deep learning for the in silico EXploration of cancer cell line perturbations",
+    "authors": [
+      "Schrod S",
+      "Zacharias HU",
+      "Beißbarth T",
+      "Hauschild AC",
+      "Altenbuchinger M"
+    ],
+    "abstract": "<h4>Motivation</h4>High-throughput screens (HTS) provide a powerful tool to decipher the causal effects of chemical and genetic perturbations on cancer cell lines. Their ability to evaluate a wide spectrum of interventions, from single drugs to intricate drug combinations and CRISPR-interference, has established them as an invaluable resource for the development of novel therapeutic approaches. Nevertheless, the combinatorial complexity of potential interventions makes a comprehensive exploration intractable. Hence, prioritizing interventions for further experimental investigation becomes of utmost importance.<h4>Results</h4>We propose CODEX (COunterfactual Deep learning for the in silico EXploration of cancer cell line perturbations) as a general framework for the causal modeling of HTS data, linking perturbations to their downstream consequences. CODEX relies on a stringent causal modeling strategy based on counterfactual reasoning. As such, CODEX predicts drug-specific cellular responses, comprising cell survival and molecular alterations, and facilitates the in silico exploration of drug combinations. This is achieved for both bulk and single-cell HTS. We further show that CODEX provides a rationale to explore complex genetic modifications from CRISPR-interference in silico in single cells.<h4>Availability and implementation</h4>Our implementation of CODEX is publicly available at https://github.com/sschrod/CODEX. All data used in this article are publicly available.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btae261"
+  },
+  {
+    "id": "10.1093/bioinformatics/btae237",
+    "title": "Predicting protein functions using positive-unlabeled ranking with ontology-based priors",
+    "authors": [
+      "Zhapa-Camacho F",
+      "Tang Z",
+      "Kulmanov M",
+      "Hoehndorf R"
+    ],
+    "abstract": "Automated protein function prediction is a crucial and widely studied problem in bioinformatics. Computationally, protein function is a multilabel classification problem where only positive samples are defined and there is a large number of unlabeled annotations. Most existing methods rely on the assumption that the unlabeled set of protein function annotations are negatives, inducing the false negative issue, where potential positive samples are trained as negatives. We introduce a novel approach named PU-GO, wherein we address function prediction as a positive-unlabeled ranking problem. We apply empirical risk minimization, i.e. we minimize the classification risk of a classifier where class priors are obtained from the Gene Ontology hierarchical structure. We show that our approach is more robust than other state-of-the-art methods on similarity-based and time-based benchmark datasets.<h4>Availability and implementation</h4>Data and code are available at https://github.com/bio-ontology-research-group/PU-GO.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btae237"
+  },
+  {
+    "id": "10.1093/bioinformatics/btae258",
+    "title": "Optimal sequencing budget allocation for trajectory reconstruction of single cells",
+    "authors": [
+      "Moriel N",
+      "Memet E",
+      "Nitzan M"
+    ],
+    "abstract": "<h4>Background</h4>Charting cellular trajectories over gene expression is key to understanding dynamic cellular processes and their underlying mechanisms. While advances in single-cell RNA-sequencing technologies and computational methods have pushed forward the recovery of such trajectories, trajectory inference remains a challenge due to the noisy, sparse, and high-dimensional nature of single-cell data. This challenge can be alleviated by increasing either the number of cells sampled along the trajectory (breadth) or the sequencing depth, i.e. the number of reads captured per cell (depth). Generally, these two factors are coupled due to an inherent breadth-depth tradeoff that arises when the sequencing budget is constrained due to financial or technical limitations.<h4>Results</h4>Here we study the optimal allocation of a fixed sequencing budget to optimize the recovery of trajectory attributes. Empirical results reveal that reconstruction accuracy of internal cell structure in expression space scales with the logarithm of either the breadth or depth of sequencing. We additionally observe a power law relationship between the optimal number of sampled cells and the corresponding sequencing budget. For linear trajectories, non-monotonicity in trajectory reconstruction across the breadth-depth tradeoff can impact downstream inference, such as expression pattern analysis along the trajectory. We demonstrate these results for five single-cell RNA-sequencing datasets encompassing differentiation of embryonic stem cells, pancreatic beta cells, hepatoblast and multipotent hematopoietic cells, as well as induced reprogramming of embryonic fibroblasts into neurons. By addressing the challenges of single-cell data, our study offers insights into maximizing the efficiency of cellular trajectory analysis through strategic allocation of sequencing resources.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btae258"
+  },
+  {
+    "id": "10.1093/bioinformatics/btae234",
+    "title": "REUNION: transcription factor binding prediction and regulatory association inference from single-cell multi-omics data",
+    "authors": [
+      "Yang Y",
+      "Pe'er D"
+    ],
+    "abstract": "<h4>Motivation</h4>Profiling of gene expression and chromatin accessibility by single-cell multi-omics approaches can help to systematically decipher how transcription factors (TFs) regulate target gene expression via cis-region interactions. However, integrating information from different modalities to discover regulatory associations is challenging, in part because motif scanning approaches miss many likely TF binding sites.<h4>Results</h4>We develop REUNION, a framework for predicting genome-wide TF binding and cis-region-TF-gene \"triplet\" regulatory associations using single-cell multi-omics data. The first component of REUNION, Unify, utilizes information theory-inspired complementary score functions that incorporate TF expression, chromatin accessibility, and target gene expression to identify regulatory associations. The second component, Rediscover, takes Unify estimates as input for pseudo semi-supervised learning to predict TF binding in accessible genomic regions that may or may not include detected TF motifs. Rediscover leverages latent chromatin accessibility and sequence feature spaces of the genomic regions, without requiring chromatin immunoprecipitation data for model training. Applied to peripheral blood mononuclear cell data, REUNION outperforms alternative methods in TF binding prediction on average performance. In particular, it recovers missing region-TF associations from regions lacking detected motifs, which circumvents the reliance on motif scanning and facilitates discovery of novel associations involving potential co-binding transcriptional regulators. Newly identified region-TF associations, even in regions lacking a detected motif, improve the prediction of target gene expression in regulatory triplets, and are thus likely to genuinely participate in the regulation.<h4>Availability and implementation</h4>All source code is available at https://github.com/yangymargaret/REUNION.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btae234"
+  },
+  {
+    "id": "10.1093/bioinformatics/btae242",
+    "title": "GraphCompass: spatial metrics for differential analyses of cell organization across conditions",
+    "authors": [
+      "Ali M",
+      "Kuijs M",
+      "Hediyeh-Zadeh S",
+      "Treis T",
+      "Hrovatin K",
+      "Palla G",
+      "Schaar AC",
+      "Theis FJ"
+    ],
+    "abstract": "<h4>Summary</h4>Spatial omics technologies are increasingly leveraged to characterize how disease disrupts tissue organization and cellular niches. While multiple methods to analyze spatial variation within a sample have been published, statistical and computational approaches to compare cell spatial organization across samples or conditions are mostly lacking. We present GraphCompass, a comprehensive set of omics-adapted graph analysis methods to quantitatively evaluate and compare the spatial arrangement of cells in samples representing diverse biological conditions. GraphCompass builds upon the Squidpy spatial omics toolbox and encompasses various statistical approaches to perform cross-condition analyses at the level of individual cell types, niches, and samples. Additionally, GraphCompass provides custom visualization functions that enable effective communication of results. We demonstrate how GraphCompass can be used to address key biological questions, such as how cellular organization and tissue architecture differ across various disease states and which spatial patterns correlate with a given pathological condition. GraphCompass can be applied to various popular omics techniques, including, but not limited to, spatial proteomics (e.g. MIBI-TOF), spot-based transcriptomics (e.g. 10× Genomics Visium), and single-cell resolved transcriptomics (e.g. Stereo-seq). In this work, we showcase the capabilities of GraphCompass through its application to three different studies that may also serve as benchmark datasets for further method development. With its easy-to-use implementation, extensive documentation, and comprehensive tutorials, GraphCompass is accessible to biologists with varying levels of computational expertise. By facilitating comparative analyses of cell spatial organization, GraphCompass promises to be a valuable asset in advancing our understanding of tissue function in health and disease..",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btae242"
+  },
+  {
+    "id": "10.1093/bioinformatics/btae241",
+    "title": "Integrating patients in time series clinical transcriptomics data",
+    "authors": [
+      "Hasanaj E",
+      "Mathur S",
+      "Bar-Joseph Z"
+    ],
+    "abstract": "<h4>Motivation</h4>Analysis of time series transcriptomics data from clinical trials is challenging. Such studies usually profile very few time points from several individuals with varying response patterns and dynamics. Current methods for these datasets are mainly based on linear, global orderings using visit times which do not account for the varying response rates and subgroups within a patient cohort.<h4>Results</h4>We developed a new method that utilizes multi-commodity flow algorithms for trajectory inference in large scale clinical studies. Recovered trajectories satisfy individual-based timing restrictions while integrating data from multiple patients. Testing the method on multiple drug datasets demonstrated an improved performance compared to prior approaches suggested for this task, while identifying novel disease subtypes that correspond to heterogeneous patient response patterns.<h4>Availability and implementation</h4>The source code and instructions to download the data have been deposited on GitHub at https://github.com/euxhenh/Truffle.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btae241"
+  },
+  {
+    "id": "10.1093/bioinformatics/btae254",
+    "title": "Optimal phylogenetic reconstruction of insertion and deletion events",
+    "authors": [
+      "Tule S",
+      "Foley G",
+      "Zhao C",
+      "Forbes M",
+      "Bodén M"
+    ],
+    "abstract": "<h4>Motivation</h4>Insertions and deletions (indels) influence the genetic code in fundamentally distinct ways from substitutions, significantly impacting gene product structure and function. Despite their influence, the evolutionary history of indels is often neglected in phylogenetic tree inference and ancestral sequence reconstruction, hindering efforts to comprehend biological diversity determinants and engineer variants for medical and industrial applications.<h4>Results</h4>We frame determining the optimal history of indel events as a single Mixed-Integer Programming (MIP) problem, across all branch points in a phylogenetic tree adhering to topological constraints, and all sites implied by a given set of aligned, extant sequences. By disentangling the impact on ancestral sequences at each branch point, this approach identifies the minimal indel events that jointly explain the diversity in sequences mapped to the tips of that tree. MIP can recover alternate optimal indel histories, if available. We evaluated MIP for indel inference on a dataset comprising 15 real phylogenetic trees associated with protein families ranging from 165 to 2000 extant sequences, and on 60 synthetic trees at comparable scales of data and reflecting realistic rates of mutation. Across relevant metrics, MIP outperformed alternative parsimony-based approaches and reported the fewest indel events, on par or below their occurrence in synthetic datasets. MIP offers a rational justification for indel patterns in extant sequences; importantly, it uniquely identifies global optima on complex protein data sets without making unrealistic assumptions of independence or evolutionary underpinnings, promising a deeper understanding of molecular evolution and aiding novel protein design.<h4>Availability and implementation</h4>The implementation is available via GitHub at https://github.com/santule/indelmip.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btae254"
+  },
+  {
+    "id": "10.1093/bioinformatics/btae250",
+    "title": "Modeling metastatic progression from cross-sectional cancer genomics data",
+    "authors": [
+      "Rupp K",
+      "Lösch A",
+      "Hu YL",
+      "Nie C",
+      "Schill R",
+      "Klever M",
+      "Pfahler S",
+      "Grasedyck L",
+      "Wettig T",
+      "Beerenwinkel N",
+      "Spang R"
+    ],
+    "abstract": "<h4>Motivation</h4>Metastasis formation is a hallmark of cancer lethality. Yet, metastases are generally unobservable during their early stages of dissemination and spread to distant organs. Genomic datasets of matched primary tumors and metastases may offer insights into the underpinnings and the dynamics of metastasis formation.<h4>Results</h4>We present metMHN, a cancer progression model designed to deduce the joint progression of primary tumors and metastases using cross-sectional cancer genomics data. The model elucidates the statistical dependencies among genomic events, the formation of metastasis, and the clinical emergence of both primary tumors and their metastatic counterparts. metMHN enables the chronological reconstruction of mutational sequences and facilitates estimation of the timing of metastatic seeding. In a study of nearly 5000 lung adenocarcinomas, metMHN pinpointed TP53 and EGFR as mediators of metastasis formation. Furthermore, the study revealed that post-seeding adaptation is predominantly influenced by frequent copy number alterations.<h4>Availability and implementation</h4>All datasets and code are available on GitHub at https://github.com/cbg-ethz/metMHN.",
+    "topic": "Lung cancer; Metastasis; Markov Chains; Cancer Genomics; Cancer Progression Models; Mutual Hazard Networks",
+    "conference": "ismb",
+    "year": 2024,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btae250"
   },
   {
     "id": "10.1093/bioinformatics/btae244",

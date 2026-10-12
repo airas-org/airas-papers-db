@@ -27,16 +27,17 @@
     "paper_url": "https://doi.org/10.1145/3703595.3705881"
   },
   {
-    "id": "10.1145/3703595.3710846",
-    "title": "CRIS: The Power of Imagination in Specification and Verification (Invited Talk)",
+    "id": "10.1145/3703595.3705886",
+    "title": "Further Tackling Post Correspondence Problem and Proof Generation",
     "authors": [
-      "Chung-Kil Hur"
+      "Akihiro Omori",
+      "Yasuhiko Minamide"
     ],
-    "abstract": "Just as imaginary numbers extend real numbers and simplify certain mathematical proofs, we introduce the concept of imaginary specifications to enhance program verification. In mathematics, imaginary numbers enable expressing intermediate steps that cannot be captured using real numbers alone, offering natural proof decomposition that reduces complex proofs into simpler, more manageable steps. Similarly, our work introduces imaginary specifications in program verification through CRIS (Contextual Refinement with Imaginary Specification), our novel verification tool. CRIS with imaginary specifications provides a unified framework to inherently marry two fundamental approaches to program verification: separation logic with pre/post conditions as specifications, and program refinement with abstract programs as specifications. This unification not only enables proof simplification via proof decomposition but also enables elegant expression of hard-to-express properties, such as separation logic conditions involving IO events and logical atomicity---properties that traditionally require intricate mechanisms or are difficult to specify.",
+    "abstract": "Post Correspondence Problem (PCP) is a classic example of an undecidable problem, with various heuristic algorithms proposed to tackle its instances. In this study, we focus on solving a particular subset of instances known as PCP[3,4]. We introduce a novel algorithm that leverages regular lan- guages and automata theory to identify inductive invariants within the transition systems associated with these instances, enabling us to demonstrate the unsolvability of instances. Additionally, we manually found some inductive invariants using an interactive tool developed specifically for this pur- pose. As a result, we successfully solved all instances except for two. To ensure the correctness of our results, we gen- erated proofs for each instance that can be verified using Isabelle/HOL.",
     "topic": "",
     "conference": "cpp",
     "year": 2025,
-    "paper_url": "https://doi.org/10.1145/3703595.3710846"
+    "paper_url": "https://doi.org/10.1145/3703595.3705886"
   },
   {
     "id": "10.1145/3703595.3705875",
@@ -50,6 +51,18 @@
     "conference": "cpp",
     "year": 2025,
     "paper_url": "https://doi.org/10.1145/3703595.3705875"
+  },
+  {
+    "id": "10.1145/3703595.3710846",
+    "title": "CRIS: The Power of Imagination in Specification and Verification (Invited Talk)",
+    "authors": [
+      "Chung-Kil Hur"
+    ],
+    "abstract": "Just as imaginary numbers extend real numbers and simplify certain mathematical proofs, we introduce the concept of imaginary specifications to enhance program verification. In mathematics, imaginary numbers enable expressing intermediate steps that cannot be captured using real numbers alone, offering natural proof decomposition that reduces complex proofs into simpler, more manageable steps. Similarly, our work introduces imaginary specifications in program verification through CRIS (Contextual Refinement with Imaginary Specification), our novel verification tool. CRIS with imaginary specifications provides a unified framework to inherently marry two fundamental approaches to program verification: separation logic with pre/post conditions as specifications, and program refinement with abstract programs as specifications. This unification not only enables proof simplification via proof decomposition but also enables elegant expression of hard-to-express properties, such as separation logic conditions involving IO events and logical atomicity---properties that traditionally require intricate mechanisms or are difficult to specify.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2025,
+    "paper_url": "https://doi.org/10.1145/3703595.3710846"
   },
   {
     "id": "10.1145/3703595.3705885",
@@ -78,33 +91,6 @@
     "paper_url": "https://doi.org/10.1145/3703595.3705876"
   },
   {
-    "id": "10.1145/3703595.3705877",
-    "title": "Tactic Script Optimisation for Aesop",
-    "authors": [
-      "Jannis Limperg"
-    ],
-    "abstract": "White-box proof search tactics such as Coq's auto, Isabelle's auto and Lean's Aesop apply proof rules that often translate directly to lower-level tactics. When these search tactics find a proof, they can, at least in principle, generate a tactic script, i.e. a sequence of lower-level tactics that proves the goal. Such a script can then replace the typically much slower invocation of the search tactic, or it can be used to understand and debug the search. However, at least for Aesop, naively generated scripts are highly unidiomatic. For example, they use tactics that users would typically avoid; they apply these tactics in an unusual order; and they do not use Lean's constructs for structuring tactic scripts. To address these issues, I propose a three-stage optimisation pipeline that transforms naive scripts into scripts resembling a human-written Lean proof. The first stage replaces less idiomatic tactics with more idiomatic ones, checking that the two sequences of tactics produce the same result. The second stage permutes the tactics in the script to bring them into a natural, depth-first order, which then allows us to use Lean's structuring constructs. The third stage runs some straightforward post-processing passes.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2025,
-    "paper_url": "https://doi.org/10.1145/3703595.3705877"
-  },
-  {
-    "id": "10.1145/3703595.3705888",
-    "title": "Split Decisions: Explicit Contexts for Substructural Languages",
-    "authors": [
-      "Daniel Zackon",
-      "Chuta Sano",
-      "Alberto Momigliano",
-      "Brigitte Pientka"
-    ],
-    "abstract": "A central challenge in mechanizing the meta-theory of substructural languages is modeling contexts. Although various ad hoc approaches to this problem exist, we lack a set of good practices and a simple infrastructure that can be leveraged for mechanizing a wide range of substructural systems. In this work, we describe Contexts as Resource Vectors (CARVe), a general syntactic infrastructure for managing substructural contexts, where elements are annotated with tags from a resource algebra denoting their availability. Assumptions persist as contexts are manipulated since we model resource consumption by changing their tags. We may thus define relations between substructural contexts via simultaneous substitutions without the need to split them. Moreover, we establish a series of algebraic properties about context operations that are typically required to carry out proofs in practice. CARVe is implemented in the proof assistant Beluga. To illustrate best practices for using our infrastructure, we give a detailed reformulation of the linear sequent calculus and bidirectional linear λ-calculus in terms of CARVe’s context operations and prove their equivalence using the aforementioned algebraic properties. In addition, we apply CARVe to mechanize a diverse set of systems, from the affine λ-calculus to the session-typed process calculus CP, giving us confidence that CARVe is sufficiently general to mechanize a broad range of substructural systems.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2025,
-    "paper_url": "https://doi.org/10.1145/3703595.3705888"
-  },
-  {
     "id": "10.1145/3703595.3710845",
     "title": "Prospects for Computer Formalization of Infinite-Dimensional Category Theory (Invited Talk)",
     "authors": [
@@ -117,17 +103,22 @@
     "paper_url": "https://doi.org/10.1145/3703595.3710845"
   },
   {
-    "id": "10.1145/3703595.3705886",
-    "title": "Further Tackling Post Correspondence Problem and Proof Generation",
+    "id": "10.1145/3703595.3705878",
+    "title": "A CHERI C Memory Model for Verified Temporal Safety",
     "authors": [
-      "Akihiro Omori",
-      "Yasuhiko Minamide"
+      "Vadim Zaliva",
+      "Kayvan Memarian",
+      "Brian Campbell",
+      "Ricardo Almeida",
+      "Nathaniel Filardo",
+      "Ian Stark",
+      "Peter Sewell"
     ],
-    "abstract": "Post Correspondence Problem (PCP) is a classic example of an undecidable problem, with various heuristic algorithms proposed to tackle its instances. In this study, we focus on solving a particular subset of instances known as PCP[3,4]. We introduce a novel algorithm that leverages regular lan- guages and automata theory to identify inductive invariants within the transition systems associated with these instances, enabling us to demonstrate the unsolvability of instances. Additionally, we manually found some inductive invariants using an interactive tool developed specifically for this pur- pose. As a result, we successfully solved all instances except for two. To ensure the correctness of our results, we gen- erated proofs for each instance that can be verified using Isabelle/HOL.",
+    "abstract": "Memory safety concerns continue to be a major source of security vulnerabilities. The CHERI architecture, as instantiated in prototype CHERI-RISC-V cores, the Arm Morello system, and Microsoft's CHERIoT embedded core, provides fine-grained memory access control through unforgeable hardware capabilities. The impact of CHERI on spatial memory safety is well understood. This paper systematically examines temporal memory safety within CHERI C -- a dialect of the C programming language for CHERI -- and proposes a formal approach to defining and ensuring it. In particular: 1) we examine the impact of five existing capability revocation mechanisms on CHERI C semantics and present a specialised object memory model tailored to CHERI C; 2) we introduce a new CHERI-specific pointer provenance tracking scheme; and 3) we formally define the security guarantees provided by this memory model, supported by a Coq proof of their correctness, expressed as invariants of the memory state.",
     "topic": "",
     "conference": "cpp",
     "year": 2025,
-    "paper_url": "https://doi.org/10.1145/3703595.3705886"
+    "paper_url": "https://doi.org/10.1145/3703595.3705878"
   },
   {
     "id": "10.1145/3703595.3705883",
@@ -157,6 +148,33 @@
     "conference": "cpp",
     "year": 2025,
     "paper_url": "https://doi.org/10.1145/3703595.3705873"
+  },
+  {
+    "id": "10.1145/3703595.3705877",
+    "title": "Tactic Script Optimisation for Aesop",
+    "authors": [
+      "Jannis Limperg"
+    ],
+    "abstract": "White-box proof search tactics such as Coq's auto, Isabelle's auto and Lean's Aesop apply proof rules that often translate directly to lower-level tactics. When these search tactics find a proof, they can, at least in principle, generate a tactic script, i.e. a sequence of lower-level tactics that proves the goal. Such a script can then replace the typically much slower invocation of the search tactic, or it can be used to understand and debug the search. However, at least for Aesop, naively generated scripts are highly unidiomatic. For example, they use tactics that users would typically avoid; they apply these tactics in an unusual order; and they do not use Lean's constructs for structuring tactic scripts. To address these issues, I propose a three-stage optimisation pipeline that transforms naive scripts into scripts resembling a human-written Lean proof. The first stage replaces less idiomatic tactics with more idiomatic ones, checking that the two sequences of tactics produce the same result. The second stage permutes the tactics in the script to bring them into a natural, depth-first order, which then allows us to use Lean's structuring constructs. The third stage runs some straightforward post-processing passes.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2025,
+    "paper_url": "https://doi.org/10.1145/3703595.3705877"
+  },
+  {
+    "id": "10.1145/3703595.3705888",
+    "title": "Split Decisions: Explicit Contexts for Substructural Languages",
+    "authors": [
+      "Daniel Zackon",
+      "Chuta Sano",
+      "Alberto Momigliano",
+      "Brigitte Pientka"
+    ],
+    "abstract": "A central challenge in mechanizing the meta-theory of substructural languages is modeling contexts. Although various ad hoc approaches to this problem exist, we lack a set of good practices and a simple infrastructure that can be leveraged for mechanizing a wide range of substructural systems. In this work, we describe Contexts as Resource Vectors (CARVe), a general syntactic infrastructure for managing substructural contexts, where elements are annotated with tags from a resource algebra denoting their availability. Assumptions persist as contexts are manipulated since we model resource consumption by changing their tags. We may thus define relations between substructural contexts via simultaneous substitutions without the need to split them. Moreover, we establish a series of algebraic properties about context operations that are typically required to carry out proofs in practice. CARVe is implemented in the proof assistant Beluga. To illustrate best practices for using our infrastructure, we give a detailed reformulation of the linear sequent calculus and bidirectional linear λ-calculus in terms of CARVe’s context operations and prove their equivalence using the aforementioned algebraic properties. In addition, we apply CARVe to mechanize a diverse set of systems, from the affine λ-calculus to the session-typed process calculus CP, giving us confidence that CARVe is sufficiently general to mechanize a broad range of substructural systems.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2025,
+    "paper_url": "https://doi.org/10.1145/3703595.3705888"
   },
   {
     "id": "10.1145/3703595.3705887",
@@ -199,24 +217,6 @@
     "conference": "cpp",
     "year": 2025,
     "paper_url": "https://doi.org/10.1145/3703595.3705871"
-  },
-  {
-    "id": "10.1145/3703595.3705878",
-    "title": "A CHERI C Memory Model for Verified Temporal Safety",
-    "authors": [
-      "Vadim Zaliva",
-      "Kayvan Memarian",
-      "Brian Campbell",
-      "Ricardo Almeida",
-      "Nathaniel Filardo",
-      "Ian Stark",
-      "Peter Sewell"
-    ],
-    "abstract": "Memory safety concerns continue to be a major source of security vulnerabilities. The CHERI architecture, as instantiated in prototype CHERI-RISC-V cores, the Arm Morello system, and Microsoft's CHERIoT embedded core, provides fine-grained memory access control through unforgeable hardware capabilities. The impact of CHERI on spatial memory safety is well understood. This paper systematically examines temporal memory safety within CHERI C -- a dialect of the C programming language for CHERI -- and proposes a formal approach to defining and ensuring it. In particular: 1) we examine the impact of five existing capability revocation mechanisms on CHERI C semantics and present a specialised object memory model tailored to CHERI C; 2) we introduce a new CHERI-specific pointer provenance tracking scheme; and 3) we formally define the security guarantees provided by this memory model, supported by a Coq proof of their correctness, expressed as invariants of the memory state.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2025,
-    "paper_url": "https://doi.org/10.1145/3703595.3705878"
   },
   {
     "id": "10.1145/3703595.3705882",
