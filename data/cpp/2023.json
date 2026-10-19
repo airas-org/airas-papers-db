@@ -1,5 +1,18 @@
 [
   {
+    "id": "10.1145/3573105.3575671",
+    "title": "Aesop: White-Box Best-First Proof Search for Lean",
+    "authors": [
+      "Jannis Limperg",
+      "Asta Halkjær From"
+    ],
+    "abstract": "We present Aesop, a proof search tactic for the Lean 4 interactive theorem prover. Aesop performs a tree-based search over a user-specified set of proof rules. It supports safe and unsafe rules and uses a best-first search strategy with customisable prioritisation. Aesop also allows users to register custom normalisation rules and integrates Lean's simplifier to support equational reasoning. Many details of Aesop's search procedure are designed to make it a white-box proof automation tactic, meaning that users should be able to easily predict how their rules will be applied, and thus how powerful and fast their Aesop invocations will be. Since we use a best-first search strategy, it is not obvious how to handle metavariables which appear in multiple goals. The most common strategy for dealing with metavariables relies on backtracking and is therefore not suitable for best-first search. We give an algorithm which addresses this issue. The algorithm works with any search strategy, is independent of the underlying logic and makes few assumptions about how rules interact with metavariables. We conjecture that with a fair search strategy, the algorithm is as complete as the given set of rules allows.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1145/3573105.3575671"
+  },
+  {
     "id": "10.1145/3573105.3575685",
     "title": "Formalising Decentralised Exchanges in Coq",
     "authors": [
@@ -29,17 +42,42 @@
     "paper_url": "https://doi.org/10.1145/3573105.3575682"
   },
   {
-    "id": "10.1145/3573105.3575671",
-    "title": "Aesop: White-Box Best-First Proof Search for Lean",
+    "id": "10.1145/3573105.3575678",
+    "title": "A Formal Disproof of Hirsch Conjecture",
     "authors": [
-      "Jannis Limperg",
-      "Asta Halkjær From"
+      "Xavier Allamigeon",
+      "Quentin Canu",
+      "Pierre-Yves Strub"
     ],
-    "abstract": "We present Aesop, a proof search tactic for the Lean 4 interactive theorem prover. Aesop performs a tree-based search over a user-specified set of proof rules. It supports safe and unsafe rules and uses a best-first search strategy with customisable prioritisation. Aesop also allows users to register custom normalisation rules and integrates Lean's simplifier to support equational reasoning. Many details of Aesop's search procedure are designed to make it a white-box proof automation tactic, meaning that users should be able to easily predict how their rules will be applied, and thus how powerful and fast their Aesop invocations will be. Since we use a best-first search strategy, it is not obvious how to handle metavariables which appear in multiple goals. The most common strategy for dealing with metavariables relies on backtracking and is therefore not suitable for best-first search. We give an algorithm which addresses this issue. The algorithm works with any search strategy, is independent of the underlying logic and makes few assumptions about how rules interact with metavariables. We conjecture that with a fair search strategy, the algorithm is as complete as the given set of rules allows.",
+    "abstract": "The purpose of this paper is the formal verification of a counterexample of Santos et al. to the so-called Hirsch Conjecture on the diameter of polytopes (bounded convex polyhedra). In contrast with the pen-and-paper proof, our approach is entirely computational: we have implemented in Coq and proved correct an algorithm that explicitly computes, within the proof assistant, vertex-edge graphs of polytopes as well as their diameter. The originality of this certificate-based algorithm is to achieve a tradeoff between simplicity and efficiency. Simplicity is crucial in obtaining the proof of correctness of the algorithm. This proof splits into the correctness of an abstract algorithm stated over proof-oriented data types and the correspondence with a low-level implementation over computation-oriented data types. A special effort has been made to reduce the algorithm to a small sequence of elementary operations (e.g. matrix multiplications, basic routines on graphs), in order to make the derivation of the correctness of the low-level implementation more transparent. Efficiency allows us to scale up to polytopes with a challenging combinatorics. For instance, we formally check the two counterexamples to Hirsch conjecture due to Matschke, Santos and Weibel, respectively 20- and 23-dimensional polytopes with 36425 and 73224 vertices involving rational coefficients with up to 20 digits. We also illustrate the performance of the method by computing the list of vertices or the diameter of well-known classes of polytopes, such as (polars of) cyclic polytopes involved in McMullen's Upper Bound Theorem.",
     "topic": "",
     "conference": "cpp",
     "year": 2023,
-    "paper_url": "https://doi.org/10.1145/3573105.3575671"
+    "paper_url": "https://doi.org/10.1145/3573105.3575678"
+  },
+  {
+    "id": "10.1145/3573105.3579108",
+    "title": "Improved Assistance for Interactive Proof (Keynote)",
+    "authors": [
+      "Cezary Kaliszyk"
+    ],
+    "abstract": "Machine learning techniques have been included in various theorem proving tools for approximately two decades. Some of the learning tasks are well understood and tools actually help practitioners, while other tasks are still in their early developmental stages. In this talk I will try to classify the various learning tasks and discuss the learning techniques and tools that are aimed at enhancing the efficiency of interactive theorem provers. I will discuss the most successful techniques aimed at improving the power of automation, that use Monte-Carlo simulations guided by reinforcement learning from previous proof attempts. I will also consider the present and the future challenges including more efficient interaction with interactive theorem provers.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1145/3573105.3579108"
+  },
+  {
+    "id": "10.1145/3573105.3575689",
+    "title": "Formalising Sharkovsky’s Theorem (Proof Pearl)",
+    "authors": [
+      "Bhavik Mehta"
+    ],
+    "abstract": "Sharkovsky's theorem is a celebrated result by Ukrainian mathematician Oleksandr Sharkovsky in the theory of discrete dynamical systems, including the fact that if a continuous function of reals has a point of period 3, it must have points of any period. We formalise the proof in the Lean theorem prover, giving a characterisation of the possible sets of periods a continuous function on the real numbers may have. We further include the converse of the theorem, showing that the aforementioned sets are achievable under mild conditions.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1145/3573105.3575689"
   },
   {
     "id": "10.1145/3573105.3575672",
@@ -68,86 +106,6 @@
     "conference": "cpp",
     "year": 2023,
     "paper_url": "https://doi.org/10.1145/3573105.3575683"
-  },
-  {
-    "id": "10.1145/3573105.3579108",
-    "title": "Improved Assistance for Interactive Proof (Keynote)",
-    "authors": [
-      "Cezary Kaliszyk"
-    ],
-    "abstract": "Machine learning techniques have been included in various theorem proving tools for approximately two decades. Some of the learning tasks are well understood and tools actually help practitioners, while other tasks are still in their early developmental stages. In this talk I will try to classify the various learning tasks and discuss the learning techniques and tools that are aimed at enhancing the efficiency of interactive theorem provers. I will discuss the most successful techniques aimed at improving the power of automation, that use Monte-Carlo simulations guided by reinforcement learning from previous proof attempts. I will also consider the present and the future challenges including more efficient interaction with interactive theorem provers.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1145/3573105.3579108"
-  },
-  {
-    "id": "10.1145/3573105.3575689",
-    "title": "Formalising Sharkovsky’s Theorem (Proof Pearl)",
-    "authors": [
-      "Bhavik Mehta"
-    ],
-    "abstract": "Sharkovsky's theorem is a celebrated result by Ukrainian mathematician Oleksandr Sharkovsky in the theory of discrete dynamical systems, including the fact that if a continuous function of reals has a point of period 3, it must have points of any period. We formalise the proof in the Lean theorem prover, giving a characterisation of the possible sets of periods a continuous function on the real numbers may have. We further include the converse of the theorem, showing that the aforementioned sets are achievable under mild conditions.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1145/3573105.3575689"
-  },
-  {
-    "id": "10.1145/3573105.3579107",
-    "title": "CompCert: A Journey through the Landscape of Mechanized Semantics for Verified Compilation (Keynote)",
-    "authors": [
-      "Sandrine Blazy"
-    ],
-    "abstract": "A formally verified compiler ensures that compilation does not introduce any bugs in programs. In the CompCert C compiler, this correctness property requires reasoning about realistic languages by using a semantic framework. This invited talk explains how this framework has been effectively used to turn CompCert from a prototype in a lab into a real-world compiler.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1145/3573105.3579107"
-  },
-  {
-    "id": "10.1145/3573105.3575688",
-    "title": "Formalising the h-Principle and Sphere Eversion",
-    "authors": [
-      "Floris van Doorn",
-      "Patrick Massot",
-      "Oliver Nash"
-    ],
-    "abstract": "In differential topology and geometry, the h-principle is a property enjoyed by certain construction problems. Roughly speaking, it states that the only obstructions to the existence of a solution come from algebraic topology. We describe a formalisation in Lean of the local h-principle for first-order open and ample partial differential relations. This is a significant result in differential topology, originally proven by Gromov in 1973 as part of his sweeping effort which greatly generalised many previous flexibility results in geometry. In particular it reproves Smale’s celebrated sphere eversion theorem, a visually striking and counter-intuitive construction. Our formalisation uses Theillière’s implementation of convex integration from 2018. This paper reports on the first part of the sphere eversion project formalising the global version of the h-principle for open and ample first order differential relations, for maps between smooth manifolds. The local version for vector spaces described in this paper is the main ingredient of this proof, and is sufficient to prove the titular corollary of the project. From a broader perspective, the goal of this project is to show that one can formalise advanced mathematics with a strongly geometric flavour and not only algebraically-flavoured mathematics.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1145/3573105.3575688"
-  },
-  {
-    "id": "10.1145/3573105.3575674",
-    "title": "Compiling Higher-Order Specifications to SMT Solvers: How to Deal with Rejection Constructively",
-    "authors": [
-      "Matthew L. Daggitt",
-      "Robert Atkey",
-      "Wen Kokke",
-      "Ekaterina Komendantskaya",
-      "Luca Arnaboldi"
-    ],
-    "abstract": "Modern verification tools frequently rely on compiling high-level specifications to SMT queries. However, the high-level specification language is usually more expressive than the available solvers and therefore some syntactically valid specifications must be rejected by the tool. In such cases, the challenge is to provide a comprehensible error message to the user that relates the original syntactic form of the specification to the semantic reason it has been rejected. In this paper we demonstrate how this analysis may be performed by combining a standard unification-based type-checker with type classes and automatic generalisation. Concretely, type-checking is used as a constructive procedure for under-approximating whether a given specification lies in the subset of problems supported by the solver. Any resulting proof of rejection can be transformed into a detailed explanation to the user. The approach is compositional and does not require the user to add extra typing annotations to their program. We subsequently describe how the type system may be leveraged to provide a sound and complete compilation procedure from suitably typed expressions to SMT queries, which we have verified in Agda.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1145/3573105.3575674"
-  },
-  {
-    "id": "10.1145/3573105.3575678",
-    "title": "A Formal Disproof of Hirsch Conjecture",
-    "authors": [
-      "Xavier Allamigeon",
-      "Quentin Canu",
-      "Pierre-Yves Strub"
-    ],
-    "abstract": "The purpose of this paper is the formal verification of a counterexample of Santos et al. to the so-called Hirsch Conjecture on the diameter of polytopes (bounded convex polyhedra). In contrast with the pen-and-paper proof, our approach is entirely computational: we have implemented in Coq and proved correct an algorithm that explicitly computes, within the proof assistant, vertex-edge graphs of polytopes as well as their diameter. The originality of this certificate-based algorithm is to achieve a tradeoff between simplicity and efficiency. Simplicity is crucial in obtaining the proof of correctness of the algorithm. This proof splits into the correctness of an abstract algorithm stated over proof-oriented data types and the correspondence with a low-level implementation over computation-oriented data types. A special effort has been made to reduce the algorithm to a small sequence of elementary operations (e.g. matrix multiplications, basic routines on graphs), in order to make the derivation of the correctness of the low-level implementation more transparent. Efficiency allows us to scale up to polytopes with a challenging combinatorics. For instance, we formally check the two counterexamples to Hirsch conjecture due to Matschke, Santos and Weibel, respectively 20- and 23-dimensional polytopes with 36425 and 73224 vertices involving rational coefficients with up to 20 digits. We also illustrate the performance of the method by computing the list of vertices or the diameter of well-known classes of polytopes, such as (polars of) cyclic polytopes involved in McMullen's Upper Bound Theorem.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1145/3573105.3575678"
   },
   {
     "id": "10.1145/3573105.3575668",
@@ -181,17 +139,30 @@
     "paper_url": "https://doi.org/10.1145/3573105.3575676"
   },
   {
-    "id": "10.1145/3573105.3575675",
-    "title": "A Formalization of Doob’s Martingale Convergence Theorems in mathlib",
+    "id": "10.1145/3573105.3579107",
+    "title": "CompCert: A Journey through the Landscape of Mechanized Semantics for Verified Compilation (Keynote)",
     "authors": [
-      "Kexing Ying",
-      "Rémy Degenne"
+      "Sandrine Blazy"
     ],
-    "abstract": "We present the formalization of Doob’s martingale convergence theorems in the mathlib library for the Lean theorem prover. These theorems give conditions under which (sub)martingales converge, almost everywhere or in L1. In order to formalize those results, we build a definition of the conditional expectation in Banach spaces and develop the theory of stochastic processes, stopping times and martingales. As an application of the convergence theorems, we also present the formalization of Lévy’s generalized Borel-Cantelli lemma. This work on martingale theory is one of the first developments of probability theory in mathlib, and it builds upon diverse parts of that library such as topology, analysis and most importantly measure theory.",
+    "abstract": "A formally verified compiler ensures that compilation does not introduce any bugs in programs. In the CompCert C compiler, this correctness property requires reasoning about realistic languages by using a semantic framework. This invited talk explains how this framework has been effectively used to turn CompCert from a prototype in a lab into a real-world compiler.",
     "topic": "",
     "conference": "cpp",
     "year": 2023,
-    "paper_url": "https://doi.org/10.1145/3573105.3575675"
+    "paper_url": "https://doi.org/10.1145/3573105.3579107"
+  },
+  {
+    "id": "10.1145/3573105.3575688",
+    "title": "Formalising the h-Principle and Sphere Eversion",
+    "authors": [
+      "Floris van Doorn",
+      "Patrick Massot",
+      "Oliver Nash"
+    ],
+    "abstract": "In differential topology and geometry, the h-principle is a property enjoyed by certain construction problems. Roughly speaking, it states that the only obstructions to the existence of a solution come from algebraic topology. We describe a formalisation in Lean of the local h-principle for first-order open and ample partial differential relations. This is a significant result in differential topology, originally proven by Gromov in 1973 as part of his sweeping effort which greatly generalised many previous flexibility results in geometry. In particular it reproves Smale’s celebrated sphere eversion theorem, a visually striking and counter-intuitive construction. Our formalisation uses Theillière’s implementation of convex integration from 2018. This paper reports on the first part of the sphere eversion project formalising the global version of the h-principle for open and ample first order differential relations, for maps between smooth manifolds. The local version for vector spaces described in this paper is the main ingredient of this proof, and is sufficient to prove the titular corollary of the project. From a broader perspective, the goal of this project is to show that one can formalise advanced mathematics with a strongly geometric flavour and not only algebraically-flavoured mathematics.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1145/3573105.3575688"
   },
   {
     "id": "10.1145/3573105.3575687",
@@ -224,6 +195,35 @@
     "conference": "cpp",
     "year": 2023,
     "paper_url": "https://doi.org/10.1145/3573105.3575667"
+  },
+  {
+    "id": "10.1145/3573105.3575674",
+    "title": "Compiling Higher-Order Specifications to SMT Solvers: How to Deal with Rejection Constructively",
+    "authors": [
+      "Matthew L. Daggitt",
+      "Robert Atkey",
+      "Wen Kokke",
+      "Ekaterina Komendantskaya",
+      "Luca Arnaboldi"
+    ],
+    "abstract": "Modern verification tools frequently rely on compiling high-level specifications to SMT queries. However, the high-level specification language is usually more expressive than the available solvers and therefore some syntactically valid specifications must be rejected by the tool. In such cases, the challenge is to provide a comprehensible error message to the user that relates the original syntactic form of the specification to the semantic reason it has been rejected. In this paper we demonstrate how this analysis may be performed by combining a standard unification-based type-checker with type classes and automatic generalisation. Concretely, type-checking is used as a constructive procedure for under-approximating whether a given specification lies in the subset of problems supported by the solver. Any resulting proof of rejection can be transformed into a detailed explanation to the user. The approach is compositional and does not require the user to add extra typing annotations to their program. We subsequently describe how the type system may be leveraged to provide a sound and complete compilation procedure from suitably typed expressions to SMT queries, which we have verified in Agda.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1145/3573105.3575674"
+  },
+  {
+    "id": "10.1145/3573105.3575675",
+    "title": "A Formalization of Doob’s Martingale Convergence Theorems in mathlib",
+    "authors": [
+      "Kexing Ying",
+      "Rémy Degenne"
+    ],
+    "abstract": "We present the formalization of Doob’s martingale convergence theorems in the mathlib library for the Lean theorem prover. These theorems give conditions under which (sub)martingales converge, almost everywhere or in L1. In order to formalize those results, we build a definition of the conditional expectation in Banach spaces and develop the theory of stochastic processes, stopping times and martingales. As an application of the convergence theorems, we also present the formalization of Lévy’s generalized Borel-Cantelli lemma. This work on martingale theory is one of the first developments of probability theory in mathlib, and it builds upon diverse parts of that library such as topology, analysis and most importantly measure theory.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1145/3573105.3575675"
   },
   {
     "id": "10.1145/3573105.3575681",
@@ -303,6 +303,18 @@
     "paper_url": "https://doi.org/10.1145/3573105.3575690"
   },
   {
+    "id": "10.1145/3573105.3575669",
+    "title": "A Formalized Reduction of Keller’s Conjecture",
+    "authors": [
+      "Joshua Clune"
+    ],
+    "abstract": "Keller’s conjecture in d dimensions states that there are no faceshare-free tilings of d-dimensional space by translates of a d-dimensional cube. In 2020, Brakensiek et al. resolved this 90-year-old conjecture by proving that the largest number of dimensions for which no faceshare-free tilings exist is 7. This result, as well as many others pertaining to Keller’s conjecture, critically relies on a reduction from Keller’s original conjecture to a statement about cliques in generalized Keller graphs. In this paper, we present a formalization of this reduction in the Lean 3 theorem prover. Additionally, we combine this formalized reduction with the verification of a large clique in the Keller graph G8 to obtain the first verified end-to-end proof that Keller’s conjecture is false in 8 dimensions.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1145/3573105.3575669"
+  },
+  {
     "id": "10.1145/3573105.3575679",
     "title": "Encoding Dependently-Typed Constructions into Simple Type Theory",
     "authors": [
@@ -328,18 +340,6 @@
     "conference": "cpp",
     "year": 2023,
     "paper_url": "https://doi.org/10.1145/3573105.3575680"
-  },
-  {
-    "id": "10.1145/3573105.3575669",
-    "title": "A Formalized Reduction of Keller’s Conjecture",
-    "authors": [
-      "Joshua Clune"
-    ],
-    "abstract": "Keller’s conjecture in d dimensions states that there are no faceshare-free tilings of d-dimensional space by translates of a d-dimensional cube. In 2020, Brakensiek et al. resolved this 90-year-old conjecture by proving that the largest number of dimensions for which no faceshare-free tilings exist is 7. This result, as well as many others pertaining to Keller’s conjecture, critically relies on a reduction from Keller’s original conjecture to a statement about cliques in generalized Keller graphs. In this paper, we present a formalization of this reduction in the Lean 3 theorem prover. Additionally, we combine this formalized reduction with the verification of a large clique in the Keller graph G8 to obtain the first verified end-to-end proof that Keller’s conjecture is false in 8 dimensions.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1145/3573105.3575669"
   },
   {
     "id": "10.1145/3573105.3575673",

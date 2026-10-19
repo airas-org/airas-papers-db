@@ -16,6 +16,35 @@
     "paper_url": "https://doi.org/10.1145/3779031.3779104"
   },
   {
+    "id": "10.1145/3779031.3779101",
+    "title": "Certifying the Decidability of the Word Problem in Monoids at Large",
+    "authors": [
+      "Reinis Cirpons",
+      "Florent Hivert",
+      "Assia Mahboubi",
+      "Guillaume Melquiond",
+      "James D. Mitchell",
+      "Finn Smith"
+    ],
+    "abstract": "While the word problem for monoids is undecidable in general, having a decision procedure for some finitely presented monoid of interest has numerous applications. This paper presents a toolbox for the Rocq proof assistant that can be used to verify the decidability of the word problem for a given monoid and, in some cases, to produce the corresponding decision procedure. As this verification can be computationally intensive, the toolbox heavily relies on proofs by reflection guided by an external oracle. This approach has been successfully used on several large presentations from the literature, as well as on a database of one million 1-relation monoids. The huge size of this database forced some unusual considerations onto the Rocq formalization, so that the formal proofs could be checked in a reasonable amount of time.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1145/3779031.3779101"
+  },
+  {
+    "id": "10.1145/3779031.3779097",
+    "title": "Computing Solutions for Systems of Multivariate Ordinary Differential Equations in Rocq",
+    "authors": [
+      "Holger Thies"
+    ],
+    "abstract": "We formalize a solver for initial value problems for systems of multivariate analytic ordinary differential equations in the sense of constructive/computable analysis, using the Rocq proof assistant. The construction follows the classical proof of the Cauchy-Kovalevskaya theorem, computing the Taylor series expansion of the solution by iteratively deriving its coefficients. We prove that the computed Taylor series converges and provide explicit bounds on the truncation error, ensuring the error can be made arbitrarily small. Instead of relying on a concrete implementation of constructive reals, we develop an abstract framework using type classes and setoids, allowing the formalization to remain flexible and compatible with different implementations. Additionally, we extend the formalization to a more efficient variant based on interval arithmetic and illustrate its practical use with several examples.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1145/3779031.3779097"
+  },
+  {
     "id": "10.1145/3779031.3779100",
     "title": "Cylindrical Algebraic Decomposition in Coq/Rocq",
     "authors": [
@@ -62,62 +91,17 @@
     "paper_url": "https://doi.org/10.1145/3779031.3779088"
   },
   {
-    "id": "10.1145/3779031.3779101",
-    "title": "Certifying the Decidability of the Word Problem in Monoids at Large",
+    "id": "10.1145/3779031.3779094",
+    "title": "Certified Symbolic Finite Transducers: Formalization and Applications to String Analysis",
     "authors": [
-      "Reinis Cirpons",
-      "Florent Hivert",
-      "Assia Mahboubi",
-      "Guillaume Melquiond",
-      "James D. Mitchell",
-      "Finn Smith"
+      "Shuanglong Kan",
+      "Anthony W. Lin"
     ],
-    "abstract": "While the word problem for monoids is undecidable in general, having a decision procedure for some finitely presented monoid of interest has numerous applications. This paper presents a toolbox for the Rocq proof assistant that can be used to verify the decidability of the word problem for a given monoid and, in some cases, to produce the corresponding decision procedure. As this verification can be computationally intensive, the toolbox heavily relies on proofs by reflection guided by an external oracle. This approach has been successfully used on several large presentations from the literature, as well as on a database of one million 1-relation monoids. The huge size of this database forced some unusual considerations onto the Rocq formalization, so that the formal proofs could be checked in a reasonable amount of time.",
+    "abstract": "Finite Transducers (FTs) extend the capabilities of Finite Au- tomata (FAs) by enabling the transformation of input strings into output strings. In many practical applications — includ- ing program analysis, string constraint solving, and analysis of security-critical sanitizers — Symbolic FTs (SFTs) and Sym- bolic FAs (SFAs) are used instead of the explicitly represented models. To circumvent to the notorious state-space explosion problem caused by an extremely large alphabet size (e.g. Unicode), SFTs and SFAs allow the representation of the alphabet as an effective boolean algebra including finite unions of intervals, as well as SMT-Algebras. The security-critical nature of many of these applications demands trustworthy implementations of such systems. To this end, we present the first formalization of SFTs and their most important algorithms in Isabelle/HOL. To evaluate the effectiveness of our formalization, we apply the formalized SFTs to two applications: (1) sanitizers for web applications used for preventing XSS attacks, and (2) string solving, which increasingly employs intricate string replacement operations. Our experimental results demonstrate that our methods are competitive with the existing unverified implementations.",
     "topic": "",
     "conference": "cpp",
     "year": 2026,
-    "paper_url": "https://doi.org/10.1145/3779031.3779101"
-  },
-  {
-    "id": "10.1145/3779031.3779097",
-    "title": "Computing Solutions for Systems of Multivariate Ordinary Differential Equations in Rocq",
-    "authors": [
-      "Holger Thies"
-    ],
-    "abstract": "We formalize a solver for initial value problems for systems of multivariate analytic ordinary differential equations in the sense of constructive/computable analysis, using the Rocq proof assistant. The construction follows the classical proof of the Cauchy-Kovalevskaya theorem, computing the Taylor series expansion of the solution by iteratively deriving its coefficients. We prove that the computed Taylor series converges and provide explicit bounds on the truncation error, ensuring the error can be made arbitrarily small. Instead of relying on a concrete implementation of constructive reals, we develop an abstract framework using type classes and setoids, allowing the formalization to remain flexible and compatible with different implementations. Additionally, we extend the formalization to a more efficient variant based on interval arithmetic and illustrate its practical use with several examples.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2026,
-    "paper_url": "https://doi.org/10.1145/3779031.3779097"
-  },
-  {
-    "id": "10.1145/3779031.3779106",
-    "title": "Towards Composable Proofs of Cache Coherence Protocols",
-    "authors": [
-      "Martina Camaioni",
-      "Yann Herklotz",
-      "Tz-Ching Yu",
-      "Thomas Bourgeat"
-    ],
-    "abstract": "Verifying cache coherence protocols is a notoriously difficult problem. At the intersection between distributed protocol and computer architecture, it has long served as a premier target for formal methods. Current verification approaches hinge on the challenging discovery of large global inductive invariants. This paper introduces an alternative proof strategy that tames the complexity through two main contributions: protocol decomposition and a framework of local invariants. We prove the correctness of the standard MSI protocol compositionally by independently verifying the simpler MI and SI subprotocols and proving MSI behaves as their combination. This decomposition revealed a useful insight: the invariants necessary in these proofs can be established using a small set of simple local invariants: invariants between a single cache and the parent and memory, eliminating complex global reasoning across children caches. We demonstrate how our approach reduces the number of required invariants from several dozens to hundreds in prior work to a small, structured and manageable set, simplifying the proof of correctness. The entire development is formalized in Lean 4.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2026,
-    "paper_url": "https://doi.org/10.1145/3779031.3779106"
-  },
-  {
-    "id": "10.1145/3779031.3779086",
-    "title": "Using Ghost Ownership to Verify Union-Find and Persistent Arrays in Rust",
-    "authors": [
-      "Arnaud Golfouse",
-      "Armaël Guéneau",
-      "Jacques-Henri Jourdan"
-    ],
-    "abstract": "The type system of Rust enforces the “shared xor mutable” principle, which forbids mutation of shared memory. This principle eases verification in Rust, but certain programs require circumventing it with the mechanism of interior mutability. Thus, supporting interior mutability in a deductive verification tool is difficult. The Verus tool demonstrated the use of ghost resources to that end. So far, this mechanism has only been applied to Verus in order to verify primarily system code. We extend the deductive verification tool Creusot with support for linear ghost resources. We show how Creusot’s full support for mutable borrows enables better specifications for primitives of linear ghost code. We apply this methodology to the verification of two data structures using sharing and mutation: union-find and persistent arrays.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2026,
-    "paper_url": "https://doi.org/10.1145/3779031.3779086"
+    "paper_url": "https://doi.org/10.1145/3779031.3779094"
   },
   {
     "id": "10.1145/3779031.3779109",
@@ -163,17 +147,33 @@
     "paper_url": "https://doi.org/10.1145/3779031.3779090"
   },
   {
-    "id": "10.1145/3779031.3779094",
-    "title": "Certified Symbolic Finite Transducers: Formalization and Applications to String Analysis",
+    "id": "10.1145/3779031.3779106",
+    "title": "Towards Composable Proofs of Cache Coherence Protocols",
     "authors": [
-      "Shuanglong Kan",
-      "Anthony W. Lin"
+      "Martina Camaioni",
+      "Yann Herklotz",
+      "Tz-Ching Yu",
+      "Thomas Bourgeat"
     ],
-    "abstract": "Finite Transducers (FTs) extend the capabilities of Finite Au- tomata (FAs) by enabling the transformation of input strings into output strings. In many practical applications — includ- ing program analysis, string constraint solving, and analysis of security-critical sanitizers — Symbolic FTs (SFTs) and Sym- bolic FAs (SFAs) are used instead of the explicitly represented models. To circumvent to the notorious state-space explosion problem caused by an extremely large alphabet size (e.g. Unicode), SFTs and SFAs allow the representation of the alphabet as an effective boolean algebra including finite unions of intervals, as well as SMT-Algebras. The security-critical nature of many of these applications demands trustworthy implementations of such systems. To this end, we present the first formalization of SFTs and their most important algorithms in Isabelle/HOL. To evaluate the effectiveness of our formalization, we apply the formalized SFTs to two applications: (1) sanitizers for web applications used for preventing XSS attacks, and (2) string solving, which increasingly employs intricate string replacement operations. Our experimental results demonstrate that our methods are competitive with the existing unverified implementations.",
+    "abstract": "Verifying cache coherence protocols is a notoriously difficult problem. At the intersection between distributed protocol and computer architecture, it has long served as a premier target for formal methods. Current verification approaches hinge on the challenging discovery of large global inductive invariants. This paper introduces an alternative proof strategy that tames the complexity through two main contributions: protocol decomposition and a framework of local invariants. We prove the correctness of the standard MSI protocol compositionally by independently verifying the simpler MI and SI subprotocols and proving MSI behaves as their combination. This decomposition revealed a useful insight: the invariants necessary in these proofs can be established using a small set of simple local invariants: invariants between a single cache and the parent and memory, eliminating complex global reasoning across children caches. We demonstrate how our approach reduces the number of required invariants from several dozens to hundreds in prior work to a small, structured and manageable set, simplifying the proof of correctness. The entire development is formalized in Lean 4.",
     "topic": "",
     "conference": "cpp",
     "year": 2026,
-    "paper_url": "https://doi.org/10.1145/3779031.3779094"
+    "paper_url": "https://doi.org/10.1145/3779031.3779106"
+  },
+  {
+    "id": "10.1145/3779031.3779086",
+    "title": "Using Ghost Ownership to Verify Union-Find and Persistent Arrays in Rust",
+    "authors": [
+      "Arnaud Golfouse",
+      "Armaël Guéneau",
+      "Jacques-Henri Jourdan"
+    ],
+    "abstract": "The type system of Rust enforces the “shared xor mutable” principle, which forbids mutation of shared memory. This principle eases verification in Rust, but certain programs require circumventing it with the mechanism of interior mutability. Thus, supporting interior mutability in a deductive verification tool is difficult. The Verus tool demonstrated the use of ghost resources to that end. So far, this mechanism has only been applied to Verus in order to verify primarily system code. We extend the deductive verification tool Creusot with support for linear ghost resources. We show how Creusot’s full support for mutable borrows enables better specifications for primitives of linear ghost code. We apply this methodology to the verification of two data structures using sharing and mutation: union-find and persistent arrays.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1145/3779031.3779086"
   },
   {
     "id": "10.1145/3779031.3779087",
@@ -285,6 +285,20 @@
     "paper_url": "https://doi.org/10.1145/3779031.3779096"
   },
   {
+    "id": "10.1145/3779031.3779092",
+    "title": "Verified VCG and Verified Compiler for Dafny",
+    "authors": [
+      "Daniel Nezamabadi",
+      "Magnus O. Myreen",
+      "Yong Kiam Tan"
+    ],
+    "abstract": "Dafny is a verification-aware programming language that comes with a compiler and static program verifier. However, neither the compiler nor the verifier is proved correct; in fact, soundness bugs have been found in both tools. This paper shows that the aforementioned Dafny tools can be developed with foundational correctness guarantees. We present a functional big-step semantics for an imperative subset of Dafny and, based on this semantics, a verified verification condition generator (VCG) and a verified compiler for Dafny. The subset of Dafny we have formalized includes mutually recursive method calls, while loops, and arrays---these language features are significant enough to cover challenging examples such as McCarthy's 91 function and array-based programs that are used when teaching Dafny. The verified VCG allows one to prove functional correctness of annotated Dafny programs, while the verified compiler can be used to compile verified Dafny programs to CakeML programs. From there, one can obtain executable machine code via the (already verified) CakeML compiler, all while provably maintaining the functional correctness guarantees that were proved for the source-level Dafny programs. Our work has been mechanized in the HOL4 theorem prover.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1145/3779031.3779092"
+  },
+  {
     "id": "10.1145/3779031.3779108",
     "title": "Formalizing Polynomial Laws and the Universal Divided Power Algebra",
     "authors": [
@@ -322,20 +336,6 @@
     "conference": "cpp",
     "year": 2026,
     "paper_url": "https://doi.org/10.1145/3779031.3779102"
-  },
-  {
-    "id": "10.1145/3779031.3779092",
-    "title": "Verified VCG and Verified Compiler for Dafny",
-    "authors": [
-      "Daniel Nezamabadi",
-      "Magnus O. Myreen",
-      "Yong Kiam Tan"
-    ],
-    "abstract": "Dafny is a verification-aware programming language that comes with a compiler and static program verifier. However, neither the compiler nor the verifier is proved correct; in fact, soundness bugs have been found in both tools. This paper shows that the aforementioned Dafny tools can be developed with foundational correctness guarantees. We present a functional big-step semantics for an imperative subset of Dafny and, based on this semantics, a verified verification condition generator (VCG) and a verified compiler for Dafny. The subset of Dafny we have formalized includes mutually recursive method calls, while loops, and arrays---these language features are significant enough to cover challenging examples such as McCarthy's 91 function and array-based programs that are used when teaching Dafny. The verified VCG allows one to prove functional correctness of annotated Dafny programs, while the verified compiler can be used to compile verified Dafny programs to CakeML programs. From there, one can obtain executable machine code via the (already verified) CakeML compiler, all while provably maintaining the functional correctness guarantees that were proved for the source-level Dafny programs. Our work has been mechanized in the HOL4 theorem prover.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2026,
-    "paper_url": "https://doi.org/10.1145/3779031.3779092"
   },
   {
     "id": "10.1145/3779031.3779099",

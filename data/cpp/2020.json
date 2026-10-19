@@ -13,6 +13,19 @@
     "paper_url": "https://doi.org/10.1145/3372885.3373814"
   },
   {
+    "id": "10.1145/3372885.3373817",
+    "title": "Coq à la carte: a practical approach to modular syntax with binders",
+    "authors": [
+      "Yannick Forster",
+      "Kathrin Stark"
+    ],
+    "abstract": "The mechanisation of the meta-theory of programming languages is still considered hard and requires considerable effort. When formalising properties of the extension of a language, one hence wants to reuse definitions and proofs. But type-theoretic proof assistants use inductive types and predicates to formalise syntax and type systems, and these definitions are closed to extensions. Available approaches for modular syntax are either inapplicable to type theory or add a layer of indirectness by requiring complicated encodings of types. We present a concise, transparent, and accessible approach to modular syntax with binders by adapting Swierstra's Data Types à la Carte approach to the Coq proof assistant. Our approach relies on two phases of code generation: We extend the Autosubst 2 tool and allow users to specify modular syntax with binders in a HOAS-like input language. To state and automatically compose modular functions and lemmas, we implement commands based on MetaCoq. We support modular syntax, functions, predicates, and theorems. We demonstrate the practicality of our approach by modular proofs of preservation, weak head normalisation, and strong normalisation for several variants of mini-ML.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1145/3372885.3373817"
+  },
+  {
     "id": "10.1145/3372885.3373833",
     "title": "The Poincaré-Bendixson theorem in Isabelle/HOL",
     "authors": [
@@ -52,30 +65,17 @@
     "paper_url": "https://doi.org/10.1145/3372885.3373816"
   },
   {
-    "id": "10.1145/3372885.3373817",
-    "title": "Coq à la carte: a practical approach to modular syntax with binders",
+    "id": "10.1145/3372885.3373831",
+    "title": "Completeness of an axiomatization of graph isomorphism via graph rewriting in Coq",
     "authors": [
-      "Yannick Forster",
-      "Kathrin Stark"
+      "Christian Doczkal",
+      "Damien Pous"
     ],
-    "abstract": "The mechanisation of the meta-theory of programming languages is still considered hard and requires considerable effort. When formalising properties of the extension of a language, one hence wants to reuse definitions and proofs. But type-theoretic proof assistants use inductive types and predicates to formalise syntax and type systems, and these definitions are closed to extensions. Available approaches for modular syntax are either inapplicable to type theory or add a layer of indirectness by requiring complicated encodings of types. We present a concise, transparent, and accessible approach to modular syntax with binders by adapting Swierstra's Data Types à la Carte approach to the Coq proof assistant. Our approach relies on two phases of code generation: We extend the Autosubst 2 tool and allow users to specify modular syntax with binders in a HOAS-like input language. To state and automatically compose modular functions and lemmas, we implement commands based on MetaCoq. We support modular syntax, functions, predicates, and theorems. We demonstrate the practicality of our approach by modular proofs of preservation, weak head normalisation, and strong normalisation for several variants of mini-ML.",
+    "abstract": "The labeled multigraphs of treewidth at most two can be described using a simple term language over which isomorphism of the denoted graphs can be finitely axiomatized. We formally verify soundness and completeness of such an axiomatization using Coq and the mathematical components library. The completeness proof is based on a normalizing and confluent rewrite system on term-labeled graphs. While for most of the development a dependently typed representation of graphs based on finite types of vertices and edges is most convenient, we switch to a graph representation employing a fixed type of vertices shared among all graphs for establishing confluence of the rewrite system. The completeness result is then obtained by transferring confluence from the fixed-type setting to the dependently typed setting.",
     "topic": "",
     "conference": "cpp",
     "year": 2020,
-    "paper_url": "https://doi.org/10.1145/3372885.3373817"
-  },
-  {
-    "id": "10.1145/3372885.3373819",
-    "title": "A constructive formalization of the weak perfect graph theorem",
-    "authors": [
-      "Abhishek Kr Singh",
-      "Raja Natarajan"
-    ],
-    "abstract": "The Perfect Graph Theorems are important results in graph theory describing the relationship between clique number ω(G) and chromatic number χ(G) of a graph G. A graph G is called perfect if χ(H)=ω(H) for every induced subgraph H of G. The Strong Perfect Graph Theorem (SPGT) states that a graph is perfect if and only if it does not contain an odd hole (or an odd anti-hole) as its induced subgraph. The Weak Perfect Graph Theorem (WPGT) states that a graph is perfect if and only if its complement is perfect. In this paper, we present a formal framework for working with finite simple graphs. We model finite simple graphs in the Coq Proof Assistant by representing its vertices as a finite set over a countably infinite domain. We argue that this approach provides a formal framework in which it is convenient to work with different types of graph constructions (or expansions) involved in the proof of the Lovász Replication Lemma (LRL), which is also the key result used in the proof of Weak Perfect Graph Theorem. Finally, we use this setting to develop a constructive formalization of the Weak Perfect Graph Theorem.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2020,
-    "paper_url": "https://doi.org/10.1145/3372885.3373819"
+    "paper_url": "https://doi.org/10.1145/3372885.3373831"
   },
   {
     "id": "10.1145/3372885.3373823",
@@ -91,19 +91,6 @@
     "conference": "cpp",
     "year": 2020,
     "paper_url": "https://doi.org/10.1145/3372885.3373823"
-  },
-  {
-    "id": "10.1145/3372885.3373831",
-    "title": "Completeness of an axiomatization of graph isomorphism via graph rewriting in Coq",
-    "authors": [
-      "Christian Doczkal",
-      "Damien Pous"
-    ],
-    "abstract": "The labeled multigraphs of treewidth at most two can be described using a simple term language over which isomorphism of the denoted graphs can be finitely axiomatized. We formally verify soundness and completeness of such an axiomatization using Coq and the mathematical components library. The completeness proof is based on a normalizing and confluent rewrite system on term-labeled graphs. While for most of the development a dependently typed representation of graphs based on finite types of vertices and edges is most convenient, we switch to a graph representation employing a fixed type of vertices shared among all graphs for establishing confluence of the rewrite system. The completeness result is then obtained by transferring confluence from the fixed-type setting to the dependently typed setting.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2020,
-    "paper_url": "https://doi.org/10.1145/3372885.3373831"
   },
   {
     "id": "10.1145/3372885.3373830",
@@ -133,6 +120,19 @@
     "paper_url": "https://doi.org/10.1145/3372885.3373821"
   },
   {
+    "id": "10.1145/3372885.3373819",
+    "title": "A constructive formalization of the weak perfect graph theorem",
+    "authors": [
+      "Abhishek Kr Singh",
+      "Raja Natarajan"
+    ],
+    "abstract": "The Perfect Graph Theorems are important results in graph theory describing the relationship between clique number ω(G) and chromatic number χ(G) of a graph G. A graph G is called perfect if χ(H)=ω(H) for every induced subgraph H of G. The Strong Perfect Graph Theorem (SPGT) states that a graph is perfect if and only if it does not contain an odd hole (or an odd anti-hole) as its induced subgraph. The Weak Perfect Graph Theorem (WPGT) states that a graph is perfect if and only if its complement is perfect. In this paper, we present a formal framework for working with finite simple graphs. We model finite simple graphs in the Coq Proof Assistant by representing its vertices as a finite set over a countably infinite domain. We argue that this approach provides a formal framework in which it is convenient to work with different types of graph constructions (or expansions) involved in the proof of the Lovász Replication Lemma (LRL), which is also the key result used in the proof of Weak Perfect Graph Theorem. Finally, we use this setting to develop a constructive formalization of the Weak Perfect Graph Theorem.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1145/3372885.3373819"
+  },
+  {
     "id": "10.1145/3372885.3373837",
     "title": "A functional proof pearl: inverting the Ackermann hierarchy",
     "authors": [
@@ -160,18 +160,34 @@
     "paper_url": "https://doi.org/10.1145/3372885.3378574"
   },
   {
-    "id": "10.1145/3372885.3373835",
-    "title": "Three equivalent ordinal notation systems in cubical Agda",
+    "id": "10.1145/3372885.3373828",
+    "title": "Verified security of BLT signature scheme",
     "authors": [
-      "Fredrik Nordvall Forsberg",
-      "Chuangjie Xu",
-      "Neil Ghani"
+      "Denis Firsov",
+      "Ahto Buldas",
+      "Ahto Truu",
+      "Risto Laanoja"
     ],
-    "abstract": "We present three ordinal notation systems representing ordinals below ε0 in type theory, using recent type-theoretical innovations such as mutual inductive-inductive definitions and higher inductive types. We show how ordinal arithmetic can be developed for these systems, and how they admit a transfinite induction principle. We prove that all three notation systems are equivalent, so that we can transport results between them using the univalence principle. All our constructions have been implemented in cubical Agda.",
+    "abstract": "The majority of real-world applications of digital signatures use timestamping to ensure non-repudiation in face of possible key revocations. This observation led Buldas, Laanoja, and Truu to a server-assisted digital signature scheme built around cryptographic timestamping. In this paper, we report on the machine-checked proofs of existential unforgeability under the chosen-message attack (EUF-CMA) of some variations of BLT digital signature scheme. The proofs are developed and verified using the EasyCrypt framework, which provides interactive theorem proving supported by the state-of-the-art SMT solvers.",
     "topic": "",
     "conference": "cpp",
     "year": 2020,
-    "paper_url": "https://doi.org/10.1145/3372885.3373835"
+    "paper_url": "https://doi.org/10.1145/3372885.3373828"
+  },
+  {
+    "id": "10.1145/3372885.3373811",
+    "title": "Verifying x86 instruction implementations",
+    "authors": [
+      "Shilpi Goel",
+      "Anna Slobodova",
+      "Rob Sumners",
+      "Sol Swords"
+    ],
+    "abstract": "Verification of modern microprocessors is a complex task that requires a substantial allocation of resources. Despite significant progress in formal verification, the goal of complete verification of an industrial design has not been achieved. In this paper, we describe a current contribution of formal methods to the validation of modern x86 microprocessors at Centaur Technology. We focus on proving correctness of instruction implementations, which includes the decoding of an instruction, its translation into a sequence of micro-operations, any subsequent execution of traps to microcode ROM, and the implementation of these micro-operations in execution units. All these tasks are performed within one verification framework, which includes a theorem prover, a verified symbolic simulator, and SAT solvers. We describe the work of defining the needed formal models for both the architecture and micro-architecture in this framework, as well as tools for decomposing the requisite properties into smaller lemmas which can be automatically checked. We additionally cover the advantages and limitations of our approach. To our knowledge, there are no similar results in the verification of implementations of an x86 microprocessor.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1145/3372885.3373811"
   },
   {
     "id": "10.1145/3372885.3373832",
@@ -200,19 +216,18 @@
     "paper_url": "https://doi.org/10.1145/3372885.3373836"
   },
   {
-    "id": "10.1145/3372885.3373811",
-    "title": "Verifying x86 instruction implementations",
+    "id": "10.1145/3372885.3373835",
+    "title": "Three equivalent ordinal notation systems in cubical Agda",
     "authors": [
-      "Shilpi Goel",
-      "Anna Slobodova",
-      "Rob Sumners",
-      "Sol Swords"
+      "Fredrik Nordvall Forsberg",
+      "Chuangjie Xu",
+      "Neil Ghani"
     ],
-    "abstract": "Verification of modern microprocessors is a complex task that requires a substantial allocation of resources. Despite significant progress in formal verification, the goal of complete verification of an industrial design has not been achieved. In this paper, we describe a current contribution of formal methods to the validation of modern x86 microprocessors at Centaur Technology. We focus on proving correctness of instruction implementations, which includes the decoding of an instruction, its translation into a sequence of micro-operations, any subsequent execution of traps to microcode ROM, and the implementation of these micro-operations in execution units. All these tasks are performed within one verification framework, which includes a theorem prover, a verified symbolic simulator, and SAT solvers. We describe the work of defining the needed formal models for both the architecture and micro-architecture in this framework, as well as tools for decomposing the requisite properties into smaller lemmas which can be automatically checked. We additionally cover the advantages and limitations of our approach. To our knowledge, there are no similar results in the verification of implementations of an x86 microprocessor.",
+    "abstract": "We present three ordinal notation systems representing ordinals below ε0 in type theory, using recent type-theoretical innovations such as mutual inductive-inductive definitions and higher inductive types. We show how ordinal arithmetic can be developed for these systems, and how they admit a transfinite induction principle. We prove that all three notation systems are equivalent, so that we can transport results between them using the univalence principle. All our constructions have been implemented in cubical Agda.",
     "topic": "",
     "conference": "cpp",
     "year": 2020,
-    "paper_url": "https://doi.org/10.1145/3372885.3373811"
+    "paper_url": "https://doi.org/10.1145/3372885.3373835"
   },
   {
     "id": "10.1145/3372885.3373825",
@@ -251,21 +266,6 @@
     "conference": "cpp",
     "year": 2020,
     "paper_url": "https://doi.org/10.1145/3372885.3373812"
-  },
-  {
-    "id": "10.1145/3372885.3373828",
-    "title": "Verified security of BLT signature scheme",
-    "authors": [
-      "Denis Firsov",
-      "Ahto Buldas",
-      "Ahto Truu",
-      "Risto Laanoja"
-    ],
-    "abstract": "The majority of real-world applications of digital signatures use timestamping to ensure non-repudiation in face of possible key revocations. This observation led Buldas, Laanoja, and Truu to a server-assisted digital signature scheme built around cryptographic timestamping. In this paper, we report on the machine-checked proofs of existential unforgeability under the chosen-message attack (EUF-CMA) of some variations of BLT digital signature scheme. The proofs are developed and verified using the EasyCrypt framework, which provides interactive theorem proving supported by the state-of-the-art SMT solvers.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2020,
-    "paper_url": "https://doi.org/10.1145/3372885.3373828"
   },
   {
     "id": "10.1145/3372885.3373826",
@@ -349,20 +349,6 @@
     "paper_url": "https://doi.org/10.1145/3372885.3373822"
   },
   {
-    "id": "10.1145/3372885.3373829",
-    "title": "ConCert: a smart contract certification framework in Coq",
-    "authors": [
-      "Danil Annenkov",
-      "Jakob Botsch Nielsen",
-      "Bas Spitters"
-    ],
-    "abstract": "We present a new way of embedding functional languages into the Coq proof assistant by using meta-programming. This allows us to develop the meta-theory of the language using the deep embedding and provides a convenient way for reasoning about concrete programs using the shallow embedding. We connect the deep and the shallow embeddings by a soundness theorem. As an instance of our approach, we develop an embedding of a core smart contract language into Coq and verify several important properties of a crowdfunding contract based on a previous formalisation of smart contract execution in blockchains.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2020,
-    "paper_url": "https://doi.org/10.1145/3372885.3373829"
-  },
-  {
     "id": "10.1145/3372885.3373818",
     "title": "Intrinsically-typed definitional interpreters for linear, session-typed languages",
     "authors": [
@@ -376,6 +362,20 @@
     "conference": "cpp",
     "year": 2020,
     "paper_url": "https://doi.org/10.1145/3372885.3373818"
+  },
+  {
+    "id": "10.1145/3372885.3373829",
+    "title": "ConCert: a smart contract certification framework in Coq",
+    "authors": [
+      "Danil Annenkov",
+      "Jakob Botsch Nielsen",
+      "Bas Spitters"
+    ],
+    "abstract": "We present a new way of embedding functional languages into the Coq proof assistant by using meta-programming. This allows us to develop the meta-theory of the language using the deep embedding and provides a convenient way for reasoning about concrete programs using the shallow embedding. We connect the deep and the shallow embeddings by a soundness theorem. As an instance of our approach, we develop an embedding of a core smart contract language into Coq and verify several important properties of a crowdfunding contract based on a previous formalisation of smart contract execution in blockchains.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1145/3372885.3373829"
   },
   {
     "id": "10.1145/3372885.3373813",

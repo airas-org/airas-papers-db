@@ -90,31 +90,6 @@
     "paper_url": "https://doi.org/10.1145/3293880.3294093"
   },
   {
-    "id": "10.1145/3293880.3294089",
-    "title": "A formal proof of Hensel's lemma over the p-adic integers",
-    "authors": [
-      "Robert Y. Lewis"
-    ],
-    "abstract": "The field of p-adic numbers ℚp and the ring of p-adic integers ℤp are essential constructions of modern number theory. Hensel’s lemma, described by Gouvêa as the “most important algebraic property of the p-adic numbers,” shows the existence of roots of polynomials over ℤp provided an initial seed point. The theorem can be proved for the p-adics with significantly weaker hypotheses than for general rings. We construct ℚp and ℤp in the Lean proof assistant, with various associated algebraic properties, and formally prove a strong form of Hensel’s lemma. The proof lies at the intersection of algebraic and analytic reasoning and demonstrates how the Lean mathematical library handles such a heterogeneous topic.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2019,
-    "paper_url": "https://doi.org/10.1145/3293880.3294089"
-  },
-  {
-    "id": "10.1145/3293880.3294103",
-    "title": "Formal verification of a program obfuscation based on mixed Boolean-arithmetic expressions",
-    "authors": [
-      "Sandrine Blazy",
-      "Rémi Hutin"
-    ],
-    "abstract": "The insertion of expressions mixing arithmetic operators and bitwise boolean operators is a widespread protection of sensitive data in source programs. This recent advanced obfuscation technique is one of the less studied among program obfuscations even if it is commonly found in binary code. In this paper, we formally verify in Coq this data obfuscation. It operates over a generic notion of mixed boolean-arithmetic expressions and on properties of bitwise operators operating over machine integers. Our obfuscation performs two kinds of program transformations: rewriting of expressions and insertion of modular inverses. To facilitate its proof of correctness, we define boolean semantic tables, a data structure inspired from truth tables. Our obfuscation is integrated into the CompCert formally verified compiler where it operates over Clight programs. The automatic extraction of our program obfuscator into OCaml yields a program with competitive results.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2019,
-    "paper_url": "https://doi.org/10.1145/3293880.3294103"
-  },
-  {
     "id": "10.1145/3293880.3294106",
     "title": "From C to interaction trees: specifying, verifying, and testing a networked server",
     "authors": [
@@ -133,6 +108,31 @@
     "conference": "cpp",
     "year": 2019,
     "paper_url": "https://doi.org/10.1145/3293880.3294106"
+  },
+  {
+    "id": "10.1145/3293880.3294103",
+    "title": "Formal verification of a program obfuscation based on mixed Boolean-arithmetic expressions",
+    "authors": [
+      "Sandrine Blazy",
+      "Rémi Hutin"
+    ],
+    "abstract": "The insertion of expressions mixing arithmetic operators and bitwise boolean operators is a widespread protection of sensitive data in source programs. This recent advanced obfuscation technique is one of the less studied among program obfuscations even if it is commonly found in binary code. In this paper, we formally verify in Coq this data obfuscation. It operates over a generic notion of mixed boolean-arithmetic expressions and on properties of bitwise operators operating over machine integers. Our obfuscation performs two kinds of program transformations: rewriting of expressions and insertion of modular inverses. To facilitate its proof of correctness, we define boolean semantic tables, a data structure inspired from truth tables. Our obfuscation is integrated into the CompCert formally verified compiler where it operates over Clight programs. The automatic extraction of our program obfuscator into OCaml yields a program with competitive results.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2019,
+    "paper_url": "https://doi.org/10.1145/3293880.3294103"
+  },
+  {
+    "id": "10.1145/3293880.3294089",
+    "title": "A formal proof of Hensel's lemma over the p-adic integers",
+    "authors": [
+      "Robert Y. Lewis"
+    ],
+    "abstract": "The field of p-adic numbers ℚp and the ring of p-adic integers ℤp are essential constructions of modern number theory. Hensel’s lemma, described by Gouvêa as the “most important algebraic property of the p-adic numbers,” shows the existence of roots of polynomials over ℤp provided an initial seed point. The theorem can be proved for the p-adics with significantly weaker hypotheses than for general rings. We construct ℚp and ℤp in the Lean proof assistant, with various associated algebraic properties, and formally prove a strong form of Hensel’s lemma. The proof lies at the intersection of algebraic and analytic reasoning and demonstrates how the Lean mathematical library handles such a heterogeneous topic.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2019,
+    "paper_url": "https://doi.org/10.1145/3293880.3294089"
   },
   {
     "id": "10.1145/3293880.3294098",
@@ -177,6 +177,19 @@
     "paper_url": "https://doi.org/10.1145/3293880.3294100"
   },
   {
+    "id": "10.1145/3293880.3294105",
+    "title": "A verified protocol buffer compiler",
+    "authors": [
+      "Qianchuan Ye",
+      "Benjamin Delaware"
+    ],
+    "abstract": "The code responsible for serializing and deserializing untrusted external data is a vital component of any software that communicates with the outside world, as any bugs in these components can compromise the entire system. This is particularly true for verified systems which rely on trusted code to process external data, as any defects in the parsing code can invalidate any formal proofs about the system. One way to reduce the trusted code base of these systems is to use interface generators like Protocol Buffer and ASN.1 to generate serializers and deserializers from data descriptors. Of course, these generators are not immune to bugs. In this work, we formally verify a compiler for a realistic subset of the popular Protocol Buffer serialization format using the Coq proof assistant, proving once and for all the correctness of every generated serializer and deserializer. One of the challenges we had to overcome was the extreme flexibility of the Protocol Buffer format: the same source data can be encoded in an infinite number of ways, and the deserializer must faithfully recover the original source value from each. We have validated our verified system using the official conformance tests.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2019,
+    "paper_url": "https://doi.org/10.1145/3293880.3294105"
+  },
+  {
     "id": "10.1145/3293880.3294091",
     "title": "On synthetic undecidability in Coq, with an application to the Entscheidungsproblem",
     "authors": [
@@ -217,19 +230,6 @@
     "paper_url": "https://doi.org/10.1145/3293880.3294094"
   },
   {
-    "id": "10.1145/3293880.3294105",
-    "title": "A verified protocol buffer compiler",
-    "authors": [
-      "Qianchuan Ye",
-      "Benjamin Delaware"
-    ],
-    "abstract": "The code responsible for serializing and deserializing untrusted external data is a vital component of any software that communicates with the outside world, as any bugs in these components can compromise the entire system. This is particularly true for verified systems which rely on trusted code to process external data, as any defects in the parsing code can invalidate any formal proofs about the system. One way to reduce the trusted code base of these systems is to use interface generators like Protocol Buffer and ASN.1 to generate serializers and deserializers from data descriptors. Of course, these generators are not immune to bugs. In this work, we formally verify a compiler for a realistic subset of the popular Protocol Buffer serialization format using the Coq proof assistant, proving once and for all the correctness of every generated serializer and deserializer. One of the challenges we had to overcome was the extreme flexibility of the Protocol Buffer format: the same source data can be encoded in an infinite number of ways, and the deserializer must faithfully recover the original source value from each. We have validated our verified system using the official conformance tests.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2019,
-    "paper_url": "https://doi.org/10.1145/3293880.3294105"
-  },
-  {
     "id": "10.1145/3293880.3294097",
     "title": "Call-by-push-value in Coq: operational, equational, and denotational theory",
     "authors": [
@@ -259,6 +259,19 @@
     "paper_url": "https://doi.org/10.1145/3293880.3294095"
   },
   {
+    "id": "10.1145/3293880.3294107",
+    "title": "A Coq mechanised formal semantics for realistic SQL queries: formally reconciling SQL and bag relational algebra",
+    "authors": [
+      "Véronique Benzaken",
+      "Évelyne Contejean"
+    ],
+    "abstract": "In this article, we provide a Coq mechanised, executable, formal semantics for a realistic fragment of SQL consisting of \"select [distinct] from where group by having\" queries with null values, functions, aggregates, quantifiers and nested potentially correlated sub-queries. Relying on the Coq extraction mechanism to Ocaml, we further produce a Coq certified semantic analyser for a SQL compiler. We then relate this fragment to a Coq formalised (extended) relational algebra that enjoys a bag semantics hence recovering all well-known algebraic equivalences upon which are based most of compilation optimisations. By doing so, we provide the first formally mechanised proof of the equivalence of SQL and extended relational algebra.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2019,
+    "paper_url": "https://doi.org/10.1145/3293880.3294107"
+  },
+  {
     "id": "10.1145/3293880.3294102",
     "title": "Formally verified big step semantics out of x86-64 binaries",
     "authors": [
@@ -271,18 +284,5 @@
     "conference": "cpp",
     "year": 2019,
     "paper_url": "https://doi.org/10.1145/3293880.3294102"
-  },
-  {
-    "id": "10.1145/3293880.3294107",
-    "title": "A Coq mechanised formal semantics for realistic SQL queries: formally reconciling SQL and bag relational algebra",
-    "authors": [
-      "Véronique Benzaken",
-      "Évelyne Contejean"
-    ],
-    "abstract": "In this article, we provide a Coq mechanised, executable, formal semantics for a realistic fragment of SQL consisting of \"select [distinct] from where group by having\" queries with null values, functions, aggregates, quantifiers and nested potentially correlated sub-queries. Relying on the Coq extraction mechanism to Ocaml, we further produce a Coq certified semantic analyser for a SQL compiler. We then relate this fragment to a Coq formalised (extended) relational algebra that enjoys a bag semantics hence recovering all well-known algebraic equivalences upon which are based most of compilation optimisations. By doing so, we provide the first formally mechanised proof of the equivalence of SQL and extended relational algebra.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2019,
-    "paper_url": "https://doi.org/10.1145/3293880.3294107"
   }
 ]
