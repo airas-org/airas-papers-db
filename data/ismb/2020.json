@@ -161,162 +161,6 @@
     "paper_url": "https://doi.org/10.1093/bioinformatics/btaa317"
   },
   {
-    "id": "10.1093/bioinformatics/btaa489",
-    "title": "Phylogenetic double placement of mixed samples",
-    "authors": [
-      "Balaban M",
-      "Mirarab S"
-    ],
-    "abstract": "<h4>Motivation</h4>Consider a simple computational problem. The inputs are (i) the set of mixed reads generated from a sample that combines two organisms and (ii) separate sets of reads for several reference genomes of known origins. The goal is to find the two organisms that constitute the mixed sample. When constituents are absent from the reference set, we seek to phylogenetically position them with respect to the underlying tree of the reference species. This simple yet fundamental problem (which we call phylogenetic double-placement) has enjoyed surprisingly little attention in the literature. As genome skimming (low-pass sequencing of genomes at low coverage, precluding assembly) becomes more prevalent, this problem finds wide-ranging applications in areas as varied as biodiversity research, food production and provenance, and evolutionary reconstruction.<h4>Results</h4>We introduce a model that relates distances between a mixed sample and reference species to the distances between constituents and reference species. Our model is based on Jaccard indices computed between each sample represented as k-mer sets. The model, built on several assumptions and approximations, allows us to formalize the phylogenetic double-placement problem as a non-convex optimization problem that decomposes mixture distances and performs phylogenetic placement simultaneously. Using a variety of techniques, we are able to solve this optimization problem numerically. We test the resulting method, called MIxed Sample Analysis tool (MISA), on a varied set of simulated and biological datasets. Despite all the assumptions used, the method performs remarkably well in practice.<h4>Availability and implementation</h4>The software and data are available at https://github.com/balabanmetin/misa and https://github.com/balabanmetin/misa-data.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2020,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btaa489"
-  },
-  {
-    "id": "10.1093/bioinformatics/btaa439",
-    "title": "Network-based characterization of disease-disease relationships in terms of drugs and therapeutic targets",
-    "authors": [
-      "Iida M",
-      "Iwata M",
-      "Yamanishi Y"
-    ],
-    "abstract": "<h4>Motivation</h4>Disease states are distinguished from each other in terms of differing clinical phenotypes, but characteristic molecular features are often common to various diseases. Similarities between diseases can be explained by characteristic gene expression patterns. However, most disease-disease relationships remain uncharacterized.<h4>Results</h4>In this study, we proposed a novel approach for network-based characterization of disease-disease relationships in terms of drugs and therapeutic targets. We performed large-scale analyses of omics data and molecular interaction networks for 79 diseases, including adrenoleukodystrophy, leukaemia, Alzheimer's disease, asthma, atopic dermatitis, breast cancer, cystic fibrosis and inflammatory bowel disease. We quantified disease-disease similarities based on proximities of abnormally expressed genes in various molecular networks, and showed that similarities between diseases could be explained by characteristic molecular network topologies. Furthermore, we developed a kernel matrix regression algorithm to predict the commonalities of drugs and therapeutic targets among diseases. Our comprehensive prediction strategy indicated many new associations among phenotypically diverse diseases.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2020,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btaa439"
-  },
-  {
-    "id": "10.1093/bioinformatics/btaa474",
-    "title": "BIRD: identifying cell doublets via biallelic expression from single cells",
-    "authors": [
-      "Wainer-Katsir K",
-      "Linial M"
-    ],
-    "abstract": "<h4>Summary</h4>Current technologies for single-cell transcriptomics allow thousands of cells to be analyzed in a single experiment. The increased scale of these methods raises the risk of cell doublets contamination. Available tools and algorithms for identifying doublets and estimating their occurrence in single-cell experimental data focus on doublets of different species, cell types or individuals. In this study, we analyze transcriptomic data from single cells having an identical genetic background. We claim that the ratio of monoallelic to biallelic expression provides a discriminating power toward doublets' identification. We present a pipeline called BIallelic Ratio for Doublets (BIRD) that relies on heterologous genetic variations, from single-cell RNA sequencing. For each dataset, doublets were artificially created from the actual data and used to train a predictive model. BIRD was applied on Smart-seq data from 163 primary fibroblast single cells. The model achieved 100% accuracy in annotating the randomly simulated doublets. Bonafide doublets were verified based on a biallelic expression signal amongst X-chromosome of female fibroblasts. Data from 10X Genomics microfluidics of human peripheral blood cells achieved in average 83% (±3.7%) accuracy, and an area under the curve of 0.88 (±0.04) for a collection of ∼13 300 single cells. BIRD addresses instances of doublets, which were formed from cell mixtures of identical genetic background and cell identity. Maximal performance is achieved for high-coverage data from Smart-seq. Success in identifying doublets is data specific which varies according to the experimental methodology, genomic diversity between haplotypes, sequence coverage and depth.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2020,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btaa474"
-  },
-  {
-    "id": "10.1093/bioinformatics/btaa444",
-    "title": "FastMulRFS: fast and accurate species tree estimation under generic gene duplication and loss models",
-    "authors": [
-      "Molloy EK",
-      "Warnow T"
-    ],
-    "abstract": "<h4>Motivation</h4>Species tree estimation is a basic part of biological research but can be challenging because of gene duplication and loss (GDL), which results in genes that can appear more than once in a given genome. All common approaches in phylogenomic studies either reduce available data or are error-prone, and thus, scalable methods that do not discard data and have high accuracy on large heterogeneous datasets are needed.<h4>Results</h4>We present FastMulRFS, a polynomial-time method for estimating species trees without knowledge of orthology. We prove that FastMulRFS is statistically consistent under a generic model of GDL when adversarial GDL does not occur. Our extensive simulation study shows that FastMulRFS matches the accuracy of MulRF (which tries to solve the same optimization problem) and has better accuracy than prior methods, including ASTRAL-multi (the only method to date that has been proven statistically consistent under GDL), while being much faster than both methods.<h4>Availability and impementation</h4>FastMulRFS is available on Github (https://github.com/ekmolloy/fastmulrfs).<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2020,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btaa444"
-  },
-  {
-    "id": "10.1093/bioinformatics/btaa454",
-    "title": "The string decomposition problem and its applications to centromere analysis and assembly",
-    "authors": [
-      "Dvorkina T",
-      "Bzikadze AV",
-      "Pevzner PA"
-    ],
-    "abstract": "<h4>Motivation</h4>Recent attempts to assemble extra-long tandem repeats (such as centromeres) faced the challenge of translating long error-prone reads from the nucleotide alphabet into the alphabet of repeat units. Human centromeres represent a particularly complex type of high-order repeats (HORs) formed by chromosome-specific monomers. Given a set of all human monomers, translating a read from a centromere into the monomer alphabet is modeled as the String Decomposition Problem. The accurate translation of reads into the monomer alphabet turns the notoriously difficult problem of assembling centromeres from reads (in the nucleotide alphabet) into a more tractable problem of assembling centromeres from translated reads.<h4>Results</h4>We describe a StringDecomposer (SD) algorithm for solving this problem, benchmark it on the set of long error-prone Oxford Nanopore reads generated by the Telomere-to-Telomere consortium and identify a novel (rare) monomer that extends the set of known X-chromosome specific monomers. Our identification of a novel monomer emphasizes the importance of identification of all (even rare) monomers for future centromere assembly efforts and evolutionary studies. To further analyze novel monomers, we applied SD to the set of recently generated long accurate Pacific Biosciences HiFi reads. This analysis revealed that the set of known human monomers and HORs remains incomplete. SD opens a possibility to generate a complete set of human monomers and HORs for using in the ongoing efforts to generate the complete assembly of the human genome.<h4>Availability and implementation</h4>StringDecomposer is publicly available on https://github.com/ablab/stringdecomposer.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2020,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btaa454"
-  },
-  {
-    "id": "10.1093/bioinformatics/btaa336",
-    "title": "Boosting the accuracy of protein secondary structure prediction through nearest neighbor search and method hybridization",
-    "authors": [
-      "Krieger S",
-      "Kececioglu J"
-    ],
-    "abstract": "<h4>Motivation</h4>Protein secondary structure prediction is a fundamental precursor to many bioinformatics tasks. Nearly all state-of-the-art tools when computing their secondary structure prediction do not explicitly leverage the vast number of proteins whose structure is known. Leveraging this additional information in a so-called template-based method has the potential to significantly boost prediction accuracy.<h4>Method</h4>We present a new hybrid approach to secondary structure prediction that gains the advantages of both template- and non-template-based methods. Our core template-based method is an algorithmic approach that uses metric-space nearest neighbor search over a template database of fixed-length amino acid words to determine estimated class-membership probabilities for each residue in the protein. These probabilities are then input to a dynamic programming algorithm that finds a physically valid maximum-likelihood prediction for the entire protein. Our hybrid approach exploits a novel accuracy estimator for our core method, which estimates the unknown true accuracy of its prediction, to discern when to switch between template- and non-template-based methods.<h4>Results</h4>On challenging CASP benchmarks, the resulting hybrid approach boosts the state-of-the-art Q8 accuracy by more than 2-10%, and Q3 accuracy by more than 1-3%, yielding the most accurate method currently available for both 3- and 8-state secondary structure prediction.<h4>Availability and implementation</h4>A preliminary implementation in a new tool we call Nnessy is available free for non-commercial use at http://nnessy.cs.arizona.edu.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2020,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btaa336"
-  },
-  {
-    "id": "10.1093/bioinformatics/btaa436",
-    "title": "Deep multiple instance learning classifies subtissue locations in mass spectrometry images from tissue-level annotations",
-    "authors": [
-      "Guo D",
-      "Föll MC",
-      "Volkmann V",
-      "Enderle-Ammour K",
-      "Bronsert P",
-      "Schilling O",
-      "Vitek O"
-    ],
-    "abstract": "<h4>Motivation</h4>Mass spectrometry imaging (MSI) characterizes the molecular composition of tissues at spatial resolution, and has a strong potential for distinguishing tissue types, or disease states. This can be achieved by supervised classification, which takes as input MSI spectra, and assigns class labels to subtissue locations. Unfortunately, developing such classifiers is hindered by the limited availability of training sets with subtissue labels as the ground truth. Subtissue labeling is prohibitively expensive, and only rough annotations of the entire tissues are typically available. Classifiers trained on data with approximate labels have sub-optimal performance.<h4>Results</h4>To alleviate this challenge, we contribute a semi-supervised approach mi-CNN. mi-CNN implements multiple instance learning with a convolutional neural network (CNN). The multiple instance aspect enables weak supervision from tissue-level annotations when classifying subtissue locations. The convolutional architecture of the CNN captures contextual dependencies between the spectral features. Evaluations on simulated and experimental datasets demonstrated that mi-CNN improved the subtissue classification as compared to traditional classifiers. We propose mi-CNN as an important step toward accurate subtissue classification in MSI, enabling rapid distinction between tissue types and disease states.<h4>Availability and implementation</h4>The data and code are available at https://github.com/Vitek-Lab/mi-CNN_MSI.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2020,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btaa436"
-  },
-  {
-    "id": "10.1093/bioinformatics/btaa466",
-    "title": "Benchmarking gene ontology function predictions using negative annotations",
-    "authors": [
-      "Warwick Vesztrocy A",
-      "Dessimoz C"
-    ],
-    "abstract": "<h4>Motivation</h4>With the ever-increasing number and diversity of sequenced species, the challenge to characterize genes with functional information is even more important. In most species, this characterization almost entirely relies on automated electronic methods. As such, it is critical to benchmark the various methods. The Critical Assessment of protein Function Annotation algorithms (CAFA) series of community experiments provide the most comprehensive benchmark, with a time-delayed analysis leveraging newly curated experimentally supported annotations. However, the definition of a false positive in CAFA has not fully accounted for the open world assumption (OWA), leading to a systematic underestimation of precision. The main reason for this limitation is the relative paucity of negative experimental annotations.<h4>Results</h4>This article introduces a new, OWA-compliant, benchmark based on a balanced test set of positive and negative annotations. The negative annotations are derived from expert-curated annotations of protein families on phylogenetic trees. This approach results in a large increase in the average information content of negative annotations. The benchmark has been tested using the naïve and BLAST baseline methods, as well as two orthology-based methods. This new benchmark could complement existing ones in future CAFA experiments.<h4>Availability and implementation</h4>All data, as well as code used for analysis, is available from https://lab.dessimoz.org/20_not.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2020,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btaa466"
-  },
-  {
-    "id": "10.1093/bioinformatics/btaa465",
-    "title": "Inference of population admixture network from local gene genealogies: a coalescent-based maximum likelihood approach",
-    "authors": [
-      "Wu Y"
-    ],
-    "abstract": "<h4>Motivation</h4>Population admixture is an important subject in population genetics. Inferring population demographic history with admixture under the so-called admixture network model from population genetic data is an established problem in genetics. Existing admixture network inference approaches work with single genetic polymorphisms. While these methods are usually very fast, they do not fully utilize the information [e.g. linkage disequilibrium (LD)] contained in population genetic data.<h4>Results</h4>In this article, we develop a new admixture network inference method called GTmix. Different from existing methods, GTmix works with local gene genealogies that can be inferred from population haplotypes. Local gene genealogies represent the evolutionary history of sampled haplotypes and contain the LD information. GTmix performs coalescent-based maximum likelihood inference of admixture networks with inferred local genealogies based on the well-known multispecies coalescent (MSC) model. GTmix utilizes various techniques to speed up the likelihood computation on the MSC model and the optimal network search. Our simulations show that GTmix can infer more accurate admixture networks with much smaller data than existing methods, even when these existing methods are given much larger data. GTmix is reasonably efficient and can analyze population genetic datasets of current interests.<h4>Availability and implementation</h4>The program GTmix is available for download at: https://github.com/yufengwudcs/GTmix.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2020,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btaa465"
-  },
-  {
-    "id": "10.1093/bioinformatics/btaa434",
-    "title": "Identifying diagnosis-specific genotype-phenotype associations via joint multitask sparse canonical correlation analysis and classification",
-    "authors": [
-      "Du L",
-      "Liu F",
-      "Liu K",
-      "Yao X",
-      "Risacher SL",
-      "Han J",
-      "Guo L",
-      "Saykin AJ",
-      "Shen L"
-    ],
-    "abstract": "<h4>Motivation</h4>Brain imaging genetics studies the complex associations between genotypic data such as single nucleotide polymorphisms (SNPs) and imaging quantitative traits (QTs). The neurodegenerative disorders usually exhibit the diversity and heterogeneity, originating from which different diagnostic groups might carry distinct imaging QTs, SNPs and their interactions. Sparse canonical correlation analysis (SCCA) is widely used to identify bi-multivariate genotype-phenotype associations. However, most existing SCCA methods are unsupervised, leading to an inability to identify diagnosis-specific genotype-phenotype associations.<h4>Results</h4>In this article, we propose a new joint multitask learning method, named MT-SCCALR, which absorbs the merits of both SCCA and logistic regression. MT-SCCALR learns genotype-phenotype associations of multiple tasks jointly, with each task focusing on identifying one diagnosis-specific genotype-phenotype pattern. Meanwhile, MT-SCCALR cannot only select relevant SNPs and imaging QTs for each diagnostic group alone, but also allows the selection of those shared by multiple diagnostic groups. We derive an efficient optimization algorithm whose convergence to a local optimum is guaranteed. Compared with two state-of-the-art methods, MT-SCCALR yields better or similar canonical correlation coefficients and classification performances. In addition, it owns much better discriminative canonical weight patterns of great interest than competitors. This demonstrates the power and capability of MTSCCAR in identifying diagnostically heterogeneous genotype-phenotype patterns, which would be helpful to understand the pathophysiology of brain disorders.<h4>Availability and implementation</h4>The software is publicly available at https://github.com/dulei323/MTSCCALR.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2020,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btaa434"
-  },
-  {
-    "id": "10.1093/bioinformatics/btaa470",
-    "title": "Copy number evolution with weighted aberrations in cancer",
-    "authors": [
-      "Zeira R",
-      "Raphael BJ"
-    ],
-    "abstract": "<h4>Motivation</h4>Copy number aberrations (CNAs), which delete or amplify large contiguous segments of the genome, are a common type of somatic mutation in cancer. Copy number profiles, representing the number of copies of each region of a genome, are readily obtained from whole-genome sequencing or microarrays. However, modeling copy number evolution is a substantial challenge, because different CNAs may overlap with one another on the genome. A recent popular model for copy number evolution is the copy number distance (CND), defined as the length of a shortest sequence of deletions and amplifications of contiguous segments that transforms one profile into the other. In the CND, all events contribute equally; however, it is well known that rates of CNAs vary by length, genomic position and type (amplification versus deletion).<h4>Results</h4>We introduce a weighted CND that allows events to have varying weights, or probabilities, based on their length, position and type. We derive an efficient algorithm to compute the weighted CND as well as the associated transformation. This algorithm is based on the observation that the constraint matrix of the underlying optimization problem is totally unimodular. We show that the weighted CND improves phylogenetic reconstruction on simulated data where CNAs occur with varying probabilities, aids in the derivation of phylogenies from ultra-low-coverage single-cell DNA sequencing data and helps estimate CNA rates in a large pan-cancer dataset.<h4>Availability and implementation</h4>Code is available at https://github.com/raphael-group/WCND.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2020,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btaa470"
-  },
-  {
     "id": "10.1093/bioinformatics/btaa506",
     "title": "Fully interpretable deep learning model of transcriptional control",
     "authors": [
@@ -489,6 +333,162 @@
     "conference": "ismb",
     "year": 2020,
     "paper_url": "https://doi.org/10.1093/bioinformatics/btaa464"
+  },
+  {
+    "id": "10.1093/bioinformatics/btaa489",
+    "title": "Phylogenetic double placement of mixed samples",
+    "authors": [
+      "Balaban M",
+      "Mirarab S"
+    ],
+    "abstract": "<h4>Motivation</h4>Consider a simple computational problem. The inputs are (i) the set of mixed reads generated from a sample that combines two organisms and (ii) separate sets of reads for several reference genomes of known origins. The goal is to find the two organisms that constitute the mixed sample. When constituents are absent from the reference set, we seek to phylogenetically position them with respect to the underlying tree of the reference species. This simple yet fundamental problem (which we call phylogenetic double-placement) has enjoyed surprisingly little attention in the literature. As genome skimming (low-pass sequencing of genomes at low coverage, precluding assembly) becomes more prevalent, this problem finds wide-ranging applications in areas as varied as biodiversity research, food production and provenance, and evolutionary reconstruction.<h4>Results</h4>We introduce a model that relates distances between a mixed sample and reference species to the distances between constituents and reference species. Our model is based on Jaccard indices computed between each sample represented as k-mer sets. The model, built on several assumptions and approximations, allows us to formalize the phylogenetic double-placement problem as a non-convex optimization problem that decomposes mixture distances and performs phylogenetic placement simultaneously. Using a variety of techniques, we are able to solve this optimization problem numerically. We test the resulting method, called MIxed Sample Analysis tool (MISA), on a varied set of simulated and biological datasets. Despite all the assumptions used, the method performs remarkably well in practice.<h4>Availability and implementation</h4>The software and data are available at https://github.com/balabanmetin/misa and https://github.com/balabanmetin/misa-data.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btaa489"
+  },
+  {
+    "id": "10.1093/bioinformatics/btaa439",
+    "title": "Network-based characterization of disease-disease relationships in terms of drugs and therapeutic targets",
+    "authors": [
+      "Iida M",
+      "Iwata M",
+      "Yamanishi Y"
+    ],
+    "abstract": "<h4>Motivation</h4>Disease states are distinguished from each other in terms of differing clinical phenotypes, but characteristic molecular features are often common to various diseases. Similarities between diseases can be explained by characteristic gene expression patterns. However, most disease-disease relationships remain uncharacterized.<h4>Results</h4>In this study, we proposed a novel approach for network-based characterization of disease-disease relationships in terms of drugs and therapeutic targets. We performed large-scale analyses of omics data and molecular interaction networks for 79 diseases, including adrenoleukodystrophy, leukaemia, Alzheimer's disease, asthma, atopic dermatitis, breast cancer, cystic fibrosis and inflammatory bowel disease. We quantified disease-disease similarities based on proximities of abnormally expressed genes in various molecular networks, and showed that similarities between diseases could be explained by characteristic molecular network topologies. Furthermore, we developed a kernel matrix regression algorithm to predict the commonalities of drugs and therapeutic targets among diseases. Our comprehensive prediction strategy indicated many new associations among phenotypically diverse diseases.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btaa439"
+  },
+  {
+    "id": "10.1093/bioinformatics/btaa474",
+    "title": "BIRD: identifying cell doublets via biallelic expression from single cells",
+    "authors": [
+      "Wainer-Katsir K",
+      "Linial M"
+    ],
+    "abstract": "<h4>Summary</h4>Current technologies for single-cell transcriptomics allow thousands of cells to be analyzed in a single experiment. The increased scale of these methods raises the risk of cell doublets contamination. Available tools and algorithms for identifying doublets and estimating their occurrence in single-cell experimental data focus on doublets of different species, cell types or individuals. In this study, we analyze transcriptomic data from single cells having an identical genetic background. We claim that the ratio of monoallelic to biallelic expression provides a discriminating power toward doublets' identification. We present a pipeline called BIallelic Ratio for Doublets (BIRD) that relies on heterologous genetic variations, from single-cell RNA sequencing. For each dataset, doublets were artificially created from the actual data and used to train a predictive model. BIRD was applied on Smart-seq data from 163 primary fibroblast single cells. The model achieved 100% accuracy in annotating the randomly simulated doublets. Bonafide doublets were verified based on a biallelic expression signal amongst X-chromosome of female fibroblasts. Data from 10X Genomics microfluidics of human peripheral blood cells achieved in average 83% (±3.7%) accuracy, and an area under the curve of 0.88 (±0.04) for a collection of ∼13 300 single cells. BIRD addresses instances of doublets, which were formed from cell mixtures of identical genetic background and cell identity. Maximal performance is achieved for high-coverage data from Smart-seq. Success in identifying doublets is data specific which varies according to the experimental methodology, genomic diversity between haplotypes, sequence coverage and depth.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btaa474"
+  },
+  {
+    "id": "10.1093/bioinformatics/btaa444",
+    "title": "FastMulRFS: fast and accurate species tree estimation under generic gene duplication and loss models",
+    "authors": [
+      "Molloy EK",
+      "Warnow T"
+    ],
+    "abstract": "<h4>Motivation</h4>Species tree estimation is a basic part of biological research but can be challenging because of gene duplication and loss (GDL), which results in genes that can appear more than once in a given genome. All common approaches in phylogenomic studies either reduce available data or are error-prone, and thus, scalable methods that do not discard data and have high accuracy on large heterogeneous datasets are needed.<h4>Results</h4>We present FastMulRFS, a polynomial-time method for estimating species trees without knowledge of orthology. We prove that FastMulRFS is statistically consistent under a generic model of GDL when adversarial GDL does not occur. Our extensive simulation study shows that FastMulRFS matches the accuracy of MulRF (which tries to solve the same optimization problem) and has better accuracy than prior methods, including ASTRAL-multi (the only method to date that has been proven statistically consistent under GDL), while being much faster than both methods.<h4>Availability and impementation</h4>FastMulRFS is available on Github (https://github.com/ekmolloy/fastmulrfs).<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btaa444"
+  },
+  {
+    "id": "10.1093/bioinformatics/btaa454",
+    "title": "The string decomposition problem and its applications to centromere analysis and assembly",
+    "authors": [
+      "Dvorkina T",
+      "Bzikadze AV",
+      "Pevzner PA"
+    ],
+    "abstract": "<h4>Motivation</h4>Recent attempts to assemble extra-long tandem repeats (such as centromeres) faced the challenge of translating long error-prone reads from the nucleotide alphabet into the alphabet of repeat units. Human centromeres represent a particularly complex type of high-order repeats (HORs) formed by chromosome-specific monomers. Given a set of all human monomers, translating a read from a centromere into the monomer alphabet is modeled as the String Decomposition Problem. The accurate translation of reads into the monomer alphabet turns the notoriously difficult problem of assembling centromeres from reads (in the nucleotide alphabet) into a more tractable problem of assembling centromeres from translated reads.<h4>Results</h4>We describe a StringDecomposer (SD) algorithm for solving this problem, benchmark it on the set of long error-prone Oxford Nanopore reads generated by the Telomere-to-Telomere consortium and identify a novel (rare) monomer that extends the set of known X-chromosome specific monomers. Our identification of a novel monomer emphasizes the importance of identification of all (even rare) monomers for future centromere assembly efforts and evolutionary studies. To further analyze novel monomers, we applied SD to the set of recently generated long accurate Pacific Biosciences HiFi reads. This analysis revealed that the set of known human monomers and HORs remains incomplete. SD opens a possibility to generate a complete set of human monomers and HORs for using in the ongoing efforts to generate the complete assembly of the human genome.<h4>Availability and implementation</h4>StringDecomposer is publicly available on https://github.com/ablab/stringdecomposer.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btaa454"
+  },
+  {
+    "id": "10.1093/bioinformatics/btaa336",
+    "title": "Boosting the accuracy of protein secondary structure prediction through nearest neighbor search and method hybridization",
+    "authors": [
+      "Krieger S",
+      "Kececioglu J"
+    ],
+    "abstract": "<h4>Motivation</h4>Protein secondary structure prediction is a fundamental precursor to many bioinformatics tasks. Nearly all state-of-the-art tools when computing their secondary structure prediction do not explicitly leverage the vast number of proteins whose structure is known. Leveraging this additional information in a so-called template-based method has the potential to significantly boost prediction accuracy.<h4>Method</h4>We present a new hybrid approach to secondary structure prediction that gains the advantages of both template- and non-template-based methods. Our core template-based method is an algorithmic approach that uses metric-space nearest neighbor search over a template database of fixed-length amino acid words to determine estimated class-membership probabilities for each residue in the protein. These probabilities are then input to a dynamic programming algorithm that finds a physically valid maximum-likelihood prediction for the entire protein. Our hybrid approach exploits a novel accuracy estimator for our core method, which estimates the unknown true accuracy of its prediction, to discern when to switch between template- and non-template-based methods.<h4>Results</h4>On challenging CASP benchmarks, the resulting hybrid approach boosts the state-of-the-art Q8 accuracy by more than 2-10%, and Q3 accuracy by more than 1-3%, yielding the most accurate method currently available for both 3- and 8-state secondary structure prediction.<h4>Availability and implementation</h4>A preliminary implementation in a new tool we call Nnessy is available free for non-commercial use at http://nnessy.cs.arizona.edu.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btaa336"
+  },
+  {
+    "id": "10.1093/bioinformatics/btaa436",
+    "title": "Deep multiple instance learning classifies subtissue locations in mass spectrometry images from tissue-level annotations",
+    "authors": [
+      "Guo D",
+      "Föll MC",
+      "Volkmann V",
+      "Enderle-Ammour K",
+      "Bronsert P",
+      "Schilling O",
+      "Vitek O"
+    ],
+    "abstract": "<h4>Motivation</h4>Mass spectrometry imaging (MSI) characterizes the molecular composition of tissues at spatial resolution, and has a strong potential for distinguishing tissue types, or disease states. This can be achieved by supervised classification, which takes as input MSI spectra, and assigns class labels to subtissue locations. Unfortunately, developing such classifiers is hindered by the limited availability of training sets with subtissue labels as the ground truth. Subtissue labeling is prohibitively expensive, and only rough annotations of the entire tissues are typically available. Classifiers trained on data with approximate labels have sub-optimal performance.<h4>Results</h4>To alleviate this challenge, we contribute a semi-supervised approach mi-CNN. mi-CNN implements multiple instance learning with a convolutional neural network (CNN). The multiple instance aspect enables weak supervision from tissue-level annotations when classifying subtissue locations. The convolutional architecture of the CNN captures contextual dependencies between the spectral features. Evaluations on simulated and experimental datasets demonstrated that mi-CNN improved the subtissue classification as compared to traditional classifiers. We propose mi-CNN as an important step toward accurate subtissue classification in MSI, enabling rapid distinction between tissue types and disease states.<h4>Availability and implementation</h4>The data and code are available at https://github.com/Vitek-Lab/mi-CNN_MSI.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btaa436"
+  },
+  {
+    "id": "10.1093/bioinformatics/btaa466",
+    "title": "Benchmarking gene ontology function predictions using negative annotations",
+    "authors": [
+      "Warwick Vesztrocy A",
+      "Dessimoz C"
+    ],
+    "abstract": "<h4>Motivation</h4>With the ever-increasing number and diversity of sequenced species, the challenge to characterize genes with functional information is even more important. In most species, this characterization almost entirely relies on automated electronic methods. As such, it is critical to benchmark the various methods. The Critical Assessment of protein Function Annotation algorithms (CAFA) series of community experiments provide the most comprehensive benchmark, with a time-delayed analysis leveraging newly curated experimentally supported annotations. However, the definition of a false positive in CAFA has not fully accounted for the open world assumption (OWA), leading to a systematic underestimation of precision. The main reason for this limitation is the relative paucity of negative experimental annotations.<h4>Results</h4>This article introduces a new, OWA-compliant, benchmark based on a balanced test set of positive and negative annotations. The negative annotations are derived from expert-curated annotations of protein families on phylogenetic trees. This approach results in a large increase in the average information content of negative annotations. The benchmark has been tested using the naïve and BLAST baseline methods, as well as two orthology-based methods. This new benchmark could complement existing ones in future CAFA experiments.<h4>Availability and implementation</h4>All data, as well as code used for analysis, is available from https://lab.dessimoz.org/20_not.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btaa466"
+  },
+  {
+    "id": "10.1093/bioinformatics/btaa465",
+    "title": "Inference of population admixture network from local gene genealogies: a coalescent-based maximum likelihood approach",
+    "authors": [
+      "Wu Y"
+    ],
+    "abstract": "<h4>Motivation</h4>Population admixture is an important subject in population genetics. Inferring population demographic history with admixture under the so-called admixture network model from population genetic data is an established problem in genetics. Existing admixture network inference approaches work with single genetic polymorphisms. While these methods are usually very fast, they do not fully utilize the information [e.g. linkage disequilibrium (LD)] contained in population genetic data.<h4>Results</h4>In this article, we develop a new admixture network inference method called GTmix. Different from existing methods, GTmix works with local gene genealogies that can be inferred from population haplotypes. Local gene genealogies represent the evolutionary history of sampled haplotypes and contain the LD information. GTmix performs coalescent-based maximum likelihood inference of admixture networks with inferred local genealogies based on the well-known multispecies coalescent (MSC) model. GTmix utilizes various techniques to speed up the likelihood computation on the MSC model and the optimal network search. Our simulations show that GTmix can infer more accurate admixture networks with much smaller data than existing methods, even when these existing methods are given much larger data. GTmix is reasonably efficient and can analyze population genetic datasets of current interests.<h4>Availability and implementation</h4>The program GTmix is available for download at: https://github.com/yufengwudcs/GTmix.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btaa465"
+  },
+  {
+    "id": "10.1093/bioinformatics/btaa434",
+    "title": "Identifying diagnosis-specific genotype-phenotype associations via joint multitask sparse canonical correlation analysis and classification",
+    "authors": [
+      "Du L",
+      "Liu F",
+      "Liu K",
+      "Yao X",
+      "Risacher SL",
+      "Han J",
+      "Guo L",
+      "Saykin AJ",
+      "Shen L"
+    ],
+    "abstract": "<h4>Motivation</h4>Brain imaging genetics studies the complex associations between genotypic data such as single nucleotide polymorphisms (SNPs) and imaging quantitative traits (QTs). The neurodegenerative disorders usually exhibit the diversity and heterogeneity, originating from which different diagnostic groups might carry distinct imaging QTs, SNPs and their interactions. Sparse canonical correlation analysis (SCCA) is widely used to identify bi-multivariate genotype-phenotype associations. However, most existing SCCA methods are unsupervised, leading to an inability to identify diagnosis-specific genotype-phenotype associations.<h4>Results</h4>In this article, we propose a new joint multitask learning method, named MT-SCCALR, which absorbs the merits of both SCCA and logistic regression. MT-SCCALR learns genotype-phenotype associations of multiple tasks jointly, with each task focusing on identifying one diagnosis-specific genotype-phenotype pattern. Meanwhile, MT-SCCALR cannot only select relevant SNPs and imaging QTs for each diagnostic group alone, but also allows the selection of those shared by multiple diagnostic groups. We derive an efficient optimization algorithm whose convergence to a local optimum is guaranteed. Compared with two state-of-the-art methods, MT-SCCALR yields better or similar canonical correlation coefficients and classification performances. In addition, it owns much better discriminative canonical weight patterns of great interest than competitors. This demonstrates the power and capability of MTSCCAR in identifying diagnostically heterogeneous genotype-phenotype patterns, which would be helpful to understand the pathophysiology of brain disorders.<h4>Availability and implementation</h4>The software is publicly available at https://github.com/dulei323/MTSCCALR.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btaa434"
+  },
+  {
+    "id": "10.1093/bioinformatics/btaa470",
+    "title": "Copy number evolution with weighted aberrations in cancer",
+    "authors": [
+      "Zeira R",
+      "Raphael BJ"
+    ],
+    "abstract": "<h4>Motivation</h4>Copy number aberrations (CNAs), which delete or amplify large contiguous segments of the genome, are a common type of somatic mutation in cancer. Copy number profiles, representing the number of copies of each region of a genome, are readily obtained from whole-genome sequencing or microarrays. However, modeling copy number evolution is a substantial challenge, because different CNAs may overlap with one another on the genome. A recent popular model for copy number evolution is the copy number distance (CND), defined as the length of a shortest sequence of deletions and amplifications of contiguous segments that transforms one profile into the other. In the CND, all events contribute equally; however, it is well known that rates of CNAs vary by length, genomic position and type (amplification versus deletion).<h4>Results</h4>We introduce a weighted CND that allows events to have varying weights, or probabilities, based on their length, position and type. We derive an efficient algorithm to compute the weighted CND as well as the associated transformation. This algorithm is based on the observation that the constraint matrix of the underlying optimization problem is totally unimodular. We show that the weighted CND improves phylogenetic reconstruction on simulated data where CNAs occur with varying probabilities, aids in the derivation of phylogenies from ultra-low-coverage single-cell DNA sequencing data and helps estimate CNA rates in a large pan-cancer dataset.<h4>Availability and implementation</h4>Code is available at https://github.com/raphael-group/WCND.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btaa470"
   },
   {
     "id": "10.1093/bioinformatics/btaa433",

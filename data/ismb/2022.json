@@ -1,106 +1,130 @@
 [
   {
-    "id": "10.1093/bioinformatics/btac257",
-    "title": "DECODE: a computational pipeline to discover T cell receptor binding rules",
+    "id": "10.1093/bioinformatics/btac264",
+    "title": "The effect of genome graph expressiveness on the discrepancy between genome graph distance and string set distance",
     "authors": [
-      "Papadopoulou I",
-      "Nguyen AP",
-      "Weber A",
-      "Martínez MR"
+      "Qiu Y",
+      "Kingsford C"
     ],
-    "abstract": "<h4>Motivation</h4>Understanding the mechanisms underlying T cell receptor (TCR) binding is of fundamental importance to understanding adaptive immune responses. A better understanding of the biochemical rules governing TCR binding can be used, e.g. to guide the design of more powerful and safer T cell-based therapies. Advances in repertoire sequencing technologies have made available millions of TCR sequences. Data abundance has, in turn, fueled the development of many computational models to predict the binding properties of TCRs from their sequences. Unfortunately, while many of these works have made great strides toward predicting TCR specificity using machine learning, the black-box nature of these models has resulted in a limited understanding of the rules that govern the binding of a TCR and an epitope.<h4>Results</h4>We present an easy-to-use and customizable computational pipeline, DECODE, to extract the binding rules from any black-box model designed to predict the TCR-epitope binding. DECODE offers a range of analytical and visualization tools to guide the user in the extraction of such rules. We demonstrate our pipeline on a recently published TCR-binding prediction model, TITAN, and show how to use the provided metrics to assess the quality of the computed rules. In conclusion, DECODE can lead to a better understanding of the sequence motifs that underlie TCR binding. Our pipeline can facilitate the investigation of current immunotherapeutic challenges, such as cross-reactive events due to off-target TCR binding.<h4>Availability and implementation</h4>Code is available publicly at https://github.com/phineasng/DECODE.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "abstract": "<h4>Motivation</h4>Intra-sample heterogeneity describes the phenomenon where a genomic sample contains a diverse set of genomic sequences. In practice, the true string sets in a sample are often unknown due to limitations in sequencing technology. In order to compare heterogeneous samples, genome graphs can be used to represent such sets of strings. However, a genome graph is generally able to represent a string set universe that contains multiple sets of strings in addition to the true string set. This difference between genome graphs and string sets is not well characterized. As a result, a distance metric between genome graphs may not match the distance between true string sets.<h4>Results</h4>We extend a genome graph distance metric, Graph Traversal Edit Distance (GTED) proposed by Ebrahimpour Boroojeny et al., to FGTED to model the distance between heterogeneous string sets and show that GTED and FGTED always underestimate the Earth Mover's Edit Distance (EMED) between string sets. We introduce the notion of string set universe diameter of a genome graph. Using the diameter, we are able to upper-bound the deviation of FGTED from EMED and to improve FGTED so that it reduces the average error in empirically estimating the similarity between true string sets. On simulated T-cell receptor sequences and actual Hepatitis B virus genomes, we show that the diameter-corrected FGTED reduces the average deviation of the estimated distance from the true string set distances by more than 250%.<h4>Availability and implementation</h4>Data and source code for reproducing the experiments are available at: https://github.com/Kingsford-Group/gtedemedtest/.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
     "topic": "",
     "conference": "ismb",
     "year": 2022,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btac257"
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac264"
   },
   {
-    "id": "10.1093/bioinformatics/btac218",
-    "title": "DeepCRISTL: deep transfer learning to predict CRISPR/Cas9 functional and endogenous on-target editing efficiency",
+    "id": "10.1093/bioinformatics/btac260",
+    "title": "Deep kernel learning improves molecular fingerprint prediction from tandem mass spectra",
     "authors": [
-      "Elkayam S",
-      "Orenstein Y"
+      "Dührkop K"
     ],
-    "abstract": "<h4>Motivation</h4>CRISPR/Cas9 technology has been revolutionizing the field of gene editing in recent years. Guide RNAs (gRNAs) enable Cas9 proteins to target specific genomic loci for editing. However, editing efficiency varies between gRNAs. Thus, computational methods were developed to predict editing efficiency for any gRNA of interest. High-throughput datasets of Cas9 editing efficiencies were produced to train machine-learning models to predict editing efficiency. However, these high-throughput datasets have low correlation with functional and endogenous editing. Another difficulty arises from the fact that functional and endogenous editing efficiency is more difficult to measure, and as a result, functional and endogenous datasets are too small to train accurate machine-learning models on.<h4>Results</h4>We developed DeepCRISTL, a deep-learning model to predict the on-target efficiency given a gRNA sequence. DeepCRISTL takes advantage of high-throughput datasets to learn general patterns of gRNA on-target editing efficiency, and then uses transfer learning (TL) to fine-tune the model and fit it to the functional and endogenous prediction task. We pre-trained the DeepCRISTL model on more than 150 000 gRNAs, produced through the DeepHF study as a high-throughput dataset of three Cas9 enzymes. We improved the DeepHF model by multi-task and ensemble techniques and achieved state-of-the-art results over each of the three enzymes: up to 0.89 in Spearman correlation between predicted and measured on-target efficiencies. To fine-tune model weights to predict on-target efficiency of functional or endogenous datasets, we tested several TL approaches, with gradual learning being the overall best performer, both when pre-trained on DeepHF and when pre-trained on CRISPROn, another high-throughput dataset. DeepCRISTL outperformed state-of-the-art methods on all functional and endogenous datasets. Using saliency maps, we identified and compared the important features learned by the model in each dataset. We believe DeepCRISTL will improve prediction performance in many other CRISPR/Cas9 editing contexts by leveraging TL to utilize both high-throughput datasets, and smaller and more biologically relevant datasets, such as functional and endogenous datasets.<h4>Availability and implementation</h4>DeepCRISTL is available via github.com/OrensteinLab/DeepCRISTL.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "abstract": "<h4>Motivation</h4>Untargeted metabolomics experiments rely on spectral libraries for structure annotation, but these libraries are vastly incomplete; in silico methods search in structure databases, allowing us to overcome this limitation. The best-performing in silico methods use machine learning to predict a molecular fingerprint from tandem mass spectra, then use the predicted fingerprint to search in a molecular structure database. Predicted molecular fingerprints are also of great interest for compound class annotation, de novo structure elucidation, and other tasks. So far, kernel support vector machines are the best tool for fingerprint prediction. However, they cannot be trained on all publicly available reference spectra because their training time scales cubically with the number of training data.<h4>Results</h4>We use the Nyström approximation to transform the kernel into a linear feature map. We evaluate two methods that use this feature map as input: a linear support vector machine and a deep neural network (DNN). For evaluation, we use a cross-validated dataset of 156 017 compounds and three independent datasets with 1734 compounds. We show that the combination of kernel method and DNN outperforms the kernel support vector machine, which is the current gold standard, as well as a DNN on tandem mass spectra on all evaluation datasets.<h4>Availability and implementation</h4>The deep kernel learning method for fingerprint prediction is part of the SIRIUS software, available at https://bio.informatik.uni-jena.de/software/sirius.",
     "topic": "",
     "conference": "ismb",
     "year": 2022,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btac218"
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac260"
   },
   {
-    "id": "10.1093/bioinformatics/btac246",
-    "title": "Bridging the gaps in statistical models of protein alignment",
+    "id": "10.1093/bioinformatics/btac220",
+    "title": "MOJITOO: a fast and universal method for integration of multimodal single-cell data",
     "authors": [
-      "Sumanaweera D",
-      "Allison L",
-      "Konagurthu AS"
+      "Cheng M",
+      "Li Z",
+      "Costa IG"
     ],
-    "abstract": "<h4>Summary</h4>Sequences of proteins evolve by accumulating substitutions together with insertions and deletions (indels) of amino acids. However, it remains a common practice to disconnect substitutions and indels, and infer approximate models for each of them separately, to quantify sequence relationships. Although this approach brings with it computational convenience (which remains its primary motivation), there is a dearth of attempts to unify and model them systematically and together. To overcome this gap, this article demonstrates how a complete statistical model quantifying the evolution of pairs of aligned proteins can be constructed using a time-parameterized substitution matrix and a time-parameterized alignment state machine. Methods to derive all parameters of such a model from any benchmark collection of aligned protein sequences are described here. This has not only allowed us to generate a unified statistical model for each of the nine widely used substitution matrices (PAM, JTT, BLOSUM, JO, WAG, VTML, LG, MIQS and PFASUM), but also resulted in a new unified model, MMLSUM. Our underlying methodology measures the Shannon information content using each model to explain losslessly any given collection of alignments, which has allowed us to quantify the performance of all the above models on six comprehensive alignment benchmarks. Our results show that MMLSUM results in a new and clear overall best performance, followed by PFASUM, VTML, BLOSUM and MIQS, respectively, amongst the top five. We further analyze the statistical properties of MMLSUM model and contrast it with others.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "abstract": "<h4>Motivation</h4>The advent of multi-modal single-cell sequencing techniques have shed new light on molecular mechanisms by simultaneously inspecting transcriptomes, epigenomes and proteomes of the same cell. However, to date, the existing computational approaches for integration of multimodal single-cell data are either computationally expensive, require the delineation of parameters or can only be applied to particular modalities.<h4>Results</h4>Here we present a single-cell multi-modal integration method, named Multi-mOdal Joint IntegraTion of cOmpOnents (MOJITOO). MOJITOO uses canonical correlation analysis for a fast and parameter free detection of a shared representation of cells from multimodal single-cell data. Moreover, estimated canonical components can be used for interpretation, i.e. association of modality-specific molecular features with the latent space. We evaluate MOJITOO using bi- and tri-modal single-cell datasets and show that MOJITOO outperforms existing methods regarding computational requirements, preservation of original latent spaces and clustering.<h4>Availability and implementation</h4>The software, code and data for benchmarking are available at https://github.com/CostaLab/MOJITOO and https://doi.org/10.5281/zenodo.6348128.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
     "topic": "",
     "conference": "ismb",
     "year": 2022,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btac246"
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac220"
   },
   {
-    "id": "10.1093/bioinformatics/btac250",
-    "title": "SPARSE: a sparse hypergraph neural network for learning multiple types of latent combinations to accurately predict drug-drug interactions",
+    "id": "10.1093/bioinformatics/btac222",
+    "title": "MLGL-MP: a Multi-Label Graph Learning framework enhanced by pathway interdependence for Metabolic Pathway prediction",
     "authors": [
-      "Nguyen DA",
-      "Nguyen CH",
-      "Petschner P",
-      "Mamitsuka H"
+      "Du BX",
+      "Zhao PC",
+      "Zhu B",
+      "Yiu SM",
+      "Nyamabo AK",
+      "Yu H",
+      "Shi JY"
     ],
-    "abstract": "<h4>Motivation</h4>Predicting side effects of drug-drug interactions (DDIs) is an important task in pharmacology. The state-of-the-art methods for DDI prediction use hypergraph neural networks to learn latent representations of drugs and side effects to express high-order relationships among two interacting drugs and a side effect. The idea of these methods is that each side effect is caused by a unique combination of latent features of the corresponding interacting drugs. However, in reality, a side effect might have multiple, different mechanisms that cannot be represented by a single combination of latent features of drugs. Moreover, DDI data are sparse, suggesting that using a sparsity regularization would help to learn better latent representations to improve prediction performances.<h4>Results</h4>We propose SPARSE, which encodes the DDI hypergraph and drug features to latent spaces to learn multiple types of combinations of latent features of drugs and side effects, controlling the model sparsity by a sparse prior. Our extensive experiments using both synthetic and three real-world DDI datasets showed the clear predictive performance advantage of SPARSE over cutting-edge competing methods. Also, latent feature analysis over unknown top predictions by SPARSE demonstrated the interpretability advantage contributed by the model sparsity.<h4>Availability and implementation</h4>Code and data can be accessed at https://github.com/anhnda/SPARSE.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "abstract": "<h4>Motivation</h4>During lead compound optimization, it is crucial to identify pathways where a drug-like compound is metabolized. Recently, machine learning-based methods have achieved inspiring progress to predict potential metabolic pathways for drug-like compounds. However, they neglect the knowledge that metabolic pathways are dependent on each other. Moreover, they are inadequate to elucidate why compounds participate in specific pathways.<h4>Results</h4>To address these issues, we propose a novel Multi-Label Graph Learning framework of Metabolic Pathway prediction boosted by pathway interdependence, called MLGL-MP, which contains a compound encoder, a pathway encoder and a multi-label predictor. The compound encoder learns compound embedding representations by graph neural networks. After constructing a pathway dependence graph by re-trained word embeddings and pathway co-occurrences, the pathway encoder learns pathway embeddings by graph convolutional networks. Moreover, after adapting the compound embedding space into the pathway embedding space, the multi-label predictor measures the proximity of two spaces to discriminate which pathways a compound participates in. The comparison with state-of-the-art methods on KEGG pathways demonstrates the superiority of our MLGL-MP. Also, the ablation studies reveal how its three components contribute to the model, including the pathway dependence, the adapter between compound embeddings and pathway embeddings, as well as the pre-training strategy. Furthermore, a case study illustrates the interpretability of MLGL-MP by indicating crucial substructures in a compound, which are significantly associated with the attending metabolic pathways. It is anticipated that this work can boost metabolic pathway predictions in drug discovery.<h4>Availability and implementation</h4>The code and data underlying this article are freely available at https://github.com/dubingxue/MLGL-MP.",
     "topic": "",
     "conference": "ismb",
     "year": 2022,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btac250"
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac222"
   },
   {
-    "id": "10.1093/bioinformatics/btac233",
-    "title": "An approachable, flexible and practical machine learning workshop for biologists",
+    "id": "10.1093/bioinformatics/btac232",
+    "title": "High-sensitivity pattern discovery in large, paired multiomic datasets",
     "authors": [
-      "Magnano CS",
-      "Mu F",
-      "Russ RS",
-      "Cvetkovic M",
-      "Treu D",
-      "Gitter A"
+      "Ghazi AR",
+      "Sucipto K",
+      "Rahnavard A",
+      "Franzosa EA",
+      "McIver LJ",
+      "Lloyd-Price J",
+      "Schwager E",
+      "Weingart G",
+      "Moon YS",
+      "Morgan XC",
+      "Waldron L",
+      "Huttenhower C"
     ],
-    "abstract": "<h4>Summary</h4>The increasing prevalence and importance of machine learning in biological research have created a need for machine learning training resources tailored towards biological researchers. However, existing resources are often inaccessible, infeasible or inappropriate for biologists because they require significant computational and mathematical knowledge, demand an unrealistic time-investment or teach skills primarily for computational researchers. We created the Machine Learning for Biologists (ML4Bio) workshop, a short, intensive workshop that empowers biological researchers to comprehend machine learning applications and pursue machine learning collaborations in their own research. The ML4Bio workshop focuses on classification and was designed around three principles: (i) emphasizing preparedness over fluency or expertise, (ii) necessitating minimal coding and mathematical background and (iii) requiring low time investment. It incorporates active learning methods and custom open-source software that allows participants to explore machine learning workflows. After multiple sessions to improve workshop design, we performed a study on three workshop sessions. Despite some confusion around identifying subtle methodological flaws in machine learning workflows, participants generally reported that the workshop met their goals, provided them with valuable skills and knowledge and greatly increased their beliefs that they could engage in research that uses machine learning. ML4Bio is an educational tool for biological researchers, and its creation and evaluation provide valuable insight into tailoring educational resources for active researchers in different domains.<h4>Availability and implementation</h4>Workshop materials are available at https://github.com/carpentries-incubator/ml4bio-workshop and the ml4bio software is available at https://github.com/gitter-lab/ml4bio.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "abstract": "<h4>Motivation</h4>Modern biological screens yield enormous numbers of measurements, and identifying and interpreting statistically significant associations among features are essential. In experiments featuring multiple high-dimensional datasets collected from the same set of samples, it is useful to identify groups of associated features between the datasets in a way that provides high statistical power and false discovery rate (FDR) control.<h4>Results</h4>Here, we present a novel hierarchical framework, HAllA (Hierarchical All-against-All association testing), for structured association discovery between paired high-dimensional datasets. HAllA efficiently integrates hierarchical hypothesis testing with FDR correction to reveal significant linear and non-linear block-wise relationships among continuous and/or categorical data. We optimized and evaluated HAllA using heterogeneous synthetic datasets of known association structure, where HAllA outperformed all-against-all and other block-testing approaches across a range of common similarity measures. We then applied HAllA to a series of real-world multiomics datasets, revealing new associations between gene expression and host immune activity, the microbiome and host transcriptome, metabolomic profiling and human health phenotypes.<h4>Availability and implementation</h4>An open-source implementation of HAllA is freely available at http://huttenhower.sph.harvard.edu/halla along with documentation, demo datasets and a user group.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
     "topic": "",
     "conference": "ismb",
     "year": 2022,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btac233"
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac232"
   },
   {
-    "id": "10.1093/bioinformatics/btac240",
-    "title": "From drug repositioning to target repositioning: prediction of therapeutic targets using genetically perturbed transcriptomic signatures",
+    "id": "10.1093/bioinformatics/btac231",
+    "title": "Computing optimal factories in metabolic networks with negative regulation",
     "authors": [
-      "Namba S",
-      "Iwata M",
-      "Yamanishi Y"
+      "Krieger S",
+      "Kececioglu J"
     ],
-    "abstract": "<h4>Motivation</h4>A critical element of drug development is the identification of therapeutic targets for diseases. However, the depletion of therapeutic targets is a serious problem.<h4>Results</h4>In this study, we propose the novel concept of target repositioning, an extension of the concept of drug repositioning, to predict new therapeutic targets for various diseases. Predictions were performed by a trans-disease analysis which integrated genetically perturbed transcriptomic signatures (knockdown of 4345 genes and overexpression of 3114 genes) and disease-specific gene transcriptomic signatures of 79 diseases. The trans-disease method, which takes into account similarities among diseases, enabled us to distinguish the inhibitory from activatory targets and to predict the therapeutic targetability of not only proteins with known target-disease associations but also orphan proteins without known associations. Our proposed method is expected to be useful for understanding the commonality of mechanisms among diseases and for therapeutic target identification in drug discovery.<h4>Availability and implementation</h4>Supplemental information and software are available at the following website [http://labo.bio.kyutech.ac.jp/~yamani/target_repositioning/].<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "abstract": "<h4>Motivation</h4>A factory in a metabolic network specifies how to produce target molecules from source compounds through biochemical reactions, properly accounting for reaction stoichiometry to conserve or not deplete intermediate metabolites. While finding factories is a fundamental problem in systems biology, available methods do not consider the number of reactions used, nor address negative regulation.<h4>Methods</h4>We introduce the new problem of finding optimal factories that use the fewest reactions, for the first time incorporating both first- and second-order negative regulation. We model this problem with directed hypergraphs, prove it is NP-complete, solve it via mixed-integer linear programming, and accommodate second-order negative regulation by an iterative approach that generates next-best factories.<h4>Results</h4>This optimization-based approach is remarkably fast in practice, typically finding optimal factories in a few seconds, even for metabolic networks involving tens of thousands of reactions and metabolites, as demonstrated through comprehensive experiments across all instances from standard reaction databases.<h4>Availability and implementation</h4>Source code for an implementation of our new method for optimal factories with negative regulation in a new tool called Odinn, together with all datasets, is available free for non-commercial use at http://odinn.cs.arizona.edu.",
     "topic": "",
     "conference": "ismb",
     "year": 2022,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btac240"
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac231"
   },
   {
-    "id": "10.1093/bioinformatics/btac228",
-    "title": "PolarMorphism enables discovery of shared genetic variants across multiple traits from GWAS summary statistics",
+    "id": "10.1093/bioinformatics/btac253",
+    "title": "Reconstructing tumor clonal lineage trees incorporating single-nucleotide variants, copy number alterations and structural variations",
     "authors": [
-      "von Berg J",
-      "Ten Dam M",
-      "van der Laan SW",
-      "de Ridder J"
+      "Fu X",
+      "Lei H",
+      "Tao Y",
+      "Schwartz R"
     ],
-    "abstract": "<h4>Motivation</h4>Pleiotropic SNPs are associated with multiple traits. Such SNPs can help pinpoint biological processes with an effect on multiple traits or point to a shared etiology between traits. We present PolarMorphism, a new method for the identification of pleiotropic SNPs from genome-wide association studies (GWAS) summary statistics. PolarMorphism can be readily applied to more than two traits or whole trait domains. PolarMorphism makes use of the fact that trait-specific SNP effect sizes can be seen as Cartesian coordinates and can thus be converted to polar coordinates r (distance from the origin) and theta (angle with the Cartesian x-axis, in the case of two traits). r describes the overall effect of a SNP, while theta describes the extent to which a SNP is shared. r and theta are used to determine the significance of SNP sharedness, resulting in a P-value per SNP that can be used for further analysis.<h4>Results</h4>We apply PolarMorphism to a large collection of publicly available GWAS summary statistics enabling the construction of a pleiotropy network that shows the extent to which traits share SNPs. We show how PolarMorphism can be used to gain insight into relationships between traits and trait domains and contrast it with genetic correlation. Furthermore, pathway analysis of the newly discovered pleiotropic SNPs demonstrates that analysis of more than two traits simultaneously yields more biologically relevant results than the combined results of pairwise analysis of the same traits. Finally, we show that PolarMorphism is more efficient and more powerful than previously published methods.<h4>Availability and implementation</h4>code: https://github.com/UMCUGenetics/PolarMorphism, results: 10.5281/zenodo.5844193.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "abstract": "<h4>Motivation</h4>Cancer develops through a process of clonal evolution in which an initially healthy cell gives rise to progeny gradually differentiating through the accumulation of genetic and epigenetic mutations. These mutations can take various forms, including single-nucleotide variants (SNVs), copy number alterations (CNAs) or structural variations (SVs), with each variant type providing complementary insights into tumor evolution as well as offering distinct challenges to phylogenetic inference.<h4>Results</h4>In this work, we develop a tumor phylogeny method, TUSV-ext, which incorporates SNVs, CNAs and SVs into a single inference framework. We demonstrate on simulated data that the method produces accurate tree inferences in the presence of all three variant types. We further demonstrate the method through application to real prostate tumor data, showing how our approach to coordinated phylogeny inference and clonal construction with all three variant types can reveal a more complicated clonal structure than is suggested by prior work, consistent with extensive polyclonal seeding or migration.<h4>Availability and implementation</h4>https://github.com/CMUSchwartzLab/TUSV-ext.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
     "topic": "",
     "conference": "ismb",
     "year": 2022,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btac228"
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac253"
+  },
+  {
+    "id": "10.1093/bioinformatics/btac254",
+    "title": "Phylovar: toward scalable phylogeny-aware inference of single-nucleotide variations from single-cell DNA sequencing data",
+    "authors": [
+      "Edrisi M",
+      "Valecha MV",
+      "Chowdary SBV",
+      "Robledo S",
+      "Ogilvie HA",
+      "Posada D",
+      "Zafar H",
+      "Nakhleh L"
+    ],
+    "abstract": "<h4>Motivation</h4>Single-nucleotide variants (SNVs) are the most common variations in the human genome. Recently developed methods for SNV detection from single-cell DNA sequencing data, such as SCIΦ and scVILP, leverage the evolutionary history of the cells to overcome the technical errors associated with single-cell sequencing protocols. Despite being accurate, these methods are not scalable to the extensive genomic breadth of single-cell whole-genome (scWGS) and whole-exome sequencing (scWES) data.<h4>Results</h4>Here, we report on a new scalable method, Phylovar, which extends the phylogeny-guided variant calling approach to sequencing datasets containing millions of loci. Through benchmarking on simulated datasets under different settings, we show that, Phylovar outperforms SCIΦ in terms of running time while being more accurate than Monovar (which is not phylogeny-aware) in terms of SNV detection. Furthermore, we applied Phylovar to two real biological datasets: an scWES triple-negative breast cancer data consisting of 32 cells and 3375 loci as well as an scWGS data of neuron cells from a normal human brain containing 16 cells and approximately 2.5 million loci. For the cancer data, Phylovar detected somatic SNVs with high or moderate functional impact that were also supported by bulk sequencing dataset and for the neuron dataset, Phylovar identified 5745 SNVs with non-synonymous effects some of which were associated with neurodegenerative diseases.<h4>Availability and implementation</h4>Phylovar is implemented in Python and is publicly available at https://github.com/NakhlehLab/Phylovar.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac254"
   },
   {
     "id": "10.1093/bioinformatics/btac265",
@@ -241,131 +265,107 @@
     "paper_url": "https://doi.org/10.1093/bioinformatics/btac255"
   },
   {
-    "id": "10.1093/bioinformatics/btac264",
-    "title": "The effect of genome graph expressiveness on the discrepancy between genome graph distance and string set distance",
+    "id": "10.1093/bioinformatics/btac257",
+    "title": "DECODE: a computational pipeline to discover T cell receptor binding rules",
     "authors": [
-      "Qiu Y",
-      "Kingsford C"
+      "Papadopoulou I",
+      "Nguyen AP",
+      "Weber A",
+      "Martínez MR"
     ],
-    "abstract": "<h4>Motivation</h4>Intra-sample heterogeneity describes the phenomenon where a genomic sample contains a diverse set of genomic sequences. In practice, the true string sets in a sample are often unknown due to limitations in sequencing technology. In order to compare heterogeneous samples, genome graphs can be used to represent such sets of strings. However, a genome graph is generally able to represent a string set universe that contains multiple sets of strings in addition to the true string set. This difference between genome graphs and string sets is not well characterized. As a result, a distance metric between genome graphs may not match the distance between true string sets.<h4>Results</h4>We extend a genome graph distance metric, Graph Traversal Edit Distance (GTED) proposed by Ebrahimpour Boroojeny et al., to FGTED to model the distance between heterogeneous string sets and show that GTED and FGTED always underestimate the Earth Mover's Edit Distance (EMED) between string sets. We introduce the notion of string set universe diameter of a genome graph. Using the diameter, we are able to upper-bound the deviation of FGTED from EMED and to improve FGTED so that it reduces the average error in empirically estimating the similarity between true string sets. On simulated T-cell receptor sequences and actual Hepatitis B virus genomes, we show that the diameter-corrected FGTED reduces the average deviation of the estimated distance from the true string set distances by more than 250%.<h4>Availability and implementation</h4>Data and source code for reproducing the experiments are available at: https://github.com/Kingsford-Group/gtedemedtest/.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "abstract": "<h4>Motivation</h4>Understanding the mechanisms underlying T cell receptor (TCR) binding is of fundamental importance to understanding adaptive immune responses. A better understanding of the biochemical rules governing TCR binding can be used, e.g. to guide the design of more powerful and safer T cell-based therapies. Advances in repertoire sequencing technologies have made available millions of TCR sequences. Data abundance has, in turn, fueled the development of many computational models to predict the binding properties of TCRs from their sequences. Unfortunately, while many of these works have made great strides toward predicting TCR specificity using machine learning, the black-box nature of these models has resulted in a limited understanding of the rules that govern the binding of a TCR and an epitope.<h4>Results</h4>We present an easy-to-use and customizable computational pipeline, DECODE, to extract the binding rules from any black-box model designed to predict the TCR-epitope binding. DECODE offers a range of analytical and visualization tools to guide the user in the extraction of such rules. We demonstrate our pipeline on a recently published TCR-binding prediction model, TITAN, and show how to use the provided metrics to assess the quality of the computed rules. In conclusion, DECODE can lead to a better understanding of the sequence motifs that underlie TCR binding. Our pipeline can facilitate the investigation of current immunotherapeutic challenges, such as cross-reactive events due to off-target TCR binding.<h4>Availability and implementation</h4>Code is available publicly at https://github.com/phineasng/DECODE.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
     "topic": "",
     "conference": "ismb",
     "year": 2022,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btac264"
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac257"
   },
   {
-    "id": "10.1093/bioinformatics/btac260",
-    "title": "Deep kernel learning improves molecular fingerprint prediction from tandem mass spectra",
+    "id": "10.1093/bioinformatics/btac218",
+    "title": "DeepCRISTL: deep transfer learning to predict CRISPR/Cas9 functional and endogenous on-target editing efficiency",
     "authors": [
-      "Dührkop K"
+      "Elkayam S",
+      "Orenstein Y"
     ],
-    "abstract": "<h4>Motivation</h4>Untargeted metabolomics experiments rely on spectral libraries for structure annotation, but these libraries are vastly incomplete; in silico methods search in structure databases, allowing us to overcome this limitation. The best-performing in silico methods use machine learning to predict a molecular fingerprint from tandem mass spectra, then use the predicted fingerprint to search in a molecular structure database. Predicted molecular fingerprints are also of great interest for compound class annotation, de novo structure elucidation, and other tasks. So far, kernel support vector machines are the best tool for fingerprint prediction. However, they cannot be trained on all publicly available reference spectra because their training time scales cubically with the number of training data.<h4>Results</h4>We use the Nyström approximation to transform the kernel into a linear feature map. We evaluate two methods that use this feature map as input: a linear support vector machine and a deep neural network (DNN). For evaluation, we use a cross-validated dataset of 156 017 compounds and three independent datasets with 1734 compounds. We show that the combination of kernel method and DNN outperforms the kernel support vector machine, which is the current gold standard, as well as a DNN on tandem mass spectra on all evaluation datasets.<h4>Availability and implementation</h4>The deep kernel learning method for fingerprint prediction is part of the SIRIUS software, available at https://bio.informatik.uni-jena.de/software/sirius.",
+    "abstract": "<h4>Motivation</h4>CRISPR/Cas9 technology has been revolutionizing the field of gene editing in recent years. Guide RNAs (gRNAs) enable Cas9 proteins to target specific genomic loci for editing. However, editing efficiency varies between gRNAs. Thus, computational methods were developed to predict editing efficiency for any gRNA of interest. High-throughput datasets of Cas9 editing efficiencies were produced to train machine-learning models to predict editing efficiency. However, these high-throughput datasets have low correlation with functional and endogenous editing. Another difficulty arises from the fact that functional and endogenous editing efficiency is more difficult to measure, and as a result, functional and endogenous datasets are too small to train accurate machine-learning models on.<h4>Results</h4>We developed DeepCRISTL, a deep-learning model to predict the on-target efficiency given a gRNA sequence. DeepCRISTL takes advantage of high-throughput datasets to learn general patterns of gRNA on-target editing efficiency, and then uses transfer learning (TL) to fine-tune the model and fit it to the functional and endogenous prediction task. We pre-trained the DeepCRISTL model on more than 150 000 gRNAs, produced through the DeepHF study as a high-throughput dataset of three Cas9 enzymes. We improved the DeepHF model by multi-task and ensemble techniques and achieved state-of-the-art results over each of the three enzymes: up to 0.89 in Spearman correlation between predicted and measured on-target efficiencies. To fine-tune model weights to predict on-target efficiency of functional or endogenous datasets, we tested several TL approaches, with gradual learning being the overall best performer, both when pre-trained on DeepHF and when pre-trained on CRISPROn, another high-throughput dataset. DeepCRISTL outperformed state-of-the-art methods on all functional and endogenous datasets. Using saliency maps, we identified and compared the important features learned by the model in each dataset. We believe DeepCRISTL will improve prediction performance in many other CRISPR/Cas9 editing contexts by leveraging TL to utilize both high-throughput datasets, and smaller and more biologically relevant datasets, such as functional and endogenous datasets.<h4>Availability and implementation</h4>DeepCRISTL is available via github.com/OrensteinLab/DeepCRISTL.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
     "topic": "",
     "conference": "ismb",
     "year": 2022,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btac260"
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac218"
   },
   {
-    "id": "10.1093/bioinformatics/btac220",
-    "title": "MOJITOO: a fast and universal method for integration of multimodal single-cell data",
+    "id": "10.1093/bioinformatics/btac246",
+    "title": "Bridging the gaps in statistical models of protein alignment",
     "authors": [
-      "Cheng M",
-      "Li Z",
-      "Costa IG"
+      "Sumanaweera D",
+      "Allison L",
+      "Konagurthu AS"
     ],
-    "abstract": "<h4>Motivation</h4>The advent of multi-modal single-cell sequencing techniques have shed new light on molecular mechanisms by simultaneously inspecting transcriptomes, epigenomes and proteomes of the same cell. However, to date, the existing computational approaches for integration of multimodal single-cell data are either computationally expensive, require the delineation of parameters or can only be applied to particular modalities.<h4>Results</h4>Here we present a single-cell multi-modal integration method, named Multi-mOdal Joint IntegraTion of cOmpOnents (MOJITOO). MOJITOO uses canonical correlation analysis for a fast and parameter free detection of a shared representation of cells from multimodal single-cell data. Moreover, estimated canonical components can be used for interpretation, i.e. association of modality-specific molecular features with the latent space. We evaluate MOJITOO using bi- and tri-modal single-cell datasets and show that MOJITOO outperforms existing methods regarding computational requirements, preservation of original latent spaces and clustering.<h4>Availability and implementation</h4>The software, code and data for benchmarking are available at https://github.com/CostaLab/MOJITOO and https://doi.org/10.5281/zenodo.6348128.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "abstract": "<h4>Summary</h4>Sequences of proteins evolve by accumulating substitutions together with insertions and deletions (indels) of amino acids. However, it remains a common practice to disconnect substitutions and indels, and infer approximate models for each of them separately, to quantify sequence relationships. Although this approach brings with it computational convenience (which remains its primary motivation), there is a dearth of attempts to unify and model them systematically and together. To overcome this gap, this article demonstrates how a complete statistical model quantifying the evolution of pairs of aligned proteins can be constructed using a time-parameterized substitution matrix and a time-parameterized alignment state machine. Methods to derive all parameters of such a model from any benchmark collection of aligned protein sequences are described here. This has not only allowed us to generate a unified statistical model for each of the nine widely used substitution matrices (PAM, JTT, BLOSUM, JO, WAG, VTML, LG, MIQS and PFASUM), but also resulted in a new unified model, MMLSUM. Our underlying methodology measures the Shannon information content using each model to explain losslessly any given collection of alignments, which has allowed us to quantify the performance of all the above models on six comprehensive alignment benchmarks. Our results show that MMLSUM results in a new and clear overall best performance, followed by PFASUM, VTML, BLOSUM and MIQS, respectively, amongst the top five. We further analyze the statistical properties of MMLSUM model and contrast it with others.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
     "topic": "",
     "conference": "ismb",
     "year": 2022,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btac220"
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac246"
   },
   {
-    "id": "10.1093/bioinformatics/btac222",
-    "title": "MLGL-MP: a Multi-Label Graph Learning framework enhanced by pathway interdependence for Metabolic Pathway prediction",
+    "id": "10.1093/bioinformatics/btac250",
+    "title": "SPARSE: a sparse hypergraph neural network for learning multiple types of latent combinations to accurately predict drug-drug interactions",
     "authors": [
-      "Du BX",
-      "Zhao PC",
-      "Zhu B",
-      "Yiu SM",
-      "Nyamabo AK",
-      "Yu H",
-      "Shi JY"
+      "Nguyen DA",
+      "Nguyen CH",
+      "Petschner P",
+      "Mamitsuka H"
     ],
-    "abstract": "<h4>Motivation</h4>During lead compound optimization, it is crucial to identify pathways where a drug-like compound is metabolized. Recently, machine learning-based methods have achieved inspiring progress to predict potential metabolic pathways for drug-like compounds. However, they neglect the knowledge that metabolic pathways are dependent on each other. Moreover, they are inadequate to elucidate why compounds participate in specific pathways.<h4>Results</h4>To address these issues, we propose a novel Multi-Label Graph Learning framework of Metabolic Pathway prediction boosted by pathway interdependence, called MLGL-MP, which contains a compound encoder, a pathway encoder and a multi-label predictor. The compound encoder learns compound embedding representations by graph neural networks. After constructing a pathway dependence graph by re-trained word embeddings and pathway co-occurrences, the pathway encoder learns pathway embeddings by graph convolutional networks. Moreover, after adapting the compound embedding space into the pathway embedding space, the multi-label predictor measures the proximity of two spaces to discriminate which pathways a compound participates in. The comparison with state-of-the-art methods on KEGG pathways demonstrates the superiority of our MLGL-MP. Also, the ablation studies reveal how its three components contribute to the model, including the pathway dependence, the adapter between compound embeddings and pathway embeddings, as well as the pre-training strategy. Furthermore, a case study illustrates the interpretability of MLGL-MP by indicating crucial substructures in a compound, which are significantly associated with the attending metabolic pathways. It is anticipated that this work can boost metabolic pathway predictions in drug discovery.<h4>Availability and implementation</h4>The code and data underlying this article are freely available at https://github.com/dubingxue/MLGL-MP.",
+    "abstract": "<h4>Motivation</h4>Predicting side effects of drug-drug interactions (DDIs) is an important task in pharmacology. The state-of-the-art methods for DDI prediction use hypergraph neural networks to learn latent representations of drugs and side effects to express high-order relationships among two interacting drugs and a side effect. The idea of these methods is that each side effect is caused by a unique combination of latent features of the corresponding interacting drugs. However, in reality, a side effect might have multiple, different mechanisms that cannot be represented by a single combination of latent features of drugs. Moreover, DDI data are sparse, suggesting that using a sparsity regularization would help to learn better latent representations to improve prediction performances.<h4>Results</h4>We propose SPARSE, which encodes the DDI hypergraph and drug features to latent spaces to learn multiple types of combinations of latent features of drugs and side effects, controlling the model sparsity by a sparse prior. Our extensive experiments using both synthetic and three real-world DDI datasets showed the clear predictive performance advantage of SPARSE over cutting-edge competing methods. Also, latent feature analysis over unknown top predictions by SPARSE demonstrated the interpretability advantage contributed by the model sparsity.<h4>Availability and implementation</h4>Code and data can be accessed at https://github.com/anhnda/SPARSE.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
     "topic": "",
     "conference": "ismb",
     "year": 2022,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btac222"
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac250"
   },
   {
-    "id": "10.1093/bioinformatics/btac232",
-    "title": "High-sensitivity pattern discovery in large, paired multiomic datasets",
+    "id": "10.1093/bioinformatics/btac233",
+    "title": "An approachable, flexible and practical machine learning workshop for biologists",
     "authors": [
-      "Ghazi AR",
-      "Sucipto K",
-      "Rahnavard A",
-      "Franzosa EA",
-      "McIver LJ",
-      "Lloyd-Price J",
-      "Schwager E",
-      "Weingart G",
-      "Moon YS",
-      "Morgan XC",
-      "Waldron L",
-      "Huttenhower C"
+      "Magnano CS",
+      "Mu F",
+      "Russ RS",
+      "Cvetkovic M",
+      "Treu D",
+      "Gitter A"
     ],
-    "abstract": "<h4>Motivation</h4>Modern biological screens yield enormous numbers of measurements, and identifying and interpreting statistically significant associations among features are essential. In experiments featuring multiple high-dimensional datasets collected from the same set of samples, it is useful to identify groups of associated features between the datasets in a way that provides high statistical power and false discovery rate (FDR) control.<h4>Results</h4>Here, we present a novel hierarchical framework, HAllA (Hierarchical All-against-All association testing), for structured association discovery between paired high-dimensional datasets. HAllA efficiently integrates hierarchical hypothesis testing with FDR correction to reveal significant linear and non-linear block-wise relationships among continuous and/or categorical data. We optimized and evaluated HAllA using heterogeneous synthetic datasets of known association structure, where HAllA outperformed all-against-all and other block-testing approaches across a range of common similarity measures. We then applied HAllA to a series of real-world multiomics datasets, revealing new associations between gene expression and host immune activity, the microbiome and host transcriptome, metabolomic profiling and human health phenotypes.<h4>Availability and implementation</h4>An open-source implementation of HAllA is freely available at http://huttenhower.sph.harvard.edu/halla along with documentation, demo datasets and a user group.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "abstract": "<h4>Summary</h4>The increasing prevalence and importance of machine learning in biological research have created a need for machine learning training resources tailored towards biological researchers. However, existing resources are often inaccessible, infeasible or inappropriate for biologists because they require significant computational and mathematical knowledge, demand an unrealistic time-investment or teach skills primarily for computational researchers. We created the Machine Learning for Biologists (ML4Bio) workshop, a short, intensive workshop that empowers biological researchers to comprehend machine learning applications and pursue machine learning collaborations in their own research. The ML4Bio workshop focuses on classification and was designed around three principles: (i) emphasizing preparedness over fluency or expertise, (ii) necessitating minimal coding and mathematical background and (iii) requiring low time investment. It incorporates active learning methods and custom open-source software that allows participants to explore machine learning workflows. After multiple sessions to improve workshop design, we performed a study on three workshop sessions. Despite some confusion around identifying subtle methodological flaws in machine learning workflows, participants generally reported that the workshop met their goals, provided them with valuable skills and knowledge and greatly increased their beliefs that they could engage in research that uses machine learning. ML4Bio is an educational tool for biological researchers, and its creation and evaluation provide valuable insight into tailoring educational resources for active researchers in different domains.<h4>Availability and implementation</h4>Workshop materials are available at https://github.com/carpentries-incubator/ml4bio-workshop and the ml4bio software is available at https://github.com/gitter-lab/ml4bio.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
     "topic": "",
     "conference": "ismb",
     "year": 2022,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btac232"
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac233"
   },
   {
-    "id": "10.1093/bioinformatics/btac231",
-    "title": "Computing optimal factories in metabolic networks with negative regulation",
+    "id": "10.1093/bioinformatics/btac240",
+    "title": "From drug repositioning to target repositioning: prediction of therapeutic targets using genetically perturbed transcriptomic signatures",
     "authors": [
-      "Krieger S",
-      "Kececioglu J"
+      "Namba S",
+      "Iwata M",
+      "Yamanishi Y"
     ],
-    "abstract": "<h4>Motivation</h4>A factory in a metabolic network specifies how to produce target molecules from source compounds through biochemical reactions, properly accounting for reaction stoichiometry to conserve or not deplete intermediate metabolites. While finding factories is a fundamental problem in systems biology, available methods do not consider the number of reactions used, nor address negative regulation.<h4>Methods</h4>We introduce the new problem of finding optimal factories that use the fewest reactions, for the first time incorporating both first- and second-order negative regulation. We model this problem with directed hypergraphs, prove it is NP-complete, solve it via mixed-integer linear programming, and accommodate second-order negative regulation by an iterative approach that generates next-best factories.<h4>Results</h4>This optimization-based approach is remarkably fast in practice, typically finding optimal factories in a few seconds, even for metabolic networks involving tens of thousands of reactions and metabolites, as demonstrated through comprehensive experiments across all instances from standard reaction databases.<h4>Availability and implementation</h4>Source code for an implementation of our new method for optimal factories with negative regulation in a new tool called Odinn, together with all datasets, is available free for non-commercial use at http://odinn.cs.arizona.edu.",
+    "abstract": "<h4>Motivation</h4>A critical element of drug development is the identification of therapeutic targets for diseases. However, the depletion of therapeutic targets is a serious problem.<h4>Results</h4>In this study, we propose the novel concept of target repositioning, an extension of the concept of drug repositioning, to predict new therapeutic targets for various diseases. Predictions were performed by a trans-disease analysis which integrated genetically perturbed transcriptomic signatures (knockdown of 4345 genes and overexpression of 3114 genes) and disease-specific gene transcriptomic signatures of 79 diseases. The trans-disease method, which takes into account similarities among diseases, enabled us to distinguish the inhibitory from activatory targets and to predict the therapeutic targetability of not only proteins with known target-disease associations but also orphan proteins without known associations. Our proposed method is expected to be useful for understanding the commonality of mechanisms among diseases and for therapeutic target identification in drug discovery.<h4>Availability and implementation</h4>Supplemental information and software are available at the following website [http://labo.bio.kyutech.ac.jp/~yamani/target_repositioning/].<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
     "topic": "",
     "conference": "ismb",
     "year": 2022,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btac231"
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac240"
   },
   {
-    "id": "10.1093/bioinformatics/btac253",
-    "title": "Reconstructing tumor clonal lineage trees incorporating single-nucleotide variants, copy number alterations and structural variations",
+    "id": "10.1093/bioinformatics/btac228",
+    "title": "PolarMorphism enables discovery of shared genetic variants across multiple traits from GWAS summary statistics",
     "authors": [
-      "Fu X",
-      "Lei H",
-      "Tao Y",
-      "Schwartz R"
+      "von Berg J",
+      "Ten Dam M",
+      "van der Laan SW",
+      "de Ridder J"
     ],
-    "abstract": "<h4>Motivation</h4>Cancer develops through a process of clonal evolution in which an initially healthy cell gives rise to progeny gradually differentiating through the accumulation of genetic and epigenetic mutations. These mutations can take various forms, including single-nucleotide variants (SNVs), copy number alterations (CNAs) or structural variations (SVs), with each variant type providing complementary insights into tumor evolution as well as offering distinct challenges to phylogenetic inference.<h4>Results</h4>In this work, we develop a tumor phylogeny method, TUSV-ext, which incorporates SNVs, CNAs and SVs into a single inference framework. We demonstrate on simulated data that the method produces accurate tree inferences in the presence of all three variant types. We further demonstrate the method through application to real prostate tumor data, showing how our approach to coordinated phylogeny inference and clonal construction with all three variant types can reveal a more complicated clonal structure than is suggested by prior work, consistent with extensive polyclonal seeding or migration.<h4>Availability and implementation</h4>https://github.com/CMUSchwartzLab/TUSV-ext.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "abstract": "<h4>Motivation</h4>Pleiotropic SNPs are associated with multiple traits. Such SNPs can help pinpoint biological processes with an effect on multiple traits or point to a shared etiology between traits. We present PolarMorphism, a new method for the identification of pleiotropic SNPs from genome-wide association studies (GWAS) summary statistics. PolarMorphism can be readily applied to more than two traits or whole trait domains. PolarMorphism makes use of the fact that trait-specific SNP effect sizes can be seen as Cartesian coordinates and can thus be converted to polar coordinates r (distance from the origin) and theta (angle with the Cartesian x-axis, in the case of two traits). r describes the overall effect of a SNP, while theta describes the extent to which a SNP is shared. r and theta are used to determine the significance of SNP sharedness, resulting in a P-value per SNP that can be used for further analysis.<h4>Results</h4>We apply PolarMorphism to a large collection of publicly available GWAS summary statistics enabling the construction of a pleiotropy network that shows the extent to which traits share SNPs. We show how PolarMorphism can be used to gain insight into relationships between traits and trait domains and contrast it with genetic correlation. Furthermore, pathway analysis of the newly discovered pleiotropic SNPs demonstrates that analysis of more than two traits simultaneously yields more biologically relevant results than the combined results of pairwise analysis of the same traits. Finally, we show that PolarMorphism is more efficient and more powerful than previously published methods.<h4>Availability and implementation</h4>code: https://github.com/UMCUGenetics/PolarMorphism, results: 10.5281/zenodo.5844193.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
     "topic": "",
     "conference": "ismb",
     "year": 2022,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btac253"
-  },
-  {
-    "id": "10.1093/bioinformatics/btac254",
-    "title": "Phylovar: toward scalable phylogeny-aware inference of single-nucleotide variations from single-cell DNA sequencing data",
-    "authors": [
-      "Edrisi M",
-      "Valecha MV",
-      "Chowdary SBV",
-      "Robledo S",
-      "Ogilvie HA",
-      "Posada D",
-      "Zafar H",
-      "Nakhleh L"
-    ],
-    "abstract": "<h4>Motivation</h4>Single-nucleotide variants (SNVs) are the most common variations in the human genome. Recently developed methods for SNV detection from single-cell DNA sequencing data, such as SCIΦ and scVILP, leverage the evolutionary history of the cells to overcome the technical errors associated with single-cell sequencing protocols. Despite being accurate, these methods are not scalable to the extensive genomic breadth of single-cell whole-genome (scWGS) and whole-exome sequencing (scWES) data.<h4>Results</h4>Here, we report on a new scalable method, Phylovar, which extends the phylogeny-guided variant calling approach to sequencing datasets containing millions of loci. Through benchmarking on simulated datasets under different settings, we show that, Phylovar outperforms SCIΦ in terms of running time while being more accurate than Monovar (which is not phylogeny-aware) in terms of SNV detection. Furthermore, we applied Phylovar to two real biological datasets: an scWES triple-negative breast cancer data consisting of 32 cells and 3375 loci as well as an scWGS data of neuron cells from a normal human brain containing 16 cells and approximately 2.5 million loci. For the cancer data, Phylovar detected somatic SNVs with high or moderate functional impact that were also supported by bulk sequencing dataset and for the neuron dataset, Phylovar identified 5745 SNVs with non-synonymous effects some of which were associated with neurodegenerative diseases.<h4>Availability and implementation</h4>Phylovar is implemented in Python and is publicly available at https://github.com/NakhlehLab/Phylovar.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2022,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btac254"
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btac228"
   },
   {
     "id": "10.1093/bioinformatics/btac251",
