@@ -161,6 +161,162 @@
     "paper_url": "https://doi.org/10.1093/bioinformatics/btaa317"
   },
   {
+    "id": "10.1093/bioinformatics/btaa489",
+    "title": "Phylogenetic double placement of mixed samples",
+    "authors": [
+      "Balaban M",
+      "Mirarab S"
+    ],
+    "abstract": "<h4>Motivation</h4>Consider a simple computational problem. The inputs are (i) the set of mixed reads generated from a sample that combines two organisms and (ii) separate sets of reads for several reference genomes of known origins. The goal is to find the two organisms that constitute the mixed sample. When constituents are absent from the reference set, we seek to phylogenetically position them with respect to the underlying tree of the reference species. This simple yet fundamental problem (which we call phylogenetic double-placement) has enjoyed surprisingly little attention in the literature. As genome skimming (low-pass sequencing of genomes at low coverage, precluding assembly) becomes more prevalent, this problem finds wide-ranging applications in areas as varied as biodiversity research, food production and provenance, and evolutionary reconstruction.<h4>Results</h4>We introduce a model that relates distances between a mixed sample and reference species to the distances between constituents and reference species. Our model is based on Jaccard indices computed between each sample represented as k-mer sets. The model, built on several assumptions and approximations, allows us to formalize the phylogenetic double-placement problem as a non-convex optimization problem that decomposes mixture distances and performs phylogenetic placement simultaneously. Using a variety of techniques, we are able to solve this optimization problem numerically. We test the resulting method, called MIxed Sample Analysis tool (MISA), on a varied set of simulated and biological datasets. Despite all the assumptions used, the method performs remarkably well in practice.<h4>Availability and implementation</h4>The software and data are available at https://github.com/balabanmetin/misa and https://github.com/balabanmetin/misa-data.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btaa489"
+  },
+  {
+    "id": "10.1093/bioinformatics/btaa439",
+    "title": "Network-based characterization of disease-disease relationships in terms of drugs and therapeutic targets",
+    "authors": [
+      "Iida M",
+      "Iwata M",
+      "Yamanishi Y"
+    ],
+    "abstract": "<h4>Motivation</h4>Disease states are distinguished from each other in terms of differing clinical phenotypes, but characteristic molecular features are often common to various diseases. Similarities between diseases can be explained by characteristic gene expression patterns. However, most disease-disease relationships remain uncharacterized.<h4>Results</h4>In this study, we proposed a novel approach for network-based characterization of disease-disease relationships in terms of drugs and therapeutic targets. We performed large-scale analyses of omics data and molecular interaction networks for 79 diseases, including adrenoleukodystrophy, leukaemia, Alzheimer's disease, asthma, atopic dermatitis, breast cancer, cystic fibrosis and inflammatory bowel disease. We quantified disease-disease similarities based on proximities of abnormally expressed genes in various molecular networks, and showed that similarities between diseases could be explained by characteristic molecular network topologies. Furthermore, we developed a kernel matrix regression algorithm to predict the commonalities of drugs and therapeutic targets among diseases. Our comprehensive prediction strategy indicated many new associations among phenotypically diverse diseases.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btaa439"
+  },
+  {
+    "id": "10.1093/bioinformatics/btaa474",
+    "title": "BIRD: identifying cell doublets via biallelic expression from single cells",
+    "authors": [
+      "Wainer-Katsir K",
+      "Linial M"
+    ],
+    "abstract": "<h4>Summary</h4>Current technologies for single-cell transcriptomics allow thousands of cells to be analyzed in a single experiment. The increased scale of these methods raises the risk of cell doublets contamination. Available tools and algorithms for identifying doublets and estimating their occurrence in single-cell experimental data focus on doublets of different species, cell types or individuals. In this study, we analyze transcriptomic data from single cells having an identical genetic background. We claim that the ratio of monoallelic to biallelic expression provides a discriminating power toward doublets' identification. We present a pipeline called BIallelic Ratio for Doublets (BIRD) that relies on heterologous genetic variations, from single-cell RNA sequencing. For each dataset, doublets were artificially created from the actual data and used to train a predictive model. BIRD was applied on Smart-seq data from 163 primary fibroblast single cells. The model achieved 100% accuracy in annotating the randomly simulated doublets. Bonafide doublets were verified based on a biallelic expression signal amongst X-chromosome of female fibroblasts. Data from 10X Genomics microfluidics of human peripheral blood cells achieved in average 83% (±3.7%) accuracy, and an area under the curve of 0.88 (±0.04) for a collection of ∼13 300 single cells. BIRD addresses instances of doublets, which were formed from cell mixtures of identical genetic background and cell identity. Maximal performance is achieved for high-coverage data from Smart-seq. Success in identifying doublets is data specific which varies according to the experimental methodology, genomic diversity between haplotypes, sequence coverage and depth.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btaa474"
+  },
+  {
+    "id": "10.1093/bioinformatics/btaa444",
+    "title": "FastMulRFS: fast and accurate species tree estimation under generic gene duplication and loss models",
+    "authors": [
+      "Molloy EK",
+      "Warnow T"
+    ],
+    "abstract": "<h4>Motivation</h4>Species tree estimation is a basic part of biological research but can be challenging because of gene duplication and loss (GDL), which results in genes that can appear more than once in a given genome. All common approaches in phylogenomic studies either reduce available data or are error-prone, and thus, scalable methods that do not discard data and have high accuracy on large heterogeneous datasets are needed.<h4>Results</h4>We present FastMulRFS, a polynomial-time method for estimating species trees without knowledge of orthology. We prove that FastMulRFS is statistically consistent under a generic model of GDL when adversarial GDL does not occur. Our extensive simulation study shows that FastMulRFS matches the accuracy of MulRF (which tries to solve the same optimization problem) and has better accuracy than prior methods, including ASTRAL-multi (the only method to date that has been proven statistically consistent under GDL), while being much faster than both methods.<h4>Availability and impementation</h4>FastMulRFS is available on Github (https://github.com/ekmolloy/fastmulrfs).<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btaa444"
+  },
+  {
+    "id": "10.1093/bioinformatics/btaa454",
+    "title": "The string decomposition problem and its applications to centromere analysis and assembly",
+    "authors": [
+      "Dvorkina T",
+      "Bzikadze AV",
+      "Pevzner PA"
+    ],
+    "abstract": "<h4>Motivation</h4>Recent attempts to assemble extra-long tandem repeats (such as centromeres) faced the challenge of translating long error-prone reads from the nucleotide alphabet into the alphabet of repeat units. Human centromeres represent a particularly complex type of high-order repeats (HORs) formed by chromosome-specific monomers. Given a set of all human monomers, translating a read from a centromere into the monomer alphabet is modeled as the String Decomposition Problem. The accurate translation of reads into the monomer alphabet turns the notoriously difficult problem of assembling centromeres from reads (in the nucleotide alphabet) into a more tractable problem of assembling centromeres from translated reads.<h4>Results</h4>We describe a StringDecomposer (SD) algorithm for solving this problem, benchmark it on the set of long error-prone Oxford Nanopore reads generated by the Telomere-to-Telomere consortium and identify a novel (rare) monomer that extends the set of known X-chromosome specific monomers. Our identification of a novel monomer emphasizes the importance of identification of all (even rare) monomers for future centromere assembly efforts and evolutionary studies. To further analyze novel monomers, we applied SD to the set of recently generated long accurate Pacific Biosciences HiFi reads. This analysis revealed that the set of known human monomers and HORs remains incomplete. SD opens a possibility to generate a complete set of human monomers and HORs for using in the ongoing efforts to generate the complete assembly of the human genome.<h4>Availability and implementation</h4>StringDecomposer is publicly available on https://github.com/ablab/stringdecomposer.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btaa454"
+  },
+  {
+    "id": "10.1093/bioinformatics/btaa336",
+    "title": "Boosting the accuracy of protein secondary structure prediction through nearest neighbor search and method hybridization",
+    "authors": [
+      "Krieger S",
+      "Kececioglu J"
+    ],
+    "abstract": "<h4>Motivation</h4>Protein secondary structure prediction is a fundamental precursor to many bioinformatics tasks. Nearly all state-of-the-art tools when computing their secondary structure prediction do not explicitly leverage the vast number of proteins whose structure is known. Leveraging this additional information in a so-called template-based method has the potential to significantly boost prediction accuracy.<h4>Method</h4>We present a new hybrid approach to secondary structure prediction that gains the advantages of both template- and non-template-based methods. Our core template-based method is an algorithmic approach that uses metric-space nearest neighbor search over a template database of fixed-length amino acid words to determine estimated class-membership probabilities for each residue in the protein. These probabilities are then input to a dynamic programming algorithm that finds a physically valid maximum-likelihood prediction for the entire protein. Our hybrid approach exploits a novel accuracy estimator for our core method, which estimates the unknown true accuracy of its prediction, to discern when to switch between template- and non-template-based methods.<h4>Results</h4>On challenging CASP benchmarks, the resulting hybrid approach boosts the state-of-the-art Q8 accuracy by more than 2-10%, and Q3 accuracy by more than 1-3%, yielding the most accurate method currently available for both 3- and 8-state secondary structure prediction.<h4>Availability and implementation</h4>A preliminary implementation in a new tool we call Nnessy is available free for non-commercial use at http://nnessy.cs.arizona.edu.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btaa336"
+  },
+  {
+    "id": "10.1093/bioinformatics/btaa436",
+    "title": "Deep multiple instance learning classifies subtissue locations in mass spectrometry images from tissue-level annotations",
+    "authors": [
+      "Guo D",
+      "Föll MC",
+      "Volkmann V",
+      "Enderle-Ammour K",
+      "Bronsert P",
+      "Schilling O",
+      "Vitek O"
+    ],
+    "abstract": "<h4>Motivation</h4>Mass spectrometry imaging (MSI) characterizes the molecular composition of tissues at spatial resolution, and has a strong potential for distinguishing tissue types, or disease states. This can be achieved by supervised classification, which takes as input MSI spectra, and assigns class labels to subtissue locations. Unfortunately, developing such classifiers is hindered by the limited availability of training sets with subtissue labels as the ground truth. Subtissue labeling is prohibitively expensive, and only rough annotations of the entire tissues are typically available. Classifiers trained on data with approximate labels have sub-optimal performance.<h4>Results</h4>To alleviate this challenge, we contribute a semi-supervised approach mi-CNN. mi-CNN implements multiple instance learning with a convolutional neural network (CNN). The multiple instance aspect enables weak supervision from tissue-level annotations when classifying subtissue locations. The convolutional architecture of the CNN captures contextual dependencies between the spectral features. Evaluations on simulated and experimental datasets demonstrated that mi-CNN improved the subtissue classification as compared to traditional classifiers. We propose mi-CNN as an important step toward accurate subtissue classification in MSI, enabling rapid distinction between tissue types and disease states.<h4>Availability and implementation</h4>The data and code are available at https://github.com/Vitek-Lab/mi-CNN_MSI.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btaa436"
+  },
+  {
+    "id": "10.1093/bioinformatics/btaa466",
+    "title": "Benchmarking gene ontology function predictions using negative annotations",
+    "authors": [
+      "Warwick Vesztrocy A",
+      "Dessimoz C"
+    ],
+    "abstract": "<h4>Motivation</h4>With the ever-increasing number and diversity of sequenced species, the challenge to characterize genes with functional information is even more important. In most species, this characterization almost entirely relies on automated electronic methods. As such, it is critical to benchmark the various methods. The Critical Assessment of protein Function Annotation algorithms (CAFA) series of community experiments provide the most comprehensive benchmark, with a time-delayed analysis leveraging newly curated experimentally supported annotations. However, the definition of a false positive in CAFA has not fully accounted for the open world assumption (OWA), leading to a systematic underestimation of precision. The main reason for this limitation is the relative paucity of negative experimental annotations.<h4>Results</h4>This article introduces a new, OWA-compliant, benchmark based on a balanced test set of positive and negative annotations. The negative annotations are derived from expert-curated annotations of protein families on phylogenetic trees. This approach results in a large increase in the average information content of negative annotations. The benchmark has been tested using the naïve and BLAST baseline methods, as well as two orthology-based methods. This new benchmark could complement existing ones in future CAFA experiments.<h4>Availability and implementation</h4>All data, as well as code used for analysis, is available from https://lab.dessimoz.org/20_not.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btaa466"
+  },
+  {
+    "id": "10.1093/bioinformatics/btaa465",
+    "title": "Inference of population admixture network from local gene genealogies: a coalescent-based maximum likelihood approach",
+    "authors": [
+      "Wu Y"
+    ],
+    "abstract": "<h4>Motivation</h4>Population admixture is an important subject in population genetics. Inferring population demographic history with admixture under the so-called admixture network model from population genetic data is an established problem in genetics. Existing admixture network inference approaches work with single genetic polymorphisms. While these methods are usually very fast, they do not fully utilize the information [e.g. linkage disequilibrium (LD)] contained in population genetic data.<h4>Results</h4>In this article, we develop a new admixture network inference method called GTmix. Different from existing methods, GTmix works with local gene genealogies that can be inferred from population haplotypes. Local gene genealogies represent the evolutionary history of sampled haplotypes and contain the LD information. GTmix performs coalescent-based maximum likelihood inference of admixture networks with inferred local genealogies based on the well-known multispecies coalescent (MSC) model. GTmix utilizes various techniques to speed up the likelihood computation on the MSC model and the optimal network search. Our simulations show that GTmix can infer more accurate admixture networks with much smaller data than existing methods, even when these existing methods are given much larger data. GTmix is reasonably efficient and can analyze population genetic datasets of current interests.<h4>Availability and implementation</h4>The program GTmix is available for download at: https://github.com/yufengwudcs/GTmix.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btaa465"
+  },
+  {
+    "id": "10.1093/bioinformatics/btaa434",
+    "title": "Identifying diagnosis-specific genotype-phenotype associations via joint multitask sparse canonical correlation analysis and classification",
+    "authors": [
+      "Du L",
+      "Liu F",
+      "Liu K",
+      "Yao X",
+      "Risacher SL",
+      "Han J",
+      "Guo L",
+      "Saykin AJ",
+      "Shen L"
+    ],
+    "abstract": "<h4>Motivation</h4>Brain imaging genetics studies the complex associations between genotypic data such as single nucleotide polymorphisms (SNPs) and imaging quantitative traits (QTs). The neurodegenerative disorders usually exhibit the diversity and heterogeneity, originating from which different diagnostic groups might carry distinct imaging QTs, SNPs and their interactions. Sparse canonical correlation analysis (SCCA) is widely used to identify bi-multivariate genotype-phenotype associations. However, most existing SCCA methods are unsupervised, leading to an inability to identify diagnosis-specific genotype-phenotype associations.<h4>Results</h4>In this article, we propose a new joint multitask learning method, named MT-SCCALR, which absorbs the merits of both SCCA and logistic regression. MT-SCCALR learns genotype-phenotype associations of multiple tasks jointly, with each task focusing on identifying one diagnosis-specific genotype-phenotype pattern. Meanwhile, MT-SCCALR cannot only select relevant SNPs and imaging QTs for each diagnostic group alone, but also allows the selection of those shared by multiple diagnostic groups. We derive an efficient optimization algorithm whose convergence to a local optimum is guaranteed. Compared with two state-of-the-art methods, MT-SCCALR yields better or similar canonical correlation coefficients and classification performances. In addition, it owns much better discriminative canonical weight patterns of great interest than competitors. This demonstrates the power and capability of MTSCCAR in identifying diagnostically heterogeneous genotype-phenotype patterns, which would be helpful to understand the pathophysiology of brain disorders.<h4>Availability and implementation</h4>The software is publicly available at https://github.com/dulei323/MTSCCALR.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btaa434"
+  },
+  {
+    "id": "10.1093/bioinformatics/btaa470",
+    "title": "Copy number evolution with weighted aberrations in cancer",
+    "authors": [
+      "Zeira R",
+      "Raphael BJ"
+    ],
+    "abstract": "<h4>Motivation</h4>Copy number aberrations (CNAs), which delete or amplify large contiguous segments of the genome, are a common type of somatic mutation in cancer. Copy number profiles, representing the number of copies of each region of a genome, are readily obtained from whole-genome sequencing or microarrays. However, modeling copy number evolution is a substantial challenge, because different CNAs may overlap with one another on the genome. A recent popular model for copy number evolution is the copy number distance (CND), defined as the length of a shortest sequence of deletions and amplifications of contiguous segments that transforms one profile into the other. In the CND, all events contribute equally; however, it is well known that rates of CNAs vary by length, genomic position and type (amplification versus deletion).<h4>Results</h4>We introduce a weighted CND that allows events to have varying weights, or probabilities, based on their length, position and type. We derive an efficient algorithm to compute the weighted CND as well as the associated transformation. This algorithm is based on the observation that the constraint matrix of the underlying optimization problem is totally unimodular. We show that the weighted CND improves phylogenetic reconstruction on simulated data where CNAs occur with varying probabilities, aids in the derivation of phylogenies from ultra-low-coverage single-cell DNA sequencing data and helps estimate CNA rates in a large pan-cancer dataset.<h4>Availability and implementation</h4>Code is available at https://github.com/raphael-group/WCND.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btaa470"
+  },
+  {
     "id": "10.1093/bioinformatics/btaa506",
     "title": "Fully interpretable deep learning model of transcriptional control",
     "authors": [
@@ -335,162 +491,6 @@
     "paper_url": "https://doi.org/10.1093/bioinformatics/btaa464"
   },
   {
-    "id": "10.1093/bioinformatics/btaa489",
-    "title": "Phylogenetic double placement of mixed samples",
-    "authors": [
-      "Balaban M",
-      "Mirarab S"
-    ],
-    "abstract": "<h4>Motivation</h4>Consider a simple computational problem. The inputs are (i) the set of mixed reads generated from a sample that combines two organisms and (ii) separate sets of reads for several reference genomes of known origins. The goal is to find the two organisms that constitute the mixed sample. When constituents are absent from the reference set, we seek to phylogenetically position them with respect to the underlying tree of the reference species. This simple yet fundamental problem (which we call phylogenetic double-placement) has enjoyed surprisingly little attention in the literature. As genome skimming (low-pass sequencing of genomes at low coverage, precluding assembly) becomes more prevalent, this problem finds wide-ranging applications in areas as varied as biodiversity research, food production and provenance, and evolutionary reconstruction.<h4>Results</h4>We introduce a model that relates distances between a mixed sample and reference species to the distances between constituents and reference species. Our model is based on Jaccard indices computed between each sample represented as k-mer sets. The model, built on several assumptions and approximations, allows us to formalize the phylogenetic double-placement problem as a non-convex optimization problem that decomposes mixture distances and performs phylogenetic placement simultaneously. Using a variety of techniques, we are able to solve this optimization problem numerically. We test the resulting method, called MIxed Sample Analysis tool (MISA), on a varied set of simulated and biological datasets. Despite all the assumptions used, the method performs remarkably well in practice.<h4>Availability and implementation</h4>The software and data are available at https://github.com/balabanmetin/misa and https://github.com/balabanmetin/misa-data.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2020,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btaa489"
-  },
-  {
-    "id": "10.1093/bioinformatics/btaa439",
-    "title": "Network-based characterization of disease-disease relationships in terms of drugs and therapeutic targets",
-    "authors": [
-      "Iida M",
-      "Iwata M",
-      "Yamanishi Y"
-    ],
-    "abstract": "<h4>Motivation</h4>Disease states are distinguished from each other in terms of differing clinical phenotypes, but characteristic molecular features are often common to various diseases. Similarities between diseases can be explained by characteristic gene expression patterns. However, most disease-disease relationships remain uncharacterized.<h4>Results</h4>In this study, we proposed a novel approach for network-based characterization of disease-disease relationships in terms of drugs and therapeutic targets. We performed large-scale analyses of omics data and molecular interaction networks for 79 diseases, including adrenoleukodystrophy, leukaemia, Alzheimer's disease, asthma, atopic dermatitis, breast cancer, cystic fibrosis and inflammatory bowel disease. We quantified disease-disease similarities based on proximities of abnormally expressed genes in various molecular networks, and showed that similarities between diseases could be explained by characteristic molecular network topologies. Furthermore, we developed a kernel matrix regression algorithm to predict the commonalities of drugs and therapeutic targets among diseases. Our comprehensive prediction strategy indicated many new associations among phenotypically diverse diseases.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2020,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btaa439"
-  },
-  {
-    "id": "10.1093/bioinformatics/btaa474",
-    "title": "BIRD: identifying cell doublets via biallelic expression from single cells",
-    "authors": [
-      "Wainer-Katsir K",
-      "Linial M"
-    ],
-    "abstract": "<h4>Summary</h4>Current technologies for single-cell transcriptomics allow thousands of cells to be analyzed in a single experiment. The increased scale of these methods raises the risk of cell doublets contamination. Available tools and algorithms for identifying doublets and estimating their occurrence in single-cell experimental data focus on doublets of different species, cell types or individuals. In this study, we analyze transcriptomic data from single cells having an identical genetic background. We claim that the ratio of monoallelic to biallelic expression provides a discriminating power toward doublets' identification. We present a pipeline called BIallelic Ratio for Doublets (BIRD) that relies on heterologous genetic variations, from single-cell RNA sequencing. For each dataset, doublets were artificially created from the actual data and used to train a predictive model. BIRD was applied on Smart-seq data from 163 primary fibroblast single cells. The model achieved 100% accuracy in annotating the randomly simulated doublets. Bonafide doublets were verified based on a biallelic expression signal amongst X-chromosome of female fibroblasts. Data from 10X Genomics microfluidics of human peripheral blood cells achieved in average 83% (±3.7%) accuracy, and an area under the curve of 0.88 (±0.04) for a collection of ∼13 300 single cells. BIRD addresses instances of doublets, which were formed from cell mixtures of identical genetic background and cell identity. Maximal performance is achieved for high-coverage data from Smart-seq. Success in identifying doublets is data specific which varies according to the experimental methodology, genomic diversity between haplotypes, sequence coverage and depth.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2020,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btaa474"
-  },
-  {
-    "id": "10.1093/bioinformatics/btaa444",
-    "title": "FastMulRFS: fast and accurate species tree estimation under generic gene duplication and loss models",
-    "authors": [
-      "Molloy EK",
-      "Warnow T"
-    ],
-    "abstract": "<h4>Motivation</h4>Species tree estimation is a basic part of biological research but can be challenging because of gene duplication and loss (GDL), which results in genes that can appear more than once in a given genome. All common approaches in phylogenomic studies either reduce available data or are error-prone, and thus, scalable methods that do not discard data and have high accuracy on large heterogeneous datasets are needed.<h4>Results</h4>We present FastMulRFS, a polynomial-time method for estimating species trees without knowledge of orthology. We prove that FastMulRFS is statistically consistent under a generic model of GDL when adversarial GDL does not occur. Our extensive simulation study shows that FastMulRFS matches the accuracy of MulRF (which tries to solve the same optimization problem) and has better accuracy than prior methods, including ASTRAL-multi (the only method to date that has been proven statistically consistent under GDL), while being much faster than both methods.<h4>Availability and impementation</h4>FastMulRFS is available on Github (https://github.com/ekmolloy/fastmulrfs).<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2020,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btaa444"
-  },
-  {
-    "id": "10.1093/bioinformatics/btaa454",
-    "title": "The string decomposition problem and its applications to centromere analysis and assembly",
-    "authors": [
-      "Dvorkina T",
-      "Bzikadze AV",
-      "Pevzner PA"
-    ],
-    "abstract": "<h4>Motivation</h4>Recent attempts to assemble extra-long tandem repeats (such as centromeres) faced the challenge of translating long error-prone reads from the nucleotide alphabet into the alphabet of repeat units. Human centromeres represent a particularly complex type of high-order repeats (HORs) formed by chromosome-specific monomers. Given a set of all human monomers, translating a read from a centromere into the monomer alphabet is modeled as the String Decomposition Problem. The accurate translation of reads into the monomer alphabet turns the notoriously difficult problem of assembling centromeres from reads (in the nucleotide alphabet) into a more tractable problem of assembling centromeres from translated reads.<h4>Results</h4>We describe a StringDecomposer (SD) algorithm for solving this problem, benchmark it on the set of long error-prone Oxford Nanopore reads generated by the Telomere-to-Telomere consortium and identify a novel (rare) monomer that extends the set of known X-chromosome specific monomers. Our identification of a novel monomer emphasizes the importance of identification of all (even rare) monomers for future centromere assembly efforts and evolutionary studies. To further analyze novel monomers, we applied SD to the set of recently generated long accurate Pacific Biosciences HiFi reads. This analysis revealed that the set of known human monomers and HORs remains incomplete. SD opens a possibility to generate a complete set of human monomers and HORs for using in the ongoing efforts to generate the complete assembly of the human genome.<h4>Availability and implementation</h4>StringDecomposer is publicly available on https://github.com/ablab/stringdecomposer.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2020,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btaa454"
-  },
-  {
-    "id": "10.1093/bioinformatics/btaa336",
-    "title": "Boosting the accuracy of protein secondary structure prediction through nearest neighbor search and method hybridization",
-    "authors": [
-      "Krieger S",
-      "Kececioglu J"
-    ],
-    "abstract": "<h4>Motivation</h4>Protein secondary structure prediction is a fundamental precursor to many bioinformatics tasks. Nearly all state-of-the-art tools when computing their secondary structure prediction do not explicitly leverage the vast number of proteins whose structure is known. Leveraging this additional information in a so-called template-based method has the potential to significantly boost prediction accuracy.<h4>Method</h4>We present a new hybrid approach to secondary structure prediction that gains the advantages of both template- and non-template-based methods. Our core template-based method is an algorithmic approach that uses metric-space nearest neighbor search over a template database of fixed-length amino acid words to determine estimated class-membership probabilities for each residue in the protein. These probabilities are then input to a dynamic programming algorithm that finds a physically valid maximum-likelihood prediction for the entire protein. Our hybrid approach exploits a novel accuracy estimator for our core method, which estimates the unknown true accuracy of its prediction, to discern when to switch between template- and non-template-based methods.<h4>Results</h4>On challenging CASP benchmarks, the resulting hybrid approach boosts the state-of-the-art Q8 accuracy by more than 2-10%, and Q3 accuracy by more than 1-3%, yielding the most accurate method currently available for both 3- and 8-state secondary structure prediction.<h4>Availability and implementation</h4>A preliminary implementation in a new tool we call Nnessy is available free for non-commercial use at http://nnessy.cs.arizona.edu.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2020,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btaa336"
-  },
-  {
-    "id": "10.1093/bioinformatics/btaa436",
-    "title": "Deep multiple instance learning classifies subtissue locations in mass spectrometry images from tissue-level annotations",
-    "authors": [
-      "Guo D",
-      "Föll MC",
-      "Volkmann V",
-      "Enderle-Ammour K",
-      "Bronsert P",
-      "Schilling O",
-      "Vitek O"
-    ],
-    "abstract": "<h4>Motivation</h4>Mass spectrometry imaging (MSI) characterizes the molecular composition of tissues at spatial resolution, and has a strong potential for distinguishing tissue types, or disease states. This can be achieved by supervised classification, which takes as input MSI spectra, and assigns class labels to subtissue locations. Unfortunately, developing such classifiers is hindered by the limited availability of training sets with subtissue labels as the ground truth. Subtissue labeling is prohibitively expensive, and only rough annotations of the entire tissues are typically available. Classifiers trained on data with approximate labels have sub-optimal performance.<h4>Results</h4>To alleviate this challenge, we contribute a semi-supervised approach mi-CNN. mi-CNN implements multiple instance learning with a convolutional neural network (CNN). The multiple instance aspect enables weak supervision from tissue-level annotations when classifying subtissue locations. The convolutional architecture of the CNN captures contextual dependencies between the spectral features. Evaluations on simulated and experimental datasets demonstrated that mi-CNN improved the subtissue classification as compared to traditional classifiers. We propose mi-CNN as an important step toward accurate subtissue classification in MSI, enabling rapid distinction between tissue types and disease states.<h4>Availability and implementation</h4>The data and code are available at https://github.com/Vitek-Lab/mi-CNN_MSI.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2020,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btaa436"
-  },
-  {
-    "id": "10.1093/bioinformatics/btaa466",
-    "title": "Benchmarking gene ontology function predictions using negative annotations",
-    "authors": [
-      "Warwick Vesztrocy A",
-      "Dessimoz C"
-    ],
-    "abstract": "<h4>Motivation</h4>With the ever-increasing number and diversity of sequenced species, the challenge to characterize genes with functional information is even more important. In most species, this characterization almost entirely relies on automated electronic methods. As such, it is critical to benchmark the various methods. The Critical Assessment of protein Function Annotation algorithms (CAFA) series of community experiments provide the most comprehensive benchmark, with a time-delayed analysis leveraging newly curated experimentally supported annotations. However, the definition of a false positive in CAFA has not fully accounted for the open world assumption (OWA), leading to a systematic underestimation of precision. The main reason for this limitation is the relative paucity of negative experimental annotations.<h4>Results</h4>This article introduces a new, OWA-compliant, benchmark based on a balanced test set of positive and negative annotations. The negative annotations are derived from expert-curated annotations of protein families on phylogenetic trees. This approach results in a large increase in the average information content of negative annotations. The benchmark has been tested using the naïve and BLAST baseline methods, as well as two orthology-based methods. This new benchmark could complement existing ones in future CAFA experiments.<h4>Availability and implementation</h4>All data, as well as code used for analysis, is available from https://lab.dessimoz.org/20_not.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2020,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btaa466"
-  },
-  {
-    "id": "10.1093/bioinformatics/btaa465",
-    "title": "Inference of population admixture network from local gene genealogies: a coalescent-based maximum likelihood approach",
-    "authors": [
-      "Wu Y"
-    ],
-    "abstract": "<h4>Motivation</h4>Population admixture is an important subject in population genetics. Inferring population demographic history with admixture under the so-called admixture network model from population genetic data is an established problem in genetics. Existing admixture network inference approaches work with single genetic polymorphisms. While these methods are usually very fast, they do not fully utilize the information [e.g. linkage disequilibrium (LD)] contained in population genetic data.<h4>Results</h4>In this article, we develop a new admixture network inference method called GTmix. Different from existing methods, GTmix works with local gene genealogies that can be inferred from population haplotypes. Local gene genealogies represent the evolutionary history of sampled haplotypes and contain the LD information. GTmix performs coalescent-based maximum likelihood inference of admixture networks with inferred local genealogies based on the well-known multispecies coalescent (MSC) model. GTmix utilizes various techniques to speed up the likelihood computation on the MSC model and the optimal network search. Our simulations show that GTmix can infer more accurate admixture networks with much smaller data than existing methods, even when these existing methods are given much larger data. GTmix is reasonably efficient and can analyze population genetic datasets of current interests.<h4>Availability and implementation</h4>The program GTmix is available for download at: https://github.com/yufengwudcs/GTmix.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2020,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btaa465"
-  },
-  {
-    "id": "10.1093/bioinformatics/btaa434",
-    "title": "Identifying diagnosis-specific genotype-phenotype associations via joint multitask sparse canonical correlation analysis and classification",
-    "authors": [
-      "Du L",
-      "Liu F",
-      "Liu K",
-      "Yao X",
-      "Risacher SL",
-      "Han J",
-      "Guo L",
-      "Saykin AJ",
-      "Shen L"
-    ],
-    "abstract": "<h4>Motivation</h4>Brain imaging genetics studies the complex associations between genotypic data such as single nucleotide polymorphisms (SNPs) and imaging quantitative traits (QTs). The neurodegenerative disorders usually exhibit the diversity and heterogeneity, originating from which different diagnostic groups might carry distinct imaging QTs, SNPs and their interactions. Sparse canonical correlation analysis (SCCA) is widely used to identify bi-multivariate genotype-phenotype associations. However, most existing SCCA methods are unsupervised, leading to an inability to identify diagnosis-specific genotype-phenotype associations.<h4>Results</h4>In this article, we propose a new joint multitask learning method, named MT-SCCALR, which absorbs the merits of both SCCA and logistic regression. MT-SCCALR learns genotype-phenotype associations of multiple tasks jointly, with each task focusing on identifying one diagnosis-specific genotype-phenotype pattern. Meanwhile, MT-SCCALR cannot only select relevant SNPs and imaging QTs for each diagnostic group alone, but also allows the selection of those shared by multiple diagnostic groups. We derive an efficient optimization algorithm whose convergence to a local optimum is guaranteed. Compared with two state-of-the-art methods, MT-SCCALR yields better or similar canonical correlation coefficients and classification performances. In addition, it owns much better discriminative canonical weight patterns of great interest than competitors. This demonstrates the power and capability of MTSCCAR in identifying diagnostically heterogeneous genotype-phenotype patterns, which would be helpful to understand the pathophysiology of brain disorders.<h4>Availability and implementation</h4>The software is publicly available at https://github.com/dulei323/MTSCCALR.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2020,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btaa434"
-  },
-  {
-    "id": "10.1093/bioinformatics/btaa470",
-    "title": "Copy number evolution with weighted aberrations in cancer",
-    "authors": [
-      "Zeira R",
-      "Raphael BJ"
-    ],
-    "abstract": "<h4>Motivation</h4>Copy number aberrations (CNAs), which delete or amplify large contiguous segments of the genome, are a common type of somatic mutation in cancer. Copy number profiles, representing the number of copies of each region of a genome, are readily obtained from whole-genome sequencing or microarrays. However, modeling copy number evolution is a substantial challenge, because different CNAs may overlap with one another on the genome. A recent popular model for copy number evolution is the copy number distance (CND), defined as the length of a shortest sequence of deletions and amplifications of contiguous segments that transforms one profile into the other. In the CND, all events contribute equally; however, it is well known that rates of CNAs vary by length, genomic position and type (amplification versus deletion).<h4>Results</h4>We introduce a weighted CND that allows events to have varying weights, or probabilities, based on their length, position and type. We derive an efficient algorithm to compute the weighted CND as well as the associated transformation. This algorithm is based on the observation that the constraint matrix of the underlying optimization problem is totally unimodular. We show that the weighted CND improves phylogenetic reconstruction on simulated data where CNAs occur with varying probabilities, aids in the derivation of phylogenies from ultra-low-coverage single-cell DNA sequencing data and helps estimate CNA rates in a large pan-cancer dataset.<h4>Availability and implementation</h4>Code is available at https://github.com/raphael-group/WCND.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2020,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btaa470"
-  },
-  {
     "id": "10.1093/bioinformatics/btaa433",
     "title": "Cancer mutational signatures representation by large-scale context embedding",
     "authors": [
@@ -652,6 +652,168 @@
     "conference": "ismb",
     "year": 2020,
     "paper_url": "https://doi.org/10.1093/bioinformatics/btaa404"
+  },
+  {
+    "id": "10.1093/bioinformatics/btaa503",
+    "title": "Discovery of multi-operon colinear syntenic blocks in microbial genomes",
+    "authors": [
+      "Svetlitsky D",
+      "Dagan T",
+      "Ziv-Ukelson M"
+    ],
+    "abstract": "<h4>Motivation</h4>An important task in comparative genomics is to detect functional units by analyzing gene-context patterns. Colinear syntenic blocks (CSBs) are groups of genes that are consistently encoded in the same neighborhood and in the same order across a wide range of taxa. Such CSBs are likely essential for the regulation of gene expression in prokaryotes. Recent results indicate that colinearity can be conserved across multiple operons, thus motivating the discovery of multi-operon CSBs. This computational task raises scalability challenges in large datasets.<h4>Results</h4>We propose an efficient algorithm for the discovery of cross-strand multi-operon CSBs in large genomic datasets. The proposed algorithm uses match-point arithmetic, which is scalable for large datasets of microbial genomes in terms of running time and space requirements. The algorithm is implemented and incorporated into a tool with a graphical user interface, called CSBFinder-S. We applied CSBFinder-S to data mine 1485 prokaryotic genomes and analyzed the identified cross-strand CSBs. Our results indicate that most of the syntenic blocks are exclusively colinear. Additional results indicate that transcriptional regulation by overlapping transcriptional genes is abundant in bacteria. We demonstrate the utility of CSBFinder-S to identify common function of the gene-pair PulEF in multiple contexts, including Type 2 Secretion System, Type 4 Pilus System and DNA uptake machinery.<h4>Availability and implementation</h4>CSBFinder-S software and code are publicly available at https://github.com/dinasv/CSBFinder.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btaa503"
+  },
+  {
+    "id": "10.1093/bioinformatics/btaa463",
+    "title": "TinGa: fast and flexible trajectory inference with Growing Neural Gas",
+    "authors": [
+      "Todorov H",
+      "Cannoodt R",
+      "Saelens W",
+      "Saeys Y"
+    ],
+    "abstract": "<h4>Motivation</h4>During the last decade, trajectory inference (TI) methods have emerged as a novel framework to model cell developmental dynamics, most notably in the area of single-cell transcriptomics. At present, more than 70 TI methods have been published, and recent benchmarks showed that even state-of-the-art methods only perform well for certain trajectory types but not others.<h4>Results</h4>In this work, we present TinGa, a new TI model that is fast and flexible, and that is based on Growing Neural Graphs. We performed an extensive comparison of TinGa to five state-of-the-art methods for TI on a set of 250 datasets, including both synthetic as well as real datasets. Overall, TinGa improves the state-of-the-art by producing accurate models (comparable to or an improvement on the state-of-the-art) on the whole spectrum of data complexity, from the simplest linear datasets to the most complex disconnected graphs. In addition, TinGa obtained the fastest execution times, showing that our method is thus one of the most versatile methods up to date.<h4>Availability and implementation</h4>R scripts for running TinGa, comparing it to top existing methods and generating the figures of this article are available at https://github.com/Helena-todd/TinGa.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btaa463"
+  },
+  {
+    "id": "10.1093/bioinformatics/btaa488",
+    "title": "Factorized embeddings learns rich and biologically meaningful embedding spaces using factorized tensor decomposition",
+    "authors": [
+      "Trofimov A",
+      "Cohen JP",
+      "Bengio Y",
+      "Perreault C",
+      "Lemieux S"
+    ],
+    "abstract": "<h4>Motivation</h4>The recent development of sequencing technologies revolutionized our understanding of the inner workings of the cell as well as the way disease is treated. A single RNA sequencing (RNA-Seq) experiment, however, measures tens of thousands of parameters simultaneously. While the results are information rich, data analysis provides a challenge. Dimensionality reduction methods help with this task by extracting patterns from the data by compressing it into compact vector representations.<h4>Results</h4>We present the factorized embeddings (FE) model, a self-supervised deep learning algorithm that learns simultaneously, by tensor factorization, gene and sample representation spaces. We ran the model on RNA-Seq data from two large-scale cohorts and observed that the sample representation captures information on single gene and global gene expression patterns. Moreover, we found that the gene representation space was organized such that tissue-specific genes, highly correlated genes as well as genes participating in the same GO terms were grouped. Finally, we compared the vector representation of samples learned by the FE model to other similar models on 49 regression tasks. We report that the representations trained with FE rank first or second in all of the tasks, surpassing, sometimes by a considerable margin, other representations.<h4>Availability and implementation</h4>A toy example in the form of a Jupyter Notebook as well as the code and trained embeddings for this project can be found at: https://github.com/TrofimovAssya/FactorizedEmbeddings.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btaa488"
+  },
+  {
+    "id": "10.1093/bioinformatics/btaa455",
+    "title": "QDeep: distance-based protein model quality estimation by residue-level ensemble error classifications using stacked deep residual neural networks",
+    "authors": [
+      "Shuvo MH",
+      "Bhattacharya S",
+      "Bhattacharya D"
+    ],
+    "abstract": "<h4>Motivation</h4>Protein model quality estimation, in many ways, informs protein structure prediction. Despite their tight coupling, existing model quality estimation methods do not leverage inter-residue distance information or the latest technological breakthrough in deep learning that has recently revolutionized protein structure prediction.<h4>Results</h4>We present a new distance-based single-model quality estimation method called QDeep by harnessing the power of stacked deep residual neural networks (ResNets). Our method first employs stacked deep ResNets to perform residue-level ensemble error classifications at multiple predefined error thresholds, and then combines the predictions from the individual error classifiers for estimating the quality of a protein structural model. Experimental results show that our method consistently outperforms existing state-of-the-art methods including ProQ2, ProQ3, ProQ3D, ProQ4, 3DCNN, MESHI, and VoroMQA in multiple independent test datasets across a wide-range of accuracy measures; and that predicted distance information significantly contributes to the improved performance of QDeep.<h4>Availability and implementation</h4>https://github.com/Bhattacharya-Lab/QDeep.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btaa455"
+  },
+  {
+    "id": "10.1093/bioinformatics/btaa468",
+    "title": "The ortholog conjecture revisited: the value of orthologs and paralogs in function prediction",
+    "authors": [
+      "Stamboulian M",
+      "Guerrero RF",
+      "Hahn MW",
+      "Radivojac P"
+    ],
+    "abstract": "<h4>Motivation</h4>The computational prediction of gene function is a key step in making full use of newly sequenced genomes. Function is generally predicted by transferring annotations from homologous genes or proteins for which experimental evidence exists. The 'ortholog conjecture' proposes that orthologous genes should be preferred when making such predictions, as they evolve functions more slowly than paralogous genes. Previous research has provided little support for the ortholog conjecture, though the incomplete nature of the data cast doubt on the conclusions.<h4>Results</h4>We use experimental annotations from over 40 000 proteins, drawn from over 80 000 publications, to revisit the ortholog conjecture in two pairs of species: (i) Homo sapiens and Mus musculus and (ii) Saccharomyces cerevisiae and Schizosaccharomyces pombe. By making a distinction between questions about the evolution of function versus questions about the prediction of function, we find strong evidence against the ortholog conjecture in the context of function prediction, though questions about the evolution of function remain difficult to address. In both pairs of species, we quantify the amount of information that would be ignored if paralogs are discarded, as well as the resulting loss in prediction accuracy. Taken as a whole, our results support the view that the types of homologs used for function transfer are largely irrelevant to the task of function prediction. Maximizing the amount of data used for this task, regardless of whether it comes from orthologs or paralogs, is most likely to lead to higher prediction accuracy.<h4>Availability and implementation</h4>https://github.com/predragradivojac/oc.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btaa468"
+  },
+  {
+    "id": "10.1093/bioinformatics/btaa449",
+    "title": "Identifying tumor clones in sparse single-cell mutation data",
+    "authors": [
+      "Myers MA",
+      "Zaccaria S",
+      "Raphael BJ"
+    ],
+    "abstract": "<h4>Motivation</h4>Recent single-cell DNA sequencing technologies enable whole-genome sequencing of hundreds to thousands of individual cells. However, these technologies have ultra-low sequencing coverage (<0.5× per cell) which has limited their use to the analysis of large copy-number aberrations (CNAs) in individual cells. While CNAs are useful markers in cancer studies, single-nucleotide mutations are equally important, both in cancer studies and in other applications. However, ultra-low coverage sequencing yields single-nucleotide mutation data that are too sparse for current single-cell analysis methods.<h4>Results</h4>We introduce SBMClone, a method to infer clusters of cells, or clones, that share groups of somatic single-nucleotide mutations. SBMClone uses a stochastic block model to overcome sparsity in ultra-low coverage single-cell sequencing data, and we show that SBMClone accurately infers the true clonal composition on simulated datasets with coverage at low as 0.2×. We applied SBMClone to single-cell whole-genome sequencing data from two breast cancer patients obtained using two different sequencing technologies. On the first patient, sequenced using the 10X Genomics CNV solution with sequencing coverage ≈0.03×, SBMClone recovers the major clonal composition when incorporating a small amount of additional information. On the second patient, where pre- and post-treatment tumor samples were sequenced using DOP-PCR with sequencing coverage ≈0.5×, SBMClone shows that tumor cells are present in the post-treatment sample, contrary to published analysis of this dataset.<h4>Availability and implementation</h4>SBMClone is available on the GitHub repository https://github.com/raphael-group/SBMClone.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btaa449"
+  },
+  {
+    "id": "10.1093/bioinformatics/btaa460",
+    "title": "LinearPartition: linear-time approximation of RNA folding partition function and base-pairing probabilities",
+    "authors": [
+      "Zhang H",
+      "Zhang L",
+      "Mathews DH",
+      "Huang L"
+    ],
+    "abstract": "<h4>Motivation</h4>RNA secondary structure prediction is widely used to understand RNA function. Recently, there has been a shift away from the classical minimum free energy methods to partition function-based methods that account for folding ensembles and can therefore estimate structure and base pair probabilities. However, the classical partition function algorithm scales cubically with sequence length, and is therefore prohibitively slow for long sequences. This slowness is even more severe than cubic-time free energy minimization due to a substantially larger constant factor in runtime.<h4>Results</h4>Inspired by the success of our recent LinearFold algorithm that predicts the approximate minimum free energy structure in linear time, we design a similar linear-time heuristic algorithm, LinearPartition, to approximate the partition function and base-pairing probabilities, which is shown to be orders of magnitude faster than Vienna RNAfold and CONTRAfold (e.g. 2.5 days versus 1.3 min on a sequence with length 32 753 nt). More interestingly, the resulting base-pairing probabilities are even better correlated with the ground-truth structures. LinearPartition also leads to a small accuracy improvement when used for downstream structure prediction on families with the longest length sequences (16S and 23S rRNAs), as well as a substantial improvement on long-distance base pairs (500+ nt apart).<h4>Availability and implementation</h4>Code: http://github.com/LinearFold/LinearPartition; Server: http://linearfold.org/partition.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btaa460"
+  },
+  {
+    "id": "10.1093/bioinformatics/btaa318",
+    "title": "Combinatorial and statistical prediction of gene expression from haplotype sequence",
+    "authors": [
+      "Alpay BA",
+      "Demetci P",
+      "Istrail S",
+      "Aguiar D"
+    ],
+    "abstract": "<h4>Motivation</h4>Genome-wide association studies (GWAS) have discovered thousands of significant genetic effects on disease phenotypes. By considering gene expression as the intermediary between genotype and disease phenotype, expression quantitative trait loci studies have interpreted many of these variants by their regulatory effects on gene expression. However, there remains a considerable gap between genotype-to-gene expression association and genotype-to-gene expression prediction. Accurate prediction of gene expression enables gene-based association studies to be performed post hoc for existing GWAS, reduces multiple testing burden, and can prioritize genes for subsequent experimental investigation.<h4>Results</h4>In this work, we develop gene expression prediction methods that relax the independence and additivity assumptions between genetic markers. First, we consider gene expression prediction from a regression perspective and develop the HAPLEXR algorithm which combines haplotype clusterings with allelic dosages. Second, we introduce the new gene expression classification problem, which focuses on identifying expression groups rather than continuous measurements; we formalize the selection of an appropriate number of expression groups using the principle of maximum entropy. Third, we develop the HAPLEXD algorithm that models haplotype sharing with a modified suffix tree data structure and computes expression groups by spectral clustering. In both models, we penalize model complexity by prioritizing genetic clusters that indicate significant effects on expression. We compare HAPLEXR and HAPLEXD with three state-of-the-art expression prediction methods and two novel logistic regression approaches across five GTEx v8 tissues. HAPLEXD exhibits significantly higher classification accuracy overall; HAPLEXR shows higher prediction accuracy on approximately half of the genes tested and the largest number of best predicted genes (r2>0.1) among all methods. We show that variant and haplotype features selected by HAPLEXR are smaller in size than competing methods (and thus more interpretable) and are significantly enriched in functional annotations related to gene regulation. These results demonstrate the importance of explicitly modeling non-dosage dependent and intragenic epistatic effects when predicting expression.<h4>Availability and implementation</h4>Source code and binaries are freely available at https://github.com/rapturous/HAPLEX.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btaa318"
+  },
+  {
+    "id": "10.1093/bioinformatics/btaa447",
+    "title": "EvoLSTM: context-dependent models of sequence evolution using a sequence-to-sequence LSTM",
+    "authors": [
+      "Lim D",
+      "Blanchette M"
+    ],
+    "abstract": "<h4>Motivation</h4>Accurate probabilistic models of sequence evolution are essential for a wide variety of bioinformatics tasks, including sequence alignment and phylogenetic inference. The ability to realistically simulate sequence evolution is also at the core of many benchmarking strategies. Yet, mutational processes have complex context dependencies that remain poorly modeled and understood.<h4>Results</h4>We introduce EvoLSTM, a recurrent neural network-based evolution simulator that captures mutational context dependencies. EvoLSTM uses a sequence-to-sequence long short-term memory model trained to predict mutation probabilities at each position of a given sequence, taking into consideration the 14 flanking nucleotides. EvoLSTM can realistically simulate mammalian and plant DNA sequence evolution and reveals unexpectedly strong long-range context dependencies in mutation probabilities. EvoLSTM brings modern machine-learning approaches to bear on sequence evolution. It will serve as a useful tool to study and simulate complex mutational processes.<h4>Availability and implementation</h4>Code and dataset are available at https://github.com/DongjoonLim/EvoLSTM.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btaa447"
+  },
+  {
+    "id": "10.1093/bioinformatics/btaa452",
+    "title": "Prediction of cancer driver genes through network-based moment propagation of mutation scores",
+    "authors": [
+      "Gumpinger AC",
+      "Lage K",
+      "Horn H",
+      "Borgwardt K"
+    ],
+    "abstract": "<h4>Motivation</h4>Gaining a comprehensive understanding of the genetics underlying cancer development and progression is a central goal of biomedical research. Its accomplishment promises key mechanistic, diagnostic and therapeutic insights. One major step in this direction is the identification of genes that drive the emergence of tumors upon mutation. Recent advances in the field of computational biology have shown the potential of combining genetic summary statistics that represent the mutational burden in genes with biological networks, such as protein-protein interaction networks, to identify cancer driver genes. Those approaches superimpose the summary statistics on the nodes in the network, followed by an unsupervised propagation of the node scores through the network. However, this unsupervised setting does not leverage any knowledge on well-established cancer genes, a potentially valuable resource to improve the identification of novel cancer drivers.<h4>Results</h4>We develop a novel node embedding that enables classification of cancer driver genes in a supervised setting. The embedding combines a representation of the mutation score distribution in a node's local neighborhood with network propagation. We leverage the knowledge of well-established cancer driver genes to define a positive class, resulting in a partially labeled dataset, and develop a cross-validation scheme to enable supervised prediction. The proposed node embedding followed by a supervised classification improves the predictive performance compared with baseline methods and yields a set of promising genes that constitute candidates for further biological validation.<h4>Availability and implementation</h4>Code available at https://github.com/BorgwardtLab/MoProEmbeddings.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btaa452"
+  },
+  {
+    "id": "10.1093/bioinformatics/btaa440",
+    "title": "TandemTools: mapping long reads and assessing/improving assembly quality in extra-long tandem repeats",
+    "authors": [
+      "Mikheenko A",
+      "Bzikadze AV",
+      "Gurevich A",
+      "Miga KH",
+      "Pevzner PA"
+    ],
+    "abstract": "<h4>Motivation</h4>Extra-long tandem repeats (ETRs) are widespread in eukaryotic genomes and play an important role in fundamental cellular processes, such as chromosome segregation. Although emerging long-read technologies have enabled ETR assemblies, the accuracy of such assemblies is difficult to evaluate since there are no tools for their quality assessment. Moreover, since the mapping of error-prone reads to ETRs remains an open problem, it is not clear how to polish draft ETR assemblies.<h4>Results</h4>To address these problems, we developed the TandemTools software that includes the TandemMapper tool for mapping reads to ETRs and the TandemQUAST tool for polishing ETR assemblies and their quality assessment. We demonstrate that TandemTools not only reveals errors in ETR assemblies but also improves the recently generated assemblies of human centromeres.<h4>Availability and implementation</h4>https://github.com/ablab/TandemTools.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btaa440"
   },
   {
     "id": "10.1093/bioinformatics/btaa504",
@@ -824,167 +986,5 @@
     "conference": "ismb",
     "year": 2020,
     "paper_url": "https://doi.org/10.1093/bioinformatics/btaa446"
-  },
-  {
-    "id": "10.1093/bioinformatics/btaa503",
-    "title": "Discovery of multi-operon colinear syntenic blocks in microbial genomes",
-    "authors": [
-      "Svetlitsky D",
-      "Dagan T",
-      "Ziv-Ukelson M"
-    ],
-    "abstract": "<h4>Motivation</h4>An important task in comparative genomics is to detect functional units by analyzing gene-context patterns. Colinear syntenic blocks (CSBs) are groups of genes that are consistently encoded in the same neighborhood and in the same order across a wide range of taxa. Such CSBs are likely essential for the regulation of gene expression in prokaryotes. Recent results indicate that colinearity can be conserved across multiple operons, thus motivating the discovery of multi-operon CSBs. This computational task raises scalability challenges in large datasets.<h4>Results</h4>We propose an efficient algorithm for the discovery of cross-strand multi-operon CSBs in large genomic datasets. The proposed algorithm uses match-point arithmetic, which is scalable for large datasets of microbial genomes in terms of running time and space requirements. The algorithm is implemented and incorporated into a tool with a graphical user interface, called CSBFinder-S. We applied CSBFinder-S to data mine 1485 prokaryotic genomes and analyzed the identified cross-strand CSBs. Our results indicate that most of the syntenic blocks are exclusively colinear. Additional results indicate that transcriptional regulation by overlapping transcriptional genes is abundant in bacteria. We demonstrate the utility of CSBFinder-S to identify common function of the gene-pair PulEF in multiple contexts, including Type 2 Secretion System, Type 4 Pilus System and DNA uptake machinery.<h4>Availability and implementation</h4>CSBFinder-S software and code are publicly available at https://github.com/dinasv/CSBFinder.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2020,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btaa503"
-  },
-  {
-    "id": "10.1093/bioinformatics/btaa463",
-    "title": "TinGa: fast and flexible trajectory inference with Growing Neural Gas",
-    "authors": [
-      "Todorov H",
-      "Cannoodt R",
-      "Saelens W",
-      "Saeys Y"
-    ],
-    "abstract": "<h4>Motivation</h4>During the last decade, trajectory inference (TI) methods have emerged as a novel framework to model cell developmental dynamics, most notably in the area of single-cell transcriptomics. At present, more than 70 TI methods have been published, and recent benchmarks showed that even state-of-the-art methods only perform well for certain trajectory types but not others.<h4>Results</h4>In this work, we present TinGa, a new TI model that is fast and flexible, and that is based on Growing Neural Graphs. We performed an extensive comparison of TinGa to five state-of-the-art methods for TI on a set of 250 datasets, including both synthetic as well as real datasets. Overall, TinGa improves the state-of-the-art by producing accurate models (comparable to or an improvement on the state-of-the-art) on the whole spectrum of data complexity, from the simplest linear datasets to the most complex disconnected graphs. In addition, TinGa obtained the fastest execution times, showing that our method is thus one of the most versatile methods up to date.<h4>Availability and implementation</h4>R scripts for running TinGa, comparing it to top existing methods and generating the figures of this article are available at https://github.com/Helena-todd/TinGa.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2020,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btaa463"
-  },
-  {
-    "id": "10.1093/bioinformatics/btaa488",
-    "title": "Factorized embeddings learns rich and biologically meaningful embedding spaces using factorized tensor decomposition",
-    "authors": [
-      "Trofimov A",
-      "Cohen JP",
-      "Bengio Y",
-      "Perreault C",
-      "Lemieux S"
-    ],
-    "abstract": "<h4>Motivation</h4>The recent development of sequencing technologies revolutionized our understanding of the inner workings of the cell as well as the way disease is treated. A single RNA sequencing (RNA-Seq) experiment, however, measures tens of thousands of parameters simultaneously. While the results are information rich, data analysis provides a challenge. Dimensionality reduction methods help with this task by extracting patterns from the data by compressing it into compact vector representations.<h4>Results</h4>We present the factorized embeddings (FE) model, a self-supervised deep learning algorithm that learns simultaneously, by tensor factorization, gene and sample representation spaces. We ran the model on RNA-Seq data from two large-scale cohorts and observed that the sample representation captures information on single gene and global gene expression patterns. Moreover, we found that the gene representation space was organized such that tissue-specific genes, highly correlated genes as well as genes participating in the same GO terms were grouped. Finally, we compared the vector representation of samples learned by the FE model to other similar models on 49 regression tasks. We report that the representations trained with FE rank first or second in all of the tasks, surpassing, sometimes by a considerable margin, other representations.<h4>Availability and implementation</h4>A toy example in the form of a Jupyter Notebook as well as the code and trained embeddings for this project can be found at: https://github.com/TrofimovAssya/FactorizedEmbeddings.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2020,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btaa488"
-  },
-  {
-    "id": "10.1093/bioinformatics/btaa455",
-    "title": "QDeep: distance-based protein model quality estimation by residue-level ensemble error classifications using stacked deep residual neural networks",
-    "authors": [
-      "Shuvo MH",
-      "Bhattacharya S",
-      "Bhattacharya D"
-    ],
-    "abstract": "<h4>Motivation</h4>Protein model quality estimation, in many ways, informs protein structure prediction. Despite their tight coupling, existing model quality estimation methods do not leverage inter-residue distance information or the latest technological breakthrough in deep learning that has recently revolutionized protein structure prediction.<h4>Results</h4>We present a new distance-based single-model quality estimation method called QDeep by harnessing the power of stacked deep residual neural networks (ResNets). Our method first employs stacked deep ResNets to perform residue-level ensemble error classifications at multiple predefined error thresholds, and then combines the predictions from the individual error classifiers for estimating the quality of a protein structural model. Experimental results show that our method consistently outperforms existing state-of-the-art methods including ProQ2, ProQ3, ProQ3D, ProQ4, 3DCNN, MESHI, and VoroMQA in multiple independent test datasets across a wide-range of accuracy measures; and that predicted distance information significantly contributes to the improved performance of QDeep.<h4>Availability and implementation</h4>https://github.com/Bhattacharya-Lab/QDeep.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2020,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btaa455"
-  },
-  {
-    "id": "10.1093/bioinformatics/btaa468",
-    "title": "The ortholog conjecture revisited: the value of orthologs and paralogs in function prediction",
-    "authors": [
-      "Stamboulian M",
-      "Guerrero RF",
-      "Hahn MW",
-      "Radivojac P"
-    ],
-    "abstract": "<h4>Motivation</h4>The computational prediction of gene function is a key step in making full use of newly sequenced genomes. Function is generally predicted by transferring annotations from homologous genes or proteins for which experimental evidence exists. The 'ortholog conjecture' proposes that orthologous genes should be preferred when making such predictions, as they evolve functions more slowly than paralogous genes. Previous research has provided little support for the ortholog conjecture, though the incomplete nature of the data cast doubt on the conclusions.<h4>Results</h4>We use experimental annotations from over 40 000 proteins, drawn from over 80 000 publications, to revisit the ortholog conjecture in two pairs of species: (i) Homo sapiens and Mus musculus and (ii) Saccharomyces cerevisiae and Schizosaccharomyces pombe. By making a distinction between questions about the evolution of function versus questions about the prediction of function, we find strong evidence against the ortholog conjecture in the context of function prediction, though questions about the evolution of function remain difficult to address. In both pairs of species, we quantify the amount of information that would be ignored if paralogs are discarded, as well as the resulting loss in prediction accuracy. Taken as a whole, our results support the view that the types of homologs used for function transfer are largely irrelevant to the task of function prediction. Maximizing the amount of data used for this task, regardless of whether it comes from orthologs or paralogs, is most likely to lead to higher prediction accuracy.<h4>Availability and implementation</h4>https://github.com/predragradivojac/oc.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2020,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btaa468"
-  },
-  {
-    "id": "10.1093/bioinformatics/btaa449",
-    "title": "Identifying tumor clones in sparse single-cell mutation data",
-    "authors": [
-      "Myers MA",
-      "Zaccaria S",
-      "Raphael BJ"
-    ],
-    "abstract": "<h4>Motivation</h4>Recent single-cell DNA sequencing technologies enable whole-genome sequencing of hundreds to thousands of individual cells. However, these technologies have ultra-low sequencing coverage (<0.5× per cell) which has limited their use to the analysis of large copy-number aberrations (CNAs) in individual cells. While CNAs are useful markers in cancer studies, single-nucleotide mutations are equally important, both in cancer studies and in other applications. However, ultra-low coverage sequencing yields single-nucleotide mutation data that are too sparse for current single-cell analysis methods.<h4>Results</h4>We introduce SBMClone, a method to infer clusters of cells, or clones, that share groups of somatic single-nucleotide mutations. SBMClone uses a stochastic block model to overcome sparsity in ultra-low coverage single-cell sequencing data, and we show that SBMClone accurately infers the true clonal composition on simulated datasets with coverage at low as 0.2×. We applied SBMClone to single-cell whole-genome sequencing data from two breast cancer patients obtained using two different sequencing technologies. On the first patient, sequenced using the 10X Genomics CNV solution with sequencing coverage ≈0.03×, SBMClone recovers the major clonal composition when incorporating a small amount of additional information. On the second patient, where pre- and post-treatment tumor samples were sequenced using DOP-PCR with sequencing coverage ≈0.5×, SBMClone shows that tumor cells are present in the post-treatment sample, contrary to published analysis of this dataset.<h4>Availability and implementation</h4>SBMClone is available on the GitHub repository https://github.com/raphael-group/SBMClone.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2020,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btaa449"
-  },
-  {
-    "id": "10.1093/bioinformatics/btaa460",
-    "title": "LinearPartition: linear-time approximation of RNA folding partition function and base-pairing probabilities",
-    "authors": [
-      "Zhang H",
-      "Zhang L",
-      "Mathews DH",
-      "Huang L"
-    ],
-    "abstract": "<h4>Motivation</h4>RNA secondary structure prediction is widely used to understand RNA function. Recently, there has been a shift away from the classical minimum free energy methods to partition function-based methods that account for folding ensembles and can therefore estimate structure and base pair probabilities. However, the classical partition function algorithm scales cubically with sequence length, and is therefore prohibitively slow for long sequences. This slowness is even more severe than cubic-time free energy minimization due to a substantially larger constant factor in runtime.<h4>Results</h4>Inspired by the success of our recent LinearFold algorithm that predicts the approximate minimum free energy structure in linear time, we design a similar linear-time heuristic algorithm, LinearPartition, to approximate the partition function and base-pairing probabilities, which is shown to be orders of magnitude faster than Vienna RNAfold and CONTRAfold (e.g. 2.5 days versus 1.3 min on a sequence with length 32 753 nt). More interestingly, the resulting base-pairing probabilities are even better correlated with the ground-truth structures. LinearPartition also leads to a small accuracy improvement when used for downstream structure prediction on families with the longest length sequences (16S and 23S rRNAs), as well as a substantial improvement on long-distance base pairs (500+ nt apart).<h4>Availability and implementation</h4>Code: http://github.com/LinearFold/LinearPartition; Server: http://linearfold.org/partition.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2020,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btaa460"
-  },
-  {
-    "id": "10.1093/bioinformatics/btaa318",
-    "title": "Combinatorial and statistical prediction of gene expression from haplotype sequence",
-    "authors": [
-      "Alpay BA",
-      "Demetci P",
-      "Istrail S",
-      "Aguiar D"
-    ],
-    "abstract": "<h4>Motivation</h4>Genome-wide association studies (GWAS) have discovered thousands of significant genetic effects on disease phenotypes. By considering gene expression as the intermediary between genotype and disease phenotype, expression quantitative trait loci studies have interpreted many of these variants by their regulatory effects on gene expression. However, there remains a considerable gap between genotype-to-gene expression association and genotype-to-gene expression prediction. Accurate prediction of gene expression enables gene-based association studies to be performed post hoc for existing GWAS, reduces multiple testing burden, and can prioritize genes for subsequent experimental investigation.<h4>Results</h4>In this work, we develop gene expression prediction methods that relax the independence and additivity assumptions between genetic markers. First, we consider gene expression prediction from a regression perspective and develop the HAPLEXR algorithm which combines haplotype clusterings with allelic dosages. Second, we introduce the new gene expression classification problem, which focuses on identifying expression groups rather than continuous measurements; we formalize the selection of an appropriate number of expression groups using the principle of maximum entropy. Third, we develop the HAPLEXD algorithm that models haplotype sharing with a modified suffix tree data structure and computes expression groups by spectral clustering. In both models, we penalize model complexity by prioritizing genetic clusters that indicate significant effects on expression. We compare HAPLEXR and HAPLEXD with three state-of-the-art expression prediction methods and two novel logistic regression approaches across five GTEx v8 tissues. HAPLEXD exhibits significantly higher classification accuracy overall; HAPLEXR shows higher prediction accuracy on approximately half of the genes tested and the largest number of best predicted genes (r2>0.1) among all methods. We show that variant and haplotype features selected by HAPLEXR are smaller in size than competing methods (and thus more interpretable) and are significantly enriched in functional annotations related to gene regulation. These results demonstrate the importance of explicitly modeling non-dosage dependent and intragenic epistatic effects when predicting expression.<h4>Availability and implementation</h4>Source code and binaries are freely available at https://github.com/rapturous/HAPLEX.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2020,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btaa318"
-  },
-  {
-    "id": "10.1093/bioinformatics/btaa447",
-    "title": "EvoLSTM: context-dependent models of sequence evolution using a sequence-to-sequence LSTM",
-    "authors": [
-      "Lim D",
-      "Blanchette M"
-    ],
-    "abstract": "<h4>Motivation</h4>Accurate probabilistic models of sequence evolution are essential for a wide variety of bioinformatics tasks, including sequence alignment and phylogenetic inference. The ability to realistically simulate sequence evolution is also at the core of many benchmarking strategies. Yet, mutational processes have complex context dependencies that remain poorly modeled and understood.<h4>Results</h4>We introduce EvoLSTM, a recurrent neural network-based evolution simulator that captures mutational context dependencies. EvoLSTM uses a sequence-to-sequence long short-term memory model trained to predict mutation probabilities at each position of a given sequence, taking into consideration the 14 flanking nucleotides. EvoLSTM can realistically simulate mammalian and plant DNA sequence evolution and reveals unexpectedly strong long-range context dependencies in mutation probabilities. EvoLSTM brings modern machine-learning approaches to bear on sequence evolution. It will serve as a useful tool to study and simulate complex mutational processes.<h4>Availability and implementation</h4>Code and dataset are available at https://github.com/DongjoonLim/EvoLSTM.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2020,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btaa447"
-  },
-  {
-    "id": "10.1093/bioinformatics/btaa452",
-    "title": "Prediction of cancer driver genes through network-based moment propagation of mutation scores",
-    "authors": [
-      "Gumpinger AC",
-      "Lage K",
-      "Horn H",
-      "Borgwardt K"
-    ],
-    "abstract": "<h4>Motivation</h4>Gaining a comprehensive understanding of the genetics underlying cancer development and progression is a central goal of biomedical research. Its accomplishment promises key mechanistic, diagnostic and therapeutic insights. One major step in this direction is the identification of genes that drive the emergence of tumors upon mutation. Recent advances in the field of computational biology have shown the potential of combining genetic summary statistics that represent the mutational burden in genes with biological networks, such as protein-protein interaction networks, to identify cancer driver genes. Those approaches superimpose the summary statistics on the nodes in the network, followed by an unsupervised propagation of the node scores through the network. However, this unsupervised setting does not leverage any knowledge on well-established cancer genes, a potentially valuable resource to improve the identification of novel cancer drivers.<h4>Results</h4>We develop a novel node embedding that enables classification of cancer driver genes in a supervised setting. The embedding combines a representation of the mutation score distribution in a node's local neighborhood with network propagation. We leverage the knowledge of well-established cancer driver genes to define a positive class, resulting in a partially labeled dataset, and develop a cross-validation scheme to enable supervised prediction. The proposed node embedding followed by a supervised classification improves the predictive performance compared with baseline methods and yields a set of promising genes that constitute candidates for further biological validation.<h4>Availability and implementation</h4>Code available at https://github.com/BorgwardtLab/MoProEmbeddings.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2020,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btaa452"
-  },
-  {
-    "id": "10.1093/bioinformatics/btaa440",
-    "title": "TandemTools: mapping long reads and assessing/improving assembly quality in extra-long tandem repeats",
-    "authors": [
-      "Mikheenko A",
-      "Bzikadze AV",
-      "Gurevich A",
-      "Miga KH",
-      "Pevzner PA"
-    ],
-    "abstract": "<h4>Motivation</h4>Extra-long tandem repeats (ETRs) are widespread in eukaryotic genomes and play an important role in fundamental cellular processes, such as chromosome segregation. Although emerging long-read technologies have enabled ETR assemblies, the accuracy of such assemblies is difficult to evaluate since there are no tools for their quality assessment. Moreover, since the mapping of error-prone reads to ETRs remains an open problem, it is not clear how to polish draft ETR assemblies.<h4>Results</h4>To address these problems, we developed the TandemTools software that includes the TandemMapper tool for mapping reads to ETRs and the TandemQUAST tool for polishing ETR assemblies and their quality assessment. We demonstrate that TandemTools not only reveals errors in ETR assemblies but also improves the recently generated assemblies of human centromeres.<h4>Availability and implementation</h4>https://github.com/ablab/TandemTools.<h4>Supplementary information</h4>Supplementary data are available at Bioinformatics online.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2020,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btaa440"
   }
 ]

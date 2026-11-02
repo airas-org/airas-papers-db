@@ -95,6 +95,19 @@
     "paper_url": "https://doi.org/10.1145/3437992.3439931"
   },
   {
+    "id": "10.1145/3437992.3439912",
+    "title": "A modular Isabelle framework for verifying saturation provers",
+    "authors": [
+      "Sophie Tourret",
+      "Jasmin Blanchette"
+    ],
+    "abstract": "We present a formalization in Isabelle/HOL of a comprehensive framework for proving the completeness of automatic theorem provers based on resolution, superposition, or other saturation calculi. The framework helps calculus designers and prover developers derive, from the completeness of a calculus, the completeness of prover architectures implementing the calculus. It also helps derive the completeness of calculi obtained by lifting ground (i.e., variable-free) calculi. As a case study, we re-verified Bachmair and Ganzinger's resolution prover RP to show the benefits of modularity.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2021,
+    "paper_url": "https://doi.org/10.1145/3437992.3439912"
+  },
+  {
     "id": "10.1145/3437992.3439932",
     "title": "The generalised continuum hypothesis implies the axiom of choice in Coq",
     "authors": [
@@ -108,17 +121,43 @@
     "paper_url": "https://doi.org/10.1145/3437992.3439932"
   },
   {
-    "id": "10.1145/3437992.3439912",
-    "title": "A modular Isabelle framework for verifying saturation provers",
+    "id": "10.1145/3437992.3439919",
+    "title": "Formalizing the ring of Witt vectors",
     "authors": [
-      "Sophie Tourret",
-      "Jasmin Blanchette"
+      "Johan Commelin",
+      "Robert Y. Lewis"
     ],
-    "abstract": "We present a formalization in Isabelle/HOL of a comprehensive framework for proving the completeness of automatic theorem provers based on resolution, superposition, or other saturation calculi. The framework helps calculus designers and prover developers derive, from the completeness of a calculus, the completeness of prover architectures implementing the calculus. It also helps derive the completeness of calculi obtained by lifting ground (i.e., variable-free) calculi. As a case study, we re-verified Bachmair and Ganzinger's resolution prover RP to show the benefits of modularity.",
+    "abstract": "The ring of Witt vectors W R over a base ring R is an important tool in algebraic number theory and lies at the foundations of modern p-adic Hodge theory. W R has the interesting property that it constructs a ring of characteristic 0 out of a ring of characteristic p > 1, and it can be used more specifically to construct from a finite field containing ℤ/pℤ the corresponding unramified field extension of the p-adic numbers ℚp (which is unique up to isomorphism). We formalize the notion of a Witt vector in the Lean proof assistant, along with the corresponding ring operations and other algebraic structure. We prove in Lean that, for prime p, the ring of Witt vectors over ℤ/pℤ is isomorphic to the ring of p-adic integers ℤp. In the process we develop idioms to cleanly handle calculations of identities between operations on the ring of Witt vectors. These calculations are intractable with a naive approach, and require a proof technique that is usually skimmed over in the informal literature. Our proofs resemble the informal arguments while being fully rigorous.",
     "topic": "",
     "conference": "cpp",
     "year": 2021,
-    "paper_url": "https://doi.org/10.1145/3437992.3439912"
+    "paper_url": "https://doi.org/10.1145/3437992.3439919"
+  },
+  {
+    "id": "10.1145/3437992.3439913",
+    "title": "Developing and certifying Datalog optimizations in coq/mathcomp",
+    "authors": [
+      "Pierre-Léo Bégay",
+      "Pierre Crégut",
+      "Jean-François Monin"
+    ],
+    "abstract": "We introduce a static analysis and two program transformations for Datalog to circumvent performance ssues that arise with the implementation of primitive predicates, notably in the framework of a large scale telecommunication application. To this effect, we introduce a new trace semantics for Datalog with a verified mechanization. This work can be seen as both a first step and a proof of concept for the creation of a full-blown library of verified Datalog optimizations, on top of an existing Coq/MathComp formalization of Datalog towards the development of a realistic environment for certified data centric applications.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2021,
+    "paper_url": "https://doi.org/10.1145/3437992.3439913"
+  },
+  {
+    "id": "10.1145/3437992.3439916",
+    "title": "Lutsig: a verified Verilog compiler for verified circuit development",
+    "authors": [
+      "Andreas Lööw"
+    ],
+    "abstract": "We report on a new verified Verilog compiler called Lutsig. Lutsig currently targets (a class of) FPGAs and is capable of producing technology mapped netlists for FPGAs. We have connected Lutsig to existing Verilog development tools, and in this paper we show how Lutsig, as a consequence of this connection, fits into a hardware development methodology for verified circuits in the HOL4 theorem prover. One important step in the methodology is transporting properties proved at the behavioral Verilog level down to technology mapped netlists, and Lutsig is the component in the methodology that enables such transportation.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2021,
+    "paper_url": "https://doi.org/10.1145/3437992.3439916"
   },
   {
     "id": "10.1145/3437992.3439914",
@@ -149,61 +188,6 @@
     "paper_url": "https://doi.org/10.1145/3437992.3439921"
   },
   {
-    "id": "10.1145/3437992.3439925",
-    "title": "Lassie: HOL4 tactics by example",
-    "authors": [
-      "Heiko Becker",
-      "Nathaniel Bos",
-      "Ivan Gavran",
-      "Eva Darulova",
-      "Rupak Majumdar"
-    ],
-    "abstract": "Proof engineering efforts using interactive theorem proving have yielded several impressive projects in software systems and mathematics. A key obstacle to such efforts is the requirement that the domain expert is also an expert in the low-level details in constructing the proof in a theorem prover. In particular, the user needs to select a sequence of tactics that lead to a successful proof, a task that in general requires knowledge of the exact names and use of a large set of tactics. We present Lassie, a tactic framework for the HOL4 theorem prover that allows individual users to define their own tactic language by example and give frequently used tactics or tactic combinations easier-to-remember names. The core of Lassie is an extensible semantic parser, which allows the user to interactively extend the tactic language through a process of definitional generalization. Defining tactics in Lassie thus does not require any knowledge in implementing custom tactics, while proofs written in Lassie retain the correctness guarantees provided by the HOL4 system. We show through case studies how Lassie can be used in small and larger proofs by novice and more experienced interactive theorem prover users, and how we envision it to ease the learning curve in a HOL4 tutorial.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2021,
-    "paper_url": "https://doi.org/10.1145/3437992.3439925"
-  },
-  {
-    "id": "10.1145/3437992.3439916",
-    "title": "Lutsig: a verified Verilog compiler for verified circuit development",
-    "authors": [
-      "Andreas Lööw"
-    ],
-    "abstract": "We report on a new verified Verilog compiler called Lutsig. Lutsig currently targets (a class of) FPGAs and is capable of producing technology mapped netlists for FPGAs. We have connected Lutsig to existing Verilog development tools, and in this paper we show how Lutsig, as a consequence of this connection, fits into a hardware development methodology for verified circuits in the HOL4 theorem prover. One important step in the methodology is transporting properties proved at the behavioral Verilog level down to technology mapped netlists, and Lutsig is the component in the methodology that enables such transportation.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2021,
-    "paper_url": "https://doi.org/10.1145/3437992.3439916"
-  },
-  {
-    "id": "10.1145/3437992.3439919",
-    "title": "Formalizing the ring of Witt vectors",
-    "authors": [
-      "Johan Commelin",
-      "Robert Y. Lewis"
-    ],
-    "abstract": "The ring of Witt vectors W R over a base ring R is an important tool in algebraic number theory and lies at the foundations of modern p-adic Hodge theory. W R has the interesting property that it constructs a ring of characteristic 0 out of a ring of characteristic p > 1, and it can be used more specifically to construct from a finite field containing ℤ/pℤ the corresponding unramified field extension of the p-adic numbers ℚp (which is unique up to isomorphism). We formalize the notion of a Witt vector in the Lean proof assistant, along with the corresponding ring operations and other algebraic structure. We prove in Lean that, for prime p, the ring of Witt vectors over ℤ/pℤ is isomorphic to the ring of p-adic integers ℤp. In the process we develop idioms to cleanly handle calculations of identities between operations on the ring of Witt vectors. These calculations are intractable with a naive approach, and require a proof technique that is usually skimmed over in the informal literature. Our proofs resemble the informal arguments while being fully rigorous.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2021,
-    "paper_url": "https://doi.org/10.1145/3437992.3439919"
-  },
-  {
-    "id": "10.1145/3437992.3439913",
-    "title": "Developing and certifying Datalog optimizations in coq/mathcomp",
-    "authors": [
-      "Pierre-Léo Bégay",
-      "Pierre Crégut",
-      "Jean-François Monin"
-    ],
-    "abstract": "We introduce a static analysis and two program transformations for Datalog to circumvent performance ssues that arise with the implementation of primitive predicates, notably in the framework of a large scale telecommunication application. To this effect, we introduce a new trace semantics for Datalog with a verified mechanization. This work can be seen as both a first step and a proof of concept for the creation of a full-blown library of verified Datalog optimizations, on top of an existing Coq/MathComp formalization of Datalog towards the development of a realistic environment for certified data centric applications.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2021,
-    "paper_url": "https://doi.org/10.1145/3437992.3439913"
-  },
-  {
     "id": "10.1145/3437992.3439927",
     "title": "CertRL: formalizing convergence proofs for value and policy iteration in Coq",
     "authors": [
@@ -218,6 +202,22 @@
     "conference": "cpp",
     "year": 2021,
     "paper_url": "https://doi.org/10.1145/3437992.3439927"
+  },
+  {
+    "id": "10.1145/3437992.3439925",
+    "title": "Lassie: HOL4 tactics by example",
+    "authors": [
+      "Heiko Becker",
+      "Nathaniel Bos",
+      "Ivan Gavran",
+      "Eva Darulova",
+      "Rupak Majumdar"
+    ],
+    "abstract": "Proof engineering efforts using interactive theorem proving have yielded several impressive projects in software systems and mathematics. A key obstacle to such efforts is the requirement that the domain expert is also an expert in the low-level details in constructing the proof in a theorem prover. In particular, the user needs to select a sequence of tactics that lead to a successful proof, a task that in general requires knowledge of the exact names and use of a large set of tactics. We present Lassie, a tactic framework for the HOL4 theorem prover that allows individual users to define their own tactic language by example and give frequently used tactics or tactic combinations easier-to-remember names. The core of Lassie is an extensible semantic parser, which allows the user to interactively extend the tactic language through a process of definitional generalization. Defining tactics in Lassie thus does not require any knowledge in implementing custom tactics, while proofs written in Lassie retain the correctness guarantees provided by the HOL4 system. We show through case studies how Lassie can be used in small and larger proofs by novice and more experienced interactive theorem prover users, and how we envision it to ease the learning curve in a HOL4 tutorial.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2021,
+    "paper_url": "https://doi.org/10.1145/3437992.3439925"
   },
   {
     "id": "10.1145/3437992.3439911",
