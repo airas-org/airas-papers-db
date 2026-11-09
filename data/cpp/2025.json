@@ -39,31 +39,6 @@
     "paper_url": "https://doi.org/10.1145/3703595.3710846"
   },
   {
-    "id": "10.1145/3703595.3705885",
-    "title": "Machine Checked Proofs and Programs in Algebraic Combinatorics",
-    "authors": [
-      "Florent Hivert"
-    ],
-    "abstract": "We present a library of formalized results around symmetric functions and the character theory of symmetric groups. Written in Coq/Rocq and based on the Mathematical Components library, it covers a large part of the contents of a graduate level textbook in the field. The flagship result is a proof of the Littlewood-Richardson rule, which computes the structure constants of the algebra of symmetric function in the schur basis which are integer numbers appearing in various fields of mathematics, and which has a long history of wrong proofs. A specific feature of algebraic combinatorics is the constant interplay between algorithms and algebraic constructions: algorithms are not only in computations, but also are key ingredients in definitions and proofs. As such, the proof of the Littlewood-Richardson rule deeply relies on the understanding of the execution of the Robinson-Schensted algorithm. Many results in this library are effective and actually used in computer algebra systems, and we discuss their certified implementation.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2025,
-    "paper_url": "https://doi.org/10.1145/3703595.3705885"
-  },
-  {
-    "id": "10.1145/3703595.3705875",
-    "title": "Formalization of Differential Privacy in Isabelle/HOL",
-    "authors": [
-      "Tetsuya Sato",
-      "Yasuhiko Minamide"
-    ],
-    "abstract": "Differential privacy is a statistical definition of privacy that has attracted the interest of both academia and industry. Its formulations are easy to understand, but the differential privacy of databases is complicated to determine. One of the reasons for this is that small changes in database programs can break their differential privacy. Therefore, formal verification of differential privacy has been studied for over a decade. In this paper, we propose an Isabelle/HOL library for formalizing differential privacy in a general setting. To our knowledge, it is the first formalization of differential privacy that supports continuous probability distributions. First, we formalize the standard definition of differential privacy and its basic properties. Second, we formalize the Laplace mechanism and its differential privacy. Finally, we formalize the differential privacy of the report noisy max mechanism.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2025,
-    "paper_url": "https://doi.org/10.1145/3703595.3705875"
-  },
-  {
     "id": "10.1145/3703595.3705886",
     "title": "Further Tackling Post Correspondence Problem and Proof Generation",
     "authors": [
@@ -75,6 +50,18 @@
     "conference": "cpp",
     "year": 2025,
     "paper_url": "https://doi.org/10.1145/3703595.3705886"
+  },
+  {
+    "id": "10.1145/3703595.3705885",
+    "title": "Machine Checked Proofs and Programs in Algebraic Combinatorics",
+    "authors": [
+      "Florent Hivert"
+    ],
+    "abstract": "We present a library of formalized results around symmetric functions and the character theory of symmetric groups. Written in Coq/Rocq and based on the Mathematical Components library, it covers a large part of the contents of a graduate level textbook in the field. The flagship result is a proof of the Littlewood-Richardson rule, which computes the structure constants of the algebra of symmetric function in the schur basis which are integer numbers appearing in various fields of mathematics, and which has a long history of wrong proofs. A specific feature of algebraic combinatorics is the constant interplay between algorithms and algebraic constructions: algorithms are not only in computations, but also are key ingredients in definitions and proofs. As such, the proof of the Littlewood-Richardson rule deeply relies on the understanding of the execution of the Robinson-Schensted algorithm. Many results in this library are effective and actually used in computer algebra systems, and we discuss their certified implementation.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2025,
+    "paper_url": "https://doi.org/10.1145/3703595.3705885"
   },
   {
     "id": "10.1145/3703595.3705876",
@@ -91,18 +78,6 @@
     "paper_url": "https://doi.org/10.1145/3703595.3705876"
   },
   {
-    "id": "10.1145/3703595.3710845",
-    "title": "Prospects for Computer Formalization of Infinite-Dimensional Category Theory (Invited Talk)",
-    "authors": [
-      "Emily Riehl"
-    ],
-    "abstract": "As mathematics becomes increasingly complicated, the prospect of using a computer proof assistant to (i) certify the correctness of one’s own work and (ii) interact with the formalized mathematical literature becomes increasingly attractive. In this talk, we will describe some challenges that arise when it comes to formalizing weak infinite-dimensional category theory, specifically the theory of ∞-categories developed by Joyal and Lurie. We introduce two parallel ongoing collaborative efforts to formalize ∞-category theory in two different proof assistants: Lean and Rzk. We show some sample formalized proofs to highlight the advantages and drawbacks of each formal system and explain how you could contribute to this effort. This involves joint work with Mario Carneiro, Dominic Verity, Nikolai Kudasov, and Jonathan Weinberger.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2025,
-    "paper_url": "https://doi.org/10.1145/3703595.3710845"
-  },
-  {
     "id": "10.1145/3703595.3705887",
     "title": "Formalizing the One-Way to Hiding Theorem",
     "authors": [
@@ -116,18 +91,16 @@
     "paper_url": "https://doi.org/10.1145/3703595.3705887"
   },
   {
-    "id": "10.1145/3703595.3705890",
-    "title": "Monadic Interpreters for Concurrent Memory Models",
+    "id": "10.1145/3703595.3710845",
+    "title": "Prospects for Computer Formalization of Infinite-Dimensional Category Theory (Invited Talk)",
     "authors": [
-      "Nicolas Chappe",
-      "Ludovic Henrio",
-      "Yannick Zakowski"
+      "Emily Riehl"
     ],
-    "abstract": "Monadic interpreters have gained attention as a powerful tool for modeling and reasoning about first order languages. In particular in the Coq ecosystem, the Choice Tree (CTree) library provides generic tools to craft such interpreters in presence of divergence, stateful effects, failure, and non-determinism. This monadic approach allows the definition of semantics for programming languages that are modular in its effects, compositional w.r.t. its syntax, and executable. This paper demonstrates the use of CTrees to formalize a semantics for concurrency and weak memory models. We instantiate the approach over a minimal concurrent subset of LLVM IR. Our semantics is built in successive stages, interpreting each aspect of the semantics separately. In particular, a stage encodes multi-threading as an interleaving semantics, and another implements a weak memory model that supports various LLVM memory orderings. Furthermore, the modularity of the approach makes it possible to plug a different source language or memory model by changing a single interpretation phase. By leveraging the notions of (bi)similarity on CTrees, we establish the equational theory of our constructions, show how to transport equivalences through our layered construction, and prove simulation results between memory models. Finally, our model is executable, hence the semantics can be tested by extraction to OCaml.",
+    "abstract": "As mathematics becomes increasingly complicated, the prospect of using a computer proof assistant to (i) certify the correctness of one’s own work and (ii) interact with the formalized mathematical literature becomes increasingly attractive. In this talk, we will describe some challenges that arise when it comes to formalizing weak infinite-dimensional category theory, specifically the theory of ∞-categories developed by Joyal and Lurie. We introduce two parallel ongoing collaborative efforts to formalize ∞-category theory in two different proof assistants: Lean and Rzk. We show some sample formalized proofs to highlight the advantages and drawbacks of each formal system and explain how you could contribute to this effort. This involves joint work with Mario Carneiro, Dominic Verity, Nikolai Kudasov, and Jonathan Weinberger.",
     "topic": "",
     "conference": "cpp",
     "year": 2025,
-    "paper_url": "https://doi.org/10.1145/3703595.3705890"
+    "paper_url": "https://doi.org/10.1145/3703595.3710845"
   },
   {
     "id": "10.1145/3703595.3705877",
@@ -155,6 +128,18 @@
     "conference": "cpp",
     "year": 2025,
     "paper_url": "https://doi.org/10.1145/3703595.3705888"
+  },
+  {
+    "id": "10.1145/3703595.3705882",
+    "title": "An Isabelle/HOL Framework for Synthetic Completeness Proofs",
+    "authors": [
+      "Asta Halkjær From"
+    ],
+    "abstract": "Proof assistants like Isabelle/HOL provide the perfect opportunity to develop more than just one-off formalizations, but frameworks for developing new results within a given area. Completeness results for logical calculi often include bespoke versions of Lindenbaum's lemma. In this paper, I mechanize an abstract, transfinite version of the lemma and use it to build witnessed, maximal consistent sets (MCSs) for any notion of consistency that satisfies a few requirements. I prove abstract results about when MCSs reflect the proof rules of the underlying calculi. Finally, I formalize a process for mechanically calculating saturated set conditions from a given logic's semantics. This separates the truth lemma that connects MCS-membership and satisfiability into semantic and syntactic components, giving concrete proof obligations for each operator of the logic. To illustrate the framework's applicability, I instantiate it with propositional, first-order, modal and hybrid logic examples. I mechanize strong completeness for each logic, even for uncountably large languages, proving that, if a formula is valid under a set of assumptions, then we can derive it from a finite subset.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2025,
+    "paper_url": "https://doi.org/10.1145/3703595.3705882"
   },
   {
     "id": "10.1145/3703595.3705883",
@@ -186,22 +171,17 @@
     "paper_url": "https://doi.org/10.1145/3703595.3705873"
   },
   {
-    "id": "10.1145/3703595.3705878",
-    "title": "A CHERI C Memory Model for Verified Temporal Safety",
+    "id": "10.1145/3703595.3705875",
+    "title": "Formalization of Differential Privacy in Isabelle/HOL",
     "authors": [
-      "Vadim Zaliva",
-      "Kayvan Memarian",
-      "Brian Campbell",
-      "Ricardo Almeida",
-      "Nathaniel Filardo",
-      "Ian Stark",
-      "Peter Sewell"
+      "Tetsuya Sato",
+      "Yasuhiko Minamide"
     ],
-    "abstract": "Memory safety concerns continue to be a major source of security vulnerabilities. The CHERI architecture, as instantiated in prototype CHERI-RISC-V cores, the Arm Morello system, and Microsoft's CHERIoT embedded core, provides fine-grained memory access control through unforgeable hardware capabilities. The impact of CHERI on spatial memory safety is well understood. This paper systematically examines temporal memory safety within CHERI C -- a dialect of the C programming language for CHERI -- and proposes a formal approach to defining and ensuring it. In particular: 1) we examine the impact of five existing capability revocation mechanisms on CHERI C semantics and present a specialised object memory model tailored to CHERI C; 2) we introduce a new CHERI-specific pointer provenance tracking scheme; and 3) we formally define the security guarantees provided by this memory model, supported by a Coq proof of their correctness, expressed as invariants of the memory state.",
+    "abstract": "Differential privacy is a statistical definition of privacy that has attracted the interest of both academia and industry. Its formulations are easy to understand, but the differential privacy of databases is complicated to determine. One of the reasons for this is that small changes in database programs can break their differential privacy. Therefore, formal verification of differential privacy has been studied for over a decade. In this paper, we propose an Isabelle/HOL library for formalizing differential privacy in a general setting. To our knowledge, it is the first formalization of differential privacy that supports continuous probability distributions. First, we formalize the standard definition of differential privacy and its basic properties. Second, we formalize the Laplace mechanism and its differential privacy. Finally, we formalize the differential privacy of the report noisy max mechanism.",
     "topic": "",
     "conference": "cpp",
     "year": 2025,
-    "paper_url": "https://doi.org/10.1145/3703595.3705878"
+    "paper_url": "https://doi.org/10.1145/3703595.3705875"
   },
   {
     "id": "10.1145/3703595.3705871",
@@ -219,18 +199,6 @@
     "paper_url": "https://doi.org/10.1145/3703595.3705871"
   },
   {
-    "id": "10.1145/3703595.3705882",
-    "title": "An Isabelle/HOL Framework for Synthetic Completeness Proofs",
-    "authors": [
-      "Asta Halkjær From"
-    ],
-    "abstract": "Proof assistants like Isabelle/HOL provide the perfect opportunity to develop more than just one-off formalizations, but frameworks for developing new results within a given area. Completeness results for logical calculi often include bespoke versions of Lindenbaum's lemma. In this paper, I mechanize an abstract, transfinite version of the lemma and use it to build witnessed, maximal consistent sets (MCSs) for any notion of consistency that satisfies a few requirements. I prove abstract results about when MCSs reflect the proof rules of the underlying calculi. Finally, I formalize a process for mechanically calculating saturated set conditions from a given logic's semantics. This separates the truth lemma that connects MCS-membership and satisfiability into semantic and syntactic components, giving concrete proof obligations for each operator of the logic. To illustrate the framework's applicability, I instantiate it with propositional, first-order, modal and hybrid logic examples. I mechanize strong completeness for each logic, even for uncountably large languages, proving that, if a formula is valid under a set of assumptions, then we can derive it from a finite subset.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2025,
-    "paper_url": "https://doi.org/10.1145/3703595.3705882"
-  },
-  {
     "id": "10.1145/3703595.3705879",
     "title": "CertiCoq-Wasm: A Verified WebAssembly Backend for CertiCoq",
     "authors": [
@@ -246,19 +214,36 @@
     "paper_url": "https://doi.org/10.1145/3703595.3705879"
   },
   {
-    "id": "10.1145/3703595.3705889",
-    "title": "An Isabelle Formalization of Co-rewrite Pairs for Non-reachability in Term Rewriting",
+    "id": "10.1145/3703595.3705890",
+    "title": "Monadic Interpreters for Concurrent Memory Models",
     "authors": [
-      "Dohan Kim",
-      "Teppei Saito",
-      "René Thiemann",
-      "Akihisa Yamada"
+      "Nicolas Chappe",
+      "Ludovic Henrio",
+      "Yannick Zakowski"
     ],
-    "abstract": "In this paper, we present an Isabelle/HOL formalization of co-rewrite pairs for non-reachability analysis in term rewriting. In particular, we formalize polynomial interpretations over negative integers as well as the weighted path order (WPO) and its variant co-WPO. With this formalization, the verified certifier CeTA is now able to check such non-reachability proofs, including those for non-reachability problems of a database where existing tools fail to provide certified proofs.",
+    "abstract": "Monadic interpreters have gained attention as a powerful tool for modeling and reasoning about first order languages. In particular in the Coq ecosystem, the Choice Tree (CTree) library provides generic tools to craft such interpreters in presence of divergence, stateful effects, failure, and non-determinism. This monadic approach allows the definition of semantics for programming languages that are modular in its effects, compositional w.r.t. its syntax, and executable. This paper demonstrates the use of CTrees to formalize a semantics for concurrency and weak memory models. We instantiate the approach over a minimal concurrent subset of LLVM IR. Our semantics is built in successive stages, interpreting each aspect of the semantics separately. In particular, a stage encodes multi-threading as an interleaving semantics, and another implements a weak memory model that supports various LLVM memory orderings. Furthermore, the modularity of the approach makes it possible to plug a different source language or memory model by changing a single interpretation phase. By leveraging the notions of (bi)similarity on CTrees, we establish the equational theory of our constructions, show how to transport equivalences through our layered construction, and prove simulation results between memory models. Finally, our model is executable, hence the semantics can be tested by extraction to OCaml.",
     "topic": "",
     "conference": "cpp",
     "year": 2025,
-    "paper_url": "https://doi.org/10.1145/3703595.3705889"
+    "paper_url": "https://doi.org/10.1145/3703595.3705890"
+  },
+  {
+    "id": "10.1145/3703595.3705878",
+    "title": "A CHERI C Memory Model for Verified Temporal Safety",
+    "authors": [
+      "Vadim Zaliva",
+      "Kayvan Memarian",
+      "Brian Campbell",
+      "Ricardo Almeida",
+      "Nathaniel Filardo",
+      "Ian Stark",
+      "Peter Sewell"
+    ],
+    "abstract": "Memory safety concerns continue to be a major source of security vulnerabilities. The CHERI architecture, as instantiated in prototype CHERI-RISC-V cores, the Arm Morello system, and Microsoft's CHERIoT embedded core, provides fine-grained memory access control through unforgeable hardware capabilities. The impact of CHERI on spatial memory safety is well understood. This paper systematically examines temporal memory safety within CHERI C -- a dialect of the C programming language for CHERI -- and proposes a formal approach to defining and ensuring it. In particular: 1) we examine the impact of five existing capability revocation mechanisms on CHERI C semantics and present a specialised object memory model tailored to CHERI C; 2) we introduce a new CHERI-specific pointer provenance tracking scheme; and 3) we formally define the security guarantees provided by this memory model, supported by a Coq proof of their correctness, expressed as invariants of the memory state.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2025,
+    "paper_url": "https://doi.org/10.1145/3703595.3705878"
   },
   {
     "id": "10.1145/3703595.3705872",
@@ -302,5 +287,20 @@
     "conference": "cpp",
     "year": 2025,
     "paper_url": "https://doi.org/10.1145/3703595.3705884"
+  },
+  {
+    "id": "10.1145/3703595.3705889",
+    "title": "An Isabelle Formalization of Co-rewrite Pairs for Non-reachability in Term Rewriting",
+    "authors": [
+      "Dohan Kim",
+      "Teppei Saito",
+      "René Thiemann",
+      "Akihisa Yamada"
+    ],
+    "abstract": "In this paper, we present an Isabelle/HOL formalization of co-rewrite pairs for non-reachability analysis in term rewriting. In particular, we formalize polynomial interpretations over negative integers as well as the weighted path order (WPO) and its variant co-WPO. With this formalization, the verified certifier CeTA is now able to check such non-reachability proofs, including those for non-reachability problems of a database where existing tools fail to provide certified proofs.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2025,
+    "paper_url": "https://doi.org/10.1145/3703595.3705889"
   }
 ]

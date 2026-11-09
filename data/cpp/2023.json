@@ -13,20 +13,6 @@
     "paper_url": "https://doi.org/10.1145/3573105.3575671"
   },
   {
-    "id": "10.1145/3573105.3575685",
-    "title": "Formalising Decentralised Exchanges in Coq",
-    "authors": [
-      "Eske Hoy Nielsen",
-      "Danil Annenkov",
-      "Bas Spitters"
-    ],
-    "abstract": "The number of attacks and accidents leading to significant losses of crypto-assets is growing. According to Chainalysis, in 2021, approx. $14 billion has been lost due to various incidents, and this number is dominated by Decentralized Finance (DeFi) applications. To address these issues, one can use a collection of tools ranging from auditing to formal methods. We use formal verification and provide the first formalisation of a DeFi contract in a foundational proof assistant capturing contract interactions. We focus on Dexter2, a decentralized, non-custodial exchange for the Tezos network similar to Uniswap on Ethereum. The Dexter implementation consists of several smart contracts. This poses unique challenges for formalisation due to the complex contract interactions. Our formalisation includes proofs of functional correctness with respect to an informal specification for the contracts involved in Dexter’s implementation. Moreover, our formalisation is the first to feature proofs of safety properties of the interacting smart contracts of a decentralized exchange. We have extracted our contract from Coq into CameLIGO code, so it can be deployed on the Tezos blockchain. Uniswap and Dexter are paradigmatic for a collection of similar contracts. Our methodology thus allows us to implement and verify DeFi applications featuring similar interaction patterns.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1145/3573105.3575685"
-  },
-  {
     "id": "10.1145/3573105.3575682",
     "title": "Formalized Class Group Computations and Integral Points on Mordell Elliptic Curves",
     "authors": [
@@ -40,6 +26,20 @@
     "conference": "cpp",
     "year": 2023,
     "paper_url": "https://doi.org/10.1145/3573105.3575682"
+  },
+  {
+    "id": "10.1145/3573105.3575685",
+    "title": "Formalising Decentralised Exchanges in Coq",
+    "authors": [
+      "Eske Hoy Nielsen",
+      "Danil Annenkov",
+      "Bas Spitters"
+    ],
+    "abstract": "The number of attacks and accidents leading to significant losses of crypto-assets is growing. According to Chainalysis, in 2021, approx. $14 billion has been lost due to various incidents, and this number is dominated by Decentralized Finance (DeFi) applications. To address these issues, one can use a collection of tools ranging from auditing to formal methods. We use formal verification and provide the first formalisation of a DeFi contract in a foundational proof assistant capturing contract interactions. We focus on Dexter2, a decentralized, non-custodial exchange for the Tezos network similar to Uniswap on Ethereum. The Dexter implementation consists of several smart contracts. This poses unique challenges for formalisation due to the complex contract interactions. Our formalisation includes proofs of functional correctness with respect to an informal specification for the contracts involved in Dexter’s implementation. Moreover, our formalisation is the first to feature proofs of safety properties of the interacting smart contracts of a decentralized exchange. We have extracted our contract from Coq into CameLIGO code, so it can be deployed on the Tezos blockchain. Uniswap and Dexter are paradigmatic for a collection of similar contracts. Our methodology thus allows us to implement and verify DeFi applications featuring similar interaction patterns.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1145/3573105.3575685"
   },
   {
     "id": "10.1145/3573105.3579107",
@@ -68,44 +68,6 @@
     "paper_url": "https://doi.org/10.1145/3573105.3575688"
   },
   {
-    "id": "10.1145/3573105.3575678",
-    "title": "A Formal Disproof of Hirsch Conjecture",
-    "authors": [
-      "Xavier Allamigeon",
-      "Quentin Canu",
-      "Pierre-Yves Strub"
-    ],
-    "abstract": "The purpose of this paper is the formal verification of a counterexample of Santos et al. to the so-called Hirsch Conjecture on the diameter of polytopes (bounded convex polyhedra). In contrast with the pen-and-paper proof, our approach is entirely computational: we have implemented in Coq and proved correct an algorithm that explicitly computes, within the proof assistant, vertex-edge graphs of polytopes as well as their diameter. The originality of this certificate-based algorithm is to achieve a tradeoff between simplicity and efficiency. Simplicity is crucial in obtaining the proof of correctness of the algorithm. This proof splits into the correctness of an abstract algorithm stated over proof-oriented data types and the correspondence with a low-level implementation over computation-oriented data types. A special effort has been made to reduce the algorithm to a small sequence of elementary operations (e.g. matrix multiplications, basic routines on graphs), in order to make the derivation of the correctness of the low-level implementation more transparent. Efficiency allows us to scale up to polytopes with a challenging combinatorics. For instance, we formally check the two counterexamples to Hirsch conjecture due to Matschke, Santos and Weibel, respectively 20- and 23-dimensional polytopes with 36425 and 73224 vertices involving rational coefficients with up to 20 digits. We also illustrate the performance of the method by computing the list of vertices or the diameter of well-known classes of polytopes, such as (polars of) cyclic polytopes involved in McMullen's Upper Bound Theorem.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1145/3573105.3575678"
-  },
-  {
-    "id": "10.1145/3573105.3579108",
-    "title": "Improved Assistance for Interactive Proof (Keynote)",
-    "authors": [
-      "Cezary Kaliszyk"
-    ],
-    "abstract": "Machine learning techniques have been included in various theorem proving tools for approximately two decades. Some of the learning tasks are well understood and tools actually help practitioners, while other tasks are still in their early developmental stages. In this talk I will try to classify the various learning tasks and discuss the learning techniques and tools that are aimed at enhancing the efficiency of interactive theorem provers. I will discuss the most successful techniques aimed at improving the power of automation, that use Monte-Carlo simulations guided by reinforcement learning from previous proof attempts. I will also consider the present and the future challenges including more efficient interaction with interactive theorem provers.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1145/3573105.3579108"
-  },
-  {
-    "id": "10.1145/3573105.3575689",
-    "title": "Formalising Sharkovsky’s Theorem (Proof Pearl)",
-    "authors": [
-      "Bhavik Mehta"
-    ],
-    "abstract": "Sharkovsky's theorem is a celebrated result by Ukrainian mathematician Oleksandr Sharkovsky in the theory of discrete dynamical systems, including the fact that if a continuous function of reals has a point of period 3, it must have points of any period. We formalise the proof in the Lean theorem prover, giving a characterisation of the possible sets of periods a continuous function on the real numbers may have. We further include the converse of the theorem, showing that the aforementioned sets are achievable under mild conditions.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1145/3573105.3575689"
-  },
-  {
     "id": "10.1145/3573105.3575672",
     "title": "A First Complete Algorithm for Real Quantifier Elimination in Isabelle/HOL",
     "authors": [
@@ -132,6 +94,20 @@
     "conference": "cpp",
     "year": 2023,
     "paper_url": "https://doi.org/10.1145/3573105.3575683"
+  },
+  {
+    "id": "10.1145/3573105.3575678",
+    "title": "A Formal Disproof of Hirsch Conjecture",
+    "authors": [
+      "Xavier Allamigeon",
+      "Quentin Canu",
+      "Pierre-Yves Strub"
+    ],
+    "abstract": "The purpose of this paper is the formal verification of a counterexample of Santos et al. to the so-called Hirsch Conjecture on the diameter of polytopes (bounded convex polyhedra). In contrast with the pen-and-paper proof, our approach is entirely computational: we have implemented in Coq and proved correct an algorithm that explicitly computes, within the proof assistant, vertex-edge graphs of polytopes as well as their diameter. The originality of this certificate-based algorithm is to achieve a tradeoff between simplicity and efficiency. Simplicity is crucial in obtaining the proof of correctness of the algorithm. This proof splits into the correctness of an abstract algorithm stated over proof-oriented data types and the correspondence with a low-level implementation over computation-oriented data types. A special effort has been made to reduce the algorithm to a small sequence of elementary operations (e.g. matrix multiplications, basic routines on graphs), in order to make the derivation of the correctness of the low-level implementation more transparent. Efficiency allows us to scale up to polytopes with a challenging combinatorics. For instance, we formally check the two counterexamples to Hirsch conjecture due to Matschke, Santos and Weibel, respectively 20- and 23-dimensional polytopes with 36425 and 73224 vertices involving rational coefficients with up to 20 digits. We also illustrate the performance of the method by computing the list of vertices or the diameter of well-known classes of polytopes, such as (polars of) cyclic polytopes involved in McMullen's Upper Bound Theorem.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1145/3573105.3575678"
   },
   {
     "id": "10.1145/3573105.3575668",
@@ -227,19 +203,6 @@
     "paper_url": "https://doi.org/10.1145/3573105.3575681"
   },
   {
-    "id": "10.1145/3573105.3575675",
-    "title": "A Formalization of Doob’s Martingale Convergence Theorems in mathlib",
-    "authors": [
-      "Kexing Ying",
-      "Rémy Degenne"
-    ],
-    "abstract": "We present the formalization of Doob’s martingale convergence theorems in the mathlib library for the Lean theorem prover. These theorems give conditions under which (sub)martingales converge, almost everywhere or in L1. In order to formalize those results, we build a definition of the conditional expectation in Banach spaces and develop the theory of stochastic processes, stopping times and martingales. As an application of the convergence theorems, we also present the formalization of Lévy’s generalized Borel-Cantelli lemma. This work on martingale theory is one of the first developments of probability theory in mathlib, and it builds upon diverse parts of that library such as topology, analysis and most importantly measure theory.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1145/3573105.3575675"
-  },
-  {
     "id": "10.1145/3573105.3575684",
     "title": "ASN1*: Provably Correct, Non-malleable Parsing for ASN.1 DER",
     "authors": [
@@ -289,20 +252,6 @@
     "paper_url": "https://doi.org/10.1145/3573105.3575690"
   },
   {
-    "id": "10.1145/3573105.3575677",
-    "title": "Computing Cohomology Rings in Cubical Agda",
-    "authors": [
-      "Thomas Lamiaux",
-      "Axel Ljungström",
-      "Anders Mörtberg"
-    ],
-    "abstract": "In Homotopy Type Theory, cohomology theories are studied synthetically using higher inductive types and univalence. This paper extends previous developments by providing the first fully mechanized definition of cohomology rings. These rings may be defined as direct sums of cohomology groups together with a multiplication induced by the cup product, and can in many cases be characterized as quotients of multivariate polynomial rings. To this end, we introduce appropriate definitions of direct sums and graded rings, which we then use to define both cohomology rings and multivariate polynomial rings. Using this, we compute the cohomology rings of some classical spaces, such as the spheres and the Klein bottle. The formalization is constructive so that it can be used to do concrete computations, and it relies on the Cubical Agda system which natively supports higher inductive types and computational univalence.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1145/3573105.3575677"
-  },
-  {
     "id": "10.1145/3573105.3575679",
     "title": "Encoding Dependently-Typed Constructions into Simple Type Theory",
     "authors": [
@@ -328,32 +277,41 @@
     "paper_url": "https://doi.org/10.1145/3573105.3575669"
   },
   {
-    "id": "10.1145/3573105.3575680",
-    "title": "A Formalisation of the Balog–Szemerédi–Gowers Theorem in Isabelle/HOL",
+    "id": "10.1145/3573105.3579108",
+    "title": "Improved Assistance for Interactive Proof (Keynote)",
     "authors": [
-      "Angeliki Koutsoukou-Argyraki",
-      "Mantas Bakšys",
-      "Chelsea Edmonds"
+      "Cezary Kaliszyk"
     ],
-    "abstract": "We describe our formalisation in the interactive theorem prover Isabelle/HOL of the Balog–Szemerédi–Gowers Theorem, a profound result in additive combinatorics which played a central role in Gowers’s proof deriving the first effective bounds for Szemerédi’s Theorem. The proof is of great mathematical interest given that it involves an interplay between different mathematical areas, namely applications of graph theory and probability theory to additive combinatorics involving algebraic objects. This interplay is what made the process of the formalisation, for which we had to develop formalisations of new background material in the aforementioned areas, more rich and technically challenging. We demonstrate how locales, Isabelle’s module system, can be employed to handle such interplays in mathematical formalisations. To treat the graph-theoretic aspects of the proof, we make use of a new, more general undirected graph theory library developed by Edmonds, which is both flexible and extensible. In addition to the main theorem, which, following our source, is formulated for difference sets, we also give an alternative version for sumsets which required a formalisation of an auxiliary triangle inequality. We moreover formalise a few additional results in additive combinatorics that are not used in the proof of the main theorem. This is the first formalisation of the Balog–Szemerédi–Gowers Theorem in any proof assistant to our knowledge.",
+    "abstract": "Machine learning techniques have been included in various theorem proving tools for approximately two decades. Some of the learning tasks are well understood and tools actually help practitioners, while other tasks are still in their early developmental stages. In this talk I will try to classify the various learning tasks and discuss the learning techniques and tools that are aimed at enhancing the efficiency of interactive theorem provers. I will discuss the most successful techniques aimed at improving the power of automation, that use Monte-Carlo simulations guided by reinforcement learning from previous proof attempts. I will also consider the present and the future challenges including more efficient interaction with interactive theorem provers.",
     "topic": "",
     "conference": "cpp",
     "year": 2023,
-    "paper_url": "https://doi.org/10.1145/3573105.3575680"
+    "paper_url": "https://doi.org/10.1145/3573105.3579108"
   },
   {
-    "id": "10.1145/3573105.3575673",
-    "title": "Verifying Term Graph Optimizations using Isabelle/HOL",
+    "id": "10.1145/3573105.3575689",
+    "title": "Formalising Sharkovsky’s Theorem (Proof Pearl)",
     "authors": [
-      "Brae J. Webb",
-      "Ian J. Hayes",
-      "Mark Utting"
+      "Bhavik Mehta"
     ],
-    "abstract": "Our objective is to formally verify the correctness of the hundreds of expression optimization rules used within the GraalVM compiler. When defining the semantics of a programming language, expressions naturally form abstract syntax trees, or, terms. However, in order to facilitate sharing of common subexpressions, modern compilers represent expressions as term graphs. Defining the semantics of term graphs is more complicated than defining the semantics of their equivalent term representations. More significantly, defining optimizations directly on term graphs and proving semantics preservation is considerably more complicated than on the equivalent term representations. On terms, optimizations can be expressed as conditional term rewriting rules, and proofs that the rewrites are semantics preserving are relatively straightforward. In this paper, we explore an approach to using term rewrites to verify term graph transformations of optimizations within the GraalVM compiler. This approach significantly reduces the overall verification effort and allows for simpler encoding of optimization rules.",
+    "abstract": "Sharkovsky's theorem is a celebrated result by Ukrainian mathematician Oleksandr Sharkovsky in the theory of discrete dynamical systems, including the fact that if a continuous function of reals has a point of period 3, it must have points of any period. We formalise the proof in the Lean theorem prover, giving a characterisation of the possible sets of periods a continuous function on the real numbers may have. We further include the converse of the theorem, showing that the aforementioned sets are achievable under mild conditions.",
     "topic": "",
     "conference": "cpp",
     "year": 2023,
-    "paper_url": "https://doi.org/10.1145/3573105.3575673"
+    "paper_url": "https://doi.org/10.1145/3573105.3575689"
+  },
+  {
+    "id": "10.1145/3573105.3575675",
+    "title": "A Formalization of Doob’s Martingale Convergence Theorems in mathlib",
+    "authors": [
+      "Kexing Ying",
+      "Rémy Degenne"
+    ],
+    "abstract": "We present the formalization of Doob’s martingale convergence theorems in the mathlib library for the Lean theorem prover. These theorems give conditions under which (sub)martingales converge, almost everywhere or in L1. In order to formalize those results, we build a definition of the conditional expectation in Banach spaces and develop the theory of stochastic processes, stopping times and martingales. As an application of the convergence theorems, we also present the formalization of Lévy’s generalized Borel-Cantelli lemma. This work on martingale theory is one of the first developments of probability theory in mathlib, and it builds upon diverse parts of that library such as topology, analysis and most importantly measure theory.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1145/3573105.3575675"
   },
   {
     "id": "10.1145/3573105.3575691",
@@ -370,6 +328,20 @@
     "paper_url": "https://doi.org/10.1145/3573105.3575691"
   },
   {
+    "id": "10.1145/3573105.3575680",
+    "title": "A Formalisation of the Balog–Szemerédi–Gowers Theorem in Isabelle/HOL",
+    "authors": [
+      "Angeliki Koutsoukou-Argyraki",
+      "Mantas Bakšys",
+      "Chelsea Edmonds"
+    ],
+    "abstract": "We describe our formalisation in the interactive theorem prover Isabelle/HOL of the Balog–Szemerédi–Gowers Theorem, a profound result in additive combinatorics which played a central role in Gowers’s proof deriving the first effective bounds for Szemerédi’s Theorem. The proof is of great mathematical interest given that it involves an interplay between different mathematical areas, namely applications of graph theory and probability theory to additive combinatorics involving algebraic objects. This interplay is what made the process of the formalisation, for which we had to develop formalisations of new background material in the aforementioned areas, more rich and technically challenging. We demonstrate how locales, Isabelle’s module system, can be employed to handle such interplays in mathematical formalisations. To treat the graph-theoretic aspects of the proof, we make use of a new, more general undirected graph theory library developed by Edmonds, which is both flexible and extensible. In addition to the main theorem, which, following our source, is formulated for difference sets, we also give an alternative version for sumsets which required a formalisation of an auxiliary triangle inequality. We moreover formalise a few additional results in additive combinatorics that are not used in the proof of the main theorem. This is the first formalisation of the Balog–Szemerédi–Gowers Theorem in any proof assistant to our knowledge.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1145/3573105.3575680"
+  },
+  {
     "id": "10.1145/3573105.3575686",
     "title": "Terms for Efficient Proof Checking and Parsing",
     "authors": [
@@ -380,5 +352,33 @@
     "conference": "cpp",
     "year": 2023,
     "paper_url": "https://doi.org/10.1145/3573105.3575686"
+  },
+  {
+    "id": "10.1145/3573105.3575677",
+    "title": "Computing Cohomology Rings in Cubical Agda",
+    "authors": [
+      "Thomas Lamiaux",
+      "Axel Ljungström",
+      "Anders Mörtberg"
+    ],
+    "abstract": "In Homotopy Type Theory, cohomology theories are studied synthetically using higher inductive types and univalence. This paper extends previous developments by providing the first fully mechanized definition of cohomology rings. These rings may be defined as direct sums of cohomology groups together with a multiplication induced by the cup product, and can in many cases be characterized as quotients of multivariate polynomial rings. To this end, we introduce appropriate definitions of direct sums and graded rings, which we then use to define both cohomology rings and multivariate polynomial rings. Using this, we compute the cohomology rings of some classical spaces, such as the spheres and the Klein bottle. The formalization is constructive so that it can be used to do concrete computations, and it relies on the Cubical Agda system which natively supports higher inductive types and computational univalence.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1145/3573105.3575677"
+  },
+  {
+    "id": "10.1145/3573105.3575673",
+    "title": "Verifying Term Graph Optimizations using Isabelle/HOL",
+    "authors": [
+      "Brae J. Webb",
+      "Ian J. Hayes",
+      "Mark Utting"
+    ],
+    "abstract": "Our objective is to formally verify the correctness of the hundreds of expression optimization rules used within the GraalVM compiler. When defining the semantics of a programming language, expressions naturally form abstract syntax trees, or, terms. However, in order to facilitate sharing of common subexpressions, modern compilers represent expressions as term graphs. Defining the semantics of term graphs is more complicated than defining the semantics of their equivalent term representations. More significantly, defining optimizations directly on term graphs and proving semantics preservation is considerably more complicated than on the equivalent term representations. On terms, optimizations can be expressed as conditional term rewriting rules, and proofs that the rewrites are semantics preserving are relatively straightforward. In this paper, we explore an approach to using term rewrites to verify term graph transformations of optimizations within the GraalVM compiler. This approach significantly reduces the overall verification effort and allows for simpler encoding of optimization rules.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1145/3573105.3575673"
   }
 ]

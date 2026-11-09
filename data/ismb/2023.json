@@ -171,6 +171,128 @@
     "paper_url": "https://doi.org/10.1093/bioinformatics/btad250"
   },
   {
+    "id": "10.1093/bioinformatics/btad217",
+    "title": "ChromDL: a next-generation regulatory DNA classifier",
+    "authors": [
+      "Hill C",
+      "Hudaiberdiev S",
+      "Ovcharenko I"
+    ],
+    "abstract": "<h4>Motivation</h4>Predicting the regulatory function of non-coding DNA using only the DNA sequence continues to be a major challenge in genomics. With the advent of improved optimization algorithms, faster GPU speeds, and more intricate machine-learning libraries, hybrid convolutional and recurrent neural network architectures can be constructed and applied to extract crucial information from non-coding DNA.<h4>Results</h4>Using a comparative analysis of the performance of thousands of Deep Learning architectures, we developed ChromDL, a neural network architecture combining bidirectional gated recurrent units, convolutional neural networks, and bidirectional long short-term memory units, which significantly improves upon a range of prediction metrics compared to its predecessors in transcription factor binding site, histone modification, and DNase-I hyper-sensitive site detection. Combined with a secondary model, it can be utilized for accurate classification of gene regulatory elements. The model can also detect weak transcription factor binding as compared to previously developed methods and has the potential to help delineate transcription factor binding motif specificities.<h4>Availability and implementation</h4>The ChromDL source code can be found at https://github.com/chrishil1/ChromDL.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btad217"
+  },
+  {
+    "id": "10.1093/bioinformatics/btad225",
+    "title": "Scalable sequence database search using partitioned aggregated Bloom comb trees",
+    "authors": [
+      "Marchet C",
+      "Limasset A"
+    ],
+    "abstract": "<h4>Motivation</h4>The Sequence Read Archive public database has reached 45 petabytes of raw sequences and doubles its nucleotide content every 2 years. Although BLAST-like methods can routinely search for a sequence in a small collection of genomes, making searchable immense public resources accessible is beyond the reach of alignment-based strategies. In recent years, abundant literature tackled the task of finding a sequence in extensive sequence collections using k-mer-based strategies. At present, the most scalable methods are approximate membership query data structures that combine the ability to query small signatures or variants while being scalable to collections up to 10 000 eukaryotic samples. Results. Here, we present PAC, a novel approximate membership query data structure for querying collections of sequence datasets. PAC index construction works in a streaming fashion without any disk footprint besides the index itself. It shows a 3-6 fold improvement in construction time compared to other compressed methods for comparable index size. A PAC query can need single random access and be performed in constant time in favorable instances. Using limited computation resources, we built PAC for very large collections. They include 32 000 human RNA-seq samples in 5 days, the entire GenBank bacterial genome collection in a single day for an index size of 3.5 TB. The latter is, to our knowledge, the largest sequence collection ever indexed using an approximate membership query structure. We also showed that PAC's ability to query 500 000 transcript sequences in less than an hour.<h4>Availability and implementation</h4>PAC's open-source software is available at https://github.com/Malfoy/PAC.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btad225"
+  },
+  {
+    "id": "10.1093/bioinformatics/btad205",
+    "title": "The impossible challenge of estimating non-existent moments of the Chemical Master Equation",
+    "authors": [
+      "Wagner V",
+      "Radde N"
+    ],
+    "abstract": "<h4>Motivation</h4>The Chemical Master Equation (CME) is a set of linear differential equations that describes the evolution of the probability distribution on all possible configurations of a (bio-)chemical reaction system. Since the number of configurations and therefore the dimension of the CME rapidly increases with the number of molecules, its applicability is restricted to small systems. A widely applied remedy for this challenge is moment-based approaches which consider the evolution of the first few moments of the distribution as summary statistics for the complete distribution. Here, we investigate the performance of two moment-estimation methods for reaction systems whose equilibrium distributions encounter fat-tailedness and do not possess statistical moments.<h4>Results</h4>We show that estimation via stochastic simulation algorithm (SSA) trajectories lose consistency over time and estimated moment values span a wide range of values even for large sample sizes. In comparison, the method of moments returns smooth moment estimates but is not able to indicate the non-existence of the allegedly predicted moments. We furthermore analyze the negative effect of a CME solution's fat-tailedness on SSA run times and explain inherent difficulties. While moment-estimation techniques are a commonly applied tool in the simulation of (bio-)chemical reaction networks, we conclude that they should be used with care, as neither the system definition nor the moment-estimation techniques themselves reliably indicate the potential fat-tailedness of the CME's solution.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btad205"
+  },
+  {
+    "id": "10.1093/bioinformatics/btad235",
+    "title": "AdenPredictor: accurate prediction of the adenylation domain specificity of nonribosomal peptide biosynthetic gene clusters in microbial genomes",
+    "authors": [
+      "Mongia M",
+      "Baral R",
+      "Adduri A",
+      "Yan D",
+      "Liu Y",
+      "Bian Y",
+      "Kim P",
+      "Behsaz B",
+      "Mohimani H"
+    ],
+    "abstract": "Microbial natural products represent a major source of bioactive compounds for drug discovery. Among these molecules, nonribosomal peptides (NRPs) represent a diverse class that include antibiotics, immunosuppressants, anticancer agents, toxins, siderophores, pigments, and cytostatics. The discovery of novel NRPs remains a laborious process because many NRPs consist of nonstandard amino acids that are assembled by nonribosomal peptide synthetases (NRPSs). Adenylation domains (A-domains) in NRPSs are responsible for selection and activation of monomers appearing in NRPs. During the past decade, several support vector machine-based algorithms have been developed for predicting the specificity of the monomers present in NRPs. These algorithms utilize physiochemical features of the amino acids present in the A-domains of NRPSs. In this article, we benchmarked the performance of various machine learning algorithms and features for predicting specificities of NRPSs and we showed that the extra trees model paired with one-hot encoding features outperforms the existing approaches. Moreover, we show that unsupervised clustering of 453 560 A-domains reveals many clusters that correspond to potentially novel amino acids. While it is challenging to predict the chemical structure of these amino acids, we developed novel techniques to predict their various properties, including polarity, hydrophobicity, charge, and presence of aromatic rings, carboxyl, and hydroxyl groups.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btad235"
+  },
+  {
+    "id": "10.1093/bioinformatics/btad271",
+    "title": "An intrinsically interpretable neural network architecture for sequence-to-function learning",
+    "authors": [
+      "Balcı AT",
+      "Ebeid MM",
+      "Benos PV",
+      "Kostka D",
+      "Chikina M"
+    ],
+    "abstract": "<h4>Motivation</h4>Sequence-based deep learning approaches have been shown to predict a multitude of functional genomic readouts, including regions of open chromatin and RNA expression of genes. However, a major limitation of current methods is that model interpretation relies on computationally demanding post hoc analyses, and even then, one can often not explain the internal mechanics of highly parameterized models. Here, we introduce a deep learning architecture called totally interpretable sequence-to-function model (tiSFM). tiSFM improves upon the performance of standard multilayer convolutional models while using fewer parameters. Additionally, while tiSFM is itself technically a multilayer neural network, internal model parameters are intrinsically interpretable in terms of relevant sequence motifs.<h4>Results</h4>We analyze published open chromatin measurements across hematopoietic lineage cell-types and demonstrate that tiSFM outperforms a state-of-the-art convolutional neural network model custom-tailored to this dataset. We also show that it correctly identifies context-specific activities of transcription factors with known roles in hematopoietic differentiation, including Pax5 and Ebf1 for B-cells, and Rorc for innate lymphoid cells. tiSFM's model parameters have biologically meaningful interpretations, and we show the utility of our approach on a complex task of predicting the change in epigenetic state as a function of developmental transition.<h4>Availability and implementation</h4>The source code, including scripts for the analysis of key findings, can be found at https://github.com/boooooogey/ATAConv, implemented in Python.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btad271"
+  },
+  {
+    "id": "10.1093/bioinformatics/btad233",
+    "title": "Themisto: a scalable colored k-mer index for sensitive pseudoalignment against hundreds of thousands of bacterial genomes",
+    "authors": [
+      "Alanko JN",
+      "Vuohtoniemi J",
+      "Mäklin T",
+      "Puglisi SJ"
+    ],
+    "abstract": "<h4>Motivation</h4>Huge datasets containing whole-genome sequences of bacterial strains are now commonplace and represent a rich and important resource for modern genomic epidemiology and metagenomics. In order to efficiently make use of these datasets, efficient indexing data structures-that are both scalable and provide rapid query throughput-are paramount.<h4>Results</h4>Here, we present Themisto, a scalable colored k-mer index designed for large collections of microbial reference genomes, that works for both short and long read data. Themisto indexes 179 thousand Salmonella enterica genomes in 9 h. The resulting index takes 142 gigabytes. In comparison, the best competing tools Metagraph and Bifrost were only able to index 11 000 genomes in the same time. In pseudoalignment, these other tools were either an order of magnitude slower than Themisto, or used an order of magnitude more memory. Themisto also offers superior pseudoalignment quality, achieving a higher recall than previous methods on Nanopore read sets.<h4>Availability and implementation</h4>Themisto is available and documented as a C++ package at https://github.com/algbio/themisto available under the GPLv2 license.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btad233"
+  },
+  {
+    "id": "10.1093/bioinformatics/btad219",
+    "title": "Locality-preserving minimal perfect hashing of k-mers",
+    "authors": [
+      "Pibiri GE",
+      "Shibuya Y",
+      "Limasset A"
+    ],
+    "abstract": "<h4>Motivation</h4>Minimal perfect hashing is the problem of mapping a static set of n distinct keys into the address space {1,…,n} bijectively. It is well-known that n log 2(e) bits are necessary to specify a minimal perfect hash function (MPHF) f, when no additional knowledge of the input keys is to be used. However, it is often the case in practice that the input keys have intrinsic relationships that we can exploit to lower the bit complexity of f. For example, consider a string and the set of all its distinct k-mers as input keys: since two consecutive k-mers share an overlap of k-1 symbols, it seems possible to beat the classic  log 2(e) bits/key barrier in this case. Moreover, we would like f to map consecutive k-mers to consecutive addresses, as to also preserve as much as possible their relationship in the codomain. This is a useful feature in practice as it guarantees a certain degree of locality of reference for f, resulting in a better evaluation time when querying consecutive k-mers.<h4>Results</h4>Motivated by these premises, we initiate the study of a new type of locality-preserving MPHF designed for k-mers extracted consecutively from a collection of strings. We design a construction whose space usage decreases for growing k and discuss experiments with a practical implementation of the method: in practice, the functions built with our method can be several times smaller and even faster to query than the most efficient MPHFs in the literature.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btad219"
+  },
+  {
+    "id": "10.1093/bioinformatics/btad206",
+    "title": "PlasmoFAB: a benchmark to foster machine learning for Plasmodium falciparum protein antigen candidate prediction",
+    "authors": [
+      "Ditz JC",
+      "Wistuba-Hamprecht J",
+      "Maier T",
+      "Fendel R",
+      "Pfeifer N",
+      "Reuter B"
+    ],
+    "abstract": "<h4>Motivation</h4>Machine learning methods can be used to support scientific discovery in healthcare-related research fields. However, these methods can only be reliably used if they can be trained on high-quality and curated datasets. Currently, no such dataset for the exploration of Plasmodium falciparum protein antigen candidates exists. The parasite P.falciparum causes the infectious disease malaria. Thus, identifying potential antigens is of utmost importance for the development of antimalarial drugs and vaccines. Since exploring antigen candidates experimentally is an expensive and time-consuming process, applying machine learning methods to support this process has the potential to accelerate the development of drugs and vaccines, which are needed for fighting and controlling malaria.<h4>Results</h4>We developed PlasmoFAB, a curated benchmark that can be used to train machine learning methods for the exploration of P.falciparum protein antigen candidates. We combined an extensive literature search with domain expertise to create high-quality labels for P.falciparum specific proteins that distinguish between antigen candidates and intracellular proteins. Additionally, we used our benchmark to compare different well-known prediction models and available protein localization prediction services on the task of identifying protein antigen candidates. We show that available general-purpose services are unable to provide sufficient performance on identifying protein antigen candidates and are outperformed by our models that were trained on this tailored data.<h4>Availability and implementation</h4>PlasmoFAB is publicly available on Zenodo with DOI 10.5281/zenodo.7433087. Furthermore, all scripts that were used in the creation of PlasmoFAB and the training and evaluation of machine learning models are open source and publicly available on GitHub here: https://github.com/msmdev/PlasmoFAB.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btad206"
+  },
+  {
     "id": "10.1093/bioinformatics/btad252",
     "title": "RNA design via structure-aware multifrontier ensemble optimization",
     "authors": [
@@ -345,128 +467,6 @@
     "conference": "ismb",
     "year": 2023,
     "paper_url": "https://doi.org/10.1093/bioinformatics/btad266"
-  },
-  {
-    "id": "10.1093/bioinformatics/btad217",
-    "title": "ChromDL: a next-generation regulatory DNA classifier",
-    "authors": [
-      "Hill C",
-      "Hudaiberdiev S",
-      "Ovcharenko I"
-    ],
-    "abstract": "<h4>Motivation</h4>Predicting the regulatory function of non-coding DNA using only the DNA sequence continues to be a major challenge in genomics. With the advent of improved optimization algorithms, faster GPU speeds, and more intricate machine-learning libraries, hybrid convolutional and recurrent neural network architectures can be constructed and applied to extract crucial information from non-coding DNA.<h4>Results</h4>Using a comparative analysis of the performance of thousands of Deep Learning architectures, we developed ChromDL, a neural network architecture combining bidirectional gated recurrent units, convolutional neural networks, and bidirectional long short-term memory units, which significantly improves upon a range of prediction metrics compared to its predecessors in transcription factor binding site, histone modification, and DNase-I hyper-sensitive site detection. Combined with a secondary model, it can be utilized for accurate classification of gene regulatory elements. The model can also detect weak transcription factor binding as compared to previously developed methods and has the potential to help delineate transcription factor binding motif specificities.<h4>Availability and implementation</h4>The ChromDL source code can be found at https://github.com/chrishil1/ChromDL.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btad217"
-  },
-  {
-    "id": "10.1093/bioinformatics/btad225",
-    "title": "Scalable sequence database search using partitioned aggregated Bloom comb trees",
-    "authors": [
-      "Marchet C",
-      "Limasset A"
-    ],
-    "abstract": "<h4>Motivation</h4>The Sequence Read Archive public database has reached 45 petabytes of raw sequences and doubles its nucleotide content every 2 years. Although BLAST-like methods can routinely search for a sequence in a small collection of genomes, making searchable immense public resources accessible is beyond the reach of alignment-based strategies. In recent years, abundant literature tackled the task of finding a sequence in extensive sequence collections using k-mer-based strategies. At present, the most scalable methods are approximate membership query data structures that combine the ability to query small signatures or variants while being scalable to collections up to 10 000 eukaryotic samples. Results. Here, we present PAC, a novel approximate membership query data structure for querying collections of sequence datasets. PAC index construction works in a streaming fashion without any disk footprint besides the index itself. It shows a 3-6 fold improvement in construction time compared to other compressed methods for comparable index size. A PAC query can need single random access and be performed in constant time in favorable instances. Using limited computation resources, we built PAC for very large collections. They include 32 000 human RNA-seq samples in 5 days, the entire GenBank bacterial genome collection in a single day for an index size of 3.5 TB. The latter is, to our knowledge, the largest sequence collection ever indexed using an approximate membership query structure. We also showed that PAC's ability to query 500 000 transcript sequences in less than an hour.<h4>Availability and implementation</h4>PAC's open-source software is available at https://github.com/Malfoy/PAC.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btad225"
-  },
-  {
-    "id": "10.1093/bioinformatics/btad205",
-    "title": "The impossible challenge of estimating non-existent moments of the Chemical Master Equation",
-    "authors": [
-      "Wagner V",
-      "Radde N"
-    ],
-    "abstract": "<h4>Motivation</h4>The Chemical Master Equation (CME) is a set of linear differential equations that describes the evolution of the probability distribution on all possible configurations of a (bio-)chemical reaction system. Since the number of configurations and therefore the dimension of the CME rapidly increases with the number of molecules, its applicability is restricted to small systems. A widely applied remedy for this challenge is moment-based approaches which consider the evolution of the first few moments of the distribution as summary statistics for the complete distribution. Here, we investigate the performance of two moment-estimation methods for reaction systems whose equilibrium distributions encounter fat-tailedness and do not possess statistical moments.<h4>Results</h4>We show that estimation via stochastic simulation algorithm (SSA) trajectories lose consistency over time and estimated moment values span a wide range of values even for large sample sizes. In comparison, the method of moments returns smooth moment estimates but is not able to indicate the non-existence of the allegedly predicted moments. We furthermore analyze the negative effect of a CME solution's fat-tailedness on SSA run times and explain inherent difficulties. While moment-estimation techniques are a commonly applied tool in the simulation of (bio-)chemical reaction networks, we conclude that they should be used with care, as neither the system definition nor the moment-estimation techniques themselves reliably indicate the potential fat-tailedness of the CME's solution.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btad205"
-  },
-  {
-    "id": "10.1093/bioinformatics/btad235",
-    "title": "AdenPredictor: accurate prediction of the adenylation domain specificity of nonribosomal peptide biosynthetic gene clusters in microbial genomes",
-    "authors": [
-      "Mongia M",
-      "Baral R",
-      "Adduri A",
-      "Yan D",
-      "Liu Y",
-      "Bian Y",
-      "Kim P",
-      "Behsaz B",
-      "Mohimani H"
-    ],
-    "abstract": "Microbial natural products represent a major source of bioactive compounds for drug discovery. Among these molecules, nonribosomal peptides (NRPs) represent a diverse class that include antibiotics, immunosuppressants, anticancer agents, toxins, siderophores, pigments, and cytostatics. The discovery of novel NRPs remains a laborious process because many NRPs consist of nonstandard amino acids that are assembled by nonribosomal peptide synthetases (NRPSs). Adenylation domains (A-domains) in NRPSs are responsible for selection and activation of monomers appearing in NRPs. During the past decade, several support vector machine-based algorithms have been developed for predicting the specificity of the monomers present in NRPs. These algorithms utilize physiochemical features of the amino acids present in the A-domains of NRPSs. In this article, we benchmarked the performance of various machine learning algorithms and features for predicting specificities of NRPSs and we showed that the extra trees model paired with one-hot encoding features outperforms the existing approaches. Moreover, we show that unsupervised clustering of 453 560 A-domains reveals many clusters that correspond to potentially novel amino acids. While it is challenging to predict the chemical structure of these amino acids, we developed novel techniques to predict their various properties, including polarity, hydrophobicity, charge, and presence of aromatic rings, carboxyl, and hydroxyl groups.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btad235"
-  },
-  {
-    "id": "10.1093/bioinformatics/btad271",
-    "title": "An intrinsically interpretable neural network architecture for sequence-to-function learning",
-    "authors": [
-      "Balcı AT",
-      "Ebeid MM",
-      "Benos PV",
-      "Kostka D",
-      "Chikina M"
-    ],
-    "abstract": "<h4>Motivation</h4>Sequence-based deep learning approaches have been shown to predict a multitude of functional genomic readouts, including regions of open chromatin and RNA expression of genes. However, a major limitation of current methods is that model interpretation relies on computationally demanding post hoc analyses, and even then, one can often not explain the internal mechanics of highly parameterized models. Here, we introduce a deep learning architecture called totally interpretable sequence-to-function model (tiSFM). tiSFM improves upon the performance of standard multilayer convolutional models while using fewer parameters. Additionally, while tiSFM is itself technically a multilayer neural network, internal model parameters are intrinsically interpretable in terms of relevant sequence motifs.<h4>Results</h4>We analyze published open chromatin measurements across hematopoietic lineage cell-types and demonstrate that tiSFM outperforms a state-of-the-art convolutional neural network model custom-tailored to this dataset. We also show that it correctly identifies context-specific activities of transcription factors with known roles in hematopoietic differentiation, including Pax5 and Ebf1 for B-cells, and Rorc for innate lymphoid cells. tiSFM's model parameters have biologically meaningful interpretations, and we show the utility of our approach on a complex task of predicting the change in epigenetic state as a function of developmental transition.<h4>Availability and implementation</h4>The source code, including scripts for the analysis of key findings, can be found at https://github.com/boooooogey/ATAConv, implemented in Python.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btad271"
-  },
-  {
-    "id": "10.1093/bioinformatics/btad233",
-    "title": "Themisto: a scalable colored k-mer index for sensitive pseudoalignment against hundreds of thousands of bacterial genomes",
-    "authors": [
-      "Alanko JN",
-      "Vuohtoniemi J",
-      "Mäklin T",
-      "Puglisi SJ"
-    ],
-    "abstract": "<h4>Motivation</h4>Huge datasets containing whole-genome sequences of bacterial strains are now commonplace and represent a rich and important resource for modern genomic epidemiology and metagenomics. In order to efficiently make use of these datasets, efficient indexing data structures-that are both scalable and provide rapid query throughput-are paramount.<h4>Results</h4>Here, we present Themisto, a scalable colored k-mer index designed for large collections of microbial reference genomes, that works for both short and long read data. Themisto indexes 179 thousand Salmonella enterica genomes in 9 h. The resulting index takes 142 gigabytes. In comparison, the best competing tools Metagraph and Bifrost were only able to index 11 000 genomes in the same time. In pseudoalignment, these other tools were either an order of magnitude slower than Themisto, or used an order of magnitude more memory. Themisto also offers superior pseudoalignment quality, achieving a higher recall than previous methods on Nanopore read sets.<h4>Availability and implementation</h4>Themisto is available and documented as a C++ package at https://github.com/algbio/themisto available under the GPLv2 license.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btad233"
-  },
-  {
-    "id": "10.1093/bioinformatics/btad219",
-    "title": "Locality-preserving minimal perfect hashing of k-mers",
-    "authors": [
-      "Pibiri GE",
-      "Shibuya Y",
-      "Limasset A"
-    ],
-    "abstract": "<h4>Motivation</h4>Minimal perfect hashing is the problem of mapping a static set of n distinct keys into the address space {1,…,n} bijectively. It is well-known that n log 2(e) bits are necessary to specify a minimal perfect hash function (MPHF) f, when no additional knowledge of the input keys is to be used. However, it is often the case in practice that the input keys have intrinsic relationships that we can exploit to lower the bit complexity of f. For example, consider a string and the set of all its distinct k-mers as input keys: since two consecutive k-mers share an overlap of k-1 symbols, it seems possible to beat the classic  log 2(e) bits/key barrier in this case. Moreover, we would like f to map consecutive k-mers to consecutive addresses, as to also preserve as much as possible their relationship in the codomain. This is a useful feature in practice as it guarantees a certain degree of locality of reference for f, resulting in a better evaluation time when querying consecutive k-mers.<h4>Results</h4>Motivated by these premises, we initiate the study of a new type of locality-preserving MPHF designed for k-mers extracted consecutively from a collection of strings. We design a construction whose space usage decreases for growing k and discuss experiments with a practical implementation of the method: in practice, the functions built with our method can be several times smaller and even faster to query than the most efficient MPHFs in the literature.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btad219"
-  },
-  {
-    "id": "10.1093/bioinformatics/btad206",
-    "title": "PlasmoFAB: a benchmark to foster machine learning for Plasmodium falciparum protein antigen candidate prediction",
-    "authors": [
-      "Ditz JC",
-      "Wistuba-Hamprecht J",
-      "Maier T",
-      "Fendel R",
-      "Pfeifer N",
-      "Reuter B"
-    ],
-    "abstract": "<h4>Motivation</h4>Machine learning methods can be used to support scientific discovery in healthcare-related research fields. However, these methods can only be reliably used if they can be trained on high-quality and curated datasets. Currently, no such dataset for the exploration of Plasmodium falciparum protein antigen candidates exists. The parasite P.falciparum causes the infectious disease malaria. Thus, identifying potential antigens is of utmost importance for the development of antimalarial drugs and vaccines. Since exploring antigen candidates experimentally is an expensive and time-consuming process, applying machine learning methods to support this process has the potential to accelerate the development of drugs and vaccines, which are needed for fighting and controlling malaria.<h4>Results</h4>We developed PlasmoFAB, a curated benchmark that can be used to train machine learning methods for the exploration of P.falciparum protein antigen candidates. We combined an extensive literature search with domain expertise to create high-quality labels for P.falciparum specific proteins that distinguish between antigen candidates and intracellular proteins. Additionally, we used our benchmark to compare different well-known prediction models and available protein localization prediction services on the task of identifying protein antigen candidates. We show that available general-purpose services are unable to provide sufficient performance on identifying protein antigen candidates and are outperformed by our models that were trained on this tailored data.<h4>Availability and implementation</h4>PlasmoFAB is publicly available on Zenodo with DOI 10.5281/zenodo.7433087. Furthermore, all scripts that were used in the creation of PlasmoFAB and the training and evaluation of machine learning models are open source and publicly available on GitHub here: https://github.com/msmdev/PlasmoFAB.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btad206"
   },
   {
     "id": "10.1093/bioinformatics/btad230",

@@ -79,18 +79,6 @@
     "paper_url": "https://doi.org/10.1145/3497775.3503693"
   },
   {
-    "id": "10.1145/3497775.3503683",
-    "title": "Safe, fast, concurrent proof checking for the lambda-pi calculus modulo rewriting",
-    "authors": [
-      "Michael Färber"
-    ],
-    "abstract": "Several proof assistants, such as Isabelle or Coq, can concurrently check multiple proofs. In contrast, the vast majority of today's small proof checkers either does not support concurrency at all or only limited forms thereof, restricting the efficiency of proof checking on multi-core processors. This work shows the design of a small, memory- and thread-safe kernel that efficiently checks proofs both concurrently and sequentially. This design is implemented in a new proof checker called Kontroli for the lambda-Pi calculus modulo rewriting, which is an established framework to uniformly express a multitude of logical systems. Kontroli is faster than the reference proof checker for this calculus, Dedukti, on all of five evaluated datasets obtained from proof assistants and interactive theorem provers. Furthermore, Kontroli reduces the time of the most time-consuming part of proof checking using eight threads by up to 6.6x.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2022,
-    "paper_url": "https://doi.org/10.1145/3497775.3503683"
-  },
-  {
     "id": "10.1145/3497775.3503673",
     "title": "Windmills of the minds: an algorithm for fermat’s two squares theorem",
     "authors": [
@@ -103,6 +91,18 @@
     "paper_url": "https://doi.org/10.1145/3497775.3503673"
   },
   {
+    "id": "10.1145/3497775.3503683",
+    "title": "Safe, fast, concurrent proof checking for the lambda-pi calculus modulo rewriting",
+    "authors": [
+      "Michael Färber"
+    ],
+    "abstract": "Several proof assistants, such as Isabelle or Coq, can concurrently check multiple proofs. In contrast, the vast majority of today's small proof checkers either does not support concurrency at all or only limited forms thereof, restricting the efficiency of proof checking on multi-core processors. This work shows the design of a small, memory- and thread-safe kernel that efficiently checks proofs both concurrently and sequentially. This design is implemented in a new proof checker called Kontroli for the lambda-Pi calculus modulo rewriting, which is an established framework to uniformly express a multitude of logical systems. Kontroli is faster than the reference proof checker for this calculus, Dedukti, on all of five evaluated datasets obtained from proof assistants and interactive theorem provers. Furthermore, Kontroli reduces the time of the most time-consuming part of proof checking using eight threads by up to 6.6x.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1145/3497775.3503683"
+  },
+  {
     "id": "10.1145/3497775.3505265",
     "title": "The sel4 verification: the art and craft of proof and the reality of commercial support (invited talk)",
     "authors": [
@@ -113,22 +113,6 @@
     "conference": "cpp",
     "year": 2022,
     "paper_url": "https://doi.org/10.1145/3497775.3505265"
-  },
-  {
-    "id": "10.1145/3497775.3503685",
-    "title": "A compositional proof framework for FRETish requirements",
-    "authors": [
-      "Esther Conrad",
-      "Laura Titolo",
-      "Dimitra Giannakopoulou",
-      "Thomas Pressburger",
-      "Aaron Dutle"
-    ],
-    "abstract": "Structured natural languages provide a trade space between ambiguous natural languages that make up most written requirements, and mathematical formal specifications such as Linear Temporal Logic. FRETish is a structured natural language for the elicitation of system requirements developed at NASA. The related open-source tool Fret provides support for translating FRETish requirements into temporal logic formulas that can be input to several verification and analysis tools. In the context of safety-critical systems, it is crucial to ensure that a generated formula captures the semantics of the corresponding FRETish requirement precisely. This paper presents a rigorous formalization of the FRETish language including a new denotational semantics and a proof of semantic equivalence between FRETish specifications and their temporal logic counterparts computed by Fret. The complete formalization and the proof have been developed in the Prototype Verification System (PVS) theorem prover.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2022,
-    "paper_url": "https://doi.org/10.1145/3497775.3503685"
   },
   {
     "id": "10.1145/3497775.3503679",
@@ -148,16 +132,20 @@
     "paper_url": "https://doi.org/10.1145/3497775.3503679"
   },
   {
-    "id": "10.1145/3497775.3503949",
-    "title": "Structural embeddings revisited (invited talk)",
+    "id": "10.1145/3497775.3503685",
+    "title": "A compositional proof framework for FRETish requirements",
     "authors": [
-      "César Muñoz"
+      "Esther Conrad",
+      "Laura Titolo",
+      "Dimitra Giannakopoulou",
+      "Thomas Pressburger",
+      "Aaron Dutle"
     ],
-    "abstract": "A semantic embedding is a logical encoding of a formal language, namely the object language, into the specification language of a logical framework. In their seminal paper “Experience with embedding hardware description languages in HOL”, Boulton et al. coined the terms deep and shallow embeddings depending on whether or not the syntax of terms of the target language is represented by a data type in the specification language. Thus, a deep embedding enables reasoning about classes of terms, while a shallow embedding limits reasoning to concrete terms. Embeddings of programming languages are well-known applications of interactive theorem provers, specially of those based on higher-order logic. These embeddings are often intended to support the study of a programming language semantics or to enhance a programming language with the deductive capabilities of the logical framework. A different type of embeddings, here referred to as structural embeddings, are intended to augment specification languages with structural elements of the object language. In a structural embedding, the outermost elements of the object language, i.e., the structural parts, are encoded, either deeply or shallowly, but the internal elements, i.e., the basic expressions, are those of the specification language. Advances in automated reasoning and user interfaces have enabled structural embeddings to enhance usability of interactive theorem provers and to reduce the gap between verification tools and modeling tools used by practitioners. This talk presents an overview of several years of research on theorem proving in safety-critical aerospace systems through the lens of embeddings and, more particularly, structural embeddings. The talk focuses on lessons learned and provides examples of successful applications to automated reasoning, termination analysis, floating-point analysis, and verification of cyber-physical systems. Our main point, which is hardly original, is that interactive theorem provers will serve as intermediate systems that connect a cluster of components. Structural embeddings could then provide the frontend capabilities to access this cluster of components.",
+    "abstract": "Structured natural languages provide a trade space between ambiguous natural languages that make up most written requirements, and mathematical formal specifications such as Linear Temporal Logic. FRETish is a structured natural language for the elicitation of system requirements developed at NASA. The related open-source tool Fret provides support for translating FRETish requirements into temporal logic formulas that can be input to several verification and analysis tools. In the context of safety-critical systems, it is crucial to ensure that a generated formula captures the semantics of the corresponding FRETish requirement precisely. This paper presents a rigorous formalization of the FRETish language including a new denotational semantics and a proof of semantic equivalence between FRETish specifications and their temporal logic counterparts computed by Fret. The complete formalization and the proof have been developed in the Prototype Verification System (PVS) theorem prover.",
     "topic": "",
     "conference": "cpp",
     "year": 2022,
-    "paper_url": "https://doi.org/10.1145/3497775.3503949"
+    "paper_url": "https://doi.org/10.1145/3497775.3503685"
   },
   {
     "id": "10.1145/3497775.3503680",
@@ -173,42 +161,16 @@
     "paper_url": "https://doi.org/10.1145/3497775.3503680"
   },
   {
-    "id": "10.1145/3497775.3503686",
-    "title": "Overcoming restraint: composing verification of foreign functions with cogent",
+    "id": "10.1145/3497775.3503949",
+    "title": "Structural embeddings revisited (invited talk)",
     "authors": [
-      "Louis Cheung",
-      "Liam O'Connor",
-      "Christine Rizkallah"
+      "César Muñoz"
     ],
-    "abstract": "Cogent is a restricted functional language designed to reduce the cost of developing verified systems code. Because of its sometimes-onerous restrictions, such as the lack of support for recursion and its strict uniqueness type system, Cogent provides an escape hatch in the form of a foreign function interface (FFI) to C code. This poses a problem when verifying Cogent programs, as imported C components do not enjoy the same level of static guarantees that Cogent does. Previous verification of file systems implemented in Cogent merely assumed that their C components were correct and that they preserved the invariants of Cogent’s type system. In this paper, we instead prove such obligations. We demonstrate how they smoothly compose with existing Cogent theorems, and result in a correctness theorem of the overall Cogent-C system. The Cogent FFI constraints ensure that key invariants of Cogent’s type system are maintained even when calling C code. We verify reusable higher-order and polymorphic functions including a generic loop combinator and array iterators and demonstrate their application to several examples including binary search and the BilbyFs file system. We demonstrate the feasibility of verification of mixed Cogent-C systems, and provide some insight into verification of software comprised of code in multiple languages with differing levels of static guarantees.",
+    "abstract": "A semantic embedding is a logical encoding of a formal language, namely the object language, into the specification language of a logical framework. In their seminal paper “Experience with embedding hardware description languages in HOL”, Boulton et al. coined the terms deep and shallow embeddings depending on whether or not the syntax of terms of the target language is represented by a data type in the specification language. Thus, a deep embedding enables reasoning about classes of terms, while a shallow embedding limits reasoning to concrete terms. Embeddings of programming languages are well-known applications of interactive theorem provers, specially of those based on higher-order logic. These embeddings are often intended to support the study of a programming language semantics or to enhance a programming language with the deductive capabilities of the logical framework. A different type of embeddings, here referred to as structural embeddings, are intended to augment specification languages with structural elements of the object language. In a structural embedding, the outermost elements of the object language, i.e., the structural parts, are encoded, either deeply or shallowly, but the internal elements, i.e., the basic expressions, are those of the specification language. Advances in automated reasoning and user interfaces have enabled structural embeddings to enhance usability of interactive theorem provers and to reduce the gap between verification tools and modeling tools used by practitioners. This talk presents an overview of several years of research on theorem proving in safety-critical aerospace systems through the lens of embeddings and, more particularly, structural embeddings. The talk focuses on lessons learned and provides examples of successful applications to automated reasoning, termination analysis, floating-point analysis, and verification of cyber-physical systems. Our main point, which is hardly original, is that interactive theorem provers will serve as intermediate systems that connect a cluster of components. Structural embeddings could then provide the frontend capabilities to access this cluster of components.",
     "topic": "",
     "conference": "cpp",
     "year": 2022,
-    "paper_url": "https://doi.org/10.1145/3497775.3503686"
-  },
-  {
-    "id": "10.1145/3497775.3503674",
-    "title": "An extension of the framework types-to-sets for Isabelle/HOL",
-    "authors": [
-      "Mihails Milehins"
-    ],
-    "abstract": "In their article titled From Types to Sets by Local Type Definitions in Higher-Order Logic and published in the proceedings of the conference Interactive Theorem Proving in 2016, Ondřej Kunčar and Andrei Popescu propose an extension of the logic Isabelle/HOL and an associated algorithm for the relativization of the type-based theorems to more flexible set-based theorems, collectively referred to as Types-To-Sets. One of the aims of their work was to open an opportunity for the development of a software tool for applied relativization in the implementation of the logic Isabelle/HOL of the proof assistant Isabelle. In this article, we provide a description of a software framework for the interactive automated relativization of definitions and theorems in Isabelle/HOL, developed as an extension of the proof language Isabelle/Isar, building upon some of the ideas for further work expressed in the original article on Types-To-Sets by Ondřej Kunčar and Andrei Popescu and the subsequent article Smooth Manifolds and Types to Sets for Linear Algebra in Isabelle/HOL, which was written by Fabian Immler and Bohua Zhan and published in the proceedings of the International Conference on Certified Programs and Proofs in 2019.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2022,
-    "paper_url": "https://doi.org/10.1145/3497775.3503674"
-  },
-  {
-    "id": "10.1145/3497775.3503682",
-    "title": "A machine-checked direct proof of the Steiner-lehmus theorem",
-    "authors": [
-      "Ariel Kellison"
-    ],
-    "abstract": "A direct proof of the Steiner-Lehmus theorem has eluded geometers for over 170 years. The challenge has been that a proof is only considered direct if it does not rely on reductio ad absurdum. Thus, any proof that claims to be direct must show, going back to the axioms, that all of the auxiliary theorems used are also proved directly. In this paper, we give a proof of the Steiner-Lehmus theorem that is guaranteed to be direct. The evidence for this claim is derived from our methodology: we have formalized a constructive axiom set for Euclidean plane geometry in a proof assistant that implements a constructive logic and have built the proof of the Steiner-Lehmus theorem on this constructive foundation.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2022,
-    "paper_url": "https://doi.org/10.1145/3497775.3503682"
+    "paper_url": "https://doi.org/10.1145/3497775.3503949"
   },
   {
     "id": "10.1145/3497775.3503691",
@@ -282,18 +244,28 @@
     "paper_url": "https://doi.org/10.1145/3497775.3503692"
   },
   {
-    "id": "10.1145/3497775.3503676",
-    "title": "Certified abstract machines for skeletal semantics",
+    "id": "10.1145/3497775.3503682",
+    "title": "A machine-checked direct proof of the Steiner-lehmus theorem",
     "authors": [
-      "Guillaume Ambal",
-      "Sergueï Lenglet",
-      "Alan Schmitt"
+      "Ariel Kellison"
     ],
-    "abstract": "Skeletal semantics is a framework to describe semantics of programming languages. We propose an automatic generation of a certified OCaml interpreter for any language written in skeletal semantics. To this end, we introduce two new interpretations, i.e., formal meanings, of skeletal semantics, in the form of non-deterministic and deterministic abstract machines. These machines are derived from the usual big-step interpretation of skeletal semantics using functional correspondence, a standard transformation from big-step evaluators to abstract machines. All these interpretations are formalized in the Coq proof assistant and we certify their soundness. We finally use the extraction from Coq to OCaml to obtain the certified interpreter.",
+    "abstract": "A direct proof of the Steiner-Lehmus theorem has eluded geometers for over 170 years. The challenge has been that a proof is only considered direct if it does not rely on reductio ad absurdum. Thus, any proof that claims to be direct must show, going back to the axioms, that all of the auxiliary theorems used are also proved directly. In this paper, we give a proof of the Steiner-Lehmus theorem that is guaranteed to be direct. The evidence for this claim is derived from our methodology: we have formalized a constructive axiom set for Euclidean plane geometry in a proof assistant that implements a constructive logic and have built the proof of the Steiner-Lehmus theorem on this constructive foundation.",
     "topic": "",
     "conference": "cpp",
     "year": 2022,
-    "paper_url": "https://doi.org/10.1145/3497775.3503676"
+    "paper_url": "https://doi.org/10.1145/3497775.3503682"
+  },
+  {
+    "id": "10.1145/3497775.3503674",
+    "title": "An extension of the framework types-to-sets for Isabelle/HOL",
+    "authors": [
+      "Mihails Milehins"
+    ],
+    "abstract": "In their article titled From Types to Sets by Local Type Definitions in Higher-Order Logic and published in the proceedings of the conference Interactive Theorem Proving in 2016, Ondřej Kunčar and Andrei Popescu propose an extension of the logic Isabelle/HOL and an associated algorithm for the relativization of the type-based theorems to more flexible set-based theorems, collectively referred to as Types-To-Sets. One of the aims of their work was to open an opportunity for the development of a software tool for applied relativization in the implementation of the logic Isabelle/HOL of the proof assistant Isabelle. In this article, we provide a description of a software framework for the interactive automated relativization of definitions and theorems in Isabelle/HOL, developed as an extension of the proof language Isabelle/Isar, building upon some of the ideas for further work expressed in the original article on Types-To-Sets by Ondřej Kunčar and Andrei Popescu and the subsequent article Smooth Manifolds and Types to Sets for Linear Algebra in Isabelle/HOL, which was written by Fabian Immler and Bohua Zhan and published in the proceedings of the International Conference on Certified Programs and Proofs in 2019.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1145/3497775.3503674"
   },
   {
     "id": "10.1145/3497775.3503689",
@@ -310,18 +282,18 @@
     "paper_url": "https://doi.org/10.1145/3497775.3503689"
   },
   {
-    "id": "10.1145/3497775.3503677",
-    "title": "Specification and verification of a transient stack",
+    "id": "10.1145/3497775.3503676",
+    "title": "Certified abstract machines for skeletal semantics",
     "authors": [
-      "Alexandre Moine",
-      "Arthur Charguéraud",
-      "François Pottier"
+      "Guillaume Ambal",
+      "Sergueï Lenglet",
+      "Alan Schmitt"
     ],
-    "abstract": "A transient data structure is a package of an ephemeral data structure, a persistent data structure, and fast conversions between them. We describe the specification and proof of a transient stack and its iterators. This data structure is a scaled-down version of the general-purpose transient sequence data structure implemented in the OCaml library Sek. Internally, it relies on fixed-capacity arrays, or chunks, which can be shared between several ephemeral and persistent stacks. Dynamic tests are used to determine whether a chunk can be updated in place or must be copied: a chunk can be updated if it is uniquely owned or if the update is monotonic. Using CFML, which implements Separation Logic with Time Credits inside Coq, we verify the functional correctness and the amortized time complexity of this data structure. Our verification effort covers iterators, which involve direct pointers to internal chunks. The specification of iterators describes what the operations on iterators do, how much they cost, and under what circumstances an iterator is invalidated.",
+    "abstract": "Skeletal semantics is a framework to describe semantics of programming languages. We propose an automatic generation of a certified OCaml interpreter for any language written in skeletal semantics. To this end, we introduce two new interpretations, i.e., formal meanings, of skeletal semantics, in the form of non-deterministic and deterministic abstract machines. These machines are derived from the usual big-step interpretation of skeletal semantics using functional correspondence, a standard transformation from big-step evaluators to abstract machines. All these interpretations are formalized in the Coq proof assistant and we certify their soundness. We finally use the extraction from Coq to OCaml to obtain the certified interpreter.",
     "topic": "",
     "conference": "cpp",
     "year": 2022,
-    "paper_url": "https://doi.org/10.1145/3497775.3503677"
+    "paper_url": "https://doi.org/10.1145/3497775.3503676"
   },
   {
     "id": "10.1145/3497775.3503684",
@@ -335,6 +307,20 @@
     "conference": "cpp",
     "year": 2022,
     "paper_url": "https://doi.org/10.1145/3497775.3503684"
+  },
+  {
+    "id": "10.1145/3497775.3503677",
+    "title": "Specification and verification of a transient stack",
+    "authors": [
+      "Alexandre Moine",
+      "Arthur Charguéraud",
+      "François Pottier"
+    ],
+    "abstract": "A transient data structure is a package of an ephemeral data structure, a persistent data structure, and fast conversions between them. We describe the specification and proof of a transient stack and its iterators. This data structure is a scaled-down version of the general-purpose transient sequence data structure implemented in the OCaml library Sek. Internally, it relies on fixed-capacity arrays, or chunks, which can be shared between several ephemeral and persistent stacks. Dynamic tests are used to determine whether a chunk can be updated in place or must be copied: a chunk can be updated if it is uniquely owned or if the update is monotonic. Using CFML, which implements Separation Logic with Time Credits inside Coq, we verify the functional correctness and the amortized time complexity of this data structure. Our verification effort covers iterators, which involve direct pointers to internal chunks. The specification of iterators describes what the operations on iterators do, how much they cost, and under what circumstances an iterator is invalidated.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1145/3497775.3503677"
   },
   {
     "id": "10.1145/3497775.3503687",
@@ -363,5 +349,19 @@
     "conference": "cpp",
     "year": 2022,
     "paper_url": "https://doi.org/10.1145/3497775.3503694"
+  },
+  {
+    "id": "10.1145/3497775.3503686",
+    "title": "Overcoming restraint: composing verification of foreign functions with cogent",
+    "authors": [
+      "Louis Cheung",
+      "Liam O'Connor",
+      "Christine Rizkallah"
+    ],
+    "abstract": "Cogent is a restricted functional language designed to reduce the cost of developing verified systems code. Because of its sometimes-onerous restrictions, such as the lack of support for recursion and its strict uniqueness type system, Cogent provides an escape hatch in the form of a foreign function interface (FFI) to C code. This poses a problem when verifying Cogent programs, as imported C components do not enjoy the same level of static guarantees that Cogent does. Previous verification of file systems implemented in Cogent merely assumed that their C components were correct and that they preserved the invariants of Cogent’s type system. In this paper, we instead prove such obligations. We demonstrate how they smoothly compose with existing Cogent theorems, and result in a correctness theorem of the overall Cogent-C system. The Cogent FFI constraints ensure that key invariants of Cogent’s type system are maintained even when calling C code. We verify reusable higher-order and polymorphic functions including a generic loop combinator and array iterators and demonstrate their application to several examples including binary search and the BilbyFs file system. We demonstrate the feasibility of verification of mixed Cogent-C systems, and provide some insight into verification of software comprised of code in multiple languages with differing levels of static guarantees.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2022,
+    "paper_url": "https://doi.org/10.1145/3497775.3503686"
   }
 ]

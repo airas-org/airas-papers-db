@@ -5010,7 +5010,7 @@
     "id": "285",
     "title": "UniSpec: Training-Free Speculative Decoding for Robust LLM Acceleration Across Languages and Hardware",
     "authors": [
-      "Truong Dinh Do",
+      "Dinh-Truong Do",
       "Nguyen-Khang Le",
       "Le-Minh Nguyen"
     ],
@@ -13503,7 +13503,7 @@
       "Huan Wu",
       "Amirreza Naziri",
       "Mojtaba Kolahdouzi",
-      "Laleh Seyyed-Kalantari"
+      "Laleh Seyyed Kalantari"
     ],
     "abstract": "Bias evaluation in large language models (LLMs) uses many metrics and benchmarks, but lacks a systematic way to measure agreement across bias metrics and models. As a result, improvements observed under one metric may contradict another, and model rankings may reflect benchmark-specific artifacts rather than stable bias profiles. In this work, we introduce Metric Agreement Score (MeAS) and Model Agreement Score (MoAS), which quantify cross-metric and cross-model agreement in bias rankings, respectively. We apply these measures to eight LLMs, seven bias metrics, and nine corpora. Our results reveal disagreement among both metrics and models: Contrary to expectations, we find that metrics within the same category (generation-based and probabilistic) often behave independently of each other. For instance, HONEST shows independence with toxicity metrics, and the Context Association Test shows no correlation with Language Modeling Bias metric. At the model level, DeepSeek-family models invert bias rankings relative to most others, indicating that the model family strongly shapes specific bias profiles. These findings challenge the assumption that bias mitigation is universally transferable and highlight the need for agreement-aware evaluation.",
     "topic": "",
@@ -28199,7 +28199,7 @@
     "authors": [
       "Huy Nghiem",
       "Advik Sachdeva",
-      "Hal Daumé Iii"
+      "Hal Daumé III"
     ],
     "abstract": "To address toxic content on social media, we introduce SMARTER, a data-efficient 2-stage framework for explainable content moderation using Large Language Models (LLMs). In Stage 1, we leverage LLMs’ own outputs to generate synthetic explanations for correct and incorrect labels, enabling preference optimization with minimal supervision. In Stage 2, we refine explanation quality through cross-model training, allowing weaker models to align with stronger ones. Experiments on 3 benchmarks (HateXplain, Latent Hate, Implicit Hate) show SMARTER achieves up to 13% macro-F1 improvement over few-shot baselines using only 6-57% of training data. Our framework offers a scalable strategy for low-data settings by harnessing LLMs’ self-improvement for explainable moderation.",
     "topic": "",
@@ -30210,7 +30210,7 @@
       "Yixuan Tang",
       "Anthony Kum Hoe Tung"
     ],
-    "abstract": "Current LLM safety research predominantly focuses on mitigating **Goal Hijacking**, preventing attackers from redirecting a model’s high-level objective (e.g., from \"summarizing emails\" to \"phishing users\"). In this paper, we argue that this perspective is incomplete and highlight a critical vulnerability in **Reasoning Alignment**. We expose the inherent fragility of current alignment techniques by proposing a new adversarial prompt attack paradigm: **Reasoning Hijacking**. To demonstrate this vulnerability, we instantiate it via the **Criteria Attack**, which subverts model judgments by injecting spurious decision criteria without altering the high-level task goal. Unlike Goal Hijacking, which attempts to override the system prompt, Reasoning Hijacking keeps the task goal intact but manipulates the model’s decision-making logic by injecting spurious reasoning shortcuts. Through extensive experiments on three different tasks (toxic comment, negative review, and spam detection), we demonstrate that even state-of-the-art models are highly fragile, consistently prioritizing injected heuristic shortcuts over rigorous semantic analysis. Crucially, because the model’s explicit intent remains aligned with the user’s instructions, these attacks can bypass defenses designed to detect goal deviation (e.g., SecAlign, StruQ), revealing a fundamental blind spot in the current safety landscape. Data and code are available at [https://github.com/Yuan-Hou/criteria_attack](https://github.com/Yuan-Hou/criteria_attack).",
+    "abstract": "Current LLM safety research predominantly focuses on mitigating Goal Hijacking, preventing attackers from redirecting a model’s high-level objective (e.g., from “summarizing emails” to “phishing users”). In this paper, we argue that this perspective is incomplete and highlight a critical vulnerability in Reasoning Alignment. We expose the inherent fragility of current alignment techniques by proposing a new adversarial prompt attack paradigm: Reasoning Hijacking. To demonstrate this vulnerability, we instantiate it via the Criteria Attack, which subverts model judgments by injecting spurious decision criteria without altering the high-level task goal. Unlike Goal Hijacking, which attempts to override the system prompt, Reasoning Hijacking keeps the task goal intact but manipulates the model’s decision-making logic by injecting spurious reasoning shortcuts. Through extensive experiments on three different tasks (toxic comment, negative review, and spam detection), we demonstrate that even state-of-the-art models are highly fragile, consistently prioritizing injected heuristic shortcuts over rigorous semantic analysis. Crucially, because the model’s explicit intent remains aligned with the user’s instructions, these attacks can bypass defenses designed to detect goal deviation (e.g., SecAlign, StruQ), revealing a fundamental blind spot in the current safety landscape. Data and code are available at https://github.com/Yuan-Hou/criteria_attack.",
     "topic": "",
     "conference": "acl",
     "year": 2026,
@@ -35963,7 +35963,7 @@
       "Huy Nghiem",
       "Xinchen Yang",
       "Marine Carpuat",
-      "Hal Daumé Iii"
+      "Hal Daumé III"
     ],
     "abstract": "Despite the growing use of large language models (LLMs) for writing tasks, users may hesitate to rely on LLMs when personal style is important. Post-editing LLM-generated drafts or translations is a common collaborative writing strategy, but it remains unclear whether users can effectively reshape LLM-generated text to reflect their personal style. We conduct a pre-registered online study (n=81) in which participants post-edit LLM-generated drafts for writing tasks where personal style matters to them. Using embedding-based style similarity metrics, we find that post-editing increases stylistic similarity to participants’ unassisted writing and reduces similarity to fully LLM-generated output. However, post-edited text still remains stylistically closer in style to LLM text than to participants’ unassisted control text, and it exhibits reduced stylistic diversity compared to unassisted human text. We find a gap between perceived stylistic authenticity and model-measured stylistic similarity, with post-edited text often perceived as representative of participants’ personal style despite remaining detectable LLM stylistic traces.",
     "topic": "",
@@ -36072,7 +36072,7 @@
       "Jinxia Zhang",
       "Dacheng Tao"
     ],
-    "abstract": "The pursuit of real-time agentic interaction has driven interest in Diffusion-based Large Language Models (dLLMs) as alternatives to auto-regressive backbones, promising to break the sequential latency bottleneck. However, does such efficiency gains translate into effective agentic behavior? In this work, we present a comprehensive evaluation of dLLMs (e.g., LLaDA, Dream) across two distinct agentic paradigms: Embodied Agents (requiring long-horizon planning) and Tool-Calling Agents (requiring precise formatting).Contrary to the efficiency hype, our results on Agentboard and BFCL reveal a “bitter lesson”: current dLLMs fail to serve as reliable agentic backbones, frequently leading to systematically failure. (1) In Embodied settings, dLLMs suffer repeated attempts, failing to branch under temporal feedback. (2) In Tool-Calling settings, dLLMs fail to maintain symbolic precision (e.g. strict JSON schemas) under diffusion noise. To assess the potential of dLLMs in agentic workflows, we introduce DiffuAgent, a multi-agent evaluation framework that integrates dLLMs as plug-and-play cognitive cores. Our analysis shows that dLLMs are effective in non-causal roles (e.g., memory summarization and tool selection) but require the incorporation of causal, precise, and logically grounded reasoning mechanisms into the denoising process to be viable for agentic tasks.",
+    "abstract": "The pursuit of real-time agentic interaction has driven interest in Diffusion-based Large Language Models (dLLMs) as alternatives to auto-regressive backbones, promising to break the sequential latency bottleneck. However, does such efficiency gains translate into effective agentic behavior? In this work, we present a comprehensive evaluation of dLLMs (e.g., LLaDA, Dream) across two distinct agentic paradigms: Embodied Agents (requiring long-horizon planning) and Tool-Calling Agents (requiring precise formatting).Contrary to the efficiency hype, our results on Agentboard and BFCL reveal a \"bitter lesson\": current dLLMs fail to serve as reliable agentic backbones, frequently leading to systematic failure. (1) In Embodied settings, dLLMs suffer repeated attempts, failing to branch under temporal feedback. (2) In Tool-Calling settings, dLLMs fail to maintain symbolic precision (e.g. strict JSON schemas) under diffusion noise. To assess the potential of dLLMs in agentic workflows, we introduce DiffuAgent, a multi-agent evaluation framework that integrates dLLMs as plug-and-play cognitive cores. Our analysis shows that dLLMs are effective in non-causal roles (e.g., memory summarization and tool selection) but require the incorporation of causal, precise, and logically grounded reasoning mechanisms into the denoising process to be viable for agentic tasks.",
     "topic": "",
     "conference": "acl",
     "year": 2026,
