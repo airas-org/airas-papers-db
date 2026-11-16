@@ -14,34 +14,6 @@
     "paper_url": "https://doi.org/10.1093/bioinformatics/btaf212"
   },
   {
-    "id": "10.1093/bioinformatics/btaf236",
-    "title": "Transcriptome assembly at single-cell resolution with Beaver",
-    "authors": [
-      "Shi Q",
-      "Zhang Q",
-      "Shao M"
-    ],
-    "abstract": "<h4>Motivation</h4>The established single-cell RNA sequencing (scRNA-seq) technologies has revolutionized biological and biomedical research by enabling the measurement of gene expression at single-cell resolution. However, the fundamental challenge of reconstructing full-length transcripts for individual cells remains unresolved. Existing single-sample assembly approaches cannot leverage shared information across cells while meta-assembly approaches often fail to strike a balance between consensus assembly and preserving cell-specific expression signatures.<h4>Results</h4>We present Beaver, a cell-specific transcript assembler designed for short-read scRNA-seq data. Beaver implements a transcript fragment graph to organize individual assemblies and designs an efficient dynamic programming algorithm that searches for candidate full-length transcripts from the graph. Beaver incorporates two random forest models trained on 51 meticulously engineered features that accurately estimate the likelihood of each candidate transcript being expressed in individual cells. Our experiments, performed using both real and simulated Smart-seq3 scRNA-seq data, firmly show that Beaver substantially outperforms existing meta-assemblers and single-sample assemblers. At the same level of sensitivity, Beaver achieved 32.0%-64.6%, 13.5%-36.6%, and 9.8%-36.3% higher precision in average compared to meta-assemblers Aletsch, TransMeta, and PsiCLASS, respectively, with similar improvements over single-sample assemblers Scallop2 (10.1%-43.6%) and StringTie2 (24.3%-67.0%).<h4>Availability and implementation</h4>Beaver is freely available at https://github.com/Shao-Group/beaver. Scripts that reproduce the experimental results of this manuscript are available at https://github.com/Shao-Group/beaver-test.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2025,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btaf236"
-  },
-  {
-    "id": "10.1093/bioinformatics/btaf252",
-    "title": "OrgNet: orientation-gnostic protein stability assessment using convolutional neural networks",
-    "authors": [
-      "Buyanov I",
-      "Sarycheva A",
-      "Popov P"
-    ],
-    "abstract": "<h4>Motivation</h4>Accurately predicting the impact of single-point mutations on protein stability is crucial for elucidating molecular mechanisms underlying diseases in life sciences and advancing protein engineering in biotechnology. With recent advances in deep learning and protein structure prediction, deep learning approaches are expected to surpass existing methods for predicting protein thermostability. However, structure-based deep learning models, specifically convolutional neural networks, are affected by orientation biases, leading to inconsistent predictions with respect to the input protein orientation.<h4>Results</h4>In this study, we present OrgNet, a novel orientation-gnostic deep learning model using 3D convolutional neural networks to predict protein thermostability change upon point mutation. OrgNet encodes protein structures as voxel grids, enabling the model to capture fine-grained, spatially localized atomic features. OrgNet implements spatial transforms to standardize input protein orientations, thus eliminating orientation bias problem. When evaluated on established benchmarks, including Ssym and S669, OrgNet achieves state-of-the-art performance, demonstrating superior accuracy and robust performance compared to existing methods.<h4>Availability and implementation</h4>OrgNet is available at https://github.com/i-Molecule/OrgNet.",
-    "topic": "",
-    "conference": "ismb",
-    "year": 2025,
-    "paper_url": "https://doi.org/10.1093/bioinformatics/btaf252"
-  },
-  {
     "id": "10.1093/bioinformatics/btaf257",
     "title": "Trustworthy causal biomarker discovery: a multiomics brain imaging genetics-based approach",
     "authors": [
@@ -74,6 +46,34 @@
     "conference": "ismb",
     "year": 2025,
     "paper_url": "https://doi.org/10.1093/bioinformatics/btaf233"
+  },
+  {
+    "id": "10.1093/bioinformatics/btaf236",
+    "title": "Transcriptome assembly at single-cell resolution with Beaver",
+    "authors": [
+      "Shi Q",
+      "Zhang Q",
+      "Shao M"
+    ],
+    "abstract": "<h4>Motivation</h4>The established single-cell RNA sequencing (scRNA-seq) technologies has revolutionized biological and biomedical research by enabling the measurement of gene expression at single-cell resolution. However, the fundamental challenge of reconstructing full-length transcripts for individual cells remains unresolved. Existing single-sample assembly approaches cannot leverage shared information across cells while meta-assembly approaches often fail to strike a balance between consensus assembly and preserving cell-specific expression signatures.<h4>Results</h4>We present Beaver, a cell-specific transcript assembler designed for short-read scRNA-seq data. Beaver implements a transcript fragment graph to organize individual assemblies and designs an efficient dynamic programming algorithm that searches for candidate full-length transcripts from the graph. Beaver incorporates two random forest models trained on 51 meticulously engineered features that accurately estimate the likelihood of each candidate transcript being expressed in individual cells. Our experiments, performed using both real and simulated Smart-seq3 scRNA-seq data, firmly show that Beaver substantially outperforms existing meta-assemblers and single-sample assemblers. At the same level of sensitivity, Beaver achieved 32.0%-64.6%, 13.5%-36.6%, and 9.8%-36.3% higher precision in average compared to meta-assemblers Aletsch, TransMeta, and PsiCLASS, respectively, with similar improvements over single-sample assemblers Scallop2 (10.1%-43.6%) and StringTie2 (24.3%-67.0%).<h4>Availability and implementation</h4>Beaver is freely available at https://github.com/Shao-Group/beaver. Scripts that reproduce the experimental results of this manuscript are available at https://github.com/Shao-Group/beaver-test.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2025,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btaf236"
+  },
+  {
+    "id": "10.1093/bioinformatics/btaf252",
+    "title": "OrgNet: orientation-gnostic protein stability assessment using convolutional neural networks",
+    "authors": [
+      "Buyanov I",
+      "Sarycheva A",
+      "Popov P"
+    ],
+    "abstract": "<h4>Motivation</h4>Accurately predicting the impact of single-point mutations on protein stability is crucial for elucidating molecular mechanisms underlying diseases in life sciences and advancing protein engineering in biotechnology. With recent advances in deep learning and protein structure prediction, deep learning approaches are expected to surpass existing methods for predicting protein thermostability. However, structure-based deep learning models, specifically convolutional neural networks, are affected by orientation biases, leading to inconsistent predictions with respect to the input protein orientation.<h4>Results</h4>In this study, we present OrgNet, a novel orientation-gnostic deep learning model using 3D convolutional neural networks to predict protein thermostability change upon point mutation. OrgNet encodes protein structures as voxel grids, enabling the model to capture fine-grained, spatially localized atomic features. OrgNet implements spatial transforms to standardize input protein orientations, thus eliminating orientation bias problem. When evaluated on established benchmarks, including Ssym and S669, OrgNet achieves state-of-the-art performance, demonstrating superior accuracy and robust performance compared to existing methods.<h4>Availability and implementation</h4>OrgNet is available at https://github.com/i-Molecule/OrgNet.",
+    "topic": "",
+    "conference": "ismb",
+    "year": 2025,
+    "paper_url": "https://doi.org/10.1093/bioinformatics/btaf252"
   },
   {
     "id": "10.1093/bioinformatics/btaf232",

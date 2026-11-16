@@ -1,26 +1,5 @@
 [
   {
-    "id": "10.1007/978-3-030-81688-9_39",
-    "title": "Debugging Network Reachability with Blocked Paths",
-    "authors": [
-      "S. Bayless",
-      "J. Backes",
-      "D. DaCosta",
-      "B. F. Jones",
-      "N. Launchbury",
-      "P. Trentin",
-      "K. Jewell",
-      "S. Joshi",
-      "M. Q. Zeng",
-      "N. Mathews"
-    ],
-    "abstract": "In this industrial case study we describe a new network troubleshooting analysis used by VPC Reachability Analyzer , an SMT-based network reachability analysis and debugging tool. Our troubleshooting analysis uses a formal model of AWS Virtual Private Cloud (VPC) semantics to identify whether a destination is reachable from a source in a given VPC configuration. In the case where there is no feasible path, our analysis derives a blocked path : an infeasible but otherwise complete path that would be feasible if a corresponding set of VPC configuration settings were adjusted.\nOur blocked path analysis differs from other academic and commercial offerings that either rely on packet probing (e.g., tcptrace ) or provide only partial paths terminating at the first component that rejects the packet. By providing a complete (but infeasible) path from the source to destination, we identify for a user all the configuration settings they will need to alter to admit that path (instead of requiring them to repeatedly re-run the analysis after making partial changes). This allows users to refine their query so that the blocked path is aligned with their intended network behavior before making any changes to their VPC configuration.",
-    "topic": "",
-    "conference": "cav",
-    "year": 2021,
-    "paper_url": "https://doi.org/10.1007/978-3-030-81688-9_39"
-  },
-  {
     "id": "10.1007/978-3-030-81688-9_1",
     "title": "Learning Probabilistic Termination Proofs",
     "authors": [
@@ -490,6 +469,27 @@
     "paper_url": "https://doi.org/10.1007/978-3-030-81688-9_38"
   },
   {
+    "id": "10.1007/978-3-030-81688-9_39",
+    "title": "Debugging Network Reachability with Blocked Paths",
+    "authors": [
+      "S. Bayless",
+      "J. Backes",
+      "D. DaCosta",
+      "B. F. Jones",
+      "N. Launchbury",
+      "P. Trentin",
+      "K. Jewell",
+      "S. Joshi",
+      "M. Q. Zeng",
+      "N. Mathews"
+    ],
+    "abstract": "In this industrial case study we describe a new network troubleshooting analysis used by VPC Reachability Analyzer , an SMT-based network reachability analysis and debugging tool. Our troubleshooting analysis uses a formal model of AWS Virtual Private Cloud (VPC) semantics to identify whether a destination is reachable from a source in a given VPC configuration. In the case where there is no feasible path, our analysis derives a blocked path : an infeasible but otherwise complete path that would be feasible if a corresponding set of VPC configuration settings were adjusted.\nOur blocked path analysis differs from other academic and commercial offerings that either rely on packet probing (e.g., tcptrace ) or provide only partial paths terminating at the first component that rejects the packet. By providing a complete (but infeasible) path from the source to destination, we identify for a user all the configuration settings they will need to alter to admit that path (instead of requiring them to repeatedly re-run the analysis after making partial changes). This allows users to refine their query so that the blocked path is aligned with their intended network behavior before making any changes to their VPC configuration.",
+    "topic": "",
+    "conference": "cav",
+    "year": 2021,
+    "paper_url": "https://doi.org/10.1007/978-3-030-81688-9_39"
+  },
+  {
     "id": "10.1007/978-3-030-81688-9_4",
     "title": "Decision Tree Learning in CEGIS-Based Termination Analysis",
     "authors": [
@@ -638,68 +638,6 @@
     "paper_url": "https://doi.org/10.1007/978-3-030-81685-8_1"
   },
   {
-    "id": "10.1007/978-3-030-81685-8_11",
-    "title": "Verisig 2.0: Verification of Neural Network Controllers Using Taylor Model Preconditioning",
-    "authors": [
-      "Radoslav Ivanov",
-      "Taylor Carpenter",
-      "James Weimer",
-      "Rajeev Alur",
-      "George Pappas",
-      "Insup Lee"
-    ],
-    "abstract": "This paper presents Verisig 2.0, a verification tool for closed-loop systems with neural network (NN) controllers. We focus on NNs with tanh/sigmoid activations and develop a Taylor-model-based reachability algorithm through Taylor model preconditioning and shrink wrapping. Furthermore, we provide a parallelized implementation that allows Verisig 2.0 to efficiently handle larger NNs than existing tools can. We provide an extensive evaluation over 10 benchmarks and compare Verisig 2.0 against three state-of-the-art verification tools. We show that Verisig 2.0 is both more accurate and faster, achieving speed-ups of up to 21x and 268x against different tools, respectively.",
-    "topic": "",
-    "conference": "cav",
-    "year": 2021,
-    "paper_url": "https://doi.org/10.1007/978-3-030-81685-8_11"
-  },
-  {
-    "id": "10.1007/978-3-030-81685-8_14",
-    "title": "Isla: Integrating Full-Scale ISA Semantics and Axiomatic Concurrency Models",
-    "authors": [
-      "Alasdair Armstrong",
-      "Brian Campbell",
-      "Ben Simner",
-      "Christopher Pulte",
-      "Peter Sewell"
-    ],
-    "abstract": "Architecture specifications such as Armv8-A and RISC-V are the ultimate foundation for software verification and the correctness criteria for hardware verification. They should define the allowed sequential and relaxed-memory concurrency behaviour of programs, but hitherto there has been no integration of full-scale instruction-set architecture (ISA) semantics with axiomatic concurrency models, either in mathematics or in tools. These ISA semantics can be surprisingly large and intricate, e.g. 100k+ lines for Armv8-A.\nIn this paper we present a tool, Isla, for computing the allowed behaviours of concurrent litmus tests with respect to full-scale ISA definitions, in Sail, and arbitrary axiomatic relaxed-memory concurrency models, in the Cat language. It is based on a generic symbolic engine for Sail ISA specifications, which should be valuable also for other verification tasks. We equip the tool with a web interface to make it widely accessible, and illustrate and evaluate it for Armv8-A and RISC-V.\nBy using full-scale and authoritative ISA semantics, this lets one evaluate litmus tests using arbitrary user instructions with high confidence. Moreover, because these ISA specifications give detailed and validated definitions of the sequential aspects of systems functionality, as used by hypervisors and operating systems, e.g. instruction fetch, exceptions, and address translation, our tool provides a basis for developing concurrency semantics for these. We demonstrate this for the Armv8-A instruction-fetch model and self-modifying code examples of Simner et al.",
-    "topic": "",
-    "conference": "cav",
-    "year": 2021,
-    "paper_url": "https://doi.org/10.1007/978-3-030-81685-8_14"
-  },
-  {
-    "id": "10.1007/978-3-030-81685-8_23",
-    "title": "Hybrid SynchAADL: Modeling and Formal Analysis of Virtually Synchronous CPSs in AADL",
-    "authors": [
-      "Jaehun Lee",
-      "Sharon Kim",
-      "Kyungmin Bae",
-      "Peter Csaba Ölveczky"
-    ],
-    "abstract": "We present the $$\\textsc {Hybrid}\\textsc {Synch}\\textsc {AADL}$$ modeling language and formal analysis tool for virtually synchronous cyber-physical systems with complex control programs, continuous behaviors, bounded clock skews, network delays, and execution times. We leverage the Hybrid PALS equivalence, so that it is sufficient to model and verify the simpler underlying synchronous designs. We define the $$\\textsc {Hybrid}\\textsc {Synch}\\textsc {AADL}$$ language as a sublanguage of the avionics modeling standard AADL for modeling such designs in AADL, and demonstrate the effectiveness of $$\\textsc {Hybrid}\\textsc {Synch}\\textsc {AADL}$$ on a number of applications.",
-    "topic": "",
-    "conference": "cav",
-    "year": 2021,
-    "paper_url": "https://doi.org/10.1007/978-3-030-81685-8_23"
-  },
-  {
-    "id": "10.1007/978-3-030-81685-8_7",
-    "title": "Robustness Verification of Quantum Classifiers",
-    "authors": [
-      "Ji Guan",
-      "Wang Fang",
-      "Mingsheng Ying"
-    ],
-    "abstract": "Several important models of machine learning algorithms have been successfully generalized to the quantum world, with potential speedup to training classical classifiers and applications to data analytics in quantum physics that can be implemented on the near future quantum computers. However, quantum noise is a major obstacle to the practical implementation of quantum machine learning. In this work, we define a formal framework for the robustness verification and analysis of quantum machine learning algorithms against noises. A robust bound is derived and an algorithm is developed to check whether or not a quantum machine learning algorithm is robust with respect to quantum training data. In particular, this algorithm can find adversarial examples during checking. Our approach is implemented on Google’s TensorFlow Quantum and can verify the robustness of quantum machine learning algorithms with respect to a small disturbance of noises, derived from the surrounding environment. The effectiveness of our robust bound and algorithm is confirmed by the experimental results, including quantum bits classification as the “Hello World” example, quantum phase recognition and cluster excitation detection from real world intractable physical problems, and the classification of MNIST from the classical world.",
-    "topic": "",
-    "conference": "cav",
-    "year": 2021,
-    "paper_url": "https://doi.org/10.1007/978-3-030-81685-8_7"
-  },
-  {
     "id": "10.1007/978-3-030-81685-8_10",
     "title": "Scalable Polyhedral Verification of Recurrent Neural Networks",
     "authors": [
@@ -715,6 +653,23 @@
     "conference": "cav",
     "year": 2021,
     "paper_url": "https://doi.org/10.1007/978-3-030-81685-8_10"
+  },
+  {
+    "id": "10.1007/978-3-030-81685-8_11",
+    "title": "Verisig 2.0: Verification of Neural Network Controllers Using Taylor Model Preconditioning",
+    "authors": [
+      "Radoslav Ivanov",
+      "Taylor Carpenter",
+      "James Weimer",
+      "Rajeev Alur",
+      "George Pappas",
+      "Insup Lee"
+    ],
+    "abstract": "This paper presents Verisig 2.0, a verification tool for closed-loop systems with neural network (NN) controllers. We focus on NNs with tanh/sigmoid activations and develop a Taylor-model-based reachability algorithm through Taylor model preconditioning and shrink wrapping. Furthermore, we provide a parallelized implementation that allows Verisig 2.0 to efficiently handle larger NNs than existing tools can. We provide an extensive evaluation over 10 benchmarks and compare Verisig 2.0 against three state-of-the-art verification tools. We show that Verisig 2.0 is both more accurate and faster, achieving speed-ups of up to 21x and 268x against different tools, respectively.",
+    "topic": "",
+    "conference": "cav",
+    "year": 2021,
+    "paper_url": "https://doi.org/10.1007/978-3-030-81685-8_11"
   },
   {
     "id": "10.1007/978-3-030-81685-8_12",
@@ -748,6 +703,22 @@
     "conference": "cav",
     "year": 2021,
     "paper_url": "https://doi.org/10.1007/978-3-030-81685-8_13"
+  },
+  {
+    "id": "10.1007/978-3-030-81685-8_14",
+    "title": "Isla: Integrating Full-Scale ISA Semantics and Axiomatic Concurrency Models",
+    "authors": [
+      "Alasdair Armstrong",
+      "Brian Campbell",
+      "Ben Simner",
+      "Christopher Pulte",
+      "Peter Sewell"
+    ],
+    "abstract": "Architecture specifications such as Armv8-A and RISC-V are the ultimate foundation for software verification and the correctness criteria for hardware verification. They should define the allowed sequential and relaxed-memory concurrency behaviour of programs, but hitherto there has been no integration of full-scale instruction-set architecture (ISA) semantics with axiomatic concurrency models, either in mathematics or in tools. These ISA semantics can be surprisingly large and intricate, e.g. 100k+ lines for Armv8-A.\nIn this paper we present a tool, Isla, for computing the allowed behaviours of concurrent litmus tests with respect to full-scale ISA definitions, in Sail, and arbitrary axiomatic relaxed-memory concurrency models, in the Cat language. It is based on a generic symbolic engine for Sail ISA specifications, which should be valuable also for other verification tasks. We equip the tool with a web interface to make it widely accessible, and illustrate and evaluate it for Armv8-A and RISC-V.\nBy using full-scale and authoritative ISA semantics, this lets one evaluate litmus tests using arbitrary user instructions with high confidence. Moreover, because these ISA specifications give detailed and validated definitions of the sequential aspects of systems functionality, as used by hypervisors and operating systems, e.g. instruction fetch, exceptions, and address translation, our tool provides a basis for developing concurrency semantics for these. We demonstrate this for the Armv8-A instruction-fetch model and self-modifying code examples of Simner et al.",
+    "topic": "",
+    "conference": "cav",
+    "year": 2021,
+    "paper_url": "https://doi.org/10.1007/978-3-030-81685-8_14"
   },
   {
     "id": "10.1007/978-3-030-81685-8_15",
@@ -887,6 +858,21 @@
     "conference": "cav",
     "year": 2021,
     "paper_url": "https://doi.org/10.1007/978-3-030-81685-8_22"
+  },
+  {
+    "id": "10.1007/978-3-030-81685-8_23",
+    "title": "Hybrid SynchAADL: Modeling and Formal Analysis of Virtually Synchronous CPSs in AADL",
+    "authors": [
+      "Jaehun Lee",
+      "Sharon Kim",
+      "Kyungmin Bae",
+      "Peter Csaba Ölveczky"
+    ],
+    "abstract": "We present the $$\\textsc {Hybrid}\\textsc {Synch}\\textsc {AADL}$$ modeling language and formal analysis tool for virtually synchronous cyber-physical systems with complex control programs, continuous behaviors, bounded clock skews, network delays, and execution times. We leverage the Hybrid PALS equivalence, so that it is sufficient to model and verify the simpler underlying synchronous designs. We define the $$\\textsc {Hybrid}\\textsc {Synch}\\textsc {AADL}$$ language as a sublanguage of the avionics modeling standard AADL for modeling such designs in AADL, and demonstrate the effectiveness of $$\\textsc {Hybrid}\\textsc {Synch}\\textsc {AADL}$$ on a number of applications.",
+    "topic": "",
+    "conference": "cav",
+    "year": 2021,
+    "paper_url": "https://doi.org/10.1007/978-3-030-81685-8_23"
   },
   {
     "id": "10.1007/978-3-030-81685-8_24",
@@ -1234,6 +1220,20 @@
     "conference": "cav",
     "year": 2021,
     "paper_url": "https://doi.org/10.1007/978-3-030-81685-8_6"
+  },
+  {
+    "id": "10.1007/978-3-030-81685-8_7",
+    "title": "Robustness Verification of Quantum Classifiers",
+    "authors": [
+      "Ji Guan",
+      "Wang Fang",
+      "Mingsheng Ying"
+    ],
+    "abstract": "Several important models of machine learning algorithms have been successfully generalized to the quantum world, with potential speedup to training classical classifiers and applications to data analytics in quantum physics that can be implemented on the near future quantum computers. However, quantum noise is a major obstacle to the practical implementation of quantum machine learning. In this work, we define a formal framework for the robustness verification and analysis of quantum machine learning algorithms against noises. A robust bound is derived and an algorithm is developed to check whether or not a quantum machine learning algorithm is robust with respect to quantum training data. In particular, this algorithm can find adversarial examples during checking. Our approach is implemented on Google’s TensorFlow Quantum and can verify the robustness of quantum machine learning algorithms with respect to a small disturbance of noises, derived from the surrounding environment. The effectiveness of our robust bound and algorithm is confirmed by the experimental results, including quantum bits classification as the “Hello World” example, quantum phase recognition and cluster excitation detection from real world intractable physical problems, and the classification of MNIST from the classical world.",
+    "topic": "",
+    "conference": "cav",
+    "year": 2021,
+    "paper_url": "https://doi.org/10.1007/978-3-030-81685-8_7"
   },
   {
     "id": "10.1007/978-3-030-81685-8_8",

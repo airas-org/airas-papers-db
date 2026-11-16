@@ -1,83 +1,5 @@
 [
   {
-    "id": "10.1007/978-3-031-37706-8_3",
-    "title": "Learning Assumptions for Compositional Verification of Timed Automata",
-    "authors": [
-      "Hanyue Chen",
-      "Yu Su",
-      "Miaomiao Zhang",
-      "Zhiming Liu",
-      "Junri Mi"
-    ],
-    "abstract": "Compositional verification, such as the technique of assume-guarantee reasoning (AGR), is to verify a property of a system from the properties of its components. It is essential to address the state explosion problem associated with model checking. However, obtaining the appropriate assumption for AGR is always a highly mental challenge, especially in the case of timed systems. In this paper, we propose a learning-based compositional verification framework for deterministic timed automata. In this framework, a modified learning algorithm is used to automatically construct the assumption in the form of a deterministic one-clock timed automaton, and an effective scheme is implemented to obtain the clock reset information for the assumption learning. We prove the correctness and termination of the framework and present two kinds of improvements to speed up the verification. We discuss the results of our experiments to evaluate the scalability and effectiveness of the framework. The results show that the framework we propose can reduce state space effectively, and it outperforms traditional monolithic model checking for most cases.",
-    "topic": "",
-    "conference": "cav",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1007/978-3-031-37706-8_3"
-  },
-  {
-    "id": "10.1007/978-3-031-37706-8_4",
-    "title": "Online Causation Monitoring of Signal Temporal Logic",
-    "authors": [
-      "Zhenya Zhang",
-      "Jie An",
-      "Paolo Arcaini",
-      "Ichiro Hasuo"
-    ],
-    "abstract": "Online monitoring is an effective validation approach for hybrid systems, that, at runtime, checks whether the (partial) signals of a system satisfy a specification in, e.g., Signal Temporal Logic (STL) . The classic STL monitoring is performed by computing a robustness interval that specifies, at each instant, how far the monitored signals are from violating and satisfying the specification. However, since a robustness interval monotonically shrinks during monitoring, classic online monitors may fail in reporting new violations or in precisely describing the system evolution at the current instant. In this paper, we tackle these issues by considering the causation of violation or satisfaction, instead of directly using the robustness. We first introduce a Boolean causation monitor that decides whether each instant is relevant to the violation or satisfaction of the specification. We then extend this monitor to a quantitative causation monitor that tells how far an instant is from being relevant to the violation or satisfaction. We further show that classic monitors can be derived from our proposed ones. Experimental results show that the two proposed monitors are able to provide more detailed information about system evolution, without requiring a significantly higher monitoring cost.",
-    "topic": "",
-    "conference": "cav",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1007/978-3-031-37706-8_4"
-  },
-  {
-    "id": "10.1007/978-3-031-37709-9_1",
-    "title": "A Flexible Toolchain for Symbolic Rabin Games under Fair and Stochastic Uncertainties",
-    "authors": [
-      "Rupak Majumdar",
-      "Kaushik Mallik",
-      "Mateusz Rychlicki",
-      "Anne-Kathrin Schmuck",
-      "Sadegh Soudjani"
-    ],
-    "abstract": "We present a flexible and efficient toolchain to symbolically solve (standard) Rabin games, fair-adversarial Rabin games, and \"Image missing\" -player Rabin games. To our best knowledge, our tools are the first ones to be able to solve these problems. Furthermore, using these flexible game solvers as a back-end, we implemented a tool for computing correct-by-construction controllers for stochastic dynamical systems under LTL specifications. Our implementations use the recent theoretical result that all of these games can be solved using the same symbolic fixpoint algorithm but utilizing different, domain specific calculations of the involved predecessor operators. The main feature of our toolchain is the utilization of two programming abstractions: one to separate the symbolic fixpoint computations from the predecessor calculations, and another one to allow the integration of different BDD libraries as back-ends. In particular, we employ a multi-threaded execution of the fixpoint algorithm by using the multi-threaded BDD library Sylvan, which leads to enormous computational savings.",
-    "topic": "",
-    "conference": "cav",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1007/978-3-031-37709-9_1"
-  },
-  {
-    "id": "10.1007/978-3-031-37709-9_4",
-    "title": "Efficient Sensitivity Analysis for Parametric Robust Markov Chains",
-    "authors": [
-      "Thom Badings",
-      "Sebastian Junges",
-      "Ahmadreza Marandi",
-      "Ufuk Topcu",
-      "Nils Jansen"
-    ],
-    "abstract": "We provide a novel method for sensitivity analysis of parametric robust Markov chains. These models incorporate parameters and sets of probability distributions to alleviate the often unrealistic assumption that precise probabilities are available. We measure sensitivity in terms of partial derivatives with respect to the uncertain transition probabilities regarding measures such as the expected reward. As our main contribution, we present an efficient method to compute these partial derivatives. To scale our approach to models with thousands of parameters, we present an extension of this method that selects the subset of k parameters with the highest partial derivative. Our methods are based on linear programming and differentiating these programs around a given value for the parameters. The experiments show the applicability of our approach on models with over a million states and thousands of parameters. Moreover, we embed the results within an iterative learning scheme that profits from having access to a dedicated sensitivity analysis.",
-    "topic": "",
-    "conference": "cav",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1007/978-3-031-37709-9_4"
-  },
-  {
-    "id": "10.1007/978-3-031-37709-9_9",
-    "title": "Formally Verified EVM Block-Optimizations",
-    "authors": [
-      "Elvira Albert",
-      "Samir Genaim",
-      "Daniel Kirchner",
-      "Enrique Martin-Martin"
-    ],
-    "abstract": "The efficiency and the security of smart contracts are their two fundamental properties, but might come at odds: the use of optimizers to enhance efficiency may introduce bugs and compromise security. Our focus is on (Ethereum Virtual Machine) block-optimizations , which enhance the efficiency of jump-free blocks of opcodes by eliminating, reordering and even changing the original opcodes. We reconcile efficiency and security by providing the verification technology to formally prove the correctness of block-optimizations on smart contracts using the Coq proof assistant. This amounts to the challenging problem of proving semantic equivalence of two blocks of instructions, which is realized by means of three novel Coq components: a symbolic execution engine which can execute an block and produce a symbolic state; a number of simplification lemmas which transform a symbolic state into an equivalent one; and a checker of symbolic states to compare the symbolic states produced for the two blocks under comparison.\nArtifact: https://doi.org/10.5281/zenodo.7863483",
-    "topic": "",
-    "conference": "cav",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1007/978-3-031-37709-9_9"
-  },
-  {
     "id": "10.1007/978-3-031-37706-8_1",
     "title": "Active Learning of Deterministic Timed Automata with Myhill-Nerode Style Characterization",
     "authors": [
@@ -333,6 +255,37 @@
     "paper_url": "https://doi.org/10.1007/978-3-031-37706-8_23"
   },
   {
+    "id": "10.1007/978-3-031-37706-8_3",
+    "title": "Learning Assumptions for Compositional Verification of Timed Automata",
+    "authors": [
+      "Hanyue Chen",
+      "Yu Su",
+      "Miaomiao Zhang",
+      "Zhiming Liu",
+      "Junri Mi"
+    ],
+    "abstract": "Compositional verification, such as the technique of assume-guarantee reasoning (AGR), is to verify a property of a system from the properties of its components. It is essential to address the state explosion problem associated with model checking. However, obtaining the appropriate assumption for AGR is always a highly mental challenge, especially in the case of timed systems. In this paper, we propose a learning-based compositional verification framework for deterministic timed automata. In this framework, a modified learning algorithm is used to automatically construct the assumption in the form of a deterministic one-clock timed automaton, and an effective scheme is implemented to obtain the clock reset information for the assumption learning. We prove the correctness and termination of the framework and present two kinds of improvements to speed up the verification. We discuss the results of our experiments to evaluate the scalability and effectiveness of the framework. The results show that the framework we propose can reduce state space effectively, and it outperforms traditional monolithic model checking for most cases.",
+    "topic": "",
+    "conference": "cav",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1007/978-3-031-37706-8_3"
+  },
+  {
+    "id": "10.1007/978-3-031-37706-8_4",
+    "title": "Online Causation Monitoring of Signal Temporal Logic",
+    "authors": [
+      "Zhenya Zhang",
+      "Jie An",
+      "Paolo Arcaini",
+      "Ichiro Hasuo"
+    ],
+    "abstract": "Online monitoring is an effective validation approach for hybrid systems, that, at runtime, checks whether the (partial) signals of a system satisfy a specification in, e.g., Signal Temporal Logic (STL) . The classic STL monitoring is performed by computing a robustness interval that specifies, at each instant, how far the monitored signals are from violating and satisfying the specification. However, since a robustness interval monotonically shrinks during monitoring, classic online monitors may fail in reporting new violations or in precisely describing the system evolution at the current instant. In this paper, we tackle these issues by considering the causation of violation or satisfaction, instead of directly using the robustness. We first introduce a Boolean causation monitor that decides whether each instant is relevant to the violation or satisfaction of the specification. We then extend this monitor to a quantitative causation monitor that tells how far an instant is from being relevant to the violation or satisfaction. We further show that classic monitors can be derived from our proposed ones. Experimental results show that the two proposed monitors are able to provide more detailed information about system evolution, without requiring a significantly higher monitoring cost.",
+    "topic": "",
+    "conference": "cav",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1007/978-3-031-37706-8_4"
+  },
+  {
     "id": "10.1007/978-3-031-37706-8_5",
     "title": "Process Equivalence Problems as Energy Games",
     "authors": [
@@ -401,6 +354,22 @@
     "conference": "cav",
     "year": 2023,
     "paper_url": "https://doi.org/10.1007/978-3-031-37706-8_9"
+  },
+  {
+    "id": "10.1007/978-3-031-37709-9_1",
+    "title": "A Flexible Toolchain for Symbolic Rabin Games under Fair and Stochastic Uncertainties",
+    "authors": [
+      "Rupak Majumdar",
+      "Kaushik Mallik",
+      "Mateusz Rychlicki",
+      "Anne-Kathrin Schmuck",
+      "Sadegh Soudjani"
+    ],
+    "abstract": "We present a flexible and efficient toolchain to symbolically solve (standard) Rabin games, fair-adversarial Rabin games, and \"Image missing\" -player Rabin games. To our best knowledge, our tools are the first ones to be able to solve these problems. Furthermore, using these flexible game solvers as a back-end, we implemented a tool for computing correct-by-construction controllers for stochastic dynamical systems under LTL specifications. Our implementations use the recent theoretical result that all of these games can be solved using the same symbolic fixpoint algorithm but utilizing different, domain specific calculations of the involved predecessor operators. The main feature of our toolchain is the utilization of two programming abstractions: one to separate the symbolic fixpoint computations from the predecessor calculations, and another one to allow the integration of different BDD libraries as back-ends. In particular, we employ a multi-threaded execution of the fixpoint algorithm by using the multi-threaded BDD library Sylvan, which leads to enormous computational savings.",
+    "topic": "",
+    "conference": "cav",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1007/978-3-031-37709-9_1"
   },
   {
     "id": "10.1007/978-3-031-37709-9_10",
@@ -639,6 +608,22 @@
     "paper_url": "https://doi.org/10.1007/978-3-031-37709-9_3"
   },
   {
+    "id": "10.1007/978-3-031-37709-9_4",
+    "title": "Efficient Sensitivity Analysis for Parametric Robust Markov Chains",
+    "authors": [
+      "Thom Badings",
+      "Sebastian Junges",
+      "Ahmadreza Marandi",
+      "Ufuk Topcu",
+      "Nils Jansen"
+    ],
+    "abstract": "We provide a novel method for sensitivity analysis of parametric robust Markov chains. These models incorporate parameters and sets of probability distributions to alleviate the often unrealistic assumption that precise probabilities are available. We measure sensitivity in terms of partial derivatives with respect to the uncertain transition probabilities regarding measures such as the expected reward. As our main contribution, we present an efficient method to compute these partial derivatives. To scale our approach to models with thousands of parameters, we present an extension of this method that selects the subset of k parameters with the highest partial derivative. Our methods are based on linear programming and differentiating these programs around a given value for the parameters. The experiments show the applicability of our approach on models with over a million states and thousands of parameters. Moreover, we embed the results within an iterative learning scheme that profits from having access to a dedicated sensitivity analysis.",
+    "topic": "",
+    "conference": "cav",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1007/978-3-031-37709-9_4"
+  },
+  {
     "id": "10.1007/978-3-031-37709-9_5",
     "title": "MDPs as Distribution Transformers: Affine Invariant Synthesis for Safety Objectives",
     "authors": [
@@ -702,6 +687,21 @@
     "paper_url": "https://doi.org/10.1007/978-3-031-37709-9_8"
   },
   {
+    "id": "10.1007/978-3-031-37709-9_9",
+    "title": "Formally Verified EVM Block-Optimizations",
+    "authors": [
+      "Elvira Albert",
+      "Samir Genaim",
+      "Daniel Kirchner",
+      "Enrique Martin-Martin"
+    ],
+    "abstract": "The efficiency and the security of smart contracts are their two fundamental properties, but might come at odds: the use of optimizers to enhance efficiency may introduce bugs and compromise security. Our focus is on (Ethereum Virtual Machine) block-optimizations , which enhance the efficiency of jump-free blocks of opcodes by eliminating, reordering and even changing the original opcodes. We reconcile efficiency and security by providing the verification technology to formally prove the correctness of block-optimizations on smart contracts using the Coq proof assistant. This amounts to the challenging problem of proving semantic equivalence of two blocks of instructions, which is realized by means of three novel Coq components: a symbolic execution engine which can execute an block and produce a symbolic state; a number of simplification lemmas which transform a symbolic state into an equivalent one; and a checker of symbolic states to compare the symbolic states produced for the two blocks under comparison.\nArtifact: https://doi.org/10.5281/zenodo.7863483",
+    "topic": "",
+    "conference": "cav",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1007/978-3-031-37709-9_9"
+  },
+  {
     "id": "10.1007/978-3-031-37703-7_1",
     "title": "Bitwuzla",
     "authors": [
@@ -713,51 +713,6 @@
     "conference": "cav",
     "year": 2023,
     "paper_url": "https://doi.org/10.1007/978-3-031-37703-7_1"
-  },
-  {
-    "id": "10.1007/978-3-031-37703-7_18",
-    "title": "nl2spec: Interactively Translating Unstructured Natural Language to Temporal Logics with Large Language Models",
-    "authors": [
-      "Matthias Cosler",
-      "Christopher Hahn",
-      "Daniel Mendoza",
-      "Frederik Schmitt",
-      "Caroline Trippel"
-    ],
-    "abstract": "A rigorous formalization of desired system requirements is indispensable when performing any verification task. This often limits the application of verification techniques, as writing formal specifications is an error-prone and time-consuming manual task. To facilitate this, we present , a framework for applying Large Language Models (LLMs) to derive formal specifications (in temporal logics) from unstructured natural language. In particular, we introduce a new methodology to detect and resolve the inherent ambiguity of system requirements in natural language: we utilize LLMs to map subformulas of the formalization back to the corresponding natural language fragments of the input. Users iteratively add, delete, and edit these sub-translations to amend erroneous formalizations, which is easier than manually redrafting the entire formalization. The framework is agnostic to specific application domains and can be extended to similar specification languages and new neural models. We perform a user study to obtain a challenging dataset, which we use to run experiments on the quality of translations. We provide an open-source implementation, including a web-based frontend.",
-    "topic": "",
-    "conference": "cav",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1007/978-3-031-37703-7_18"
-  },
-  {
-    "id": "10.1007/978-3-031-37703-7_19",
-    "title": "NNV 2.0: The Neural Network Verification Tool",
-    "authors": [
-      "Diego Manzanas Lopez",
-      "Sung Woo Choi",
-      "Hoang-Dung Tran",
-      "Taylor T. Johnson"
-    ],
-    "abstract": "This manuscript presents the updated version of the Neural Network Verification (NNV) tool. NNV is a formal verification software tool for deep learning models and cyber-physical systems with neural network components. NNV was first introduced as a verification framework for feedforward and convolutional neural networks, as well as for neural network control systems. Since then, numerous works have made significant improvements in the verification of new deep learning models, as well as tackling some of the scalability issues that may arise when verifying complex models. In this new version of NNV, we introduce verification support for multiple deep learning models, including neural ordinary differential equations, semantic segmentation networks and recurrent neural networks, as well as a collection of reachability methods that aim to reduce the computation cost of reachability analysis of complex neural networks. We have also added direct support for standard input verification formats in the community such as VNNLIB (verification properties), and ONNX (neural networks) formats. We present a collection of experiments in which NNV verifies safety and robustness properties of feedforward, convolutional, semantic segmentation and recurrent neural networks, as well as neural ordinary differential equations and neural network control systems. Furthermore, we demonstrate the capabilities of NNV against a commercially available product in a collection of benchmarks from control systems, semantic segmentation, image classification, and time-series data.",
-    "topic": "",
-    "conference": "cav",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1007/978-3-031-37703-7_19"
-  },
-  {
-    "id": "10.1007/978-3-031-37703-7_20",
-    "title": "QEBVerif: Quantization Error Bound Verification of Neural Networks",
-    "authors": [
-      "Yedi Zhang",
-      "Fu Song",
-      "Jun Sun"
-    ],
-    "abstract": "To alleviate the practical constraints for deploying deep neural networks (DNNs) on edge devices, quantization is widely regarded as one promising technique. It reduces the resource requirements for computational power and storage space by quantizing the weights and/or activation tensors of a DNN into lower bit-width fixed-point numbers, resulting in quantized neural networks (QNNs). While it has been empirically shown to introduce minor accuracy loss, critical verified properties of a DNN might become invalid once quantized. Existing verification methods focus on either individual neural networks (DNNs or QNNs) or quantization error bound for partial quantization. In this work, we propose a quantization error bound verification method, named , where both weights and activation tensors are quantized. consists of two parts, i.e., a differential reachability analysis (DRA) and a mixed-integer linear programming (MILP) based verification method. DRA performs difference analysis between the DNN and its quantized counterpart layer-by-layer to compute a tight quantization error interval efficiently. If DRA fails to prove the error bound, then we encode the verification problem into an equivalent MILP problem which can be solved by off-the-shelf solvers. Thus, is sound, complete, and reasonably efficient. We implement and conduct extensive experiments, showing its effectiveness and efficiency.",
-    "topic": "",
-    "conference": "cav",
-    "year": 2023,
-    "paper_url": "https://doi.org/10.1007/978-3-031-37703-7_20"
   },
   {
     "id": "10.1007/978-3-031-37703-7_10",
@@ -881,6 +836,37 @@
     "paper_url": "https://doi.org/10.1007/978-3-031-37703-7_17"
   },
   {
+    "id": "10.1007/978-3-031-37703-7_18",
+    "title": "nl2spec: Interactively Translating Unstructured Natural Language to Temporal Logics with Large Language Models",
+    "authors": [
+      "Matthias Cosler",
+      "Christopher Hahn",
+      "Daniel Mendoza",
+      "Frederik Schmitt",
+      "Caroline Trippel"
+    ],
+    "abstract": "A rigorous formalization of desired system requirements is indispensable when performing any verification task. This often limits the application of verification techniques, as writing formal specifications is an error-prone and time-consuming manual task. To facilitate this, we present , a framework for applying Large Language Models (LLMs) to derive formal specifications (in temporal logics) from unstructured natural language. In particular, we introduce a new methodology to detect and resolve the inherent ambiguity of system requirements in natural language: we utilize LLMs to map subformulas of the formalization back to the corresponding natural language fragments of the input. Users iteratively add, delete, and edit these sub-translations to amend erroneous formalizations, which is easier than manually redrafting the entire formalization. The framework is agnostic to specific application domains and can be extended to similar specification languages and new neural models. We perform a user study to obtain a challenging dataset, which we use to run experiments on the quality of translations. We provide an open-source implementation, including a web-based frontend.",
+    "topic": "",
+    "conference": "cav",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1007/978-3-031-37703-7_18"
+  },
+  {
+    "id": "10.1007/978-3-031-37703-7_19",
+    "title": "NNV 2.0: The Neural Network Verification Tool",
+    "authors": [
+      "Diego Manzanas Lopez",
+      "Sung Woo Choi",
+      "Hoang-Dung Tran",
+      "Taylor T. Johnson"
+    ],
+    "abstract": "This manuscript presents the updated version of the Neural Network Verification (NNV) tool. NNV is a formal verification software tool for deep learning models and cyber-physical systems with neural network components. NNV was first introduced as a verification framework for feedforward and convolutional neural networks, as well as for neural network control systems. Since then, numerous works have made significant improvements in the verification of new deep learning models, as well as tackling some of the scalability issues that may arise when verifying complex models. In this new version of NNV, we introduce verification support for multiple deep learning models, including neural ordinary differential equations, semantic segmentation networks and recurrent neural networks, as well as a collection of reachability methods that aim to reduce the computation cost of reachability analysis of complex neural networks. We have also added direct support for standard input verification formats in the community such as VNNLIB (verification properties), and ONNX (neural networks) formats. We present a collection of experiments in which NNV verifies safety and robustness properties of feedforward, convolutional, semantic segmentation and recurrent neural networks, as well as neural ordinary differential equations and neural network control systems. Furthermore, we demonstrate the capabilities of NNV against a commercially available product in a collection of benchmarks from control systems, semantic segmentation, image classification, and time-series data.",
+    "topic": "",
+    "conference": "cav",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1007/978-3-031-37703-7_19"
+  },
+  {
     "id": "10.1007/978-3-031-37703-7_2",
     "title": "Decision Procedures for Sequence Theories",
     "authors": [
@@ -894,6 +880,20 @@
     "conference": "cav",
     "year": 2023,
     "paper_url": "https://doi.org/10.1007/978-3-031-37703-7_2"
+  },
+  {
+    "id": "10.1007/978-3-031-37703-7_20",
+    "title": "QEBVerif: Quantization Error Bound Verification of Neural Networks",
+    "authors": [
+      "Yedi Zhang",
+      "Fu Song",
+      "Jun Sun"
+    ],
+    "abstract": "To alleviate the practical constraints for deploying deep neural networks (DNNs) on edge devices, quantization is widely regarded as one promising technique. It reduces the resource requirements for computational power and storage space by quantizing the weights and/or activation tensors of a DNN into lower bit-width fixed-point numbers, resulting in quantized neural networks (QNNs). While it has been empirically shown to introduce minor accuracy loss, critical verified properties of a DNN might become invalid once quantized. Existing verification methods focus on either individual neural networks (DNNs or QNNs) or quantization error bound for partial quantization. In this work, we propose a quantization error bound verification method, named , where both weights and activation tensors are quantized. consists of two parts, i.e., a differential reachability analysis (DRA) and a mixed-integer linear programming (MILP) based verification method. DRA performs difference analysis between the DNN and its quantized counterpart layer-by-layer to compute a tight quantization error interval efficiently. If DRA fails to prove the error bound, then we encode the verification problem into an equivalent MILP problem which can be solved by off-the-shelf solvers. Thus, is sound, complete, and reasonably efficient. We implement and conduct extensive experiments, showing its effectiveness and efficiency.",
+    "topic": "",
+    "conference": "cav",
+    "year": 2023,
+    "paper_url": "https://doi.org/10.1007/978-3-031-37703-7_20"
   },
   {
     "id": "10.1007/978-3-031-37703-7_21",

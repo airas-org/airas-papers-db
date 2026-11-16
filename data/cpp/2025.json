@@ -14,6 +14,18 @@
     "paper_url": "https://doi.org/10.1145/3703595.3705874"
   },
   {
+    "id": "10.1145/3703595.3705885",
+    "title": "Machine Checked Proofs and Programs in Algebraic Combinatorics",
+    "authors": [
+      "Florent Hivert"
+    ],
+    "abstract": "We present a library of formalized results around symmetric functions and the character theory of symmetric groups. Written in Coq/Rocq and based on the Mathematical Components library, it covers a large part of the contents of a graduate level textbook in the field. The flagship result is a proof of the Littlewood-Richardson rule, which computes the structure constants of the algebra of symmetric function in the schur basis which are integer numbers appearing in various fields of mathematics, and which has a long history of wrong proofs. A specific feature of algebraic combinatorics is the constant interplay between algorithms and algebraic constructions: algorithms are not only in computations, but also are key ingredients in definitions and proofs. As such, the proof of the Littlewood-Richardson rule deeply relies on the understanding of the execution of the Robinson-Schensted algorithm. Many results in this library are effective and actually used in computer algebra systems, and we discuss their certified implementation.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2025,
+    "paper_url": "https://doi.org/10.1145/3703595.3705885"
+  },
+  {
     "id": "10.1145/3703595.3705881",
     "title": "Formalizing Simultaneous Critical Pairs for Confluence of Left-Linear Rewrite Systems",
     "authors": [
@@ -27,16 +39,17 @@
     "paper_url": "https://doi.org/10.1145/3703595.3705881"
   },
   {
-    "id": "10.1145/3703595.3710846",
-    "title": "CRIS: The Power of Imagination in Specification and Verification (Invited Talk)",
+    "id": "10.1145/3703595.3705875",
+    "title": "Formalization of Differential Privacy in Isabelle/HOL",
     "authors": [
-      "Chung-Kil Hur"
+      "Tetsuya Sato",
+      "Yasuhiko Minamide"
     ],
-    "abstract": "Just as imaginary numbers extend real numbers and simplify certain mathematical proofs, we introduce the concept of imaginary specifications to enhance program verification. In mathematics, imaginary numbers enable expressing intermediate steps that cannot be captured using real numbers alone, offering natural proof decomposition that reduces complex proofs into simpler, more manageable steps. Similarly, our work introduces imaginary specifications in program verification through CRIS (Contextual Refinement with Imaginary Specification), our novel verification tool. CRIS with imaginary specifications provides a unified framework to inherently marry two fundamental approaches to program verification: separation logic with pre/post conditions as specifications, and program refinement with abstract programs as specifications. This unification not only enables proof simplification via proof decomposition but also enables elegant expression of hard-to-express properties, such as separation logic conditions involving IO events and logical atomicity---properties that traditionally require intricate mechanisms or are difficult to specify.",
+    "abstract": "Differential privacy is a statistical definition of privacy that has attracted the interest of both academia and industry. Its formulations are easy to understand, but the differential privacy of databases is complicated to determine. One of the reasons for this is that small changes in database programs can break their differential privacy. Therefore, formal verification of differential privacy has been studied for over a decade. In this paper, we propose an Isabelle/HOL library for formalizing differential privacy in a general setting. To our knowledge, it is the first formalization of differential privacy that supports continuous probability distributions. First, we formalize the standard definition of differential privacy and its basic properties. Second, we formalize the Laplace mechanism and its differential privacy. Finally, we formalize the differential privacy of the report noisy max mechanism.",
     "topic": "",
     "conference": "cpp",
     "year": 2025,
-    "paper_url": "https://doi.org/10.1145/3703595.3710846"
+    "paper_url": "https://doi.org/10.1145/3703595.3705875"
   },
   {
     "id": "10.1145/3703595.3705886",
@@ -52,30 +65,16 @@
     "paper_url": "https://doi.org/10.1145/3703595.3705886"
   },
   {
-    "id": "10.1145/3703595.3705885",
-    "title": "Machine Checked Proofs and Programs in Algebraic Combinatorics",
+    "id": "10.1145/3703595.3710846",
+    "title": "CRIS: The Power of Imagination in Specification and Verification (Invited Talk)",
     "authors": [
-      "Florent Hivert"
+      "Chung-Kil Hur"
     ],
-    "abstract": "We present a library of formalized results around symmetric functions and the character theory of symmetric groups. Written in Coq/Rocq and based on the Mathematical Components library, it covers a large part of the contents of a graduate level textbook in the field. The flagship result is a proof of the Littlewood-Richardson rule, which computes the structure constants of the algebra of symmetric function in the schur basis which are integer numbers appearing in various fields of mathematics, and which has a long history of wrong proofs. A specific feature of algebraic combinatorics is the constant interplay between algorithms and algebraic constructions: algorithms are not only in computations, but also are key ingredients in definitions and proofs. As such, the proof of the Littlewood-Richardson rule deeply relies on the understanding of the execution of the Robinson-Schensted algorithm. Many results in this library are effective and actually used in computer algebra systems, and we discuss their certified implementation.",
+    "abstract": "Just as imaginary numbers extend real numbers and simplify certain mathematical proofs, we introduce the concept of imaginary specifications to enhance program verification. In mathematics, imaginary numbers enable expressing intermediate steps that cannot be captured using real numbers alone, offering natural proof decomposition that reduces complex proofs into simpler, more manageable steps. Similarly, our work introduces imaginary specifications in program verification through CRIS (Contextual Refinement with Imaginary Specification), our novel verification tool. CRIS with imaginary specifications provides a unified framework to inherently marry two fundamental approaches to program verification: separation logic with pre/post conditions as specifications, and program refinement with abstract programs as specifications. This unification not only enables proof simplification via proof decomposition but also enables elegant expression of hard-to-express properties, such as separation logic conditions involving IO events and logical atomicity---properties that traditionally require intricate mechanisms or are difficult to specify.",
     "topic": "",
     "conference": "cpp",
     "year": 2025,
-    "paper_url": "https://doi.org/10.1145/3703595.3705885"
-  },
-  {
-    "id": "10.1145/3703595.3705876",
-    "title": "The Nextgen Modality: A Modality for Non-Frame-Preserving Updates in Separation Logic",
-    "authors": [
-      "Simon Friis Vindum",
-      "Aïna Linn Georges",
-      "Lars Birkedal"
-    ],
-    "abstract": "As separation logic is a logic of resources, the way in which resources can soundly change and be updated is a fundamental aspect. Such changes have typically been restricted to certain local or frame-preserving updates. However, recently we have seen separation logics where the restriction to frame-preserving updates seems to be a hindrance towards achieving the ideal program reasoning rules. In this, paper we propose a novel nextgen modality that enables reasoning across generations where each generational change can update resources in ways that are non-local and non-frame-preserving. We implement the idea as an extension to the Iris base logic, which enriches Iris with an entirely new capability: the ability to make non-frame-preserving updates to ghost state. We show that two existing Iris modalities are special cases of the nextgen modality. Our “extension” can thus also be seen as a generalization and simplification of the Iris base logic. To demonstrate the utility of the nextgen modality we use it to construct a separation logic for a programming language with explicit stack allocation and with a return operation that clears entire stack frames. The nextgen modality is used to great effect in the reasoning rule for return, where a modular and practical reasoning rule is otherwise out of reach. This is the first separation logic for a high-level programming language with stack allocation. We sketch ideas for future work in other domains where we think the nextgen modality can be useful.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2025,
-    "paper_url": "https://doi.org/10.1145/3703595.3705876"
+    "paper_url": "https://doi.org/10.1145/3703595.3710846"
   },
   {
     "id": "10.1145/3703595.3705887",
@@ -101,45 +100,6 @@
     "conference": "cpp",
     "year": 2025,
     "paper_url": "https://doi.org/10.1145/3703595.3710845"
-  },
-  {
-    "id": "10.1145/3703595.3705877",
-    "title": "Tactic Script Optimisation for Aesop",
-    "authors": [
-      "Jannis Limperg"
-    ],
-    "abstract": "White-box proof search tactics such as Coq's auto, Isabelle's auto and Lean's Aesop apply proof rules that often translate directly to lower-level tactics. When these search tactics find a proof, they can, at least in principle, generate a tactic script, i.e. a sequence of lower-level tactics that proves the goal. Such a script can then replace the typically much slower invocation of the search tactic, or it can be used to understand and debug the search. However, at least for Aesop, naively generated scripts are highly unidiomatic. For example, they use tactics that users would typically avoid; they apply these tactics in an unusual order; and they do not use Lean's constructs for structuring tactic scripts. To address these issues, I propose a three-stage optimisation pipeline that transforms naive scripts into scripts resembling a human-written Lean proof. The first stage replaces less idiomatic tactics with more idiomatic ones, checking that the two sequences of tactics produce the same result. The second stage permutes the tactics in the script to bring them into a natural, depth-first order, which then allows us to use Lean's structuring constructs. The third stage runs some straightforward post-processing passes.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2025,
-    "paper_url": "https://doi.org/10.1145/3703595.3705877"
-  },
-  {
-    "id": "10.1145/3703595.3705888",
-    "title": "Split Decisions: Explicit Contexts for Substructural Languages",
-    "authors": [
-      "Daniel Zackon",
-      "Chuta Sano",
-      "Alberto Momigliano",
-      "Brigitte Pientka"
-    ],
-    "abstract": "A central challenge in mechanizing the meta-theory of substructural languages is modeling contexts. Although various ad hoc approaches to this problem exist, we lack a set of good practices and a simple infrastructure that can be leveraged for mechanizing a wide range of substructural systems. In this work, we describe Contexts as Resource Vectors (CARVe), a general syntactic infrastructure for managing substructural contexts, where elements are annotated with tags from a resource algebra denoting their availability. Assumptions persist as contexts are manipulated since we model resource consumption by changing their tags. We may thus define relations between substructural contexts via simultaneous substitutions without the need to split them. Moreover, we establish a series of algebraic properties about context operations that are typically required to carry out proofs in practice. CARVe is implemented in the proof assistant Beluga. To illustrate best practices for using our infrastructure, we give a detailed reformulation of the linear sequent calculus and bidirectional linear λ-calculus in terms of CARVe’s context operations and prove their equivalence using the aforementioned algebraic properties. In addition, we apply CARVe to mechanize a diverse set of systems, from the affine λ-calculus to the session-typed process calculus CP, giving us confidence that CARVe is sufficiently general to mechanize a broad range of substructural systems.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2025,
-    "paper_url": "https://doi.org/10.1145/3703595.3705888"
-  },
-  {
-    "id": "10.1145/3703595.3705882",
-    "title": "An Isabelle/HOL Framework for Synthetic Completeness Proofs",
-    "authors": [
-      "Asta Halkjær From"
-    ],
-    "abstract": "Proof assistants like Isabelle/HOL provide the perfect opportunity to develop more than just one-off formalizations, but frameworks for developing new results within a given area. Completeness results for logical calculi often include bespoke versions of Lindenbaum's lemma. In this paper, I mechanize an abstract, transfinite version of the lemma and use it to build witnessed, maximal consistent sets (MCSs) for any notion of consistency that satisfies a few requirements. I prove abstract results about when MCSs reflect the proof rules of the underlying calculi. Finally, I formalize a process for mechanically calculating saturated set conditions from a given logic's semantics. This separates the truth lemma that connects MCS-membership and satisfiability into semantic and syntactic components, giving concrete proof obligations for each operator of the logic. To illustrate the framework's applicability, I instantiate it with propositional, first-order, modal and hybrid logic examples. I mechanize strong completeness for each logic, even for uncountably large languages, proving that, if a formula is valid under a set of assumptions, then we can derive it from a finite subset.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2025,
-    "paper_url": "https://doi.org/10.1145/3703595.3705882"
   },
   {
     "id": "10.1145/3703595.3705883",
@@ -171,61 +131,31 @@
     "paper_url": "https://doi.org/10.1145/3703595.3705873"
   },
   {
-    "id": "10.1145/3703595.3705875",
-    "title": "Formalization of Differential Privacy in Isabelle/HOL",
+    "id": "10.1145/3703595.3705877",
+    "title": "Tactic Script Optimisation for Aesop",
     "authors": [
-      "Tetsuya Sato",
-      "Yasuhiko Minamide"
+      "Jannis Limperg"
     ],
-    "abstract": "Differential privacy is a statistical definition of privacy that has attracted the interest of both academia and industry. Its formulations are easy to understand, but the differential privacy of databases is complicated to determine. One of the reasons for this is that small changes in database programs can break their differential privacy. Therefore, formal verification of differential privacy has been studied for over a decade. In this paper, we propose an Isabelle/HOL library for formalizing differential privacy in a general setting. To our knowledge, it is the first formalization of differential privacy that supports continuous probability distributions. First, we formalize the standard definition of differential privacy and its basic properties. Second, we formalize the Laplace mechanism and its differential privacy. Finally, we formalize the differential privacy of the report noisy max mechanism.",
+    "abstract": "White-box proof search tactics such as Coq's auto, Isabelle's auto and Lean's Aesop apply proof rules that often translate directly to lower-level tactics. When these search tactics find a proof, they can, at least in principle, generate a tactic script, i.e. a sequence of lower-level tactics that proves the goal. Such a script can then replace the typically much slower invocation of the search tactic, or it can be used to understand and debug the search. However, at least for Aesop, naively generated scripts are highly unidiomatic. For example, they use tactics that users would typically avoid; they apply these tactics in an unusual order; and they do not use Lean's constructs for structuring tactic scripts. To address these issues, I propose a three-stage optimisation pipeline that transforms naive scripts into scripts resembling a human-written Lean proof. The first stage replaces less idiomatic tactics with more idiomatic ones, checking that the two sequences of tactics produce the same result. The second stage permutes the tactics in the script to bring them into a natural, depth-first order, which then allows us to use Lean's structuring constructs. The third stage runs some straightforward post-processing passes.",
     "topic": "",
     "conference": "cpp",
     "year": 2025,
-    "paper_url": "https://doi.org/10.1145/3703595.3705875"
+    "paper_url": "https://doi.org/10.1145/3703595.3705877"
   },
   {
-    "id": "10.1145/3703595.3705871",
-    "title": "Leakage-Free Probabilistic Jasmin Programs",
+    "id": "10.1145/3703595.3705888",
+    "title": "Split Decisions: Explicit Contexts for Substructural Languages",
     "authors": [
-      "José Bacelar Almeida",
-      "Denis Firsov",
-      "Tiago Oliveira",
-      "Dominique Unruh"
+      "Daniel Zackon",
+      "Chuta Sano",
+      "Alberto Momigliano",
+      "Brigitte Pientka"
     ],
-    "abstract": "This paper presents a semantic characterization of leakage-freeness through timing side-channels for Jasmin programs. Our characterization covers probabilistic Jasmin programs that are not constant-time. In addition, we provide a characterization in terms of probabilistic relational Hoare logic and prove the equivalence between both definitions. We also prove that our new characterizations are compositional and relate our new definitions to existing ones from prior work, which could only be applied to deterministic programs. To provide practical evidence, we use the Jasmin framework to develop a rejection sampling algorithm and provide an EasyCrypt proof that ensures the algorithm's implementation is leakage-free while not being constant-time.",
+    "abstract": "A central challenge in mechanizing the meta-theory of substructural languages is modeling contexts. Although various ad hoc approaches to this problem exist, we lack a set of good practices and a simple infrastructure that can be leveraged for mechanizing a wide range of substructural systems. In this work, we describe Contexts as Resource Vectors (CARVe), a general syntactic infrastructure for managing substructural contexts, where elements are annotated with tags from a resource algebra denoting their availability. Assumptions persist as contexts are manipulated since we model resource consumption by changing their tags. We may thus define relations between substructural contexts via simultaneous substitutions without the need to split them. Moreover, we establish a series of algebraic properties about context operations that are typically required to carry out proofs in practice. CARVe is implemented in the proof assistant Beluga. To illustrate best practices for using our infrastructure, we give a detailed reformulation of the linear sequent calculus and bidirectional linear λ-calculus in terms of CARVe’s context operations and prove their equivalence using the aforementioned algebraic properties. In addition, we apply CARVe to mechanize a diverse set of systems, from the affine λ-calculus to the session-typed process calculus CP, giving us confidence that CARVe is sufficiently general to mechanize a broad range of substructural systems.",
     "topic": "",
     "conference": "cpp",
     "year": 2025,
-    "paper_url": "https://doi.org/10.1145/3703595.3705871"
-  },
-  {
-    "id": "10.1145/3703595.3705879",
-    "title": "CertiCoq-Wasm: A Verified WebAssembly Backend for CertiCoq",
-    "authors": [
-      "Wolfgang Meier",
-      "Martin Jensen",
-      "Jean Pichon-Pharabod",
-      "Bas Spitters"
-    ],
-    "abstract": "We contribute CertiCoq-Wasm, a verified WebAssembly backend for CertiCoq. CertiCoq-Wasm is implemented and verified in the Coq proof assistant, and is mechanised with respect to the WasmCert-Coq formalisation of the WebAssembly standard. CertiCoq-Wasm works from CertiCoq's minimal lambda calculus in administrative normal form (ANF), and produces WebAssembly programs with reasonable performance. It implements Coq's primitive integer operations as efficient WebAssembly instructions, identifying a corner case in their implementation that led to unsoundness. We compare CertiCoq-Wasm against other, partially verified extraction mechanisms from Coq to WebAssembly, benchmarking running time and program size. We demonstrate the practical usability of CertiCoq-Wasm with two case studies: we extract and run a Gallina program on the web, and a ConCert smart contract on the Concordium blockchain.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2025,
-    "paper_url": "https://doi.org/10.1145/3703595.3705879"
-  },
-  {
-    "id": "10.1145/3703595.3705890",
-    "title": "Monadic Interpreters for Concurrent Memory Models",
-    "authors": [
-      "Nicolas Chappe",
-      "Ludovic Henrio",
-      "Yannick Zakowski"
-    ],
-    "abstract": "Monadic interpreters have gained attention as a powerful tool for modeling and reasoning about first order languages. In particular in the Coq ecosystem, the Choice Tree (CTree) library provides generic tools to craft such interpreters in presence of divergence, stateful effects, failure, and non-determinism. This monadic approach allows the definition of semantics for programming languages that are modular in its effects, compositional w.r.t. its syntax, and executable. This paper demonstrates the use of CTrees to formalize a semantics for concurrency and weak memory models. We instantiate the approach over a minimal concurrent subset of LLVM IR. Our semantics is built in successive stages, interpreting each aspect of the semantics separately. In particular, a stage encodes multi-threading as an interleaving semantics, and another implements a weak memory model that supports various LLVM memory orderings. Furthermore, the modularity of the approach makes it possible to plug a different source language or memory model by changing a single interpretation phase. By leveraging the notions of (bi)similarity on CTrees, we establish the equational theory of our constructions, show how to transport equivalences through our layered construction, and prove simulation results between memory models. Finally, our model is executable, hence the semantics can be tested by extraction to OCaml.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2025,
-    "paper_url": "https://doi.org/10.1145/3703595.3705890"
+    "paper_url": "https://doi.org/10.1145/3703595.3705888"
   },
   {
     "id": "10.1145/3703595.3705878",
@@ -244,6 +174,91 @@
     "conference": "cpp",
     "year": 2025,
     "paper_url": "https://doi.org/10.1145/3703595.3705878"
+  },
+  {
+    "id": "10.1145/3703595.3705876",
+    "title": "The Nextgen Modality: A Modality for Non-Frame-Preserving Updates in Separation Logic",
+    "authors": [
+      "Simon Friis Vindum",
+      "Aïna Linn Georges",
+      "Lars Birkedal"
+    ],
+    "abstract": "As separation logic is a logic of resources, the way in which resources can soundly change and be updated is a fundamental aspect. Such changes have typically been restricted to certain local or frame-preserving updates. However, recently we have seen separation logics where the restriction to frame-preserving updates seems to be a hindrance towards achieving the ideal program reasoning rules. In this, paper we propose a novel nextgen modality that enables reasoning across generations where each generational change can update resources in ways that are non-local and non-frame-preserving. We implement the idea as an extension to the Iris base logic, which enriches Iris with an entirely new capability: the ability to make non-frame-preserving updates to ghost state. We show that two existing Iris modalities are special cases of the nextgen modality. Our “extension” can thus also be seen as a generalization and simplification of the Iris base logic. To demonstrate the utility of the nextgen modality we use it to construct a separation logic for a programming language with explicit stack allocation and with a return operation that clears entire stack frames. The nextgen modality is used to great effect in the reasoning rule for return, where a modular and practical reasoning rule is otherwise out of reach. This is the first separation logic for a high-level programming language with stack allocation. We sketch ideas for future work in other domains where we think the nextgen modality can be useful.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2025,
+    "paper_url": "https://doi.org/10.1145/3703595.3705876"
+  },
+  {
+    "id": "10.1145/3703595.3705890",
+    "title": "Monadic Interpreters for Concurrent Memory Models",
+    "authors": [
+      "Nicolas Chappe",
+      "Ludovic Henrio",
+      "Yannick Zakowski"
+    ],
+    "abstract": "Monadic interpreters have gained attention as a powerful tool for modeling and reasoning about first order languages. In particular in the Coq ecosystem, the Choice Tree (CTree) library provides generic tools to craft such interpreters in presence of divergence, stateful effects, failure, and non-determinism. This monadic approach allows the definition of semantics for programming languages that are modular in its effects, compositional w.r.t. its syntax, and executable. This paper demonstrates the use of CTrees to formalize a semantics for concurrency and weak memory models. We instantiate the approach over a minimal concurrent subset of LLVM IR. Our semantics is built in successive stages, interpreting each aspect of the semantics separately. In particular, a stage encodes multi-threading as an interleaving semantics, and another implements a weak memory model that supports various LLVM memory orderings. Furthermore, the modularity of the approach makes it possible to plug a different source language or memory model by changing a single interpretation phase. By leveraging the notions of (bi)similarity on CTrees, we establish the equational theory of our constructions, show how to transport equivalences through our layered construction, and prove simulation results between memory models. Finally, our model is executable, hence the semantics can be tested by extraction to OCaml.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2025,
+    "paper_url": "https://doi.org/10.1145/3703595.3705890"
+  },
+  {
+    "id": "10.1145/3703595.3705871",
+    "title": "Leakage-Free Probabilistic Jasmin Programs",
+    "authors": [
+      "José Bacelar Almeida",
+      "Denis Firsov",
+      "Tiago Oliveira",
+      "Dominique Unruh"
+    ],
+    "abstract": "This paper presents a semantic characterization of leakage-freeness through timing side-channels for Jasmin programs. Our characterization covers probabilistic Jasmin programs that are not constant-time. In addition, we provide a characterization in terms of probabilistic relational Hoare logic and prove the equivalence between both definitions. We also prove that our new characterizations are compositional and relate our new definitions to existing ones from prior work, which could only be applied to deterministic programs. To provide practical evidence, we use the Jasmin framework to develop a rejection sampling algorithm and provide an EasyCrypt proof that ensures the algorithm's implementation is leakage-free while not being constant-time.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2025,
+    "paper_url": "https://doi.org/10.1145/3703595.3705871"
+  },
+  {
+    "id": "10.1145/3703595.3705882",
+    "title": "An Isabelle/HOL Framework for Synthetic Completeness Proofs",
+    "authors": [
+      "Asta Halkjær From"
+    ],
+    "abstract": "Proof assistants like Isabelle/HOL provide the perfect opportunity to develop more than just one-off formalizations, but frameworks for developing new results within a given area. Completeness results for logical calculi often include bespoke versions of Lindenbaum's lemma. In this paper, I mechanize an abstract, transfinite version of the lemma and use it to build witnessed, maximal consistent sets (MCSs) for any notion of consistency that satisfies a few requirements. I prove abstract results about when MCSs reflect the proof rules of the underlying calculi. Finally, I formalize a process for mechanically calculating saturated set conditions from a given logic's semantics. This separates the truth lemma that connects MCS-membership and satisfiability into semantic and syntactic components, giving concrete proof obligations for each operator of the logic. To illustrate the framework's applicability, I instantiate it with propositional, first-order, modal and hybrid logic examples. I mechanize strong completeness for each logic, even for uncountably large languages, proving that, if a formula is valid under a set of assumptions, then we can derive it from a finite subset.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2025,
+    "paper_url": "https://doi.org/10.1145/3703595.3705882"
+  },
+  {
+    "id": "10.1145/3703595.3705879",
+    "title": "CertiCoq-Wasm: A Verified WebAssembly Backend for CertiCoq",
+    "authors": [
+      "Wolfgang Meier",
+      "Martin Jensen",
+      "Jean Pichon-Pharabod",
+      "Bas Spitters"
+    ],
+    "abstract": "We contribute CertiCoq-Wasm, a verified WebAssembly backend for CertiCoq. CertiCoq-Wasm is implemented and verified in the Coq proof assistant, and is mechanised with respect to the WasmCert-Coq formalisation of the WebAssembly standard. CertiCoq-Wasm works from CertiCoq's minimal lambda calculus in administrative normal form (ANF), and produces WebAssembly programs with reasonable performance. It implements Coq's primitive integer operations as efficient WebAssembly instructions, identifying a corner case in their implementation that led to unsoundness. We compare CertiCoq-Wasm against other, partially verified extraction mechanisms from Coq to WebAssembly, benchmarking running time and program size. We demonstrate the practical usability of CertiCoq-Wasm with two case studies: we extract and run a Gallina program on the web, and a ConCert smart contract on the Concordium blockchain.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2025,
+    "paper_url": "https://doi.org/10.1145/3703595.3705879"
+  },
+  {
+    "id": "10.1145/3703595.3705889",
+    "title": "An Isabelle Formalization of Co-rewrite Pairs for Non-reachability in Term Rewriting",
+    "authors": [
+      "Dohan Kim",
+      "Teppei Saito",
+      "René Thiemann",
+      "Akihisa Yamada"
+    ],
+    "abstract": "In this paper, we present an Isabelle/HOL formalization of co-rewrite pairs for non-reachability analysis in term rewriting. In particular, we formalize polynomial interpretations over negative integers as well as the weighted path order (WPO) and its variant co-WPO. With this formalization, the verified certifier CeTA is now able to check such non-reachability proofs, including those for non-reachability problems of a database where existing tools fail to provide certified proofs.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2025,
+    "paper_url": "https://doi.org/10.1145/3703595.3705889"
   },
   {
     "id": "10.1145/3703595.3705872",
@@ -287,20 +302,5 @@
     "conference": "cpp",
     "year": 2025,
     "paper_url": "https://doi.org/10.1145/3703595.3705884"
-  },
-  {
-    "id": "10.1145/3703595.3705889",
-    "title": "An Isabelle Formalization of Co-rewrite Pairs for Non-reachability in Term Rewriting",
-    "authors": [
-      "Dohan Kim",
-      "Teppei Saito",
-      "René Thiemann",
-      "Akihisa Yamada"
-    ],
-    "abstract": "In this paper, we present an Isabelle/HOL formalization of co-rewrite pairs for non-reachability analysis in term rewriting. In particular, we formalize polynomial interpretations over negative integers as well as the weighted path order (WPO) and its variant co-WPO. With this formalization, the verified certifier CeTA is now able to check such non-reachability proofs, including those for non-reachability problems of a database where existing tools fail to provide certified proofs.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2025,
-    "paper_url": "https://doi.org/10.1145/3703595.3705889"
   }
 ]

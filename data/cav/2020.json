@@ -1,114 +1,5 @@
 [
   {
-    "id": "10.1007/978-3-030-53288-8_19",
-    "title": "fault: A Python Embedded Domain-Specific Language for Metaprogramming Portable Hardware Verification Components",
-    "authors": [
-      "Lenny Truong",
-      "Steven Herbst",
-      "Rajsekhar Setaluri",
-      "Makai Mann",
-      "Ross Daly",
-      "Keyi Zhang",
-      "Caleb Donovick",
-      "Daniel Stanley",
-      "Mark Horowitz",
-      "Clark Barrett",
-      "Pat Hanrahan"
-    ],
-    "abstract": "While hardware generators have drastically improved design productivity, they have introduced new challenges for the task of verification. To effectively cover the functionality of a sophisticated generator, verification engineers require tools that provide the flexibility of metaprogramming. However, flexibility alone is not enough; components must also be portable in order to encourage the proliferation of verification libraries as well as enable new methodologies. This paper introduces fault, a Python embedded hardware verification language that aims to empower design teams to realize the full potential of generators.",
-    "topic": "",
-    "conference": "cav",
-    "year": 2020,
-    "paper_url": "https://doi.org/10.1007/978-3-030-53288-8_19"
-  },
-  {
-    "id": "10.1007/978-3-030-53288-8_2",
-    "title": "Verification of Deep Convolutional Neural Networks Using ImageStars",
-    "authors": [
-      "Hoang-Dung Tran",
-      "Stanley Bak",
-      "Weiming Xiang",
-      "Taylor T. Johnson"
-    ],
-    "abstract": "Convolutional Neural Networks (CNN) have redefined state-of-the-art in many real-world applications, such as facial recognition, image classification, human pose estimation, and semantic segmentation. Despite their success, CNNs are vulnerable to adversarial attacks, where slight changes to their inputs may lead to sharp changes in their output in even well-trained networks. Set-based analysis methods can detect or prove the absence of bounded adversarial attacks, which can then be used to evaluate the effectiveness of neural network training methodology. Unfortunately, existing verification approaches have limited scalability in terms of the size of networks that can be analyzed. In this paper, we describe a set-based framework that successfully deals with real-world CNNs, such as VGG16 and VGG19, that have high accuracy on ImageNet. Our approach is based on a new set representation called the ImageStar, which enables efficient exact and over-approximative analysis of CNNs. ImageStars perform efficient set-based analysis by combining operations on concrete images with linear programming (LP). Our approach is implemented in a tool called NNV, and can verify the robustness of VGG networks with respect to a small set of input states, derived from adversarial attacks, such as the DeepFool attack. The experimental results show that our approach is less conservative and faster than existing zonotope and polytope methods.",
-    "topic": "",
-    "conference": "cav",
-    "year": 2020,
-    "paper_url": "https://doi.org/10.1007/978-3-030-53288-8_2"
-  },
-  {
-    "id": "10.1007/978-3-030-53288-8_28",
-    "title": "AEON: Attractor Bifurcation Analysis of Parametrised Boolean Networks",
-    "authors": [
-      "Nikola Beneš",
-      "Luboš Brim",
-      "Jakub Kadlecaj",
-      "Samuel Pastva",
-      "David Šafránek"
-    ],
-    "abstract": "Boolean networks (BNs) provide an effective modelling tool for various phenomena from science and engineering. Any long-term behaviour of a BN eventually converges to a so-called attractor. Depending on various logical parameters, the structure and quality of attractors can undergo a significant change, known as a bifurcation. We present a tool for analysing bifurcations in asynchronous parametrised Boolean networks. To fight the state-space and parameter-space explosion problem the tool uses a parallel semi-symbolic algorithm.",
-    "topic": "",
-    "conference": "cav",
-    "year": 2020,
-    "paper_url": "https://doi.org/10.1007/978-3-030-53288-8_28"
-  },
-  {
-    "id": "10.1007/978-3-030-53288-8_4",
-    "title": "Improved Geometric Path Enumeration for Verifying ReLU Neural Networks",
-    "authors": [
-      "Stanley Bak",
-      "Hoang-Dung Tran",
-      "Kerianne Hobbs",
-      "Taylor T. Johnson"
-    ],
-    "abstract": "Neural networks provide quick approximations to complex functions, and have been increasingly used in perception as well as control tasks. For use in mission-critical and safety-critical applications, however, it is important to be able to analyze what a neural network can and cannot do. For feed-forward neural networks with ReLU activation functions, although exact analysis is NP-complete, recently-proposed verification methods can sometimes succeed. The main practical problem with neural network verification is excessive analysis runtime. Even on small networks, tools that are theoretically complete can sometimes run for days without producing a result. In this paper, we work to address the runtime problem by improving upon a recently-proposed geometric path enumeration method. Through a series of optimizations, several of which are new algorithmic improvements, we demonstrate significant speed improvement of exact analysis on the well-studied ACAS Xu benchmarks, sometimes hundreds of times faster than the original implementation. On more difficult benchmark instances, our optimized approach is often the fastest, even outperforming inexact methods that leverage overapproximation and refinement.",
-    "topic": "",
-    "conference": "cav",
-    "year": 2020,
-    "paper_url": "https://doi.org/10.1007/978-3-030-53288-8_4"
-  },
-  {
-    "id": "10.1007/978-3-030-53291-8_12",
-    "title": "Ivy: A Multi-modal Verification Tool for Distributed Algorithms",
-    "authors": [
-      "Kenneth L. McMillan",
-      "Oded Padon"
-    ],
-    "abstract": "Ivy is a multi-modal verification tool for correct design and implementation of distributed protocols and algorithms, supporting modular specification, implementation and proof. Ivy supports proving safety and liveness properties of parameterized and infinite-state systems via three modes: deductive verification using an SMT solver, abstraction and model checking, and manual proofs using natural deduction. It supports light-weight formal methods via compositional specification-based testing and bounded model checking. Ivy can extract executable distributed programs by translation to efficient C++ code. It is designed to support decidable automated reasoning, to improve proof stability and to provide transparency in the case of proof failures. For this purpose, it presents concrete finite counterexamples, automatically audits proofs for decidability of verification conditions, and provides modular hiding of theories.",
-    "topic": "",
-    "conference": "cav",
-    "year": 2020,
-    "paper_url": "https://doi.org/10.1007/978-3-030-53291-8_12"
-  },
-  {
-    "id": "10.1007/978-3-030-53291-8_25",
-    "title": "PRISM-games 3.0: Stochastic Game Verification with Concurrency, Equilibria and Time",
-    "authors": [
-      "Marta Kwiatkowska",
-      "Gethin Norman",
-      "David Parker",
-      "Gabriel Santos"
-    ],
-    "abstract": "We present a major new release of the PRISM-games model checker, featuring multiple significant advances in its support for verification and strategy synthesis of stochastic games. Firstly, concurrent stochastic games bring more realistic modelling of agents interacting in a concurrent fashion. Secondly, equilibria-based properties provide a means to analyse games in which competing or collaborating players are driven by distinct objectives. Thirdly, a real-time extension of (turn-based) stochastic games facilitates verification and strategy synthesis for systems where timing is a crucial aspect. This paper describes the advances made in the tool’s modelling language, property specification language and model checking engines in order to implement this new functionality. We also summarise the performance and scalability of the tool, and describe a selection of case studies, ranging from security protocols to robot coordination, which highlight the benefits of the new features.",
-    "topic": "",
-    "conference": "cav",
-    "year": 2020,
-    "paper_url": "https://doi.org/10.1007/978-3-030-53291-8_25"
-  },
-  {
-    "id": "10.1007/978-3-030-53291-8_33",
-    "title": "Must Fault Localization for Program Repair",
-    "authors": [
-      "Bat-Chen Rothenberg",
-      "Orna Grumberg"
-    ],
-    "abstract": "This work is concerned with fault localization for automated program repair. We define a novel concept of a must location set. Intuitively, such a set includes at least one program location from every repair for a bug. Thus, it is impossible to fix the bug without changing at least one location from this set. A fault localization technique is considered a must algorithm if it returns a must location set for every buggy program and every bug in the program. We show that some traditional fault localization techniques are not must. We observe that the notion of must fault localization depends on the chosen repair scheme, which identifies the changes that can be applied to program statements as part of a repair. We develop a new algorithm for fault localization and prove that it is must with respect to commonly used schemes in automated program repair. We incorporate the new fault localization technique into an existing mutation-based program repair algorithm. We exploit it in order to prune the search space when a buggy mutated program has been generated. Our experiments show that must fault localization is able to significantly speed-up the repair process, without losing any of the potential repairs.",
-    "topic": "",
-    "conference": "cav",
-    "year": 2020,
-    "paper_url": "https://doi.org/10.1007/978-3-030-53291-8_33"
-  },
-  {
     "id": "10.1007/978-3-030-53288-8_1",
     "title": "NNV: The Neural Network Verification Tool for Deep Neural Networks and Learning-Enabled Cyber-Physical Systems",
     "authors": [
@@ -262,6 +153,43 @@
     "paper_url": "https://doi.org/10.1007/978-3-030-53288-8_18"
   },
   {
+    "id": "10.1007/978-3-030-53288-8_19",
+    "title": "fault: A Python Embedded Domain-Specific Language for Metaprogramming Portable Hardware Verification Components",
+    "authors": [
+      "Lenny Truong",
+      "Steven Herbst",
+      "Rajsekhar Setaluri",
+      "Makai Mann",
+      "Ross Daly",
+      "Keyi Zhang",
+      "Caleb Donovick",
+      "Daniel Stanley",
+      "Mark Horowitz",
+      "Clark Barrett",
+      "Pat Hanrahan"
+    ],
+    "abstract": "While hardware generators have drastically improved design productivity, they have introduced new challenges for the task of verification. To effectively cover the functionality of a sophisticated generator, verification engineers require tools that provide the flexibility of metaprogramming. However, flexibility alone is not enough; components must also be portable in order to encourage the proliferation of verification libraries as well as enable new methodologies. This paper introduces fault, a Python embedded hardware verification language that aims to empower design teams to realize the full potential of generators.",
+    "topic": "",
+    "conference": "cav",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1007/978-3-030-53288-8_19"
+  },
+  {
+    "id": "10.1007/978-3-030-53288-8_2",
+    "title": "Verification of Deep Convolutional Neural Networks Using ImageStars",
+    "authors": [
+      "Hoang-Dung Tran",
+      "Stanley Bak",
+      "Weiming Xiang",
+      "Taylor T. Johnson"
+    ],
+    "abstract": "Convolutional Neural Networks (CNN) have redefined state-of-the-art in many real-world applications, such as facial recognition, image classification, human pose estimation, and semantic segmentation. Despite their success, CNNs are vulnerable to adversarial attacks, where slight changes to their inputs may lead to sharp changes in their output in even well-trained networks. Set-based analysis methods can detect or prove the absence of bounded adversarial attacks, which can then be used to evaluate the effectiveness of neural network training methodology. Unfortunately, existing verification approaches have limited scalability in terms of the size of networks that can be analyzed. In this paper, we describe a set-based framework that successfully deals with real-world CNNs, such as VGG16 and VGG19, that have high accuracy on ImageNet. Our approach is based on a new set representation called the ImageStar, which enables efficient exact and over-approximative analysis of CNNs. ImageStars perform efficient set-based analysis by combining operations on concrete images with linear programming (LP). Our approach is implemented in a tool called NNV, and can verify the robustness of VGG networks with respect to a small set of input states, derived from adversarial attacks, such as the DeepFool attack. The experimental results show that our approach is less conservative and faster than existing zonotope and polytope methods.",
+    "topic": "",
+    "conference": "cav",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1007/978-3-030-53288-8_2"
+  },
+  {
     "id": "10.1007/978-3-030-53288-8_20",
     "title": "Nonlinear Craig Interpolant Generation",
     "authors": [
@@ -375,6 +303,22 @@
     "paper_url": "https://doi.org/10.1007/978-3-030-53288-8_27"
   },
   {
+    "id": "10.1007/978-3-030-53288-8_28",
+    "title": "AEON: Attractor Bifurcation Analysis of Parametrised Boolean Networks",
+    "authors": [
+      "Nikola Beneš",
+      "Luboš Brim",
+      "Jakub Kadlecaj",
+      "Samuel Pastva",
+      "David Šafránek"
+    ],
+    "abstract": "Boolean networks (BNs) provide an effective modelling tool for various phenomena from science and engineering. Any long-term behaviour of a BN eventually converges to a so-called attractor. Depending on various logical parameters, the structure and quality of attractors can undergo a significant change, known as a bifurcation. We present a tool for analysing bifurcations in asynchronous parametrised Boolean networks. To fight the state-space and parameter-space explosion problem the tool uses a parallel semi-symbolic algorithm.",
+    "topic": "",
+    "conference": "cav",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1007/978-3-030-53288-8_28"
+  },
+  {
     "id": "10.1007/978-3-030-53288-8_29",
     "title": "A Novel Approach for Solving the BMI Problem in Barrier Certificates Generation",
     "authors": [
@@ -444,6 +388,21 @@
     "conference": "cav",
     "year": 2020,
     "paper_url": "https://doi.org/10.1007/978-3-030-53288-8_32"
+  },
+  {
+    "id": "10.1007/978-3-030-53288-8_4",
+    "title": "Improved Geometric Path Enumeration for Verifying ReLU Neural Networks",
+    "authors": [
+      "Stanley Bak",
+      "Hoang-Dung Tran",
+      "Kerianne Hobbs",
+      "Taylor T. Johnson"
+    ],
+    "abstract": "Neural networks provide quick approximations to complex functions, and have been increasingly used in perception as well as control tasks. For use in mission-critical and safety-critical applications, however, it is important to be able to analyze what a neural network can and cannot do. For feed-forward neural networks with ReLU activation functions, although exact analysis is NP-complete, recently-proposed verification methods can sometimes succeed. The main practical problem with neural network verification is excessive analysis runtime. Even on small networks, tools that are theoretically complete can sometimes run for days without producing a result. In this paper, we work to address the runtime problem by improving upon a recently-proposed geometric path enumeration method. Through a series of optimizations, several of which are new algorithmic improvements, we demonstrate significant speed improvement of exact analysis on the well-studied ACAS Xu benchmarks, sometimes hundreds of times faster than the original implementation. On more difficult benchmark instances, our optimized approach is often the fastest, even outperforming inexact methods that leverage overapproximation and refinement.",
+    "topic": "",
+    "conference": "cav",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1007/978-3-030-53288-8_4"
   },
   {
     "id": "10.1007/978-3-030-53288-8_5",
@@ -580,6 +539,19 @@
     "conference": "cav",
     "year": 2020,
     "paper_url": "https://doi.org/10.1007/978-3-030-53291-8_11"
+  },
+  {
+    "id": "10.1007/978-3-030-53291-8_12",
+    "title": "Ivy: A Multi-modal Verification Tool for Distributed Algorithms",
+    "authors": [
+      "Kenneth L. McMillan",
+      "Oded Padon"
+    ],
+    "abstract": "Ivy is a multi-modal verification tool for correct design and implementation of distributed protocols and algorithms, supporting modular specification, implementation and proof. Ivy supports proving safety and liveness properties of parameterized and infinite-state systems via three modes: deductive verification using an SMT solver, abstraction and model checking, and manual proofs using natural deduction. It supports light-weight formal methods via compositional specification-based testing and bounded model checking. Ivy can extract executable distributed programs by translation to efficient C++ code. It is designed to support decidable automated reasoning, to improve proof stability and to provide transparency in the case of proof failures. For this purpose, it presents concrete finite counterexamples, automatically audits proofs for decidability of verification conditions, and provides modular hiding of theories.",
+    "topic": "",
+    "conference": "cav",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1007/978-3-030-53291-8_12"
   },
   {
     "id": "10.1007/978-3-030-53291-8_13",
@@ -779,6 +751,21 @@
     "paper_url": "https://doi.org/10.1007/978-3-030-53291-8_24"
   },
   {
+    "id": "10.1007/978-3-030-53291-8_25",
+    "title": "PRISM-games 3.0: Stochastic Game Verification with Concurrency, Equilibria and Time",
+    "authors": [
+      "Marta Kwiatkowska",
+      "Gethin Norman",
+      "David Parker",
+      "Gabriel Santos"
+    ],
+    "abstract": "We present a major new release of the PRISM-games model checker, featuring multiple significant advances in its support for verification and strategy synthesis of stochastic games. Firstly, concurrent stochastic games bring more realistic modelling of agents interacting in a concurrent fashion. Secondly, equilibria-based properties provide a means to analyse games in which competing or collaborating players are driven by distinct objectives. Thirdly, a real-time extension of (turn-based) stochastic games facilitates verification and strategy synthesis for systems where timing is a crucial aspect. This paper describes the advances made in the tool’s modelling language, property specification language and model checking engines in order to implement this new functionality. We also summarise the performance and scalability of the tool, and describe a selection of case studies, ranging from security protocols to robot coordination, which highlight the benefits of the new features.",
+    "topic": "",
+    "conference": "cav",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1007/978-3-030-53291-8_25"
+  },
+  {
     "id": "10.1007/978-3-030-53291-8_26",
     "title": "Optimistic Value Iteration",
     "authors": [
@@ -898,6 +885,19 @@
     "conference": "cav",
     "year": 2020,
     "paper_url": "https://doi.org/10.1007/978-3-030-53291-8_32"
+  },
+  {
+    "id": "10.1007/978-3-030-53291-8_33",
+    "title": "Must Fault Localization for Program Repair",
+    "authors": [
+      "Bat-Chen Rothenberg",
+      "Orna Grumberg"
+    ],
+    "abstract": "This work is concerned with fault localization for automated program repair. We define a novel concept of a must location set. Intuitively, such a set includes at least one program location from every repair for a bug. Thus, it is impossible to fix the bug without changing at least one location from this set. A fault localization technique is considered a must algorithm if it returns a must location set for every buggy program and every bug in the program. We show that some traditional fault localization techniques are not must. We observe that the notion of must fault localization depends on the chosen repair scheme, which identifies the changes that can be applied to program statements as part of a repair. We develop a new algorithm for fault localization and prove that it is must with respect to commonly used schemes in automated program repair. We incorporate the new fault localization technique into an existing mutation-based program repair algorithm. We exploit it in order to prune the search space when a buggy mutated program has been generated. Our experiments show that must fault localization is able to significantly speed-up the repair process, without losing any of the potential repairs.",
+    "topic": "",
+    "conference": "cav",
+    "year": 2020,
+    "paper_url": "https://doi.org/10.1007/978-3-030-53291-8_33"
   },
   {
     "id": "10.1007/978-3-030-53291-8_4",
