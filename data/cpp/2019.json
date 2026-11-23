@@ -39,6 +39,31 @@
     "paper_url": "https://doi.org/10.1145/3293880.3294101"
   },
   {
+    "id": "10.1145/3293880.3294104",
+    "title": "Dynamic class initialization semantics: a Jinja extension",
+    "authors": [
+      "Susannah Mansky",
+      "Elsa L. Gunter"
+    ],
+    "abstract": "The Java Virtual Machine (JVM) postpones running class initialization methods until their classes are first referenced, such as by a new or static instruction. This process is called dynamic class initialization. Jinja is a semantic framework for Java and JVM developed in the theorem prover Isabelle that includes several semantics: Java-level big-step and small-step semantics, JVM-level small-step semantics, and an intermediate compilation step, J1, between these two levels. In this paper, we extend Jinja to include support for static instructions and dynamic class initialization. We also extend and re-prove related proofs, including Java-level type safety, equivalence between Java-level big-step and small-step semantics, and the correctness of a compilation from the Java level to the JVM level through J1. This work is based on the Java SE 8 specification.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2019,
+    "paper_url": "https://doi.org/10.1145/3293880.3294104"
+  },
+  {
+    "id": "10.1145/3293880.3294090",
+    "title": "Verified solving and asymptotics of linear recurrences",
+    "authors": [
+      "Manuel Eberl"
+    ],
+    "abstract": "Linear recurrences with constant coefficients are an interesting class of recurrence equations that can be solved explicitly. The most famous example are certainly the Fibonacci numbers with the equation f(n) = f(n−1) + f(n−2) and the quite non-obvious closed form 1 √ 5 (ϕn − (−ϕ)−n) where ϕ is the golden ratio. This work builds on existing tools in Isabelle – such as formal power series and polynomial factorisation algorithms – to develop a theory of these recurrences and derive a fully executable solver for them that can be exported to programming languages like Haskell. Based on this development, I also provide an efficient method to prove ‘Big-O’ asymptotics of a solution automatically without explicitly finding the closed-form solution first.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2019,
+    "paper_url": "https://doi.org/10.1145/3293880.3294090"
+  },
+  {
     "id": "10.1145/3293880.3294096",
     "title": "Certified undecidability of intuitionistic linear logic via binary stack machines and Minsky machines",
     "authors": [
@@ -65,29 +90,32 @@
     "paper_url": "https://doi.org/10.1145/3293880.3294093"
   },
   {
-    "id": "10.1145/3293880.3294104",
-    "title": "Dynamic class initialization semantics: a Jinja extension",
+    "id": "10.1145/3293880.3294098",
+    "title": "A verified ground confluence tool for linear variable-separated rewrite systems in Isabelle/HOL",
     "authors": [
-      "Susannah Mansky",
-      "Elsa L. Gunter"
+      "Bertram Felgenhauer",
+      "Aart Middeldorp",
+      "T. V. H. Prathamesh",
+      "Franziska Rapp"
     ],
-    "abstract": "The Java Virtual Machine (JVM) postpones running class initialization methods until their classes are first referenced, such as by a new or static instruction. This process is called dynamic class initialization. Jinja is a semantic framework for Java and JVM developed in the theorem prover Isabelle that includes several semantics: Java-level big-step and small-step semantics, JVM-level small-step semantics, and an intermediate compilation step, J1, between these two levels. In this paper, we extend Jinja to include support for static instructions and dynamic class initialization. We also extend and re-prove related proofs, including Java-level type safety, equivalence between Java-level big-step and small-step semantics, and the correctness of a compilation from the Java level to the JVM level through J1. This work is based on the Java SE 8 specification.",
+    "abstract": "It is well known that (ground) confluence is a decidable property of ground term rewrite systems, and that this extends to larger classes. Here we present a formally verified ground confluence checker for linear, variable-separated rewrite systems. To this end, we formalize procedures for ground tree transducers and so-called RRn relations. The ground confluence checker is an important milestone on the way to formalizing the decidability of the first-order theory of ground rewriting for linear, variable-separated rewrite systems. It forms the basis for a formalized confluence checker for left-linear, right-ground systems.",
     "topic": "",
     "conference": "cpp",
     "year": 2019,
-    "paper_url": "https://doi.org/10.1145/3293880.3294104"
+    "paper_url": "https://doi.org/10.1145/3293880.3294098"
   },
   {
-    "id": "10.1145/3293880.3294090",
-    "title": "Verified solving and asymptotics of linear recurrences",
+    "id": "10.1145/3293880.3294099",
+    "title": "Certified ACKBO",
     "authors": [
-      "Manuel Eberl"
+      "Alexander Lochmann",
+      "Christian Sternagel"
     ],
-    "abstract": "Linear recurrences with constant coefficients are an interesting class of recurrence equations that can be solved explicitly. The most famous example are certainly the Fibonacci numbers with the equation f(n) = f(n−1) + f(n−2) and the quite non-obvious closed form 1 √ 5 (ϕn − (−ϕ)−n) where ϕ is the golden ratio. This work builds on existing tools in Isabelle – such as formal power series and polynomial factorisation algorithms – to develop a theory of these recurrences and derive a fully executable solver for them that can be exported to programming languages like Haskell. Based on this development, I also provide an efficient method to prove ‘Big-O’ asymptotics of a solution automatically without explicitly finding the closed-form solution first.",
+    "abstract": "Term rewriting in the presence of associative and commutative function symbols constitutes a highly expressive model of computation, which is for example well suited to reason about parallel computations. However, it is well known that the standard notion of termination does not apply any more: any term rewrite system containing a commutativity rule is nonterminating. Thus, instead of adding AC-rules to a rewrite system, we switch to the notion of AC-termination. AC-termination can for example be shown using AC-compatible reduction orders. One specific example of such an order is ACKBO. We present our Isabelle/HOL formalization of the ACKBO order. On an abstract level this gives us a mechanized proof of the fact that ACKBO is indeed an AC-compatible reduction order. Moreover, we integrated corresponding check functions into the verified certifier CeTA. This has the more practical consequence of enabling the machine certification of AC-termination proofs generated by automated termination tools.",
     "topic": "",
     "conference": "cpp",
     "year": 2019,
-    "paper_url": "https://doi.org/10.1145/3293880.3294090"
+    "paper_url": "https://doi.org/10.1145/3293880.3294099"
   },
   {
     "id": "10.1145/3293880.3294106",
@@ -151,46 +179,6 @@
     "paper_url": "https://doi.org/10.1145/3293880.3294105"
   },
   {
-    "id": "10.1145/3293880.3294089",
-    "title": "A formal proof of Hensel's lemma over the p-adic integers",
-    "authors": [
-      "Robert Y. Lewis"
-    ],
-    "abstract": "The field of p-adic numbers ℚp and the ring of p-adic integers ℤp are essential constructions of modern number theory. Hensel’s lemma, described by Gouvêa as the “most important algebraic property of the p-adic numbers,” shows the existence of roots of polynomials over ℤp provided an initial seed point. The theorem can be proved for the p-adics with significantly weaker hypotheses than for general rings. We construct ℚp and ℤp in the Lean proof assistant, with various associated algebraic properties, and formally prove a strong form of Hensel’s lemma. The proof lies at the intersection of algebraic and analytic reasoning and demonstrates how the Lean mathematical library handles such a heterogeneous topic.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2019,
-    "paper_url": "https://doi.org/10.1145/3293880.3294089"
-  },
-  {
-    "id": "10.1145/3293880.3294098",
-    "title": "A verified ground confluence tool for linear variable-separated rewrite systems in Isabelle/HOL",
-    "authors": [
-      "Bertram Felgenhauer",
-      "Aart Middeldorp",
-      "T. V. H. Prathamesh",
-      "Franziska Rapp"
-    ],
-    "abstract": "It is well known that (ground) confluence is a decidable property of ground term rewrite systems, and that this extends to larger classes. Here we present a formally verified ground confluence checker for linear, variable-separated rewrite systems. To this end, we formalize procedures for ground tree transducers and so-called RRn relations. The ground confluence checker is an important milestone on the way to formalizing the decidability of the first-order theory of ground rewriting for linear, variable-separated rewrite systems. It forms the basis for a formalized confluence checker for left-linear, right-ground systems.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2019,
-    "paper_url": "https://doi.org/10.1145/3293880.3294098"
-  },
-  {
-    "id": "10.1145/3293880.3294099",
-    "title": "Certified ACKBO",
-    "authors": [
-      "Alexander Lochmann",
-      "Christian Sternagel"
-    ],
-    "abstract": "Term rewriting in the presence of associative and commutative function symbols constitutes a highly expressive model of computation, which is for example well suited to reason about parallel computations. However, it is well known that the standard notion of termination does not apply any more: any term rewrite system containing a commutativity rule is nonterminating. Thus, instead of adding AC-rules to a rewrite system, we switch to the notion of AC-termination. AC-termination can for example be shown using AC-compatible reduction orders. One specific example of such an order is ACKBO. We present our Isabelle/HOL formalization of the ACKBO order. On an abstract level this gives us a mechanized proof of the fact that ACKBO is indeed an AC-compatible reduction order. Moreover, we integrated corresponding check functions into the verified certifier CeTA. This has the more practical consequence of enabling the machine certification of AC-termination proofs generated by automated termination tools.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2019,
-    "paper_url": "https://doi.org/10.1145/3293880.3294099"
-  },
-  {
     "id": "10.1145/3293880.3294103",
     "title": "Formal verification of a program obfuscation based on mixed Boolean-arithmetic expressions",
     "authors": [
@@ -202,6 +190,18 @@
     "conference": "cpp",
     "year": 2019,
     "paper_url": "https://doi.org/10.1145/3293880.3294103"
+  },
+  {
+    "id": "10.1145/3293880.3294089",
+    "title": "A formal proof of Hensel's lemma over the p-adic integers",
+    "authors": [
+      "Robert Y. Lewis"
+    ],
+    "abstract": "The field of p-adic numbers ℚp and the ring of p-adic integers ℤp are essential constructions of modern number theory. Hensel’s lemma, described by Gouvêa as the “most important algebraic property of the p-adic numbers,” shows the existence of roots of polynomials over ℤp provided an initial seed point. The theorem can be proved for the p-adics with significantly weaker hypotheses than for general rings. We construct ℚp and ℤp in the Lean proof assistant, with various associated algebraic properties, and formally prove a strong form of Hensel’s lemma. The proof lies at the intersection of algebraic and analytic reasoning and demonstrates how the Lean mathematical library handles such a heterogeneous topic.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2019,
+    "paper_url": "https://doi.org/10.1145/3293880.3294089"
   },
   {
     "id": "10.1145/3293880.3294091",
@@ -245,6 +245,19 @@
     "paper_url": "https://doi.org/10.1145/3293880.3294097"
   },
   {
+    "id": "10.1145/3293880.3294107",
+    "title": "A Coq mechanised formal semantics for realistic SQL queries: formally reconciling SQL and bag relational algebra",
+    "authors": [
+      "Véronique Benzaken",
+      "Évelyne Contejean"
+    ],
+    "abstract": "In this article, we provide a Coq mechanised, executable, formal semantics for a realistic fragment of SQL consisting of \"select [distinct] from where group by having\" queries with null values, functions, aggregates, quantifiers and nested potentially correlated sub-queries. Relying on the Coq extraction mechanism to Ocaml, we further produce a Coq certified semantic analyser for a SQL compiler. We then relate this fragment to a Coq formalised (extended) relational algebra that enjoys a bag semantics hence recovering all well-known algebraic equivalences upon which are based most of compilation optimisations. By doing so, we provide the first formally mechanised proof of the equivalence of SQL and extended relational algebra.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2019,
+    "paper_url": "https://doi.org/10.1145/3293880.3294107"
+  },
+  {
     "id": "10.1145/3293880.3294102",
     "title": "Formally verified big step semantics out of x86-64 binaries",
     "authors": [
@@ -257,19 +270,6 @@
     "conference": "cpp",
     "year": 2019,
     "paper_url": "https://doi.org/10.1145/3293880.3294102"
-  },
-  {
-    "id": "10.1145/3293880.3294107",
-    "title": "A Coq mechanised formal semantics for realistic SQL queries: formally reconciling SQL and bag relational algebra",
-    "authors": [
-      "Véronique Benzaken",
-      "Évelyne Contejean"
-    ],
-    "abstract": "In this article, we provide a Coq mechanised, executable, formal semantics for a realistic fragment of SQL consisting of \"select [distinct] from where group by having\" queries with null values, functions, aggregates, quantifiers and nested potentially correlated sub-queries. Relying on the Coq extraction mechanism to Ocaml, we further produce a Coq certified semantic analyser for a SQL compiler. We then relate this fragment to a Coq formalised (extended) relational algebra that enjoys a bag semantics hence recovering all well-known algebraic equivalences upon which are based most of compilation optimisations. By doing so, we provide the first formally mechanised proof of the equivalence of SQL and extended relational algebra.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2019,
-    "paper_url": "https://doi.org/10.1145/3293880.3294107"
   },
   {
     "id": "10.1145/3293880.3294095",

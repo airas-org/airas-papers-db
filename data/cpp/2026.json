@@ -45,18 +45,6 @@
     "paper_url": "https://doi.org/10.1145/3779031.3779104"
   },
   {
-    "id": "10.1145/3779031.3779100",
-    "title": "Cylindrical Algebraic Decomposition in Coq/Rocq",
-    "authors": [
-      "Quentin Vermande"
-    ],
-    "abstract": "The Cylindrical Algebraic Decomposition (CAD in short) is a fundamental tool of semi-algebraic geometry. It is a doubly-exponential time algorithm that enables most famously to eliminate quantifiers from a formula in the theory of real closed fields. In particular, it allows to decide the satisfiability of problems involving sets of comparisons between polynomials. The present article describes the first formalization of a correctness proof of this algorithm in a proof assistant.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2026,
-    "paper_url": "https://doi.org/10.1145/3779031.3779100"
-  },
-  {
     "id": "10.1145/3779031.3779111",
     "title": "Formalization of a Proof Calculus for Incremental Linearization for Satisfiability Modulo Nonlinear Arithmetic and Transcendental Functions",
     "authors": [
@@ -75,19 +63,28 @@
     "paper_url": "https://doi.org/10.1145/3779031.3779111"
   },
   {
-    "id": "10.1145/3779031.3779106",
-    "title": "Towards Composable Proofs of Cache Coherence Protocols",
+    "id": "10.1145/3779031.3779100",
+    "title": "Cylindrical Algebraic Decomposition in Coq/Rocq",
     "authors": [
-      "Martina Camaioni",
-      "Yann Herklotz",
-      "Tz-Ching Yu",
-      "Thomas Bourgeat"
+      "Quentin Vermande"
     ],
-    "abstract": "Verifying cache coherence protocols is a notoriously difficult problem. At the intersection between distributed protocol and computer architecture, it has long served as a premier target for formal methods. Current verification approaches hinge on the challenging discovery of large global inductive invariants. This paper introduces an alternative proof strategy that tames the complexity through two main contributions: protocol decomposition and a framework of local invariants. We prove the correctness of the standard MSI protocol compositionally by independently verifying the simpler MI and SI subprotocols and proving MSI behaves as their combination. This decomposition revealed a useful insight: the invariants necessary in these proofs can be established using a small set of simple local invariants: invariants between a single cache and the parent and memory, eliminating complex global reasoning across children caches. We demonstrate how our approach reduces the number of required invariants from several dozens to hundreds in prior work to a small, structured and manageable set, simplifying the proof of correctness. The entire development is formalized in Lean 4.",
+    "abstract": "The Cylindrical Algebraic Decomposition (CAD in short) is a fundamental tool of semi-algebraic geometry. It is a doubly-exponential time algorithm that enables most famously to eliminate quantifiers from a formula in the theory of real closed fields. In particular, it allows to decide the satisfiability of problems involving sets of comparisons between polynomials. The present article describes the first formalization of a correctness proof of this algorithm in a proof assistant.",
     "topic": "",
     "conference": "cpp",
     "year": 2026,
-    "paper_url": "https://doi.org/10.1145/3779031.3779106"
+    "paper_url": "https://doi.org/10.1145/3779031.3779100"
+  },
+  {
+    "id": "10.1145/3779031.3779091",
+    "title": "A Rose Tree Is Blooming (Proof Pearl)",
+    "authors": [
+      "Joomy Korkut"
+    ],
+    "abstract": "Game trees are a fundamental mathematical abstraction for analyzing games, often implemented as rose trees in functional programming. We can construct rose trees by starting from an initial state and iteratively applying the function that provides the states one move away, an approach known as an anamorphism (or colloquially, an unfold). In ML or Haskell, finite and infinite rose trees share the same type, but proof assistants typically distinguish them: finite trees as inductive, infinite ones as coinductive. With the inductive approach, defining the unfold function is tricky but we obtain a finite tree that is easy to compute with and easy to reason about. With the coinductive approach, defining the unfold function is easy but we obtain a potentially infinite tree, which is harder to reason about since we must resort to proof techniques like bisimulation. In this paper, we compare the inductive and coinductive approaches to game trees, implement unfold functions for both, and prove the soundness and completeness of both unfold functions (with respect to the game) in the Rocq Prover. We illustrate these techniques with implementations of a tic-tac-toe game and a simple SAT solver.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1145/3779031.3779091"
   },
   {
     "id": "10.1145/3779031.3779088",
@@ -104,19 +101,6 @@
     "conference": "cpp",
     "year": 2026,
     "paper_url": "https://doi.org/10.1145/3779031.3779088"
-  },
-  {
-    "id": "10.1145/3779031.3779094",
-    "title": "Certified Symbolic Finite Transducers: Formalization and Applications to String Analysis",
-    "authors": [
-      "Shuanglong Kan",
-      "Anthony W. Lin"
-    ],
-    "abstract": "Finite Transducers (FTs) extend the capabilities of Finite Au- tomata (FAs) by enabling the transformation of input strings into output strings. In many practical applications — includ- ing program analysis, string constraint solving, and analysis of security-critical sanitizers — Symbolic FTs (SFTs) and Sym- bolic FAs (SFAs) are used instead of the explicitly represented models. To circumvent to the notorious state-space explosion problem caused by an extremely large alphabet size (e.g. Unicode), SFTs and SFAs allow the representation of the alphabet as an effective boolean algebra including finite unions of intervals, as well as SMT-Algebras. The security-critical nature of many of these applications demands trustworthy implementations of such systems. To this end, we present the first formalization of SFTs and their most important algorithms in Isabelle/HOL. To evaluate the effectiveness of our formalization, we apply the formalized SFTs to two applications: (1) sanitizers for web applications used for preventing XSS attacks, and (2) string solving, which increasingly employs intricate string replacement operations. Our experimental results demonstrate that our methods are competitive with the existing unverified implementations.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2026,
-    "paper_url": "https://doi.org/10.1145/3779031.3779094"
   },
   {
     "id": "10.1145/3779031.3779109",
@@ -146,6 +130,62 @@
     "conference": "cpp",
     "year": 2026,
     "paper_url": "https://doi.org/10.1145/3779031.3779085"
+  },
+  {
+    "id": "10.1145/3779031.3779106",
+    "title": "Towards Composable Proofs of Cache Coherence Protocols",
+    "authors": [
+      "Martina Camaioni",
+      "Yann Herklotz",
+      "Tz-Ching Yu",
+      "Thomas Bourgeat"
+    ],
+    "abstract": "Verifying cache coherence protocols is a notoriously difficult problem. At the intersection between distributed protocol and computer architecture, it has long served as a premier target for formal methods. Current verification approaches hinge on the challenging discovery of large global inductive invariants. This paper introduces an alternative proof strategy that tames the complexity through two main contributions: protocol decomposition and a framework of local invariants. We prove the correctness of the standard MSI protocol compositionally by independently verifying the simpler MI and SI subprotocols and proving MSI behaves as their combination. This decomposition revealed a useful insight: the invariants necessary in these proofs can be established using a small set of simple local invariants: invariants between a single cache and the parent and memory, eliminating complex global reasoning across children caches. We demonstrate how our approach reduces the number of required invariants from several dozens to hundreds in prior work to a small, structured and manageable set, simplifying the proof of correctness. The entire development is formalized in Lean 4.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1145/3779031.3779106"
+  },
+  {
+    "id": "10.1145/3779031.3779094",
+    "title": "Certified Symbolic Finite Transducers: Formalization and Applications to String Analysis",
+    "authors": [
+      "Shuanglong Kan",
+      "Anthony W. Lin"
+    ],
+    "abstract": "Finite Transducers (FTs) extend the capabilities of Finite Au- tomata (FAs) by enabling the transformation of input strings into output strings. In many practical applications — includ- ing program analysis, string constraint solving, and analysis of security-critical sanitizers — Symbolic FTs (SFTs) and Sym- bolic FAs (SFAs) are used instead of the explicitly represented models. To circumvent to the notorious state-space explosion problem caused by an extremely large alphabet size (e.g. Unicode), SFTs and SFAs allow the representation of the alphabet as an effective boolean algebra including finite unions of intervals, as well as SMT-Algebras. The security-critical nature of many of these applications demands trustworthy implementations of such systems. To this end, we present the first formalization of SFTs and their most important algorithms in Isabelle/HOL. To evaluate the effectiveness of our formalization, we apply the formalized SFTs to two applications: (1) sanitizers for web applications used for preventing XSS attacks, and (2) string solving, which increasingly employs intricate string replacement operations. Our experimental results demonstrate that our methods are competitive with the existing unverified implementations.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1145/3779031.3779094"
+  },
+  {
+    "id": "10.1145/3779031.3779090",
+    "title": "Can We Formalise Type Theory Intrinsically without Any Compromise? A Case Study in Cubical Agda",
+    "authors": [
+      "Liang-Ting Chen",
+      "Fredrik Nordvall Forsberg",
+      "Tzu-Chun Tsai"
+    ],
+    "abstract": "We present an intrinsic representation of type theory in the proof assistant Cubical Agda, inspired by Awodey’s natural models of type theory. The initial natural model is defined as quotient inductive-inductive-recursive types, leading us to a syntax accepted by Cubical Agda without using any transports, postulates, or custom rewrite rules. We formalise some meta-properties such as the standard model, normalisation by evaluation for typed terms, and strictification constructions. Since our formalisation is carried out using Cubical Agda's native support for quotient inductive types, all our constructions compute at a reasonable speed. When we try to develop more sophisticated metatheory, however, the 'transport hell' problem reappears. Ultimately, it remains a considerable struggle to develop the metatheory of type theory using an intrinsic representation that lacks strict equations. The effort required is about the same whether or not the notion of natural model is used.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1145/3779031.3779090"
+  },
+  {
+    "id": "10.1145/3779031.3779092",
+    "title": "Verified VCG and Verified Compiler for Dafny",
+    "authors": [
+      "Daniel Nezamabadi",
+      "Magnus O. Myreen",
+      "Yong Kiam Tan"
+    ],
+    "abstract": "Dafny is a verification-aware programming language that comes with a compiler and static program verifier. However, neither the compiler nor the verifier is proved correct; in fact, soundness bugs have been found in both tools. This paper shows that the aforementioned Dafny tools can be developed with foundational correctness guarantees. We present a functional big-step semantics for an imperative subset of Dafny and, based on this semantics, a verified verification condition generator (VCG) and a verified compiler for Dafny. The subset of Dafny we have formalized includes mutually recursive method calls, while loops, and arrays---these language features are significant enough to cover challenging examples such as McCarthy's 91 function and array-based programs that are used when teaching Dafny. The verified VCG allows one to prove functional correctness of annotated Dafny programs, while the verified compiler can be used to compile verified Dafny programs to CakeML programs. From there, one can obtain executable machine code via the (already verified) CakeML compiler, all while provably maintaining the functional correctness guarantees that were proved for the source-level Dafny programs. Our work has been mechanized in the HOL4 theorem prover.",
+    "topic": "",
+    "conference": "cpp",
+    "year": 2026,
+    "paper_url": "https://doi.org/10.1145/3779031.3779092"
   },
   {
     "id": "10.1145/3779031.3779087",
@@ -179,18 +219,6 @@
     "paper_url": "https://doi.org/10.1145/3779031.3779107"
   },
   {
-    "id": "10.1145/3779031.3779091",
-    "title": "A Rose Tree Is Blooming (Proof Pearl)",
-    "authors": [
-      "Joomy Korkut"
-    ],
-    "abstract": "Game trees are a fundamental mathematical abstraction for analyzing games, often implemented as rose trees in functional programming. We can construct rose trees by starting from an initial state and iteratively applying the function that provides the states one move away, an approach known as an anamorphism (or colloquially, an unfold). In ML or Haskell, finite and infinite rose trees share the same type, but proof assistants typically distinguish them: finite trees as inductive, infinite ones as coinductive. With the inductive approach, defining the unfold function is tricky but we obtain a finite tree that is easy to compute with and easy to reason about. With the coinductive approach, defining the unfold function is easy but we obtain a potentially infinite tree, which is harder to reason about since we must resort to proof techniques like bisimulation. In this paper, we compare the inductive and coinductive approaches to game trees, implement unfold functions for both, and prove the soundness and completeness of both unfold functions (with respect to the game) in the Rocq Prover. We illustrate these techniques with implementations of a tic-tac-toe game and a simple SAT solver.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2026,
-    "paper_url": "https://doi.org/10.1145/3779031.3779091"
-  },
-  {
     "id": "10.1145/3779031.3779098",
     "title": "Brack: A Verified Compiler for Scheme via CakeML",
     "authors": [
@@ -218,20 +246,6 @@
     "paper_url": "https://doi.org/10.1145/3779031.3779096"
   },
   {
-    "id": "10.1145/3779031.3779090",
-    "title": "Can We Formalise Type Theory Intrinsically without Any Compromise? A Case Study in Cubical Agda",
-    "authors": [
-      "Liang-Ting Chen",
-      "Fredrik Nordvall Forsberg",
-      "Tzu-Chun Tsai"
-    ],
-    "abstract": "We present an intrinsic representation of type theory in the proof assistant Cubical Agda, inspired by Awodey’s natural models of type theory. The initial natural model is defined as quotient inductive-inductive-recursive types, leading us to a syntax accepted by Cubical Agda without using any transports, postulates, or custom rewrite rules. We formalise some meta-properties such as the standard model, normalisation by evaluation for typed terms, and strictification constructions. Since our formalisation is carried out using Cubical Agda's native support for quotient inductive types, all our constructions compute at a reasonable speed. When we try to develop more sophisticated metatheory, however, the 'transport hell' problem reappears. Ultimately, it remains a considerable struggle to develop the metatheory of type theory using an intrinsic representation that lacks strict equations. The effort required is about the same whether or not the notion of natural model is used.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2026,
-    "paper_url": "https://doi.org/10.1145/3779031.3779090"
-  },
-  {
     "id": "10.1145/3779031.3779086",
     "title": "Using Ghost Ownership to Verify Union-Find and Persistent Arrays in Rust",
     "authors": [
@@ -244,20 +258,6 @@
     "conference": "cpp",
     "year": 2026,
     "paper_url": "https://doi.org/10.1145/3779031.3779086"
-  },
-  {
-    "id": "10.1145/3779031.3779092",
-    "title": "Verified VCG and Verified Compiler for Dafny",
-    "authors": [
-      "Daniel Nezamabadi",
-      "Magnus O. Myreen",
-      "Yong Kiam Tan"
-    ],
-    "abstract": "Dafny is a verification-aware programming language that comes with a compiler and static program verifier. However, neither the compiler nor the verifier is proved correct; in fact, soundness bugs have been found in both tools. This paper shows that the aforementioned Dafny tools can be developed with foundational correctness guarantees. We present a functional big-step semantics for an imperative subset of Dafny and, based on this semantics, a verified verification condition generator (VCG) and a verified compiler for Dafny. The subset of Dafny we have formalized includes mutually recursive method calls, while loops, and arrays---these language features are significant enough to cover challenging examples such as McCarthy's 91 function and array-based programs that are used when teaching Dafny. The verified VCG allows one to prove functional correctness of annotated Dafny programs, while the verified compiler can be used to compile verified Dafny programs to CakeML programs. From there, one can obtain executable machine code via the (already verified) CakeML compiler, all while provably maintaining the functional correctness guarantees that were proved for the source-level Dafny programs. Our work has been mechanized in the HOL4 theorem prover.",
-    "topic": "",
-    "conference": "cpp",
-    "year": 2026,
-    "paper_url": "https://doi.org/10.1145/3779031.3779092"
   },
   {
     "id": "10.1145/3779031.3779093",
